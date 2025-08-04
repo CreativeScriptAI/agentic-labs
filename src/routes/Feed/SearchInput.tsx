@@ -1,8 +1,8 @@
-import styled from "@emotion/styled"
-import React, { InputHTMLAttributes, ReactNode } from "react"
-import { Emoji } from "src/components/Emoji"
+import styled from "@emotion/styled";
+import React, { InputHTMLAttributes } from "react";
+import { Emoji } from "src/components/Emoji";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {}
+type Props = InputHTMLAttributes<HTMLInputElement>;
 
 const SearchInput: React.FC<Props> = ({ ...props }) => {
   return (
@@ -17,10 +17,10 @@ const SearchInput: React.FC<Props> = ({ ...props }) => {
         {...props}
       />
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default SearchInput
+export default SearchInput;
 
 const StyledWrapper = styled.div`
   margin-bottom: 1rem;
@@ -42,4 +42,4 @@ const StyledWrapper = styled.div`
     width: 100%;
     background-color: ${({ theme }) => theme.colors.gray4};
   }
-`
+`;

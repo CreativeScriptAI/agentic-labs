@@ -1,10 +1,10 @@
-import styled from "@emotion/styled"
-import Image from "next/image"
-import React from "react"
-import { CONFIG } from "site.config"
-import { Emoji } from "src/components/Emoji"
+import styled from "@emotion/styled";
+import Image from "next/image";
+import React from "react";
+import { CONFIG } from "site.config";
+import { Emoji } from "src/components/Emoji";
 
-type Props = {}
+type Props = Record<string, never>;
 
 const ProfileCard: React.FC<Props> = () => {
   return (
@@ -23,10 +23,10 @@ const ProfileCard: React.FC<Props> = () => {
         </div>
       </div>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default ProfileCard
+export default ProfileCard;
 
 const StyledWrapper = styled.div`
   > .title {
@@ -78,4 +78,4 @@ const StyledWrapper = styled.div`
       }
     }
   }
-`
+`;

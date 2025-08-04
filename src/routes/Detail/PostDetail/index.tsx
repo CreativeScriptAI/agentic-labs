@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import NotionRenderer from "../components/NotionRenderer";
 import usePostQuery from "src/hooks/usePostQuery";
 
-type Props = {};
+type Props = Record<string, never>;
 
 const PostDetail: React.FC<Props> = () => {
   const data = usePostQuery();

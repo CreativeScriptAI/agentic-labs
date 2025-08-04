@@ -4,7 +4,7 @@ import { ExtendedRecordMap } from "notion-types"
 import { ReactElement, ReactNode } from "react"
 
 // TODO: refactor types
-export type NextPageWithLayout<PageProps = {}> = NextPage<PageProps> & {
+export type NextPageWithLayout<PageProps = Record<string, never>> = NextPage<PageProps> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 

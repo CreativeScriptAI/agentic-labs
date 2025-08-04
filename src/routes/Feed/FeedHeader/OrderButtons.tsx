@@ -1,15 +1,15 @@
-import styled from "@emotion/styled"
-import { useRouter } from "next/router"
-import React from "react"
+import styled from "@emotion/styled";
+import { useRouter } from "next/router";
+import React from "react";
 
-type TOrder = "asc" | "desc"
+type TOrder = "asc" | "desc";
 
-type Props = {}
+type Props = Record<string, never>;
 
 const OrderButtons: React.FC<Props> = () => {
-  const router = useRouter()
+  const router = useRouter();
 
-  const currentOrder = `${router.query.order || ``}` || ("desc" as TOrder)
+  const currentOrder = `${router.query.order || ``}` || ("desc" as TOrder);
 
   const handleClickOrderBy = (value: TOrder) => {
     router.push({
@@ -17,8 +17,8 @@ const OrderButtons: React.FC<Props> = () => {
         ...router.query,
         order: value,
       },
-    })
-  }
+    });
+  };
   return (
     <StyledWrapper>
       <a
@@ -34,10 +34,10 @@ const OrderButtons: React.FC<Props> = () => {
         Asc
       </a>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default OrderButtons
+export default OrderButtons;
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -54,4 +54,4 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.gray12};
     }
   }
-`
+`;

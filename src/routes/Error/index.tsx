@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import React from "react"
 import { Emoji } from "src/components/Emoji"
 
-type Props = {}
+type Props = Record<string, never>
 
 const CustomError: React.FC<Props> = () => {
   return (

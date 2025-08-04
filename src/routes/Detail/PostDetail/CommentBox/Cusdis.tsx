@@ -1,18 +1,15 @@
-import { CONFIG } from "site.config";
 import { useCallback, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import useScheme from "src/hooks/useScheme";
-import { useRouter } from "next/router";
-
 type Props = {
   id: string;
   slug: string;
   title: string;
 };
 
-const Cusdis: React.FC<Props> = ({ id, slug, title }) => {
+const Cusdis: React.FC<Props> = ({ id: _id, slug: _slug, title: _title }) => {
   const [value, setValue] = useState(0);
-  const [scheme] = useScheme();
+  const [_scheme] = useScheme();
 
   const onDocumentElementChange = useCallback(() => {
     setValue((value) => value + 1);
@@ -21,7 +18,7 @@ const Cusdis: React.FC<Props> = ({ id, slug, title }) => {
   useEffect(() => {
     const changesObserver = new MutationObserver(
       (mutations: MutationRecord[]) => {
-        mutations.forEach((mutation: MutationRecord) => {
+        mutations.forEach((_mutation: MutationRecord) => {
           onDocumentElementChange();
         });
       }

@@ -1,17 +1,17 @@
-import styled from "@emotion/styled"
-import { useRouter } from "next/router"
-import React from "react"
-import { Emoji } from "src/components/Emoji"
-import { useTagsQuery } from "src/hooks/useTagsQuery"
+import styled from "@emotion/styled";
+import { useRouter } from "next/router";
+import React from "react";
+import { Emoji } from "src/components/Emoji";
+import { useTagsQuery } from "src/hooks/useTagsQuery";
 
-type Props = {}
+type Props = Record<string, never>;
 
 const TagList: React.FC<Props> = () => {
-  const router = useRouter()
-  const currentTag = router.query.tag || undefined
-  const data = useTagsQuery()
+  const router = useRouter();
+  const currentTag = router.query.tag || undefined;
+  const data = useTagsQuery();
 
-  const handleClickTag = (value: any) => {
+  const handleClickTag = (value: string) => {
     // delete
     if (currentTag === value) {
       router.push({
@@ -19,7 +19,7 @@ const TagList: React.FC<Props> = () => {
           ...router.query,
           tag: undefined,
         },
-      })
+      });
     }
     // add
     else {
@@ -28,9 +28,9 @@ const TagList: React.FC<Props> = () => {
           ...router.query,
           tag: value,
         },
-      })
+      });
     }
-  }
+  };
 
   return (
     <StyledWrapper>
@@ -49,10 +49,10 @@ const TagList: React.FC<Props> = () => {
         ))}
       </div>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default TagList
+export default TagList;
 
 const StyledWrapper = styled.div`
   .top {
@@ -109,4 +109,4 @@ const StyledWrapper = styled.div`
       }
     }
   }
-`
+`;

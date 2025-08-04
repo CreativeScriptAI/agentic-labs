@@ -5,7 +5,7 @@ import PageDetail from "./PageDetail";
 import styled from "@emotion/styled";
 import usePostQuery from "src/hooks/usePostQuery";
 
-type Props = {};
+type Props = Record<string, never>;
 
 const Detail: React.FC<Props> = () => {
   const data = usePostQuery();

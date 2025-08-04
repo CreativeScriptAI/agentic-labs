@@ -1,14 +1,13 @@
 import { TPost } from "src/types";
-import { CONFIG } from "site.config";
 import dynamic from "next/dynamic";
 
-const UtterancesComponent = dynamic(
+const _UtterancesComponent = dynamic(
   () => {
     return import("./Utterances");
   },
   { ssr: false }
 );
-const CusdisComponent = dynamic(
+const _CusdisComponent = dynamic(
   () => {
     return import("./Cusdis");
   },
@@ -19,7 +18,7 @@ type Props = {
   data: TPost;
 };
 
-const CommentBox: React.FC<Props> = ({ data }) => {
+const CommentBox: React.FC<Props> = ({ data: _data }) => {
   return (
     <div>
       {/* {CONFIG.utterances.enable && <UtterancesComponent issueTerm={data.id} />}

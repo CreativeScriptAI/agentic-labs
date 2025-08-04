@@ -1,11 +1,11 @@
-import styled from "@emotion/styled"
-import { useRouter } from "next/router"
-import React from "react"
+import styled from "@emotion/styled";
+import { useRouter } from "next/router";
+import React from "react";
 
-type Props = {}
+type Props = Record<string, never>;
 
 const Footer: React.FC<Props> = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <StyledWrapper>
       <a onClick={() => router.push("/")}>← Back</a>
@@ -13,10 +13,10 @@ const Footer: React.FC<Props> = () => {
         ↑ Top
       </a>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -31,4 +31,4 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.gray12};
     }
   }
-`
+`;

@@ -14,7 +14,7 @@ import PinnedPosts from "./PostList/PinnedPosts";
 
 const HEADER_HEIGHT = 73;
 
-type Props = {};
+type Props = Record<string, never>;
 
 const Feed: React.FC<Props> = () => {
   const [q, setQ] = useState("");
