@@ -1,21 +1,21 @@
-import Link from "next/link"
-import { CONFIG } from "site.config"
-import { formatDate } from "src/libs/utils"
-import Tag from "../../../components/Tag"
-import { TPost } from "../../../types"
-import Image from "next/image"
-import Category from "../../../components/Category"
-import styled from "@emotion/styled"
+import Link from "next/link";
+import { CONFIG } from "site.config";
+import { formatDate } from "src/libs/utils";
+import Tag from "../../../components/Tag";
+import { TPost } from "../../../types";
+import Image from "next/image";
+import Category from "../../../components/Category";
+import styled from "@emotion/styled";
 
 type Props = {
-  data: TPost
-}
+  data: TPost;
+};
 
 const PostCard: React.FC<Props> = ({ data }) => {
-  const category = (data.category && data.category?.[0]) || undefined
+  const category = (data.category && data.category?.[0]) || undefined;
 
   return (
-    <StyledWrapper href={`/${data.slug}`}>
+    <StyledWrapper href={`/blog/${data.slug}`}>
       <article>
         {category && (
           <div className="category">
@@ -32,7 +32,11 @@ const PostCard: React.FC<Props> = ({ data }) => {
             />
           </div>
         )}
-        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
+        <div
+          data-thumb={!!data.thumbnail}
+          data-category={!!category}
+          className="content"
+        >
           <header className="top">
             <h2>{data.title}</h2>
           </header>
@@ -56,10 +60,10 @@ const PostCard: React.FC<Props> = ({ data }) => {
         </div>
       </article>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default PostCard
+export default PostCard;
 
 const StyledWrapper = styled(Link)`
   article {
@@ -162,4 +166,4 @@ const StyledWrapper = styled(Link)`
       }
     }
   }
-`
+`;

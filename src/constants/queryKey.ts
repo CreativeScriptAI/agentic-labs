@@ -1,7 +1,9 @@
 export const queryKey = {
-  scheme: () => ["scheme"],
-  posts: () => ["posts"],
-  tags: () => ["tags"],
-  categories: () => ["categories"],
-  post: (slug: string) => ["post", slug],
-}
+  scheme: () => ["scheme"] as const,
+  posts: () => ["posts"] as const,
+  agents: () => ["agents"] as const,
+  categories: () => ["categories"] as const,
+  tags: () => ["tags"] as const,
+  post: (slug: string) => ["post", slug] as const,
+  agent: (slug: string) => ["agent", slug] as const,
+};

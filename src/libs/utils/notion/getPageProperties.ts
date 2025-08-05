@@ -38,7 +38,9 @@ async function getPageProperties(
         }
         case "date": {
           const dateProperty = getDateValue(val) as any;
-          delete dateProperty.type;
+          if (dateProperty && typeof dateProperty === "object") {
+            delete dateProperty.type;
+          }
           properties[schema[key].name] = dateProperty;
           break;
         }

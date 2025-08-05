@@ -1,12 +1,13 @@
-import NavBar from "./NavBar"
-import Logo from "./Logo"
-import ThemeToggle from "./ThemeToggle"
-import styled from "@emotion/styled"
-import { zIndexes } from "src/styles/zIndexes"
+import NavBar from "./NavBar";
+import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
+import styled from "@emotion/styled";
+import { zIndexes } from "src/styles/zIndexes";
+import Link from "next/link";
 
 type Props = {
-  fullWidth: boolean
-}
+  fullWidth: boolean;
+};
 
 const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
@@ -14,15 +15,15 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       <div data-full-width={fullWidth} className="container">
         <Logo />
         <div className="nav">
-          <ThemeToggle />
           <NavBar />
+          <ThemeToggle />
         </div>
       </div>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const StyledWrapper = styled.div`
   z-index: ${zIndexes.header};
@@ -53,4 +54,4 @@ const StyledWrapper = styled.div`
       align-items: center;
     }
   }
-`
+`;

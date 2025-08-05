@@ -1,28 +1,28 @@
 import Detail from "src/routes/Detail";
 import { filterPosts } from "src/libs/utils/notion";
 import { CONFIG } from "site.config";
-import { NextPageWithLayout } from "../types";
+import { NextPageWithLayout } from "src/types";
 import CustomError from "src/routes/Error";
-import { getRecordMap, getPosts } from "src/apis";
+import { getRecordMap, getAgents } from "src/apis";
 import MetaConfig from "src/components/MetaConfig";
 import { GetStaticProps } from "next";
 import { queryClient } from "src/libs/react-query";
 import { queryKey } from "src/constants/queryKey";
 import { dehydrate } from "@tanstack/react-query";
-import usePostQuery from "src/hooks/usePostQuery";
+import useAgentQuery from "src/hooks/useAgentQuery";
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts";
 
 const filter: FilterPostsOptions = {
   acceptStatus: ["Public", "PublicOnDetail"],
-  acceptType: ["Paper", "Post", "Page"],
+  acceptType: ["Agent", "Post", "Page"],
 };
 
 export const getStaticPaths = async () => {
-  const posts = await getPosts();
-  const filteredPost = filterPosts(posts, filter);
+  const agents = await getAgents();
+  const filteredAgents = filterPosts(agents, filter);
 
   return {
-    paths: filteredPost.map((row) => `/${row.slug}`),
+    paths: filteredAgents.map((row) => `/agents/${row.slug}`),
     fallback: true,
   };
 };
@@ -30,28 +30,28 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug;
 
-  const posts = await getPosts();
-  const feedPosts = filterPosts(posts);
+  const agents = await getAgents();
+  const feedAgents = filterPosts(agents);
   await queryClient.prefetchQuery({
-    queryKey: queryKey.posts(),
-    queryFn: () => feedPosts,
+    queryKey: queryKey.agents(),
+    queryFn: () => feedAgents,
   });
 
-  const detailPosts = filterPosts(posts, filter);
-  const postDetail = detailPosts.find((t) => t.slug === slug);
+  const detailAgents = filterPosts(agents, filter);
+  const agentDetail = detailAgents.find((t) => t.slug === slug);
 
-  if (!postDetail?.id) {
+  if (!agentDetail?.id) {
     return {
       notFound: true,
     };
   }
 
-  const recordMap = await getRecordMap(postDetail.id);
+  const recordMap = await getRecordMap(agentDetail.id);
 
   await queryClient.prefetchQuery({
-    queryKey: queryKey.post(`${slug}`),
+    queryKey: queryKey.agent(`${slug}`),
     queryFn: () => ({
-      ...postDetail,
+      ...agentDetail,
       recordMap,
     }),
   });
@@ -64,25 +64,25 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const DetailPage: NextPageWithLayout = () => {
-  const post = usePostQuery();
+const AgentDetailPage: NextPageWithLayout = () => {
+  const agent = useAgentQuery();
 
-  if (!post) return <CustomError />;
+  if (!agent) return <CustomError />;
 
   const image =
-    post.thumbnail ??
+    agent.thumbnail ??
     CONFIG.ogImageGenerateURL ??
-    `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`;
+    `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(agent.title)}.png`;
 
-  const date = post.date?.start_date || post.createdTime || "";
+  const date = agent.date?.start_date || agent.createdTime || "";
 
   const meta = {
-    title: post.title,
+    title: agent.title,
     date: new Date(date).toISOString(),
     image: image,
-    description: post.summary || "",
-    type: post.type[0],
-    url: `${CONFIG.link}/${post.slug}`,
+    description: agent.summary || "",
+    type: agent.type[0],
+    url: `${CONFIG.link}/agents/${agent.slug}`,
   };
 
   return (
@@ -93,8 +93,8 @@ const DetailPage: NextPageWithLayout = () => {
   );
 };
 
-DetailPage.getLayout = (page) => {
+AgentDetailPage.getLayout = (page) => {
   return <>{page}</>;
 };
 
-export default DetailPage;
+export default AgentDetailPage;

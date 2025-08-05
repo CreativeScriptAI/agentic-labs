@@ -43,7 +43,7 @@ const Cusdis: React.FC<Props> = ({ id: _id, slug: _slug, title: _title }) => {
             // appId: CONFIG.cusdis.config.appid,
             pageId: id,
             pageTitle: title,
-            pageUrl: `${CONFIG.link}/${slug}`,
+            pageUrl: `${CONFIG.link}/blog/${slug}`,
             theme: scheme,
           }}
         /> */}

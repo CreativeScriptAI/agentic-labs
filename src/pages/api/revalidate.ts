@@ -19,7 +19,7 @@ export default async function handler(
     } else {
       const posts = await getPosts();
       const revalidateRequests = posts.map((row) =>
-        res.revalidate(`/${row.slug}`)
+        res.revalidate(`/blog/${row.slug}`)
       );
       await Promise.all(revalidateRequests);
     }
