@@ -32,7 +32,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-red-500 font-medium text-sm tracking-wider uppercase mb-4">
-            WE'LL PLUG IT INTO YOUR WORKFLOW IN UNDER 48HRS.
+            WE&apos;LL PLUG IT INTO YOUR WORKFLOW IN UNDER 48HRS.
           </p>
           <h2 className="text-center text-[32px] font-normal text-[#0A1128] tracking-[-0.64px] font-sfpro">
             Free your team.

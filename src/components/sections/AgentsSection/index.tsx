@@ -181,7 +181,7 @@ const AgentsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-red-500 font-medium text-sm tracking-wider uppercase mb-4">
-            AGENTS WE'VE SHIPPED
+            AGENTS WE&apos;VE SHIPPED
           </p>
           <h2 className="text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal">
             Recruit enterprise-grade AI agents
