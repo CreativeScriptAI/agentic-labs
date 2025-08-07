@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
   const links = [
     // { id: 1, name: "Automation Vault", to: "/automation-vault" },
     // { id: 2, name: "Press Release", to: "/press-release" },
-    { id: 1, name: "About Us", to: "/about" },
+    // { id: 1, name: "About Us", to: "/about" },
     { id: 2, name: "Blog", to: "/blog" },
   ];
 

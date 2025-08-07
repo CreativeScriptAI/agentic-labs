@@ -20,7 +20,7 @@ const CONFIG = {
   blog: {
     title: "Agentic AI Lab",
     description: "welcome to Agentic AI Lab!",
-    scheme: "dark", // 'light' | 'dark' | 'system'
+    scheme: "light", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
