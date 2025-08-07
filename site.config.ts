@@ -32,6 +32,8 @@ const CONFIG = {
   // notion configuration (required)
   notionConfig: {
     pageId: "23fb34d6b4d480c6aa14e4326b1d1725",
+    // TEMPORARY: Using the same page ID as posts to test
+    agentPageId: "20eb34d6b4d480dfa876f581b273b88d", // Original: "20eb34d6b4d480dfa876f581b273b88d"
   },
 
   // // plugin configuration (optional)

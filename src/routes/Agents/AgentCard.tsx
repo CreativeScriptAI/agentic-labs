@@ -13,23 +13,24 @@ const AgentCard: React.FC<Props> = ({ data }) => {
   const category = (data.category && data.category?.[0]) || undefined;
 
   // Function to determine tag variant based on tag content
-  const getTagVariant = (tag: string): "primary" | "secondary" | "accent" => {
-    const lowerTag = tag.toLowerCase();
-    if (lowerTag.includes("analytics") || lowerTag.includes("productivity")) {
-      return "accent";
-    }
-    if (
-      lowerTag.includes("development") ||
-      lowerTag.includes("in development")
-    ) {
-      return "secondary";
-    }
-    return "primary";
-  };
+  // const getTagVariant = (tag: string): "primary" | "secondary" | "accent" => {
+  //   const lowerTag = tag.toLowerCase();
+  //   if (lowerTag.includes("analytics") || lowerTag.includes("productivity")) {
+  //     return "accent";
+  //   }
+  //   if (
+  //     lowerTag.includes("development") ||
+  //     lowerTag.includes("in development")
+  //   ) {
+  //     return "secondary";
+  //   }
+  //   return "primary";
+  // };
 
   return (
     <StyledWrapper href={`/agents/${data.slug}`}>
-      <article>
+      lkajskdljf
+      {/* <article>
         {category && (
           <div className="category">
             <Category>{category}</Category>
@@ -68,7 +69,7 @@ const AgentCard: React.FC<Props> = ({ data }) => {
             {category && <span className="status-badge">Active</span>}
           </div>
         </div>
-      </article>
+      </article> */}
     </StyledWrapper>
   );
 };

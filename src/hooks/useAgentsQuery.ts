@@ -12,7 +12,7 @@ const useAgentsQuery = () => {
       return filterPosts(agents);
     },
     initialData: [] as TPost[],
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 60, // 1 minute
   });
 
   if (!data) throw new Error("Agents data is not found");

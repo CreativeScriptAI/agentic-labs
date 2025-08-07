@@ -1,9 +1,9 @@
 import NavBar from "./NavBar";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import styled from "@emotion/styled";
-import { zIndexes } from "src/styles/zIndexes";
 import Link from "next/link";
+import Image from "next/image";
+import EllipseBackground from "../../../assets/images/EllipseBackground";
 
 type Props = {
   fullWidth: boolean;
@@ -11,47 +11,38 @@ type Props = {
 
 const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
-    <StyledWrapper>
-      <div data-full-width={fullWidth} className="container">
-        <Logo />
-        <div className="nav">
-          <NavBar />
-          <ThemeToggle />
-        </div>
+    <header className="z-50 relative">
+      {/* Ellipse background image */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
+        <EllipseBackground />
       </div>
-    </StyledWrapper>
+
+      <div
+        className={`mx-auto flex h-16 items-center px-4 ${
+          fullWidth ? "max-w-full md:px-24" : "max-w-7xl"
+        }`}
+      >
+        {/* Left side - Logo */}
+        <div className="flex-1">
+          <Logo />
+        </div>
+
+        {/* Center - Navigation and Contact Us button */}
+        <div className="flex items-center justify-center gap-8 flex-1">
+          <NavBar />
+          <Link
+            href="/contact"
+            className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Right side - Empty for balance */}
+        <div className="flex-1"></div>
+      </div>
+    </header>
   );
 };
 
 export default Header;
-
-const StyledWrapper = styled.div`
-  z-index: ${zIndexes.header};
-  position: sticky;
-  top: 0;
-  background-color: ${({ theme }) => theme.colors.gray2};
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-
-  .container {
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1120px;
-    height: 3rem;
-    margin: 0 auto;
-    &[data-full-width="true"] {
-      @media (min-width: 768px) {
-        padding-left: 6rem;
-        padding-right: 6rem;
-      }
-    }
-    .nav {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-  }
-`;

@@ -1,6 +1,13 @@
 import { NextPageWithLayout } from "../types";
 import MetaConfig from "src/components/MetaConfig";
 import { CONFIG } from "site.config";
+import HeroSection from "src/components/sections/HeroSection";
+import AgentsSection from "src/components/sections/AgentsSection";
+import TrustedSection from "src/components/sections/TrustedSection";
+import TestimonialsSection from "src/components/sections/TestimonialsSection";
+import FAQSection from "src/components/sections/FAQSection";
+import ContactSection from "src/components/sections/ContactSection";
+import FooterSection from "src/components/sections/FooterSection";
 
 const HomePage: NextPageWithLayout = () => {
   const meta = {
@@ -13,18 +20,13 @@ const HomePage: NextPageWithLayout = () => {
   return (
     <>
       <MetaConfig {...meta} />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "100vh",
-          fontSize: "2rem",
-          fontWeight: "bold",
-        }}
-      >
-        home page
-      </div>
+      <HeroSection />
+      <AgentsSection />
+      <TrustedSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <ContactSection />
+      <FooterSection />
     </>
   );
 };
