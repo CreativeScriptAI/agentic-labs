@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FooterSection = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 bg-[#F9F6F4]">
       <div className="max-w-4xl mx-auto px-4 text-center">
         {/* Company Branding */}
         <div className="mb-6">

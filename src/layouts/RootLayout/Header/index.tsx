@@ -11,7 +11,7 @@ type Props = {
 
 const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
-    <header className="z-50 relative">
+    <header className="bg-[#F9F6F4] z-50 relative">
       {/* Ellipse background image */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
         <EllipseBackground />
