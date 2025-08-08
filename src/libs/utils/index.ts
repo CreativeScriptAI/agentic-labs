@@ -8,3 +8,5 @@ export function formatDate(date: string | Date, locale: string) {
   const res = d.toLocaleDateString(locale, options);
   return res;
 }
+
+export * from "./agent";

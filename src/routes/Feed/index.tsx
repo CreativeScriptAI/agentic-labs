@@ -29,7 +29,7 @@ const Feed: React.FC<Props> = () => {
       >
         <TagList />
       </div>
-      <div className="mid">
+      <div className="mid bg-[#F9F6F4]">
         <MobileProfileCard />
         <PinnedPosts q={q} />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
@@ -67,6 +67,7 @@ const StyledWrapper = styled.div`
   padding: 2rem 0;
   display: grid;
   gap: 1.5rem;
+  background-color: #f9f6f4;
 
   @media (max-width: 768px) {
     display: block;
