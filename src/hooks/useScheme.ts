@@ -11,12 +11,10 @@ const useScheme = (): [SchemeType, SetScheme] => {
   const queryClient = useQueryClient();
   const followsSystemTheme = CONFIG.blog.scheme === "system";
 
-  const { data } = useQuery({
+  const { data } = useQuery<SchemeType>({
     queryKey: queryKey.scheme(),
     enabled: false,
-    initialData: followsSystemTheme
-      ? "dark"
-      : (CONFIG.blog.scheme as SchemeType),
+    initialData: "light",
   });
 
   const setScheme = useCallback(
@@ -29,14 +27,10 @@ const useScheme = (): [SchemeType, SetScheme] => {
   );
 
   useEffect(() => {
-    if (!window) return;
+    if (typeof window === "undefined") return;
 
     const cachedScheme = getCookie("scheme") as SchemeType;
-    const defaultScheme = followsSystemTheme
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-      : data;
+    const defaultScheme: SchemeType = "light";
     setScheme(cachedScheme || defaultScheme);
   }, [data, followsSystemTheme, setScheme]);
 
