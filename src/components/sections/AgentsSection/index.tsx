@@ -170,7 +170,23 @@ const AgentsSection = () => {
     return agentsData.ai_agents.find((agent) => agent.name === searchName);
   };
 
+  // Helper function to get agent image
+  const getAgentImage = (agentName: string) => {
+    const imageMap: { [key: string]: string } = {
+      DOCSY: "/images/docsy.png",
+      NAITIK: "/images/naitik.png",
+      VCBOT: "/images/vcbot.png",
+      "VOICE LEAD AGENT": "/images/voice_lead_agent.png",
+      FEDFORWARD: "/images/fedforward.png",
+      "LANDING PILL": "/images/landingpill.png",
+      APERIO: "/images/aperio.png",
+      FUZZIE: "/images/fuzzie.png",
+    };
+    return imageMap[agentName] || "/images/robot.png";
+  };
+
   const currentAgentData = getAgentData(selectedAgent);
+  const currentAgentImage = getAgentImage(selectedAgent);
 
   return (
     <div
@@ -266,7 +282,15 @@ const AgentsSection = () => {
               <div className="flex-shrink-0">
                 <div className="w-48 h-48  rounded-full flex items-center justify-center">
                   <Image
-                    src="/images/robot.png"
+                    src={
+                      selectedAgent === "DOCSY"
+                        ? "/images/robot.png"
+                        : selectedAgent === "NAITIK"
+                        ? "/images/robot1.png"
+                        : selectedAgent === "VCBOT"
+                        ? "/images/robot2.png"
+                        : "/images/robot3.png"
+                    }
                     alt="Docsy"
                     width={192}
                     height={192}
@@ -364,8 +388,8 @@ const AgentsSection = () => {
                       }`}
                     >
                       <Image
-                        src="/images/docsy.png"
-                        alt="Docsy How It Works"
+                        src={currentAgentImage}
+                        alt={`${selectedAgent} How It Works`}
                         height={285}
                         width={0}
                         style={{ width: "auto" }}
