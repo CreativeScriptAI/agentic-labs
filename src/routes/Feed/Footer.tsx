@@ -1,14 +1,14 @@
-import { CONFIG } from "site.config"
-import React from "react"
-import styled from "@emotion/styled"
+import { CONFIG } from "site.config";
+import React from "react";
+import styled from "@emotion/styled";
 
-const d = new Date()
-const y = d.getFullYear()
-const from = +CONFIG.since
+const d = new Date();
+const y = d.getFullYear();
+const from = +CONFIG.since;
 
 type Props = {
-  className?: string
-}
+  className?: string;
+};
 
 const Footer: React.FC<Props> = ({ className }) => {
   return (
@@ -21,10 +21,10 @@ const Footer: React.FC<Props> = ({ className }) => {
         © {CONFIG.profile.name} {from === y || !from ? y : `${from} - ${y}`}
       </a>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const StyledWrapper = styled.div`
   a {
@@ -32,5 +32,6 @@ const StyledWrapper = styled.div`
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: ${({ theme }) => theme.colors.gray10};
+    background-color: #f9f6f4;
   }
-`
+`;
