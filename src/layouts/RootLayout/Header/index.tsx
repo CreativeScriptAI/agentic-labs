@@ -29,11 +29,11 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
         {/* Center - Navigation and Contact Us button */}
         <div className="flex items-center justify-center gap-8 flex-1">
-          <NavBar />
+          {/* <NavBar /> */}
           <Link
             href="https://calendly.com/creative-script/30min?month=2024-01"
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Contact Us

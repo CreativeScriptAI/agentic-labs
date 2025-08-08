@@ -34,7 +34,7 @@ const FooterSection = () => {
 
           {/* Twitter/X */}
           <Link
-            href="https://twitter.com"
+            href="https://x.com/creativescript"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
@@ -51,7 +51,7 @@ const FooterSection = () => {
 
           {/* YouTube */}
           <Link
-            href="https://youtube.com"
+            href="https://www.youtube.com/@agentailabs/shorts"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
@@ -68,7 +68,7 @@ const FooterSection = () => {
 
           {/* LinkedIn */}
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/creativescript/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
