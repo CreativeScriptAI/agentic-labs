@@ -37,7 +37,7 @@ class MyDocument extends Document {
             </>
           )} */}
         </Head>
-        <body>
+        <body className="bg-[#F9F6F4]">
           <Main />
           <NextScript />
         </body>
