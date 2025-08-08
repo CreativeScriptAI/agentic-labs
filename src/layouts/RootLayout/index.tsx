@@ -52,7 +52,7 @@ const RootLayout = ({ children }: Props) => {
   }, []);
 
   return (
-    <ThemeProvider scheme={scheme}>
+    <ThemeProvider scheme={scheme || "light"}>
       <Scripts />
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
