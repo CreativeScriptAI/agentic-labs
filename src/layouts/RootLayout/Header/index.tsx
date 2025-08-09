@@ -78,7 +78,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       </div>
 
       <div
-        className={`pt-0 px-4 md:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between translate-y-10  rounded-xl sm:bg-transparent bg-white ml-4 mr-4 sm:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)]`}
+        className={`pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl sm:bg-transparent bg-white ml-4 mr-4 sm:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)]`}
       >
         {/* Logo */}
         <div className="flex-shrink-0">
