@@ -31,6 +31,17 @@ const config: Config = {
         roboto: ["Roboto", "sans-serif"],
         mondwest: ["var(--font-mondwest)", "sans-serif"],
         neuebit: ["var(--font-neuebit)", "sans-serif"],
+        sfpro: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "SF Pro Display",
+          "SF Pro Text",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
         "sf-pro": [
           "-apple-system",
           "BlinkMacSystemFont",

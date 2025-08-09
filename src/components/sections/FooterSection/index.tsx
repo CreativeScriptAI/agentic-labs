@@ -3,27 +3,37 @@ import Link from "next/link";
 
 const FooterSection = () => {
   return (
-    <div className="py-16 bg-[#F9F6F4]">
-      <div className="max-w-4xl mx-auto px-4 text-center">
+    <div
+      className="py-12 sm:py-16"
+      style={{
+        backgroundColor: "#F9F6F4",
+        width: "calc(100% + 2rem)",
+        marginLeft: "-1rem",
+        marginRight: "-1rem",
+      }}
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Company Branding */}
-        <div className="mb-6">
-          <h2 className="text-4xl font-bold text-blue-600 mb-4 font-mondwest">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-3 sm:mb-4 font-mondwest">
             Agentic AI Labs
           </h2>
-          <p className="text-gray-600 text-lg">The home of the AI Workforce</p>
+          <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
+            The home of the AI Workforce
+          </p>
         </div>
 
         {/* Social Media Links */}
-        <div className="flex justify-center items-center space-x-6 mb-6">
+        <div className="flex justify-center items-center space-x-4 sm:space-x-6 mb-6 sm:mb-8">
           {/* GitHub */}
           <Link
-            href="https://github.com"
+            href="https://github.com/CreativeScriptAI"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +47,10 @@ const FooterSection = () => {
             href="https://x.com/creativescript"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,10 +64,10 @@ const FooterSection = () => {
             href="https://www.youtube.com/@agentailabs/shorts"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +81,10 @@ const FooterSection = () => {
             href="https://www.linkedin.com/company/creativescript/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +96,7 @@ const FooterSection = () => {
 
         {/* Attribution */}
         <div className="text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-xs sm:text-sm">
             Crafted by{" "}
             <Link
               href="https://creativescript.org"

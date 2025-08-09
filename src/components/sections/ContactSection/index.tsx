@@ -17,34 +17,67 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          description: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error((data as any).message || "Submission failed");
+      }
+
+      setFormData({ email: "", message: "" });
+      alert("Thanks! We'll be in touch soon.");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div
-      className="py-20 -mx-4 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
-      style={{ backgroundColor: "#F9F6F4" }}
+      className="relative py-12 sm:py-16 lg:py-20"
+      style={{
+        backgroundColor: "#F9F6F4",
+        width: "calc(100% + 2rem)",
+        marginLeft: "-1rem",
+        marginRight: "-1rem",
+      }}
     >
-      <div className="max-w-2xl mx-auto px-4 relative z-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-red-500 font-medium text-sm tracking-wider uppercase mb-4">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
             WE&apos;LL PLUG IT INTO YOUR WORKFLOW IN UNDER 48HRS.
           </p>
-          <h2 className="text-center text-[32px] font-normal text-[#0A1128] tracking-[-0.64px] font-sfpro">
+          <h2 className="text-center text-xl sm:text-2xl lg:text-[32px] font-normal text-[#0A1128] tracking-[-0.32px] lg:tracking-[-0.64px] font-sfpro px-4">
             Free your team.
           </h2>
-          <div className="text-center text-[32px] font-mondwest font-normal text-[#0A1128] tracking-[-0.64px] font-sfpro">
-            Build your first <span className="text-blue-600 ">AI agent</span>{" "}
+          <div className="text-center text-xl sm:text-2xl lg:text-[32px] font-mondwest font-normal text-[#0A1128] tracking-[-0.32px] lg:tracking-[-0.64px] font-sfpro px-4">
+            Build your first <span className="text-blue-600">AI agent</span>{" "}
             today!
           </div>
         </div>
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 sm:space-y-5 max-w-xl mx-auto z-1"
+        >
           {/* Email Input */}
           <div className="w-full">
             <input
@@ -53,7 +86,7 @@ const ContactSection = () => {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Your email address"
-              className="w-full px-6 py-4 text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+              className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
               required
             />
           </div>
@@ -66,7 +99,7 @@ const ContactSection = () => {
               onChange={handleInputChange}
               placeholder="Write a message here"
               rows={4}
-              className="w-full px-6 py-4 text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 resize-none"
+              className="w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 resize-none"
               required
             />
           </div>
@@ -75,9 +108,10 @@ const ContactSection = () => {
           <div className="flex w-full">
             <button
               type="submit"
-              className="flex w-full justify-center bg-blue-600 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+              className="flex w-full justify-center bg-blue-600 text-white font-medium py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
             >
-              Book a Free Consultation
+              {isSubmitting ? "Submitting..." : "Book a Free Consultation"}
             </button>
           </div>
         </form>

@@ -32,7 +32,7 @@ const Feed: React.FC<Props> = () => {
       <div className="mid bg-[#F9F6F4]">
         <MobileProfileCard />
         <PinnedPosts q={q} />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+        {/* <SearchInput value={q} onChange={(e) => setQ(e.target.value)} /> */}
         <div className="tags">
           <TagList />
         </div>

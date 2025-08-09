@@ -1,153 +1,195 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const AgentsSection = () => {
-  const [selectedAgent, setSelectedAgent] = useState("DOCSY");
+type ProjectFeature = { title: string; info: string };
+
+type ProjectItem = {
+  project_name: string;
+  project_heading: string;
+  project_description: string;
+  project_features: ProjectFeature[];
+  project_hiw_image: string;
+};
+
+type ProjectsMap = Record<string, ProjectItem>;
+
+type AgentsSectionProps = {};
+
+const AgentsSection: React.FC<AgentsSectionProps> = () => {
+  const [selectedAgent, setSelectedAgent] = useState<string>("DOCSY");
   const [isHowItWorksOpen, setIsHowItWorksOpen] = useState(false);
 
-  const agentsData = {
-    ai_agents: [
-      {
-        name: "DOCSY",
-        features_and_benefits: [
+  // Local constant data normalized to requested shape
+  const localProjects: ProjectsMap = useMemo(() => {
+    const map: ProjectsMap = {
+      DOCSY: {
+        project_name: "DOCSY",
+        project_heading: "Your WhatsApp Assistant for Instant File Answers",
+        project_description:
+          "Meet Docsy — your smart, WhatsApp-native assistant that analyse anything you sync to Google Drive and gives you instant answers like a pro.No tabs, no digging, no switching tools.",
+        project_features: [
+          { title: "Always in Sync", info: "Auto-connects with Google Drive" },
           {
-            feature: "Always in Sync",
-            benefit: "Auto-connects with Google Drive",
+            title: "Instant Answers",
+            info: "Real-time replies from your Drive",
           },
           {
-            feature: "Instant Answers",
-            benefit: "Real-time replies from your Drive",
-          },
-          {
-            feature: "All Files Supported",
-            benefit: "Proposals, SOPs — even .docx",
-          },
-        ],
-      },
-      {
-        name: "NAITIK",
-        features_and_benefits: [
-          {
-            feature: "Personalized Cold Outreach",
-            benefit: "Sends custom intro messages based on campaign",
-          },
-          {
-            feature: "Auto Follow-Up",
-            benefit: "3-day follow-up flow (soft check, value add, CTA)",
-          },
-          {
-            feature: "24x7 Availability",
-            benefit: "No delay, no off-hours, always-on",
+            title: "All Files Supported",
+            info: "Proposals, SOPs — even .docx",
           },
         ],
+        project_hiw_image: "/images/docsy.png",
       },
-      {
-        name: "VC NOTEBOT",
-        features_and_benefits: [
+      NAITIK: {
+        project_name: "NAITIK",
+        project_heading: "Intelligent Customer Service Agent",
+        project_description:
+          "AI-powered WhatsApp sales assistant designed to automate cold outreach, follow-ups, and lead qualification for real estate sales teams.",
+        project_features: [
           {
-            feature: "Auto Meeting Summary",
-            benefit: "Turns your calls into action-ready notes",
+            title: "Personalized Cold Outreach",
+            info: "Sends custom intro messages based on campaign",
           },
           {
-            feature: "Real-Time CRM Updates",
-            benefit: "Instantly updates CRM with key highlights",
+            title: "Auto Follow-Up",
+            info: "3-day follow-up flow (soft check, value add, CTA)",
           },
           {
-            feature: "Team-Wide Memory Sync",
-            benefit: "Everyone stays aligned, no extra effort",
+            title: "24x7 Availability",
+            info: "No delay, no off-hours, always-on",
           },
         ],
+        project_hiw_image: "/images/naitik.png",
       },
-      {
-        name: "VOICE LEAD AGENT",
-        features_and_benefits: [
+      VCBOT: {
+        project_name: "VC NOTEBOT",
+        project_heading: "Your Meeting Summarizer",
+        project_description:
+          "Meet VC Notebot — your automated assistant that listens to meetings, summarizes key points, updates your CRM, and keeps your entire team in sync. No manual notes, no missed details.",
+        project_features: [
           {
-            feature: "24x7 Auto Calling",
-            benefit: "Engages prospects anytime without delay",
+            title: "Auto Meeting Summary",
+            info: "Turns your calls into action-ready notes",
           },
           {
-            feature: "Real Time Slot Booking",
-            benefit: "Checks slot availability & books instantly",
+            title: "Real-Time CRM Updates",
+            info: "Instantly updates CRM with key highlights",
           },
           {
-            feature: "All Files Supported",
-            benefit: "Logs every appointment into your CRM",
+            title: "Team-Wide Memory Sync",
+            info: "Everyone stays aligned, no extra effort",
           },
         ],
+        project_hiw_image: "/images/vcbot.png",
       },
-      {
-        name: "FEDFORWARD",
-        features_and_benefits: [
+      "VOICE LEAD AGENT": {
+        project_name: "VOICE LEAD AGENT",
+        project_heading:
+          "Your AI Calling Assistant for Instant Appointment Booking",
+        project_description:
+          "Meet VoiceLead — your AI-powered calling agent that engages with prospects, collects key details, checks calendar availability, and books appointments, all on autopilot.",
+        project_features: [
           {
-            feature: "Smart Role Matching",
-            benefit:
-              "Maps your experience to best-fit roles with match scores.",
+            title: "24x7 Auto Calling",
+            info: "Engages prospects anytime without delay",
           },
           {
-            feature: "Targeted Courses",
-            benefit: "Suggests courses that are close to your skill gaps.",
+            title: "Real Time Slot Booking",
+            info: "Checks slot availability & books instantly",
           },
           {
-            feature: "Personal Transition Plan",
-            benefit: "Clear blueprint, gap analysis, and resume tips.",
+            title: "All Files Supported",
+            info: "Logs every appointment into your CRM",
           },
         ],
+        project_hiw_image: "/images/voice_lead_agent.png",
       },
-      {
-        name: "LANDING PILL",
-        features_and_benefits: [
+      FEDFORWARD: {
+        project_name: "FEDFORWARD",
+        project_heading: "Your Career Transition AI",
+        project_description:
+          "Meet FedForward — your AI career transition assistant for federal employees ready to move into the private sector, helping them find best-fit roles and recommends only the courses they truly need.",
+        project_features: [
           {
-            feature: "AI Landing Page Audit",
-            benefit: "Scans your landing page and finds hidden issues.",
+            title: "Smart Role Matching",
+            info: "Maps your experience to best-fit roles with match scores.",
           },
           {
-            feature: "Section-by-Section Analysis",
-            benefit: "Pinpoints what's missing in each key section.",
+            title: "Targeted Courses",
+            info: "Suggests courses that are close to your skill gaps.",
           },
           {
-            feature: "UX & Conversion Tests",
-            benefit:
-              "Runs key tests to find find friction points on landing page",
+            title: "Personal Transition Plan",
+            info: "Clear blueprint, gap analysis, and resume tips.",
           },
         ],
+        project_hiw_image: "/images/fedforward.png",
       },
-      {
-        name: "APERIO BOT",
-        features_and_benefits: [
+      "LANDING PILL": {
+        project_name: "LANDING PILL",
+        project_heading: "Your AI Landing Page Doctor",
+        project_description:
+          "Meet Landing Pill — your expert AI guide for diagnosing and fixing landing page problems. It shows you exactly what's stopping visitors from converting, so you can communicate value, build trust, and drive action that grows your business.",
+        project_features: [
           {
-            feature: "Monthly Updates",
-            benefit: "Clear, summarized updates",
+            title: "AI Landing Page Audit",
+            info: "Scans your landing page and finds hidden issues.",
           },
           {
-            feature: "Goal Tracking",
-            benefit: "See real-time progress of all goals in one place.",
+            title: "Section-by-Section Analysis",
+            info: "Pinpoints what's missing in each key section.",
           },
           {
-            feature: "Risk Spotting",
-            benefit: "AI flags goals or updates that need more focus.",
+            title: "UX & Conversion Tests",
+            info: "Runs key tests to find find friction points on landing page",
           },
         ],
+        project_hiw_image: "/images/landing-pill.png",
       },
-      {
-        name: "FUZZIE",
-        features_and_benefits: [
+      APERIO: {
+        project_name: "APERIO",
+        project_heading: "Your Executive Insights AI",
+        project_description:
+          "Meet Aperio — your AI assistant that summarizes team updates, tracks goals, spots risks, and gives smart, actionable insights for executives. It saves hours digging through reports and helps leaders focus on what matters most.",
+        project_features: [
+          { title: "Monthly Updates", info: "Clear, summarized updates" },
           {
-            feature: "Smart NLP Logging",
-            benefit: "Log meals in seconds by typing a simple sentence",
+            title: "Goal Tracking",
+            info: "See real-time progress of all goals in one place.",
           },
           {
-            feature: "Photo Meal Logging",
-            benefit: "Snap a photo, get instant meal breakdowns",
-          },
-          {
-            feature: "Seamless Tracking",
-            benefit: "Track diet plans and health goals in one place",
+            title: "Risk Spotting",
+            info: "AI flags goals or updates that need more focus.",
           },
         ],
+        project_hiw_image: "/images/aperio.png",
       },
-    ],
-  };
+      FUZZIE: {
+        project_name: "FUZZIE",
+        project_heading: "Your Executive Insights AI",
+        project_description:
+          "Fuzzy logic decision-making agent that handles uncertain and complex business scenarios with intelligent reasoning.",
+        project_features: [
+          {
+            title: "Smart NLP Logging",
+            info: "Log meals in seconds by typing a simple sentence",
+          },
+          {
+            title: "Photo Meal Logging",
+            info: "Snap a photo, get instant meal breakdowns",
+          },
+          {
+            title: "Seamless Tracking",
+            info: "Track diet plans and health goals in one place",
+          },
+        ],
+        project_hiw_image: "/images/fuzzie.png",
+      },
+    };
+
+    return map;
+  }, []);
 
   const agents = [
     "DOCSY",
@@ -160,15 +202,8 @@ const AgentsSection = () => {
     "FUZZIE",
   ];
 
-  // Helper function to get agent data
-  const getAgentData = (agentName: string) => {
-    // Handle special case mappings
-    let searchName = agentName;
-    if (agentName === "VCBOT") searchName = "VC NOTEBOT";
-    if (agentName === "APERIO") searchName = "APERIO BOT";
-
-    return agentsData.ai_agents.find((agent) => agent.name === searchName);
-  };
+  // Get current project data from local projects
+  const currentProject = localProjects[selectedAgent];
 
   // Helper function to get agent image
   const getAgentImage = (agentName: string) => {
@@ -185,102 +220,86 @@ const AgentsSection = () => {
     return imageMap[agentName] || "/images/robot.png";
   };
 
-  const currentAgentData = getAgentData(selectedAgent);
   const currentAgentImage = getAgentImage(selectedAgent);
 
   return (
     <div
-      className="py-16 -mx-4 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden"
-      style={{ backgroundColor: "#F9F6F4" }}
+      id="agents_section"
+      className="py-8 sm:py-16 lg:py-20 overflow-hidden"
+      style={{
+        backgroundColor: "#F9F6F4",
+        width: "calc(100% + 2rem)",
+        marginLeft: "-1rem",
+        marginRight: "-1rem",
+      }}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-red-500 font-medium text-sm tracking-wider uppercase mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">
             AGENTS WE&apos;VE SHIPPED
           </p>
-          <h2 className="text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal">
+          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal px-4">
             Recruit enterprise-grade AI agents
           </h2>
-          <h3 className="text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal">
+          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal px-4">
             today, fully customizable
           </h3>
         </div>
 
         {/* Agent Navigation */}
-        <div className="flex flex-wrap justify-center gap-8 mb-16">
-          {agents.map((agent) => (
-            <button
-              key={agent}
-              onClick={() => setSelectedAgent(agent)}
-              className={`text-lg font-medium transition-colors duration-200 pb-3 border-b-4 ${
-                selectedAgent === agent
-                  ? "text-blue-600 border-blue-600"
-                  : "text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-600"
-              }`}
-            >
-              {agent}
-            </button>
-          ))}
+        <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="sm:block md:flex md:justify-center overflow-x-auto w-full -mx-4 no-scrollbar px-8 md:mx-0">
+            <div className="flex xl:flex xl:flex-wrap xl:justify-center gap-6">
+              {agents.map((agent) => (
+                <button
+                  key={agent}
+                  onClick={() => setSelectedAgent(agent)}
+                  className={`flex-shrink-0 whitespace-nowrap text-xs sm:text-sm lg:text-base xl:text-lg font-medium transition-colors duration-200 pb-2 sm:pb-3 border-b-2 lg:border-b-4 text-center ${
+                    selectedAgent === agent
+                      ? "text-blue-600 border-blue-600"
+                      : "text-gray-600 border-transparent hover:text-blue-600 hover:border-blue-600"
+                  }`}
+                >
+                  {agent}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Selected Agent Display */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto px-4">
           <div
-            className="rounded-2xl shadow-lg border border-gray-200 p-8"
+            className="rounded-xl lg:rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8"
             style={{ backgroundColor: "#F9F6F4" }}
           >
             {/* Hero Section */}
-            <div className="flex flex-col lg:flex-row items-center gap-8 mb-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="rounded-lg bg-red-500 flex px-3 py-1 justify-center items-center text-gray-50 font-sfpro text-base font-medium leading-normal">
+            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 mb-4 sm:mb-6">
+              <div className="flex-1 text-center lg:text-left">
+                <div className="flex justify-center lg:justify-start items-center gap-3 mb-3 sm:mb-4">
+                  <span className="rounded-lg bg-red-500 flex px-2 sm:px-3 py-1 justify-center items-center text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-normal">
                     NEW
                   </span>
                 </div>
-                <h3 className="font-mondwest text-4xl font-normal text-blue-600 mb-4">
+                <h3 className="font-mondwest text-2xl sm:text-3xl lg:text-4xl font-normal text-blue-600 mb-3 sm:mb-4">
                   {selectedAgent}
                 </h3>
-                <h4 className="text-slate-800 font-sfpro text-xl font-medium leading-normal mb-4">
-                  {selectedAgent === "DOCSY" &&
-                    "Your WhatsApp Assistant for Instant File Answers"}
-                  {selectedAgent === "NAITIK" &&
-                    "Intelligent Customer Service Agent"}
-                  {selectedAgent === "VCBOT" && "Your Meeting Summarizer "}
-                  {selectedAgent === "VOICE LEAD AGENT" &&
-                    "Your AI Calling Assistant for Instant Appointment Booking"}
-                  {selectedAgent === "FEDFORWARD" &&
-                    "Your Career Transition AI"}
-                  {selectedAgent === "LANDING PILL" &&
-                    "Your AI Landing Page Doctor"}
-                  {selectedAgent === "APERIO" && "Your Executive Insights AI"}
-                  {selectedAgent === "FUZZIE" && "Your Executive Insights AI"}
+                <h4 className="text-slate-800 font-sfpro text-lg sm:text-xl font-medium leading-normal mb-3 sm:mb-4">
+                  {currentProject?.project_heading || ""}
                 </h4>
-                <p className="text-slate-600 font-sfpro text-sm font-normal leading-normal mb-6">
-                  {selectedAgent === "DOCSY" &&
-                    "Meet Docsy — your smart, WhatsApp-native assistant that analyse anything you sync to Google Drive and gives you instant answers like a pro.No tabs, no digging, no switching tools."}
-                  {selectedAgent === "NAITIK" &&
-                    "AI-powered WhatsApp sales assistant designed to automate cold outreach, follow-ups, and lead qualification for real estate sales teams."}
-                  {selectedAgent === "VCBOT" &&
-                    "Meet VC Notebot — your automated assistant that listens to meetings, summarizes key points, updates your CRM, and keeps your entire team in sync. No manual notes, no missed details."}
-                  {selectedAgent === "VOICE LEAD AGENT" &&
-                    "Meet VoiceLead — your AI-powered calling agent that engages with prospects, collects key details, checks calendar availability, and books appointments, all on autopilot."}
-                  {selectedAgent === "FEDFORWARD" &&
-                    "Meet FedForward — your AI career transition assistant for federal employees ready to move into the private sector, helping them find best-fit roles and recommends only the courses they truly need."}
-                  {selectedAgent === "LANDING PILL" &&
-                    "Meet Landing Pill — your expert AI guide for diagnosing and fixing landing page problems. It shows you exactly what's stopping visitors from converting, so you can communicate value, build trust, and drive action that grows your business."}
-                  {selectedAgent === "APERIO" &&
-                    "Meet Aperio — your AI assistant that summarizes team updates, tracks goals, spots risks, and gives smart, actionable insights for executives. It saves hours digging through reports and helps leaders focus on what matters most."}
-                  {selectedAgent === "FUZZIE" &&
-                    "Fuzzy logic decision-making agent that handles uncertain and complex business scenarios with intelligent reasoning."}
+                <p className="text-slate-600 font-sfpro text-sm sm:text-base font-normal leading-relaxed mb-4 sm:mb-6">
+                  {currentProject?.project_description || ""}
                 </p>
-                <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-6 py-3">
-                  <span>📁</span>
-                  Try {selectedAgent}
-                </button>
+                <Link href="/agent/6888739e0e03b447e3158604">
+                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-auto lg:mx-0">
+                    <span>📁</span>
+                    Try {selectedAgent}
+                  </button>
+                </Link>
               </div>
-              <div className="flex-shrink-0">
-                <div className="w-48 h-48  rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 order-first lg:order-last">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full flex items-center justify-center">
                   <Image
                     src={
                       selectedAgent === "DOCSY"
@@ -291,27 +310,28 @@ const AgentsSection = () => {
                         ? "/images/robot2.png"
                         : "/images/robot3.png"
                     }
-                    alt="Docsy"
+                    alt="Agent Robot"
                     width={192}
                     height={192}
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
             </div>
 
             {/* Features & Benefits Section */}
-            <div className="mb-4 bg-white rounded-lg border border-slate-200 p-6">
-              <h3 className="text-[20px] font-mondwest font-normal text-[#0A1128] mb-6 uppercase">
+            <div className="mb-4 sm:mb-6 bg-white rounded-lg border border-slate-200 p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg lg:text-[20px] font-mondwest font-normal text-[#0A1128] mb-4 sm:mb-6 uppercase text-center lg:text-left">
                 FEATURE & BENEFITS
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {currentAgentData?.features_and_benefits.map((item, index) => (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+                {currentProject?.project_features.map((item, index) => (
                   <div
                     key={index}
-                    className="flex gap-2 rounded-lg p-4"
+                    className="flex flex-col sm:flex-row gap-3 rounded-lg p-3 sm:p-4"
                     style={{ backgroundColor: "#F9F6F4" }}
                   >
-                    <div className="w-6 h-6 bg-blue-600 flex items-center justify-center">
+                    <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -325,12 +345,12 @@ const AgentsSection = () => {
                         />
                       </svg>
                     </div>
-                    <div className="flex flex-col items-start">
-                      <div className="text-[#1E293B] font-sfpro text-[16px] font-[500] leading-normal mb-2">
-                        {item.feature}
+                    <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                      <div className="text-[#1E293B] font-sfpro text-sm sm:text-[16px] font-[500] leading-normal mb-2">
+                        {item.title}
                       </div>
-                      <div className="text-slate-600 font-sfpro text-sm font-normal leading-normal">
-                        {item.benefit}
+                      <div className="text-slate-600 font-sfpro text-xs sm:text-sm font-normal leading-normal">
+                        {item.info}
                       </div>
                     </div>
                   </div>
@@ -339,12 +359,12 @@ const AgentsSection = () => {
             </div>
 
             {/* How It Works Section */}
-            <div className="bg-white rounded-lg border border-slate-200 p-6">
+            <div className="bg-white rounded-lg border border-slate-200 p-4 sm:p-6">
               <div
                 className="flex items-center justify-between cursor-pointer group"
                 onClick={() => setIsHowItWorksOpen(!isHowItWorksOpen)}
               >
-                <h3 className="text-[20px] font-mondwest font-normal text-[#0A1128] mb-2 uppercase">
+                <h3 className="text-base sm:text-lg lg:text-[20px] font-mondwest font-normal text-[#0A1128] mb-2 uppercase">
                   HOW IT WORKS
                 </h3>
                 <div
@@ -353,12 +373,12 @@ const AgentsSection = () => {
                   }`}
                 >
                   <svg
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-gray-600 group-hover:text-blue-600 transition-colors duration-200"
+                    className="text-gray-600 group-hover:text-blue-600 transition-colors duration-200 sm:w-6 sm:h-6"
                   >
                     <path
                       d="M6 9l6 6 6-6"
@@ -374,11 +394,11 @@ const AgentsSection = () => {
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   isHowItWorksOpen
-                    ? "max-h-96 opacity-100"
+                    ? "max-h-[500px] sm:max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
+                <div className="flex flex-col items-center gap-4 sm:gap-8 pt-4">
                   <div className="flex-1 text-center">
                     <div
                       className={`transition-all duration-700 ease-out ${
@@ -392,8 +412,12 @@ const AgentsSection = () => {
                         alt={`${selectedAgent} How It Works`}
                         height={285}
                         width={0}
-                        style={{ width: "auto" }}
-                        className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                        style={{
+                          width: "auto",
+                          maxWidth: "100%",
+                          height: "auto",
+                        }}
+                        className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
                       />
                     </div>
                   </div>

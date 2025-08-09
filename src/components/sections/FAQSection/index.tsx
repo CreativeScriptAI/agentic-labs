@@ -37,25 +37,30 @@ const FAQSection = () => {
 
   return (
     <div
-      className="py-16 -mx-4 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
-      style={{ backgroundColor: "#F9F6F4" }}
+      className="py-12 sm:py-16 lg:py-20"
+      style={{
+        backgroundColor: "#F9F6F4",
+        width: "calc(100% + 2rem)",
+        marginLeft: "-1rem",
+        marginRight: "-1rem",
+      }}
     >
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-red-500 font-medium text-sm tracking-wider uppercase mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
             FREQUENTLY ASKED QUESTIONS
           </p>
-          <h2 className="text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro">
+          <h2 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
             AI is becoming an increasingly
           </h2>
-          <h3 className="text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro">
+          <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
             integral part of our lives.
           </h3>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4 relative">
+        <div className="space-y-3 sm:space-y-4 relative">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -63,23 +68,22 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none"
+                className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none"
               >
                 <h3
-                  className="pl-4 font-sfpro"
+                  className="pl-3 sm:pl-4 pr-2 font-sfpro text-sm sm:text-base"
                   style={{
                     color: "var(--Slate-900, #0F172A)",
-                    fontSize: "16px",
                     fontStyle: "normal",
                     fontWeight: "400",
-                    lineHeight: "24px",
+                    lineHeight: "1.5",
                   }}
                 >
                   {faq.question}
                 </h3>
-                <div className="pr-4">
+                <div className="pr-3 sm:pr-4 flex-shrink-0">
                   <svg
-                    className={`w-5 h-5 text-slate-600 transition-transform duration-200 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-600 transition-transform duration-200 ${
                       openIndex === index ? "transform rotate-180" : ""
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
@@ -97,16 +101,15 @@ const FAQSection = () => {
               </button>
 
               {openIndex === index && (
-                <div className="px-4 pb-5">
-                  <div className="pt-2 ">
+                <div className="px-3 sm:px-4 pb-4 sm:pb-5">
+                  <div className="pt-2">
                     <p
-                      className="leading-relaxed font-sfpro"
+                      className="leading-relaxed font-sfpro text-xs sm:text-sm"
                       style={{
                         color: "var(--Slate-600, #475569)",
-                        fontSize: "14px",
                         fontStyle: "normal",
                         fontWeight: "400",
-                        lineHeight: "20px",
+                        lineHeight: "1.6",
                       }}
                     >
                       {faq.answer}
