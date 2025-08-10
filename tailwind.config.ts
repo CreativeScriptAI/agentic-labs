@@ -14,6 +14,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "electric-blue": "#0062ff",
+        "midnight-navy": "#0a1128",
+        "soft-white": "#f8f9fa",
       },
       fontFamily: {
         sans: [
@@ -27,6 +30,7 @@ const config: Config = {
           "Arial",
           "sans-serif",
         ],
+        "eb-garamond": ["EB Garamond", "serif"],
         pretendard: ["Pretendard", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
         mondwest: ["var(--font-mondwest)", "sans-serif"],

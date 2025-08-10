@@ -39,8 +39,8 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
   if (!slug) return { notFound: true };
 
   try {
-    // Directly fetch agent by ID (assuming slug is the ID or can be converted to ID)
-    const data = await fetchAgentByID("6888739e0e03b447e3158604");
+    // Treat the dynamic route segment as the unique ID
+    const data = await fetchAgentByID(slug);
     if (!data) return { notFound: true, revalidate: CONFIG.revalidateTime };
 
     return {

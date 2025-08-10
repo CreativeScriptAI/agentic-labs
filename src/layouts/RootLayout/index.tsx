@@ -4,6 +4,7 @@ import useScheme from "src/hooks/useScheme";
 import Header from "./Header";
 import styled from "@emotion/styled";
 import Scripts from "src/layouts/RootLayout/Scripts";
+import { useRouter } from "next/router";
 // import useGtagEffect from "./useGtagEffect"
 import * as Prism from "prismjs";
 import "prismjs/components/prism-markup-templating.js";
@@ -46,6 +47,8 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => {
   const [scheme] = useScheme();
+  const router = useRouter();
+  const hideHeader = router.pathname === "/agent/[slug]";
   // useGtagEffect()
   useEffect(() => {
     Prism.highlightAll();
@@ -56,7 +59,7 @@ const RootLayout = ({ children }: Props) => {
       <Scripts />
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
-      <Header fullWidth={false} />
+      {!hideHeader && <Header fullWidth={false} />}
       <StyledMain>{children}</StyledMain>
     </ThemeProvider>
   );

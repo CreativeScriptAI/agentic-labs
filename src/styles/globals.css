@@ -7,6 +7,21 @@
   --foreground: #171717;
 }
 
+@layer components {
+  /* Shared section container and typography utilities */
+  .section {
+    @apply w-full max-w-[742px] mx-auto px-4 md:px-0 my-10 md:my-16;
+  }
+
+  .section_title {
+    @apply text-center font-mondwest text-slate-900 text-xl md:text-5xl leading-tight tracking-tight mb-6 md:mb-8;
+  }
+
+  .section_label {
+    @apply block font-sfpro text-center text-slate-500 text-xs md:text-sm font-medium mb-3;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -54,4 +69,132 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@layer components {
+  .button_blue {
+    @apply rounded-lg gap-1.5 p-3 flex items-center justify-center font-semibold text-sm bg-electric-blue text-soft-white text-center;
+  }
+  .button_blue:hover {
+    @apply bg-midnight-navy border-midnight-navy;
+  }
+  .button_blue:active {
+    @apply bg-black border-midnight-navy;
+  }
+
+  .button_blue_border {
+    @apply rounded-lg gap-1.5 p-3 flex items-center font-semibold text-sm border border-electric-blue text-electric-blue;
+  }
+  .button_blue_border:hover {
+    @apply bg-electric-blue text-soft-white;
+  }
+  .button_blue_border:active {
+    @apply bg-[#003EA2] text-soft-white;
+  }
+
+  .accordion_container {
+    @apply shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f] rounded-lg;
+  }
+
+  .setup_card {
+    @apply text-center text-midnight-navy w-full md:w-fit py-2 px-6 bg-soft-white rounded-lg shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f] flex items-center justify-center gap-2 text-base font-medium;
+  }
+
+  .release_card {
+    @apply flex flex-col w-full p-3 rounded-lg bg-white gap-4 shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f];
+  }
+
+  .review_card {
+    @apply flex flex-col justify-between w-full p-3 rounded-lg bg-white gap-4 shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f];
+  }
+
+  .container_max {
+    @apply max-w-6xl mx-auto px-4;
+  }
+
+  .section {
+    @apply flex flex-col items-center justify-center max-w-6xl mx-auto my-36 gap-4 px-4;
+  }
+  .section_title {
+    @apply font-normal text-4xl md:text-5xl text-slate-900 mb-6 md:mb-16 text-center font-eb-garamond;
+  }
+  .section_label {
+    @apply text-xs md:text-sm font-normal text-electric-blue uppercase;
+  }
+
+  .capabilities_card {
+    @apply flex flex-col-reverse md:flex-row items-center gap-4 mb-8 justify-center rounded-lg bg-white shadow-[0px_2px_8px_0px_#0000001A,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000F] md:pl-8;
+  }
+  .stack_card {
+    @apply flex flex-col items-center gap-2 w-full p-4 rounded-lg bg-white shadow-[0px_0px_0px_1px_#0000000F] text-center;
+  }
+  .stack_card:hover {
+    @apply shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f];
+  }
+
+  .swiper-nav-group {
+    @apply flex gap-4 ml-auto w-fit mt-3 md:mt-6;
+  }
+
+  .swiper-nav-btn {
+    @apply w-12 md:w-16 h-12 md:h-16 rounded-lg flex items-center justify-center bg-[#E2E8F0] cursor-pointer transition-all duration-150 relative;
+    cursor: pointer;
+    transition: background 0.15s, border 0.15s;
+    position: relative;
+  }
+
+  .swiper-nav-btn:active,
+  .swiper-nav-btn:focus {
+    @apply border-electric-blue;
+    background: #f1f5f9;
+  }
+
+  .underline_custom {
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+  }
+  .underline_custom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    height: 2px;
+    background-color: #0f172a;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .cardContainer {
+    position: relative;
+    width: 100%;
+  }
+
+  .cardWrapper {
+    position: sticky; /* Ensures cards stay visible while scrolling */
+    top: 72px;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 4px 8px 40px 0px rgba(0, 0, 0, 0.06);
+  }
+
+  .form_bg {
+    @apply shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014] rounded-lg;
+    background-image: url("../public/form_bg.webp");
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .input {
+    @apply w-full p-4 bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-electric-blue;
+    resize: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .setup_card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: flex-start !important;
+  }
 }
