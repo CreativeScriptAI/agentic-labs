@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <div
-      className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh]"
+      className="min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] overflow-hidden"
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
@@ -40,14 +40,14 @@ const HeroSection = () => {
           {/* Call to Action - anchored at bottom */}
           <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-8 sm:pb-12">
             <a
-              href="#agents-section"
+              href="#agents_section"
               className="text-base sm:text-lg font-medium text-red-500 hover:text-red-600 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg hover:bg-red-50"
             >
               Explore our Agents
             </a>
 
             {/* Down Arrow */}
-            <a href="#agents-section" className="animate-bounce">
+            <a href="#agents_section" className="animate-bounce">
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6 text-red-500"
                 fill="none"

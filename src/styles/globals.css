@@ -40,6 +40,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Prevent horizontal scrolling across the site */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -188,6 +195,35 @@ html {
   .input {
     @apply w-full p-4 bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-electric-blue;
     resize: none;
+  }
+
+  .border-agent {
+    border-bottom: 2px solid #0062ff;
+  }
+  .border-agent-hover:hover {
+    border-bottom: 2px solid #0062ff;
+  }
+}
+
+/* Animated underline for agent tabs */
+@layer components {
+  .agent-tab {
+    position: relative;
+  }
+  .agent-tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #0062ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  .agent-tab.is-active::after {
+    transform: scaleX(1);
   }
 }
 
