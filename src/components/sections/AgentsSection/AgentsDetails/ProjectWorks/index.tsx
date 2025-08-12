@@ -31,7 +31,7 @@ const ProjectWorks = ({ data }: ProjectWorksProps) => {
                   <li className="text-base md:text-lg text-[#1E293B] flex gap-4 items-start">
                     <div className="shrink-0 flex flex-col items-center gap-2 -mt-1">
                       <Image
-                        src={`/icons/works_${index + 1}.svg`}
+                        src={`/icons/works_${index + 1}.png`}
                         alt="Check Icon"
                         className="mt-1"
                         width={32}
@@ -60,7 +60,7 @@ const ProjectWorks = ({ data }: ProjectWorksProps) => {
           <Image
             src={data.image}
             alt="Works Image"
-            className="w-full h-auto"
+            className=""
             width={500}
             height={360}
           />

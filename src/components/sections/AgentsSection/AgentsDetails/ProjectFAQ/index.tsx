@@ -21,20 +21,17 @@ const ProjectFAQ = ({ data }: ProjectFAQProps) => {
 
   return (
     <section className="section">
-      <h2 className="section_title">{data.title}</h2>
+      <h2 className="section_title">FAQ</h2>
       <div className="flex flex-col w-full gap-4 max-w-[684px]">
         {data.questions.map((item, idx) => {
           const isOpen = openIdx === idx;
           return (
             <div
               key={item.question}
-              className="border-b border-b-[#E2E8F0] rounded-lg transition-all"
+              onClick={() => handleToggle(idx)}
+              className="border-b border-b-[#E2E8F0] rounded-lg transition-all cursor-pointer"
             >
-              <button
-                type="button"
-                onClick={() => handleToggle(idx)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left"
-              >
+              <div className="w-full flex items-center justify-between px-6 py-4 text-left">
                 <span className="text-lg text-[#0F172A]">{item.question}</span>
                 <ChevronDown
                   className={`transition-transform duration-200 ${
@@ -42,7 +39,7 @@ const ProjectFAQ = ({ data }: ProjectFAQProps) => {
                   }`}
                   size={24}
                 />
-              </button>
+              </div>
               <div
                 className={`overflow-hidden transition-all duration-300 px-6 ${
                   isOpen

@@ -49,44 +49,76 @@ const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
         >
           {data.reviews.map((item, index) => (
             <SwiperSlide key={index} className="!h-auto">
-              <div className="review_card h-full flex flex-col justify-between w-full min-h-full">
-                <p className="text-base text-[#1E293B] font-normal flex-grow">
-                  {item.review}
-                </p>
-                <div className="flex items-center justify-between gap-4 pt-4 border-t border-t-[#E2E8F0]">
-                  <div className="flex flex-col items-start gap-2">
-                    <span className="text-sm font-semibold text-[#0D162F]">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 h-full flex flex-col w-full min-h-full">
+                <div className="flex-grow">
+                  <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
+                    {item.review}
+                  </p>
+                </div>
+                <hr className="border-t border-gray-200 mb-4 sm:mb-6" />
+                <div className="mt-auto flex items-center justify-between">
+                  <div className="flex-grow">
+                    <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
                       {item.name}
-                    </span>
-                    <span className="text-xs text-[#868A97]">
+                    </h4>
+                    <p className="text-gray-500 text-xs sm:text-sm">
                       {item.designation}
-                    </span>
+                    </p>
                   </div>
-                  {item.logo && (
-                    <Image
-                      src={item.logo}
-                      alt={`${item.name} logo`}
-                      width={40}
-                      height={40}
-                    />
-                  )}
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden ml-3 sm:ml-4 flex-shrink-0">
+                    {item.logo ? (
+                      <Image
+                        src={item.logo}
+                        alt={`${item.name} logo`}
+                        width={56}
+                        height={56}
+                        className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain rounded-full"
+                      />
+                    ) : (
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gray-400 rounded-full" />
+                    )}
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-nav-group">
+        <div className="flex justify-center sm:justify-end gap-2 mt-3 md:mt-6">
           <button
-            className="swiper-nav-btn testimonial-swiper-prev"
+            className="testimonial-swiper-prev w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200"
             aria-label="Previous testimonial"
           >
-            <ArrowLeft size={24} color="#0062FF" />
+            <svg
+              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
           <button
-            className="swiper-nav-btn testimonial-swiper-next"
+            className="testimonial-swiper-next w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200"
             aria-label="Next testimonial"
           >
-            <ArrowRight size={24} color="#0062FF" />
+            <svg
+              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
       </div>

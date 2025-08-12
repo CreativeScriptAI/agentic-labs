@@ -10,7 +10,10 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const router = useRouter();
   const currentPath = router.pathname;
 
-  const links = [{ id: 1, name: "Blog", to: "/blog" }];
+  const links = [
+    { id: 1, name: "Blog", to: "/blog" },
+    { id: 1, name: "About", to: "/about" },
+  ];
 
   if (isMobile) {
     return (

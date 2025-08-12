@@ -9,10 +9,10 @@ type Props = Record<string, never>;
 const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">
+      {/* <div className="title">
         <Emoji>💻</Emoji> Profile
-      </div>
-      <div className="content">
+      </div> */}
+      {/* <div className="content">
         <div className="top">
           <Image src={CONFIG.profile.image} fill alt="" />
         </div>
@@ -21,7 +21,7 @@ const ProfileCard: React.FC<Props> = () => {
           <div className="role">{CONFIG.profile.role}</div>
           <div className="text-sm mb-2">{CONFIG.profile.bio}</div>
         </div>
-      </div>
+      </div> */}
     </StyledWrapper>
   );
 };

@@ -21,8 +21,15 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
+interface AgentsListResponse {
+  data?: unknown;
+  pages?: unknown;
+  total_pages?: number;
+  last_updated?: string;
+}
+
 interface HomePageProps {
-  agentsApiRaw: unknown;
+  agentsApiRaw: AgentsListResponse;
 }
 
 const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
@@ -38,7 +45,7 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
     <>
       <MetaConfig {...meta} />
       <HeroSection />
-      <AgentsSection />
+      <AgentsSection agents={agentsApiRaw?.data} />
       <TrustedSection />
       <TestimonialsSection />
       <FAQSection />

@@ -1,16 +1,16 @@
-import { CONFIG } from "site.config"
-import Image from "next/image"
-import React from "react"
-import styled from "@emotion/styled"
+import { CONFIG } from "site.config";
+import Image from "next/image";
+import React from "react";
+import styled from "@emotion/styled";
 
 type Props = {
-  className?: string
-}
+  className?: string;
+};
 
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="top">💻 Profile</div>
+      {/* <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
           <Image
@@ -26,12 +26,12 @@ const MobileProfileCard: React.FC<Props> = () => {
             <div className="btm">{CONFIG.profile.bio}</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default MobileProfileCard
+export default MobileProfileCard;
 
 const StyledWrapper = styled.div`
   display: block;
@@ -75,4 +75,4 @@ const StyledWrapper = styled.div`
       }
     }
   }
-`
+`;

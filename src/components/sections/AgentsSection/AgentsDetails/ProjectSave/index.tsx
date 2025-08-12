@@ -42,53 +42,48 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
               return (
                 <div
                   key={item.title}
-                  className="border-b rounded-lg bg-white w-full"
+                  onClick={() => handleToggle(idx)}
+                  className="border-b rounded-lg bg-white w-full cursor-pointer py-6"
                 >
-                  <button
-                    type="button"
-                    onClick={() => handleToggle(idx)}
-                    className={`w-full items-start gap-2 flex justify-between p-5 md:p-6 transition-all duration-200 ${
-                      isOpen && "pb-3"
-                    }`}
+                  <div
+                    className={`flex items-center items-start gap-2 flex justify-between px-5 md:px-6 transition-all duration-200`}
                   >
-                    <span
-                      className={`flex gap-3 transition-all w-full ${
-                        isOpen ? "flex-col" : ""
-                      }`}
+                    <div
+                      className={`flex items-center gap-3 transition-all w-full items-center`}
                     >
-                      {item.icon && (
-                        <Image
-                          src={item.icon}
-                          alt={item.title}
-                          width={isOpen ? 48 : 24}
-                          height={isOpen ? 48 : 24}
-                          className={`transition-all shrink-0 ${
-                            isOpen ? "mb-1" : ""
-                          }`}
-                          style={{
-                            width: isOpen ? 48 : 24,
-                            height: isOpen ? 48 : 24,
-                          }}
-                        />
-                      )}
+                      <div className="flex items-center">
+                        {item.icon && (
+                          <Image
+                            src={item.icon}
+                            alt={item.title}
+                            width={28}
+                            height={28}
+                            className={`h-6 w-6 shrink-0 object-contain ${
+                              isOpen ? "mb-1" : ""
+                            }`}
+                          />
+                        )}
+                      </div>
 
-                      <span
-                        className={`text-base md:text-lg font-medium text-left ${
-                          isOpen ? "md:text-xl mt-1" : ""
+                      <div
+                        className={`text-base md:text-lg font-medium text-left transition-all duration-200 ${
+                          isOpen ? "" : ""
                         }`}
                       >
                         {item.title}
-                      </span>
-                    </span>
-                    <ChevronDown
-                      className={`ml-auto transition-transform ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                      size={24}
-                    />
-                  </button>
+                      </div>
+                    </div>
+                    <div>
+                      <ChevronDown
+                        className={`ml-auto transition-transform ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                        size={24}
+                      />
+                    </div>
+                  </div>
                   {isOpen && (
-                    <div className="p-5 md:p-6 pt-0 text-[#475569] text-sm md:text-base">
+                    <div className="px-5 mx-[36px] md:px-6 pt-2 text-[#475569] text-sm md:text-base">
                       {item.description}
                     </div>
                   )}

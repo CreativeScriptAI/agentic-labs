@@ -1,14 +1,14 @@
-import { CONFIG } from "site.config"
-import React from "react"
-import { AiFillCodeSandboxCircle } from "react-icons/ai"
-import styled from "@emotion/styled"
-import { Emoji } from "src/components/Emoji"
+import { CONFIG } from "site.config";
+import React from "react";
+import { AiFillCodeSandboxCircle } from "react-icons/ai";
+import styled from "@emotion/styled";
+import { Emoji } from "src/components/Emoji";
 
 const ServiceCard: React.FC = () => {
-  if (!CONFIG.projects) return null
+  if (!CONFIG.projects) return null;
   return (
     <>
-      <StyledTitle>
+      {/* <StyledTitle>
         <Emoji>🌟</Emoji> Service
       </StyledTitle>
       <StyledWrapper>
@@ -23,17 +23,17 @@ const ServiceCard: React.FC = () => {
             <div className="name">{project.name}</div>
           </a>
         ))}
-      </StyledWrapper>
+      </StyledWrapper> */}
     </>
-  )
-}
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;
 
 const StyledTitle = styled.div`
   padding: 0.25rem;
   margin-bottom: 0.75rem;
-`
+`;
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -65,4 +65,4 @@ const StyledWrapper = styled.div`
       line-height: 1.25rem;
     }
   }
-`
+`;

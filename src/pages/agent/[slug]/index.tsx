@@ -14,6 +14,7 @@ import ProjectTestimonial from "src/components/sections/AgentsSection/AgentsDeta
 import ProjectTrustedBy from "src/components/sections/AgentsSection/AgentsDetails/ProjectTrustedBy";
 import ProjectWorks from "src/components/sections/AgentsSection/AgentsDetails/ProjectWorks";
 import { fetchAgentByID } from "src/libs/api";
+import FooterSection from "src/components/sections/FooterSection";
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -72,6 +73,7 @@ const AgentDetailPage = ({
       {data.faq && <ProjectFAQ data={data.faq} />}
       {data.testimonial && <ProjectTestimonial data={data.testimonial} />}
       <ContactUsForm />
+      <FooterSection />
     </>
   );
 };

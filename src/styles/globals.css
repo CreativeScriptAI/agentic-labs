@@ -91,6 +91,8 @@ body {
 
   .button_blue_border {
     @apply rounded-lg gap-1.5 p-3 flex items-center font-semibold text-sm border border-electric-blue text-electric-blue;
+    border-radius: 8px;
+    border: 1px solid var(--Electric-Blue, #0062ff);
   }
   .button_blue_border:hover {
     @apply bg-electric-blue text-soft-white;
@@ -109,6 +111,19 @@ body {
 
   .release_card {
     @apply flex flex-col w-full p-3 rounded-lg bg-white gap-4 shadow-[0px_2px_8px_0px_#0000001a,0px_6px_25px_0px_#00000014,0px_0px_0px_1px_#0000000f];
+  }
+
+  /* Ensure equal-height slides/cards in releases swiper */
+  .releases-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+  .releases-swiper .swiper-slide {
+    height: auto; /* let it expand */
+    display: flex;
+  }
+  .releases-swiper .swiper-slide > * {
+    display: flex;
+    flex: 1 1 auto;
   }
 
   .review_card {

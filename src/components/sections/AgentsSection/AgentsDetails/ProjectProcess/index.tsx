@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { HowWeWorkSVG } from "src/assets/svgs/howweworksvg";
 
 interface ProjectProcessProps {
   data: {
@@ -28,7 +29,9 @@ const ProjectProcess = ({ data }: ProjectProcessProps) => {
               key={index}
               className="text-base text-[#1E293B] flex gap-4 items-center"
             >
-              <Image src={`/icons/flash.svg`} alt="" width={32} height={32} />
+              <span>
+                <HowWeWorkSVG />
+              </span>
               <span>{step}</span>
             </li>
           ))}

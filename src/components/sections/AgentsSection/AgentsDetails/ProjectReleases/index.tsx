@@ -45,32 +45,48 @@ const ProjectReleases = ({ data }: ProjectReleasesProps) => {
             nextEl: ".releases-swiper-next",
             prevEl: ".releases-swiper-prev",
           }}
-          className="!p-4 !-mx-4"
+          className="releases-swiper !p-4 !-mx-4"
         >
           {data.releases.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="release_card h-full flex flex-col justify-between">
-                <div className="p-3 rounded-lg border border-[#E2E8F0] bg-[#F1F5F9]">
+                <div className="p-3 rounded-lg border border-[#E2E8F0] bg-[#F1F5F9] flex-1">
                   {item.image && (
                     <Image
                       src={item.image}
                       alt={item.alt}
-                      width={540}
-                      height={300}
+                      width={340}
+                      height={200}
                       className="w-full h-auto rounded-lg"
                     />
                   )}
-                  <div className="flex items-end justify-between gap-2 mt-4">
-                    <Image
-                      src={"/cslogo_dark.svg"}
-                      alt={`${item.companyName} logo`}
-                      width={120}
-                      height={36}
-                      className="max-w-[120px] -ms-2"
-                    />
-                    <span className="text-xs text-[#6B7280]">{item.date}</span>
+                  <div className="flex items-end justify-between gap-2 mt-4 mx-2">
+                    <div className="flex items-center gap-1">
+                      <Image
+                        src={"/images/cs_logo.jpeg"}
+                        alt={`${item.companyName} logo`}
+                        width={20}
+                        height={20}
+                        className="max-w-[120px] -ms-2 rounded-xl"
+                      />
+                      <span className="font-sfpro font-normal text-sm">
+                        {item.companyName}
+                      </span>
+                    </div>
+
+                    <span className="font-sfpro font-light text-sm text-[#6B7280]">
+                      {new Date(item.date)
+                        .toLocaleDateString("en-US", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })
+                        .replace(/(\d+)/, "$1th")}
+                    </span>
                   </div>
-                  <p className="text-sm text-[#374151] mt-2">{item.excerpt}</p>
+                  <p className="font-sfpro text-md font-light text-slate-800 mt-2">
+                    {item.excerpt}
+                  </p>
                 </div>
                 <a
                   href={item.link}
