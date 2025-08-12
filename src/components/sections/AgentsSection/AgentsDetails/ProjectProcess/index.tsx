@@ -47,10 +47,7 @@ const ProjectProcess = ({ data }: ProjectProcessProps) => {
           />
         )}
       </div>
-      <Link
-        href={data.ctaButton.link}
-        className="button_blue_border w-fit me-auto"
-      >
+      <Link href={data.ctaButton.link} className="button_blue_border w-fit ">
         {data.ctaButton.text}
         <ArrowUpRight size={20} />
       </Link>

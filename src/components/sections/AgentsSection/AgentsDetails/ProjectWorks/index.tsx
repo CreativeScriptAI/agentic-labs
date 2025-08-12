@@ -24,14 +24,18 @@ const ProjectWorks = ({ data }: ProjectWorksProps) => {
       </h2>
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-8">
         <div>
-          <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+          <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8 mt-2">
             {data.steps.map((step, index) => {
               return (
                 <React.Fragment key={index}>
                   <li className="text-base md:text-lg text-[#1E293B] flex gap-4 items-start">
                     <div className="shrink-0 flex flex-col items-center gap-2 -mt-1">
                       <Image
-                        src={`/icons/works_${index + 1}.png`}
+                        src={
+                          index + 1 > 5
+                            ? `/icons/works_5.png`
+                            : `/icons/works_${index + 1}.png`
+                        }
                         alt="Check Icon"
                         className="mt-1"
                         width={32}

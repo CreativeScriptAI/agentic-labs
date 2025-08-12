@@ -14,7 +14,7 @@ interface ProjectTrustedByProps {
 const ProjectTrustedBy = ({ data }: ProjectTrustedByProps) => {
   return (
     <section className="section text-center">
-      <span className="section_label">{data.title}</span>
+      <span className="section_label text-slate-600 text-center font-sfpro text-xs font-medium leading-3 tracking-[2px] uppercase">{data.title}</span>
       <Marquee
         gradient={false}
         speed={60}

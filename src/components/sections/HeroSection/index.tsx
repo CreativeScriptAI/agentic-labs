@@ -3,19 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div
-      className="relative overflow-hidden"
-      style={{
-        backgroundColor: "#F9F6F4",
-        width: "calc(100% + 2rem)",
-        marginLeft: "-1rem",
-        marginRight: "-1rem",
-        marginBottom: "200px",
-        minHeight: "calc(100vh - 64px)",
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
+    <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] -ml-4 -mr-4 mb-[60px] min-h-[calc(100vh-64px)] flex items-center">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
@@ -40,9 +28,9 @@ const HeroSection = () => {
           {/* Call to Action - entire area clickable */}
           <a
             href="#agents_section"
-            className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-8 sm:pb-12"
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-20 sm:pb-12"
           >
-            <span className="text-base sm:text-lg font-medium text-red-500 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
+            <span className="text-base sm:text-lg font-medium text-red-500 transition-colors duration-200 mb-3 px-4 py-2  rounded-lg">
               Explore our Agents
             </span>
             <span className="animate-bounce">

@@ -30,11 +30,11 @@ const ProjectIssues = ({ data }: ProjectIssuesProps) => {
         )}
         <ul className="flex flex-col items-start gap-3 md:gap-4">
           {data.issues.map((issue, index) => (
-            <li key={index} className="flex items-start gap-2">
-              <span className="block w-5 h-5 bg-[#0062FF] shrink-0 mt-1"></span>
-              <span className="text-base md:text-lg font-normal text-[#1E293B]">
+            <li key={index} className="flex items-start gap-4">
+              <div className="block w-5 h-5 bg-[#0062FF] shrink-0 mt-1 "></div>
+              <div className="font-sfpro text-[14px] font-normal text-slate-800">
                 {issue}
-              </span>
+              </div>
             </li>
           ))}
         </ul>

@@ -18,7 +18,7 @@
   }
 
   .section_label {
-    @apply block font-sfpro text-center text-slate-500 text-xs md:text-sm font-medium mb-3;
+    @apply block font-sfpro text-center text-slate-500 text-xs md:text-sm font-medium;
   }
 }
 
@@ -135,7 +135,7 @@ body {
   }
 
   .section {
-    @apply flex flex-col items-center justify-center max-w-6xl mx-auto my-36 gap-4 px-4;
+    @apply flex flex-col items-center justify-center max-w-6xl mx-auto my-16 gap-4 px-4;
   }
   .section_title {
     @apply font-normal text-4xl md:text-5xl text-slate-900 mb-6 md:mb-16 text-center font-eb-garamond;
