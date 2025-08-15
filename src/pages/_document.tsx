@@ -22,6 +22,21 @@ class MyDocument extends Document {
               `,
             }}
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-PW19164HWX"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PW19164HWX');
+          `,
+            }}
+          />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
