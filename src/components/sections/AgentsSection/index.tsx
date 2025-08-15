@@ -14,6 +14,8 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isHowItWorksOpen, setIsHowItWorksOpen] = useState(false);
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+  const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
 
   const tabLabels: string[] = useMemo(
     () => projects.map((p) => p?.overview?.name || p?.projectName || "Agent"),
@@ -26,6 +28,37 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const howItWorksSrc: string | undefined = selectedOverview?.howitworks;
   const isRemoteHowItWorks: boolean =
     typeof howItWorksSrc === "string" && howItWorksSrc.startsWith("http");
+
+  // Navigation functions
+  const updateEdgeStates = React.useCallback(
+    (index: number) => {
+      setIsAtStart(index <= 0);
+      setIsAtEnd(index >= projects.length - 1);
+    },
+    [projects.length]
+  );
+
+  const goToIndex = React.useCallback(
+    (nextIndex: number) => {
+      const clamped = Math.max(0, Math.min(projects.length - 1, nextIndex));
+      setSelectedIndex(clamped);
+      updateEdgeStates(clamped);
+    },
+    [projects.length, updateEdgeStates]
+  );
+
+  const handleNext = React.useCallback(() => {
+    goToIndex(selectedIndex + 1);
+  }, [selectedIndex, goToIndex]);
+
+  const handlePrev = React.useCallback(() => {
+    goToIndex(selectedIndex - 1);
+  }, [selectedIndex, goToIndex]);
+
+  // Update edge states when selectedIndex changes
+  React.useEffect(() => {
+    updateEdgeStates(selectedIndex);
+  }, [selectedIndex, updateEdgeStates]);
 
   return (
     <div
@@ -53,13 +86,13 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
         </div>
 
         {/* Agent Navigation */}
-        <div className="mb-8 sm:mb-12 lg:mb-16">
+        <div className="mb-4 sm:mb-12 lg:mb-16">
           <div className="sm:block md:flex md:justify-center overflow-x-auto w-full -mx-4 no-scrollbar px-8 md:mx-0">
             <div className="flex xl:flex xl:flex-wrap xl:justify-center gap-6">
               {tabLabels.map((agentName: string, idx: number) => (
                 <button
                   key={`${agentName}-${idx}`}
-                  onClick={() => setSelectedIndex(idx)}
+                  onClick={() => goToIndex(idx)}
                   className={`agent-tab pb-1 flex-shrink-0 whitespace-nowrap text-xs sm:text-sm lg:text-base xl:text-lg font-medium transition-colors duration-200 text-center ${
                     selectedIndex === idx
                       ? "is-active text-blue-600"
@@ -71,6 +104,48 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Navigation Arrows - Only visible on mobile (< 768px) */}
+        <div className="flex md:hidden justify-center gap-2 mb-4 sm:mb-12 lg:mb-16">
+          <button
+            onClick={handlePrev}
+            className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isAtStart}
+          >
+            <svg
+              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={handleNext}
+            className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isAtEnd}
+          >
+            <svg
+              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
 
         {/* Selected Agent Display */}

@@ -292,9 +292,6 @@ const TestimonialsSection = () => {
                         {testimonial.title}
                       </p>
                     </div>
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden ml-3 sm:ml-4 flex-shrink-0">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gray-400 rounded-full"></div>
-                    </div>
                   </div>
                 </div>
               ))}

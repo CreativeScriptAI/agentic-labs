@@ -17,7 +17,7 @@ interface ProjectHeroProps {
 const ProjectHero = ({ data }: ProjectHeroProps) => {
   const isVideo = data.heroImage.endsWith(".mp4");
   return (
-    <section className="section text-center">
+    <section className="section text-center mt-[132px]">
       <span className="section_label">{data.subtitle}</span>
       <h1 className="section_title">
         {data.title}{" "}

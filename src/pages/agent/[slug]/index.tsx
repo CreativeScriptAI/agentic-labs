@@ -58,7 +58,7 @@ const AgentDetailPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <ProjectHeader data={data.header} />
+      {/* <ProjectHeader data={data.header} /> */}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
       {data.issues && <ProjectIssues data={data.issues} />}

@@ -48,7 +48,6 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   const [scheme] = useScheme();
   const router = useRouter();
-  const hideHeader = router.pathname === "/agent/[slug]";
   // useGtagEffect()
   useEffect(() => {
     Prism.highlightAll();
@@ -59,7 +58,7 @@ const RootLayout = ({ children }: Props) => {
       <Scripts />
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
-      {!hideHeader && <Header fullWidth={false} />}
+      <Header fullWidth={false} />
       <StyledMain>{children}</StyledMain>
     </ThemeProvider>
   );
@@ -71,5 +70,9 @@ const StyledMain = styled.main`
   margin: 0 auto;
   width: 100%;
   max-width: 1120px;
-  padding: 0 1rem;
+  padding: 0px 1rem 0 1rem; /* Add top padding for fixed header */
+
+  @media (min-width: 768px) {
+    // padding-top: 140px; /* Slightly more padding on larger screens */
+  }
 `;

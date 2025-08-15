@@ -72,28 +72,15 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   }, [isMobileMenuOpen, updateClipFromButton]);
 
   const router = useRouter();
-  const isAboutPage = router.pathname.startsWith("/about");
 
   return (
-    <header
-      className={`${
-        isAboutPage
-          ? "bg-transparent absolute top-0 left-0 w-full"
-          : "bg-[#F9F6F4] relative"
-      } z-50`}
-    >
+    <header className="fixed top-0 left-0 w-full bg-[#F9F6F4] z-50 bg-transparent">
       {/* Ellipse background image */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
         <EllipseBackground />
       </div>
 
-      <div
-        className={`pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 ${
-          isAboutPage
-            ? "bg-transparent translate-y-0 shadow-none"
-            : "translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl sm:bg-transparent bg-white sm:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)]"
-        }`}
-      >
+      <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl sm:bg-transparent bg-white sm:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)]">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
