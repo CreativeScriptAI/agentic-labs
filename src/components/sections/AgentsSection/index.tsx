@@ -26,6 +26,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const selectedLabel: string = tabLabels[selectedIndex] || "Agent";
   const selectedOverview: any | undefined = selectedProject?.overview;
   const howItWorksSrc: string | undefined = selectedOverview?.howitworks;
+  const botImageSrc: string | undefined = selectedOverview?.botImage;
   const isRemoteHowItWorks: boolean =
     typeof howItWorksSrc === "string" && howItWorksSrc.startsWith("http");
 
@@ -185,7 +186,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
               <div className="flex-shrink-0 order-first lg:order-last">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full flex items-center justify-center">
                   <Image
-                    src={"/images/robot.png"}
+                    src={botImageSrc || "/images/robot.png"}
                     alt="Agent Robot"
                     width={192}
                     height={192}

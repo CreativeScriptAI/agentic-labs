@@ -37,12 +37,13 @@ const CONFIG = {
   },
 
   // // plugin configuration (optional)
-  // googleAnalytics: {
-  //   enable: false,
-  //   config: {
-  //     measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
-  //   },
-  // },
+  googleAnalytics: {
+    enable: true,
+    config: {
+      measurementId:
+        process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "AW-17453709032",
+    },
+  },
   // googleSearchConsole: {
   //   enable: false,
   //   config: {
