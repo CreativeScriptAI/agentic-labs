@@ -38,9 +38,9 @@ const Feed: React.FC<Props> = () => {
         </div>
         <FeedHeader />
         <PostList q={q} />
-        <div className="footer">
+        {/* <div className="footer">
           <Footer />
-        </div>
+        </div> */}
       </div>
       {/* <div
         className="rt"
@@ -64,13 +64,13 @@ export default Feed;
 const StyledWrapper = styled.div`
   grid-template-columns: repeat(12, minmax(0, 1fr));
 
-  padding: 6rem 0;
+  padding-top: 6rem;
   display: grid;
   gap: 1.5rem;
 
   @media (max-width: 768px) {
     display: block;
-    padding: 8rem 0;
+    padding-top: 8rem;
   }
 
   > .lt {
@@ -93,7 +93,6 @@ const StyledWrapper = styled.div`
 
   > .mid {
     grid-column: span 12 / span 12;
-    // padding: 2rem 0;
 
     @media (min-width: 1024px) {
       grid-column: span 10 / span 10;
