@@ -73,14 +73,14 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
           <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">
             AGENTS WE&apos;VE SHIPPED
           </p>
-          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal px-4">
+          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
             Recruit enterprise-grade AI agents
           </h2>
-          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-center font-normal font-sfpro leading-normal px-4">
+          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
             today, fully customizable
           </h3>
         </div>
@@ -156,9 +156,9 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
           >
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 mb-4 sm:mb-6">
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex justify-center lg:justify-start items-center gap-3 mb-3 sm:mb-4">
-                  <span className="rounded-lg bg-red-500 flex px-2 sm:px-3 py-1 justify-center items-center text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-normal">
+              <div className="flex-1 text-left md:text-center lg:text-left">
+                <div className="flex justify-start md:justify-center lg:justify-start items-center gap-3 mb-3 sm:mb-4">
+                  <span className="rounded-lg bg-red-500 flex px-2 sm:px-3 py-1 justify-center items-center text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-normal hidden md:block">
                     NEW
                   </span>
                 </div>
@@ -176,7 +176,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                     selectedProject?._id ? `/agent/${selectedProject._id}` : "#"
                   }
                 >
-                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-auto lg:mx-0">
+                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-0 md:mx-auto lg:mx-0">
                     <span>📁</span>
                     Try {selectedLabel}
                   </button>
