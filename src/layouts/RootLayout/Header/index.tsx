@@ -80,13 +80,13 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         <EllipseBackground />
       </div>
 
-      <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl md:bg-transparent bg-white md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)]">
-        {/* Logo */}
-        <div className="flex-shrink-0">
+      <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between md:justify-center ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl md:bg-transparent bg-white md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)] relative">
+        {/* Logo - positioned absolutely on mobile, normal flow on desktop */}
+        <div className="flex-shrink-0 md:absolute md:left-4 lg:left-24 xl:left-24">
           <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - centered in the screen */}
         <div className="hidden md:flex items-center justify-center gap-8">
           <NavBar />
           <Link
@@ -163,7 +163,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                 {/* Close Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-200 transition-colors"
+                  className="flex items-center justify-center w-8 h-8 rounded-full transition-colors"
                   aria-label="Close mobile menu"
                 >
                   <svg
