@@ -65,7 +65,7 @@ const CONFIG = {
   //   },
   // },
   isProd: process.env.VERCEL_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-  revalidateTime: 21600 * 7, // revalidate time for [slug], index
+  revalidateTime: process.env.NODE_ENV === "development" ? 60 : 600, // 1 minute in dev, 10 minutes in prod
 };
 
 export { CONFIG };
