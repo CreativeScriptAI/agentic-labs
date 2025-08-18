@@ -85,6 +85,7 @@ const AnimatedCard = ({ card, index }: any) => {
 };
 
 const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
+  console.log(data, "data");
   return (
     <section className="section !max-w-3xl">
       <h2 className="section_title">

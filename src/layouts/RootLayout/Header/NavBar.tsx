@@ -12,7 +12,8 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
 
   const links = [
     { id: 1, name: "Blog", to: "/blog" },
-    { id: 1, name: "About", to: "/about" },
+    { id: 2, name: "About", to: "/about" },
+    { id: 3, name: "Contact", to: "/contact-us" },
   ];
 
   if (isMobile) {

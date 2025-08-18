@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import React from "react";
 
 type Props = {
@@ -7,54 +6,26 @@ type Props = {
 };
 
 const AgentTag: React.FC<Props> = ({ children, variant = "primary" }) => {
-  return <StyledWrapper variant={variant}>{children}</StyledWrapper>;
+  const getVariantClasses = () => {
+    switch (variant) {
+      case "primary":
+        return "bg-gray6 text-gray12 border-gray8";
+      case "secondary":
+        return "bg-sky-100 text-sky-700 border-sky-500 dark:bg-sky-900 dark:text-sky-300 dark:border-sky-600";
+      case "accent":
+        return "bg-green-50 text-green-700 border-green-500 dark:bg-green-900 dark:text-green-300 dark:border-green-600";
+      default:
+        return "bg-gray6 text-gray12 border-gray8";
+    }
+  };
+
+  return (
+    <div
+      className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium leading-4 transition-all duration-200 cursor-default border hover:-translate-y-0.5 hover:shadow-md ${getVariantClasses()}`}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default AgentTag;
-
-const StyledWrapper = styled.div<{
-  variant: "primary" | "secondary" | "accent";
-}>`
-  display: inline-flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1rem;
-  transition: all 0.2s ease;
-  cursor: default;
-
-  ${({ variant, theme }) => {
-    switch (variant) {
-      case "primary":
-        return `
-          background-color: ${theme.colors.gray6};
-          color: ${theme.colors.gray12};
-          border: 1px solid ${theme.colors.gray8};
-        `;
-      case "secondary":
-        return `
-          background-color: ${theme.scheme === "light" ? "#e0f2fe" : "#0c4a6e"};
-          color: ${theme.scheme === "light" ? "#0369a1" : "#7dd3fc"};
-          border: 1px solid ${theme.scheme === "light" ? "#0ea5e9" : "#0284c7"};
-        `;
-      case "accent":
-        return `
-          background-color: ${theme.scheme === "light" ? "#f0fdf4" : "#052e16"};
-          color: ${theme.scheme === "light" ? "#15803d" : "#86efac"};
-          border: 1px solid ${theme.scheme === "light" ? "#22c55e" : "#16a34a"};
-        `;
-      default:
-        return `
-          background-color: ${theme.colors.gray6};
-          color: ${theme.colors.gray12};
-        `;
-    }
-  }}
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-`;
