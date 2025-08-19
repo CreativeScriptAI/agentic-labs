@@ -37,6 +37,27 @@ class MyDocument extends Document {
           `,
             }}
           />
+          {/* Event snippet for Submit lead form (3) conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                function gtag_report_conversion(url) {
+                  var callback = function () {
+                    if (typeof(url) != 'undefined') {
+                      window.location = url;
+                    }
+                  };
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-17453709032/0MXdCNDL4IgbEOjtyYJB',
+                    'value': 1.0,
+                    'currency': 'INR',
+                    'event_callback': callback
+                  });
+                  return false;
+                }
+              `
+            }}
+          />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"

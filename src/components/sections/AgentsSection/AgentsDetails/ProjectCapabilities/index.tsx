@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useEffect, useRef, useState } from "react";
 
 interface ProjectCapabilitiesProps {
@@ -103,10 +103,24 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
         ))}
       </div>
 
-      <Link href={data.ctaButton.link} className="button_blue_border mt-4">
+      <a
+        href="https://tryagentikai.com/contact-us"
+        className="button_blue_border mt-4"
+        onClick={() => {
+          if (
+            typeof window !== "undefined" &&
+            (window as any).gtag_report_conversion
+          ) {
+            return (window as any).gtag_report_conversion(
+              "https://tryagentikai.com/contact-us"
+            );
+          }
+          return true;
+        }}
+      >
         {data.ctaButton.text}
         <ArrowUpRight size={20} />
-      </Link>
+      </a>
     </section>
   );
 };

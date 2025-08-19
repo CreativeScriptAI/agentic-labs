@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 
 interface ProjectHeroProps {
   data: {
@@ -16,6 +17,26 @@ interface ProjectHeroProps {
 
 const ProjectHero = ({ data }: ProjectHeroProps) => {
   const isVideo = data.heroImage.endsWith(".mp4");
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
+  const SkeletonLoader = () => (
+    <div className="w-full max-w-[440px] aspect-square rounded-lg bg-gray-200 animate-pulse flex items-center justify-center">
+      <div className="text-gray-400">
+        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fillRule="evenodd"
+            d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+
   return (
     <section className="section text-center mt-[132px]">
       <span className="section_label">{data.subtitle}</span>
@@ -29,23 +50,36 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
         {data.description}
       </p>
       <div className="flex flex-col items-center gap-5 md:gap-6">
-        {isVideo ? (
-          <video
-            className="w-full max-w-[440px] rounded-lg"
-            autoPlay
-            loop
-            muted
-          >
-            <source src={data.heroImage} type="video/mp4" />
-          </video>
-        ) : (
-          <Image
-            src={data.heroImage}
-            alt="Hero Image"
-            width={440}
-            height={440}
-          />
-        )}
+        <div className="relative">
+          {isLoading && <SkeletonLoader />}
+          {isVideo ? (
+            <video
+              className={`w-full max-w-[440px] rounded-lg transition-opacity duration-300 ${
+                isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
+              }`}
+              autoPlay
+              controlsList="nodownload noplaybackrate"
+              controls
+              disablePictureInPicture
+              loop
+              playsInline
+              onLoadedData={handleLoad}
+            >
+              <source src={data.heroImage} type="video/mp4" />
+            </video>
+          ) : (
+            <Image
+              src={data.heroImage}
+              alt="Hero Image"
+              width={440}
+              height={440}
+              className={`rounded-lg transition-opacity duration-300 ${
+                isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
+              }`}
+              onLoad={handleLoad}
+            />
+          )}
+        </div>
         <ul className="flex flex-col items-center md:flex-row md:items-start gap-2 md:gap-4 text-xs md:text-sm text-slate-800 font-medium">
           {data.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-1">
