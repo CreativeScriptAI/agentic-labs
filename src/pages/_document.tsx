@@ -62,18 +62,30 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
           <link
             rel="apple-touch-icon"
-            sizes="192x192"
+            sizes="180x180"
             href="/apple-touch-icon.png"
-          ></link>
+          />
+
+          {/* Feeds */}
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="RSS 2.0"
-            href="/feed"
-          ></link>
+            title="Agentic AI Labs RSS Feed"
+            href="/api/feed.xml"
+          />
+          <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="Agentic AI Labs Atom Feed"
+            href="/api/atom.xml"
+          />
+
+          {/* Manifest */}
+          <link rel="manifest" href="/manifest.webmanifest" />
           {/* google search console */}
           {/* {CONFIG.googleSearchConsole.enable === true && (
             <>

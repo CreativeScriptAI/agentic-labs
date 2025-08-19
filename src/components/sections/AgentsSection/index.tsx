@@ -74,8 +74,8 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4">
+        <div className="flex flex-col items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
+          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
             AGENTS WE&apos;VE SHIPPED
           </p>
           <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
