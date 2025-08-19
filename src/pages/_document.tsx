@@ -48,14 +48,14 @@ class MyDocument extends Document {
                     }
                   };
                   gtag('event', 'conversion', {
-                    'send_to': 'AW-17453709032/0MXdCNDL4IgbEOjtyYJB',
+                    'send_to': 'AW-17453709032/iUPxCMLqrIkbEOjtyYJB',
                     'value': 1.0,
                     'currency': 'INR',
                     'event_callback': callback
                   });
                   return false;
                 }
-              `
+              `,
             }}
           />
           <meta

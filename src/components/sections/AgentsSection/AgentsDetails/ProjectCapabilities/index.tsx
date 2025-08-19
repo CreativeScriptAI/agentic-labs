@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -103,8 +104,8 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
         ))}
       </div>
 
-      <a
-        href="https://tryagentikai.com/contact"
+      <button
+        // href="https://tryagentikai.com/contact"
         className="button_blue_border mt-4"
         onClick={() => {
           if (
@@ -120,7 +121,7 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
       >
         {data.ctaButton.text}
         <ArrowUpRight size={20} />
-      </a>
+      </button>
     </section>
   );
 };
