@@ -104,7 +104,7 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
       </div>
 
       <a
-        href="https://tryagentikai.com/contact-us"
+        href="https://tryagentikai.com/contact"
         className="button_blue_border mt-4"
         onClick={() => {
           if (
@@ -112,7 +112,7 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
             (window as any).gtag_report_conversion
           ) {
             return (window as any).gtag_report_conversion(
-              "https://tryagentikai.com/contact-us"
+              "https://tryagentikai.com/contact"
             );
           }
           return true;

@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ContactHeroSection = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+
+    // Load Calendly script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.type = "text/javascript";
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script if component unmounts
+      const existingScript = document.querySelector(
+        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+      );
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   const expectations = [
     {
       icon: "🗺️",
@@ -70,11 +93,20 @@ const ContactHeroSection = () => {
           {/* Right Side - Calendly Widget */}
           <div className="sticky top-8">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden lg:mt-0 mt-8">
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/creative-script/30min"
-                style={{ minWidth: "320px", height: "700px" }}
-              />
+              {isClient ? (
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/creative-script/30min"
+                  style={{ minWidth: "320px", height: "700px" }}
+                />
+              ) : (
+                <div
+                  className="flex items-center justify-center"
+                  style={{ minWidth: "320px", height: "700px" }}
+                >
+                  <div className="text-gray-500">Loading calendar...</div>
+                </div>
+              )}
             </div>
           </div>
         </div>

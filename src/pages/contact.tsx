@@ -22,13 +22,6 @@ const ContactUsPage = () => {
       <ContactHeroSection />
       <WhoItsForSection />
       <WhyBookThisSection />
-
-      {/* Load Calendly Script */}
-      <script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      />
     </RootLayout>
   );
 };
