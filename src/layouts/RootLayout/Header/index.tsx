@@ -91,10 +91,9 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           <div className="hidden md:flex items-center justify-center gap-8">
             <NavBar />
             <Link
-              href="https://calendly.com/creative-script/30min?month=2024-01"
-              target="_blank"
+              href="/contact"
               rel="noopener noreferrer"
-              className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none"
             >
               Contact Us
             </Link>
@@ -193,20 +192,13 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
                   {/* Contact Us Button - Fixed responsiveness */}
                   <div className="w-full">
-                    <div
-                      style={{ width: "100%" }}
-                      onClick={() => {
-                        window.open(
-                          "https://calendly.com/creative-script/30min?month=2024-01",
-                          "_blank"
-                        );
-                        setIsMobileMenuOpen(false);
-                      }}
-                      rel="noopener noreferrer"
-                      className="text-center rounded-lg bg-blue-600 px-4 py-4 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none  overflow-hidden"
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block text-center rounded-lg bg-blue-600 px-4 py-4 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none overflow-hidden"
                     >
                       Contact Us
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

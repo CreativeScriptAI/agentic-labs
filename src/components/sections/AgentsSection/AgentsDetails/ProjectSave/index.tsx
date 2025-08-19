@@ -102,13 +102,24 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
           />
         )}
       </div>
-      <Link
-        href={data.ctaButton.link}
-        className="button_blue_border w-fit max-md:mx-auto md:me-auto mt-2"
+      <button
+        // href="https://tryagentikai.com/contact"
+        className="button_blue_border mt-4"
+        onClick={() => {
+          if (
+            typeof window !== "undefined" &&
+            (window as any).gtag_report_conversion
+          ) {
+            return (window as any).gtag_report_conversion(
+              "https://tryagentikai.com/contact"
+            );
+          }
+          return true;
+        }}
       >
         {data.ctaButton.text}
         <ArrowUpRight size={20} />
-      </Link>
+      </button>
     </section>
   );
 };

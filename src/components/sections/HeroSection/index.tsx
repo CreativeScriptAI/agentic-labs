@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import EllipseBackground from "src/assets/images/EllipseBackground";
 
 const HeroSection = () => {
   return (
     <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] -ml-4 -mr-4 mb-[60px] min-h-[calc(100vh-64px)] flex items-center">
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[1600px] max-w-none pointer-events-none select-none opacity-70">
+        <EllipseBackground />
+      </div>
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">

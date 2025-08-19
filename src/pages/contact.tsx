@@ -4,6 +4,10 @@ import { NextSeo } from "next-seo";
 import ContactHeroSection from "src/components/sections/ContactHeroSection";
 import WhoItsForSection from "src/components/sections/WhoItsForSection";
 import WhyBookThisSection from "src/components/sections/WhyBookThisSection";
+import WhatHappensNext from "src/components/sections/HowItWorksSection";
+import ContactFAQSection from "src/components/sections/ContactFAQSection";
+import ContactCTASection from "src/components/sections/ContactCTASection";
+import FooterSection from "src/components/sections/FooterSection";
 
 const ContactUsPage = () => {
   return (
@@ -22,6 +26,10 @@ const ContactUsPage = () => {
       <ContactHeroSection />
       <WhoItsForSection />
       <WhyBookThisSection />
+      <WhatHappensNext />
+      <ContactFAQSection />
+      <ContactCTASection />
+      <FooterSection />
     </RootLayout>
   );
 };

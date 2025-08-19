@@ -1,37 +1,43 @@
 import Image from "next/image";
 
-const WhyBookThisSection = () => {
-  const reasons = [
-    "Walk away with <strong>clarity</strong>, not guesswork",
-    "No sales pitch, just a <strong>roadmap</strong> you can act on",
-    "<strong>100% free</strong> (value-first, zero risk)",
+const WhatHappensNext = () => {
+  const steps = [
+    "Pick a slot on Calendly.",
+    "Will discuss your idea or existing problem on call.",
+    "Then, we'll map roadmap with feasibility, timeline, and next steps.",
   ];
 
   return (
     <section className="section">
-      <h2 className="section_title text-slate-900">Why Book This</h2>
+      <h2 className="section_title text-slate-900">What Happens Next</h2>
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 w-full">
         <Image
-          src="/images/contactus/whybookthis.png"
-          alt="Why Book This Image"
-          width={360}
-          height={292}
-          className="w-full h-auto max-w-96 order-1 md:order-2"
+          src="/images/contactus/howitworks.png"
+          alt="How It Works Image"
+          width={500}
+          height={360}
+          className="w-full h-auto max-w-[500px] order-1 md:order-2"
         />
         <div className="flex flex-col items-start order-2 md:order-1">
           <ul className="flex flex-col items-start gap-3 md:gap-8 mb-8">
-            {reasons.map((reason, index) => (
+            {steps.map((step, index) => (
               <li key={index} className="flex items-start gap-4">
-                <div className="block w-5 h-5 bg-[#0062FF] shrink-0 mt-1 "></div>
-                <p
-                  className="text-slate-800 font-sfpro text-base font-normal leading-normal m-0 flex-1"
-                  dangerouslySetInnerHTML={{ __html: reason }}
-                ></p>
+                <div className="shrink-0 flex flex-col items-center gap-2">
+                  <div className="w-8 h-8 bg-[#0062FF] text-white rounded flex items-center justify-center text-sm font-semibold">
+                    {index + 1}
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className="w-0.5 h-8 bg-[#0062FF] opacity-30"></div>
+                  )}
+                </div>
+                <p className="text-slate-800 font-sfpro text-base font-normal leading-normal m-0 flex-1">
+                  {step}
+                </p>
               </li>
             ))}
           </ul>
 
-          <button className="px-6 py-3 border border-solid border-[#0062FF] text-[#0062FF] rounded-lg font-sfpro text-sm font-medium  transition-colors duration-200 flex items-center gap-2">
+          <button className="px-6 py-3 border border-solid border-[#0062FF] text-[#0062FF] rounded-lg font-sfpro text-sm font-medium transition-colors duration-200 flex items-center gap-2">
             Book My Free Roadmap Call
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,4 +58,4 @@ const WhyBookThisSection = () => {
   );
 };
 
-export default WhyBookThisSection;
+export default WhatHappensNext;
