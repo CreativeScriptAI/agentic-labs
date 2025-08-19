@@ -9,11 +9,11 @@ const WhoItsForSection = () => {
 
   return (
     <section className="section">
-      <h2 className="section_title text-slate-900">Who It's For</h2>
+      <h2 className="section_title text-slate-900">Who It&apos;s For</h2>
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 w-full">
         <Image
           src="/images/contactus/whoisitfor.png"
-          alt="Who It's For Image"
+          alt="Who It&apos;s For Image"
           width={360}
           height={292}
           className="w-full h-auto max-w-96"
