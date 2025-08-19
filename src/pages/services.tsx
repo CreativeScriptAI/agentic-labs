@@ -23,7 +23,7 @@ const ServicesPage = () => {
       />
       <ServicesHeroSection />
       <TechStackSection />
-      <ContactHeroSection />
+      <ContactHeroSection noPadding />
       <FooterSection />
     </RootLayout>
   );

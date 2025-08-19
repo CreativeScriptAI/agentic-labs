@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import ContactSectionBackground from "src/assets/images/ContactSectionBackground";
 
-const ContactHeroSection = () => {
+interface ContactHeroSectionProps {
+  noPadding?: boolean;
+}
+
+const ContactHeroSection = ({ noPadding = false }: ContactHeroSectionProps) => {
   const [isClient, setIsClient] = useState(false);
   const [openAccordions, setOpenAccordions] = useState<{
     [key: number]: boolean;
@@ -69,8 +74,17 @@ const ContactHeroSection = () => {
   };
 
   return (
-    <section className="section">
-      <div className="max-w-7xl py-20 sm:py-12 md:py-16 lg:py-32">
+    <section className={`section ${noPadding ? "relative" : ""}`}>
+      {noPadding && (
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+          <ContactSectionBackground />
+        </div>
+      )}
+      <div
+        className={`max-w-7xl ${
+          noPadding ? "" : "py-20 sm:py-12 md:py-16 lg:py-32"
+        }`}
+      >
         <div className="flex flex-col items-center lg:flex-row gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Left Side - Text Content */}
           <div className="w-full lg:w-1/2 pt-4 lg:pt-8">

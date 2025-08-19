@@ -64,6 +64,7 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
               loop
               playsInline
               onLoadedData={handleLoad}
+              volume={0.2}
             >
               <source src={data.heroImage} type="video/mp4" />
             </video>

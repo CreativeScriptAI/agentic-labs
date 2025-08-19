@@ -25,10 +25,10 @@ const ContactCTASection = () => {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-center text-[20px] font-normal text-[#1E293B] tracking-[-0.8px] font-sfpro px-4 mb-2">
-            Look, you've scrolled this far,
+            Look, you&apos;ve scrolled this far,
           </h2>
           <div className="text-center text-xl sm:text-2xl lg:text-[32px] font-mondwest leading-tight text-[#0A1128] tracking-[-0.32px] lg:tracking-[-0.64px] font-sfpro px-4 mb-6">
-            Clearly you're curious
+            Clearly you&apos;re curious
           </div>
 
           <div className="text-center text-lg sm:text-xl lg:text-[24px] font-normal text-slate-800 font-sfpro px-4 mb-2">
