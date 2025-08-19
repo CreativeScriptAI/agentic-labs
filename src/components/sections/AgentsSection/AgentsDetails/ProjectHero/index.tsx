@@ -63,8 +63,10 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
               disablePictureInPicture
               loop
               playsInline
-              onLoadedData={handleLoad}
-              volume={0.2}
+              onLoadedData={(e) => {
+                (e.target as HTMLVideoElement).volume = 0.2;
+                handleLoad();
+              }}
             >
               <source src={data.heroImage} type="video/mp4" />
             </video>
