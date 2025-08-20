@@ -30,38 +30,75 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug;
 
-  const posts = await getPosts();
-  const feedPosts = filterPosts(posts);
-  await queryClient.prefetchQuery({
-    queryKey: queryKey.posts(),
-    queryFn: () => feedPosts,
-  });
+  try {
+    const posts = await getPosts();
+    const feedPosts = filterPosts(posts);
+    await queryClient.prefetchQuery({
+      queryKey: queryKey.posts(),
+      queryFn: () => feedPosts,
+    });
 
-  const detailPosts = filterPosts(posts, filter);
-  const postDetail = detailPosts.find((t) => t.slug === slug);
+    const detailPosts = filterPosts(posts, filter);
+    const postDetail = detailPosts.find((t) => t.slug === slug);
 
-  if (!postDetail?.id) {
+    if (!postDetail?.id) {
+      return {
+        notFound: true,
+      };
+    }
+
+    try {
+      const recordMap = await getRecordMap(postDetail.id);
+
+      await queryClient.prefetchQuery({
+        queryKey: queryKey.post(`${slug}`),
+        queryFn: () => ({
+          ...postDetail,
+          recordMap,
+        }),
+      });
+
+      return {
+        props: {
+          dehydratedState: dehydrate(queryClient),
+        },
+        revalidate: CONFIG.revalidateTime,
+      };
+    } catch (recordMapError) {
+      console.error(`Failed to get recordMap for ${slug}:`, recordMapError);
+
+      // If recordMap fails, still try to render the page with minimal data
+      await queryClient.prefetchQuery({
+        queryKey: queryKey.post(`${slug}`),
+        queryFn: () => ({
+          ...postDetail,
+          recordMap: {
+            block: {},
+            collection: {},
+            collection_view: {},
+            notion_user: {},
+            space: {},
+            signed_urls: {},
+            collection_query: {},
+          },
+        }),
+      });
+
+      return {
+        props: {
+          dehydratedState: dehydrate(queryClient),
+        },
+        revalidate: CONFIG.revalidateTime,
+      };
+    }
+  } catch (error) {
+    console.error(`Error in getStaticProps for blog/${slug}:`, error);
+
+    // If everything fails, return not found
     return {
       notFound: true,
     };
   }
-
-  const recordMap = await getRecordMap(postDetail.id);
-
-  await queryClient.prefetchQuery({
-    queryKey: queryKey.post(`${slug}`),
-    queryFn: () => ({
-      ...postDetail,
-      recordMap,
-    }),
-  });
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-    revalidate: CONFIG.revalidateTime,
-  };
 };
 
 const DetailPage: NextPageWithLayout = () => {

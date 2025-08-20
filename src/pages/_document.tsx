@@ -22,6 +22,7 @@ class MyDocument extends Document {
               `,
             }}
           />
+
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-PW19164HWX"
@@ -58,6 +59,23 @@ class MyDocument extends Document {
               `,
             }}
           />
+
+          {/* Hotjar Tracking Code */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:6498424,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+              `,
+            }}
+          />
+
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
