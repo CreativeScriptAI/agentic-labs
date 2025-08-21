@@ -1,6 +1,122 @@
 import React from "react";
+import { isYouTubeURL, getYouTubeEmbedURL } from "src/libs/utils/youtube";
+import useTestimonialsQuery from "../../../hooks/useTestimonialsQuery";
+import { TTestimonial } from "src/types";
+
+// Hook to check if component is mounted (client-side)
+const useIsClient = () => {
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return isClient;
+};
+
+// Skeleton loader component for testimonials
+const TestimonialCardSkeleton = () => (
+  <div
+    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full animate-pulse"
+    style={{ height: "400px" }}
+  >
+    {/* Video/Content skeleton */}
+    <div className="flex-grow mb-4 sm:mb-6">
+      <div className="w-full h-48 sm:h-56 lg:h-64 bg-gray-200 rounded-lg mb-4"></div>
+    </div>
+
+    {/* Divider skeleton */}
+    <div className="h-px bg-gray-200 mb-4 sm:mb-6"></div>
+
+    {/* Author info skeleton */}
+    <div className="mt-auto flex items-center justify-between">
+      <div className="flex-grow">
+        <div className="h-4 bg-gray-200 rounded w-32 mb-2"></div>
+        <div className="h-3 bg-gray-200 rounded w-24"></div>
+      </div>
+    </div>
+  </div>
+);
+
+// Skeleton loader for the entire testimonials section
+const TestimonialsSkeleton = ({ visibleCount }: { visibleCount: number }) => (
+  <div className="relative">
+    <div className="mb-6 sm:mb-8 overflow-hidden p-4 -mx-4">
+      <div className="flex gap-6">
+        {Array.from({ length: visibleCount }).map((_, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0"
+            style={{
+              width: `calc((100% - ${24}px * (${visibleCount} - 1)) / ${visibleCount})`,
+            }}
+          >
+            <TestimonialCardSkeleton />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Navigation skeleton */}
+    <div className="flex justify-center sm:justify-end gap-2 mt-3 md:mt-6">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+    </div>
+  </div>
+);
+
+// Optimized YouTube iframe component
+const LazyYouTubeIframe = ({ url, title }: { url: string; title: string }) => {
+  const [isIntersecting, setIsIntersecting] = React.useState(false);
+  const iframeRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (iframeRef.current) {
+      observer.observe(iframeRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const embedUrl = getYouTubeEmbedURL(url);
+
+  return (
+    <div
+      ref={iframeRef}
+      className="w-full h-full rounded-lg overflow-hidden relative"
+    >
+      {!isIntersecting ? (
+        <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="text-gray-500">Loading video...</div>
+        </div>
+      ) : (
+        <iframe
+          src={embedUrl || ""}
+          title={title}
+          className="w-full h-full rounded-lg"
+          frameBorder="0"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )}
+    </div>
+  );
+};
 
 const TestimonialsSection = () => {
+  console.log("TestimonialsSection: Component is rendering");
+
   const viewportRef = React.useRef<HTMLDivElement | null>(null);
   const trackRef = React.useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -10,39 +126,37 @@ const TestimonialsSection = () => {
   const [isDragging, setIsDragging] = React.useState(false);
   const dragStartXRef = React.useRef<number | null>(null);
   const dragDeltaXRef = React.useRef(0);
-  const [maxCardHeight, setMaxCardHeight] = React.useState<number | null>(null);
-  const [cardGapPx, setCardGapPx] = React.useState(16);
+  const [cardGapPx, setCardGapPx] = React.useState(24);
 
-  const testimonials = [
-    {
-      id: 1,
-      text: "Relevance AI is my number 1 favorite automation tool out of all of them. it's super underrated!!!",
-      author: "Jake George",
-      title: "Founder, Synthoria Labs",
-      avatar: "/images/avatar1.jpg",
-    },
-    {
-      id: 2,
-      text: "I'm looking at almost every single thing our business does and creating an AI tool or Agents to either improve the process, speed it up or add value in a different way using Relevance.",
-      author: "Ben Van Sprundel",
-      title: "Founder, Synthoria Labs",
-      avatar: "/images/avatar2.jpg",
-    },
-    {
-      id: 3,
-      text: "Started working with Relevance AI for marketing agents to automate workflows. Pretty rad",
-      author: "Avi Hacker",
-      title: "Founder, Synthoria Labs",
-      avatar: "/images/avatar3.jpg",
-    },
-    {
-      id: 4,
-      text: "Relevance AI is my number 1 favorite automation tool out of all of them. it's super underrated!!!",
-      author: "Jake George",
-      title: "Founder, Synthoria Labs",
-      avatar: "/images/avatar4.jpg",
-    },
-  ];
+  // Ensure client-side only rendering
+  const isClient = useIsClient();
+
+  // Fetch testimonials from API (always on client-side)
+  const { testimonials, isLoading, error, refetch } = useTestimonialsQuery();
+
+  // Show skeleton during loading only
+  const shouldShowSkeleton = isLoading;
+
+  // Log for debugging
+  React.useEffect(() => {
+    if (isClient) {
+      console.log("TestimonialsSection: Client-side rendering");
+      console.log("TestimonialsSection: isLoading:", isLoading);
+      console.log(
+        "TestimonialsSection: testimonials count:",
+        testimonials.length
+      );
+      console.log("TestimonialsSection: error:", error);
+    }
+  }, [isClient, isLoading, testimonials.length, error]);
+
+  // Manual refetch function for testing
+  const handleManualRefetch = React.useCallback(() => {
+    if (isClient) {
+      console.log("TestimonialsSection: Manual refetch triggered");
+      refetch();
+    }
+  }, [isClient, refetch]);
 
   const maxIndex = React.useMemo(
     () => Math.max(0, testimonials.length - visibleCount),
@@ -59,18 +173,15 @@ const TestimonialsSection = () => {
 
   const getVisibleCount = React.useCallback(() => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth < 768) return 1;
+      if (window.innerWidth < 640) return 1;
       if (window.innerWidth < 1024) return 2;
+      if (window.innerWidth < 1280) return 2;
     }
     return 3;
   }, []);
 
   const getGapPx = React.useCallback(() => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth < 640) return 12; // xs
-      if (window.innerWidth < 1024) return 16; // sm/md
-    }
-    return 24; // lg+
+    return 24; // consistent gap like ProjectTestimonial
   }, []);
 
   const goToIndex = React.useCallback(
@@ -117,33 +228,6 @@ const TestimonialsSection = () => {
     testimonials.length,
     updateEdgeStates,
   ]);
-
-  // Measure tallest card and apply as min-height
-  const measureCardHeights = React.useCallback(() => {
-    const trackEl = trackRef.current;
-    if (!trackEl) return;
-    const cardNodes = Array.from(
-      trackEl.querySelectorAll('[data-testimonial-card="true"]')
-    ) as HTMLElement[];
-    if (cardNodes.length === 0) return;
-    let max = 0;
-    for (const node of cardNodes) {
-      const prevMin = node.style.minHeight;
-      node.style.minHeight = "";
-      const h = node.offsetHeight;
-      node.style.minHeight = prevMin;
-      if (h > max) max = h;
-    }
-    setMaxCardHeight(max || null);
-  }, []);
-
-  React.useEffect(() => {
-    // Measure initially and whenever layout could change
-    measureCardHeights();
-    const onResize = () => measureCardHeights();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [measureCardHeights, visibleCount]);
 
   // Keyboard navigation
   const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -223,123 +307,200 @@ const TestimonialsSection = () => {
         width: "calc(100% + 2rem)",
         marginLeft: "-1rem",
         marginRight: "-1rem",
+        position: "relative",
+        zIndex: 1,
       }}
     >
+      {/* Test element to verify component is rendering */}
+      {/* <div
+        style={{
+          background: "yellow",
+          color: "black",
+          padding: "10px",
+          textAlign: "center",
+          fontSize: "16px",
+          fontWeight: "bold",
+        }}
+      >
+        TESTIMONIALS SECTION IS RENDERING
+      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-2 sm:mb-4">
+        <div className="flex flex-col items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
+          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
             TESTIMONIALS
           </p>
-          <h2 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
+          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
             Founders have already seen
           </h2>
-          <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
+          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
             transformational results
           </h3>
         </div>
 
-        {/* Testimonials Slider */}
-        <div className="relative">
-          <div
-            ref={viewportRef}
-            tabIndex={0}
-            onKeyDown={onKeyDown}
-            onPointerDown={onPointerDown}
-            onPointerMove={onPointerMove}
-            onPointerUp={onPointerUpOrCancel}
-            onPointerCancel={onPointerUpOrCancel}
-            className="mb-6 sm:mb-8 overflow-hidden outline-none"
-            style={{ touchAction: "pan-y" }}
-          >
-            <div
-              ref={trackRef}
-              className="flex will-change-transform"
-              style={{
-                transform: `translateX(-${basePercent}%)`,
-                transition: isDragging ? "none" : "transform 300ms ease-in-out",
-                width: "100%",
-                gap: `${cardGapPx}px`,
-              }}
+        {/* Content based on state */}
+        {shouldShowSkeleton && (
+          <TestimonialsSkeleton visibleCount={visibleCount} />
+        )}
+
+        {!isLoading && testimonials.length === 0 && (
+          <div className="flex flex-col justify-center items-center py-12 space-y-4">
+            <p className="text-gray-600 text-lg">
+              No testimonials available at the moment.
+            </p>
+            {error && (
+              <div className="text-red-500 text-sm max-w-md text-center">
+                Error: {error.message}
+              </div>
+            )}
+            <button
+              onClick={handleManualRefetch}
+              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
             >
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.id}
-                  data-testimonial-card="true"
-                  className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 h-full flex flex-col flex-shrink-0"
-                  style={{
-                    width: `calc((100% - ${cardGapPx}px * (${visibleCount} - 1)) / ${visibleCount})`,
-                    minHeight: maxCardHeight ? `${maxCardHeight}px` : undefined,
-                  }}
-                >
-                  {/* Testimonial Text */}
-                  <div className="flex-grow">
-                    <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                      {testimonial.text}
-                    </p>
-                  </div>
+              Retry Fetch
+            </button>
+          </div>
+        )}
 
-                  {/* Divider Line */}
-                  <hr className="border-t border-gray-200 mb-4 sm:mb-6" />
+        {!isLoading && testimonials.length > 0 && (
+          <div className="relative">
+            <div
+              ref={viewportRef}
+              tabIndex={0}
+              onKeyDown={onKeyDown}
+              onPointerDown={onPointerDown}
+              onPointerMove={onPointerMove}
+              onPointerUp={onPointerUpOrCancel}
+              onPointerCancel={onPointerUpOrCancel}
+              className="mb-6 sm:mb-8 overflow-hidden outline-none p-4 -mx-4"
+              style={{ touchAction: "pan-y" }}
+            >
+              <div
+                ref={trackRef}
+                className="flex will-change-transform items-stretch"
+                style={{
+                  transform: `translateX(-${basePercent}%)`,
+                  transition: isDragging
+                    ? "none"
+                    : "transform 300ms ease-in-out",
+                  width: "100%",
+                  gap: `${cardGapPx}px`,
+                }}
+              >
+                {testimonials.map((testimonial) => (
+                  <div
+                    key={testimonial._id}
+                    data-testimonial-card="true"
+                    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full"
+                    style={{
+                      width: `calc((100% - ${cardGapPx}px * (${visibleCount} - 1)) / ${visibleCount})`,
+                      height: "400px", // Fixed height for all cards
+                    }}
+                  >
+                    {/* Testimonial Content */}
+                    <div className="flex-grow flex flex-col overflow-hidden">
+                      {testimonial.videoURL &&
+                      testimonial.videoURL.trim() !== "" ? (
+                        <div
+                          className="mb-4 sm:mb-6 flex flex-col"
+                          style={{ height: "240px" }}
+                        >
+                          {isYouTubeURL(testimonial.videoURL) ? (
+                            <LazyYouTubeIframe
+                              url={testimonial.videoURL}
+                              title="YouTube video testimonial"
+                            />
+                          ) : (
+                            <video
+                              controls
+                              preload="metadata"
+                              className="w-full h-full rounded-lg object-cover"
+                              poster=""
+                            >
+                              <source
+                                src={testimonial.videoURL}
+                                type="video/mp4"
+                              />
+                              Your browser does not support the video tag.
+                            </video>
+                          )}
+                        </div>
+                      ) : (
+                        <div
+                          className="mb-4 sm:mb-6 overflow-hidden"
+                          style={{ height: "240px" }}
+                        >
+                          <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed overflow-y-auto h-full pr-2">
+                            {testimonial.review}
+                          </p>
+                        </div>
+                      )}
+                    </div>
 
-                  {/* Author Info with Avatar */}
-                  <div className="mt-auto flex items-center justify-between">
-                    <div className="flex-grow">
-                      <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
-                        {testimonial.author}
-                      </h4>
-                      <p className="text-gray-500 text-xs sm:text-sm">
-                        {testimonial.title}
-                      </p>
+                    {/* Divider Line */}
+                    <hr className="border-t border-gray-200 mb-4 sm:mb-6" />
+
+                    {/* Author Info */}
+                    <div className="mt-auto flex items-center justify-between">
+                      <div className="flex-grow">
+                        <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-gray-500 text-xs sm:text-sm">
+                          {testimonial.designation}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <div className="flex justify-center sm:justify-end gap-2 mt-3 md:mt-6">
+              <button
+                onClick={handlePrev}
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isAtStart}
+                aria-label="Previous testimonial"
+              >
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isAtEnd}
+                aria-label="Next testimonial"
+              >
+                <svg
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          <div className="flex justify-center sm:justify-end gap-2">
-            <button
-              onClick={handlePrev}
-              className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={isAtStart}
-            >
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={handleNext}
-              className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={isAtEnd}
-            >
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { useEffect, useRef, useState } from "react";
 
 interface ProjectCapabilitiesProps {
@@ -86,7 +85,6 @@ const AnimatedCard = ({ card, index }: any) => {
 };
 
 const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
-  console.log(data, "data");
   return (
     <section className="section !max-w-3xl">
       <h2 className="section_title">
@@ -104,24 +102,10 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
         ))}
       </div>
 
-      <button
-        // href="https://tryagentikai.com/contact"
-        className="button_blue_border mt-4"
-        onClick={() => {
-          if (
-            typeof window !== "undefined" &&
-            (window as any).gtag_report_conversion
-          ) {
-            return (window as any).gtag_report_conversion(
-              "https://tryagentikai.com/contact"
-            );
-          }
-          return true;
-        }}
-      >
+      <Link href={data.ctaButton.link} className="button_blue_border mt-4">
         {data.ctaButton.text}
         <ArrowUpRight size={20} />
-      </button>
+      </Link>
     </section>
   );
 };

@@ -1,51 +1,69 @@
-import { NextPage } from "next"
-import { AppProps } from "next/app"
-import { ExtendedRecordMap } from "notion-types"
-import { ReactElement, ReactNode } from "react"
+import { NextPage } from "next";
+import { AppProps } from "next/app";
+import { ExtendedRecordMap } from "notion-types";
+import { ReactElement, ReactNode } from "react";
 
 // TODO: refactor types
-export type NextPageWithLayout<PageProps = Record<string, never>> = NextPage<PageProps> & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
+export type NextPageWithLayout<PageProps = Record<string, never>> =
+  NextPage<PageProps> & {
+    getLayout?: (page: ReactElement) => ReactNode;
+  };
 
 export type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
+  Component: NextPageWithLayout;
+};
 
-export type TPostStatus = "Private" | "Public" | "PublicOnDetail"
-export type TPostType = "Post" | "Paper" | "Page" | "Agent"
+export type TPostStatus = "Private" | "Public" | "PublicOnDetail";
+export type TPostType = "Post" | "Paper" | "Page" | "Agent";
 
 export type TPost = {
-  id: string
-  date: { start_date: string }
-  type: TPostType[]
-  slug: string
-  tags?: string[]
-  category?: string[]
-  summary?: string
+  id: string;
+  date: { start_date: string };
+  type: TPostType[];
+  slug: string;
+  tags?: string[];
+  category?: string[];
+  summary?: string;
   author?: {
-    id: string
-    name: string
-    profile_photo?: string
-  }[]
-  title: string
-  status: TPostStatus[]
-  createdTime: string
-  fullWidth: boolean
-  thumbnail?: string
-}
+    id: string;
+    name: string;
+    profile_photo?: string;
+  }[];
+  title: string;
+  status: TPostStatus[];
+  createdTime: string;
+  fullWidth: boolean;
+  thumbnail?: string;
+};
 
 export type PostDetail = TPost & {
-  recordMap: ExtendedRecordMap
-}
+  recordMap: ExtendedRecordMap;
+};
 
-export type TPosts = TPost[]
+export type TPosts = TPost[];
 
 export type TTags = {
-  [tagName: string]: number
-}
+  [tagName: string]: number;
+};
 export type TCategories = {
-  [category: string]: number
-}
+  [category: string]: number;
+};
 
-export type SchemeType = "light" | "dark"
+export type SchemeType = "light" | "dark";
+
+export type TTestimonial = {
+  _id: string;
+  name: string;
+  designation: string;
+  videoURL?: string;
+  review: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
+
+export type TTestimonialsResponse = {
+  success: boolean;
+  count: number;
+  data: TTestimonial[];
+};

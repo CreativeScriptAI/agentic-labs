@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { isYouTubeURL, getYouTubeEmbedURL } from "src/libs/utils/youtube";
 
 interface ProjectTestimonialProps {
   data: {
@@ -16,6 +17,7 @@ interface ProjectTestimonialProps {
       name: string;
       designation: string;
       review: string;
+      videoURL?: string;
     }>;
   };
 }
@@ -51,9 +53,38 @@ const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
             <SwiperSlide key={index} className="!h-auto">
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 h-full flex flex-col w-full min-h-full">
                 <div className="flex-grow">
-                  <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                    {item.review}
-                  </p>
+                  {item.videoURL ? (
+                    <div className="mb-4 sm:mb-6 h-full">
+                      {isYouTubeURL(item.videoURL) ? (
+                        <div
+                          className="relative w-full rounded-lg overflow-hidden h-[95%]"
+                          style={{ paddingBottom: "56.25%" }}
+                        >
+                          <iframe
+                            src={getYouTubeEmbedURL(item.videoURL) || ""}
+                            title="YouTube video testimonial"
+                            className="absolute top-0 left-0 w-full h-full rounded-lg"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      ) : (
+                        <video
+                          controls
+                          className="w-full h-auto rounded-lg h-[95%]"
+                          poster=""
+                        >
+                          <source src={item.videoURL} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      )}
+                    </div>
+                  ) : (
+                    <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
+                      {item.review}
+                    </p>
+                  )}
                 </div>
                 <hr className="border-t border-gray-200 mb-4 sm:mb-6" />
                 <div className="mt-auto flex items-center justify-between">

@@ -22,10 +22,10 @@ const ProjectStack = ({ data }: ProjectStackProps) => {
         {data.title} <span className="italic">{data.titleHighlight}</span>
       </h2>
       <div className="w-full">
-        {/* Full-bleed horizontal scroller with 20px right margin */}
-        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-          <div className="overflow-x-auto overflow-y-hidden px-4 py-4 pr-5 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            <div className="flex gap-6 w-max md:mx-auto">
+        {/* Centered horizontal scrollable container */}
+        <div className="flex justify-center">
+          <div className="overflow-x-auto overflow-y-hidden px-4 py-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-full">
+            <div className="flex gap-6 w-max">
               {data.items.map((item, index) => (
                 <div key={index} className="stack_card shrink-0 w-[160px]">
                   {item.src && (

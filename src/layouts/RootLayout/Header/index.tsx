@@ -14,12 +14,24 @@ type Props = {
 
 const Header: React.FC<Props> = ({ fullWidth }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const burgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const [clipCenter, setClipCenter] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
   });
   const [clipRadius, setClipRadius] = useState<number>(0);
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const computeMaxRadius = useCallback((x: number, y: number) => {
     if (typeof window === "undefined") return 0;
@@ -80,7 +92,13 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         <EllipseBackground />
       </div>
 
-      <header className="fixed top-0 left-0 w-full bg-[#F9F6F4] z-50 bg-transparent">
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "md:bg-white md:shadow-lg pb-2"
+            : "bg-[#F9F6F4] bg-transparent"
+        }`}
+      >
         <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl md:bg-transparent bg-white md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)] relative">
           {/* Logo - positioned on the left */}
           <div className="flex-shrink-0">

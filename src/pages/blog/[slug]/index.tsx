@@ -18,13 +18,23 @@ const filter: FilterPostsOptions = {
 };
 
 export const getStaticPaths = async () => {
-  const posts = await getPosts();
-  const filteredPost = filterPosts(posts, filter);
+  try {
+    const posts = await getPosts();
+    const filteredPost = filterPosts(posts, filter);
 
-  return {
-    paths: filteredPost.map((row) => `/blog/${row.slug}`),
-    fallback: true,
-  };
+    return {
+      paths: filteredPost.map((row) => `/blog/${row.slug}`),
+      fallback: true,
+    };
+  } catch (error) {
+    console.error("Error generating static paths for blog posts:", error);
+
+    // Return empty paths with fallback true to allow runtime generation
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
