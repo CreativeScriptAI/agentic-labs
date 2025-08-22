@@ -7,6 +7,7 @@ import EllipseBackground from "../../../assets/images/EllipseBackground";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { mondwest } from "../../../assets/fonts/mondwest";
 
 type Props = {
   fullWidth: boolean;
@@ -16,6 +17,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const burgerButtonRef = useRef<HTMLButtonElement | null>(null);
+  const mobileBurgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const [clipCenter, setClipCenter] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
@@ -43,8 +45,12 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   }, []);
 
   const updateClipFromButton = useCallback(() => {
-    if (!burgerButtonRef.current || typeof window === "undefined") return;
-    const rect = burgerButtonRef.current.getBoundingClientRect();
+    const buttonRef =
+      typeof window !== "undefined" && window.innerWidth < 768
+        ? mobileBurgerButtonRef.current
+        : burgerButtonRef.current;
+    if (!buttonRef || typeof window === "undefined") return;
+    const rect = buttonRef.getBoundingClientRect();
     const x = rect.left + rect.width / 2;
     const y = rect.top + rect.height / 2;
     setClipCenter({ x, y });
@@ -88,8 +94,59 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <>
       {/* Ellipse background image - non-sticky */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10">
+      <div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 h-full w-full">
         <EllipseBackground />
+      </div>
+      <div className="block md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
+        <svg
+          className="w-full"
+          xmlns="http://www.w3.org/2000/svg"
+          width="375"
+          height="383"
+          viewBox="0 0 375 383"
+          fill="none"
+        >
+          <g opacity="0.2" filter="url(#filter0_f_798_3107)">
+            <path
+              d="M-144 -48.6957C-144 -119.556 4.19376 -177 187 -177C369.806 -177 518 -119.556 518 -48.6956C518 22.1649 369.806 223 187 223C4.19373 223 -144 22.1648 -144 -48.6957Z"
+              fill="url(#paint0_linear_798_3107)"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_798_3107"
+              x="-304"
+              y="-337"
+              width="982"
+              height="720"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="80"
+                result="effect1_foregroundBlur_798_3107"
+              />
+            </filter>
+            <linearGradient
+              id="paint0_linear_798_3107"
+              x1="199.078"
+              y1="258.049"
+              x2="199.078"
+              y2="-283.774"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#0062FF" />
+              <stop offset="1" stop-color="#0062FF" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       <header
@@ -100,9 +157,62 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         }`}
       >
         <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl md:bg-transparent bg-white md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)] relative">
-          {/* Logo - positioned on the left */}
-          <div className="flex-shrink-0">
+          {/* Desktop Logo - hidden on mobile */}
+          <div className="hidden md:flex flex-shrink-0">
             <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="md:hidden flex items-center justify-between w-full">
+            {/* Burger Menu Button - Left */}
+            <button
+              className="flex flex-col justify-center items-center w-8 h-8 border-0 bg-transparent cursor-pointer"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+              ref={mobileBurgerButtonRef}
+            >
+              <span
+                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out mt-1 ${
+                  isMobileMenuOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out mt-1 ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
+              />
+            </button>
+
+            {/* Agentic AI Text - Center */}
+            <div
+              className={`${mondwest.variable} font-mondwest text-blue-600 text-lg font-bold`}
+            >
+              Agentic AI
+            </div>
+
+            {/* Book a Call Button - Right */}
+
+            <button
+              onClick={() => {
+                if (
+                  typeof window !== "undefined" &&
+                  (window as any).gtag_report_conversion
+                ) {
+                  return (window as any).gtag_report_conversion(
+                    "https://tryagentikai.com/contact"
+                  );
+                }
+                return true;
+              }}
+              className="rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none"
+            >
+              Book a Call
+            </button>
           </div>
 
           {/* Desktop Navigation - positioned on the right end */}
@@ -117,9 +227,9 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Hidden on all screens */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 border-0 bg-transparent cursor-pointer"
+            className="hidden flex-col justify-center items-center w-8 h-8 border-0 bg-transparent cursor-pointer"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
             ref={burgerButtonRef}
@@ -208,15 +318,25 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                     />
                   </div>
 
-                  {/* Contact Us Button - Fixed responsiveness */}
+                  {/* Book a Call Button - Fixed responsiveness */}
                   <div className="w-full">
-                    <Link
-                      href="/contact"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-center rounded-lg bg-blue-600 px-4 py-4 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none overflow-hidden"
+                    <button
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        if (
+                          typeof window !== "undefined" &&
+                          (window as any).gtag_report_conversion
+                        ) {
+                          return (window as any).gtag_report_conversion(
+                            "https://tryagentikai.com/contact"
+                          );
+                        }
+                        return true;
+                      }}
+                      className="block w-full text-center rounded-lg bg-yellow-400 px-4 py-4 text-base font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none overflow-hidden"
                     >
-                      Contact Us
-                    </Link>
+                      Book a Call
+                    </button>
                   </div>
                 </div>
               </motion.div>

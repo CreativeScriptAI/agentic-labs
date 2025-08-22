@@ -305,8 +305,8 @@ const TestimonialsSection = () => {
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
-        marginLeft: "-1rem",
-        marginRight: "-1rem",
+        // marginLeft: "-1rem",
+        // marginRight: "-1rem",
         position: "relative",
         zIndex: 1,
       }}

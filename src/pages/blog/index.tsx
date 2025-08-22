@@ -3,6 +3,7 @@ import { CONFIG } from "site.config";
 import { NextPageWithLayout } from "../../types";
 import { getPosts } from "../../apis";
 import MetaConfig from "src/components/MetaConfig";
+import StructuredData from "src/components/StructuredData";
 import { queryClient } from "src/libs/react-query";
 import { queryKey } from "src/constants/queryKey";
 import { GetStaticProps } from "next";
@@ -33,9 +34,28 @@ const BlogPage: NextPageWithLayout = () => {
     url: `${CONFIG.link}/blog`,
   };
 
+  // Generate structured data for blog listing page
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: CONFIG.blog.title,
+    description: CONFIG.blog.description,
+    url: `${CONFIG.link}/blog`,
+    publisher: {
+      "@type": "Organization",
+      name: "Agentic AI Labs",
+      url: CONFIG.link,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: [], // Will be populated with blog posts
+    },
+  };
+
   return (
     <>
       <MetaConfig {...meta} />
+      <StructuredData type="website" data={blogSchema} />
       <Feed />
       <FooterSection />
     </>

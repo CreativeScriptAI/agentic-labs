@@ -25,12 +25,14 @@ interface ProjectTestimonialProps {
 const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
   return (
     <section className="section">
-      <span className="section_label">{data.subtitle}</span>
+      <span className="section_label text-xs sm:text-sm">Testimonials</span>
       <hr className="bg-[#E2E8F0] max-w-[540px] mx-auto w-full" />
-      <h2 className="section_title">
-        {data.title}
+      <h2 className="section_title text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        Founders have already seen
         <br />
-        <span className="italic">{data.titleHighlight}</span>
+        <span className="italic text-[#0F172A] font-mondwest text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-normal tracking-[-0.96px]">
+          transformational results
+        </span>
       </h2>
       <div className="w-full relative">
         <Swiper
@@ -47,7 +49,7 @@ const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
             nextEl: ".testimonial-swiper-next",
             prevEl: ".testimonial-swiper-prev",
           }}
-          className="!p-4 !-mx-4 [&_.swiper-wrapper]:!items-stretch"
+          className="!p-4  [&_.swiper-wrapper]:!items-stretch"
         >
           {data.reviews.map((item, index) => (
             <SwiperSlide key={index} className="!h-auto">
@@ -95,19 +97,6 @@ const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
                     <p className="text-gray-500 text-xs sm:text-sm">
                       {item.designation}
                     </p>
-                  </div>
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden ml-3 sm:ml-4 flex-shrink-0">
-                    {item.logo ? (
-                      <Image
-                        src={item.logo}
-                        alt={`${item.name} logo`}
-                        width={56}
-                        height={56}
-                        className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain rounded-full"
-                      />
-                    ) : (
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gray-400 rounded-full" />
-                    )}
                   </div>
                 </div>
               </div>

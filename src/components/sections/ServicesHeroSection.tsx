@@ -14,9 +14,9 @@ const ServicesHeroSection: React.FC = () => {
       }}
     >
       {/* Ellipse backdrop */}
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[1600px] max-w-none pointer-events-none select-none opacity-70">
+      {/* <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[1600px] max-w-none pointer-events-none select-none opacity-70">
         <EllipseBackground />
-      </div>
+      </div> */}
 
       <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col max-w-6xl mx-auto">

@@ -166,22 +166,22 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                 <h3 className="font-mondwest text-2xl sm:text-3xl lg:text-4xl font-normal text-blue-600 mb-3 sm:mb-4">
                   {selectedLabel}
                 </h3>
+                <Link
+                  href={
+                    selectedProject?._id ? `/agent/${selectedProject._id}` : "#"
+                  }
+                >
+                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-0 md:mx-auto lg:mx-0 mb-4">
+                    <span>📁</span>
+                    Try {selectedLabel}
+                  </button>
+                </Link>
                 <h4 className="text-slate-800 font-sfpro text-lg sm:text-xl font-medium leading-normal mb-3 sm:mb-4">
                   {selectedOverview?.title || ""}
                 </h4>
                 <p className="text-slate-600 font-sfpro text-sm sm:text-base font-normal leading-relaxed mb-4 sm:mb-6">
                   {selectedOverview?.description || ""}
                 </p>
-                <Link
-                  href={
-                    selectedProject?._id ? `/agent/${selectedProject._id}` : "#"
-                  }
-                >
-                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-0 md:mx-auto lg:mx-0">
-                    <span>📁</span>
-                    Try {selectedLabel}
-                  </button>
-                </Link>
               </div>
               <div className="flex-shrink-0 order-first lg:order-last">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full flex items-center justify-center">

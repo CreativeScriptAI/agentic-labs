@@ -15,6 +15,8 @@ import ProjectTrustedBy from "src/components/sections/AgentsSection/AgentsDetail
 import ProjectWorks from "src/components/sections/AgentsSection/AgentsDetails/ProjectWorks";
 import { fetchAgentByID } from "src/libs/api";
 import FooterSection from "src/components/sections/FooterSection";
+import MetaConfig from "src/components/MetaConfig";
+import StructuredData from "src/components/StructuredData";
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -56,8 +58,91 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
 const AgentDetailPage = ({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  // Extract agent data for meta tags
+  const agentName = data?.hero?.title || data?.hero?.heading || "AI Agent";
+  const agentDescription =
+    data?.hero?.description ||
+    data?.hero?.subtitle ||
+    "Custom AI agent solution for your business needs";
+  const agentImage = data?.hero?.image || "/og.jpg";
+  const agentUrl = `https://www.tryagentikai.com/agent/${data?.id || ""}`;
+
+  // Generate keywords based on agent data
+  const keywords = [
+    "AI Agent",
+    "Artificial Intelligence",
+    "Automation",
+    "Business Process",
+    "Custom AI Solution",
+    "Machine Learning",
+    "Workflow Automation",
+    "Digital Transformation",
+    "AI Development",
+    "Agentic AI Labs",
+  ];
+
+  // Add agent-specific keywords if available
+  if (data?.stack?.technologies) {
+    keywords.push(
+      ...data.stack.technologies.map((tech: any) => tech.name || tech)
+    );
+  }
+
+  // Generate structured data for the agent
+  const agentSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: agentName,
+    description: agentDescription,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    url: agentUrl,
+    image: agentImage.startsWith("http")
+      ? agentImage
+      : `https://www.tryagentikai.com${agentImage}`,
+    creator: {
+      "@type": "Organization",
+      name: "Agentic AI Labs",
+      url: "https://www.tryagentikai.com",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: data?.testimonial
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: "5",
+          reviewCount: "1",
+        }
+      : undefined,
+    ...(data?.capabilities?.features && {
+      featureList: data.capabilities.features.map(
+        (feature: any) => feature.title || feature
+      ),
+    }),
+  };
+
   return (
     <>
+      {/* Meta Tags */}
+      <MetaConfig
+        title={agentName}
+        description={agentDescription}
+        type="Agent"
+        url={agentUrl}
+        image={agentImage}
+        keywords={keywords}
+        canonical={agentUrl}
+        author="Agentic AI Labs"
+      />
+
+      {/* Structured Data */}
+      <StructuredData type="softwareApplication" data={agentSchema} />
+
+      {/* Page Content */}
       {/* <ProjectHeader data={data.header} /> */}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}

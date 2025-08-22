@@ -29,8 +29,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
 
   // Security and staging controls
   const isProduction = CONFIG.isProd;
-  const robotsContent =
-    props.noindex || !isProduction ? "noindex, nofollow" : "follow, index";
+  const robotsContent = props.noindex ? "noindex, nofollow" : "index, follow";
 
   return (
     <Head>
@@ -42,10 +41,19 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* Security Headers */}
-      {!isProduction && (
+      {/* Security Headers - Only add noindex for staging/preview environments */}
+      {process.env.VERCEL_ENV === "preview" && (
         <meta httpEquiv="X-Robots-Tag" content="noindex, nofollow" />
       )}
+
+      {/* Google Search Console Verification */}
+      {CONFIG.googleSearchConsole?.enable &&
+        CONFIG.googleSearchConsole.config.siteVerification && (
+          <meta
+            name="google-site-verification"
+            content={CONFIG.googleSearchConsole.config.siteVerification}
+          />
+        )}
 
       {/* Keywords */}
       {props.keywords && (

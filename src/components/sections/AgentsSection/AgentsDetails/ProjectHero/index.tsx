@@ -64,7 +64,7 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
               loop
               playsInline
               onLoadedData={(e) => {
-                (e.target as HTMLVideoElement).volume = 0.2;
+                (e.target as HTMLVideoElement).volume = 0;
                 handleLoad();
               }}
             >

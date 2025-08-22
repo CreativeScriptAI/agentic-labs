@@ -24,7 +24,7 @@ const CONFIG = {
   },
 
   // CONFIG configration (required)
-  link: "https://agentic-ai-lab.vercel.app",
+  link: "https://www.tryagentikai.com",
   since: 2025, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
@@ -44,12 +44,12 @@ const CONFIG = {
         process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "AW-17453709032",
     },
   },
-  // googleSearchConsole: {
-  //   enable: false,
-  //   config: {
-  //     siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
-  //   },
-  // },
+  googleSearchConsole: {
+    enable: true,
+    config: {
+      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    },
+  },
   // naverSearchAdvisor: {
   //   enable: false,
   //   config: {
@@ -64,7 +64,9 @@ const CONFIG = {
   //     label: "💬 Utterances",
   //   },
   // },
-  isProd: process.env.VERCEL_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd:
+    process.env.NODE_ENV === "production" ||
+    process.env.VERCEL_ENV === "production", // distinguish between development and production environment
   revalidateTime: process.env.NODE_ENV === "development" ? 10 : 60, // 1 minute in dev, 10 minutes in prod
 };
 

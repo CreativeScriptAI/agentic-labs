@@ -24,6 +24,7 @@ export default Detail;
 
 const StyledWrapper = styled.div`
   padding: 2rem 0;
+  padding-top: 8rem;
 
   &[data-type="Paper"] {
     padding: 40px 0;

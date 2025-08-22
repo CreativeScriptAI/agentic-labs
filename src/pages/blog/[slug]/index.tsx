@@ -5,6 +5,7 @@ import { NextPageWithLayout } from "src/types";
 import CustomError from "src/routes/Error";
 import { getRecordMap, getPosts } from "src/apis";
 import MetaConfig from "src/components/MetaConfig";
+import StructuredData from "src/components/StructuredData";
 import { GetStaticProps } from "next";
 import { queryClient } from "src/libs/react-query";
 import { queryKey } from "src/constants/queryKey";
@@ -132,9 +133,42 @@ const DetailPage: NextPageWithLayout = () => {
     url: `${CONFIG.link}/blog/${post.slug}`,
   };
 
+  // Generate structured data for blog post
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.summary || "",
+    image: image.startsWith("http") ? image : `${CONFIG.link}${image}`,
+    url: `${CONFIG.link}/blog/${post.slug}`,
+    author: {
+      "@type": "Organization",
+      name: "Agentic AI Labs",
+      url: CONFIG.link,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Agentic AI Labs",
+      url: CONFIG.link,
+      logo: {
+        "@type": "ImageObject",
+        url: `${CONFIG.link}/logo.png`,
+      },
+    },
+    datePublished: new Date(date).toISOString(),
+    dateModified: new Date(date).toISOString(),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${CONFIG.link}/blog/${post.slug}`,
+    },
+    articleSection: "Technology",
+    keywords: ["AI", "Agents", "Automation", "Technology", "Machine Learning"],
+  };
+
   return (
     <>
       <MetaConfig {...meta} />
+      <StructuredData type="article" data={articleSchema} />
       <Detail />
     </>
   );
