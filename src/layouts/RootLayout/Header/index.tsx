@@ -230,7 +230,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
               }}
               className="rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none"
             >
-            Build your AI Agent
+              Build your AI Agent
             </button>
           </div>
 
@@ -369,7 +369,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                       }}
                       className="block w-full text-center rounded-lg bg-yellow-400 px-4 py-4 text-base font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none overflow-hidden"
                     >
-                      Book a Call
+                      Build your AI Agent
                     </button>
                   </div>
                 </div>
