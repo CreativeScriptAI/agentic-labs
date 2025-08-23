@@ -24,9 +24,9 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
   };
 
   const SkeletonLoader = () => (
-    <div className="w-full max-w-[440px] aspect-square rounded-lg bg-gray-200 animate-pulse flex items-center justify-center">
-      <div className="text-gray-400">
-        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+    <div className="w-[300px] h-[300px] max-w-[440px] aspect-square rounded-lg bg-gray-200 animate-pulse flex items-center justify-center">
+      <div className="h-20 w-20text-gray-400">
+        <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
           <path
             fillRule="evenodd"
             d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
@@ -50,7 +50,7 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
         {data.description}
       </p>
       <div className="flex flex-col items-center gap-5 md:gap-6">
-        {/* <div className="relative">
+        <div className="relative">
           {isLoading && <SkeletonLoader />}
           {isVideo ? (
             <video
@@ -70,22 +70,11 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
             >
               <source src={data.heroImage} type="video/mp4" />
             </video>
-          ) : (
-            <Image
-              src={data.heroImage}
-              alt="Hero Image"
-              width={440}
-              height={440}
-              className={`rounded-lg transition-opacity duration-300 ${
-                isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
-              }`}
-              onLoad={handleLoad}
-            />
-          )}
-        </div> */}
-        {/* <ul className="flex flex-col items-center md:flex-row md:items-start gap-2 md:gap-4 text-xs md:text-sm text-slate-800 font-medium">
+          ) : null}
+        </div>
+        <ul className="flex flex-col items-start md:flex-row md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium">
           {data.benefits.map((benefit, index) => (
-            <li key={index} className="flex items-center gap-1">
+            <li key={index} className="flex items-center gap-1 text-slate-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
@@ -105,10 +94,10 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>{benefit.text}</span>
+              <span className="text-slate-600">{benefit.text}</span>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </section>
   );

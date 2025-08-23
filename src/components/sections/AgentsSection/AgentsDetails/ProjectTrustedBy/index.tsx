@@ -20,7 +20,7 @@ const ProjectTrustedBy = ({ data }: ProjectTrustedByProps) => {
       <Marquee
         gradient={false}
         speed={60}
-        style={{ whiteSpace: "nowrap" }}
+        style={{ display: "flex", gap: "12px", whiteSpace: "nowrap" }}
         loop={0}
       >
         {data.logos.map((item: any) => {
