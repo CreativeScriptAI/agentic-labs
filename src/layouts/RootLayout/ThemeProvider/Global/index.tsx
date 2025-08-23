@@ -1,6 +1,6 @@
 import { Global as _Global, css, useTheme } from "@emotion/react";
 
-import { pretendard } from "src/assets";
+import { sfPro } from "src/assets";
 
 export const Global = () => {
   const theme = useTheme();
@@ -13,9 +13,10 @@ export const Global = () => {
           padding: 0;
           color: ${theme.colors.gray12};
           background-color: ${theme.colors.gray2};
-          font-family: ${pretendard.style.fontFamily};
-          font-weight: ${pretendard.style.fontWeight};
-          font-style: ${pretendard.style.fontStyle};
+          font-family: ${sfPro.className}, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          font-weight: 400;
+          font-style: normal;
         }
 
         * {

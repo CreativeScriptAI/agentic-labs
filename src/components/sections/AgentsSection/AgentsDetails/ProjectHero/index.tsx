@@ -50,9 +50,9 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
         {data.description}
       </p>
       <div className="flex flex-col items-center gap-5 md:gap-6">
-        <div className="relative">
-          {/* {isLoading && <SkeletonLoader />} */}
-          {/* {isVideo ? (
+        {/* <div className="relative">
+          {isLoading && <SkeletonLoader />}
+          {isVideo ? (
             <video
               className={`w-full max-w-[440px] rounded-lg transition-opacity duration-300 ${
                 isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
@@ -81,9 +81,9 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
               }`}
               onLoad={handleLoad}
             />
-          )} */}
-        </div>
-        <ul className="flex flex-col items-center md:flex-row md:items-start gap-2 md:gap-4 text-xs md:text-sm text-slate-800 font-medium">
+          )}
+        </div> */}
+        {/* <ul className="flex flex-col items-center md:flex-row md:items-start gap-2 md:gap-4 text-xs md:text-sm text-slate-800 font-medium">
           {data.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-1">
               <svg
@@ -108,7 +108,7 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
               <span>{benefit.text}</span>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

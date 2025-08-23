@@ -57,7 +57,7 @@ const config: Config = {
           "sans-serif",
         ],
         "eb-garamond": ["EB Garamond", "serif"],
-        pretendard: ["Pretendard", "sans-serif"],
+        // pretendard: ["Pretendard", "sans-serif"], // Removed - using sfpro instead
         roboto: ["Roboto", "sans-serif"],
         mondwest: ["var(--font-mondwest)", "sans-serif"],
         neuebit: ["var(--font-neuebit)", "sans-serif"],
