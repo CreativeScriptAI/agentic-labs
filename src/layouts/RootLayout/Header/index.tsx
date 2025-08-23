@@ -209,7 +209,8 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
             {/* Agentic AI Text - Center */}
             <div
-              className={`${mondwest.variable} font-mondwest text-blue-600 text-lg font-bold`}
+              onClick={() => (window.location.href = "/")}
+              className={`${mondwest.variable} font-mondwest text-blue-600 text-lg font-bold cursor-pointer`}
             >
               Agentic AI
             </div>
