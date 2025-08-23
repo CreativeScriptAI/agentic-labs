@@ -7,8 +7,20 @@ const nextConfig: NextConfig = {
   output: "standalone",
   trailingSlash: true,
   images: {
-    domains: ["www.notion.so", "notion.so"],
-    unoptimized: true,
+    domains: [
+      "www.notion.so",
+      "notion.so",
+      "media-bucket24.s3.us-east-1.amazonaws.com",
+    ],
+    unoptimized: false, // Enable image optimization
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ["framer-motion", "lucide-react"],
   },
   // Security headers
   async headers() {
@@ -32,6 +44,31 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
+          // Performance headers
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Static assets caching
+      {
+        source: "/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Font files caching
+      {
+        source: "/(.*\\.woff2|.*\\.woff|.*\\.ttf|.*\\.otf)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
     ];
@@ -51,8 +88,28 @@ const nextConfig: NextConfig = {
 
     return headers;
   },
-  // Ensure proper CSS handling
-  webpack: (config) => {
+  // Webpack optimizations
+  webpack: (config, { dev, isServer }) => {
+    // Optimize bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: "all",
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
+            chunks: "all",
+          },
+          framer: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: "framer-motion",
+            chunks: "all",
+            priority: 10,
+          },
+        },
+      };
+    }
+
     return config;
   },
 };

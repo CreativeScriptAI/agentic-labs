@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import EllipseBackground from "src/assets/images/EllipseBackground";
 import TypewriterEffect from "src/components/TypewriterEffect";
 
 const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    setIsLoaded(true);
+
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] mb-[60px] min-h-[calc(100vh-64px)] flex items-center">
-      {/* <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[1600px] max-w-none pointer-events-none select-none opacity-70">
-        <EllipseBackground />
-      </div> */}
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
@@ -19,18 +31,20 @@ const HeroSection = () => {
               </span>{" "}
               <span className="block sm:inline">
                 level working{" "}
-                <TypewriterEffect
-                  words={[
-                    "AI Agents",
-                    "Voice AI",
-                    "AI Assistant",
-                    "AI Workflows",
-                  ]}
-                  className="text-red-500"
-                  speed={80}
-                  deleteSpeed={40}
-                  delay={1500}
-                />
+                {isLoaded && (
+                  <TypewriterEffect
+                    words={[
+                      "AI Agents",
+                      "Voice AI",
+                      "AI Assistant",
+                      "AI Workflows",
+                    ]}
+                    className="text-red-500"
+                    speed={isMobile ? 120 : 80}
+                    deleteSpeed={isMobile ? 60 : 40}
+                    delay={isMobile ? 2000 : 1500}
+                  />
+                )}
               </span>
             </h1>
 
@@ -49,10 +63,10 @@ const HeroSection = () => {
             href="#agents_section"
             className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-20 sm:pb-12"
           >
-            <span className="text-base sm:text-lg font-medium text-red-500 transition-colors duration-200 mb-3 px-4 py-2  rounded-lg">
+            <span className="text-base sm:text-lg font-medium text-red-500 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
               Explore our Agents
             </span>
-            <span className="animate-bounce">
+            <span className={isMobile ? "" : "animate-bounce"}>
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6 text-red-500"
                 fill="none"

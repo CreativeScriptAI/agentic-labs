@@ -16,6 +16,7 @@ type Props = {
 const Header: React.FC<Props> = ({ fullWidth }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const burgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const mobileBurgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const [clipCenter, setClipCenter] = useState<{ x: number; y: number }>({
@@ -24,11 +25,30 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   });
   const [clipRadius, setClipRadius] = useState<number>(0);
 
-  // Scroll detection
+  // Detect mobile device
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Optimized scroll detection with throttling
+  useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 10);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          setIsScrolled(scrollTop > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -45,21 +65,22 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   }, []);
 
   const updateClipFromButton = useCallback(() => {
-    const buttonRef =
-      typeof window !== "undefined" && window.innerWidth < 768
-        ? mobileBurgerButtonRef.current
-        : burgerButtonRef.current;
+    if (isMobile) return; // Skip complex animations on mobile
+
+    const buttonRef = burgerButtonRef.current;
     if (!buttonRef || typeof window === "undefined") return;
     const rect = buttonRef.getBoundingClientRect();
     const x = rect.left + rect.width / 2;
     const y = rect.top + rect.height / 2;
     setClipCenter({ x, y });
     setClipRadius(computeMaxRadius(x, y));
-  }, [computeMaxRadius]);
+  }, [computeMaxRadius, isMobile]);
 
   const toggleMobileMenu = () => {
-    // Ensure we capture the current position of the burger button and max radius
-    updateClipFromButton();
+    if (!isMobile) {
+      // Desktop: Use complex animation
+      updateClipFromButton();
+    }
     setIsMobileMenuOpen((prev) => !prev);
   };
 
@@ -71,23 +92,23 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       document.body.style.overflow = "unset";
     }
 
-    // Cleanup function to restore scroll when component unmounts
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
-  // Recompute radius on resize/scroll while open to keep the animation origin accurate
+  // Recompute radius on resize/scroll while open (desktop only)
   useEffect(() => {
-    if (!isMobileMenuOpen) return;
+    if (!isMobileMenuOpen || isMobile) return;
+
     const handler = () => updateClipFromButton();
-    window.addEventListener("resize", handler);
+    window.addEventListener("resize", handler, { passive: true });
     window.addEventListener("scroll", handler, { passive: true });
     return () => {
       window.removeEventListener("resize", handler);
       window.removeEventListener("scroll", handler);
     };
-  }, [isMobileMenuOpen, updateClipFromButton]);
+  }, [isMobileMenuOpen, updateClipFromButton, isMobile]);
 
   const router = useRouter();
 
@@ -196,7 +217,6 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             </div>
 
             {/* Book a Call Button - Right */}
-
             <button
               onClick={() => {
                 if (
@@ -252,26 +272,41 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           </button>
         </div>
 
-        {/* Mobile Menu Overlay with expanding circle animation */}
+        {/* Mobile Menu Overlay - Simplified for mobile performance */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               key="mobile-menu-overlay"
               className="md:hidden fixed inset-0 z-40"
-              style={{ willChange: "clip-path" as any }}
-              initial={{
-                clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
-                backgroundColor: "rgba(255,255,255,1)",
-              }}
-              animate={{
-                clipPath: `circle(${Math.max(clipRadius, 1)}px at ${
-                  clipCenter.x
-                }px ${clipCenter.y}px)`,
-              }}
-              exit={{
-                clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
-              }}
-              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              initial={
+                isMobile
+                  ? { opacity: 0 }
+                  : {
+                      clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
+                      backgroundColor: "rgba(255,255,255,1)",
+                    }
+              }
+              animate={
+                isMobile
+                  ? { opacity: 1 }
+                  : {
+                      clipPath: `circle(${Math.max(clipRadius, 1)}px at ${
+                        clipCenter.x
+                      }px ${clipCenter.y}px)`,
+                    }
+              }
+              exit={
+                isMobile
+                  ? { opacity: 0 }
+                  : {
+                      clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
+                    }
+              }
+              transition={
+                isMobile
+                  ? { duration: 0.2 }
+                  : { type: "spring", stiffness: 100, damping: 20 }
+              }
             >
               <div className="absolute inset-0 bg-white" />
               <motion.div

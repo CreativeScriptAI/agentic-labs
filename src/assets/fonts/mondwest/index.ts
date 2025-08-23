@@ -9,6 +9,9 @@ export const mondwest = localFont({
     },
   ],
   variable: "--font-mondwest",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 export const neuebit = localFont({
@@ -20,4 +23,7 @@ export const neuebit = localFont({
     },
   ],
   variable: "--font-neuebit",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });

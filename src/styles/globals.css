@@ -189,6 +189,8 @@ body {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
+    /* Reduce motion for better performance */
+    scroll-behavior: auto;
   }
 
   /* Prevent any element from extending beyond viewport */
@@ -201,6 +203,80 @@ body {
   [style*="calc(100% + 2rem)"] {
     max-width: 100vw !important;
     box-sizing: border-box !important;
+  }
+
+  /* Reduce animation complexity on mobile */
+  .animate-pulse {
+    animation-duration: 2s !important;
+  }
+
+  /* Optimize transitions for mobile */
+  * {
+    transition-duration: 0.2s !important;
+  }
+
+  /* Disable complex animations on mobile for better performance */
+  .animate-bounce {
+    animation: none !important;
+  }
+
+  /* Optimize scrolling performance */
+  .overflow-hidden {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Performance optimizations for all devices */
+* {
+  /* Optimize paint and layout */
+  will-change: auto;
+}
+
+/* Only apply will-change to elements that actually change */
+.animate-pulse,
+.animate-bounce,
+[class*="animate-"] {
+  will-change: opacity, transform;
+}
+
+/* Optimize images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce layout shifts */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: smooth;
+  /* Enable momentum scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 
 interface TypewriterEffectProps {
   words: string[];
@@ -18,6 +18,18 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const animationRef = useRef<number | undefined>(undefined);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile for performance optimization
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const typeNextChar = useCallback(() => {
     const currentWord = words[currentWordIndex];
@@ -43,17 +55,34 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
   }, [currentText, currentWordIndex, isDeleting, words, delay]);
 
   useEffect(() => {
-    const interval = setInterval(
-      typeNextChar,
-      isDeleting ? deleteSpeed : speed
-    );
-    return () => clearInterval(interval);
+    // Use requestAnimationFrame for better performance on mobile
+    const animate = () => {
+      typeNextChar();
+      animationRef.current = requestAnimationFrame(() => {
+        setTimeout(animate, isDeleting ? deleteSpeed : speed);
+      });
+    };
+
+    animationRef.current = requestAnimationFrame(() => {
+      setTimeout(animate, isDeleting ? deleteSpeed : speed);
+    });
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [typeNextChar, isDeleting, deleteSpeed, speed]);
+
+  // Optimize cursor animation for mobile
+  const cursorStyle = isMobile ? { animationDuration: "1s" } : {};
 
   return (
     <span className={className}>
       {currentText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse" style={cursorStyle}>
+        |
+      </span>
     </span>
   );
 };
