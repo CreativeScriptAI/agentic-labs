@@ -30,8 +30,8 @@ const HeroSection = () => {
                 Turn AI hype into production
               </span>{" "}
               <span className="block sm:inline">
-                level working{" "}
-                {isLoaded && (
+                level working Agents
+                {/* {isLoaded && (
                   <TypewriterEffect
                     words={[
                       "AI Agents",
@@ -44,7 +44,7 @@ const HeroSection = () => {
                     deleteSpeed={isMobile ? 60 : 40}
                     delay={isMobile ? 2000 : 1500}
                   />
-                )}
+                )} */}
               </span>
             </h1>
 
