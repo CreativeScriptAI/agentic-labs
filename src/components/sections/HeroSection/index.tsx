@@ -30,7 +30,7 @@ const HeroSection = () => {
                 Turn AI hype into production
               </span>{" "}
               <span className="block sm:inline">
-                level working Agents
+                level working AI Agents
                 {/* {isLoaded && (
                   <TypewriterEffect
                     words={[

@@ -1,12 +1,13 @@
 import { AppPropsWithLayout } from "../types";
 import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
-import { RootLayout } from "src/layouts";
-import { queryClient } from "src/libs/react-query";
-import { mondwest, neuebit } from "src/assets/fonts";
+import { RootLayout } from "../layouts";
+import { queryClient } from "../libs/react-query";
+import { mondwest, neuebit } from "../assets/fonts";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { usePerformanceMonitor } from "src/hooks/usePerformanceMonitor";
-import "src/styles/globals.css";
+import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
+import PerformanceDashboard from "../components/PerformanceDashboard";
+import "../styles/globals.css";
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
@@ -56,6 +57,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
           <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>
         </HydrationBoundary>
       </QueryClientProvider>
+      {process.env.NODE_ENV === "development" && <PerformanceDashboard />}
     </div>
   );
 }

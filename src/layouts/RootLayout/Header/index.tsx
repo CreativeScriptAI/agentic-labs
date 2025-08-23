@@ -1,8 +1,6 @@
 import NavBar from "./NavBar";
 import Logo from "./Logo";
-import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
-import Image from "next/image";
 import EllipseBackground from "../../../assets/images/EllipseBackground";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";

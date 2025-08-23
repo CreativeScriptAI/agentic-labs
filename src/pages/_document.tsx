@@ -7,96 +7,30 @@ class MyDocument extends Document {
     return (
       <Html lang={CONFIG.lang}>
         <Head>
-          {/* Google tag (gtag.js) */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=AW-17453709032"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'AW-17453709032');
-              `,
-            }}
+          {/* Preload critical resources */}
+          <link
+            rel="preload"
+            href="/fonts/ppmondwest-regular.otf"
+            as="font"
+            type="font/otf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/ppneuebit-bold.otf"
+            as="font"
+            type="font/otf"
+            crossOrigin="anonymous"
           />
 
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-PW19164HWX"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+          {/* DNS prefetch for external domains */}
+          <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+          <link rel="dns-prefetch" href="//static.hotjar.com" />
+          <link rel="dns-prefetch" href="//www.notion.so" />
 
-            gtag('config', 'G-PW19164HWX');
-          `,
-            }}
-          />
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-N8HPKS8Z');
-          `,
-            }}
-          />
-
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-N8HPKS8Z"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            ></iframe>
-          </noscript>
-
-          {/* Event snippet for Submit lead form (3) conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                function gtag_report_conversion(url) {
-                  var callback = function () {
-                    if (typeof(url) != 'undefined') {
-                      window.location = url;
-                    }
-                  };
-                  gtag('event', 'conversion', {
-                    'send_to': 'AW-17453709032/iUPxCMLqrIkbEOjtyYJB',
-                    'value': 1.0,
-                    'currency': 'INR',
-                    'event_callback': callback
-                  });
-                  return false;
-                }
-              `,
-            }}
-          />
-
-          {/* Hotjar Tracking Code */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(h,o,t,j,a,r){
-                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:6498424,hjsv:6};
-                    a=o.getElementsByTagName('head')[0];
-                    r=o.createElement('script');r.async=1;
-                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                    a.appendChild(r);
-                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-              `,
-            }}
-          />
+          {/* Preconnect to critical domains */}
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="preconnect" href="https://static.hotjar.com" />
 
           <meta
             name="viewport"
@@ -126,28 +60,97 @@ class MyDocument extends Document {
 
           {/* Manifest */}
           <link rel="manifest" href="/manifest.webmanifest" />
-          {/* google search console */}
-          {/* {CONFIG.googleSearchConsole.enable === true && (
-            <>
-              <meta
-                name="google-site-verification"
-                content={CONFIG.googleSearchConsole.config.siteVerification}
-              />
-            </>
-          )} */}
-          {/* naver search advisor */}
-          {/* {CONFIG.naverSearchAdvisor.enable === true && (
-            <>
-              <meta
-                name="naver-site-verification"
-                content={CONFIG.naverSearchAdvisor.config.siteVerification}
-              />
-            </>
-          )} */}
         </Head>
         <body className="bg-[#F9F6F4]">
           <Main />
           <NextScript />
+
+          {/* Optimized third-party scripts with proper loading strategies */}
+
+          {/* Google Tag Manager - Load early but after page content */}
+          <Script
+            id="gtm"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-N8HPKS8Z');
+              `,
+            }}
+          />
+
+          {/* Google Analytics - Load after page becomes interactive */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-PW19164HWX"
+            strategy="afterInteractive"
+          />
+          <Script id="ga-config" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PW19164HWX', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `}
+          </Script>
+
+          {/* Google Ads - Load lazily */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17453709032"
+            strategy="lazyOnload"
+          />
+          <Script id="ga-ads" strategy="lazyOnload">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17453709032');
+              
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-17453709032/iUPxCMLqrIkbEOjtyYJB',
+                  'value': 1.0,
+                  'currency': 'INR',
+                  'event_callback': callback
+                });
+                return false;
+              }
+            `}
+          </Script>
+
+          {/* Hotjar - Load after user interaction */}
+          <Script id="hotjar" strategy="lazyOnload">
+            {`
+              (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:6498424,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            `}
+          </Script>
+
+          {/* GTM noscript fallback */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-N8HPKS8Z"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
         </body>
       </Html>
     );
