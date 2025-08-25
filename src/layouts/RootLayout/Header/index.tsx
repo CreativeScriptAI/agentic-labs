@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import Logo from "./Logo";
 import Link from "next/link";
+import Image from "next/image";
 import EllipseBackground from "../../../assets/images/EllipseBackground";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -113,7 +114,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <>
       {/* Ellipse background image - non-sticky */}
-      <div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 h-full w-full">
+      <div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
         <EllipseBackground />
       </div>
       <div className="block md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
@@ -216,22 +217,86 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             </div>
 
             {/* Book a Call Button - Right */}
-            <button
-              onClick={() => {
-                if (
-                  typeof window !== "undefined" &&
-                  (window as any).gtag_report_conversion
-                ) {
-                  return (window as any).gtag_report_conversion(
-                    "https://tryagentikai.com/contact"
-                  );
-                }
-                return true;
-              }}
-              className="rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none"
-            >
-              Build your AI Agent
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => {
+                  if (
+                    typeof window !== "undefined" &&
+                    (window as any).gtag_report_conversion
+                  ) {
+                    return (window as any).gtag_report_conversion(
+                      "https://tryagentikai.com/contact"
+                    );
+                  }
+                  return true;
+                }}
+                className="rounded-lg bg-yellow-400 px-4 py-3 text-sm font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none"
+              >
+                Request Agent
+              </button>
+              <div
+                className="flex items-center justify-center p-2"
+                style={{ borderRadius: "8px", border: "1px solid #E0E0E0" }}
+                onClick={() => {
+                  window.open("https://wa.me/919532555110", "_blank");
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="27"
+                  height="28"
+                  viewBox="0 0 27 28"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1835_6372)">
+                    <path
+                      d="M0.953122 13.9609C0.952508 16.1804 1.53247 18.3477 2.63525 20.258L0.847656 26.7848L7.52703 25.0334C9.37446 26.0391 11.4444 26.5661 13.5478 26.5663H13.5533C20.4972 26.5663 26.1496 20.9159 26.1526 13.9708C26.1539 10.6054 24.8445 7.4408 22.4655 5.05994C20.0869 2.67927 16.9234 1.3675 13.5528 1.36597C6.60814 1.36597 0.956092 7.01607 0.953225 13.9609"
+                      fill="url(#paint0_linear_1835_6372)"
+                    />
+                    <path
+                      d="M0.503116 13.957C0.5024 16.2565 1.10315 18.5013 2.24525 20.48L0.393555 27.2407L7.31243 25.4266C9.2188 26.466 11.3652 27.014 13.5493 27.0149H13.5549C20.7479 27.0149 26.6034 21.1612 26.6064 13.9675C26.6077 10.4812 25.2512 7.20283 22.7871 4.73666C20.3228 2.27081 17.0462 0.911834 13.5549 0.9104C6.36067 0.9104 0.505983 6.76325 0.503116 13.957ZM4.62356 20.1392L4.36522 19.7291C3.27923 18.0023 2.70602 16.0069 2.70684 13.9579C2.70909 7.97856 7.57527 3.11392 13.559 3.11392C16.4567 3.11515 19.18 4.24476 21.2283 6.29428C23.2765 8.34401 24.4035 11.0687 24.4028 13.9667C24.4002 19.946 19.5339 24.8112 13.5549 24.8112H13.5506C11.6038 24.8102 9.69442 24.2874 8.02929 23.2994L7.63302 23.0644L3.52722 24.1409L4.62356 20.1392Z"
+                      fill="url(#paint1_linear_1835_6372)"
+                    />
+                    <path
+                      d="M10.2922 8.50246C10.0478 7.95946 9.79073 7.94851 9.5584 7.93898C9.36815 7.93079 9.15066 7.93141 8.93338 7.93141C8.7159 7.93141 8.36254 8.01322 8.06385 8.33935C7.76486 8.66578 6.92236 9.45462 6.92236 11.059C6.92236 12.6634 8.09099 14.2141 8.2539 14.4319C8.41701 14.6493 10.5099 18.0471 13.8246 19.3543C16.5795 20.4406 17.1401 20.2245 17.7379 20.1701C18.3359 20.1158 19.6675 19.3814 19.9391 18.6199C20.211 17.8585 20.211 17.2059 20.1295 17.0695C20.048 16.9336 19.8305 16.852 19.5043 16.689C19.1782 16.526 17.5748 15.7369 17.2759 15.6281C16.977 15.5193 16.7596 15.4651 16.5421 15.7916C16.3246 16.1176 15.7001 16.852 15.5097 17.0695C15.3196 17.2875 15.1293 17.3146 14.8032 17.1515C14.4769 16.9879 13.4266 16.6439 12.1806 15.533C11.2111 14.6686 10.5566 13.6012 10.3664 13.2746C10.1761 12.9486 10.346 12.7719 10.5095 12.6094C10.6561 12.4633 10.8358 12.2286 10.999 12.0382C11.1616 11.8478 11.2159 11.7119 11.3246 11.4944C11.4334 11.2767 11.379 11.0863 11.2976 10.9232C11.2159 10.76 10.5821 9.14723 10.2922 8.50246Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_1835_6372"
+                      x1="1266.1"
+                      y1="2543.25"
+                      x2="1266.1"
+                      y2="1.36597"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#1FAF38" />
+                      <stop offset="1" stop-color="#60D669" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_1835_6372"
+                      x1="1311.04"
+                      y1="2633.94"
+                      x2="1311.04"
+                      y2="0.9104"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#F9F9F9" />
+                      <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                    <clipPath id="clip0_1835_6372">
+                      <rect
+                        width="26.2129"
+                        height="26.4177"
+                        fill="white"
+                        transform="translate(0.393555 0.9104)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation - positioned on the right end */}
@@ -240,10 +305,25 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             <Link
               href="/contact"
               rel="noopener noreferrer"
-              className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none"
+              className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
             >
-              Contact Us
+              Request Agent
             </Link>
+            <div
+              className="-ml-4 rounded-lg p-[6px] bg-white"
+              style={{ borderRadius: "8px", border: "1px solid #E0E0E0" }}
+              onClick={() => {
+                window.open("https://wa.me/919532555110", "_blank");
+              }}
+            >
+              <Image
+                src="/images/whatsappicon.png"
+                alt="WhatsApp"
+                width={24}
+                height={24}
+                className="cursor-pointer"
+              />
+            </div>
           </div>
 
           {/* Mobile Menu Button - Hidden on all screens */}
@@ -369,7 +449,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                       }}
                       className="block w-full text-center rounded-lg bg-yellow-400 px-4 py-4 text-base font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none overflow-hidden"
                     >
-                      Build your AI Agent
+                      Request Agent
                     </button>
                   </div>
                 </div>

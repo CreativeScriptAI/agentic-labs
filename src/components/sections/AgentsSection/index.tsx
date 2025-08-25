@@ -8,7 +8,7 @@ type AgentsSectionProps = {
 
 const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const projects: any[] = useMemo(() => {
-    return Array.isArray(agents) ? agents : [];
+    return Array.isArray(agents) ? agents.reverse() : [];
   }, [agents]);
 
   const [selectedIndex, setSelectedIndex] = useState<number>(0);

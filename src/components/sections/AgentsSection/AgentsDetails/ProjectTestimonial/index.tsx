@@ -30,7 +30,7 @@ const ProjectTestimonial = ({ data }: ProjectTestimonialProps) => {
       <h2 className="section_title text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
         Founders have already seen
         <br />
-        <span className="italic text-[#0F172A] font-mondwest text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-normal tracking-[-0.96px]">
+        <span className="italic text-[#0F172A] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-normal tracking-[-0.96px]">
           transformational results
         </span>
       </h2>

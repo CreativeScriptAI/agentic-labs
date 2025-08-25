@@ -102,12 +102,12 @@ const FooterSection = () => {
               href="https://creativescript.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-700 transition-colors duration-200"
+              className="text-black  transition-colors duration-200"
             >
               creativescript.org
             </Link>
           </p>
-        <p className="text-gray-500 text-xs sm:text-sm mt-1">
+          <p className="text-gray-500 text-xs sm:text-sm mt-1">
             © 2025 All rights reserved.
           </p>
         </div>

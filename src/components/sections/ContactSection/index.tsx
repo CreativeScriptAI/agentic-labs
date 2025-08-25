@@ -58,8 +58,15 @@ const ContactSection = () => {
         marginRight: "-1rem",
       }}
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+      <iframe
+        src="https://app.youform.com/forms/6gpshcrh"
+        width="100%"
+        height="700"
+        frameBorder="0"
+        loading="lazy"
+      ></iframe>
+
+      {/* <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
           <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
             WE&apos;LL PLUG IT INTO YOUR WORKFLOW IN UNDER 48HRS.
@@ -73,12 +80,10 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
           className="space-y-4 sm:space-y-5 max-w-xl mx-auto z-1"
         >
-          {/* Email Input */}
           <div className="w-full">
             <input
               type="email"
@@ -91,7 +96,6 @@ const ContactSection = () => {
             />
           </div>
 
-          {/* Message Textarea */}
           <div className="w-full flex">
             <textarea
               name="message"
@@ -104,7 +108,6 @@ const ContactSection = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <div className="flex w-full">
             <button
               type="submit"
@@ -115,12 +118,12 @@ const ContactSection = () => {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
 
       {/* Bottom SVG */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0">
+      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden z-0">
         <ContactSectionBackground />
-      </div>
+      </div> */}
     </div>
   );
 };
