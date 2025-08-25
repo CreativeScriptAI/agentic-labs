@@ -72,29 +72,33 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
             </video>
           ) : null}
         </div>
-        <ul className="flex flex-col items-start md:flex-row md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium">
+        <ul className="flex flex-col items-start md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium">
           {data.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-1 text-slate-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="20"
-                viewBox="0 0 19 20"
-                fill="none"
-              >
-                <path
-                  d="M9.03409 19.0342C14.0235 19.0342 18.0682 14.9895 18.0682 10.0001C18.0682 5.0107 14.0235 0.966003 9.03409 0.966003C4.0447 0.966003 0 5.0107 0 10.0001C0 14.9895 4.0447 19.0342 9.03409 19.0342Z"
-                  fill="#0062FF"
-                />
-                <path
-                  d="M13.0994 7.2901L7.50733 12.4666L4.96875 10.1178"
-                  stroke="white"
-                  strokeWidth="1.80682"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="text-slate-600">{benefit.text}</span>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="20"
+                  viewBox="0 0 19 20"
+                  fill="none"
+                >
+                  <path
+                    d="M9.03409 19.0342C14.0235 19.0342 18.0682 14.9895 18.0682 10.0001C18.0682 5.0107 14.0235 0.966003 9.03409 0.966003C4.0447 0.966003 0 5.0107 0 10.0001C0 14.9895 4.0447 19.0342 9.03409 19.0342Z"
+                    fill="#0062FF"
+                  />
+                  <path
+                    d="M13.0994 7.2901L7.50733 12.4666L4.96875 10.1178"
+                    stroke="white"
+                    strokeWidth="1.80682"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="">
+                <span className="text-slate-600">{benefit.text}</span>
+              </div>
             </li>
           ))}
         </ul>
