@@ -37,7 +37,15 @@ const WhatHappensNext = () => {
             ))}
           </ul>
 
-          <button className="px-6 py-3 border border-solid border-[#0062FF] text-[#0062FF] rounded-lg font-sfpro text-sm font-medium transition-colors duration-200 flex items-center gap-2">
+          <button
+            onClick={() => {
+              window.open(
+                "https://calendly.com/creative-script/30min",
+                "_blank"
+              );
+            }}
+            className="px-6 py-3 border border-solid border-[#0062FF] text-[#0062FF] rounded-lg font-sfpro text-sm font-medium transition-colors duration-200 flex items-center gap-2"
+          >
             Book My Free Roadmap Call
             <svg
               xmlns="http://www.w3.org/2000/svg"
