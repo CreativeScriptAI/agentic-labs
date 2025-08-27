@@ -41,7 +41,7 @@ const TestimonialCardSkeleton = () => (
 // Skeleton loader for the entire testimonials section
 const TestimonialsSkeleton = ({ visibleCount }: { visibleCount: number }) => (
   <div className="relative">
-    <div className="mb-6 sm:mb-8 overflow-hidden p-4 -mx-4">
+    <div className="mb-6 sm:mb-8 overflow-hidden p-4">
       <div className="flex gap-6">
         {Array.from({ length: visibleCount }).map((_, index) => (
           <div
@@ -115,8 +115,6 @@ const LazyYouTubeIframe = ({ url, title }: { url: string; title: string }) => {
 };
 
 const TestimonialsSection = () => {
-  console.log("TestimonialsSection: Component is rendering");
-
   const viewportRef = React.useRef<HTMLDivElement | null>(null);
   const trackRef = React.useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -127,6 +125,7 @@ const TestimonialsSection = () => {
   const dragStartXRef = React.useRef<number | null>(null);
   const dragDeltaXRef = React.useRef(0);
   const [cardGapPx, setCardGapPx] = React.useState(24);
+  const [viewportWidth, setViewportWidth] = React.useState(1);
 
   // Ensure client-side only rendering
   const isClient = useIsClient();
@@ -137,23 +136,23 @@ const TestimonialsSection = () => {
   // Show skeleton during loading only
   const shouldShowSkeleton = isLoading;
 
-  // Log for debugging
+  // Log for debugging - only on mount
   React.useEffect(() => {
     if (isClient) {
-      console.log("TestimonialsSection: Client-side rendering");
-      console.log("TestimonialsSection: isLoading:", isLoading);
-      console.log(
-        "TestimonialsSection: testimonials count:",
-        testimonials.length
-      );
-      console.log("TestimonialsSection: error:", error);
+      console.log("TestimonialsSection: Component mounted");
     }
-  }, [isClient, isLoading, testimonials.length, error]);
+  }, [isClient]);
+
+  // Set initial viewport width
+  React.useEffect(() => {
+    if (viewportRef.current) {
+      setViewportWidth(viewportRef.current.clientWidth);
+    }
+  }, []);
 
   // Manual refetch function for testing
   const handleManualRefetch = React.useCallback(() => {
     if (isClient) {
-      console.log("TestimonialsSection: Manual refetch triggered");
       refetch();
     }
   }, [isClient, refetch]);
@@ -206,6 +205,12 @@ const TestimonialsSection = () => {
       const count = getVisibleCount();
       const gap = getGapPx();
       setCardGapPx(gap);
+
+      // Update viewport width
+      if (viewportRef.current) {
+        setViewportWidth(viewportRef.current.clientWidth);
+      }
+
       setVisibleCount((prev) => {
         if (prev === count) return prev;
         // adjust index so the first visible item remains in view
@@ -221,13 +226,7 @@ const TestimonialsSection = () => {
     applyResponsive();
     window.addEventListener("resize", applyResponsive);
     return () => window.removeEventListener("resize", applyResponsive);
-  }, [
-    currentIndex,
-    getVisibleCount,
-    getGapPx,
-    testimonials.length,
-    updateEdgeStates,
-  ]);
+  }, [currentIndex, testimonials.length, updateEdgeStates]);
 
   // Keyboard navigation
   const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -253,7 +252,6 @@ const TestimonialsSection = () => {
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!isDragging || dragStartXRef.current === null) return;
     dragDeltaXRef.current = e.clientX - dragStartXRef.current;
-    const viewportWidth = viewportRef.current?.clientWidth ?? 1;
     const gapPercent = (cardGapPx / viewportWidth) * 100;
     const stepPercent = 100 / visibleCount + gapPercent / visibleCount;
     const percentDelta = (dragDeltaXRef.current / viewportWidth) * stepPercent;
@@ -284,7 +282,6 @@ const TestimonialsSection = () => {
       // snap back
       if (trackRef.current) {
         trackRef.current.style.transition = "transform 300ms ease-in-out";
-        const viewportWidth = viewportRef.current?.clientWidth ?? 1;
         const gapPercent = (cardGapPx / viewportWidth) * 100;
         const stepPercent = 100 / visibleCount + gapPercent / visibleCount;
         const basePercent = currentIndex * stepPercent;
@@ -294,36 +291,31 @@ const TestimonialsSection = () => {
   };
 
   // Derived layout values for transform and spacing
-  const viewportWidth = viewportRef.current?.clientWidth ?? 1;
-  const gapPercent = (cardGapPx / viewportWidth) * 100;
-  const stepPercent = 100 / visibleCount + gapPercent / visibleCount;
-  const basePercent = currentIndex * stepPercent;
+  const gapPercent = React.useMemo(
+    () => (cardGapPx / viewportWidth) * 100,
+    [cardGapPx, viewportWidth]
+  );
+  const stepPercent = React.useMemo(
+    () => 100 / visibleCount + gapPercent / visibleCount,
+    [visibleCount, gapPercent]
+  );
+  const basePercent = React.useMemo(
+    () => currentIndex * stepPercent,
+    [currentIndex, stepPercent]
+  );
 
   return (
     <div
       className="py-12 sm:py-16 lg:py-20"
       style={{
         backgroundColor: "#F9F6F4",
-        width: "calc(100% + 2rem)",
+        // width: "calc(100% + 2rem)",
         // marginLeft: "-1rem",
         // marginRight: "-1rem",
         position: "relative",
         zIndex: 1,
       }}
     >
-      {/* Test element to verify component is rendering */}
-      {/* <div
-        style={{
-          background: "yellow",
-          color: "black",
-          padding: "10px",
-          textAlign: "center",
-          fontSize: "16px",
-          fontWeight: "bold",
-        }}
-      >
-        TESTIMONIALS SECTION IS RENDERING
-      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
@@ -406,10 +398,18 @@ const TestimonialsSection = () => {
                           style={{ height: "240px" }}
                         >
                           {isYouTubeURL(testimonial.videoURL) ? (
-                            <LazyYouTubeIframe
-                              url={testimonial.videoURL}
-                              title="YouTube video testimonial"
-                            />
+                            <iframe
+                              width="560"
+                              height="315"
+                              src={`https://www.youtube.com/embed/${
+                                testimonial.videoURL.split("/")[3]
+                              }`}
+                              title="YouTube video player"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              allowFullScreen
+                            ></iframe>
                           ) : (
                             <video
                               controls

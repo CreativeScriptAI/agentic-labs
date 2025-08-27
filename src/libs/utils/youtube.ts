@@ -4,6 +4,7 @@
  * @returns boolean indicating if the URL is a YouTube URL
  */
 export function isYouTubeURL(url?: string): boolean {
+  console.log("url", url);
   if (!url) return false;
 
   const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+/;
@@ -18,6 +19,7 @@ export function isYouTubeURL(url?: string): boolean {
 export function getYouTubeEmbedURL(url?: string): string | null {
   if (!url || !isYouTubeURL(url)) return null;
 
+  console.log("url;;;", url);
   let videoId: string | null = null;
 
   // Handle youtu.be URLs
@@ -39,5 +41,6 @@ export function getYouTubeEmbedURL(url?: string): string | null {
 
   if (!videoId) return null;
 
+  console.log("embed", videoId);
   return `https://www.youtube.com/embed/${videoId}`;
 }

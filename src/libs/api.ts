@@ -58,12 +58,10 @@ export async function fetchTestimonials() {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          Pragma: "no-cache",
-          Expires: "0",
         },
-        // Force fresh request
-        cache: "no-store",
+        next: {
+          revalidate: 10, // Cache for 5 minutes
+        },
       }
     );
 
@@ -73,11 +71,7 @@ export async function fetchTestimonials() {
 
     const data = await response.json();
 
-    // Add timestamp for client-side cache invalidation
-    return {
-      ...data,
-      _fetchedAt: Date.now(),
-    };
+    return data;
   } catch (error) {
     console.error("Error fetching testimonials:", error);
     return {
