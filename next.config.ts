@@ -124,17 +124,17 @@ const nextConfig: NextConfig = {
     ];
 
     // Add noindex headers for non-production environments
-    if (!isProduction) {
-      headers.push({
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow",
-          },
-        ],
-      });
-    }
+    // if (!isProduction) {
+    //   headers.push({
+    //     source: "/(.*)",
+    //     headers: [
+    //       {
+    //         key: "X-Robots-Tag",
+    //         value: "noindex, nofollow",
+    //       },
+    //     ],
+    //   });
+    // }
 
     return headers;
   },
