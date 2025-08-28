@@ -40,7 +40,7 @@ const WhatHappensNext = () => {
           <button
             onClick={() => {
               window.open(
-                "https://calendly.com/creative-script/30min",
+                "https://calendly.com/creative-script/15-min-agent-discovery-call",
                 "_blank"
               );
             }}

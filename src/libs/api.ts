@@ -81,3 +81,35 @@ export async function fetchTestimonials() {
     };
   }
 }
+
+export async function registerUser(userData: {
+  name: string;
+  email: string;
+  phone: string;
+}) {
+  try {
+    const response = await fetch(
+      "https://cs-voice.estulife.com/api/users/register",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to register user: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return { success: true, data };
+  } catch (error) {
+    console.error("Error registering user:", error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : "Unknown error",
+    };
+  }
+}

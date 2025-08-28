@@ -1,4 +1,5 @@
 import ContactUsForm from "src/components/sections/ContactSection";
+import AICaller from "src/components/sections/AICaller";
 import ProjectCapabilities from "src/components/sections/AgentsSection/AgentsDetails/ProjectCapabilities";
 import ProjectEdgeCases from "src/components/sections/AgentsSection/AgentsDetails/ProjectEdgeCases";
 import ProjectFAQ from "src/components/sections/AgentsSection/AgentsDetails/ProjectFAQ";
@@ -146,6 +147,7 @@ const AgentDetailPage = ({
       {/* <ProjectHeader data={data.header} /> */}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
+      <AICaller />
       {data.issues && <ProjectIssues data={data.issues} />}
       {data.capabilities && <ProjectCapabilities data={data.capabilities} />}
       {data.works && <ProjectWorks data={data.works} />}

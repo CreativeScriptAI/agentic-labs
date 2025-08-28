@@ -22,6 +22,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       ? props.title
       : `${props.title} – Agentic AI Labs`;
   const canonicalUrl = props.canonical || props.url;
+  console.log("canonicalUrl", canonicalUrl);
   const ogImage = props.image || "/og.jpg";
   const fullImageUrl = props.image?.startsWith("http")
     ? props.image
