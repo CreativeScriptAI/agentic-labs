@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AICaller from "src/components/sections/AICaller";
 import { useState } from "react";
 
 interface ProjectHeroProps {
@@ -49,30 +49,9 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
       <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-[680px] mx-auto mb-6 md:mb-8">
         {data.description}
       </p>
-      <div className="flex flex-col items-center gap-5 md:gap-6">
-        <div className="relative">
-          {isLoading && <SkeletonLoader />}
-          {isVideo ? (
-            <video
-              className={`w-full max-w-[440px] rounded-lg transition-opacity duration-300 ${
-                isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
-              }`}
-              autoPlay
-              controlsList="nodownload noplaybackrate"
-              controls
-              disablePictureInPicture
-              loop
-              playsInline
-              onLoadedData={(e) => {
-                (e.target as HTMLVideoElement).volume = 0;
-                handleLoad();
-              }}
-            >
-              <source src={data.heroImage} type="video/mp4" />
-            </video>
-          ) : null}
-        </div>
-        <ul className="flex flex-col items-start md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium">
+      <AICaller />
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+        <ul className="flex flex-col items-start md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium lg:w-1/2">
           {data.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-1 text-slate-600">
               <div>
@@ -96,12 +75,36 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
                   />
                 </svg>
               </div>
-              <div className="">
+              <div className="text-left">
                 <span className="text-slate-600">{benefit.text}</span>
               </div>
             </li>
           ))}
         </ul>
+        <div className="flex flex-col items-center gap-5 md:gap-6 lg:w-1/2">
+          <div className="relative">
+            {isLoading && <SkeletonLoader />}
+            {isVideo ? (
+              <video
+                className={`w-full max-w-[440px] rounded-lg transition-opacity duration-300 ${
+                  isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
+                }`}
+                autoPlay
+                controlsList="nodownload noplaybackrate"
+                controls
+                disablePictureInPicture
+                loop
+                playsInline
+                onLoadedData={(e) => {
+                  (e.target as HTMLVideoElement).volume = 0;
+                  handleLoad();
+                }}
+              >
+                <source src={data.heroImage} type="video/mp4" />
+              </video>
+            ) : null}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -58,7 +58,11 @@ const RootLayout = ({ children }: Props) => {
       {/* // TODO: replace react query */}
       {/* {metaConfig.type !== "Paper" && <Header />} */}
       <Header fullWidth={false} />
-      <main className="mx-auto w-full max-w-[1120px] px-4 overflow-x-hidden">
+      <main
+        className={`mx-auto w-full max-w-[1120px] overflow-x-hidden ${
+          router.pathname === "/contact" ? "px-0" : "px-4"
+        }`}
+      >
         {children}
       </main>
     </ThemeProvider>

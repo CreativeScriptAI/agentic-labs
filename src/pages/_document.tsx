@@ -111,17 +111,15 @@ class MyDocument extends Document {
               gtag('js', new Date());
               gtag('config', 'AW-17453709032');
               
-              function gtag_report_conversion(url) {
+             function gtag_report_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
                     window.location = url;
                   }
                 };
                 gtag('event', 'conversion', {
-                  'send_to': 'AW-17453709032/iUPxCMLqrIkbEOjtyYJB',
-                  'value': 1.0,
-                  'currency': 'INR',
-                  'event_callback': callback
+                    'send_to': 'AW-17453709032/TTBlCJLYqZAbEOjtyYJB',
+                    'event_callback': callback
                 });
                 return false;
               }

@@ -81,7 +81,7 @@ const ContactHeroSection = ({ noPadding = false }: ContactHeroSectionProps) => {
           <ContactSectionBackground />
         </div>
       )} */}
-      <AICaller />
+      <AICaller contactRoute={true} />
     </section>
   );
 };
