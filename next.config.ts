@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       "www.notion.so",
       "notion.so",
       "media-bucket24.s3.us-east-1.amazonaws.com",
+      "ipapi.co",
     ],
     unoptimized: false, // Enable image optimization
     formats: ["image/webp", "image/avif"],
@@ -214,6 +215,15 @@ const nextConfig: NextConfig = {
         source: "/index",
         destination: "/",
         permanent: true,
+      },
+    ];
+  },
+  // Rewrites for external API calls
+  async rewrites() {
+    return [
+      {
+        source: "/api/geolocation",
+        destination: "https://ipapi.co/json/",
       },
     ];
   },

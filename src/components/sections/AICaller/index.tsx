@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { registerUser } from "src/libs/api";
+import { detectUserCountry } from "src/libs/utils";
 
 // Country data with flags and dial codes
 const countries = [
@@ -55,6 +56,35 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isDetectingCountry, setIsDetectingCountry] = useState(true);
+
+  // Detect user's country on component mount
+  useEffect(() => {
+    const detectCountry = async () => {
+      try {
+        const countryCode = await detectUserCountry();
+        console.log("countryCode", countryCode);
+        if (countryCode) {
+          const detectedCountry = countries.find(
+            (country) => country.code === countryCode
+          );
+          if (detectedCountry) {
+            setSelectedCountry(detectedCountry);
+            setFormData((prev) => ({
+              ...prev,
+              countryCode: detectedCountry.dialCode,
+            }));
+          }
+        }
+      } catch (error) {
+        console.error("Error detecting country:", error);
+      } finally {
+        setIsDetectingCountry(false);
+      }
+    };
+
+    detectCountry();
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -120,7 +150,8 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
       if (result.success) {
         // Track conversion for Google Ads
         if (typeof window !== "undefined" && window.gtag_report_conversion) {
-          window.gtag_report_conversion();
+          const currentUrl = window.location.href + "?success=true";
+          window.gtag_report_conversion(currentUrl);
         }
 
         setFormData({
@@ -207,29 +238,45 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="w-full px-4 py-1 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 cursor-pointer flex items-center justify-between"
+                    disabled={isDetectingCountry}
+                    className="w-full px-4 py-1 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 cursor-pointer flex items-center justify-between disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <div className="flex items-center gap-1">
-                      <span className="text-base">{selectedCountry.flag}</span>
-                      <span className="font-medium text-gray-700">
-                        {selectedCountry.dialCode}
-                      </span>
+                      {isDetectingCountry ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+                          <span className="font-medium text-gray-500">
+                            Detecting...
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="text-base">
+                            {selectedCountry.flag}
+                          </span>
+                          <span className="font-medium text-gray-700">
+                            {selectedCountry.dialCode}
+                          </span>
+                        </>
+                      )}
                     </div>
-                    <svg
-                      className={`w-3 h-3 transition-transform duration-200 ${
-                        isDropdownOpen ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                    {!isDetectingCountry && (
+                      <svg
+                        className={`w-3 h-3 transition-transform duration-200 ${
+                          isDropdownOpen ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
                   </button>
 
                   {/* Dropdown Menu */}
