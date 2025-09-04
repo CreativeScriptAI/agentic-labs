@@ -24,6 +24,7 @@ import type {
   InferGetStaticPropsType,
 } from "next";
 import { CONFIG } from "site.config";
+import ProjectBenefitsAndVideo from "src/components/sections/AgentsSection/AgentsDetails/ProjectBenefitsAndVideo";
 
 type StaticProps = {
   data: any;
@@ -147,6 +148,10 @@ const AgentDetailPage = ({
       {/* <ProjectHeader data={data.header} /> */}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
+      {data.hero && (
+        <ProjectBenefitsAndVideo data={data.hero} />
+      )}
+      
       {data.issues && <ProjectIssues data={data.issues} />}
       {data.capabilities && <ProjectCapabilities data={data.capabilities} />}
       {data.works && <ProjectWorks data={data.works} />}

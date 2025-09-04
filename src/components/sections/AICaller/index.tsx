@@ -58,6 +58,8 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDetectingCountry, setIsDetectingCountry] = useState(true);
 
+  const phone_number = "+16504147082"
+
   // Detect user's country on component mount
   useEffect(() => {
     const detectCountry = async () => {
@@ -230,7 +232,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="relative space-y-4 bg-[#EAEAEA] p-4 rounded-lg"
+              className="relative space-y-4 bg-[#EAEAEA] p-4 rounded-lg md:block hidden"
             >
               {/* Phone Number Row */}
               <div className="flex gap-3">
@@ -350,6 +352,21 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                   : data?.buttonText || "Call Me Now"}
               </button>
             </form>
+            {/* Call me button on mobile screen */}
+            <div className="block lg:hidden">
+              <button
+                type="button"
+                disabled={isSubmitting}
+                className="w-full flex justify-center items-center py-4 font-sfpro bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                onClick={() => {
+                  window.location.href = `tel:${phone_number}`;
+                }}
+              >
+                {isSubmitting
+                  ? "Submitting..."
+                  : data?.buttonText || "Call Me Now"}
+              </button>
+            </div>
           </div>
 
           {/* Right Section - Illustration */}
