@@ -1,5 +1,5 @@
 import React from "react";
-import svgPaths from "../imports/audit-landing/svg-106z9v1fri";
+import svgPaths from "src/imports/audit-landing/svg-106z9v1fri";
 
 function CheckIcon() {
   return <div className="bg-[#0062ff] shrink-0 size-[20px]" />;
@@ -47,7 +47,7 @@ export function WhoItsFor() {
                 className="flex flex-col font-['SF_Pro',_sans-serif] font-[590] justify-center leading-[0] relative shrink-0 text-[20px] text-[#0f172a] w-full"
                 style={{ fontVariationSettings: "'wdth' 100" }}
               >
-                <p className="leading-[normal]">Who it's for:</p>
+                <p className="leading-[normal]">Who it&apos;s for:</p>
               </div>
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
                 <div className="content-stretch flex gap-[16px] items-start relative shrink-0 w-full">
@@ -70,8 +70,8 @@ export function WhoItsFor() {
                     className="basis-0 font-['SF_Pro',_sans-serif] font-normal grow leading-[normal] min-h-px min-w-px relative shrink-0 text-[16px] text-[#475569]"
                     style={{ fontVariationSettings: "'wdth' 100" }}
                   >
-                    Companies already using AI but not sure if it's working or
-                    wasting money.
+                    Companies already using AI but not sure if it&apos;s working
+                    or wasting money.
                   </p>
                 </div>
                 <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full">
@@ -126,7 +126,7 @@ export function WhoItsFor() {
                     className="font-['SF_Pro',_sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[#475569] w-[233px]"
                     style={{ fontVariationSettings: "'wdth' 100" }}
                   >
-                    Teams who'd rather
+                    Teams who&apos;d rather
                     <br />
                     discuss AI than deploy it.
                   </p>

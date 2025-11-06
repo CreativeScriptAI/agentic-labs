@@ -59,7 +59,7 @@ export function SocialProof() {
             </div>
             <div className="flex flex-col font-['Kalam',_sans-serif] justify-center not-italic relative shrink-0 text-slate-400 w-[356px]">
               <p className="leading-[normal] text-[16px]">
-                ...and then we fix 'em!
+                ...and then we fix &apos;em!
               </p>
             </div>
           </div>

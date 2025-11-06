@@ -80,8 +80,8 @@ export function Deliverables() {
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             <p className="leading-[normal]">
-              In 7 days, we'll show you exactly where your business is bleeding
-              money, what's causing it, and how AI can fix it fast.
+              In 7 days, we&apos;ll show you exactly where your business is bleeding
+              money, what&apos;s causing it, and how AI can fix it fast.
             </p>
           </div>
           <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0">
@@ -113,7 +113,7 @@ export function Deliverables() {
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             <p className="leading-[normal]">
-              Here's what you'll walk away with:
+              Here&apos;s what you&apos;ll walk away with:
             </p>
           </div>
           <div className="content-stretch flex gap-[16px] items-start justify-center relative shrink-0">
@@ -141,7 +141,7 @@ export function Deliverables() {
                       className="font-['SF_Pro',_sans-serif] font-normal leading-[20px] opacity-60 text-[14px] tracking-[-0.28px]"
                       style={{ fontVariationSettings: "'wdth' 100" }}
                     >
-                      See where the money's leaking.
+                      See where the money&apos;s leaking.
                     </p>
                   </div>
 

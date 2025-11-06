@@ -109,7 +109,7 @@ export function Hero() {
                 style={{ fontVariationSettings: "'wdth' 100" }}
               >
                 <span className="font-['SF_Pro'] font-semibold">
-                  You're bleeding <span className="text-[#e53935]">$$$</span> +
+                  You&apos;re bleeding <span className="text-[#e53935]">$$$</span> +
                   <span className="text-[#e53935]">time</span> doing
                   <br />
                   the same work manually.
@@ -120,7 +120,7 @@ export function Hero() {
 
           {/* Subtitle - Responsive */}
           <p className="font-['Kalam',_sans-serif] text-[16px] md:text-[20px] lg:text-[24px] leading-[1.4] not-italic text-[#717182] mb-4 md:mb-6 max-w-[600px] md:max-w-[800px] mx-auto px-4 hero-subtitle">
-            Our AI Audit spots repetitive workflows, shows exactly what they're
+            Our AI Audit spots repetitive workflows, shows exactly what they&apos;re
             costing you, and how to automate them in under a week
           </p>
 

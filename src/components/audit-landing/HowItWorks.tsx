@@ -600,7 +600,7 @@ export function HowItWorks() {
                     Proof of Concept (Coming Soon)
                   </p>
                   <p className="timeline-description font-['SF_Pro',_sans-serif] font-normal leading-[20px] text-[16px] text-slate-600 w-[235px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-                    A working demo that shows what "fixed" looks like.
+                    A working demo that shows what &quot;fixed&quot; looks like.
                   </p>
                 </div>
               </div>

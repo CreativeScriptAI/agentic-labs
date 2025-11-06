@@ -31,7 +31,7 @@ export function TeamCredibility() {
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             <p className="leading-[normal]">
-              WHO'S ACTUALLY RUNNING YOUR AI AUDIT?
+              WHO&apos;S ACTUALLY RUNNING YOUR AI AUDIT?
             </p>
           </div>
           <div
@@ -76,7 +76,7 @@ export function TeamCredibility() {
                   className="font-['SF_Pro',_sans-serif] font-normal text-[16px] text-slate-600 leading-[1.6] max-w-[70ch]"
                   style={{ fontVariationSettings: "'wdth' 100" }}
                 >
-                  Your audit isn't done by some random chatbot - it's led by the
+                  Your audit isn&apos;t done by some random chatbot - it&apos;s led by the
                   same team that has shipped{" "}
                   <span className="font-[510] text-slate-800">
                     10+ production-level AI agents
@@ -143,7 +143,7 @@ export function TeamCredibility() {
                     className="font-['SF_Pro',_sans-serif] font-[510] text-[14px] text-[#0062ff] group-hover:underline"
                     style={{ fontVariationSettings: "'wdth' 100" }}
                   >
-                    We've built it, tested it, and scaled it →
+                    We&apos;ve built it, tested it, and scaled it →
                   </span>
                 </a>
               </div>
@@ -160,7 +160,7 @@ export function TeamCredibility() {
                     className="font-['SF_Pro',_sans-serif] font-[510] text-[14px] text-white"
                     style={{ fontVariationSettings: "'wdth' 100" }}
                   >
-                    See all AI Agents we've built
+                    See all AI Agents we&apos;ve built
                   </span>
                   <ArrowUpRight color="#FFFFFF" />
                 </button>
@@ -168,7 +168,7 @@ export function TeamCredibility() {
                   className="font-['SF_Pro',_sans-serif] font-normal text-[12px] text-slate-500 text-center"
                   style={{ fontVariationSettings: "'wdth' 100" }}
                 >
-                  Opens live examples we've shipped.
+                  Opens live examples we&apos;ve shipped.
                 </p>
               </div>
             </div>
