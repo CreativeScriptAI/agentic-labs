@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
-// @ts-expect-error - GSAP types may not be available
 import gsap from "gsap";
-// @ts-expect-error - GSAP types may not be available
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import svgPaths from "src/imports/audit-landing/svg-vr2ocvys0c";
 

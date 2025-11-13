@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { useEffect, useRef, useState } from "react";
-// @ts-expect-error - GSAP types may not be available
 import gsap from "gsap";
 
 export function Navigation() {

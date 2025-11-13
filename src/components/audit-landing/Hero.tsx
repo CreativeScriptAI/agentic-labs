@@ -2,7 +2,6 @@ import { Button } from "./ui/button";
 import { WorkflowInfographic } from "./WorkflowInfographic";
 import svgPaths from "src/imports/audit-landing/svg-0nz4hwa6tp";
 import { useEffect, useRef } from "react";
-// @ts-expect-error - GSAP types may not be available
 import gsap from "gsap";
 
 export function Hero() {
