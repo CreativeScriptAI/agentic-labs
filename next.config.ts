@@ -9,11 +9,23 @@ const nextConfig: NextConfig = {
   compress: true, // Enable gzip compression
   poweredByHeader: false, // Remove X-Powered-By header
   images: {
-    domains: [
-      "www.notion.so",
-      "notion.so",
-      "media-bucket24.s3.us-east-1.amazonaws.com",
-      "ipapi.co",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.notion.so",
+      },
+      {
+        protocol: "https",
+        hostname: "notion.so",
+      },
+      {
+        protocol: "https",
+        hostname: "media-bucket24.s3.us-east-1.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ipapi.co",
+      },
     ],
     unoptimized: false, // Enable image optimization
     formats: ["image/webp", "image/avif"],
@@ -140,69 +152,69 @@ const nextConfig: NextConfig = {
     return headers;
   },
   // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: "all",
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: "vendors",
-            chunks: "all",
-            priority: 10,
-          },
-          framer: {
-            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
-            name: "framer-motion",
-            chunks: "all",
-            priority: 20,
-          },
-          react: {
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            name: "react",
-            chunks: "all",
-            priority: 30,
-          },
-          icons: {
-            test: /[\\/]node_modules[\\/](react-icons|lucide-react)[\\/]/,
-            name: "icons",
-            chunks: "all",
-            priority: 25,
-          },
-          common: {
-            name: "common",
-            minChunks: 2,
-            chunks: "all",
-            priority: 5,
-            reuseExistingChunk: true,
-          },
-        },
-      };
+  // webpack: (config, { dev, isServer }) => {
+  //   // Optimize bundle size
+  //   if (!dev && !isServer) {
+  //     config.optimization.splitChunks = {
+  //       chunks: "all",
+  //       cacheGroups: {
+  //         vendor: {
+  //           test: /[\\/]node_modules[\\/]/,
+  //           name: "vendors",
+  //           chunks: "all",
+  //           priority: 10,
+  //         },
+  //         framer: {
+  //           test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+  //           name: "framer-motion",
+  //           chunks: "all",
+  //           priority: 20,
+  //         },
+  //         react: {
+  //           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+  //           name: "react",
+  //           chunks: "all",
+  //           priority: 30,
+  //         },
+  //         icons: {
+  //           test: /[\\/]node_modules[\\/](react-icons|lucide-react)[\\/]/,
+  //           name: "icons",
+  //           chunks: "all",
+  //           priority: 25,
+  //         },
+  //         common: {
+  //           name: "common",
+  //           minChunks: 2,
+  //           chunks: "all",
+  //           priority: 5,
+  //           reuseExistingChunk: true,
+  //         },
+  //       },
+  //     };
 
-      // Enable tree shaking
-      config.optimization.usedExports = true;
-      config.optimization.sideEffects = false;
+  //     // Enable tree shaking
+  //     config.optimization.usedExports = true;
+  //     config.optimization.sideEffects = false;
 
-      // Enable module concatenation
-      config.optimization.concatenateModules = true;
+  //     // Enable module concatenation
+  //     config.optimization.concatenateModules = true;
 
-      // Optimize module resolution
-      config.resolve.modules = ["node_modules"];
-      config.resolve.extensions = [".tsx", ".ts", ".jsx", ".js"];
+  //     // Optimize module resolution
+  //     config.resolve.modules = ["node_modules"];
+  //     config.resolve.extensions = [".tsx", ".ts", ".jsx", ".js"];
 
-      // Remove unused code
-      config.optimization.minimize = true;
-    }
+  //     // Remove unused code
+  //     config.optimization.minimize = true;
+  //   }
 
-    // Optimize SVG handling
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
+  //   // Optimize SVG handling
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"],
+  //   });
 
-    return config;
-  },
+  //   return config;
+  // },
   // Redirects to avoid multiple page redirects
   async redirects() {
     return [

@@ -14,6 +14,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
     { id: 1, name: "Blog", to: "/blog" },
     { id: 2, name: "About", to: "/about" },
     { id: 3, name: "Services", to: "/services" },
+    { id: 4, name: "AI Clarity Workshop", to: "/ai-clarity-workshop" },
     // { id: 4, name: "Contact", to: "/contact" },
   ];
 

@@ -10,7 +10,15 @@ export async function fetchAgentsData() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch agents data");
+      // Log the error but don't throw - return fallback instead
+      console.error(
+        `Failed to fetch agents data: ${response.status} ${response.statusText}`
+      );
+      return {
+        pages: [],
+        total_pages: 0,
+        last_updated: new Date().toISOString(),
+      };
     }
 
     const data = await response.json();
@@ -66,7 +74,15 @@ export async function fetchTestimonials() {
     );
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch testimonials data: ${response.status}`);
+      // Log the error but don't throw - return fallback instead
+      console.error(
+        `Failed to fetch testimonials data: ${response.status} ${response.statusText}`
+      );
+      return {
+        success: false,
+        count: 0,
+        data: [],
+      };
     }
 
     const data = await response.json();
