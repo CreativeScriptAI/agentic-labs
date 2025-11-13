@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";	
 
 const config: Config = {
   content: [
@@ -79,7 +80,11 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			  
+        "accent-highlight": "hsl(var(--accent-highlight))",
+        "alert-red": "hsl(var(--alert-red))",
+
   		},
   		fontFamily: {
   			sans: [
@@ -161,7 +166,7 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 };
 
 export default config;

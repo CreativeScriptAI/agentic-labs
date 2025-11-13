@@ -1,5 +1,7 @@
 import { MapPin, Lightbulb, Puzzle } from "lucide-react";
 import { Button } from "src/components/ui/button";
+import Link from "next/link";
+import ctaLinks from "src/constants/cta-links";
 
 const WorkshopSection = () => {
   return (
@@ -99,8 +101,11 @@ const WorkshopSection = () => {
               variant="link" 
               className="text-primary font-bold p-0 h-auto hover:underline underline-offset-4 text-[17px] sm:text-[18px] md:text-[19px] inline-flex items-center gap-1 transition-gap duration-300 hover:gap-2"
             >
-              Book Free Call 
+              <Link href={ctaLinks.aiClarityWorkshop} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                Book Free Call 
+             
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
             </Button>
           </p>
         </div>

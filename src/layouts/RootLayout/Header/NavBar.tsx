@@ -8,14 +8,15 @@ type Props = {
 
 const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const router = useRouter();
-  const currentPath = router.pathname;
+  // Normalize pathname for comparison (works with or without trailing slash)
+  const currentPath = router.pathname.replace(/\/$/, "") || "/";
 
   const links = [
-    { id: 1, name: "Blog", to: "/blog" },
-    { id: 2, name: "About", to: "/about" },
-    { id: 3, name: "Services", to: "/services" },
-    { id: 4, name: "AI Clarity Workshop", to: "/ai-clarity-workshop" },
-    // { id: 4, name: "Contact", to: "/contact" },
+    { id: 1, name: "Blog", to: "/blog/" },
+    { id: 2, name: "About", to: "/about/" },
+    { id: 3, name: "Services", to: "/services/" },
+    { id: 4, name: "AI Clarity Workshop", to: "/ai-clarity-workshop/" },
+    // { id: 4, name: "Contact", to: "/contact/" },
   ];
 
   if (isMobile) {
@@ -26,12 +27,17 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <li key={link.id}>
               <Link
                 href={link.to}
-                className="flex items-center justify-between py-2 text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={onLinkClick}
+                className="flex items-center justify-between py-3 text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors active:text-blue-600"
+                onClick={(e) => {
+                  // Ensure menu closes on navigation
+                  if (onLinkClick) {
+                    onLinkClick();
+                  }
+                }}
               >
                 <span>{link.name}</span>
                 <svg
-                  className="w-5 h-5 text-gray-400"
+                  className="w-5 h-5 text-gray-400 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -59,7 +65,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <Link
               href={link.to}
               className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                currentPath === link.to
+                currentPath === link.to.replace(/\/$/, "") || currentPath === link.to
                   ? "text-blue-600 font-semibold"
                   : "text-[#475569] dark:text-gray-200"
               }`}

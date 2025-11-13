@@ -10,10 +10,12 @@ import FAQSection from "src/components/sections/AiClarityWorkshop/FAQSection";
 import FinalCTA from "src/components/sections/AiClarityWorkshop/FinalCTA";
 import RootLayout from "src/layouts/RootLayout";
 import { NextSeo } from "next-seo";
+import FooterSection from "src/components/sections/FooterSection";
 
 const AiClarityPage = () =>{
     return (
-        <>                 
+        <>
+        <section className="min-h-screen bg-background [&_*]:box-border">
             <NextSeo
                 title="AI Clarity Workshop"
                 description="Learn how to use AI to improve your business."
@@ -32,15 +34,17 @@ const AiClarityPage = () =>{
                 
             />  
             <Hero />
+            <WorkshopSection />
             <PainSection />
             <ValueSection />
-            <WorkshopSection />
             <WhoItsForSection />
             <InstructorSection />
             <TeamSection />
             <SocialProofSection />
             <FAQSection />
             <FinalCTA />
+        </section>
+        <FooterSection />
         </>
     )
 

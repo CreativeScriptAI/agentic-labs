@@ -29,7 +29,7 @@ const InstructorSection = () => {
             <div className="relative">
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full p-1 shadow-2xl" style={{ backgroundColor: '#FFFFFF' }}>
                 <OptimizedImage 
-                  src="/images/aditya-photo.png" 
+                  src="/AiClarity/aditya-photo.png" 
                   alt="Aditya - Founder of CreativeScript" 
                   width={600}
                   height={600}

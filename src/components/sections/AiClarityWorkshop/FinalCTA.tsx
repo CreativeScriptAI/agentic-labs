@@ -1,5 +1,7 @@
 import { Button } from "src/components/ui/button";
 import { Calendar, Users } from "lucide-react";
+import Link from "next/link";
+import ctaLinks from "src/constants/cta-links";
 
 const FinalCTA = () => {
   return (
@@ -36,8 +38,10 @@ const FinalCTA = () => {
             fontVariationSettings: "'wdth' 100" 
           }}
         >
-          <Calendar className="mr-2" size={22} />
-          Book Your Free AI Clarity Workshop
+          <Link href={ctaLinks.aiClarityWorkshop} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+            <Calendar className="mr-2" size={22} />
+            Book Your Free AI Clarity Workshop
+          </Link>
         </Button>
 
         <p 

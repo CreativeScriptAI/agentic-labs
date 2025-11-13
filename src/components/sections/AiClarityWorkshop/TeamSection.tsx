@@ -79,6 +79,7 @@ import OptimizedImage from "src/components/OptimizedImage";
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full md:w-auto px-6 py-5 sm:px-8 sm:py-6 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base" style={{
               fontVariationSettings: "'wdth' 100"
             }}>
+              
                 See all AI Agents we&apos;ve built <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2" />
               </Button>
               <p className="text-muted-foreground mt-2 sm:mt-3 text-center md:text-left text-xs sm:text-sm" style={{
@@ -87,11 +88,12 @@ import OptimizedImage from "src/components/OptimizedImage";
                 Opens live examples we&apos;ve shipped.
               </p>
             </div>
+            
           </div>
 
           {/* Right Illustration */}
           <div className="hidden md:flex justify-center items-center">
-            <OptimizedImage src="/images/team-illustration.png" alt="AI team illustration" width={600} height={600} className="w-full max-w-md h-auto object-contain" />
+            <OptimizedImage src="/AiClarity/team-illustration.png" alt="AI team illustration" width={600} height={600} className="w-full max-w-md h-auto object-contain" />
           </div>
         </div>
       </div>

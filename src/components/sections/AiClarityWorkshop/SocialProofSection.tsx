@@ -1,5 +1,5 @@
 import { Quote, Play } from "lucide-react";
-import OptimizedImage from "src/components/OptimizedImage";
+import Image from "next/image";
 
 const SocialProofSection = () => {
   const testimonials = [
@@ -11,7 +11,7 @@ const SocialProofSection = () => {
     {
       type: "video",
       videoUrl: "", // Placeholder for video URL
-      thumbnail: "/images/thumbnail.png", width: 600, height: 600, // Placeholder for video thumbnail
+      thumbnail: "", // Placeholder for video thumbnail
       quote: "This workshop changed how we think about AI",
       industry: "Fintech Founder"
     },
@@ -23,7 +23,7 @@ const SocialProofSection = () => {
     {
       type: "video",
       videoUrl: "", // Placeholder for video URL
-      thumbnail: "/images/thumbnail.png", width: 600, height: 600, // Placeholder for video thumbnail
+      thumbnail: "", // Placeholder for video thumbnail
       quote: "Clear, actionable insights in under 30 minutes",
       industry: "Healthcare CEO"
     },
@@ -35,7 +35,7 @@ const SocialProofSection = () => {
     {
       type: "video",
       videoUrl: "", // Placeholder for video URL
-      thumbnail: "/images/thumbnail.png", width: 600, height: 600, // Placeholder for video thumbnail
+      thumbnail: "", // Placeholder for video thumbnail
       quote: "The ROI was immediate and measurable",
       industry: "E-commerce Director"
     }
@@ -75,12 +75,12 @@ const SocialProofSection = () => {
                   {/* Video Thumbnail Container */}
                   <div className="relative aspect-video bg-muted flex items-center justify-center group cursor-pointer">
                     {item.thumbnail ? (
-                      <OptimizedImage
-                        src="/images/thumbnail.png"
+                      <Image
+                        width={600}
+                        height={600}
+                        src={item.thumbnail}
                         alt={`${item.industry} testimonial`}
                         className="w-full h-full object-cover"
-                        width={item.width}
-                        height={item.height}
                       />
                     ) : (
                       <div className="flex items-center justify-center w-full h-full bg-gradient-to-br from-muted to-muted/50">

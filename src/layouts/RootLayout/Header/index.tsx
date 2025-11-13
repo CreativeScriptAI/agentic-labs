@@ -86,14 +86,47 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
+      const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+      // Prevent scroll on iOS
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      
+      return () => {
+        document.body.style.overflow = originalOverflow;
+        document.body.style.position = "";
+        document.body.style.width = "";
+      };
     }
+  }, [isMobileMenuOpen]);
 
-    return () => {
-      document.body.style.overflow = "unset";
+  // Close menu on route change
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsMobileMenuOpen(false);
     };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Close menu on escape key press
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      window.addEventListener("keydown", handleEscape);
+      return () => {
+        window.removeEventListener("keydown", handleEscape);
+      };
+    }
   }, [isMobileMenuOpen]);
 
   // Recompute radius on resize/scroll while open (desktop only)
@@ -170,7 +203,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       </div>
 
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full z-[99] transition-all duration-300 ease-in-out ${
           isScrolled
             ? "md:bg-white md:shadow-lg pb-2"
             : "bg-[#F9F6F4] bg-transparent"
@@ -183,38 +216,44 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           </div>
 
           {/* Mobile Layout */}
-          <div className="md:hidden flex items-center justify-between w-full">
+          <div className="md:hidden flex items-center justify-between w-full relative z-[102]">
             {/* Burger Menu Button - Left */}
             <button
-              className="flex flex-col justify-center items-center w-8 h-8 border-0 bg-transparent cursor-pointer"
-              onClick={toggleMobileMenu}
+              className="flex flex-col justify-center items-center w-10 h-10 border-0 bg-transparent cursor-pointer -ml-2 active:opacity-70 transition-opacity"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMobileMenu();
+              }}
               aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
               ref={mobileBurgerButtonRef}
+              type="button"
             >
               <span
-                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out ${
+                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out ${
                   isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
                 }`}
               />
               <span
-                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out mt-1 ${
+                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
                   isMobileMenuOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`block w-6 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out mt-1 ${
+                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
                   isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
                 }`}
               />
             </button>
 
             {/* Agentic AI Text - Center */}
-            <div
-              onClick={() => (window.location.href = "/")}
+            <Link
+              href="/"
               className={`${mondwest.variable} font-mondwest text-blue-600 text-lg font-bold cursor-pointer`}
             >
               Agentic AI
-            </div>
+            </Link>
 
             {/* Book a Call Button - Right */}
             <div className="flex items-center gap-2">
@@ -303,7 +342,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           <div className="hidden md:flex items-center justify-center gap-8">
             <NavBar />
             <Link
-              href="/contact"
+              href="/contact/"
               rel="noopener noreferrer"
               className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
             >
@@ -356,7 +395,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           {isMobileMenuOpen && (
             <motion.div
               key="mobile-menu-overlay"
-              className="md:hidden fixed inset-0 z-40"
+              className="md:hidden fixed inset-0 z-[100]"
               initial={
                 isMobile
                   ? { opacity: 0 }
@@ -386,14 +425,21 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                   ? { duration: 0.2 }
                   : { type: "spring", stiffness: 100, damping: 20 }
               }
+              onClick={(e) => {
+                // Close menu when clicking on backdrop
+                if (e.target === e.currentTarget) {
+                  setIsMobileMenuOpen(false);
+                }
+              }}
             >
               <div className="absolute inset-0 bg-white" />
               <motion.div
-                className="absolute top-0 left-0 right-0 z-50"
+                className="absolute top-0 left-0 right-0 z-[101]"
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
+                onClick={(e) => e.stopPropagation()}
               >
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between px-6 pt-12">

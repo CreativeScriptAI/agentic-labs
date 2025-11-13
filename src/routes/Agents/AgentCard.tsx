@@ -28,7 +28,7 @@ const AgentCard: React.FC<Props> = ({ data }) => {
   // };
 
   return (
-    <StyledWrapper href={`/agents/${data.slug}`}>
+    <StyledWrapper href={`/agent/${data.slug}/`}>
       lkajskdljf
       {/* <article>
         {category && (

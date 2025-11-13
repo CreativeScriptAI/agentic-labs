@@ -60,70 +60,79 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
-          // Performance headers
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          // Enable compression
-          {
-            key: "Accept-Encoding",
-            value: "gzip, deflate, br",
-          },
         ],
       },
-      // HTML pages - shorter cache for dynamic content
-      {
-        source: "/(.*\\.html|/|/about|/contact|/services)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value:
-              "public, max-age=3600, s-maxage=86400, stale-while-revalidate=31536000",
-          },
-        ],
-      },
-      // Static assets - long cache
-      {
-        source: "/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Font files - long cache
-      {
-        source: "/(.*\\.woff2|.*\\.woff|.*\\.ttf|.*\\.otf)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Images - long cache
-      {
-        source:
-          "/(.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.webp|.*\\.avif|.*\\.svg)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // JavaScript and CSS - long cache with versioning
-      {
-        source: "/(.*\\.js|.*\\.css)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
+      // HTML pages - no cache in dev, proper cache in production
+      // Note: Removed this header rule as it might interfere with client-side navigation
+      // Next.js handles caching internally for client-side navigation
+      ...(isProduction
+        ? [
+            {
+              source: "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value:
+                    "public, max-age=3600, s-maxage=86400, stale-while-revalidate=31536000",
+                },
+              ],
+            },
+          ]
+        : []),
+      // Static assets - long cache (production only)
+      ...(isProduction
+        ? [
+            {
+              source: "/_next/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            {
+              source: "/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // Font files - long cache
+            {
+              source: "/(.*\\.woff2|.*\\.woff|.*\\.ttf|.*\\.otf)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // Images - long cache
+            {
+              source:
+                "/(.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.webp|.*\\.avif|.*\\.svg)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // JavaScript and CSS - long cache with versioning
+            {
+              source: "/(.*\\.js|.*\\.css)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+          ]
+        : []),
       // API routes - no cache
       {
         source: "/api/(.*)",
@@ -224,7 +233,17 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/home/",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index/",
         destination: "/",
         permanent: true,
       },

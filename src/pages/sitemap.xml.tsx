@@ -8,13 +8,13 @@ import { filterPosts } from "src/libs/utils/notion";
 export const getServerSideProps = async (ctx: any) => {
   const base = "https://www.tryagentikai.com";
 
-  // Static routes
+  // Static routes - with trailing slashes for SEO (matching trailingSlash: true)
   const staticRoutes = [
-    { path: "", priority: 1.0 },
-    { path: "/about", priority: 0.8 },
-    { path: "/blog", priority: 0.8 },
-    { path: "/contact", priority: 0.8 },
-    { path: "/services", priority: 0.8 },
+    { path: "", priority: 1.0 }, // Root doesn't need trailing slash
+    { path: "/about/", priority: 0.8 },
+    { path: "/blog/", priority: 0.8 },
+    { path: "/contact/", priority: 0.8 },
+    { path: "/services/", priority: 0.8 },
   ];
 
   // Get blog posts
@@ -43,10 +43,10 @@ export const getServerSideProps = async (ctx: any) => {
     });
   });
 
-  // Add blog posts
+  // Add blog posts - with trailing slashes for SEO
   publicPosts.forEach((post) => {
     fields.push({
-      loc: `${base}/blog/${post.slug}`,
+      loc: `${base}/blog/${post.slug}/`,
       lastmod: new Date(
         post.date?.start_date || post.createdTime
       ).toISOString(),
@@ -55,10 +55,10 @@ export const getServerSideProps = async (ctx: any) => {
     });
   });
 
-  // Add agent pages
+  // Add agent pages - with trailing slashes for SEO
   publicAgents.forEach((agent) => {
     fields.push({
-      loc: `${base}/agent/${agent.slug}`,
+      loc: `${base}/agent/${agent.slug}/`,
       lastmod: new Date(
         agent.date?.start_date || agent.createdTime
       ).toISOString(),

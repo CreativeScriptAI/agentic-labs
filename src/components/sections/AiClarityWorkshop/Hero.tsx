@@ -1,9 +1,12 @@
 import { Button } from "src/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import ctaLinks from "src/constants/cta-links";
 
 const Hero = () => {
+
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen h-full overflow-hidden pt-36 sm:pt-20 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
+    <section className="relative min-h-[85vh] md:min-h-screen h-full overflow-hidden pt-32 sm:pt-20 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
       <style>{`
         @keyframes drawPath {
           from {
@@ -40,17 +43,18 @@ const Hero = () => {
       <div className="mx-auto w-full px-0 sm:px-6 md:px-8 h-full">
         {/* Horizontal Layout: Text Left, Image Right on Desktop */}
         <div className="relative max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-8 xl:gap-12 h-full">
-          {/* Left Content: Headline, Subtext, and CTA */}
+          {/* Left Content: Headline, Subtext, Image (mobile), and CTA */}
           <div className="flex-1 lg:max-w-[580px] h-full">
-            <div className="flex flex-col justify-between h-full gap-12 lg:gap-20">
+            <div className="flex flex-col justify-between h-full gap-0 md:gap-8">
+              {/* Heading and Main Text Section */}
               <div className="flex flex-col gap-2">
                 {/* Tagline */}
-                <p className="text-foreground/70 mb-0  text-[13px] sm:text-[14px] md:text-[16px] font-normal px-4 sm:px-0">
+                <p className="text-[#040f20b3] mb-0  text-[13px] sm:text-[14px] md:text-[16px] font-normal px-4 sm:px-0">
                   Get AI Clarity in 30 Minutes
                 </p>
 
                 {/* Headline and Subtext */}
-                <div className="mb-3 sm:mb-4 px-4 sm:px-0">
+                <div className=" sm:mb-4 px-4 sm:px-0">
                   <h1
                     className="font-semibold text-foreground text-[30px] sm:text-[38px] md:text-[48px] lg:text-[56px] mb-3 sm:mb-4"
                     style={{
@@ -75,45 +79,58 @@ const Hero = () => {
                 </div>
               </div>
 
+              {/* Image - Mobile Only (between heading and CTA) */}
+              <div className="relative w-full lg:hidden flex justify-center px-4 sm:px-0">
+                <Image
+                  src="/AiClarity/vector-group.svg"
+                  alt="AI workflow diagram showing repetitive reports, manual data entry, and missed follow-ups"
+                  width={1000}
+                  height={1000}
+                  className="w-full h-auto object-contain "
+                  priority
+                />
+              </div>
+
               {/* CTA Section */}
               <div className="w-full max-w-[520px] px-4 sm:px-0">
                 {/* Small note above CTA */}
-                <div className="mb-3 sm:mb-2 text-left sm:text-right">
-                  <p className="text-[#717182] kalam-regular text-sm sm:text-base md:text-xl">
+                <div className="text-left mb-2">
+                  <p className="text-muted-foreground/60 italic text-[12px] sm:text-[13px] md:text-[14px]">
                     Takes 60 seconds to book.
                   </p>
                 </div>
 
                 {/* CTA Button */}
-                <div className="w-full mx-auto flex">
-                  <Button
-                    className="flex-1 min-w-0 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 !rounded-2xl font-semibold text-lg sm:text-xl lg:text-2xl py-4 sm:py-5 px-6 sm:px-10"
-                    aria-label="Book your free 30-minute AI Clarity Workshop"
-                  >
-                    Book Free AI Clarity Workshop
-                  </Button>
-                </div>
+                
+                   {/* CTA Button */}
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-all duration-300 hover:shadow-lg w-full text-[14px] sm:text-[15px] md:text-[16px] font-semibold focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" size="lg" style={{
+              padding: '16px 24px',
+              minHeight: '56px'
+            }} aria-label="Book your free 30-minute AI Clarity Workshop">
+                <Link href={ctaLinks.aiClarityWorkshop} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                  Book Your Free AI Clarity Workshop
+                </Link>
+              </Button>
 
                 {/* Trust Line */}
-                <div className="text-left max-w-sm mt-3">
-                  <p className="kalam-regular text-[#717182] text-sm sm:text-base md:text-xl">
-                    Trusted by 50+ founders | Built 10+ production-grade AI
-                    systems
+                <div className="mt-2 sm:mt-3 text-left">
+                  <p className="text-muted-foreground/65 italic text-[11px] sm:text-[12px] md:text-[13px] leading-relaxed">
+                    Trusted by 50+ founders | Built 10+ production-grade AI systems
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Content: Hero Image */}
-          <div className="relative w-full lg:flex-1 mt-10 lg:mt-0 flex justify-center lg:justify-end h-full">
-            <div className="relative w-full flex justify-center lg:block">
+          {/* Right Content: Hero Image - Desktop Only */}
+          <div className="hidden lg:block relative lg:flex-1 h-full">
+            <div className="relative w-full h-full">
               <Image
                 src="/AiClarity/vector-group.svg"
                 alt="AI workflow diagram showing repetitive reports, manual data entry, and missed follow-ups"
-                width={600}
-                height={600}
-                className="w-[88%] max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[600px] h-auto object-contain mb-12 lg:mb-24 lg:absolute lg:inset-0 lg:-translate-x-[35%] lg:top-1/2 lg:-translate-y-2/3"
+                width={1300}
+                height={1300}
+                className="w-full h-auto object-contain lg:absolute lg:inset-0 lg:-translate-x-[20%] lg:top-1/2 lg:-translate-y-2/4 lg:scale-110"
                 priority
               />
             </div>
