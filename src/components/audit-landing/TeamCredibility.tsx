@@ -186,6 +186,7 @@ export function TeamCredibility() {
               >
                 {/* Main Image */}
                 <div className="relative w-full h-[383px] overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     alt="AI engineer working on laptop"
                     className="w-full h-full object-contain"

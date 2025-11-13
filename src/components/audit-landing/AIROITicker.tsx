@@ -227,6 +227,7 @@ export function AIROITicker() {
     }));
 
     setItems(initialItems);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Check for reduced motion preference
@@ -449,6 +450,7 @@ function TickerItemComponent({
     setAnimatedValue(item.metric.value);
     setCurrentMetricType(item.metric.type);
     prevMetricRef.current = item.metric;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Animate value change with count-up effect

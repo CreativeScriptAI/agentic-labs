@@ -94,7 +94,7 @@ export const TrackSvg: React.FC<IconProps> = ({ white }) => (
   </svg>
 );
 
-export default {
+const WhatwedoSvgs = {
   BuildSvg,
   IntegrateSvg,
   ValidateSvg,
@@ -102,3 +102,5 @@ export default {
   MaintainSvg,
   TrackSvg,
 };
+
+export default WhatwedoSvgs;

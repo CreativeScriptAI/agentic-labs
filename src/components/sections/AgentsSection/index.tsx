@@ -331,7 +331,9 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                     >
                       {howItWorksSrc ? (
                         isRemoteHowItWorks ? (
-                          <img
+                          <>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                             src={howItWorksSrc}
                             alt={`${selectedLabel} How It Works`}
                             style={{
@@ -341,6 +343,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                             }}
                             className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
                           />
+                          </>
                         ) : (
                           <Image
                             src={howItWorksSrc}

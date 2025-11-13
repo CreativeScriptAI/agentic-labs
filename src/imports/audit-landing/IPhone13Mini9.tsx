@@ -2134,6 +2134,7 @@ function WorkflowInfographic() {
         className="absolute border-[0.441px] border-[rgba(255,255,255,0.5)] border-solid inset-0 pointer-events-none rounded-[3.526px] shadow-[0px_6.387px_7.983px_-1.597px_rgba(0,0,0,0.1),0px_2.555px_3.193px_-1.916px_rgba(0,0,0,0.1)]"
       />
       <Container47 />
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image />
       <Paragraph />
     </div>

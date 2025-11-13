@@ -593,6 +593,7 @@ function WorkflowInfographic() {
     <div className="absolute bg-[rgba(255,255,255,0.9)] box-border content-stretch flex flex-col gap-[24px] items-start left-[34.78px] pb-[24px] pt-0 px-[24px] rounded-[8px] top-[34.78px] w-[672.437px]" data-name="WorkflowInfographic">
       <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.5)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_14.492px_18.115px_-3.623px_rgba(0,0,0,0.1),0px_5.797px_7.246px_-4.348px_rgba(0,0,0,0.1)]" />
       <Container35 />
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image />
       <Paragraph />
     </div>
