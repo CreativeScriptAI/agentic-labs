@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
 const isProduction = process.env.VERCEL_ENV === "production";
+// Vercel automatically sets this environment variable during builds
+const isVercel = !!process.env.VERCEL;
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  // Only use standalone output for non-Vercel deployments (e.g., Docker/self-hosting)
+  // Vercel has its own optimized build system and doesn't support standalone mode
+  // This will automatically be omitted when building on Vercel
+  ...(isVercel ? {} : { output: "standalone" }),
   trailingSlash: true,
   compress: true, // Enable gzip compression
   poweredByHeader: false, // Remove X-Powered-By header
