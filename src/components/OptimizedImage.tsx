@@ -108,6 +108,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <div ref={imgRef} className="relative">
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image {...imageProps} />
     </div>
   );

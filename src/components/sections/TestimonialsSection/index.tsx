@@ -226,7 +226,7 @@ const TestimonialsSection = () => {
     applyResponsive();
     window.addEventListener("resize", applyResponsive);
     return () => window.removeEventListener("resize", applyResponsive);
-  }, [currentIndex, testimonials.length, updateEdgeStates]);
+  }, [currentIndex, testimonials.length, updateEdgeStates, getVisibleCount, getGapPx]);
 
   // Keyboard navigation
   const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {

@@ -1,19 +1,36 @@
 import type { NextConfig } from "next";
 
 const isProduction = process.env.VERCEL_ENV === "production";
+// Vercel automatically sets this environment variable during builds
+const isVercel = !!process.env.VERCEL;
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  // Only use standalone output for non-Vercel deployments (e.g., Docker/self-hosting)
+  // Vercel has its own optimized build system and doesn't support standalone mode
+  // This will automatically be omitted when building on Vercel
+  ...(isVercel ? {} : { output: "standalone" }),
   trailingSlash: true,
   compress: true, // Enable gzip compression
   poweredByHeader: false, // Remove X-Powered-By header
   images: {
-    domains: [
-      "www.notion.so",
-      "notion.so",
-      "media-bucket24.s3.us-east-1.amazonaws.com",
-      "ipapi.co",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.notion.so",
+      },
+      {
+        protocol: "https",
+        hostname: "notion.so",
+      },
+      {
+        protocol: "https",
+        hostname: "media-bucket24.s3.us-east-1.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ipapi.co",
+      },
     ],
     unoptimized: false, // Enable image optimization
     formats: ["image/webp", "image/avif"],
@@ -48,70 +65,79 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
-          // Performance headers
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          // Enable compression
-          {
-            key: "Accept-Encoding",
-            value: "gzip, deflate, br",
-          },
         ],
       },
-      // HTML pages - shorter cache for dynamic content
-      {
-        source: "/(.*\\.html|/|/about|/contact|/services)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value:
-              "public, max-age=3600, s-maxage=86400, stale-while-revalidate=31536000",
-          },
-        ],
-      },
-      // Static assets - long cache
-      {
-        source: "/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Font files - long cache
-      {
-        source: "/(.*\\.woff2|.*\\.woff|.*\\.ttf|.*\\.otf)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // Images - long cache
-      {
-        source:
-          "/(.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.webp|.*\\.avif|.*\\.svg)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      // JavaScript and CSS - long cache with versioning
-      {
-        source: "/(.*\\.js|.*\\.css)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
+      // HTML pages - no cache in dev, proper cache in production
+      // Note: Removed this header rule as it might interfere with client-side navigation
+      // Next.js handles caching internally for client-side navigation
+      ...(isProduction
+        ? [
+            {
+              source: "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value:
+                    "public, max-age=3600, s-maxage=86400, stale-while-revalidate=31536000",
+                },
+              ],
+            },
+          ]
+        : []),
+      // Static assets - long cache (production only)
+      ...(isProduction
+        ? [
+            {
+              source: "/_next/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            {
+              source: "/static/(.*)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // Font files - long cache
+            {
+              source: "/(.*\\.woff2|.*\\.woff|.*\\.ttf|.*\\.otf)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // Images - long cache
+            {
+              source:
+                "/(.*\\.jpg|.*\\.jpeg|.*\\.png|.*\\.gif|.*\\.webp|.*\\.avif|.*\\.svg)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+            // JavaScript and CSS - long cache with versioning
+            {
+              source: "/(.*\\.js|.*\\.css)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+          ]
+        : []),
       // API routes - no cache
       {
         source: "/api/(.*)",
@@ -140,69 +166,69 @@ const nextConfig: NextConfig = {
     return headers;
   },
   // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: "all",
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: "vendors",
-            chunks: "all",
-            priority: 10,
-          },
-          framer: {
-            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
-            name: "framer-motion",
-            chunks: "all",
-            priority: 20,
-          },
-          react: {
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            name: "react",
-            chunks: "all",
-            priority: 30,
-          },
-          icons: {
-            test: /[\\/]node_modules[\\/](react-icons|lucide-react)[\\/]/,
-            name: "icons",
-            chunks: "all",
-            priority: 25,
-          },
-          common: {
-            name: "common",
-            minChunks: 2,
-            chunks: "all",
-            priority: 5,
-            reuseExistingChunk: true,
-          },
-        },
-      };
+  // webpack: (config, { dev, isServer }) => {
+  //   // Optimize bundle size
+  //   if (!dev && !isServer) {
+  //     config.optimization.splitChunks = {
+  //       chunks: "all",
+  //       cacheGroups: {
+  //         vendor: {
+  //           test: /[\\/]node_modules[\\/]/,
+  //           name: "vendors",
+  //           chunks: "all",
+  //           priority: 10,
+  //         },
+  //         framer: {
+  //           test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+  //           name: "framer-motion",
+  //           chunks: "all",
+  //           priority: 20,
+  //         },
+  //         react: {
+  //           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+  //           name: "react",
+  //           chunks: "all",
+  //           priority: 30,
+  //         },
+  //         icons: {
+  //           test: /[\\/]node_modules[\\/](react-icons|lucide-react)[\\/]/,
+  //           name: "icons",
+  //           chunks: "all",
+  //           priority: 25,
+  //         },
+  //         common: {
+  //           name: "common",
+  //           minChunks: 2,
+  //           chunks: "all",
+  //           priority: 5,
+  //           reuseExistingChunk: true,
+  //         },
+  //       },
+  //     };
 
-      // Enable tree shaking
-      config.optimization.usedExports = true;
-      config.optimization.sideEffects = false;
+  //     // Enable tree shaking
+  //     config.optimization.usedExports = true;
+  //     config.optimization.sideEffects = false;
 
-      // Enable module concatenation
-      config.optimization.concatenateModules = true;
+  //     // Enable module concatenation
+  //     config.optimization.concatenateModules = true;
 
-      // Optimize module resolution
-      config.resolve.modules = ["node_modules"];
-      config.resolve.extensions = [".tsx", ".ts", ".jsx", ".js"];
+  //     // Optimize module resolution
+  //     config.resolve.modules = ["node_modules"];
+  //     config.resolve.extensions = [".tsx", ".ts", ".jsx", ".js"];
 
-      // Remove unused code
-      config.optimization.minimize = true;
-    }
+  //     // Remove unused code
+  //     config.optimization.minimize = true;
+  //   }
 
-    // Optimize SVG handling
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
+  //   // Optimize SVG handling
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"],
+  //   });
 
-    return config;
-  },
+  //   return config;
+  // },
   // Redirects to avoid multiple page redirects
   async redirects() {
     return [
@@ -212,7 +238,17 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/home/",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index/",
         destination: "/",
         permanent: true,
       },

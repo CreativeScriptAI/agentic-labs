@@ -24,6 +24,7 @@ const OptimizedSVG: React.FC<OptimizedSVGProps> = ({
   // For external SVG files, use img tag with optimization
   if (src.startsWith("http") || src.startsWith("/")) {
     return (
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         src={src}
         alt={alt || ""}

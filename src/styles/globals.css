@@ -1,3 +1,6 @@
+/* Kalam font is now loaded via Next.js font optimization in _app.tsx */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,6 +72,108 @@
 }
 
 @layer base {
+  :root {
+    /* Brand Colors - AI Clarity Workshop */
+    --midnight-navy: 216 79% 7%;        /* #0A1128 - Primary text, headers */
+    --electric-blue: 218 100% 50%;      /* #0062FF - CTAs, accents */
+    --page-background: 220 14% 97%;     /* #F8F9FA - Light gray background */
+    --accent-highlight: 165 100% 62%;   /* #3DFFC9 - Bright cyan for emphasis */
+    --alert-red: 4 85% 56%;             /* #E53935 - Error/alert states */
+    --muted-text: 240 7% 48%;           /* #717182 - Secondary text */
+    --soft-white: 220 14% 97%;           /* #F8F9FA - Light gray background */
+    --soft-black: 216 79% 7%;           /* #0A1128 - Primary text, headers */
+    --soft-gray: 220 14% 97%;           /* #F8F9FA - Light gray background */
+    --soft-blue: 218 100% 50%;           /* #0062FF - CTAs, accents */
+    --soft-green: 165 100% 62%;           /* #3DFFC9 - Bright cyan for emphasis */
+    --soft-red: 4 85% 56%;           /* #E53935 - Error/alert states */
+    --soft-yellow: 40 100% 50%;           /* #FFD700 - Bright yellow for emphasis */
+    --soft-purple: 280 100% 50%;           /* #800080 - Bright purple for emphasis */
+    
+    /* Semantic Tokens */
+    --background: 220 14% 97%;          /* Page background */
+    --foreground: 216 79% 7%;           /* Primary text - Midnight Navy */
+
+    --card: 0 0% 100%;                  /* White cards */
+    --card-foreground: 216 79% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 79% 7%;
+
+    --primary: 218 100% 50%;            /* Electric Blue */
+    --primary-foreground: 0 0% 100%;    /* White text on primary */
+
+    --secondary: 220 14% 97%;           /* Light background */
+    --secondary-foreground: 216 79% 7%;
+
+    --muted: 220 14% 97%;
+    --muted-foreground: 240 3% 48%;     /* Muted text */
+
+    --accent: 218 100% 50%;             /* Electric Blue for accents */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 85% 56%;           /* Alert Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 218 100% 50%;               /* Electric Blue focus ring */
+
+    --radius: 0.5rem;
+
+    /* Glass morphism effect */
+    --glass-background: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.5);
+  }
+
+  .dark {
+    --background: 216 79% 7%;
+    --foreground: 220 14% 97%;
+
+    --card: 216 79% 7%;
+    --card-foreground: 220 14% 97%;
+
+    --popover: 216 79% 7%;
+    --popover-foreground: 220 14% 97%;
+
+    --primary: 220 14% 97%;
+    --primary-foreground: 216 79% 7%;
+
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 220 14% 97%;
+
+    --muted: 217 32% 18%;
+    --muted-foreground: 240 3% 65%;
+
+    --accent: 218 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 85% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 18%;
+    --input: 217 32% 18%;
+    --ring: 218 100% 60%;
+  }
+
+  .kalam-light {
+    font-family: var(--font-kalam), cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kalam-regular {
+    font-family: var(--font-kalam), cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kalam-bold {
+    font-family: var(--font-kalam), cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
   /* Global styles previously managed by emotion */
   body {
     margin: 0;
@@ -129,6 +234,80 @@
     margin: 0;
     border-top: 1px solid var(--gray6);
   }
+
+  /* Custom Animations */
+  @keyframes dataFlow {
+    0% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(240px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes holographicSpin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scanLine {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes neuralPulse {
+    0%, 100% {
+      transform: translateX(0px) scaleX(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateX(32px) scaleX(2);
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-data-flow {
+    animation: dataFlow 3s ease-in-out infinite;
+  }
+
+  .animate-holographic-spin {
+    animation: holographicSpin 20s linear infinite;
+  }
+
+  .animate-scan-line {
+    animation: scanLine 2s ease-in-out infinite;
+  }
+
+  .animate-neural-pulse {
+    animation: neuralPulse 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+ 
 }
 
 @layer components {
@@ -590,4 +769,15 @@ html {
 
 .animate-scroll {
   animation: scroll 10s linear infinite;
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

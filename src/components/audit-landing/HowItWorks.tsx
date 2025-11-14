@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import svgPaths from "src/imports/audit-landing/svg-vr2ocvys0c";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -199,7 +199,7 @@ export function HowItWorks() {
         start: isDesktop ? 'top 80%' : 'top 80%',
         end: 'bottom center',
         scrub: true,
-        onUpdate: (self) => {
+        onUpdate: (self: any) => {
           const progress = self.progress;
           const progressHeight = progress * 100;
           
@@ -376,6 +376,7 @@ export function HowItWorks() {
     }, sectionRef);
 
     return () => ctx.revert();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -42,9 +42,10 @@ import "prismjs/components/prism-go.js";
 
 type Props = {
   children: ReactNode;
+  containerClassName?: string;
 };
 
-const RootLayout = ({ children }: Props) => {
+const RootLayout = ({ children, containerClassName = "max-w-[1120px]" }: Props) => {
   const [scheme] = useScheme();
   const router = useRouter();
   // useGtagEffect()
@@ -59,7 +60,7 @@ const RootLayout = ({ children }: Props) => {
       {/* {metaConfig.type !== "Paper" && <Header />} */}
       <Header fullWidth={false} />
       <main
-        className={`mx-auto w-full max-w-[1120px] overflow-x-hidden ${
+        className={`mx-auto w-full  overflow-x-hidden ${containerClassName} ${
           router.pathname === "/contact" ? "px-0" : "px-4"
         }`}
       >

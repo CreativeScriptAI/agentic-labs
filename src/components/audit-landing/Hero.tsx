@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import { WorkflowInfographic } from "./WorkflowInfographic";
 import svgPaths from "src/imports/audit-landing/svg-0nz4hwa6tp";
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 
 export function Hero() {
   const rootRef = useRef<HTMLElement | null>(null);
