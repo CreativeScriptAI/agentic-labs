@@ -26,8 +26,8 @@ const InstructorSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Avatar/Image Placeholder */}
           <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full p-1 shadow-2xl" style={{ backgroundColor: '#FFFFFF' }}>
+            <div className="relative flex flex-col items-center">
+              <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full p-1 shadow-2xl" style={{ backgroundColor: '#FFFFFF' }}>
                 <OptimizedImage 
                   src="/AiClarity/aditya-photo.png" 
                   alt="Aditya - Founder of CreativeScript" 
@@ -36,7 +36,26 @@ const InstructorSection = () => {
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 sm:px-4 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
+              <div
+                className={`
+                  mt-3
+                  absolute md:static 
+                  left-1/2 md:left-auto 
+                  -translate-x-1/2 md:translate-x-0 
+                  bottom-0 md:bottom-auto 
+                  bg-primary text-primary-foreground 
+                  rounded-full font-medium 
+                  px-2.5 py-1
+                  text-xs sm:text-sm md:text-base 
+                  whitespace-nowrap
+                  shadow
+                  transition-all
+                `}
+                style={{
+                  minWidth: 'max-content',
+                  boxSizing: 'border-box'
+                }}
+              >
                 Designer. Builder. Founder.
               </div>
             </div>
