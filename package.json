@@ -64,7 +64,7 @@
     "notion-utils": "^7.4.3",
     "prismjs": "^1.30.0",
     "react": "19.1.0",
-    "react-day-picker": "^8.10.1",
+    "react-day-picker": "^9.11.1",
     "react-dom": "19.1.0",
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.66.0",
