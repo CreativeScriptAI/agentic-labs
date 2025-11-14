@@ -57,7 +57,7 @@ const SocialProofSection = () => {
           <p className="text-muted-foreground mt-4 text-[16px] sm:text-[17px] md:text-[18px]" style={{
           fontVariationSettings: "'wdth' 100"
         }}>
-            From SaaS and fintech to healthcare and Web3 — our audits have uncovered{" "}
+            From SaaS and fintech to healthcare and Web3 our audits have uncovered{" "}
             <span className="font-semibold text-foreground">$100K+ in hidden ROI</span>.
           </p>
         </div>
@@ -81,6 +81,9 @@ const SocialProofSection = () => {
                         src={item.thumbnail}
                         alt={`${item.industry} testimonial`}
                         className="w-full h-full object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
+                        loading="lazy"
                       />
                     ) : (
                       <div className="flex items-center justify-center w-full h-full bg-gradient-to-br from-muted to-muted/50">

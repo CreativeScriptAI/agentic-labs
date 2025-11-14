@@ -9,7 +9,7 @@ const WhoItsForSection = () => {
           lineHeight: '1.1',
           fontVariationSettings: "'wdth' 100"
         }}>
-            For people who don&apos;t have time — but want{" "}
+            For people who don&apos;t have time but want{" "}
             <span className="relative inline-block">
               <span className="absolute bg-accent-highlight h-[26px] sm:h-[34px] md:h-[40px] left-[-4px] sm:left-[-5px] md:left-[-6px] top-[2px] sm:top-[3px] md:top-[4px] right-[-4px] sm:right-[-5px] md:right-[-6px] z-0"></span>
               <span className="relative z-10">results</span>

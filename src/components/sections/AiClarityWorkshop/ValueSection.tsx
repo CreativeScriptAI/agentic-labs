@@ -65,7 +65,16 @@ what&apos;s worth automating, and where you&apos;ll see real ROI.</p>
 
             {/* Central Image */}
             <div className="flex-shrink-0 w-[400px] lg:w-[500px]">
-              <OptimizedImage src="/images/confusion-clarity-visual.png" alt="Confusion to clarity transformation" width={600} height={600} className="w-full h-auto object-contain" />
+              <OptimizedImage 
+                src="/images/confusion-clarity-visual.png" 
+                alt="Confusion to clarity transformation" 
+                width={600} 
+                height={600} 
+                className="w-full h-auto object-contain" 
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                quality={85}
+              />
             </div>
 
             {/* After Section */}
@@ -85,7 +94,16 @@ what&apos;s worth automating, and where you&apos;ll see real ROI.</p>
           {/* Mobile Layout */}
           <div className="md:hidden">
             <div className="mb-8">
-              <OptimizedImage src="/images/confusion-clarity-visual.png" alt="Confusion to clarity transformation" width={600} height={600} className="w-full h-auto max-w-sm mx-auto object-contain" />
+              <OptimizedImage 
+                src="/images/confusion-clarity-visual.png" 
+                alt="Confusion to clarity transformation" 
+                width={600} 
+                height={600} 
+                className="w-full h-auto max-w-sm mx-auto object-contain" 
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 400px"
+                quality={85}
+              />
             </div>
             
             <div className="grid grid-cols-2 gap-6">
@@ -168,7 +186,7 @@ what&apos;s worth automating, and where you&apos;ll see real ROI.</p>
               <p className="text-foreground/80 text-[15px] md:text-[16px]" style={{
               lineHeight: '1.6'
             }}>
-                Most teams don&apos;t need another AI tool — they need a clear roadmap showing where AI fits and what&apos;s worth automating.
+                Most teams don&apos;t need another AI tool they need a clear roadmap showing where AI fits and what&apos;s worth automating.
               </p>
             </div>
           </div>

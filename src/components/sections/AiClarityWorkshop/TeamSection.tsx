@@ -93,7 +93,16 @@ import OptimizedImage from "src/components/OptimizedImage";
 
           {/* Right Illustration */}
           <div className="hidden md:flex justify-center items-center">
-            <OptimizedImage src="/AiClarity/team-illustration.png" alt="AI team illustration" width={600} height={600} className="w-full max-w-md h-auto object-contain" />
+            <OptimizedImage 
+              src="/AiClarity/team-illustration.png" 
+              alt="AI team illustration" 
+              width={600} 
+              height={600} 
+              className="w-full max-w-md h-auto object-contain" 
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+              quality={85}
+            />
           </div>
         </div>
       </div>

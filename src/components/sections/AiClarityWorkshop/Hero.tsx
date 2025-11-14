@@ -6,7 +6,7 @@ import ctaLinks from "src/constants/cta-links";
 const Hero = () => {
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen h-full overflow-hidden pt-32 sm:pt-20 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
+    <section className="relative  h-full overflow-hidden pt-32 sm:pt-20 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
       <style>{`
         @keyframes drawPath {
           from {
@@ -88,6 +88,8 @@ const Hero = () => {
                   height={1000}
                   className="w-full h-auto object-contain "
                   priority
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  quality={90}
                 />
               </div>
 
@@ -132,6 +134,8 @@ const Hero = () => {
                 height={1300}
                 className="w-full h-auto object-contain lg:absolute lg:inset-0 lg:-translate-x-[20%] lg:top-1/2 lg:-translate-y-2/4 lg:scale-110"
                 priority
+                sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 80vw, 1300px"
+                quality={90}
               />
             </div>
           </div>

@@ -34,6 +34,9 @@ const InstructorSection = () => {
                   width={600}
                   height={600}
                   className="w-full h-full rounded-full object-cover"
+                  priority={true}
+                  sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 192px"
+                  quality={90}
                 />
               </div>
               <div
@@ -91,7 +94,7 @@ const InstructorSection = () => {
                   fontVariationSettings: "'wdth' 100"
                 }}
               >
-                My team and I have shipped 10+ agentic AI systems for real businesses — automating workflows, surfacing insights, and saving hundreds of hours every month.
+                My team and I have shipped 10+ agentic AI systems for real businesses automating workflows, surfacing insights, and saving hundreds of hours every month.
               </p>
             </div>
 

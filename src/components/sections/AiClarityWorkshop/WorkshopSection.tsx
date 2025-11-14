@@ -31,7 +31,7 @@ const WorkshopSection = () => {
             {" "}in one session.
           </h2>
           <p className="text-muted-foreground text-[16px] sm:text-[17px] md:text-[18px] max-w-[750px] mx-auto leading-relaxed">
-            Each workshop uncovers hidden inefficiencies, defines what to automate, and gives founders a working game plan — not another &quot;AI brainstorm.&quot;
+            Each workshop uncovers hidden inefficiencies, defines what to automate, and gives founders a working game plan not another &quot;AI brainstorm.&quot;
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const WorkshopSection = () => {
             </h3>
             <p className="text-muted-foreground text-[16px] sm:text-[17px] leading-relaxed">
               These workshops help founders uncover hidden inefficiencies and identify what&apos;s 
-              worth automating first — before a single line of code.
+              worth automating first before a single line of code.
             </p>
           </div>
 

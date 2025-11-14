@@ -21,7 +21,16 @@ const PainSection = () => {
         <div className="relative w-full max-w-5xl mx-auto my-16">
           {/* Central Stopwatch Image */}
           <div className="relative w-full max-w-3xl mx-auto">
-            <OptimizedImage src="/images/stopwatch-visual.png" alt="Team members around a stopwatch representing wasted time" width={600} height={600} className="w-full h-auto object-contain" />
+            <OptimizedImage 
+              src="/images/stopwatch-visual.png" 
+              alt="Team members around a stopwatch representing wasted time" 
+              width={600} 
+              height={600} 
+              className="w-full h-auto object-contain" 
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 600px"
+              quality={85}
+            />
           </div>
 
           {/* Pain Point Callouts */}
