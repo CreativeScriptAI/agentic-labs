@@ -47,6 +47,36 @@ import {
         question: "What if you can't find any automation opportunities?",
         answer: "Hasn't happened yet — but if it does, the workshop is free. We only charge when we unlock clear ROI.",
       },
+      {
+        question: "Who actually leads the AI Clarity Workshop?",
+        answer:
+          "Every workshop is run by Agentic AI Labs’ senior builders—the same team that ships production voice, chat, and workflow agents. You’re talking to architects who’ve executed 50+ founder workshops, not a sales crew reading a script.",
+      },
+      {
+        question: "What makes this workshop different from an AI brainstorm or webinar?",
+        answer:
+          "It’s a working session tailored to your workflow. We map real bottlenecks, prioritize automation moves, and leave you with a 1-page roadmap that calls out what to automate now, later, or never. No jargon, no fluff.",
+      },
+      {
+        question: "Can we bring our own recordings, scripts, or dashboards to review?",
+        answer:
+          "Absolutely. Bring call recordings, SOPs, dashboards—anything that shows how your work actually happens. The more honest context we get, the sharper the recommendations.",
+      },
+      {
+        question: "What if we already have an AI team or vendor?",
+        answer:
+          "Perfect. Consider us your second-opinion partner. We benchmark what you’ve built, highlight gaps, and show how a production-grade agent could sit alongside—or replace—piecemeal tools. It’s clarity before you spend another dollar.",
+      },
+      {
+        question: "Do you give specific tooling and model recommendations?",
+        answer:
+          "Yes. We flag which LLMs or automation stacks make sense for your latency, privacy, and budget requirements, from GPT to Claude or Gemini or any other model or any leading LLM. You’ll know exactly which stack to test and why.",
+      },
+      {
+        question: "What happens if we decide to build with Agentic AI Labs afterward?",
+        answer:
+          "We move straight into a 7-day sprint using the workshop roadmap. Day 1 locks in guardrails, days 2–4 cover build + integrations, and days 5–7 wrap QA plus monitoring so you launch a reliable agent fast.",
+      },
     ];
   
     return (
