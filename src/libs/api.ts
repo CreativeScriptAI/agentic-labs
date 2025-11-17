@@ -11,25 +11,57 @@ export async function fetchAgentsData() {
 
     if (!response.ok) {
       // Log the error but don't throw - return fallback instead
-      console.error(
-        `Failed to fetch agents data: ${response.status} ${response.statusText}`
-      );
+      const errorMessage = `Failed to fetch agents data: ${response.status} ${response.statusText}`;
+      console.error(errorMessage);
+      
+      // In development, log more details
+      if (process.env.NODE_ENV === 'development') {
+        console.error("API URL:", "https://notion-blog.estulife.com/api/case-studies");
+        console.error("Response Status:", response.status);
+      }
+      
       return {
+        data: [],
         pages: [],
         total_pages: 0,
         last_updated: new Date().toISOString(),
+        error: {
+          message: errorMessage,
+          status: response.status,
+          timestamp: new Date().toISOString(),
+        },
       };
     }
 
     const data = await response.json();
+    
+    // Log success in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log("✅ Agents data fetched successfully:", {
+        count: data?.data?.length || 0,
+        total_pages: data?.total_pages || 0,
+      });
+    }
 
     return data;
   } catch (error) {
-    console.error("Error fetching agents data:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("❌ Error fetching agents data:", errorMessage);
+    
+    // In development, log full error
+    if (process.env.NODE_ENV === 'development') {
+      console.error("Full error:", error);
+    }
+    
     return {
+      data: [],
       pages: [],
       total_pages: 0,
       last_updated: new Date().toISOString(),
+      error: {
+        message: errorMessage,
+        timestamp: new Date().toISOString(),
+      },
     };
   }
 }
@@ -68,32 +100,62 @@ export async function fetchTestimonials() {
           "Content-Type": "application/json",
         },
         next: {
-          revalidate: 10, // Cache for 5 minutes
+          revalidate: 10, // Cache for 10 seconds
         },
       }
     );
 
     if (!response.ok) {
       // Log the error but don't throw - return fallback instead
-      console.error(
-        `Failed to fetch testimonials data: ${response.status} ${response.statusText}`
-      );
+      const errorMessage = `Failed to fetch testimonials data: ${response.status} ${response.statusText}`;
+      console.error(errorMessage);
+      
+      // In development, log more details
+      if (process.env.NODE_ENV === 'development') {
+        console.error("API URL:", "https://notion-blog.estulife.com/api/testimonials");
+        console.error("Response Status:", response.status);
+      }
+      
       return {
         success: false,
         count: 0,
         data: [],
+        error: {
+          message: errorMessage,
+          status: response.status,
+          timestamp: new Date().toISOString(),
+        },
       };
     }
 
     const data = await response.json();
+    
+    // Log success in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log("✅ Testimonials data fetched successfully:", {
+        count: data?.data?.length || data?.count || 0,
+        success: data?.success !== false,
+      });
+    }
 
     return data;
   } catch (error) {
-    console.error("Error fetching testimonials:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("❌ Error fetching testimonials:", errorMessage);
+    
+    // In development, log full error
+    if (process.env.NODE_ENV === 'development') {
+      console.error("Full error:", error);
+    }
+    
     return {
       success: false,
       count: 0,
       data: [],
+      error: {
+        message: errorMessage,
+        timestamp: new Date().toISOString(),
+      },
     };
   }
 }
