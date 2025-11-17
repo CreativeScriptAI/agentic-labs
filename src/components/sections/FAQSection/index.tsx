@@ -29,6 +29,31 @@ const FAQSection = () => {
       answer:
         "We implement enterprise-grade security measures including end-to-end encryption, strict access controls, and compliance with major privacy regulations like GDPR and CCPA. Your data is never used to train our models without explicit consent.",
     },
+    {
+      question: "Who typically hires Agentic AI Labs?",
+      answer:
+        "Founders, operations leaders, and CX teams across healthcare, real estate, B2B SaaS, logistics, and financial services. If you’ve got repetitive calls, chats, or back-office workflows that drain time, we tailor agents to your stack and compliance needs.",
+    },
+    {
+      question: "How fast can we launch a production agent?",
+      answer:
+        "Most teams see their first deployed agent in seven days. Day 1: workflow mapping and guardrails. Days 2–4: build plus integrations with HubSpot, Salesforce, Twilio, Zendesk, or internal APIs. Days 5–7: human QA, monitoring, and a live launch with rollback plans.",
+    },
+    {
+      question: "Can AI agents safely hand off to humans?",
+      answer:
+        "Absolutely. We configure confidence thresholds and policy triggers so the agent escalates via live transfer, ticket creation, or Slack/Teams alerts, attaching transcripts and context. That keeps customers supported while humans handle judgment calls.",
+    },
+    {
+      question: "Do we get monitoring and ongoing optimization?",
+      answer:
+        "Yes. Every deployment includes dashboards for transcripts, resolution rates, CSAT, and error spikes. During a 30-day optimization window we review conversations, tune prompts, and ship updates—extendable for ongoing managed support.",
+    },
+    {
+      question: "How do pricing and engagement models work?",
+      answer:
+        "We start with a scoped pilot—fixed price for the first workflow—then expand into retainers or per-agent subscriptions once ROI is proven. You keep full ownership of prompts, integrations, and infrastructure choices.",
+    },
   ];
 
   const toggleFAQ = (index: number) => {
