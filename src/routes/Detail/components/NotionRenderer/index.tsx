@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExtendedRecordMap } from "notion-types";
 import useScheme from "src/hooks/useScheme";
+import { FC } from "react";
+import styled from "@emotion/styled";
+
+// Performance: These CSS imports are necessary for NotionRenderer
+// Note: Next.js automatically code-splits CSS per route, so blog-specific
+// styles won't load on non-blog pages
 
 // core styles shared by all of react-notion-x (required)
 import "react-notion-x/src/styles.css";
@@ -11,10 +17,7 @@ import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 // used for rendering equations (optional)
-
 import "katex/dist/katex.min.css";
-import { FC } from "react";
-import styled from "@emotion/styled";
 
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),

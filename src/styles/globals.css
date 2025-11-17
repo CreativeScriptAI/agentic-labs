@@ -781,3 +781,62 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* Performance: Prevent Layout Shifts (CLS) */
+@layer utilities {
+  /* Font loading optimization - prevent invisible text */
+  @font-face {
+    font-family: 'Mondwest';
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Neuebit';
+    font-display: swap;
+  }
+
+  /* Reserve space for images to prevent layout shifts */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Aspect ratio containers for images */
+  .aspect-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .aspect-container::before {
+    content: '';
+    display: block;
+    padding-bottom: var(--aspect-ratio, 56.25%); /* Default 16:9 */
+  }
+
+  .aspect-container > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Reserve space for accordion content to prevent shifts */
+  .accordion-content {
+    min-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  /* Prevent layout shift from dynamic content */
+  .reserve-space {
+    min-height: 1px;
+  }
+
+  /* Smooth transitions without layout shifts */
+  .no-layout-shift {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}

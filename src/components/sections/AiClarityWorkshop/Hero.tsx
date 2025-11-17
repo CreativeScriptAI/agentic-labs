@@ -81,16 +81,18 @@ const Hero = () => {
 
               {/* Image - Mobile Only (between heading and CTA) */}
               <div className="relative w-full lg:hidden flex justify-center px-4 sm:px-0">
-                <Image
-                  src="/AiClarity/vector-group.svg"
-                  alt="AI workflow diagram showing repetitive reports, manual data entry, and missed follow-ups"
-                  width={1000}
-                  height={1000}
-                  className="w-full h-auto object-contain "
-                  priority
-                  sizes="(max-width: 768px) 100vw, 600px"
-                  quality={90}
-                />
+                <div className="relative w-full" style={{ aspectRatio: '1 / 1', maxWidth: '600px' }}>
+                  <Image
+                    src="/AiClarity/vector-group.svg"
+                    alt="AI workflow diagram showing repetitive reports, manual data entry, and missed follow-ups"
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full object-contain"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    quality={90}
+                  />
+                </div>
               </div>
 
               {/* CTA Section */}
@@ -126,13 +128,13 @@ const Hero = () => {
 
           {/* Right Content: Hero Image - Desktop Only */}
           <div className="hidden lg:block relative lg:flex-1 h-full">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full" style={{ aspectRatio: '1 / 1', minHeight: '500px' }}>
               <Image
                 src="/AiClarity/vector-group.svg"
                 alt="AI workflow diagram showing repetitive reports, manual data entry, and missed follow-ups"
                 width={1300}
                 height={1300}
-                className="w-full h-auto object-contain lg:absolute lg:inset-0 lg:-translate-x-[20%] lg:top-1/2 lg:-translate-y-2/4 lg:scale-110"
+                className="w-full h-full object-contain lg:absolute lg:inset-0 lg:-translate-x-[20%] lg:top-1/2 lg:-translate-y-2/4 lg:scale-110"
                 priority
                 sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 80vw, 1300px"
                 quality={90}
