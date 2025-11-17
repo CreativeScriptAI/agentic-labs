@@ -5,16 +5,18 @@ import { queryClient } from "../libs/react-query";
 import { mondwest, neuebit } from "../assets/fonts";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
-import PerformanceDashboard from "../components/PerformanceDashboard";
+import dynamic from "next/dynamic";
 import "../styles/globals.css";
+
+// Performance: Lazy load development-only components (tree-shaken in production)
+const PerformanceDashboard = dynamic(
+  () => import("../components/PerformanceDashboard"),
+  { ssr: false }
+);
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
   const getLayout = Component.getLayout || ((page) => page);
-
-  // Monitor performance metrics
-  usePerformanceMonitor();
 
   // Handle scroll restoration
   useEffect(() => {

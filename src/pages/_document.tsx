@@ -20,7 +20,7 @@ class MyDocument extends Document {
             }}
           />
 
-          {/* Preload critical resources */}
+          {/* Preload critical resources for improved LCP and FCP */}
           <link
             rel="preload"
             href="/fonts/ppmondwest-regular.otf"
@@ -34,6 +34,13 @@ class MyDocument extends Document {
             as="font"
             type="font/otf"
             crossOrigin="anonymous"
+          />
+          
+          {/* Preload critical CSS */}
+          <link
+            rel="preload"
+            href="/_next/static/css/app.css"
+            as="style"
           />
 
           {/* DNS prefetch for external domains */}

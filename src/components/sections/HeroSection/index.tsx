@@ -62,8 +62,9 @@ const HeroSection = () => {
           <a
             href="#agents_section"
             className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-20 sm:pb-12"
+            aria-label="Scroll down to explore our agents"
           >
-            <span className="text-base sm:text-lg font-medium text-red-500 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
+            <span className="text-base sm:text-lg font-semibold text-red-600 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
               Explore our Agents
             </span>
             <span className={isMobile ? "" : "animate-bounce"}>

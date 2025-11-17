@@ -57,6 +57,8 @@ const TrustedSection = () => {
                   width={180}
                   height={90}
                   className="w-full h-full object-contain transition-all duration-300 filter grayscale hover:grayscale-0"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
             ))}

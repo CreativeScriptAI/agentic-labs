@@ -113,12 +113,15 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
             onClick={handlePrev}
             className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isAtStart}
+            aria-label="Previous agent"
+            title="Go to previous agent"
           >
             <svg
               className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -132,12 +135,15 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
             onClick={handleNext}
             className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isAtEnd}
+            aria-label="Next agent"
+            title="Go to next agent"
           >
             <svg
               className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
