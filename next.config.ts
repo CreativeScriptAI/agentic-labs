@@ -254,12 +254,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Rewrites for external API calls
+  // Rewrites for external API calls and Partytown
   async rewrites() {
     return [
       {
         source: "/api/geolocation",
         destination: "https://ipapi.co/json/",
+      },
+      // Partytown web worker files
+      {
+        source: "/~partytown/:path*",
+        destination: "/node_modules/@builder.io/partytown/lib/:path*",
       },
     ];
   },
