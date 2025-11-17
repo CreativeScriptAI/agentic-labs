@@ -7,7 +7,8 @@ interface StructuredDataProps {
     | "softwareApplication"
     | "article"
     | "website"
-    | "breadcrumb";
+    | "breadcrumb"
+    | "faq";
   data: any;
 }
 
@@ -145,6 +146,21 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               position: index + 1,
               name: item.name,
               item: item.url,
+            })) || [],
+        };
+
+      case "faq":
+        return {
+          "@context": baseContext,
+          "@type": "FAQPage",
+          mainEntity:
+            data.faqs?.map((faq: { question: string; answer: string }) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
             })) || [],
         };
 
