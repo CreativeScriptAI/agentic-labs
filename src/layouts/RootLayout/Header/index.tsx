@@ -390,41 +390,16 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           </button>
         </div>
 
-        {/* Mobile Menu Overlay - Simplified for mobile performance */}
+        {/* Mobile Menu Overlay - Simplified for performance */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               key="mobile-menu-overlay"
-              className="md:hidden fixed inset-0 z-[100]"
-              initial={
-                isMobile
-                  ? { opacity: 0 }
-                  : {
-                      clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
-                      backgroundColor: "rgba(255,255,255,1)",
-                    }
-              }
-              animate={
-                isMobile
-                  ? { opacity: 1 }
-                  : {
-                      clipPath: `circle(${Math.max(clipRadius, 1)}px at ${
-                        clipCenter.x
-                      }px ${clipCenter.y}px)`,
-                    }
-              }
-              exit={
-                isMobile
-                  ? { opacity: 0 }
-                  : {
-                      clipPath: `circle(0px at ${clipCenter.x}px ${clipCenter.y}px)`,
-                    }
-              }
-              transition={
-                isMobile
-                  ? { duration: 0.2 }
-                  : { type: "spring", stiffness: 100, damping: 20 }
-              }
+              className="md:hidden fixed inset-0 z-[100] bg-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
               onClick={(e) => {
                 // Close menu when clicking on backdrop
                 if (e.target === e.currentTarget) {
@@ -432,13 +407,12 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                 }
               }}
             >
-              <div className="absolute inset-0 bg-white" />
               <motion.div
                 className="absolute top-0 left-0 right-0 z-[101]"
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.15 }}
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Mobile Menu Header */}

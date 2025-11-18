@@ -1,5 +1,4 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,53 +49,13 @@ const Card = ({ card, index }: any) => {
   );
 };
 
-const AnimatedCard = ({ card, index }: any) => {
-  const cardRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [index * 50, -index * 50]);
-
-  return (
-    <motion.div
-      ref={cardRef}
-      className={"cardWrapper"}
-      style={{
-        y: isMobile ? undefined : y,
-      }}
-    >
-      <Card card={card} index={index} />
-    </motion.div>
-  );
-};
-
 const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
   return (
     <section className="section !max-w-3xl">
       <h2 className="section_title">
         {data.title} <span className="italic">{data.titleHighlight}</span>
       </h2>
-      <div className="w-full cardContainer hidden md:block">
-        {data.cards.map((card, index) => (
-          <AnimatedCard key={index} card={card} index={index} />
-        ))}
-      </div>
-
-      <div className="w-full cardContainer block md:hidden">
+      <div className="w-full cardContainer">
         {data.cards.map((card, index) => (
           <Card key={index} card={card} index={index} />
         ))}

@@ -290,22 +290,39 @@
 
   .animate-data-flow {
     animation: dataFlow 3s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .animate-holographic-spin {
     animation: holographicSpin 20s linear infinite;
+    will-change: transform;
   }
 
   .animate-scan-line {
     animation: scanLine 2s ease-in-out infinite;
+    will-change: transform;
   }
 
   .animate-neural-pulse {
     animation: neuralPulse 2s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Performance optimization: Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-data-flow,
+    .animate-holographic-spin,
+    .animate-scan-line,
+    .animate-neural-pulse,
+    .animate-float {
+      animation: none;
+      will-change: auto;
+    }
   }
  
 }

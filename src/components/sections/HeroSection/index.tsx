@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import EllipseBackground from "src/assets/images/EllipseBackground";
-import TypewriterEffect from "src/components/TypewriterEffect";
 
 const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -64,7 +63,7 @@ const HeroSection = () => {
             className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-20 sm:pb-12"
             aria-label="Scroll down to explore our agents"
           >
-            <span className="text-base sm:text-lg font-semibold text-red-600 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
+            <span className="text-base sm:text-lg font-semibold text-red-700 transition-colors duration-200 mb-3 px-4 py-2 rounded-lg">
               Explore our Agents
             </span>
             <span className={isMobile ? "" : "animate-bounce"}>
