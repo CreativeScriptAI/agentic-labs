@@ -1,16 +1,10 @@
 import type { NextConfig } from "next";
-import bundleAnalyzer from "@next/bundle-analyzer";
 
 const isProduction = process.env.VERCEL_ENV === "production";
 // Vercel automatically sets this environment variable during builds
 const isVercel = !!process.env.VERCEL;
 
-// Bundle analyzer for performance optimization
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
-
-const baseConfig: NextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Only use standalone output for non-Vercel deployments (e.g., Docker/self-hosting)
   // Vercel has its own optimized build system and doesn't support standalone mode
@@ -278,84 +272,6 @@ const baseConfig: NextConfig = {
   compiler: {
     removeConsole: isProduction,
   },
-  // Webpack optimizations for bundle size reduction
-  webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size in production
-    if (!dev && !isServer) {
-      // Enable aggressive code splitting
-      config.optimization.splitChunks = {
-        chunks: "all",
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // Framework bundle (React/Next.js core)
-          framework: {
-            name: "framework",
-            chunks: "all",
-            test: /[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-sync-external-store)[\\/]/,
-            priority: 40,
-            enforce: true,
-          },
-          // Large libraries get their own chunk
-          framer: {
-            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
-            name: "framer-motion",
-            chunks: "all",
-            priority: 35,
-            enforce: true,
-          },
-          // Icon libraries
-          icons: {
-            test: /[\\/]node_modules[\\/](react-icons|lucide-react)[\\/]/,
-            name: "icons",
-            chunks: "async",
-            priority: 30,
-          },
-          // Radix UI components
-          radix: {
-            test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
-            name: "radix-ui",
-            chunks: "async",
-            priority: 28,
-          },
-          // React Query
-          query: {
-            test: /[\\/]node_modules[\\/]@tanstack[\\/]react-query[\\/]/,
-            name: "react-query",
-            chunks: "all",
-            priority: 26,
-          },
-          // Common vendor chunks
-          lib: {
-            test: /[\\/]node_modules[\\/]/,
-            name: "lib",
-            chunks: "all",
-            priority: 20,
-            minChunks: 2,
-          },
-          // Common code shared between pages
-          common: {
-            name: "common",
-            minChunks: 2,
-            chunks: "all",
-            priority: 10,
-            reuseExistingChunk: true,
-          },
-        },
-        maxInitialRequests: 25,
-        minSize: 20000,
-      };
-
-      // Enable tree shaking
-      config.optimization.usedExports = true;
-
-      // Enable module concatenation (scope hoisting)
-      config.optimization.concatenateModules = true;
-    }
-
-    return config;
-  },
 };
 
-// Wrap with bundle analyzer
-export default withBundleAnalyzer(baseConfig);
+export default nextConfig;
