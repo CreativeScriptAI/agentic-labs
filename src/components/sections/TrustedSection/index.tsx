@@ -26,7 +26,7 @@ const TrustedSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
+          <p className="text-red-700 font-semibold text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
             TRUSTED BY +50 BUSINESSES
           </p>
           <h2 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">

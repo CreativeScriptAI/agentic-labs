@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
 import PerformanceDashboard from "../components/PerformanceDashboard";
+import Head from "next/head";
 import "../styles/globals.css";
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
@@ -52,14 +53,22 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return (
-    <div className={`${mondwest.variable} ${neuebit.variable}`}>
-      <QueryClientProvider client={queryClient}>
-        <HydrationBoundary state={pageProps.dehydratedState}>
-          <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>
-        </HydrationBoundary>
-      </QueryClientProvider>
-      {process.env.NODE_ENV === "development" && <PerformanceDashboard />}
-    </div>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+        />
+      </Head>
+      <div className={`${mondwest.variable} ${neuebit.variable}`}>
+        <QueryClientProvider client={queryClient}>
+          <HydrationBoundary state={pageProps.dehydratedState}>
+            <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>
+          </HydrationBoundary>
+        </QueryClientProvider>
+        {process.env.NODE_ENV === "development" && <PerformanceDashboard />}
+      </div>
+    </>
   );
 }
 

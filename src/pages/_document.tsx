@@ -47,10 +47,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://static.hotjar.com" />
           <link rel="preconnect" href="https://connect.facebook.net" />
 
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-          />
+          {/* Viewport moved to next.config.js or _app.tsx per Next.js recommendation */}
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
           <link
