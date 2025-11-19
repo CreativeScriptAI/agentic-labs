@@ -467,7 +467,7 @@ const SocialProofSection = () => {
 
           {/* Instructions - Bottom Center */}
           <div 
-            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm z-[60]"
+            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm z-[60] hidden md:block"
             style={{ animation: 'fadeIn 0.6s ease-out 0.4s backwards' }}
           >
             Press <kbd className="px-2 py-1 bg-white/10 rounded text-white/80 font-mono text-xs">ESC</kbd> or click outside to close
