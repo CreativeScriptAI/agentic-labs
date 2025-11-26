@@ -44,7 +44,7 @@ const FooterSection = () => {
 
           {/* Twitter/X */}
           <Link
-            href="https://x.com/creativescript"
+            href="https://x.com/tryagentikai"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"

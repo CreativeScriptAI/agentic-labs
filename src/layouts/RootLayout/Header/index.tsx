@@ -91,7 +91,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       // Prevent scroll on iOS
       document.body.style.position = "fixed";
       document.body.style.width = "100%";
-      
+
       return () => {
         document.body.style.overflow = originalOverflow;
         document.body.style.position = "";
@@ -271,7 +271,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                 }}
                 className="rounded-lg bg-yellow-400 px-4 py-3 text-sm font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none"
               >
-                Request Demo
+                Book Free Call
               </button>
               <div
                 className="flex items-center justify-center p-2"
@@ -346,7 +346,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
               rel="noopener noreferrer"
               className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
             >
-              Request Demo
+              Book Free Call
             </Link>
             <div
               className="-ml-4 rounded-lg p-[6px] bg-white"
@@ -469,7 +469,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                       }}
                       className="block w-full text-center rounded-lg bg-yellow-400 px-4 py-4 text-base font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none overflow-hidden"
                     >
-                      Request Demo
+                      Book Free Call
                     </button>
                   </div>
                 </div>

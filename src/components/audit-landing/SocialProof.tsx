@@ -70,7 +70,12 @@ export function SocialProof() {
             <div className="flex flex-col gap-[8px] items-start relative shrink-0 w-full sm:w-auto">
               <button
                 className="bg-[#0062ff] hover:bg-[#0052d9] box-border content-stretch flex gap-[6px] items-center px-[24px] py-[12px] relative rounded-[8px] shrink-0 transition-colors duration-300 w-full sm:w-auto"
-                onClick={() => window.open("https://calendly.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                    "_blank"
+                  )
+                }
               >
                 <div
                   className="flex flex-col font-['SF_Pro',_sans-serif] font-[510] justify-center leading-[0] relative shrink-0 text-[14px] text-[#f8f9fa] text-nowrap"

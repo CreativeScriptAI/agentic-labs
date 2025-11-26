@@ -3,7 +3,10 @@ import svgPaths from "src/imports/audit-landing/svg-qb86qx90z2";
 export function FinalCTA() {
   const handlePrimaryCTA = () => {
     // Scroll to hero section or open booking modal
-    window.open("https://calendly.com", "_blank");
+    window.open(
+      "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+      "_blank"
+    );
   };
 
   const handleSecondaryCTA = () => {

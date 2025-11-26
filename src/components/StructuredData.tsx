@@ -33,7 +33,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             email: "contact@tryagentikai.com",
           },
           sameAs: [
-            "https://x.com/agenticlabs",
+            "https://x.com/tryagentikai",
             "https://www.linkedin.com/company/agentic-ai-labs",
           ],
           address: {

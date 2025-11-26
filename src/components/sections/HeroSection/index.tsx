@@ -26,10 +26,10 @@ const HeroSection = () => {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 text-center font-mondwest px-4">
               <span className="block sm:inline">
-                Turn AI hype into production
+                We help businesses save 40 to 60% of their time
               </span>{" "}
               <span className="block sm:inline">
-                level working AI Agents
+                by automating repetitive & boring workflows.{" "}
                 {/* {isLoaded && (
                   <TypewriterEffect
                     words={[
@@ -49,11 +49,11 @@ const HeroSection = () => {
 
             {/* Subtitle */}
             <p className="text-center text-slate-600 text-sm sm:text-base lg:text-lg font-normal leading-relaxed max-w-2xl px-4">
-              We build fast and deploy faster.
+              We’re a lab —a place where we test, measure,{" "}
               <span className="sm:hidden">
                 <br />
               </span>{" "}
-              One agent live in 7 days.
+              and optimize how AI performs inside your business.{" "}
             </p>
           </div>
 

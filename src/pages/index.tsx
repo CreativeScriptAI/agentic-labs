@@ -209,7 +209,7 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
       url: "https://www.tryagentikai.com",
       logo: "https://www.tryagentikai.com/logo.png",
       sameAs: [
-        "https://x.com/agenticlabs",
+        "https://x.com/tryagentikai",
         "https://www.linkedin.com/company/agentic-ai-labs",
       ],
     },

@@ -80,15 +80,21 @@ export function Deliverables() {
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             <p className="leading-[normal]">
-              In 7 days, we&apos;ll show you exactly where your business is bleeding
-              money, what&apos;s causing it, and how AI can fix it fast.
+              In 7 days, we&apos;ll show you exactly where your business is
+              bleeding money, what&apos;s causing it, and how AI can fix it
+              fast.
             </p>
           </div>
           <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0">
             <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0">
               <button
                 className="bg-[#0062ff] hover:bg-[#0052d9] box-border content-stretch flex gap-[6px] items-center px-[24px] py-[12px] relative rounded-[8px] shrink-0 transition-colors duration-300"
-                onClick={() => window.open("https://calendly.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                    "_blank"
+                  )
+                }
               >
                 <div
                   className="flex flex-col font-['SF_Pro',_sans-serif] font-[510] justify-center leading-[0] relative shrink-0 text-[14px] text-[#f8f9fa] text-nowrap"

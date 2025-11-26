@@ -34,7 +34,10 @@ const WhoItsForSection = () => {
 
           <button
             onClick={() => {
-              window.open("https://calendly.com/creative-script/15-min-agent-discovery-call", "_blank");
+              window.open(
+                "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                "_blank"
+              );
             }}
             className="px-6 py-3 border border-solid border-[#0062FF] text-[#0062FF] rounded-lg font-sfpro text-sm font-medium transition-colors duration-200 flex items-center gap-2"
           >

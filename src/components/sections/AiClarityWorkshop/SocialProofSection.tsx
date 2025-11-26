@@ -25,7 +25,8 @@ const SocialProofSection = () => {
     {
       type: "video",
       videoUrl: "https://d34gt69eepjr0b.cloudfront.net/aiden_testimonial.mp4",
-      thumbnail: "https://d34gt69eepjr0b.cloudfront.net/aiden_testimonial.mp4#t=0.1",
+      thumbnail:
+        "https://d34gt69eepjr0b.cloudfront.net/aiden_testimonial.mp4#t=0.1",
       name: "Aiden, Founder",
       title: "Founder, SaaS",
       quote: "Clear, actionable insights in under 30 minutes",
@@ -44,23 +45,15 @@ const SocialProofSection = () => {
     },
     {
       type: "text",
-      quote: "Found our biggest bottleneck in 20 minutes.",
+      quote:
+        "Aditya helped me save tremendous amout of time with his expertise. I highly recommend him.",
       industry: "SaaS Founder",
     },
     {
       type: "text",
-      quote: "Finally understood where AI could actually help.",
+      quote:
+        "Spoke with Aditya and his colleague about RAG techniques, I found their experience helpful",
       industry: "Operations Director",
-    },
-    {
-      type: "text",
-      quote: "Practical insights, zero fluff.",
-      industry: "Enterprise Leader",
-    },
-    {
-      type: "text",
-      quote: "The ROI was immediate and measurable",
-      industry: "E-commerce Director",
     },
   ];
 
@@ -94,9 +87,9 @@ const SocialProofSection = () => {
   // ESC key to close fullscreen
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && fullscreenVideo) {
+      if (e.key === "Escape" && fullscreenVideo) {
         // Pause all videos when closing with ESC
-        Object.values(videoRefs.current).forEach(vid => {
+        Object.values(videoRefs.current).forEach((vid) => {
           if (vid) vid.pause();
         });
         setFullscreenVideo(null);
@@ -104,8 +97,8 @@ const SocialProofSection = () => {
       }
     };
 
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, [fullscreenVideo]);
 
   // Distribute testimonials with both column and row spanning
@@ -121,7 +114,7 @@ const SocialProofSection = () => {
     const items = testimonials.map((item, i) => {
       let colspan: number;
       let rowspan: number;
-      
+
       if (item.type === "video" && item.orientation === "portrait") {
         // Portrait: takes 2-3 columns, spans 2 rows (tall)
         colspan = columns >= 8 ? 3 : columns >= 4 ? 2 : 1;
@@ -135,10 +128,10 @@ const SocialProofSection = () => {
         colspan = columns >= 8 ? 2 : columns >= 4 ? 2 : 1;
         rowspan = 1;
       }
-      
+
       // Ensure colspan doesn't exceed total columns (mobile-safe)
       colspan = Math.min(colspan, columns);
-      
+
       return {
         ...item,
         colspan,
@@ -201,8 +194,7 @@ const SocialProofSection = () => {
                 key={uniqueKey}
                 className="rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
                 style={{
-                  backgroundColor:
-                    item.type === "video" ? "#000" : "#FFFFFF",
+                  backgroundColor: item.type === "video" ? "#000" : "#FFFFFF",
                   gridColumn: `span ${item.colspan}`,
                   gridRow: `span ${item.rowspan}`,
                 }}
@@ -218,7 +210,9 @@ const SocialProofSection = () => {
                       }`}
                     >
                       <video
-                        ref={(el) => { videoRefs.current[uniqueKey] = el; }}
+                        ref={(el) => {
+                          videoRefs.current[uniqueKey] = el;
+                        }}
                         src={item.videoUrl}
                         className="w-full h-full object-cover rounded-lg"
                         playsInline
@@ -228,11 +222,13 @@ const SocialProofSection = () => {
                           const video = e.currentTarget;
                           if (video.paused) {
                             // Pause all other videos
-                            Object.entries(videoRefs.current).forEach(([key, vid]) => {
-                              if (key !== uniqueKey && vid) {
-                                vid.pause();
+                            Object.entries(videoRefs.current).forEach(
+                              ([key, vid]) => {
+                                if (key !== uniqueKey && vid) {
+                                  vid.pause();
+                                }
                               }
-                            });
+                            );
                             video.play();
                             setPlayingVideo(uniqueKey);
                           } else {
@@ -249,18 +245,21 @@ const SocialProofSection = () => {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none rounded-lg" />
 
                           {/* Play Button - Center */}
-                          <div 
+                          <div
                             className="absolute inset-0 flex items-center justify-center pointer-events-none"
                             style={{ zIndex: 10 }}
                           >
-                            <div className="w-20 h-20 rounded-full bg-blue-600 group-hover:bg-blue-700 flex items-center justify-center group-hover:scale-110 transition-all shadow-2xl pointer-events-auto cursor-pointer"
+                            <div
+                              className="w-20 h-20 rounded-full bg-blue-600 group-hover:bg-blue-700 flex items-center justify-center group-hover:scale-110 transition-all shadow-2xl pointer-events-auto cursor-pointer"
                               onClick={() => {
                                 // Pause all other videos
-                                Object.entries(videoRefs.current).forEach(([key, vid]) => {
-                                  if (key !== uniqueKey && vid) {
-                                    vid.pause();
+                                Object.entries(videoRefs.current).forEach(
+                                  ([key, vid]) => {
+                                    if (key !== uniqueKey && vid) {
+                                      vid.pause();
+                                    }
                                   }
-                                });
+                                );
                                 const video = videoRefs.current[uniqueKey];
                                 if (video) {
                                   video.play();
@@ -274,7 +273,7 @@ const SocialProofSection = () => {
                                 fill="currentColor"
                               />
                             </div>
-                      </div>
+                          </div>
 
                           {/* Name and Title Overlay - Bottom */}
                           <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10 pointer-events-none">
@@ -291,7 +290,7 @@ const SocialProofSection = () => {
                                 {item.title}
                               </p>
                             )}
-                      </div>
+                          </div>
                         </>
                       )}
 
@@ -323,15 +322,12 @@ const SocialProofSection = () => {
                     >
                       &quot;{item.quote}&quot;
                     </p>
-                    <p
-                      className="text-gray-600"
-                      style={{ fontSize: "13px" }}
-                    >
-                    — {item.industry}
-                  </p>
-                </div>
-              )}
-            </div>
+                    <p className="text-gray-600" style={{ fontSize: "13px" }}>
+                      — {item.industry}
+                    </p>
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>
@@ -352,40 +348,44 @@ const SocialProofSection = () => {
               </span>
             ))}
           </div>
-          </div>
         </div>
+      </div>
 
       {/* Cinematic Fullscreen Video Modal */}
       {fullscreenVideo && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black flex items-center justify-center"
-          style={{ 
-            animation: 'fadeIn 0.3s ease-in-out',
-            backdropFilter: 'blur(10px)'
+          style={{
+            animation: "fadeIn 0.3s ease-in-out",
+            backdropFilter: "blur(10px)",
           }}
         >
           <style jsx>{`
             @keyframes fadeIn {
-              from { opacity: 0; }
-              to { opacity: 1; }
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
             }
             @keyframes slideUp {
-              from { 
+              from {
                 opacity: 0;
                 transform: translateY(30px);
               }
-              to { 
+              to {
                 opacity: 1;
                 transform: translateY(0);
               }
             }
           `}</style>
-          
+
           {/* Close Button - Top Right */}
           <button
             onClick={() => {
               // Close fullscreen and ensure all videos are paused
-              Object.values(videoRefs.current).forEach(vid => {
+              Object.values(videoRefs.current).forEach((vid) => {
                 if (vid) vid.pause();
               });
               setFullscreenVideo(null);
@@ -394,17 +394,21 @@ const SocialProofSection = () => {
             className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white shadow-2xl transition-all hover:scale-110 group"
             aria-label="Close fullscreen"
           >
-            <X size={28} strokeWidth={2.5} className="group-hover:rotate-90 transition-transform duration-300" />
+            <X
+              size={28}
+              strokeWidth={2.5}
+              className="group-hover:rotate-90 transition-transform duration-300"
+            />
           </button>
 
           {/* Video Container with Theater Effect */}
-          <div 
+          <div
             className="relative w-full h-full flex items-center justify-center px-4 md:px-8 lg:px-16"
             onClick={(e) => {
               // Close when clicking outside the video
               if (e.target === e.currentTarget) {
                 // Pause all videos when closing
-                Object.values(videoRefs.current).forEach(vid => {
+                Object.values(videoRefs.current).forEach((vid) => {
                   if (vid) vid.pause();
                 });
                 setFullscreenVideo(null);
@@ -412,15 +416,17 @@ const SocialProofSection = () => {
               }
             }}
           >
-            <div 
+            <div
               className="relative w-full max-w-7xl"
-              style={{ 
-                animation: 'slideUp 0.4s ease-out',
-                maxHeight: '90vh'
+              style={{
+                animation: "slideUp 0.4s ease-out",
+                maxHeight: "90vh",
               }}
             >
               {(() => {
-                const item = testimonials.find((t, i) => `pt-${i}` === fullscreenVideo);
+                const item = testimonials.find(
+                  (t, i) => `pt-${i}` === fullscreenVideo
+                );
                 return item && item.videoUrl ? (
                   <div className="relative group">
                     {/* Video with cinematic styling */}
@@ -428,8 +434,9 @@ const SocialProofSection = () => {
                       src={item.videoUrl}
                       className="w-full h-full object-contain rounded-xl shadow-2xl"
                       style={{
-                        maxHeight: '90vh',
-                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 100px rgba(59, 130, 246, 0.3)'
+                        maxHeight: "90vh",
+                        boxShadow:
+                          "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 100px rgba(59, 130, 246, 0.3)",
                       }}
                       controls
                       autoPlay
@@ -437,12 +444,14 @@ const SocialProofSection = () => {
                       loop
                       controlsList="nodownload"
                     />
-                    
+
                     {/* Video Info Overlay - Bottom */}
                     {item.name && (
-                      <div 
+                      <div
                         className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent rounded-b-xl"
-                        style={{ animation: 'slideUp 0.6s ease-out 0.2s backwards' }}
+                        style={{
+                          animation: "slideUp 0.6s ease-out 0.2s backwards",
+                        }}
                       >
                         <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">
                           {item.name}
@@ -456,9 +465,13 @@ const SocialProofSection = () => {
                     )}
 
                     {/* Subtle Vignette Effect */}
-                    <div className="absolute inset-0 pointer-events-none rounded-xl" style={{
-                      background: 'radial-gradient(ellipse at center, transparent 0%, transparent 60%, rgba(0,0,0,0.3) 100%)'
-                    }} />
+                    <div
+                      className="absolute inset-0 pointer-events-none rounded-xl"
+                      style={{
+                        background:
+                          "radial-gradient(ellipse at center, transparent 0%, transparent 60%, rgba(0,0,0,0.3) 100%)",
+                      }}
+                    />
                   </div>
                 ) : null;
               })()}
@@ -466,13 +479,17 @@ const SocialProofSection = () => {
           </div>
 
           {/* Instructions - Bottom Center */}
-          <div 
+          <div
             className="fixed bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm z-[60] hidden md:block"
-            style={{ animation: 'fadeIn 0.6s ease-out 0.4s backwards' }}
+            style={{ animation: "fadeIn 0.6s ease-out 0.4s backwards" }}
           >
-            Press <kbd className="px-2 py-1 bg-white/10 rounded text-white/80 font-mono text-xs">ESC</kbd> or click outside to close
+            Press{" "}
+            <kbd className="px-2 py-1 bg-white/10 rounded text-white/80 font-mono text-xs">
+              ESC
+            </kbd>{" "}
+            or click outside to close
           </div>
-      </div>
+        </div>
       )}
     </section>
   );

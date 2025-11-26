@@ -6,7 +6,7 @@ const ContactCTASection = () => {
     // Scroll to the top where the Calendly widget is located
     // window.scrollTo({ top: 0, behavior: "smooth" });
     window.open(
-      "https://calendly.com/creative-script/15-min-agent-discovery-call",
+      "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
       "_blank"
     );
   };
