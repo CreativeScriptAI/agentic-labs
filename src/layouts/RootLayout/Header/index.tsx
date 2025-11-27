@@ -264,7 +264,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                     (window as any).gtag_report_conversion
                   ) {
                     return (window as any).gtag_report_conversion(
-                      "https://tryagentikai.com/contact"
+                      "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
                     );
                   }
                   return true;
@@ -342,7 +342,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           <div className="hidden md:flex items-center justify-center gap-8">
             <NavBar />
             <Link
-              href="/contact/"
+              href="https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
               rel="noopener noreferrer"
               className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
             >
@@ -462,7 +462,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                           (window as any).gtag_report_conversion
                         ) {
                           return (window as any).gtag_report_conversion(
-                            "https://tryagentikai.com/contact"
+                            "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
                           );
                         }
                         return true;
