@@ -139,6 +139,24 @@ class MyDocument extends Document {
             }}
           />
 
+          {/* Hotjar - Runs in Web Worker */}
+          <Script
+            id="hotjar"
+            type="text/partytown"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:6592201,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+              `,
+            }}
+          />
+
           {/* Facebook Pixel - Runs in Web Worker */}
           <Script
             id="facebook-pixel"
@@ -170,22 +188,6 @@ class MyDocument extends Document {
             />
           </noscript>
 
-          {/* Hotjar - Runs in Web Worker */}
-          <Script
-            id="hotjar"
-            type="text/partytown"
-            dangerouslySetInnerHTML={{
-              __html: `
-                 (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6589094,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-            }}
-          />
           {/* Meta Pixel Code */}
           <Script
             id="meta-pixel"
