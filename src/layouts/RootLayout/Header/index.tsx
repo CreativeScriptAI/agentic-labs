@@ -348,7 +348,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             >
               Book Free Call
             </Link>
-            <div
+            {/* <div
               className="-ml-4 rounded-lg p-[6px] bg-white"
               style={{ borderRadius: "8px", border: "1px solid #E0E0E0" }}
               onClick={() => {
@@ -362,7 +362,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                 height={24}
                 className="cursor-pointer"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Menu Button - Hidden on all screens */}
