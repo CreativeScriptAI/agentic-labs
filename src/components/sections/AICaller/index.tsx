@@ -58,7 +58,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDetectingCountry, setIsDetectingCountry] = useState(true);
 
-  const phone_number = "+16504147082"
+  const phone_number = "+16504147082";
 
   // Detect user's country on component mount
   useEffect(() => {

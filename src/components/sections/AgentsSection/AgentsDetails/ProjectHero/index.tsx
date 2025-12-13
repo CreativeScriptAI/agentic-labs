@@ -16,9 +16,6 @@ interface ProjectHeroProps {
 }
 
 const ProjectHero = ({ data }: ProjectHeroProps) => {
-
-
-
   return (
     <section className="section text-center mt-[132px]">
       <span className="section_label">{data.subtitle}</span>
@@ -31,7 +28,7 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
       <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-[680px] mx-auto mb-6 md:mb-8">
         {data.description}
       </p>
-      <AICaller />
+      {/* <AICaller /> */}
     </section>
   );
 };

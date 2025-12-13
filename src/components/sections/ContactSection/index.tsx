@@ -59,7 +59,7 @@ const ContactSection = () => {
         marginRight: "-1rem",
       }}
     >
-      <AICaller contactRoute={true} />
+      {/* <AICaller contactRoute={true} /> */}
 
       {/* <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
