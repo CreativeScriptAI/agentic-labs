@@ -273,7 +273,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
               >
                 Book Free Call
               </button>
-              <div
+              {/* <div
                 className="flex items-center justify-center p-2"
                 style={{ borderRadius: "8px", border: "1px solid #E0E0E0" }}
                 onClick={() => {
@@ -334,7 +334,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                     </clipPath>
                   </defs>
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
 
