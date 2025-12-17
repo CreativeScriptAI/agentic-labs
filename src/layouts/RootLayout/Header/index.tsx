@@ -7,6 +7,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { mondwest } from "../../../assets/fonts/mondwest";
+// import CountrySelector from "src/components/CountrySelector"; // Hidden - automatic routing only
 
 type Props = {
   fullWidth: boolean;
@@ -339,8 +340,9 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           </div>
 
           {/* Desktop Navigation - positioned on the right end */}
-          <div className="hidden md:flex items-center justify-center gap-8">
+          <div className="hidden md:flex items-center justify-center gap-4">
             <NavBar />
+            {/* CountrySelector hidden - automatic routing only */}
             <Link
               href="https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
               rel="noopener noreferrer"
@@ -451,6 +453,8 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                       onLinkClick={() => setIsMobileMenuOpen(false)}
                     />
                   </div>
+
+                  {/* Country Selector hidden - automatic routing only */}
 
                   {/* Book a Call Button - Fixed responsiveness */}
                   <div className="w-full">

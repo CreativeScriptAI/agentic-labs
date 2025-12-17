@@ -1,5 +1,11 @@
 import { CONFIG } from "site.config";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import {
+  COUNTRY_ROUTES,
+  SUPPORTED_COUNTRIES,
+  getAllCountryRoutes,
+} from "src/lib/country-utils";
 
 export type MetaConfigProps = {
   title: string;
@@ -16,6 +22,7 @@ export type MetaConfigProps = {
 };
 
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
+  const router = useRouter();
   const baseUrl = "https://www.tryagentikai.com";
   const fullTitle =
     props.title === "Agentic AI Labs"
@@ -32,6 +39,50 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
   const isProduction = CONFIG.isProd;
   const robotsContent = "index, follow";
 
+  // Generate hreflang links for all country versions
+  const generateHreflangs = () => {
+    const pathParts = router.pathname.split("/").filter(Boolean);
+    const countryRoutes = getAllCountryRoutes();
+
+    // Get the base path without country prefix
+    let basePath = router.pathname;
+    if (pathParts.length > 0 && countryRoutes.includes(pathParts[0])) {
+      basePath = "/" + pathParts.slice(1).join("/");
+    }
+
+    // Handle root path
+    if (basePath === "" || basePath === "/") {
+      basePath = "";
+    } else if (!basePath.startsWith("/")) {
+      basePath = "/" + basePath;
+    }
+
+    const hreflangs: Array<{ hreflang: string; href: string }> = [];
+
+    // Add x-default for global version
+    hreflangs.push({
+      hreflang: "x-default",
+      href: `${baseUrl}${basePath || "/"}`,
+    });
+
+    // Add each country version
+    SUPPORTED_COUNTRIES.forEach((countryCode) => {
+      const countryRoute = COUNTRY_ROUTES[countryCode];
+      // Format: en-IN, en-US, en-CA, en-AU, en-AE, en-GB (all uppercase for hreflang)
+      const hreflangCode = `en-${countryCode}`;
+      const href = `${baseUrl}/${countryRoute}${basePath || ""}`;
+
+      hreflangs.push({
+        hreflang: hreflangCode,
+        href: href,
+      });
+    });
+
+    return hreflangs;
+  };
+
+  const hreflangs = generateHreflangs();
+
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -41,6 +92,16 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta name="description" content={props.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Hreflang tags for international SEO */}
+      {hreflangs.map((link) => (
+        <link
+          key={link.hreflang}
+          rel="alternate"
+          hrefLang={link.hreflang}
+          href={link.href}
+        />
+      ))}
 
       {/* Security Headers - Only add noindex for staging/preview environments */}
       {/* {process.env.VERCEL_ENV === "preview" && (

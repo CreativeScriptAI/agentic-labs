@@ -1,6 +1,5 @@
 /* Kalam font is now loaded via Next.js font optimization in _app.tsx */
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,49 +73,49 @@
 @layer base {
   :root {
     /* Brand Colors - AI Clarity Workshop */
-    --midnight-navy: 216 79% 7%;        /* #0A1128 - Primary text, headers */
-    --electric-blue: 218 100% 50%;      /* #0062FF - CTAs, accents */
-    --page-background: 220 14% 97%;     /* #F8F9FA - Light gray background */
-    --accent-highlight: 165 100% 62%;   /* #3DFFC9 - Bright cyan for emphasis */
-    --alert-red: 4 85% 56%;             /* #E53935 - Error/alert states */
-    --muted-text: 240 7% 48%;           /* #717182 - Secondary text */
-    --soft-white: 220 14% 97%;           /* #F8F9FA - Light gray background */
-    --soft-black: 216 79% 7%;           /* #0A1128 - Primary text, headers */
-    --soft-gray: 220 14% 97%;           /* #F8F9FA - Light gray background */
-    --soft-blue: 218 100% 50%;           /* #0062FF - CTAs, accents */
-    --soft-green: 165 100% 62%;           /* #3DFFC9 - Bright cyan for emphasis */
-    --soft-red: 4 85% 56%;           /* #E53935 - Error/alert states */
-    --soft-yellow: 40 100% 50%;           /* #FFD700 - Bright yellow for emphasis */
-    --soft-purple: 280 100% 50%;           /* #800080 - Bright purple for emphasis */
-    
-    /* Semantic Tokens */
-    --background: 220 14% 97%;          /* Page background */
-    --foreground: 216 79% 7%;           /* Primary text - Midnight Navy */
+    --midnight-navy: 216 79% 7%; /* #0A1128 - Primary text, headers */
+    --electric-blue: 218 100% 50%; /* #0062FF - CTAs, accents */
+    --page-background: 220 14% 97%; /* #F8F9FA - Light gray background */
+    --accent-highlight: 165 100% 62%; /* #3DFFC9 - Bright cyan for emphasis */
+    --alert-red: 4 85% 56%; /* #E53935 - Error/alert states */
+    --muted-text: 240 7% 48%; /* #717182 - Secondary text */
+    --soft-white: 220 14% 97%; /* #F8F9FA - Light gray background */
+    --soft-black: 216 79% 7%; /* #0A1128 - Primary text, headers */
+    --soft-gray: 220 14% 97%; /* #F8F9FA - Light gray background */
+    --soft-blue: 218 100% 50%; /* #0062FF - CTAs, accents */
+    --soft-green: 165 100% 62%; /* #3DFFC9 - Bright cyan for emphasis */
+    --soft-red: 4 85% 56%; /* #E53935 - Error/alert states */
+    --soft-yellow: 40 100% 50%; /* #FFD700 - Bright yellow for emphasis */
+    --soft-purple: 280 100% 50%; /* #800080 - Bright purple for emphasis */
 
-    --card: 0 0% 100%;                  /* White cards */
+    /* Semantic Tokens */
+    --background: 220 14% 97%; /* Page background */
+    --foreground: 216 79% 7%; /* Primary text - Midnight Navy */
+
+    --card: 0 0% 100%; /* White cards */
     --card-foreground: 216 79% 7%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 216 79% 7%;
 
-    --primary: 218 100% 50%;            /* Electric Blue */
-    --primary-foreground: 0 0% 100%;    /* White text on primary */
+    --primary: 218 100% 50%; /* Electric Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 220 14% 97%;           /* Light background */
+    --secondary: 220 14% 97%; /* Light background */
     --secondary-foreground: 216 79% 7%;
 
     --muted: 220 14% 97%;
-    --muted-foreground: 240 3% 48%;     /* Muted text */
+    --muted-foreground: 240 3% 48%; /* Muted text */
 
-    --accent: 218 100% 50%;             /* Electric Blue for accents */
+    --accent: 218 100% 50%; /* Electric Blue for accents */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 4 85% 56%;           /* Alert Red */
+    --destructive: 4 85% 56%; /* Alert Red */
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 218 100% 50%;               /* Electric Blue focus ring */
+    --ring: 218 100% 50%; /* Electric Blue focus ring */
 
     --radius: 0.5rem;
 
@@ -160,19 +159,18 @@
     font-weight: 300;
     font-style: normal;
   }
-  
+
   .kalam-regular {
     font-family: var(--font-kalam), cursive;
     font-weight: 400;
     font-style: normal;
   }
-  
+
   .kalam-bold {
     font-family: var(--font-kalam), cursive;
     font-weight: 700;
     font-style: normal;
   }
-  
 
   /* Global styles previously managed by emotion */
   body {
@@ -269,7 +267,8 @@
   }
 
   @keyframes neuralPulse {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(0px) scaleX(1);
       opacity: 0.7;
     }
@@ -280,7 +279,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -324,7 +324,6 @@
       will-change: auto;
     }
   }
- 
 }
 
 @layer components {
@@ -788,8 +787,6 @@ html {
   animation: scroll 10s linear infinite;
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -803,12 +800,12 @@ html {
 @layer utilities {
   /* Font loading optimization - prevent invisible text */
   @font-face {
-    font-family: 'Mondwest';
+    font-family: "Mondwest";
     font-display: swap;
   }
-  
+
   @font-face {
-    font-family: 'Neuebit';
+    font-family: "Neuebit";
     font-display: swap;
   }
 
@@ -826,7 +823,7 @@ html {
   }
 
   .aspect-container::before {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: var(--aspect-ratio, 56.25%); /* Default 16:9 */
   }
@@ -855,5 +852,40 @@ html {
   .no-layout-shift {
     will-change: transform;
     transform: translateZ(0);
+  }
+
+  /* Custom scrollbar for country selector dropdown */
+  .country-dropdown-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  }
+
+  .country-dropdown-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .country-dropdown-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .country-dropdown-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 3px;
+  }
+
+  .country-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.7);
+  }
+
+  .dark .country-dropdown-scroll {
+    scrollbar-color: rgba(75, 85, 99, 0.5) transparent;
+  }
+
+  .dark .country-dropdown-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 85, 99, 0.5);
+  }
+
+  .dark .country-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(75, 85, 99, 0.7);
   }
 }

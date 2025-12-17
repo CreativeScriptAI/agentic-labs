@@ -4,6 +4,7 @@ import useScheme from "src/hooks/useScheme";
 import Header from "./Header";
 import Scripts from "src/layouts/RootLayout/Scripts";
 import { useRouter } from "next/router";
+import { useAutoCountryDetection } from "src/hooks/useAutoCountryDetection";
 // import useGtagEffect from "./useGtagEffect"
 import * as Prism from "prismjs";
 import "prismjs/components/prism-markup-templating.js";
@@ -45,9 +46,16 @@ type Props = {
   containerClassName?: string;
 };
 
-const RootLayout = ({ children, containerClassName = "max-w-[1120px]" }: Props) => {
+const RootLayout = ({
+  children,
+  containerClassName = "max-w-[1120px]",
+}: Props) => {
   const [scheme] = useScheme();
   const router = useRouter();
+
+  // Automatically detect and redirect to user's country
+  useAutoCountryDetection();
+
   // useGtagEffect()
   useEffect(() => {
     Prism.highlightAll();

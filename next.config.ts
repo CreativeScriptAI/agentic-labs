@@ -73,7 +73,8 @@ const nextConfig: NextConfig = {
       ...(isProduction
         ? [
             {
-              source: "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop)",
+              source:
+                "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop)",
               headers: [
                 {
                   key: "Cache-Control",
