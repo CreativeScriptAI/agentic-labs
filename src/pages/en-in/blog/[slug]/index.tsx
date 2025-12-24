@@ -24,7 +24,7 @@ export const getStaticPaths = async () => {
     const filteredPost = filterPosts(posts, filter);
 
     return {
-      paths: filteredPost.map((row) => `/india/blog/${row.slug}`),
+      paths: filteredPost.map((row) => `/en-in/blog/${row.slug}`),
       fallback: true,
     };
   } catch (error) {
@@ -115,7 +115,7 @@ const IndiaDetailPage: NextPageWithLayout = () => {
     image: image,
     description: post.summary || "",
     type: post.type[0],
-    url: `${CONFIG.link}/india/blog/${post.slug}`,
+    url: `${CONFIG.link}/en-in/blog/${post.slug}`,
   };
 
   return (

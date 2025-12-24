@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
     const posts = await getPosts();
     const filteredPost = filterPosts(posts, filter);
     return {
-      paths: filteredPost.map((row) => `/uae/blog/${row.slug}`),
+      paths: filteredPost.map((row) => `/en-ae/blog/${row.slug}`),
       fallback: true,
     };
   } catch (error) {
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-const uuaeDetailPage: NextPageWithLayout = () => {
+const EnAeDetailPage: NextPageWithLayout = () => {
   const post = usePostQuery();
   if (!post) return <CustomError />;
   const image = post.thumbnail ?? CONFIG.ogImageGenerateURL ?? `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`;
@@ -64,7 +64,7 @@ const uuaeDetailPage: NextPageWithLayout = () => {
     image: image,
     description: post.summary || "",
     type: post.type[0],
-    url: `${CONFIG.link}/uae/blog/${post.slug}`,
+    url: `${CONFIG.link}/en-ae/blog/${post.slug}`,
   };
   return (
     <>
@@ -75,5 +75,5 @@ const uuaeDetailPage: NextPageWithLayout = () => {
   );
 };
 
-uuaeDetailPage.getLayout = (page) => <>{page}</>;
-export default uuaeDetailPage;
+EnAeDetailPage.getLayout = (page) => <>{page}</>;
+export default EnAeDetailPage;

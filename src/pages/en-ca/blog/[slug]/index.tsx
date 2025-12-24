@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
     const posts = await getPosts();
     const filteredPost = filterPosts(posts, filter);
     return {
-      paths: filteredPost.map((row) => `/canada/blog/${row.slug}`),
+      paths: filteredPost.map((row) => `/en-ca/blog/${row.slug}`),
       fallback: true,
     };
   } catch (error) {
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-const ucanadaDetailPage: NextPageWithLayout = () => {
+const EnCaDetailPage: NextPageWithLayout = () => {
   const post = usePostQuery();
   if (!post) return <CustomError />;
   const image = post.thumbnail ?? CONFIG.ogImageGenerateURL ?? `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`;
@@ -64,7 +64,7 @@ const ucanadaDetailPage: NextPageWithLayout = () => {
     image: image,
     description: post.summary || "",
     type: post.type[0],
-    url: `${CONFIG.link}/canada/blog/${post.slug}`,
+    url: `${CONFIG.link}/en-ca/blog/${post.slug}`,
   };
   return (
     <>
@@ -75,5 +75,5 @@ const ucanadaDetailPage: NextPageWithLayout = () => {
   );
 };
 
-ucanadaDetailPage.getLayout = (page) => <>{page}</>;
-export default ucanadaDetailPage;
+EnCaDetailPage.getLayout = (page) => <>{page}</>;
+export default EnCaDetailPage;

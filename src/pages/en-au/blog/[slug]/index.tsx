@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
     const posts = await getPosts();
     const filteredPost = filterPosts(posts, filter);
     return {
-      paths: filteredPost.map((row) => `/australia/blog/${row.slug}`),
+      paths: filteredPost.map((row) => `/en-au/blog/${row.slug}`),
       fallback: true,
     };
   } catch (error) {
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-const uaustraliaDetailPage: NextPageWithLayout = () => {
+const EnAuDetailPage: NextPageWithLayout = () => {
   const post = usePostQuery();
   if (!post) return <CustomError />;
   const image = post.thumbnail ?? CONFIG.ogImageGenerateURL ?? `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`;
@@ -64,7 +64,7 @@ const uaustraliaDetailPage: NextPageWithLayout = () => {
     image: image,
     description: post.summary || "",
     type: post.type[0],
-    url: `${CONFIG.link}/australia/blog/${post.slug}`,
+    url: `${CONFIG.link}/en-au/blog/${post.slug}`,
   };
   return (
     <>
@@ -75,5 +75,5 @@ const uaustraliaDetailPage: NextPageWithLayout = () => {
   );
 };
 
-uaustraliaDetailPage.getLayout = (page) => <>{page}</>;
-export default uaustraliaDetailPage;
+EnAuDetailPage.getLayout = (page) => <>{page}</>;
+export default EnAuDetailPage;

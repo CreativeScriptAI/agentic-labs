@@ -87,7 +87,7 @@ export function useAutoCountryDetection() {
     const timer = setTimeout(detectAndRedirect, 500);
 
     return () => clearTimeout(timer);
-  }, []); // Run only once on mount
+  }, [router]); // Run only once on mount (router included to satisfy deps)
 
   return { isDetecting, detectedCountry };
 }
