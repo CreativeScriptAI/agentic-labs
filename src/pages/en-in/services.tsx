@@ -11,10 +11,10 @@ const IndiaServicesPage = () => {
   return (
     <RootLayout>
       <NextSeo
-        title={`Our Services • ${CONFIG.blog.title} • India`}
+        title="AI Agent Services India | Custom Voice AI & Automation"
         description="We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on in India. We wire it to your stack, test on real traffic, watch the KPI, and keep it improving."
         openGraph={{
-          title: `Our Services • ${CONFIG.blog.title} • India`,
+          title: "AI Agent Services India | Custom Voice AI & Automation",
           description:
             "We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on in India.",
           type: "website",

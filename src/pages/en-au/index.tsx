@@ -52,7 +52,7 @@ const AustraliaHomePage: NextPageWithLayout<HomePageProps> = ({
   agentsApiRaw,
 }) => {
   const meta = {
-    title: "Agentic AI Labs Australia | AI Agents, Voice & Automation Services",
+    title: "Agentic AI Agents Australia | AI Voice Callers AU Businesses",
     description:
       "Agentic AI Labs builds production-grade AI agents in Australia—voice, chat, and workflow automation—so founders launch reliable copilots in days.",
     type: "Website",
@@ -70,7 +70,17 @@ const AustraliaHomePage: NextPageWithLayout<HomePageProps> = ({
   return (
     <>
       <MetaConfig {...meta} />
-      <StructuredData type="organization" data={{}} />
+      <StructuredData 
+        type="organization" 
+        data={{
+          areaServed: "Australia",
+          url: "https://www.tryagentikai.com/en-au/",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "AU",
+          },
+        }} 
+      />
       <StructuredData type="website" data={{}} />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />

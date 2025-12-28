@@ -50,7 +50,7 @@ interface HomePageProps {
 
 const UAEHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   const meta = {
-    title: "Agentic AI Labs UAE | AI Agents, Voice & Automation Services",
+    title: "Agentic AI Agents UAE | AI Voice Callers Dubai Businesses",
     description:
       "Agentic AI Labs builds production-grade AI agents in UAE—voice, chat, and workflow automation—so founders launch reliable copilots in days.",
     type: "Website",
@@ -68,7 +68,17 @@ const UAEHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   return (
     <>
       <MetaConfig {...meta} />
-      <StructuredData type="organization" data={{}} />
+      <StructuredData 
+        type="organization" 
+        data={{
+          areaServed: "United Arab Emirates",
+          url: "https://www.tryagentikai.com/en-ae/",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "AE",
+          },
+        }} 
+      />
       <StructuredData type="website" data={{}} />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />

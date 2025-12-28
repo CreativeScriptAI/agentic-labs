@@ -13,10 +13,10 @@ const UAEContactUsPage = () => {
   return (
     <RootLayout>
       <NextSeo
-        title="Contact Us UAE - Get Clarity in 30 Minutes | Agentic AI Labs"
+        title="AI Demo Dubai | Live PatientlyAI Call UAE"
         description="Schedule a FREE 30-minute guided session with our Agentic AI Labs team in the UAE. Get a clear roadmap for your custom AI agent."
         openGraph={{
-          title: "Contact Us UAE - Get Clarity in 30 Minutes",
+          title: "AI Demo Dubai | Live PatientlyAI Call UAE",
           description:
             "Schedule a FREE 30-minute guided session with our Agentic AI Labs team in the UAE. Get a clear roadmap for your custom AI agent.",
           type: "website",

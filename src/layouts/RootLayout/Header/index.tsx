@@ -7,7 +7,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { mondwest } from "../../../assets/fonts/mondwest";
-// import CountrySelector from "src/components/CountrySelector"; // Hidden - automatic routing only
 
 type Props = {
   fullWidth: boolean;

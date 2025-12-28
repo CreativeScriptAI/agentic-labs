@@ -39,14 +39,15 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
 
 const uaustraliaAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const agentName = data?.hero?.title || data?.hero?.heading || "AI Agent";
-  const agentDescription = data?.hero?.description || data?.hero?.subtitle || "Custom AI agent solution for your business needs";
+  const agentNameAU = `${agentName} Australia | AI Caller for AU Leads`;
+  const agentDescription = data?.hero?.description || data?.hero?.subtitle || "Custom AI agent solution for your business needs in Australia";
   const agentImage = data?.hero?.image || "/og.jpg";
   const agentUrl = `https://www.tryagentikai.com/australia/agent/${data?.id || ""}`;
 
   return (
     <>
       <MetaConfig
-        title={agentName}
+        title={agentNameAU}
         description={agentDescription}
         type="Agent"
         url={agentUrl}

@@ -76,7 +76,7 @@ interface HomePageProps {
 
 const IndiaHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   const meta = {
-    title: "Agentic AI Labs India | AI Agents, Voice & Automation Services",
+    title: "Agentic AI Agents India | AI Voice Callers for Indian Businesses",
     description:
       "Agentic AI Labs builds production-grade AI agents for India—voice, chat, and workflow automation—so founders launch reliable copilots in days.",
     type: "Website",
@@ -94,7 +94,17 @@ const IndiaHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   return (
     <>
       <MetaConfig {...meta} />
-      <StructuredData type="organization" data={{}} />
+      <StructuredData 
+        type="organization" 
+        data={{
+          areaServed: "India",
+          url: "https://www.tryagentikai.com/en-in/",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "IN",
+          },
+        }} 
+      />
       <StructuredData type="website" data={{}} />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />

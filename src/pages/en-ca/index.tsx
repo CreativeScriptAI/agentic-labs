@@ -70,7 +70,17 @@ const CanadaHomePage: NextPageWithLayout<HomePageProps> = ({
   return (
     <>
       <MetaConfig {...meta} />
-      <StructuredData type="organization" data={{}} />
+      <StructuredData 
+        type="organization" 
+        data={{
+          areaServed: "Canada",
+          url: "https://www.tryagentikai.com/en-ca/",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "CA",
+          },
+        }} 
+      />
       <StructuredData type="website" data={{}} />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />

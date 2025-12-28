@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const IndiaBlogPage: NextPageWithLayout = () => {
   const meta = {
-    title: `${CONFIG.blog.title} • India`,
+    title: "AI Agents Blog India | Voice AI Guides for Founders",
     description: CONFIG.blog.description,
     type: "website",
     url: `${CONFIG.link}/india/blog`,

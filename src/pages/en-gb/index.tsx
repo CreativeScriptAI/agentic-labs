@@ -50,7 +50,7 @@ interface HomePageProps {
 
 const UKHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   const meta = {
-    title: "Agentic AI Labs UK | AI Agents, Voice & Automation Services",
+    title: "Agentic AI Agents UK | AI Voice Callers British Businesses",
     description:
       "Agentic AI Labs builds production-grade AI agents in the UK—voice, chat, and workflow automation—so founders launch reliable copilots in days.",
     type: "Website",
@@ -68,7 +68,17 @@ const UKHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   return (
     <>
       <MetaConfig {...meta} />
-      <StructuredData type="organization" data={{}} />
+      <StructuredData 
+        type="organization" 
+        data={{
+          areaServed: "United Kingdom",
+          url: "https://www.tryagentikai.com/en-gb/",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "GB",
+          },
+        }} 
+      />
       <StructuredData type="website" data={{}} />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />
