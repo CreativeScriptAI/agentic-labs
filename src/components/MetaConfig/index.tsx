@@ -24,10 +24,7 @@ export type MetaConfigProps = {
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
   const router = useRouter();
   const baseUrl = "https://www.tryagentikai.com";
-  const fullTitle =
-    props.title === "Agentic AI Labs"
-      ? props.title
-      : `${props.title} – Agentic AI Labs`;
+  const fullTitle = props.title; // Use title as-is, no suffix
   const canonicalUrl = props.canonical || props.url;
   console.log("canonicalUrl", canonicalUrl);
   const ogImage = props.image || "/og.jpg";

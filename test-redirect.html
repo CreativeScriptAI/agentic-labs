@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Country Detection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .log {
+        background: #f5f5f5;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌍 Country Detection Test</h1>
+
+    <div>
+      <button onclick="testGeolocation()">Test Geolocation API</button>
+      <button onclick="testWithIN()">Simulate India (IN)</button>
+      <button onclick="testWithAE()">Simulate UAE (AE)</button>
+      <button onclick="clearCookie()">Clear Cookie</button>
+    </div>
+
+    <div id="logs"></div>
+
+    <script>
+      function log(message) {
+        const logsDiv = document.getElementById("logs");
+        const logEntry = document.createElement("div");
+        logEntry.className = "log";
+        logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+        logsDiv.insertBefore(logEntry, logsDiv.firstChild);
+      }
+
+      async function testGeolocation() {
+        log("Testing /api/geolocation...");
+        try {
+          const response = await fetch("/api/geolocation");
+          const data = await response.json();
+          log(`Response: ${JSON.stringify(data, null, 2)}`);
+
+          const countryCode = data.country_code || data.country;
+          log(`Detected country code: ${countryCode}`);
+
+          // Check cookie
+          const cookies = document.cookie.split(";");
+          const userCountryCookie = cookies.find((c) =>
+            c.trim().startsWith("user-country=")
+          );
+          log(`Current cookie: ${userCountryCookie || "none"}`);
+        } catch (error) {
+          log(`Error: ${error.message}`);
+        }
+      }
+
+      async function testWithIN() {
+        log("Setting cookie to IN (India)...");
+        document.cookie = "user-country=IN; path=/; max-age=2592000";
+        log("Cookie set! Refreshing page...");
+        setTimeout(() => window.location.reload(), 1000);
+      }
+
+      async function testWithAE() {
+        log("Setting cookie to AE (UAE)...");
+        document.cookie = "user-country=AE; path=/; max-age=2592000";
+        log("Cookie set! Refreshing page...");
+        setTimeout(() => window.location.reload(), 1000);
+      }
+
+      function clearCookie() {
+        log("Clearing user-country cookie...");
+        document.cookie = "user-country=; path=/; max-age=0";
+        log("Cookie cleared!");
+
+        // Check if it's really gone
+        const cookies = document.cookie.split(";");
+        const userCountryCookie = cookies.find((c) =>
+          c.trim().startsWith("user-country=")
+        );
+        log(
+          `Cookie after clear: ${userCountryCookie || "successfully removed"}`
+        );
+      }
+
+      // Auto-run on load
+      window.onload = () => {
+        log("Page loaded");
+        const cookies = document.cookie.split(";");
+        const userCountryCookie = cookies.find((c) =>
+          c.trim().startsWith("user-country=")
+        );
+        log(`Current cookie: ${userCountryCookie || "none"}`);
+        log(`Current URL: ${window.location.href}`);
+      };
+    </script>
+  </body>
+</html>
