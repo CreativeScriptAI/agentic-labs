@@ -1,12 +1,15 @@
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 type AgentsSectionProps = {
   agents: any;
 };
 
 const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
+  const router = useRouter();
+
   const projects: any[] = useMemo(() => {
     return Array.isArray(agents) ? agents.reverse() : [];
   }, [agents]);
@@ -16,6 +19,13 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
+
+  // Detect locale prefix from current path (e.g., /en-in/, /en-ae/, etc.)
+  const localePrefix = useMemo(() => {
+    const path = router.asPath;
+    const localeMatch = path.match(/^\/(en-(?:in|ae|us|gb|au|ca))\//);
+    return localeMatch ? `/${localeMatch[1]}` : "";
+  }, [router.asPath]);
 
   const tabLabels: string[] = useMemo(
     () => projects.map((p) => p?.overview?.name || p?.projectName || "Agent"),
@@ -29,6 +39,11 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const botImageSrc: string | undefined = selectedOverview?.botImage;
   const isRemoteHowItWorks: boolean =
     typeof howItWorksSrc === "string" && howItWorksSrc.startsWith("http");
+
+  // Build agent URL with locale prefix
+  const agentHref = selectedProject?._id
+    ? `${localePrefix}/agent/${selectedProject._id}`
+    : "#";
 
   // Navigation functions
   const updateEdgeStates = React.useCallback(
@@ -172,11 +187,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                 <h3 className="font-mondwest text-2xl sm:text-3xl lg:text-4xl font-normal text-blue-600 mb-3 sm:mb-4">
                   {selectedLabel}
                 </h3>
-                <Link
-                  href={
-                    selectedProject?._id ? `/agent/${selectedProject._id}` : "#"
-                  }
-                >
+                <Link href={agentHref}>
                   <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-0 md:mx-auto lg:mx-0 mb-4">
                     <span>📁</span>
                     Try {selectedLabel}
@@ -340,15 +351,15 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                           <>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                            src={howItWorksSrc}
-                            alt={`${selectedLabel} How It Works`}
-                            style={{
-                              width: "auto",
-                              maxWidth: "100%",
-                              height: "auto",
-                            }}
-                            className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
-                          />
+                              src={howItWorksSrc}
+                              alt={`${selectedLabel} How It Works`}
+                              style={{
+                                width: "auto",
+                                maxWidth: "100%",
+                                height: "auto",
+                              }}
+                              className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
+                            />
                           </>
                         ) : (
                           <Image

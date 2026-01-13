@@ -6,6 +6,9 @@ import ServicesHeroSection from "src/components/sections/ServicesHeroSection";
 import TechStackSection from "src/components/sections/TechStackSection";
 import ContactHeroSection from "src/components/sections/ContactHeroSection";
 import FooterSection from "src/components/sections/FooterSection";
+import FAQSection from "src/components/sections/FAQSection";
+import StructuredData from "src/components/StructuredData";
+import { ukEuropeServicesFaqs } from "src/data/localeFaqs";
 
 const UKServicesPage = () => {
   return (
@@ -21,8 +24,10 @@ const UKServicesPage = () => {
           url: `${CONFIG.link}/uk/services`,
         }}
       />
+      <StructuredData type="faq" data={{ faqs: ukEuropeServicesFaqs }} />
       <ServicesHeroSection />
       <TechStackSection />
+      <FAQSection faqs={ukEuropeServicesFaqs} />
       <ContactHeroSection noPadding />
       <FooterSection />
     </RootLayout>

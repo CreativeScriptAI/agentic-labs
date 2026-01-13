@@ -8,6 +8,8 @@ import WhatHappensNext from "src/components/sections/HowItWorksSection";
 import ContactFAQSection from "src/components/sections/ContactFAQSection";
 import ContactCTASection from "src/components/sections/ContactCTASection";
 import FooterSection from "src/components/sections/FooterSection";
+import StructuredData from "src/components/StructuredData";
+import { contactFaqs } from "src/data/localeFaqs";
 
 const USAContactUsPage = () => {
   return (
@@ -23,6 +25,7 @@ const USAContactUsPage = () => {
           url: "https://www.tryagentikai.com/usa/contact",
         }}
       />
+      <StructuredData type="faq" data={{ faqs: contactFaqs }} />
       <ContactHeroSection />
       <WhoItsForSection />
       <WhyBookThisSection />

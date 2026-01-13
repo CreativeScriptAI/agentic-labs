@@ -1,40 +1,15 @@
 import React, { useState } from "react";
+import { FAQ } from "src/components/sections/FAQSection";
+import { contactFaqs as defaultContactFaqs } from "src/data/localeFaqs";
 
-const ContactFAQSection = () => {
+interface ContactFAQSectionProps {
+  faqs?: FAQ[];
+}
+
+const ContactFAQSection: React.FC<ContactFAQSectionProps> = ({
+  faqs = defaultContactFaqs,
+}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First FAQ is open by default
-
-  const faqs = [
-    {
-      question: "What do I actually get from this call?",
-      answer:
-        "A free, roadmap that covers feasibility, estimated cost, timeline, and integration steps. You can use it to build internally or let us help.",
-    },
-    {
-      question: "Can you integrate with my existing tools?",
-      answer:
-        "Yes, we can integrate with most existing tools including CRM systems, WhatsApp, Twilio, GoHighLevel, Slack, websites, and many other platforms. During our call, we'll discuss your specific tech stack and create an integration plan.",
-    },
-    {
-      question: "How soon can I launch an AI agent?",
-      answer:
-        "The timeline depends on the complexity of your agent and integration requirements. Simple agents can be launched in 2-4 weeks, while more complex solutions may take 6-12 weeks. We'll provide you with a detailed timeline during our consultation.",
-    },
-    {
-      question: "What if my idea isn't feasible yet?",
-      answer:
-        "That's perfectly fine! We'll provide honest feedback about feasibility and suggest alternative approaches or modifications that could make your idea work. We can also discuss a phased approach to build towards your ultimate goal.",
-    },
-    {
-      question: "What makes you different from just using a chatbot builder?",
-      answer:
-        "We build custom AI agents that can perform complex workflows, integrate with multiple systems, and handle sophisticated business logic. Unlike simple chatbots, our agents can take actions, make decisions, and work autonomously within your business processes.",
-    },
-    {
-      question: "What's the cost?",
-      answer:
-        "Costs vary based on complexity, integrations, and ongoing support needs. We'll provide transparent pricing during our consultation based on your specific requirements. There are no hidden fees, and you'll know exactly what to expect upfront.",
-    },
-  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

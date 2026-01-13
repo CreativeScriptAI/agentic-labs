@@ -6,6 +6,9 @@ import ServicesHeroSection from "src/components/sections/ServicesHeroSection";
 import TechStackSection from "src/components/sections/TechStackSection";
 import ContactHeroSection from "src/components/sections/ContactHeroSection";
 import FooterSection from "src/components/sections/FooterSection";
+import FAQSection from "src/components/sections/FAQSection";
+import StructuredData from "src/components/StructuredData";
+import { indiaServicesFaqs } from "src/data/localeFaqs";
 
 const IndiaServicesPage = () => {
   return (
@@ -21,8 +24,10 @@ const IndiaServicesPage = () => {
           url: `${CONFIG.link}/india/services`,
         }}
       />
+      <StructuredData type="faq" data={{ faqs: indiaServicesFaqs }} />
       <ServicesHeroSection />
       <TechStackSection />
+      <FAQSection faqs={indiaServicesFaqs} />
       <ContactHeroSection noPadding />
       <FooterSection />
     </RootLayout>

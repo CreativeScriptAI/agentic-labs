@@ -18,8 +18,12 @@ import { CONFIG } from "site.config";
 import ProjectBenefitsAndVideo from "src/components/sections/AgentsSection/AgentsDetails/ProjectBenefitsAndVideo";
 import ProjectFAQ from "src/components/sections/AgentsSection/AgentsDetails/ProjectFAQ";
 import ProjectReleases from "src/components/sections/AgentsSection/AgentsDetails/ProjectReleases";
+import { ukEuropePatientlyAIFaqs } from "src/data/localeFaqs";
 
-type StaticProps = { data: any };
+// PatientlyAI agent slug
+const PATIENTLYAI_SLUG = "689b540eeeab03d6cdeab527";
+
+type StaticProps = { data: any; slug: string };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: [], fallback: "blocking" };
@@ -31,18 +35,25 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
   try {
     const data = await fetchAgentByID(slug);
     if (!data) return { notFound: true, revalidate: CONFIG.revalidateTime };
-    return { props: { data }, revalidate: CONFIG.revalidateTime };
+    return { props: { data, slug }, revalidate: CONFIG.revalidateTime };
   } catch {
     return { notFound: true, revalidate: CONFIG.revalidateTime };
   }
 };
 
-const uukAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const UKAgentDetailPage = ({ data, slug }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const agentName = data?.hero?.title || data?.hero?.heading || "AI Agent";
   const agentNameUK = `${agentName} UK | AI Caller for British Leads`;
   const agentDescription = data?.hero?.description || data?.hero?.subtitle || "Custom AI agent solution for your business needs in the UK";
   const agentImage = data?.hero?.image || "/og.jpg";
-  const agentUrl = `https://www.tryagentikai.com/uk/agent/${data?.id || ""}`;
+  const agentUrl = `https://www.tryagentikai.com/uk/agent/${slug}`;
+
+  // Use locale-specific FAQs for PatientlyAI
+  const isPatientlyAI = slug === PATIENTLYAI_SLUG;
+  const localeFaqs = isPatientlyAI ? ukEuropePatientlyAIFaqs : null;
+  const faqData = localeFaqs
+    ? { title: "FAQ", questions: localeFaqs.map((f) => ({ question: f.question, answer: f.answer })) }
+    : data.faq;
 
   return (
     <>
@@ -56,6 +67,7 @@ const uukAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticPr
         author="Agentic AI Labs"
       />
       <StructuredData type="softwareApplication" data={{}} />
+      {localeFaqs && <StructuredData type="faq" data={{ faqs: localeFaqs }} />}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
       {data.hero && <ProjectBenefitsAndVideo data={data.hero} />}
@@ -67,7 +79,7 @@ const uukAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticPr
       {data.setup && <ProjectSetup data={data.setup} />}
       {data.releases && <ProjectReleases data={data.releases} />}
       {data.process && <ProjectProcess data={data.process} />}
-      {data.faq && <ProjectFAQ data={data.faq} />}
+      {faqData && <ProjectFAQ data={faqData} />}
       {data.testimonial && <ProjectTestimonial data={data.testimonial} />}
       <ContactUsForm />
       <FooterSection />
@@ -75,4 +87,4 @@ const uukAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticPr
   );
 };
 
-export default uukAgentDetailPage;
+export default UKAgentDetailPage;

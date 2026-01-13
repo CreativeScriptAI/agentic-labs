@@ -13,13 +13,21 @@ import { fetchAgentByID } from "src/libs/api";
 import FooterSection from "src/components/sections/FooterSection";
 import MetaConfig from "src/components/MetaConfig";
 import StructuredData from "src/components/StructuredData";
-import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+} from "next";
 import { CONFIG } from "site.config";
 import ProjectBenefitsAndVideo from "src/components/sections/AgentsSection/AgentsDetails/ProjectBenefitsAndVideo";
 import ProjectFAQ from "src/components/sections/AgentsSection/AgentsDetails/ProjectFAQ";
 import ProjectReleases from "src/components/sections/AgentsSection/AgentsDetails/ProjectReleases";
+import { indiaPatientlyAIFaqs } from "src/data/localeFaqs";
 
-type StaticProps = { data: any };
+// PatientlyAI agent slug
+const PATIENTLYAI_SLUG = "689b540eeeab03d6cdeab527";
+
+type StaticProps = { data: any; slug: string };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return { paths: [], fallback: "blocking" };
@@ -31,18 +39,37 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
   try {
     const data = await fetchAgentByID(slug);
     if (!data) return { notFound: true, revalidate: CONFIG.revalidateTime };
-    return { props: { data }, revalidate: CONFIG.revalidateTime };
+    return { props: { data, slug }, revalidate: CONFIG.revalidateTime };
   } catch {
     return { notFound: true, revalidate: CONFIG.revalidateTime };
   }
 };
 
-const uindiaAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const IndiaAgentDetailPage = ({
+  data,
+  slug,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const agentName = data?.hero?.title || data?.hero?.heading || "AI Agent";
   const agentNameIndia = `${agentName} India | AI Voice Caller for Lead Booking`;
-  const agentDescription = data?.hero?.description || data?.hero?.subtitle || "Custom AI agent solution for your business needs in India";
+  const agentDescription =
+    data?.hero?.description ||
+    data?.hero?.subtitle ||
+    "Custom AI agent solution for your business needs in India";
   const agentImage = data?.hero?.image || "/og.jpg";
-  const agentUrl = `https://www.tryagentikai.com/india/agent/${data?.id || ""}`;
+  const agentUrl = `https://www.tryagentikai.com/india/agent/${slug}`;
+
+  // Use locale-specific FAQs for PatientlyAI
+  const isPatientlyAI = slug === PATIENTLYAI_SLUG;
+  const localeFaqs = isPatientlyAI ? indiaPatientlyAIFaqs : null;
+  const faqData = localeFaqs
+    ? {
+        title: "FAQ",
+        questions: localeFaqs.map((f) => ({
+          question: f.question,
+          answer: f.answer,
+        })),
+      }
+    : data.faq;
 
   return (
     <>
@@ -56,6 +83,7 @@ const uindiaAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStati
         author="Agentic AI Labs"
       />
       <StructuredData type="softwareApplication" data={{}} />
+      {localeFaqs && <StructuredData type="faq" data={{ faqs: localeFaqs }} />}
       {data.hero && <ProjectHero data={data.hero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
       {data.hero && <ProjectBenefitsAndVideo data={data.hero} />}
@@ -67,7 +95,7 @@ const uindiaAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStati
       {data.setup && <ProjectSetup data={data.setup} />}
       {data.releases && <ProjectReleases data={data.releases} />}
       {data.process && <ProjectProcess data={data.process} />}
-      {data.faq && <ProjectFAQ data={data.faq} />}
+      {faqData && <ProjectFAQ data={faqData} />}
       {data.testimonial && <ProjectTestimonial data={data.testimonial} />}
       <ContactUsForm />
       <FooterSection />
@@ -75,4 +103,4 @@ const uindiaAgentDetailPage = ({ data }: InferGetStaticPropsType<typeof getStati
   );
 };
 
-export default uindiaAgentDetailPage;
+export default IndiaAgentDetailPage;

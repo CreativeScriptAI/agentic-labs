@@ -6,6 +6,9 @@ import ServicesHeroSection from "src/components/sections/ServicesHeroSection";
 import TechStackSection from "src/components/sections/TechStackSection";
 import ContactHeroSection from "src/components/sections/ContactHeroSection";
 import FooterSection from "src/components/sections/FooterSection";
+import FAQSection from "src/components/sections/FAQSection";
+import StructuredData from "src/components/StructuredData";
+import { australiaServicesFaqs } from "src/data/localeFaqs";
 
 const AustraliaServicesPage = () => {
   return (
@@ -21,8 +24,10 @@ const AustraliaServicesPage = () => {
           url: `${CONFIG.link}/australia/services`,
         }}
       />
+      <StructuredData type="faq" data={{ faqs: australiaServicesFaqs }} />
       <ServicesHeroSection />
       <TechStackSection />
+      <FAQSection faqs={australiaServicesFaqs} />
       <ContactHeroSection noPadding />
       <FooterSection />
     </RootLayout>
