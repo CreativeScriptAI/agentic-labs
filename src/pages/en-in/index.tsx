@@ -7,6 +7,7 @@ import TrustedSection from "src/components/sections/TrustedSection";
 import { GetStaticProps } from "next";
 import { fetchAgentsData } from "src/libs/api";
 import dynamic from "next/dynamic";
+import { indiaFaqs } from "src/data/localeFaqs";
 
 // Dynamic imports for performance optimization
 const AgentsSection = dynamic(
@@ -106,11 +107,17 @@ const IndiaHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
         }} 
       />
       <StructuredData type="website" data={{}} />
+      <StructuredData
+        type="faq"
+        data={{
+          faqs: indiaFaqs,
+        }}
+      />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />
       <TrustedSection />
       <TestimonialsSection />
-      <FAQSection />
+      <FAQSection faqs={indiaFaqs} />
       <ContactSection />
       <FooterSection />
     </>

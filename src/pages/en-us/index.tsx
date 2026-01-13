@@ -7,6 +7,7 @@ import TrustedSection from "src/components/sections/TrustedSection";
 import { GetStaticProps } from "next";
 import { fetchAgentsData } from "src/libs/api";
 import dynamic from "next/dynamic";
+import { northAmericaFaqs } from "src/data/localeFaqs";
 
 const AgentsSection = dynamic(
   () => import("src/components/sections/AgentsSection"),
@@ -80,11 +81,17 @@ const USAHomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
         }} 
       />
       <StructuredData type="website" data={{}} />
+      <StructuredData
+        type="faq"
+        data={{
+          faqs: northAmericaFaqs,
+        }}
+      />
       <HeroSection />
       <AgentsSection agents={agentsApiRaw?.data} />
       <TrustedSection />
       <TestimonialsSection />
-      <FAQSection />
+      <FAQSection faqs={northAmericaFaqs} />
       <ContactSection />
       <FooterSection />
     </>
