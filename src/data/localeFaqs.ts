@@ -575,6 +575,155 @@ export const australiaPatientlyAIFaqs: FAQ[] = [
 ];
 
 // ============================================
+// AI CLARITY WORKSHOP FAQs (by locale)
+// ============================================
+
+// India AI Clarity Workshop FAQs
+export const indiaWorkshopFaqs: FAQ[] = [
+  {
+    question: "What is the AI Clarity Workshop for Indian founders?",
+    answer:
+      "The AI Clarity Workshop for Indian founders is a deep-dive session to map your current sales and ops, then design AI systems and workflows that replace a full-time ops or SDR hire using tools you already use.",
+  },
+  {
+    question: "Who is the AI Clarity Workshop in India best suited for?",
+    answer:
+      "It is ideal for Indian agencies, clinics, real estate companies, and SaaS founders doing 3–10L MRR who want to scale with AI systems instead of constantly adding headcount.",
+  },
+  {
+    question: "What will I get by the end of the AI Clarity Workshop in India?",
+    answer:
+      "You leave with a visual workflow map, 2–3 priority AI workflows, tool stack recommendations like Zapier, Make, GoHighLevel, and an implementation roadmap tailored to your Indian market.",
+  },
+  {
+    question: "Does the AI Clarity Workshop cover AI voice agents and WhatsApp automation for India?",
+    answer:
+      "Yes, the workshop includes planning AI voice agent call flows and WhatsApp automation so every new Indian lead is auto-called, messaged, and moved towards a booked call.",
+  },
+  {
+    question: "How long does the AI Clarity Workshop take for Indian businesses?",
+    answer:
+      "Most Indian teams complete the workshop in 60–90 minutes, followed by delivery of your customised workflow plan and next steps.",
+  },
+];
+
+// UAE AI Clarity Workshop FAQs
+export const uaeWorkshopFaqs: FAQ[] = [
+  {
+    question: "What is the AI Clarity Workshop for Dubai and UAE businesses?",
+    answer:
+      "The AI Clarity Workshop for Dubai and UAE businesses is a strategy session that maps your funnels and designs AI workflows for Arabic–English lead handling, WhatsApp automation, and AI voice agents.",
+  },
+  {
+    question: "Which Dubai businesses benefit most from the AI Clarity Workshop?",
+    answer:
+      "Dubai real estate brokerages, agencies, clinics, and service firms that rely on fast follow-up and high lead volumes benefit most from having a clear AI systems roadmap.",
+  },
+  {
+    question: "What outcomes can a Dubai founder expect from the AI Clarity Workshop?",
+    answer:
+      "You get a prioritised list of workflows, a recommended AI tool stack, and a step-by-step implementation plan focused on closing more deals with automation and less manual follow-up.",
+  },
+  {
+    question: "Does the AI Clarity Workshop include WhatsApp and AI voice workflow design for UAE leads?",
+    answer:
+      "Yes, the workshop maps how new UAE leads move from form fill to AI voice call to WhatsApp messages and booking, so the whole journey is automated.",
+  },
+  {
+    question: "How is regulation and data handling discussed in the AI Clarity Workshop for UAE clients?",
+    answer:
+      "Data handling and compliance considerations are built into the workflow design so you know what information is stored, how long, and in which tools.",
+  },
+];
+
+// North America AI Clarity Workshop FAQs
+export const northAmericaWorkshopFaqs: FAQ[] = [
+  {
+    question: "What is the AI Clarity Workshop for US and Canadian B2B SaaS companies?",
+    answer:
+      "The AI Clarity Workshop for North American B2B SaaS teams is a focused session to map your funnel and design AI workflows for HubSpot, RevOps automation, and SDR task replacement.",
+  },
+  {
+    question: "Who should book the AI Clarity Workshop in North America?",
+    answer:
+      "Founders, RevOps leads, and GTM leaders in US and Canadian SaaS or agencies who want a clear AI systems blueprint before investing heavily in tools or hires should book.",
+  },
+  {
+    question: "What do I walk away with after the AI Clarity Workshop in North America?",
+    answer:
+      "You leave with a diagram of your ideal AI-powered funnel, 2–3 high-ROI workflows, and a practical implementation roadmap for HubSpot and other tools you already use.",
+  },
+  {
+    question: "Does the AI Clarity Workshop cover RevOps automation and SDR replacement workflows?",
+    answer:
+      "Yes, the workshop identifies where AI can take over SDR outreach, qualification, follow-ups, and RevOps reporting while humans handle high-value conversations.",
+  },
+  {
+    question: "How long is the AI Clarity Workshop for US and Canadian teams?",
+    answer:
+      "Sessions typically run 60–90 minutes, with a follow-up summary and workflow recommendations delivered afterwards.",
+  },
+];
+
+// UK/Europe AI Clarity Workshop FAQs
+export const ukEuropeWorkshopFaqs: FAQ[] = [
+  {
+    question: "What is the AI Clarity Workshop for UK and European businesses?",
+    answer:
+      "The AI Clarity Workshop for the UK and Europe is a strategy session that designs GDPR-aware AI workflows for agencies, consultants, and B2B teams.",
+  },
+  {
+    question: "Who is the AI Clarity Workshop in the UK designed for?",
+    answer:
+      "It is designed for UK agencies, consultants, and founders doing roughly £50k–£200k MRR who want to move from manual operations to scalable AI systems.",
+  },
+  {
+    question: "What will I get from the AI Clarity Workshop in Europe?",
+    answer:
+      "You receive a visual map of your AI workflows, a prioritised list of systems to build, and a clear implementation path aligned with GDPR expectations.",
+  },
+  {
+    question: "Does the AI Clarity Workshop cover GDPR-compliant AI automation?",
+    answer:
+      "Yes, it explicitly addresses what data can be processed, where it is stored, and how to structure workflows so they remain GDPR-conscious.",
+  },
+  {
+    question: "Can the AI Clarity Workshop help European agencies productize AI systems?",
+    answer:
+      "The workshop also shows agencies how to turn internal workflows into productized AI offers they can sell to multiple clients.",
+  },
+];
+
+// Australia AI Clarity Workshop FAQs
+export const australiaWorkshopFaqs: FAQ[] = [
+  {
+    question: "What is the AI Clarity Workshop for Australian founders and agencies?",
+    answer:
+      "The AI Clarity Workshop for Australian founders and agencies maps your current operations and designs AI workflows that give you back evenings and weekends without sacrificing growth.",
+  },
+  {
+    question: "Who should attend the AI Clarity Workshop in Australia?",
+    answer:
+      "Aussie founders and agency owners around the $20k/month mark and beyond who feel stuck in manual ops and want systems instead of more staff should attend.",
+  },
+  {
+    question: "What do Australian businesses get from the AI Clarity Workshop?",
+    answer:
+      "You get a tailored AI systems blueprint, including the first 2–3 workflows to build for lead handling, onboarding, and reporting in the Australian market.",
+  },
+  {
+    question: "Does the AI Clarity Workshop cover AI workflows for Sydney and Melbourne agencies?",
+    answer:
+      "Yes, it includes region-aware workflows for agencies in Sydney, Melbourne, and other Australian cities, tuned to local client expectations and time zones.",
+  },
+  {
+    question: "How long does the AI Clarity Workshop take for an Australian team?",
+    answer:
+      "The workshop usually runs 60–90 minutes, followed by a written action plan you can use to implement or delegate to an automation partner.",
+  },
+];
+
+// ============================================
 // HOMEPAGE FAQs (by locale)
 // ============================================
 
