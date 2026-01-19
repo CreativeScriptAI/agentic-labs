@@ -43,11 +43,19 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
 
 const UAEAgentDetailPage = ({ data, slug }: InferGetStaticPropsType<typeof getStaticProps>) => {
   // Transform hero data: apply prop changes
+  const isAIInterviewerAgent = data?.hero?.title === "M2ai" || data?.hero?.title === "AI Interviewer Agent";
   const transformedHero = data?.hero
     ? {
         ...data.hero,
         title: data.hero.title === "M2ai" ? "AI Interviewer Agent" : data.hero.title,
-        subtitle: data.hero.subtitle === "sdfdsf" ? "🔴 LIVE (40+ interviews done)" : data.hero.subtitle,
+        subtitle: isAIInterviewerAgent && data.hero.subtitle === "" 
+          ? "🔴 LIVE (40+ interviews done)" 
+          : data.hero.subtitle === "sdfdsf" 
+          ? "🔴 LIVE (40+ interviews done)" 
+          : data.hero.subtitle,
+        titleHighlight: isAIInterviewerAgent && data.hero.titleHighlight === "" 
+          ? "" 
+          : data.hero.titleHighlight,
         description: data.hero.description === "Automating the blue-collar hiring process with AI Voice Agent, achieving a 46% operational cost reduction."
           ? "Automating the blue-collar hiring process with AI Voice Interviewer Agent, achieving a 46% operational cost reduction."
           : data.hero.description,
