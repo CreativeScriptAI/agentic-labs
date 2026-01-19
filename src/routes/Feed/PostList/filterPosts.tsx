@@ -28,8 +28,8 @@ export function filterPosts({
       )
     })
     .sort((a, b) => {
-      const dateA = new Date(a.date.start_date).getTime()
-      const dateB = new Date(b.date.start_date).getTime()
+      const dateA = a.date?.start_date ? new Date(a.date.start_date).getTime() : 0
+      const dateB = b.date?.start_date ? new Date(b.date.start_date).getTime() : 0
       return order === "desc" ? dateB - dateA : dateA - dateB
     })
 }
