@@ -14,6 +14,7 @@ import { TPosts } from "src/types";
 export const getPosts = async (): Promise<TPosts> => {
   try {
     let id = CONFIG.notionConfig.pageId as string;
+    console.log(`[getPosts] Fetching posts from Notion pageId: ${id}`);
     const api = new NotionAPI();
 
     try {
@@ -23,17 +24,34 @@ export const getPosts = async (): Promise<TPosts> => {
       const block = response.block;
       const schema = collection?.schema;
 
-      const rawMetadata = block[id].value;
+      if (!collection) {
+        console.warn(`[getPosts] No collection found in response for pageId: ${id}`);
+        return [];
+      }
+
+      if (!schema) {
+        console.warn(`[getPosts] No schema found in collection for pageId: ${id}`);
+        return [];
+      }
+
+      const rawMetadata = block[id]?.value;
+
+      if (!rawMetadata) {
+        console.warn(`[getPosts] No metadata found for pageId: ${id}`);
+        return [];
+      }
 
       // Check Type
       if (
         rawMetadata?.type !== "collection_view_page" &&
         rawMetadata?.type !== "collection_view"
       ) {
+        console.warn(`[getPosts] Page type is not collection_view_page or collection_view. Type: ${rawMetadata?.type}`);
         return [];
       } else {
         // Construct Data
         const pageIds = getAllPageIds(response);
+        console.log(`[getPosts] Found ${pageIds.length} page IDs in collection`);
         const data = [];
         for (let i = 0; i < pageIds.length; i++) {
           const id = pageIds[i];
@@ -51,11 +69,13 @@ export const getPosts = async (): Promise<TPosts> => {
               data.push(properties);
             }
           } catch (error) {
-            console.warn(`Failed to get properties for page ${id}:`, error);
+            console.warn(`[getPosts] Failed to get properties for page ${id}:`, error);
             // Skip this page and continue with others
             continue;
           }
         }
+
+        console.log(`[getPosts] Successfully processed ${data.length} posts`);
 
         // Sort by date
         data.sort((a: any, b: any) => {
@@ -68,11 +88,16 @@ export const getPosts = async (): Promise<TPosts> => {
         return posts;
       }
     } catch (error: any) {
-      console.error(`Failed to fetch posts from pageId: ${id}`, error);
+      console.error(`[getPosts] Failed to fetch posts from pageId: ${id}`, error);
+      console.error(`[getPosts] Error details:`, {
+        message: error?.message,
+        status: error?.response?.status || error?.status,
+        statusText: error?.response?.statusText,
+      });
 
       // Return empty array if there's an API error during build
       if (error?.response?.status === 400 || error?.status === 400) {
-        console.warn(`Returning empty posts array due to API error`);
+        console.warn(`[getPosts] Returning empty posts array due to API error (400)`);
         return [];
       }
 
@@ -80,7 +105,7 @@ export const getPosts = async (): Promise<TPosts> => {
       throw error;
     }
   } catch (error) {
-    console.error("Error in getPosts:", error);
+    console.error("[getPosts] Error in getPosts:", error);
     return [];
   }
 };
