@@ -26,7 +26,7 @@ const HeroSection = () => {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 text-center font-mondwest px-4">
               <span className="block sm:inline">
-                We help businesses save 40 to 90% of their time
+                We help businesses save 40-60% of their time
               </span>{" "}
               <span className="block sm:inline">
                 by automating repetitive & boring workflows.{" "}
