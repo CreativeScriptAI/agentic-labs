@@ -17,6 +17,10 @@ export default async function handler(
     if (path && typeof path === "string") {
       await res.revalidate(path);
     } else {
+      // Revalidate blog index page
+      await res.revalidate("/blog");
+      
+      // Revalidate all individual blog post pages
       const posts = await getPosts();
       const revalidateRequests = posts.map((row) =>
         res.revalidate(`/blog/${row.slug}`)

@@ -42,10 +42,22 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (ctx) => {
 };
 
 const UKAgentDetailPage = ({ data, slug }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const agentName = data?.hero?.title || data?.hero?.heading || "AI Agent";
+  // Transform hero data: apply prop changes
+  const transformedHero = data?.hero
+    ? {
+        ...data.hero,
+        title: data.hero.title === "M2ai" ? "AI Interviewer Agent" : data.hero.title,
+        subtitle: data.hero.subtitle === "sdfdsf" ? "🔴 LIVE (40+ interviews done)" : data.hero.subtitle,
+        description: data.hero.description === "Automating the blue-collar hiring process with AI Voice Agent, achieving a 46% operational cost reduction."
+          ? "Automating the blue-collar hiring process with AI Voice Interviewer Agent, achieving a 46% operational cost reduction."
+          : data.hero.description,
+      }
+    : null;
+
+  const agentName = transformedHero?.title || transformedHero?.heading || "AI Agent";
   const agentNameUK = `${agentName} UK | AI Caller for British Leads`;
-  const agentDescription = data?.hero?.description || data?.hero?.subtitle || "Custom AI agent solution for your business needs in the UK";
-  const agentImage = data?.hero?.image || "/og.jpg";
+  const agentDescription = transformedHero?.description || transformedHero?.subtitle || "Custom AI agent solution for your business needs in the UK";
+  const agentImage = transformedHero?.image || "/og.jpg";
   const agentUrl = `https://www.tryagentikai.com/uk/agent/${slug}`;
 
   // Use locale-specific FAQs for PatientlyAI
@@ -68,9 +80,9 @@ const UKAgentDetailPage = ({ data, slug }: InferGetStaticPropsType<typeof getSta
       />
       <StructuredData type="softwareApplication" data={{}} />
       {localeFaqs && <StructuredData type="faq" data={{ faqs: localeFaqs }} />}
-      {data.hero && <ProjectHero data={data.hero} />}
+      {transformedHero && <ProjectHero data={transformedHero} />}
       {data.trustedBy && <ProjectTrustedBy data={data.trustedBy} />}
-      {data.hero && <ProjectBenefitsAndVideo data={data.hero} />}
+      {transformedHero && <ProjectBenefitsAndVideo data={transformedHero} />}
       {data.issues && <ProjectIssues data={data.issues} />}
       {data.capabilities && <ProjectCapabilities data={data.capabilities} />}
       {data.works && <ProjectWorks data={data.works} />}
