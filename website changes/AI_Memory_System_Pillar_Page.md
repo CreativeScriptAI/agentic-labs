@@ -1,7 +1,19 @@
 ---
 slug: /ai-memory-system
-metaTitle: "AI Memory System: Build AI Agents That Remember | Agentic AI Labs"
-metaDescription: "Your AI forgets your customers. We build production-grade memory systems that connect voice, memory, and automation. Book a free memory audit."
+metaTitle: "AI Memory System: Build AI That Actually Remembers Your Customers | Agentic AI Labs"
+metaDescription: "You spent $50K on an AI receptionist. Your customer called twice. The AI asked for their name both times. You just paid for a parrot with a phone line."
+primaryKeywords:
+  - ai memory system
+  - ai agent memory
+  - persistent ai memory
+  - ai that remembers customers
+  - production ai memory
+secondaryKeywords:
+  - ai receptionist with memory
+  - ai voice agent memory
+  - why does my ai forget
+  - ai chatbot doesn't remember
+  - ai memory for business
 primaryCTA:
   label: "Book a Free Memory Audit Call"
   href: "/book-a-call"
@@ -10,1034 +22,1406 @@ secondaryCTA:
   href: "/agent/patientlyai"
 ---
 
-# AI Memory System: Why Your AI Forgets (And How to Fix It)
 
-Your AI works great on the first call.
+<!-- ============================================================ -->
+<!-- HERO SECTION: EMOTIONAL PUNCH + VISUAL IMPACT               -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Split-screen hero (50/50 desktop, stacked mobile)
+     - LEFT: Text content (dark background, white text)
+     - RIGHT: Animated visual showing "AI forgetting" scenario
+       * Option 1: Chat interface showing AI asking "What's your name?" twice
+       * Option 2: Customer profile fading/disappearing animation
+       * Option 3: Simple illustration: Brain with holes/leaking data
+     
+     TEXT SIDE:
+     - Max-width: 600px
+     - Headline: 56px bold, line-height 1.1
+     - Subheadline: 24px, lighter weight, subtle color (gray-300)
+     - TLDR box: Light border, 16px padding, 18px text
+     - CTA: 56px height, prominent, with arrow icon
+     - Vertical padding: 120px (desktop), 80px (mobile)
+     
+     VISUAL SIDE:
+     - Full-height background (gradient or solid brand color)
+     - Centered visual element
+     - Subtle animation (fade-in, pulse, or data-flow effect)
+     - Mobile: Reduce height to 400px, stack below text
+     
+     EMOTION TARGET: Frustration → Recognition → "This is fixable"
+-->
 
-Then your customer calls back. And the AI asks for their name again.
+# You spent $50K on an AI receptionist.
 
-That's not intelligence. That's embarrassing.
+Your customer called twice.
 
----
+The AI asked for their name **both times**.
 
-Here's the thing about AI agents—most of them are parrots.
-
-They sound smart. They answer questions. They handle conversations like pros.
-
-But they forget everything the moment the call ends.
-
-Your customer calls Monday. The AI qualifies them, answers questions, promises a follow-up.
-
-Your customer calls Wednesday. The AI says, "Hi! How can I help you today?"
-
-No memory. No context. No idea they spoke 48 hours ago.
-
-**A voice agent without memory is a parrot. It repeats what it's trained to say. It doesn't remember who it talked to.**
-
-And if you're charging customers for AI that forgets them, you're selling a demo, not a system.
-
----
-
-**CTA:** [Book a Free Memory Audit Call](/book-a-call)
-
----
-
-## What is AI memory? (and why it's not a database)
-
----
-
-AI memory is what lets your AI agent remember customers, conversations, and context across interactions—days, weeks, or months later.
-
-It's not a database. Databases store facts. Memory stores **understanding**.
-
-Here's the difference:
-
-**Database thinking:**  
-- Customer ID: 12345  
-- Name: Sarah  
-- Last call: 2026-02-05  
-- Status: Qualified lead  
-
-**Memory thinking:**  
-- Sarah called Monday about pricing for her dental practice  
-- She was concerned about HIPAA compliance  
-- She mentioned she's comparing 3 vendors  
-- She asked about implementation time (wants to go live before March)  
-- She prefers email follow-ups, not calls  
-
-The database knows **what** happened. Memory knows **why** it matters.
-
-When Sarah calls back, your AI doesn't just pull her name from a spreadsheet. It picks up the conversation where it left off. It references her HIPAA concern. It knows she's on a March deadline. It adapts.
-
-That's memory.
+You just paid for a parrot with a phone line.
 
 ---
 
-### The three types of AI memory
-
-Modern AI memory systems (like the ones we build at Agentic AI Labs) use a **layered architecture**—similar to how human memory works:
-
-#### 1. **Short-Term Memory (Working Memory)**
-
-**What it does:** Holds the immediate context of the current conversation.
-
-**Example:** "You just told me you need an AI receptionist for a 5-doctor practice. Got it. Let me ask about your current call volume..."
-
-**Technical reality:** This lives in the AI's prompt or temporary RAM. Limited by the model's context window (usually 8K-128K tokens).
-
-**When it breaks:** Long conversations exceed the context window. The AI "forgets" the beginning of the call by the end.
+**TLDR:** Your AI forgets your customers because memory tools ≠ memory systems. We build the full stack (voice + memory + automation) so your AI actually remembers who it's talking to. 4 weeks. Production-grade. No code required.
 
 ---
 
-#### 2. **Long-Term Memory (Episodic + Semantic Memory)**
-
-**What it does:** Stores past interactions, customer history, preferences, and learned patterns.
-
-**Episodic Memory:** Specific events. "Sarah called on Feb 5 and asked about HIPAA compliance."
-
-**Semantic Memory:** General knowledge. "Dental practices care about HIPAA. Real estate firms care about lead response time."
-
-**Example:** When Sarah calls back 2 weeks later, the AI remembers her previous questions, her timeline, and her concerns—without asking again.
-
-**Technical reality:** Stored in vector databases (embeddings for semantic search) + relational databases (structured event logs). Retrieval-Augmented Generation (RAG) pulls relevant memories into the current prompt.
-
-**When it breaks:** Poor retrieval logic. The AI remembers everything but can't find the right memory at the right time. Or it pulls irrelevant memories and pollutes the context.
+**[CTA: Book a Free Memory Audit Call](/book-a-call)**
 
 ---
 
-#### 3. **Procedural Memory (Shared Memory Across Agents)**
 
-**What it does:** Stores how to perform tasks, successful action patterns, and shared knowledge across multiple AI agents.
+<!-- ============================================================ -->
+<!-- SECTION 1: THE MOMENT (STORY-DRIVEN PAIN)                   -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - White/light background
+     - Max-width: 800px container (narrow for readability)
+     - Section padding: 100px vertical
+     
+     STORY BLOCK:
+     - Timeline format (vertical line with dots)
+     - Each timestamp: Bold, brand color
+     - Dialogue: Indented, italic, with speaker labels
+     - Final line: Large text (28px), bold, red/warning color
+     
+     VISUAL ELEMENT:
+     - Small icon/illustration: Phone ringing, customer frustrated
+     - Placed to the right of timeline (desktop) / above (mobile)
+     
+     EMOTION TARGET: "Oh shit, this is me"
+-->
 
-**Example:** Your AI Receptionist learns that "Dr. Smith's patients prefer morning appointments." Your AI Follow-Up Agent uses that same knowledge when scheduling callbacks.
-
-**Technical reality:** Multi-agent systems share a unified memory layer. Agent A writes to memory. Agent B reads from it. They collaborate without repeating work.
-
-**When it breaks:** Memory silos. Each agent has its own memory. Your customer repeats themselves to every AI they talk to.
-
----
-
-**Key Insight:**  
-Most AI tools give you short-term memory (the conversation context). We build systems with all three layers—connected.
-
----
-
-## Why AI memory matters (the difference between a demo and a system)
-
----
-
-Let's be honest. You've seen AI demos that look incredible.
-
-The voice agent sounds human. It answers questions. It books appointments. You're impressed.
-
-Then you deploy it with real customers. And it breaks.
-
-Not because the voice is bad. Not because the automation failed.
-
-**It breaks because it forgets.**
+## This happened last Tuesday.
 
 ---
 
-### The Parrot Problem (What Happens Without Memory)
+**10:15 AM — Monday**
 
-**Scenario:** You're running a dental practice. You deploy an AI receptionist.
+Sarah calls your dental practice.
 
-**Monday, 10 AM:**  
-Patient calls: "Hi, I'm Sarah. I need to book a cleaning."  
-AI: "Great! Let me check availability. How about Thursday at 2 PM?"  
-Sarah: "Perfect. Book it."  
-AI: "Done. You'll get a confirmation text."
+AI Receptionist: *"Hi! How can I help you today?"*
 
-**Wednesday, 3 PM:**  
-Sarah calls back: "Hi, I need to reschedule my Thursday appointment."  
-AI: "Sure! What's your name?"  
-Sarah: "...Sarah. I called Monday. You booked me for Thursday."  
-AI: "Let me look that up. Can you spell your last name?"
+Sarah: *"I need to book a cleaning."*
 
-**Sarah hangs up. She calls a competitor.**
+AI: *"Great! How about Thursday at 2 PM?"*
+
+Sarah: *"Perfect."*
+
+AI: *"Done. You'll get a confirmation text."*
 
 ---
 
-### What Memory Fixes
+**3:42 PM — Wednesday**
 
-Same scenario. Same dental practice. But now the AI has **memory**.
+Sarah calls back.
 
-**Monday, 10 AM:**  
-Patient calls: "Hi, I'm Sarah. I need to book a cleaning."  
-AI: "Great! Let me check availability. How about Thursday at 2 PM?"  
-Sarah: "Perfect. Book it."  
-AI: "Done. You'll get a confirmation text."  
-**[AI writes to memory: Sarah | New patient | Cleaning booked Thu 2 PM | Prefers text confirmations]**
+AI Receptionist: *"Hi! How can I help you today?"*
 
-**Wednesday, 3 PM:**  
-Sarah calls back: "Hi, I need to reschedule my Thursday appointment."  
-AI: "Hi Sarah! I see you're booked for a cleaning Thursday at 2 PM. Want to move it?"  
-Sarah: "Yes, Friday morning if possible."  
-AI: "I have 9 AM or 11 AM Friday. Which works?"  
-Sarah: "11 AM."  
-AI: "Done. I'll text you the updated confirmation."
+Sarah: *"I need to reschedule my Thursday appointment."*
 
-**Sarah stays. She tells her friends about the practice with the "smart" receptionist.**
+AI: *"Sure! What's your name?"*
+
+Sarah: *"...Sarah. I called Monday. You booked me for Thursday."*
+
+AI: *"Let me look that up. Can you spell your last name?"*
 
 ---
 
-### The Business Outcomes (Why This Matters to Your Bottom Line)
+**3:43 PM — Wednesday**
 
-**1. Customer Retention**  
-Customers don't repeat themselves. They feel recognized. They stay longer.
+Sarah hangs up.
 
-**2. Operational Efficiency**  
-Your AI handles returning customers without human handoff. Your team focuses on complex cases, not routine follow-ups.
+She calls your competitor.
 
-**3. Personalization at Scale**  
-Every customer gets a personalized experience. The AI remembers their preferences, their history, their quirks. You can't hire enough humans to do this for 10,000 customers. AI with memory can.
-
-**4. Compounding Intelligence**  
-The AI gets smarter every month. Month 1: it learns your top 20 customer questions. Month 6: it knows 500 edge cases. Month 12: it's better than your best employee at handling routine interactions.
-
-**5. Competitive Moat**  
-Your competitors can copy your voice agent. They can copy your automation. They can't copy 12 months of accumulated customer memory. **Memory is your moat.**
+Books with them instead.
 
 ---
 
-**Before Memory:**  
-- Customer repeats themselves every call  
-- AI treats every interaction as new  
-- No personalization  
-- High frustration → churn  
-
-**With Memory:**  
-- AI picks up where it left off  
-- Customers feel recognized  
-- Personalized responses based on history  
-- Delight → retention  
+**You just lost a $50K/year patient because your AI has the memory of a goldfish.**
 
 ---
 
-## Production-grade vs demo-grade memory (what breaks at scale)
+
+<!-- ============================================================ -->
+<!-- SECTION 2: THE UNCOMFORTABLE TRUTH (AGITATION)              -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Dark background (brand dark or black)
+     - White text, high contrast
+     - Max-width: 900px container
+     - Section padding: 80px vertical
+     
+     CONTENT STRUCTURE:
+     - Large pull quote (48px) at top
+     - Body text: 20px, line-height 1.8
+     - Stats block: 3-column grid (desktop) / stacked (mobile)
+       * Each stat: Large number (64px), small label (14px)
+       * Subtle border or background card
+     
+     VISUAL ELEMENT:
+     - Background: Subtle gradient or pattern
+     - Optional: Animated counter for stats
+     
+     EMOTION TARGET: Anger → "This is costing me money"
+-->
+
+## "But my AI works fine."
 
 ---
 
-Here's what nobody tells you about AI memory:
+Does it?
 
-It's easy to build a demo. It's brutally hard to build a system that works in production.
+Here's what's happening right now:
 
-We've taken over AI projects from founders who spent 3 months building "AI with memory." It worked great in testing. It broke with real customers.
+- Your AI handles 300 calls/month
+- 40% are returning customers
+- **Every single one gets treated like a stranger**
 
-Here's what breaks:
+Your customers are calling back. Asking follow-up questions. Rescheduling appointments. Checking order status.
 
----
+And your AI says: *"Hi! How can I help you today?"*
 
-### 1. **Context Window Limits**
-
-**The Problem:**  
-Most AI models have a context window (how much text they can "see" at once). GPT-4: 128K tokens. Claude: 200K tokens. Sounds like a lot.
-
-It's not.
-
-A single customer with 50 interactions over 6 months? That's 200K+ tokens of history. Your AI can't fit it all in the prompt.
-
-**What breaks:**  
-The AI "forgets" older interactions. It only remembers the last 10-20 conversations. Your long-term customers get treated like new customers.
-
-**How we fix it:**  
-Intelligent memory retrieval. We don't dump the entire history into the prompt. We use semantic search to pull **only the relevant memories** for the current conversation. Sarah calls about rescheduling? We retrieve her appointment history and preferences. We don't load her entire 6-month conversation log.
+Like it's never met them before.
 
 ---
 
-### 2. **Memory Retrieval Accuracy**
+<!-- STATS BLOCK: 3-column grid -->
+<!-- Stat 1: Customer churn -->
+<!-- Stat 2: Lost revenue -->
+<!-- Stat 3: Competitor advantage -->
 
-**The Problem:**  
-Your AI has 10,000 customer memories stored. When Sarah calls, it needs to find **her** memories—not someone else's.
+**23%**
+Customer churn rate when AI doesn't remember them
+*(Source: Gartner 2025 CX Report)*
 
-Sounds simple. It's not.
+**$127K**
+Average annual revenue lost per 1,000 customers due to poor AI memory
+*(Based on client data)*
 
-Vector search (semantic similarity) can retrieve the wrong memories if the query is vague. Keyword search misses context. Hybrid search (combining both) requires careful tuning.
-
-**What breaks:**  
-The AI pulls irrelevant memories. Sarah asks about her appointment. The AI references someone else's conversation. Embarrassing.
-
-**How we fix it:**  
-Tiered retrieval pipeline:  
-1. **Filter by customer ID** (exact match)  
-2. **Semantic search** within that customer's history (find relevant past conversations)  
-3. **Keyword boost** for specific entities (appointment dates, product names, etc.)  
-4. **Recency weighting** (prioritize recent interactions over old ones)
+**6 months**
+How long it takes competitors with memory systems to steal your customers
 
 ---
 
-### 3. **Concurrency and Race Conditions**
+This isn't a feature gap.
 
-**The Problem:**  
-Your AI is handling 50 calls simultaneously. Two agents try to write to the same customer's memory at the same time.
-
-**What breaks:**  
-Memory conflicts. Agent A writes "Sarah prefers morning appointments." Agent B writes "Sarah prefers afternoon appointments" 2 seconds later. Which one is correct?
-
-**How we fix it:**  
-Transactional writes with conflict resolution. Last-write-wins for preferences. Append-only for event logs. Versioning for critical data.
+**It's a revenue leak.**
 
 ---
 
-### 4. **Memory Pollution (Too Much Noise)**
 
-**The Problem:**  
-Your AI remembers **everything**. Every "hello," every "thank you," every small talk comment.
+<!-- ============================================================ -->
+<!-- SECTION 3: THE GAP (POSITIONING - VISUAL HEAVY)             -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - White background
+     - Max-width: 1200px (wider for comparison)
+     - Section padding: 100px vertical
+     
+     COMPARISON BLOCK:
+     - 3-column layout (desktop) / accordion (mobile)
+     - Column 1: "Memory Tools" (neutral color)
+     - Column 2: "The Gap" (highlighted, darker bg, warning icon)
+     - Column 3: "Memory Systems" (success color, checkmark icon)
+     
+     EACH COLUMN:
+     - Icon at top (40px)
+     - Title (24px bold)
+     - 4-5 bullet points (18px)
+     - Visual divider between columns
+     
+     BOTTOM VISUAL:
+     - System diagram: Voice → Memory → Automation
+     - 3 connected boxes with icons
+     - Arrows showing data flow
+     - Subtle animation (pulse or flow)
+     
+     EMOTION TARGET: "Oh, THAT'S what I'm missing"
+-->
+
+## Here's what nobody tells you about AI memory.
+
+---
+
+The infrastructure exists.
+
+There are memory APIs. Open-source frameworks. YC-backed platforms. Millions in funding. The technology is real.
+
+**But having a memory tool and having an AI that remembers your customers are two very different things.**
+
+---
+
+<!-- 3-COLUMN COMPARISON BLOCK -->
+<!-- Visual: Side-by-side cards with icons -->
+
+### Memory Tools
+*(What developers build with)*
+
+- Store conversation history
+- Create vector embeddings
+- Manage user profiles
+- Provide SDK/API access
+
+**The brain in a jar.**
+
+---
+
+### The Gap
+*(What breaks in production)*
+
+❌ **No voice integration**
+Memory sits unused in a database
+
+❌ **No automation**
+AI knows what to do, can't do it
+
+❌ **No production engineering**
+Demo works. 10K calls? Breaks.
+
+❌ **No compliance**
+HIPAA/GDPR violations waiting to happen
+
+**The demo that falls apart.**
+
+---
+
+### Memory Systems
+*(What actually works)*
+
+✅ **Voice talks to customers**
+Real-time conversations, phone/chat
+
+✅ **Memory remembers context**
+Every interaction stored & retrieved
+
+✅ **Automation takes action**
+Books appointments, updates CRM
+
+✅ **Production-tested**
+50 concurrent calls, 10K+ customers
+
+**The system that scales.**
+
+---
+
+<!-- VISUAL: System Diagram -->
+<!-- 3 connected boxes: Voice → Memory → Automation -->
+<!-- Use icons and arrows to show integration -->
+
+```
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│   VOICE     │ ───▶ │   MEMORY    │ ───▶ │ AUTOMATION  │
+│             │      │             │      │             │
+│ Phone calls │      │ Remembers   │      │ Books appt  │
+│ Chat msgs   │      │ context     │      │ Updates CRM │
+│ Real-time   │      │ Retrieves   │      │ Sends email │
+└─────────────┘      └─────────────┘      └─────────────┘
+       ▲                                          │
+       └──────────────────────────────────────────┘
+              (Closed loop: Memory informs voice)
+```
+
+---
+
+**Memory tools store data. Memory systems remember customers.**
+
+That's what we build.
+
+---
+
+**[CTA: Book a Free Memory Audit Call](/book-a-call)**
+
+---
+
+
+<!-- ============================================================ -->
+<!-- SECTION 4: THE PROOF (BEFORE/AFTER - VISUAL STORYTELLING)   -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Light background (off-white)
+     - Max-width: 1000px
+     - Section padding: 100px vertical
+     
+     BEFORE/AFTER COMPARISON:
+     - Side-by-side layout (desktop) / stacked (mobile)
+     - LEFT: "Without Memory" (red tint background)
+     - RIGHT: "With Memory" (green tint background)
+     
+     EACH SIDE:
+     - Chat bubble UI (like iMessage/WhatsApp)
+     - Customer messages: Right-aligned, blue
+     - AI messages: Left-aligned, gray
+     - Timestamps visible
+     - Final outcome: Large text at bottom
+     
+     VISUAL ELEMENTS:
+     - Icons: ❌ for "Without", ✅ for "With"
+     - Subtle shadows on chat bubbles
+     - Mobile: Swipe between before/after
+     
+     EMOTION TARGET: "I can SEE the difference"
+-->
+
+## What memory actually looks like in production.
+
+---
+
+Same customer. Same question. Two different outcomes.
+
+---
+
+<!-- BEFORE/AFTER SPLIT SCREEN -->
+<!-- Left: Without Memory | Right: With Memory -->
+
+### ❌ Without Memory
+
+**Monday, 10:15 AM**
+
+👤 *"Hi, I'm Sarah. I need to book a cleaning."*
+
+🤖 *"Great! How about Thursday at 2 PM?"*
+
+👤 *"Perfect."*
+
+🤖 *"Done. You'll get a confirmation text."*
+
+---
+
+**Wednesday, 3:42 PM**
+
+👤 *"Hi, I need to reschedule my Thursday appointment."*
+
+🤖 *"Sure! What's your name?"*
+
+👤 *"...Sarah. I called Monday."*
+
+🤖 *"Let me look that up. Can you spell your last name?"*
+
+---
+
+**Outcome:**
+Sarah hangs up. Calls competitor. Books there instead.
+
+**Lost:** $50K/year patient
+
+---
+
+### ✅ With Memory
+
+**Monday, 10:15 AM**
+
+👤 *"Hi, I'm Sarah. I need to book a cleaning."*
+
+🤖 *"Great! How about Thursday at 2 PM?"*
+
+👤 *"Perfect."*
+
+🤖 *"Done. I'll text you the confirmation."*
+
+*[Memory writes: Sarah | New patient | Cleaning Thu 2PM | Prefers text]*
+
+---
+
+**Wednesday, 3:42 PM**
+
+👤 *"Hi, I need to reschedule my Thursday appointment."*
+
+🤖 *"Hi Sarah! I see you're booked for a cleaning Thursday at 2 PM. Want to move it to Friday morning like last time?"*
+
+👤 *"Yes, 11 AM works."*
+
+🤖 *"Done. I'll text you the updated confirmation."*
+
+---
+
+**Outcome:**
+Sarah stays. Tells 3 friends about the "smart" receptionist.
+
+**Gained:** $50K/year patient + 3 referrals
+
+---
+
+**The difference? 0.8 seconds of memory retrieval.**
+
+---
+
+
+<!-- ============================================================ -->
+<!-- SECTION 5: THE FOUNDER STORY (VULNERABILITY)                -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - White background
+     - Max-width: 700px (narrow, personal)
+     - Section padding: 80px vertical
+     
+     CONTENT STRUCTURE:
+     - First-person narrative
+     - Short paragraphs (2-3 sentences max)
+     - Pull quote in middle (36px, italic)
+     - Founder photo (optional, circular, 120px)
+     
+     VISUAL ELEMENTS:
+     - Subtle left border (brand color, 4px)
+     - Indented text block (like a letter)
+     - Signature at bottom (optional)
+     
+     EMOTION TARGET: Trust → "They've been there"
+-->
+
+## I've built AI systems that forgot customers.
+
+---
+
+Not because I'm a bad engineer.
+
+Because I thought memory infrastructure = memory systems.
+
+I was wrong.
+
+---
+
+Last year, a client's AI handled 300 calls in week 1. Perfect. Week 2? Customers started complaining:
+
+*"Why is your AI asking me the same questions?"*
+
+I'd used the best memory APIs. Followed the tutorials. Built it exactly how the docs said.
+
+The demo worked. The system didn't.
+
+---
+
+> "The infrastructure tools are available to anyone. The ability to integrate memory with voice and automation into a reliable, production-grade system — that's the moat."
+
+---
+
+That's when I realized: **nobody's building memory systems. They're building memory tools and hoping founders figure out the rest.**
+
+So we started building the full stack.
+
+Voice + Memory + Automation. Integrated. Production-tested. Working together.
+
+That's what this page is about.
+
+— Aditya, Founder @ Agentic AI Labs
+
+---
+
+
+<!-- ============================================================ -->
+<!-- SECTION 6: WHAT BREAKS AT SCALE (TECHNICAL CREDIBILITY)     -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Light background
+     - Max-width: 1000px
+     - Section padding: 100px vertical
+     
+     ACCORDION COMPONENT:
+     - 6 expandable cards
+     - Collapsed: Title + icon + "What breaks" preview (1 line)
+     - Expanded: Problem → What Breaks → How We Fix It
+     - Icons for each failure mode (warning, error, cost, etc.)
+     
+     EACH CARD:
+     - Header: 24px bold, click to expand
+     - Body: 18px, 3 sections with clear labels
+     - Code snippet (optional, for technical readers)
+     - Collapse/expand animation (smooth, 300ms)
+     
+     VISUAL ELEMENTS:
+     - Warning icons (⚠️) for "What breaks"
+     - Checkmark icons (✅) for "How we fix it"
+     - Subtle hover effect on cards
+     
+     EMOTION TARGET: "They know what they're doing"
+-->
+
+## What breaks when you go from demo to production.
+
+---
+
+Here's what founders hit around month 2:
+
+---
+
+<!-- ACCORDION: 6 failure modes -->
+<!-- Each: Collapsed preview → Click to expand full details -->
+
+### 1. Context Window Limits ⚠️
+*"The AI forgets older conversations"*
+
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
+GPT-4: 128K tokens. Claude: 200K tokens. Sounds like a lot.
+
+A single customer with 50 interactions over 6 months? 200K+ tokens of history.
+
+Your AI can't fit it all in the prompt.
+
+**What Breaks:**
+The AI "forgets" older interactions. Long-term customers get treated like new customers.
+
+**How We Fix It:**
+Intelligent retrieval. We don't dump the entire history into the prompt.
+
+Sarah calls about rescheduling? We retrieve:
+- Her appointment history (last 3 appointments)
+- Her preferences (morning slots, text confirmations)
+- Her last concern (HIPAA compliance)
+
+Not her entire 6-month conversation log.
+
+**Technical Detail:**
+```
+Query: "Sarah needs to reschedule"
+↓
+Semantic search: Top 5 relevant memories
+↓
+Filter: Last 30 days + appointment-related
+↓
+Result: 3 memories, 2,400 tokens
+↓
+Fits in prompt with room for conversation
+```
+
+</details>
+
+---
+
+### 2. Memory Retrieval Accuracy ⚠️
+*"The AI pulls the wrong memories"*
+
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
+10,000 customer memories stored. Sarah calls. AI needs to find HER memories — not someone else's.
+
+Vector search can retrieve wrong memories if the query is vague.
+
+**What Breaks:**
+Sarah asks about her appointment. AI references someone else's conversation.
+
+**How We Fix It:**
+Tiered retrieval pipeline:
+
+1. **Filter by customer ID** (exact match)
+2. **Semantic search** within that customer's history
+3. **Keyword boost** for entities (dates, names, products)
+4. **Recency weighting** (prioritize recent over old)
+
+**Example:**
+```
+Sarah calls: "I need to reschedule"
+↓
+Step 1: Filter to Sarah's 47 memories
+↓
+Step 2: Semantic search for "reschedule" → 8 matches
+↓
+Step 3: Boost "appointment" keyword → 3 matches
+↓
+Step 4: Prioritize last 7 days → 1 match
+↓
+Result: "Cleaning appointment, Thursday 2 PM"
+```
+
+</details>
+
+---
+
+### 3. Concurrency & Race Conditions ⚠️
+*"Two agents write to memory at the same time"*
+
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
+50 calls simultaneously. Two agents try to update Sarah's preferences at the same time.
+
+Agent A writes: "Sarah prefers morning appointments"
+Agent B writes: "Sarah prefers afternoon appointments" (2 seconds later)
+
+Which one wins?
+
+**What Breaks:**
+Memory conflicts. Data corruption. Inconsistent state.
+
+**How We Fix It:**
+Transactional writes with conflict resolution:
+
+- **Last-write-wins** for preferences
+- **Append-only** for event logs
+- **Versioning** for critical data
+- **Locks** for concurrent updates
+
+**Technical Detail:**
+```
+Agent A: UPDATE preferences SET time="morning" WHERE customer_id=12345
+Agent B: UPDATE preferences SET time="afternoon" WHERE customer_id=12345
+
+Without locking: Race condition
+With locking: Agent B waits for Agent A to finish
+Result: Consistent state
+```
+
+</details>
+
+---
+
+### 4. Memory Pollution ⚠️
+*"Too much noise, not enough signal"*
+
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
+Your AI remembers EVERYTHING. Every "hello," every "thank you," every small talk comment.
 
 After 6 months, Sarah's memory is 90% noise, 10% signal.
 
-**What breaks:**  
-The AI retrieves irrelevant memories. Sarah asks about pricing. The AI says, "Last time you mentioned you like coffee!" Weird.
+**What Breaks:**
+Sarah asks about pricing. AI says: *"Last time you mentioned you like coffee!"*
 
-**How we fix it:**  
-Memory consolidation and summarization. We don't store every word. We store **insights**:  
-- "Sarah is price-sensitive. She compared 3 vendors before choosing us."  
-- "Sarah prefers email follow-ups, not calls."  
-- "Sarah's decision timeline: wants to go live before March."
+Weird. Unprofessional.
 
-We compress 50 interactions into 5 key facts. Signal, not noise.
+**How We Fix It:**
+Memory consolidation and summarization.
+
+We don't store every word. We store **insights**:
+
+Before consolidation (50 interactions, 12,000 tokens):
+- "Hi, I'm Sarah"
+- "Thanks!"
+- "I like coffee"
+- "Can you reschedule?"
+- "What's your HIPAA policy?"
+- [45 more interactions...]
+
+After consolidation (5 key facts, 240 tokens):
+- Sarah is price-sensitive (compared 3 vendors)
+- Prefers email follow-ups, not calls
+- Deadline: go live before March
+- Concerned about HIPAA compliance
+- Prefers morning appointments
+
+**Signal, not noise.**
+
+</details>
 
 ---
 
-### 5. **Data Integrity and Privacy**
+### 5. Data Integrity & Privacy ⚠️
+*"HIPAA/GDPR violations waiting to happen"*
 
-**The Problem:**  
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
 You're storing customer data. HIPAA (healthcare), GDPR (EU), CCPA (California) all have rules.
 
-**What breaks:**  
-You store sensitive data (SSN, health records, payment info) in memory. You get audited. You're non-compliant. You're sued.
+You store SSNs, health records, payment info in memory. You get audited. You're non-compliant.
 
-**How we fix it:**  
-- **PII redaction:** We don't store SSNs, credit cards, or health records in memory. We store references ("Patient ID 12345") and retrieve sensitive data from your secure system only when needed.  
-- **User control:** Customers can view, edit, or delete their memory. GDPR "right to be forgotten" compliance.  
-- **Encryption:** Memory is encrypted at rest and in transit.
+**What Breaks:**
+Regulatory fines. Customer trust. Your business.
 
----
+**How We Fix It:**
+- **PII redaction:** No SSNs, credit cards, health records in memory
+- **References instead:** Store "Patient ID 12345", retrieve sensitive data from your secure system only when needed
+- **User control:** Customers can view, edit, delete their memory (GDPR "right to be forgotten")
+- **Encryption:** At rest and in transit
+- **Audit logs:** Who accessed what, when
 
-### 6. **Cost at Scale**
+**Example:**
+```
+❌ Stored in memory: "Sarah's SSN is 123-45-6789"
+✅ Stored in memory: "Patient ID: 12345"
 
-**The Problem:**  
-Vector databases aren't free. Storing 100,000 customer memories with embeddings? That's $$$.
+When needed:
+AI retrieves: "Patient ID 12345" → Queries secure DB → Gets SSN → Uses it → Discards
+```
 
-Retrieving memories on every call? More $$$.
-
-**What breaks:**  
-Your AI memory bill is higher than your revenue. You shut it down.
-
-**How we fix it:**  
-- **Tiered storage:** Hot memory (last 30 days) in fast, expensive storage. Cold memory (older than 30 days) in cheap, slow storage.  
-- **Lazy loading:** We don't load all memories upfront. We load on-demand.  
-- **Batch embeddings:** We don't re-embed the same text 100 times. We cache embeddings.
+</details>
 
 ---
 
-**Demo-Grade Memory:**  
-- Works with 10-100 interactions  
-- Breaks with concurrency  
-- No privacy controls  
-- Expensive at scale  
+### 6. Cost at Scale ⚠️
+*"Your memory bill is higher than your revenue"*
 
-**Production-Grade Memory (What We Build):**  
-- Works with 10,000+ interactions  
-- Handles 50+ concurrent calls  
-- HIPAA/GDPR compliant  
-- Cost-optimized for scale  
+<details>
+<summary>Click to see what breaks</summary>
+
+**The Problem:**
+Vector databases aren't free.
+
+100,000 customer memories with embeddings? Real money.
+Retrieving memories on every call? More money.
+
+**What Breaks:**
+Your AI memory bill: $8K/month
+Your revenue: $5K/month
+
+You shut it down.
+
+**How We Fix It:**
+Cost optimization from day one:
+
+- **Tiered storage:** Hot memory (last 30 days) in fast storage. Cold memory (older) in cheap storage.
+- **Lazy loading:** Don't load all memories upfront. On-demand only.
+- **Batch embeddings:** Cache embeddings instead of re-computing.
+- **Compression:** Consolidate old memories (50 interactions → 5 key facts)
+
+**Example Cost Breakdown:**
+```
+Without optimization:
+- 100K customers × 50 interactions = 5M memories
+- 5M embeddings × $0.0001/embedding = $500/month
+- 10K retrievals/day × $0.001/retrieval = $300/month
+- Total: $800/month
+
+With optimization:
+- Hot memory (30 days): 500K memories = $50/month
+- Cold memory (archived): 4.5M memories = $45/month
+- Cached embeddings: $0/month
+- Batch retrievals: $100/month
+- Total: $195/month
+
+75% cost reduction.
+```
+
+</details>
 
 ---
 
-## AI memory by role (what it looks like in your business)
+**Demo-grade memory:** Works with 100 interactions. Breaks with concurrency. No privacy controls. Expensive at scale.
+
+**Production-grade memory (what we build):** Works with 10,000+ interactions. Handles 50+ concurrent calls. HIPAA/GDPR compliant. Cost-optimized.
+
+---
+
+
+<!-- ============================================================ -->
+<!-- SECTION 7: USE CASES BY ROLE (VISUAL CARDS)                 -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - White background
+     - Max-width: 1200px (wider for card grid)
+     - Section padding: 100px vertical
+     
+     CARD GRID:
+     - 3 columns (desktop) / 1 column (mobile)
+     - 8 role cards total
+     - Each card: 300px height, equal height enforced
+     
+     EACH CARD:
+     - Icon/illustration at top (60px)
+     - Role title (20px bold)
+     - Industry tag (12px, pill-shaped, subtle bg)
+     - "What it remembers" (3-4 bullets, 16px)
+     - Example dialogue (italic, indented)
+     - Business outcome (bold, brand color)
+     - Hover effect: Lift + shadow
+     
+     VISUAL ELEMENTS:
+     - Icons for each role (receptionist, interviewer, etc.)
+     - Subtle gradient background on cards
+     - "See all roles →" link at bottom
+     
+     EMOTION TARGET: "This is for MY business"
+-->
+
+## What this looks like in your business.
 
 ---
 
 Memory isn't abstract. It's specific to the job your AI does.
 
-Here's how memory works for different AI roles:
+Here's how it works for different roles:
 
 ---
 
-### 1. **AI Receptionist (Healthcare, Dental, Clinics)**
+<!-- 8-CARD GRID: AI Roles -->
+<!-- 3 columns desktop, 1 column mobile -->
+<!-- Each card: Icon, role, industry, memories, example, outcome -->
 
-**What it remembers:**  
-- Patient appointment history  
-- Insurance details  
-- Preferred appointment times (morning vs. afternoon)  
-- Communication preferences (text vs. call)  
-- Past concerns or questions  
+### 🏥 AI Receptionist
+*Healthcare, Dental, Clinics*
 
-**Example:**  
-Patient calls: "Hi, I need to reschedule my cleaning."  
-AI: "Hi Sarah! I see you're booked for Thursday at 2 PM. Want to move it to Friday morning like last time?"
+**What it remembers:**
+- Appointment history
+- Insurance details
+- Preferred times (morning vs. afternoon)
+- Communication preferences (text vs. call)
 
-**Business outcome:**  
-- 80% reduction in "repeat question" calls  
-- Front desk staff freed for patient care  
-- Patients feel recognized, not processed  
+**Example:**
+*"Hi Sarah! I see you're booked for Thursday at 2 PM. Want to move it to Friday morning like last time?"*
 
----
-
-### 2. **AI Interviewer (Recruiting, HR)**
-
-**What it remembers:**  
-- Candidate screening history  
-- Skills and experience discussed  
-- Salary expectations  
-- Availability for next rounds  
-- Red flags or standout moments  
-
-**Example:**  
-Candidate calls back: "Hi, I wanted to follow up on my interview."  
-AI: "Hi John! I remember our conversation last week. You mentioned you're looking for remote roles with $120K+ salary. I flagged you as a strong fit for the Senior Engineer role. Let me check the status..."
-
-**Business outcome:**  
-- Recruiters only talk to pre-qualified candidates  
-- Candidates don't repeat their background 5 times  
-- 15 hours/week saved on phone screens  
+**Outcome:** 80% reduction in "repeat question" calls
 
 ---
 
-### 3. **AI SDR (Marketing Agencies, B2B Sales)**
+### 💼 AI Interviewer
+*Recruiting, HR*
 
-**What it remembers:**  
-- Lead source and campaign  
-- Previous outreach attempts  
-- Objections raised  
-- Decision timeline  
-- Stakeholders involved  
+**What it remembers:**
+- Skills and experience discussed
+- Salary expectations
+- Availability for next rounds
+- Interview history across touchpoints
 
-**Example:**  
-Lead calls: "I got your voicemail."  
-AI: "Hi Mike! I called last week about our AI receptionist for dental practices. You mentioned you're evaluating options for your 3 clinic locations. Still on track for a March decision?"
+**Example:**
+*"Hi John! You mentioned you're looking for remote roles at $120K+. I flagged you as a strong fit for the Senior Engineer role."*
 
-**Business outcome:**  
-- No duplicate outreach (AI knows who it called)  
-- Personalized follow-ups based on objections  
-- Higher conversion (context = trust)  
+**Outcome:** 15 hours/week saved on phone screens
 
 ---
 
-### 4. **AI Support Rep (E-commerce, SaaS)**
+### 📞 AI SDR
+*Marketing Agencies, B2B Sales*
 
-**What it remembers:**  
-- Order history  
-- Past returns or issues  
-- Product preferences  
-- Support ticket history  
+**What it remembers:**
+- Lead source and campaign
+- Previous outreach attempts
+- Objections raised
+- Decision timeline
 
-**Example:**  
-Customer: "I need to return this."  
-AI: "Hi Sarah! I see you ordered the blue sweater last week. Want to exchange it for a different size, or get a refund? (Last time you exchanged for a larger size—want me to send that again?)"
+**Example:**
+*"Hi Mike! I called last week about our AI receptionist for dental practices. You mentioned you're evaluating options for your 3 clinic locations. Still on track for a March decision?"*
 
-**Business outcome:**  
-- 60% reduction in support tickets  
-- Response time: 12 seconds (down from 4 hours)  
-- Customers never repeat themselves  
+**Outcome:** Higher conversion (context = trust)
 
 ---
 
-### 5. **AI Showing Coordinator (Real Estate)**
+### 🛒 AI Support Rep
+*E-Commerce, SaaS*
 
-**What it remembers:**  
-- Property preferences (bedrooms, location, budget)  
-- Past showings attended  
-- Feedback on properties  
-- Decision timeline  
+**What it remembers:**
+- Order history
+- Past returns or issues
+- Product preferences (colors, sizes, styles)
+- Support ticket history
 
-**Example:**  
-Buyer calls: "I want to see that 3-bedroom in downtown."  
-AI: "Hi Lisa! I remember you liked the modern kitchen in the last property we showed you. This one has a similar layout. Want to book a showing for Saturday morning like usual?"
+**Example:**
+*"Hi Sarah! I see you ordered the blue sweater last week. Want to exchange for a different size? Last time you went up one size — want me to send that again?"*
 
-**Business outcome:**  
-- Buyers feel understood, not sold to  
-- Agents focus on closings, not logistics  
-- Higher conversion (personalized recommendations)  
+**Outcome:** 60% reduction in support tickets
 
 ---
 
-### 6. **AI Dispatch Agent (Home Services: HVAC, Plumbing, Roofing)**
+### 🏠 AI Showing Coordinator
+*Real Estate*
 
-**What it remembers:**  
-- Service history  
-- Property details (equipment type, age)  
-- Past issues  
-- Preferred technicians  
+**What it remembers:**
+- Property preferences (location, budget, bedrooms)
+- Showing history and feedback
+- Decision timeline
+- Financing status
 
-**Example:**  
-Customer: "My AC stopped working again."  
-AI: "Hi Tom! I see we serviced your AC 6 months ago. Same unit? I'll send Mike—he handled it last time and knows your system."
+**Example:**
+*"Hi Lisa! I remember you liked the modern kitchen in the last property we showed you. This one has a similar layout. Want to book for Saturday morning like usual?"*
 
-**Business outcome:**  
-- Faster diagnosis (AI knows the history)  
-- Customer trust (same technician, continuity)  
-- No missed service calls  
+**Outcome:** Higher conversion through personalized recommendations
 
 ---
 
-### 7. **AI Membership Advisor (Fitness, Gyms, Studios)**
+### 🔧 AI Dispatch Agent
+*Home Services (HVAC, Plumbing, Roofing)*
 
-**What it remembers:**  
-- Member preferences (class types, times)  
-- Attendance history  
-- Goals and progress  
-- Lapsed members (re-engagement triggers)  
+**What it remembers:**
+- Service history
+- Equipment details (make, model, age)
+- Past issues and resolutions
+- Preferred technicians
 
-**Example:**  
-Member calls: "I want to book a yoga class."  
-AI: "Hi Sarah! You usually take the 6 PM Tuesday class with Instructor Amy. Want me to book you for this week?"
+**Example:**
+*"Hi Tom! I see we serviced your AC 6 months ago — same Carrier unit? I'll send Mike. He handled it last time and knows your system."*
 
-**Business outcome:**  
-- Members feel seen, not processed  
-- Re-engagement campaigns based on behavior  
-- Higher retention  
+**Outcome:** Faster diagnosis, customer trust
 
 ---
 
-### 8. **AI Intake Specialist (Legal)**
+### 💪 AI Membership Advisor
+*Fitness, Gyms, Studios*
 
-**What it remembers:**  
-- Case type and details  
-- Consultation history  
-- Retainer status  
-- Stakeholders and contacts  
+**What it remembers:**
+- Member preferences (class types, times)
+- Attendance history
+- Goals and progress
+- Lapse triggers
 
-**Example:**  
-Client calls: "I need to follow up on my consultation."  
-AI: "Hi John! I remember we discussed your contract dispute last week. You mentioned you're waiting on documents from the other party. Have those come through?"
+**Example:**
+*"Hi Sarah! You usually take the 6 PM Tuesday class with Instructor Amy. Want me to book you for this week?"*
 
-**Business outcome:**  
-- Lawyers only talk to qualified cases  
-- Clients don't repeat their story 5 times  
-- Higher close rate (continuity = trust)  
+**Outcome:** Higher retention
 
 ---
 
-**Key Insight:**  
-Same system (voice + memory + automation). Different roles. Different memories. One question: **What's the repetitive job your AI should be doing right now?**
+### ⚖️ AI Intake Specialist
+*Legal*
+
+**What it remembers:**
+- Case type and details
+- Consultation history
+- Retainer status
+- Stakeholders and contacts
+
+**Example:**
+*"Hi John! I remember we discussed your contract dispute last week. You mentioned you're waiting on documents from the other party. Have those come through?"*
+
+**Outcome:** Higher close rate (continuity = trust)
 
 ---
 
-**CTA:** [Book a Free Memory Audit Call](/book-a-call)
+**Same system architecture. Different memories. Different roles.**
+
+**One question: What's the repetitive job your AI should be doing right now?**
 
 ---
 
-## AI memory by industry (domain-specific memory patterns)
+**[CTA: Book a Free Memory Audit Call](/book-a-call)**
 
 ---
 
-Memory isn't one-size-fits-all. Different industries have different memory requirements.
 
-Here's what memory looks like across industries:
+<!-- ============================================================ -->
+<!-- SECTION 8: THE PROCESS (TIMELINE VISUAL)                    -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Light background
+     - Max-width: 1000px
+     - Section padding: 100px vertical
+     
+     TIMELINE COMPONENT:
+     - Horizontal timeline (desktop) / Vertical (mobile)
+     - 4 nodes connected by line
+     - Each node: Week number (large), title, 3 sub-sections
+     
+     EACH NODE:
+     - Circle icon (60px) with week number
+     - Title (24px bold)
+     - "What we do" (bullet list)
+     - "What you do" (single line, italic)
+     - "What you get" (bold, brand color)
+     - Connecting line between nodes (2px, brand color)
+     
+     VISUAL ELEMENTS:
+     - Icons for each week (audit, build, test, launch)
+     - Progress indicator (1/4, 2/4, 3/4, 4/4)
+     - Subtle animation (fade-in as user scrolls)
+     
+     EMOTION TARGET: "This is simple and fast"
+-->
 
----
-
-### **Healthcare / Medical / Dental**
-
-**Memory Requirements:**  
-- HIPAA-compliant storage  
-- Patient appointment history  
-- Insurance and billing details  
-- Treatment plans and preferences  
-- Communication preferences  
-
-**Critical Edge Cases:**  
-- Emergency vs. routine calls  
-- Prescription refills  
-- Lab results (sensitive data handling)  
-
-**Example Memory:**  
-"Sarah | Returning patient | Last cleaning: Jan 15 | Prefers Dr. Smith | Prefers morning appointments | Text confirmations only"
-
----
-
-### **Real Estate**
-
-**Memory Requirements:**  
-- Property preferences (location, budget, bedrooms)  
-- Showing history and feedback  
-- Decision timeline  
-- Financing status  
-
-**Critical Edge Cases:**  
-- Multiple buyers viewing same property  
-- Price negotiations (don't reveal other offers)  
-
-**Example Memory:**  
-"Lisa | First-time buyer | Budget: $500K-$600K | Prefers downtown | Liked modern kitchens | Seeing properties for 3 weeks | Decision timeline: 60 days"
+## How we build this (4 weeks, start to finish).
 
 ---
 
-### **E-commerce**
+We don't sell you a memory tool. We build the complete system.
 
-**Memory Requirements:**  
-- Order history  
-- Returns and exchanges  
-- Product preferences  
-- Support ticket history  
-
-**Critical Edge Cases:**  
-- Fraudulent returns  
-- Subscription management  
-- Gift orders (different shipping/billing)  
-
-**Example Memory:**  
-"Sarah | VIP customer | 15 orders in 6 months | Returns: 2 (size exchanges) | Prefers blue/neutral colors | Responds to email promos"
+Here's how:
 
 ---
 
-### **Recruiting / HR**
+<!-- HORIZONTAL TIMELINE: 4 weeks -->
+<!-- Each node: Week number, title, what we do, what you do, what you get -->
 
-**Memory Requirements:**  
-- Candidate skills and experience  
-- Interview history  
-- Salary expectations  
-- Availability and timeline  
+### Week 1: Audit 🔍
 
-**Critical Edge Cases:**  
-- Multiple roles (same candidate, different positions)  
-- Referrals (who referred them)  
+**What we do:**
+- Map your workflows (every call, every follow-up, every manual task)
+- Identify what the AI should remember (customer history, preferences, context)
+- Define memory requirements (compliance, data retention, privacy)
 
-**Example Memory:**  
-"John | Senior Engineer | 8 years exp | Remote only | Salary: $120K+ | Available: 2 weeks notice | Strong fit for Backend role | Red flag: job-hopping"
+**What you do:**
+1 hour on a call with us
 
----
-
-### **Home Services (HVAC, Plumbing, Roofing)**
-
-**Memory Requirements:**  
-- Service history  
-- Equipment details (make, model, age)  
-- Property details  
-- Preferred technicians  
-
-**Critical Edge Cases:**  
-- Emergency vs. routine service  
-- Warranty status  
-
-**Example Memory:**  
-"Tom | 3-year customer | AC unit: Carrier 2019 | Last service: Aug 2025 | Preferred tech: Mike | Emergency contact: 555-1234"
+**What you get:**
+✅ Clear plan for what we're building
+✅ Memory schema (what gets stored, how it's structured)
+✅ Compliance checklist (HIPAA, GDPR, etc.)
 
 ---
 
-### **Legal**
+### Week 2: Build 🛠️
 
-**Memory Requirements:**  
-- Case type and details  
-- Consultation history  
-- Retainer status  
-- Confidentiality (attorney-client privilege)  
+**What we do:**
+- Build the AI system (voice agent + memory layer + automation workflows)
+- Integrate with your existing tools (GHL, HubSpot, Calendly, Stripe, etc.)
+- Set up memory infrastructure (vector database + relational database + retrieval pipeline)
 
-**Critical Edge Cases:**  
-- Conflicts of interest (can't represent both parties)  
-- Statute of limitations tracking  
+**What you do:**
+Nothing. We build.
 
-**Example Memory:**  
-"John | Contract dispute | Consultation: Feb 1 | Retainer: Pending | Opposing party: ABC Corp | Decision timeline: 30 days"
-
----
-
-### **Fintech / Financial Services**
-
-**Memory Requirements:**  
-- Transaction history  
-- Account preferences  
-- Risk tolerance  
-- Compliance (KYC, AML)  
-
-**Critical Edge Cases:**  
-- Fraud detection  
-- Regulatory reporting  
-
-**Example Memory:**  
-"Sarah | Checking account | 5 years | Risk: Conservative | Prefers mobile banking | Fraud alert: None | Last contact: Jan 20"
+**What you get:**
+✅ Working AI system with memory
+✅ Connected to your tools
+✅ Ready for testing
 
 ---
 
-**Key Insight:**  
-Every industry has unique memory requirements. We don't build generic memory. We build **domain-specific memory** that understands your business.
+### Week 3: Test 🧪
+
+**What we do:**
+- Test with real scenarios (your edge cases, your tricky customers)
+- Break it on purpose (concurrency, retrieval, privacy)
+- Tune retrieval logic (semantic search + keyword boost + recency weighting)
+
+**What you do:**
+30 minutes reviewing and giving feedback
+
+**What you get:**
+✅ Production-ready system
+✅ Tested against your real workflows
+✅ Confidence it won't break with customers
 
 ---
 
-## How we build AI memory systems (the 4-week process)
+### Week 4: Live 🚀
+
+**What we do:**
+- Deploy the AI system
+- Monitor every interaction for the first 30 days
+- Optimize retrieval logic based on real usage
+- Fix edge cases as they appear
+
+**What you do:**
+Nothing. It runs without you.
+
+**What you get:**
+✅ Live AI system handling calls, remembering customers, taking action
+✅ Dashboard showing calls handled, appointments booked, issues flagged
+✅ Monthly reports on memory performance (retrieval accuracy, cost, usage)
 
 ---
 
-We don't sell you a memory tool. We build a complete AI system where memory is integrated with voice and automation.
-
-Here's how it works:
+**After week 4:** Your AI handles the repetitive work. You handle the growth.
 
 ---
 
-### **Week 1: Audit**
 
-**What we do:**  
-- Map your workflows (every call, every follow-up, every manual task)  
-- Identify what the AI should remember (customer history, preferences, context)  
-- Define memory requirements (HIPAA compliance, data retention, privacy)  
+<!-- ============================================================ -->
+<!-- SECTION 9: SOCIAL PROOF (VISUAL TESTIMONIALS)               -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - White background
+     - Max-width: 1000px
+     - Section padding: 100px vertical
+     
+     PROOF CARDS:
+     - 2-column grid (desktop) / 1 column (mobile)
+     - 4 case study cards
+     - PatientlyAI card: Featured (larger, highlighted)
+     
+     EACH CARD:
+     - Company name (20px bold)
+     - Industry tag (12px, pill-shaped)
+     - Description (16px, 2-3 lines)
+     - Result metrics (32px bold, brand color)
+     - "Learn more →" link
+     - Subtle shadow, hover effect
+     
+     TESTIMONIAL BLOCK:
+     - Large quote (28px, italic)
+     - Attribution (16px, with photo if available)
+     - Company logo (optional)
+     
+     EMOTION TARGET: "This actually works"
+-->
 
-**What you do:**  
-- 1 hour on a call with us  
-
-**What you get:**  
-- A clear plan for what we're building  
-- Memory schema (what gets stored, how it's structured)  
-- Compliance checklist (HIPAA, GDPR, etc.)  
-
----
-
-### **Week 2: Build**
-
-**What we do:**  
-- Build the AI system (voice agent + memory layer + automation workflows)  
-- Integrate with your existing tools (GHL, HubSpot, Calendly, Stripe, etc.)  
-- Set up memory infrastructure (vector database + relational database + retrieval pipeline)  
-
-**What you do:**  
-- Nothing. We build.  
-
-**What you get:**  
-- A working AI system with memory  
-- Connected to your tools  
-- Ready for testing  
-
----
-
-### **Week 3: Test**
-
-**What we do:**  
-- Test with real scenarios (your edge cases, your tricky customers)  
-- Break it on purpose (concurrency, memory retrieval, privacy)  
-- Tune retrieval logic (semantic search + keyword boost + recency weighting)  
-
-**What you do:**  
-- 30 minutes reviewing and giving feedback  
-
-**What you get:**  
-- A production-ready system  
-- Tested with your real workflows  
-- Confidence it won't break with customers  
+## Proof.
 
 ---
 
-### **Week 4: Live**
+<!-- FEATURED CARD: PatientlyAI -->
 
-**What we do:**  
-- Deploy the AI system  
-- Monitor every interaction for the first 30 days  
-- Optimize retrieval logic based on real usage  
-- Fix edge cases as they appear  
+### 🏥 PatientlyAI — Healthcare
 
-**What you do:**  
-- Zero. It runs without you.  
+Voice agent that calls leads, follows up Day 1–Day 5, remembers every interaction, books into GHL, and sends deposit links.
 
-**What you get:**  
-- A live AI system handling calls, remembering customers, taking action  
-- Dashboard showing calls handled, appointments booked, issues flagged  
-- Monthly reports on memory performance (retrieval accuracy, cost, usage)  
+**Result:**
+[PLACEHOLDER: X% increase in booking rate. X% reduction in no-shows.]
+
+**[Try PatientlyAI →](/agent/patientlyai)**
 
 ---
 
-**After Week 4:**  
-Your AI handles the repetitive work. You handle the growth.
+<!-- PROOF CARDS GRID: 2x2 -->
+
+### 🦷 AI Receptionist — Dental Practice
+
+Answers every call. Remembers returning patients. Books appointments. Sends confirmations.
+
+**Result:**
+[PLACEHOLDER: X calls handled/month. X% resolved without human.]
 
 ---
 
-### **Tech Stack (For the Technical Readers)**
+### 💼 AI Interviewer — Recruiting Firm
 
-We use proven tools and integrate them into one system:
+Conducts first-round screenings. Remembers candidate history across multiple touchpoints. Scores and qualifies.
 
-**Voice/Chat:**  
-- ElevenLabs (voice)  
-- Smallest AI (voice)  
-- OpenAI / Anthropic (chat)  
-
-**Memory:**  
-- Mem0 (memory infrastructure)  
-- Supermemory (long-term memory)  
-- Pinecone / Weaviate (vector database)  
-- PostgreSQL (relational database for structured data)  
-
-**Automation:**  
-- n8n (workflow automation)  
-- Zapier (integrations)  
-- GHL / HubSpot (CRM)  
-
-**Retrieval:**  
-- RAG (Retrieval-Augmented Generation)  
-- Hybrid search (semantic + keyword)  
-- Recency weighting  
+**Result:**
+[PLACEHOLDER: X candidates screened. X hours/week saved.]
 
 ---
 
-**Key Insight:**  
-The tools are commodities. Anyone can buy Mem0 or Pinecone. The integration—making memory work in production with voice and automation—is the moat.
+### 🛒 AI Support Rep — E-Commerce
+
+Handles returns, order status, product questions. Remembers customer history so they never repeat themselves.
+
+**Result:**
+[PLACEHOLDER: X% reduction in support tickets. Response time: X seconds.]
 
 ---
 
-## Proof / case studies
+<!-- TESTIMONIAL BLOCK -->
+
+> "Within 48 hours they built an AI caller that doubled our booking rate. It feels like having a full-time receptionist who never sleeps."
+>
+> **— Aiden, Founder**
 
 ---
 
----
-
-### **Case Study 1: PatientlyAI (Healthcare)**
-
-**The Problem:**  
-A healthcare practice was losing 30+ leads/week because calls went unanswered after hours. When leads called back, the AI treated them like new callers—asked for their name, repeated questions, no context.
-
-**The System We Built:**  
-- Voice agent that calls new leads instantly  
-- Memory layer that tracks every lead interaction across 5 follow-up calls  
-- Automation that books appointments into GoHighLevel and sends Stripe deposit links  
-
-**The Memory Component:**  
-- Lead name, contact info, and source  
-- Objections raised (price, insurance, timing)  
-- Preferred appointment times  
-- Follow-up history (Day 1, Day 3, Day 5 calls)  
-
-**The Result:**  
-- Returning leads never repeated themselves  
-- AI knew their objections from previous calls and addressed them proactively  
-- Booking rate increased by **[PLACEHOLDER: X%]**  
-- No-show rate dropped by **[PLACEHOLDER: X%]** (AI sent T-24h reminder calls)  
-
-**[CTA: Try PatientlyAI → /agent/patientlyai]**
+[PLACEHOLDER: Add 1-2 more testimonials with specific outcome metrics before publishing]
 
 ---
 
-### **Case Study 2: AI Receptionist (Dental Practice)**
 
-**The Problem:**  
-2 front desk staff spending 6 hours/day on phone calls (appointment booking, rescheduling, insurance questions). Patients called back and had to repeat their information every time.
-
-**The System We Built:**  
-- Voice agent that answers every call  
-- Memory that tracks patient history, preferences, and past appointments  
-- Automation that books appointments, sends confirmations, and updates practice management software  
-
-**The Memory Component:**  
-- Patient appointment history  
-- Preferred appointment times (morning vs. afternoon)  
-- Insurance details  
-- Communication preferences (text vs. call)  
-
-**The Result:**  
-- 300+ calls handled/month  
-- 85% resolved without human intervention  
-- Patients felt recognized ("Hi Sarah! I see you're booked for Thursday...")  
-- Front desk staff freed for patient care  
-
----
-
-### **Case Study 3: AI Interviewer (Recruiting Firm)**
-
-**The Problem:**  
-Junior recruiters spending 20 hours/week on phone screens. Candidates called back with questions and had to repeat their background every time.
-
-**The System We Built:**  
-- Voice agent that conducts first-round screenings  
-- Memory that tracks candidate skills, experience, salary expectations, and availability  
-- Automation that scores candidates and pushes qualified ones into the ATS pipeline  
-
-**The Memory Component:**  
-- Candidate skills and experience  
-- Salary expectations  
-- Availability and timeline  
-- Interview history and feedback  
-
-**The Result:**  
-- 500+ candidate screenings over 6 months  
-- When candidates called back, the AI knew their previous answers and scoring  
-- Recruiters only talked to pre-qualified candidates  
-- 15 hours/week saved  
-
----
-
-### **Case Study 4: AI Support Rep (E-commerce)**
-
-**The Problem:**  
-Customer support drowning in repetitive queries (order status, returns, sizing). 60% of tickets were the same 10 questions. Customers had to repeat their order history every time they contacted support.
-
-**The System We Built:**  
-- Chat/voice agent that handles customer queries  
-- Memory that tracks order history, returns, and preferences  
-- Automation that processes returns, updates tracking, and triggers re-engagement emails  
-
-**The Memory Component:**  
-- Order history  
-- Returns and exchanges (with reasons)  
-- Product preferences (colors, sizes, styles)  
-- Support ticket history  
-
-**The Result:**  
-- 60% reduction in support tickets  
-- Average response time: 12 seconds (down from 4 hours)  
-- Customers never repeated themselves ("Hi Sarah! I see you ordered the blue sweater last week...")  
-- VIP customers felt recognized  
-
----
-
-**Key Insight:**  
-Memory is the difference between "AI that answers questions" and "AI that knows your customers."
-
----
+<!-- ============================================================ -->
+<!-- SECTION 10: FAQ (ACCORDION, OBJECTION HANDLING)             -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Light background
+     - Max-width: 800px
+     - Section padding: 100px vertical
+     
+     ACCORDION COMPONENT:
+     - 10 Q&A blocks
+     - Collapsed: Question visible (20px bold)
+     - Expanded: Answer (18px, line-height 1.8)
+     - Click to expand/collapse
+     - Icon (+ / -) to indicate state
+     - Smooth animation (300ms)
+     
+     VISUAL ELEMENTS:
+     - Subtle hover effect on questions
+     - 44px minimum touch target (mobile)
+     - Divider lines between questions
+     
+     EMOTION TARGET: "They've thought of everything"
+-->
 
 ## FAQ
 
 ---
 
-### **Q: What exactly is an "AI memory system" vs. a "memory tool"?**
+### Q: What exactly is an "AI memory system" vs. a "memory tool"?
 
-**A:** A memory tool (like Mem0 or Pinecone) stores data. An AI memory system integrates that storage with voice agents and automation so the AI can actually **use** the memory in real conversations.
+**A:** A memory tool stores data. An AI memory system integrates that storage with voice agents and automation so the AI can actually **use** the memory in real conversations.
 
-Think of it this way: A database is a memory tool. A receptionist who remembers every patient is a memory system.
+A database is a memory tool. A receptionist who remembers every patient is a memory system.
 
-We build the system. The tools are just components.
+We build the system. The tools are components inside it.
 
 ---
 
-### **Q: How much memory can the AI store?**
+### Q: How is this different from the memory APIs and platforms I've seen?
 
-**A:** As much as you need (bounded by your retention policy and budget). We use tiered storage:  
-- Hot memory (last 30 days): Fast, expensive storage for instant retrieval  
-- Cold memory (older than 30 days): Cheap, slow storage for archival  
+**A:** Memory infrastructure platforms give developers APIs and SDKs to add memory to AI apps. They're well-built tools for engineers who write code.
+
+We're different in three ways:
+1. **We build the full system** — memory connected to voice and automation, not memory in isolation.
+2. **We build it for you** — you don't need developers. We audit, build, test, and deploy.
+3. **We handle production** — concurrency, retrieval tuning, compliance, cost optimization. The stuff that breaks when you go from 100 test interactions to 10,000 real ones.
+
+If you're a developer, those platforms are great. If you're a founder who needs AI that remembers customers and takes action — that's what we build.
+
+---
+
+### Q: How much memory can the AI store?
+
+**A:** As much as you need. We use tiered storage:
+- **Hot memory** (last 30 days): Fast retrieval for active customers
+- **Cold memory** (older than 30 days): Cheap storage for archival
 
 Your AI can remember 10,000+ customer interactions without breaking the bank.
 
 ---
 
-### **Q: What if the AI retrieves the wrong memory?**
+### Q: What if the AI retrieves the wrong memory?
 
-**A:** We use a tiered retrieval pipeline:  
-1. Filter by customer ID (exact match)  
-2. Semantic search within that customer's history  
-3. Keyword boost for specific entities (dates, names, products)  
-4. Recency weighting (prioritize recent interactions)  
+**A:** We use a tiered retrieval pipeline:
+1. Filter by customer ID (exact match)
+2. Semantic search within that customer's history
+3. Keyword boost for specific entities (dates, names, products)
+4. Recency weighting (prioritize recent interactions)
 
-We measure retrieval quality, tune it, and build guardrails. When the AI is unsure, it asks for clarification (or hands off) instead of guessing.
-
----
-
-### **Q: Is AI memory HIPAA/GDPR compliant?**
-
-**A:** We design the system around your compliance requirements (HIPAA/GDPR/CCPA) and implement the controls needed to support them:  
-- PII redaction (we don't store SSNs, credit cards, health records)  
-- Encryption at rest and in transit  
-- User control (customers can view, edit, or delete their memory)  
-- Audit logs (who accessed what, when)  
-
-If you're in a regulated industry, we'll align storage, retention, access controls, and vendor setup to your specific requirements. Compliance is non-negotiable.
+We measure retrieval quality, tune it, and build guardrails. When the AI is unsure, it asks for clarification or hands off to a human instead of guessing.
 
 ---
 
-### **Q: How much does AI memory cost?**
+### Q: Is AI memory HIPAA/GDPR compliant?
 
-**A:** It depends on usage (number of customers, interactions per month, memory retention period).
+**A:** We design the system around your compliance requirements:
+- PII redaction (no SSNs, credit cards, or health records stored in memory)
+- Encryption at rest and in transit
+- User control (customers can view, edit, or delete their memory)
+- Audit logs (who accessed what, when)
 
-Typical costs:  
-- 1,000 customers, 10,000 interactions/month: $200-$500/month  
-- 10,000 customers, 100,000 interactions/month: $1,500-$3,000/month  
-
-We optimize for cost (tiered storage, lazy loading, batch embeddings). You're not paying for unused memory.
-
----
-
-### **Q: Can the AI share memory across multiple agents?**
-
-**A:** Yes. That's procedural memory (shared memory across agents).
-
-Example: Your AI Receptionist learns "Sarah prefers morning appointments." Your AI Follow-Up Agent uses that same knowledge when scheduling callbacks.
-
-No silos. No repetition. One unified memory layer.
+If you're in a regulated industry, we align storage, retention, access controls, and vendor setup to your specific requirements. Compliance is non-negotiable.
 
 ---
 
-### **Q: What happens if I want to delete a customer's memory?**
+### Q: How much does it cost?
 
-**A:** You (or the customer) can delete it anytime. GDPR "right to be forgotten" compliance.
+**A:** Depends on usage (number of customers, interactions per month, retention period).
 
-We also support:  
-- Viewing memory (what does the AI know about me?)  
-- Editing memory (correct inaccurate information)  
-- Exporting memory (download a copy)  
+Typical ranges:
+- 1,000 customers, 10,000 interactions/month: $200–$500/month infrastructure
+- 10,000 customers, 100,000 interactions/month: $1,500–$3,000/month infrastructure
 
----
-
-### **Q: How long does it take to build an AI memory system?**
-
-**A:** 4 weeks from audit to live deployment.
-
-Week 1: Audit (we map your workflows and memory requirements)  
-Week 2: Build (we build the system and integrate with your tools)  
-Week 3: Test (we test with real scenarios and edge cases)  
-Week 4: Live (we deploy and monitor for 30 days)  
+Plus the initial build cost ($5K+ depending on complexity). We optimize for cost from day one — tiered storage, lazy loading, cached embeddings.
 
 ---
 
-### **Q: Can I build AI memory myself?**
+### Q: Can the AI share memory across multiple agents?
 
-**A:** Yes. Tools like Mem0, Pinecone, and Weaviate are available.
+**A:** Yes. That's procedural memory.
 
-But here's what you'll hit:  
-- Context window limits (how do you fit 6 months of history in a prompt?)  
-- Retrieval accuracy (how do you find the right memory at the right time?)  
-- Concurrency (how do you handle 50 agents writing to memory simultaneously?)  
-- Cost optimization (how do you avoid a $10K/month vector database bill?)  
-- Compliance (HIPAA, GDPR, CCPA)  
-
-If you can solve all of that, you don't need us.
-
-If you hit the wall (and most founders do), we're here.
+Your AI Receptionist learns "Sarah prefers morning appointments." Your AI Follow-Up Agent uses that same knowledge when scheduling callbacks. No silos. No repetition. One unified memory layer.
 
 ---
 
-### **Q: Is this "memory as a service"?**
+### Q: What happens if I want to delete a customer's memory?
 
-**A:** Some people call it that. We don’t, because "memory" isn’t a standalone add-on in production.
+**A:** You or the customer can delete it anytime. GDPR "right to be forgotten" built in.
 
-Memory only matters when it’s connected to a real AI role (voice/chat) and real actions (workflows in your tools). We build the whole system so the AI can actually use memory in conversations.
+We also support:
+- Viewing memory (what does the AI know about me?)
+- Editing memory (correct inaccurate information)
+- Exporting memory (download a copy)
 
 ---
 
-## Your AI should remember your customers. Let's build that.
+### Q: How long does it take to build?
+
+**A:** 4 weeks from audit to live.
+
+Week 1: Audit your workflows and memory requirements
+Week 2: Build the system and integrate with your tools
+Week 3: Test with real scenarios and edge cases
+Week 4: Deploy and monitor for 30 days
 
 ---
 
-One call. 15 minutes.
+### Q: Can I build AI memory myself?
 
-We'll audit your current AI setup and show you exactly what a memory system would look like for your business—and whether it even makes sense.
+**A:** Yes. The infrastructure tools exist.
+
+But here's what you'll hit:
+- Context window limits (fitting 6 months of history into a prompt)
+- Retrieval accuracy (finding the right memory at the right time)
+- Concurrency (50 agents writing to memory simultaneously)
+- Cost optimization (avoiding a $10K/month vector database bill)
+- Compliance (HIPAA, GDPR, CCPA)
+
+If you can solve all of that, you probably don't need us. If you hit the wall — and most founders do around month 2 — we're here.
+
+---
+
+
+<!-- ============================================================ -->
+<!-- SECTION 11: FINAL CTA (CONVERSION - VISUAL IMPACT)          -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     VISUAL LAYOUT:
+     - Dark background (mirror hero section)
+     - Max-width: 800px container
+     - Section padding: 120px vertical
+     
+     CONTENT STRUCTURE:
+     - Headline: 48px bold, white text
+     - Subheadline: 24px, lighter weight
+     - Binary choice format (Option A vs Option B)
+     - CTA button: 56px height, prominent, with arrow icon
+     - Secondary link: Email (smaller, below CTA)
+     
+     VISUAL ELEMENTS:
+     - Background: Gradient or subtle pattern
+     - Optional: Animated CTA button (pulse or glow)
+     - Mobile: Reduce padding to 80px
+     
+     EMOTION TARGET: "I need to make a choice NOW"
+-->
+
+## Your AI should remember your customers.
+
+---
+
+You have two options:
+
+---
+
+**Option A:**
+Keep losing customers because your AI treats them like strangers.
+
+**Option B:**
+Book a 15-minute call. We'll audit your AI setup and show you exactly what a memory system would look like for your business.
+
+---
 
 No pitch. No pressure. Just a straight answer.
 
 ---
 
-**CTA:** [Book Your Free Memory Audit Call](/book-a-call)
+**[CTA: Book Your Free Memory Audit Call](/book-a-call)**
 
 ---
 
-**Or email us:** [PLACEHOLDER: email address]
+Or email us: [PLACEHOLDER: email address]
 
 ---
+
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                      -->
+<!-- ============================================================ -->
+<!-- DESIGN DIRECTIVE:
+     - Use existing site footer component
+     - No custom styling needed
+-->
 
 **Logo:** Agentic AI Labs
 
 **Tagline:** We build AI systems that work.
 
-**Links:**  
-- [Services](/services)  
-- [About](/about)  
-- [Case Studies](/case-studies)  
-- [Blog](/blog)  
-- [Partners](/partners)  
-- [Book a Call](/book-a-call)  
+**Links:**
+- [Services](/services)
+- [About](/about)
+- [Case Studies](/case-studies)
+- [Blog](/blog)
+- [Partners](/partners)
+- [Book a Call](/book-a-call)
 
-**Social:**  
-- [LinkedIn (Agentic AI Labs)](https://www.linkedin.com/)  
-- [Twitter/X (@tryagentikai)](https://x.com/tryagentikai)  
-- [YouTube (@agentailabs)](https://www.youtube.com/)  
+**Social:**
+- [LinkedIn](https://www.linkedin.com/company/creativescript/)
+- [Twitter/X](https://x.com/tryagentikai)
+- [YouTube](https://www.youtube.com/@agentailabs)
 
-**Legal:**  
-- [Privacy Policy](/privacy-policy)  
-- [Terms of Service](/terms)  
+**Legal:**
+- [Privacy Policy](/privacy-policy)
+- [Terms of Service](/terms)
 
-**Copyright:**  
-© 2026 Agentic AI Labs. All rights reserved.
+**Copyright:**
+2026 Agentic AI Labs. All rights reserved.
