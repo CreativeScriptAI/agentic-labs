@@ -19,6 +19,7 @@ const eslintConfig = [
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-non-null-asserted-optional-chain": "warn",
       "import/no-anonymous-default-export": "warn",
+      "react/no-unescaped-entities": "off",
     },
   },
 ];
