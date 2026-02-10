@@ -17,9 +17,8 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const links = [
     { id: 1, name: "Services", to: `${countryPrefix}/services/` },
     { id: 2, name: "About", to: `${countryPrefix}/about/` },
-    { id: 3, name: "Case Studies", to: `#` },
     { id: 4, name: "Blog", to: `${countryPrefix}/blog/` },
-    { id: 5, name: "Partners", to: `#` },
+    { id: 5, name: "AI Workshop", to: `${countryPrefix}/ai-clarity-workshop/` },
   ];
 
   if (isMobile) {
@@ -67,12 +66,11 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
           <li key={link.id}>
             <Link
               href={link.to}
-              className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                currentPath === link.to.replace(/\/$/, "") ||
-                currentPath === link.to
+              className={`text-sm font-medium transition-colors hover:text-blue-600 ${currentPath === link.to.replace(/\/$/, "") ||
+                  currentPath === link.to
                   ? "text-blue-600 font-semibold"
                   : "text-[#475569] dark:text-gray-200"
-              }`}
+                }`}
               onClick={onLinkClick}
             >
               {link.name}

@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
 const CALENDLY_LINK =
   "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11";
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile, { passive: true });
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  /* Removed unused isMobile state */
 
   return (
-    <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] mb-[60px] min-h-[calc(100vh-64px)] flex items-center">
+    <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] pt-32 pb-16 sm:py-24 flex items-center">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
