@@ -131,7 +131,31 @@ const TestimonialsSection = () => {
   const isClient = useIsClient();
 
   // Fetch testimonials from API (always on client-side)
-  const { testimonials, isLoading, error, refetch } = useTestimonialsQuery();
+  const { testimonials: fetchedTestimonials, isLoading, error, refetch } = useTestimonialsQuery();
+
+  const workshopTestimonials = React.useMemo(
+    () => [
+      {
+        _id: "workshop-aiden",
+        name: "Aiden, Founder",
+        designation: "Founder, SaaS",
+        review: "Clear, actionable insights in under 30 minutes",
+        videoURL: "https://d34gt69eepjr0b.cloudfront.net/aiden_testimonial.mp4",
+      },
+      {
+        _id: "workshop-olumide",
+        name: "Olumide Gbenro",
+        designation: "Founder, Creatoor AI",
+        review: "This workshop changed how we think about AI",
+        videoURL: "https://d34gt69eepjr0b.cloudfront.net/olu_2f.mp4",
+      },
+    ],
+    []
+  );
+
+  const testimonials = React.useMemo(() => {
+    return [...workshopTestimonials, ...(fetchedTestimonials || [])];
+  }, [fetchedTestimonials, workshopTestimonials]);
 
   // Show skeleton during loading only
   const shouldShowSkeleton = isLoading;
@@ -258,9 +282,8 @@ const TestimonialsSection = () => {
     const basePercent = currentIndex * stepPercent;
     if (trackRef.current) {
       trackRef.current.style.transition = "none";
-      trackRef.current.style.transform = `translateX(-${
-        basePercent - percentDelta
-      }%)`;
+      trackRef.current.style.transform = `translateX(-${basePercent - percentDelta
+        }%)`;
     }
   };
 
@@ -392,7 +415,7 @@ const TestimonialsSection = () => {
                     {/* Testimonial Content */}
                     <div className="flex-grow flex flex-col overflow-hidden">
                       {testimonial.videoURL &&
-                      testimonial.videoURL.trim() !== "" ? (
+                        testimonial.videoURL.trim() !== "" ? (
                         <div
                           className="mb-4 sm:mb-6 flex flex-col"
                           style={{ height: "240px" }}
@@ -401,9 +424,8 @@ const TestimonialsSection = () => {
                             <iframe
                               width="560"
                               height="315"
-                              src={`https://www.youtube.com/embed/${
-                                testimonial.videoURL.split("/")[3]
-                              }`}
+                              src={`https://www.youtube.com/embed/${testimonial.videoURL.split("/")[3]
+                                }`}
                               title="YouTube video player"
                               frameBorder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -414,7 +436,7 @@ const TestimonialsSection = () => {
                             <video
                               controls
                               preload="metadata"
-                              className="w-full h-full rounded-lg object-cover"
+                              className="w-full h-full rounded-lg object-contain bg-black"
                               poster=""
                             >
                               <source

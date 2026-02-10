@@ -13,10 +13,13 @@ const HeroSection = () => {
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 text-center font-mondwest px-4">
-              <span className="block">Your AI works in a demo.</span>
-              <span className="block">It breaks with real customers.</span>
-              <span className="block text-blue-600">We fix that.</span>
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-4 sm:mb-6 text-center font-mondwest tracking-tight"
+              style={{ textWrap: "balance" }}
+            >
+              <span>Your AI works in a demo. </span>
+              <span className="text-gray-500">It breaks with real customers. </span>
+              <span className="text-blue-600 block sm:inline">We fix that.</span>
             </h1>
 
             {/* Subtitle */}
