@@ -15,15 +15,11 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const currentPath = router.pathname.replace(/\/$/, "") || "/";
 
   const links = [
-    { id: 1, name: "Blog", to: `${countryPrefix}/blog/` },
+    { id: 1, name: "Services", to: `${countryPrefix}/services/` },
     { id: 2, name: "About", to: `${countryPrefix}/about/` },
-    { id: 3, name: "Services", to: `${countryPrefix}/services/` },
-    {
-      id: 4,
-      name: "AI Clarity Workshop",
-      to: `${countryPrefix}/ai-clarity-workshop/`,
-    },
-    // { id: 4, name: "Contact", to: `${countryPrefix}/contact/` },
+    { id: 3, name: "Case Studies", to: `#` },
+    { id: 4, name: "Blog", to: `${countryPrefix}/blog/` },
+    { id: 5, name: "Partners", to: `#` },
   ];
 
   if (isMobile) {

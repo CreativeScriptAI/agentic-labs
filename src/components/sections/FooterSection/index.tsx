@@ -19,8 +19,18 @@ const FooterSection = () => {
             Agentic AI Labs
           </h2>
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
-            The home of the AI Workforce
+            We build AI systems that work.
           </p>
+        </div>
+
+        {/* Footer Links */}
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <Link href="/services/" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Services</Link>
+          <Link href="/about/" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">About</Link>
+          <Link href="#" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Case Studies</Link>
+          <Link href="/blog/" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Blog</Link>
+          <Link href="#" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Partners</Link>
+          <Link href="https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Book a Call</Link>
         </div>
 
         {/* Social Media Links */}
@@ -108,7 +118,7 @@ const FooterSection = () => {
             </Link>
           </p>
           <p className="text-gray-500 text-xs sm:text-sm mt-1">
-            © 2025 All rights reserved.
+            © 2026 Agentic AI Labs. All rights reserved.
           </p>
         </div>
       </div>

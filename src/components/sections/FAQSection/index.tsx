@@ -11,54 +11,44 @@ interface FAQSectionProps {
 
 const defaultFaqs: FAQ[] = [
   {
-    question: "What is an AI Workforce?",
+    question: 'What exactly is an "AI system" vs an "AI tool"?',
     answer:
-      "Every day, AI is becoming an increasingly integral part of our lives. At Inflection AI, we're rapidly innovating— pushing boundaries, experimenting boldly, and continuously learning —to create solutions centered around human experiences.",
+      "An AI tool does one thing. A chatbot chats. An automation triggers a workflow. A voice agent makes calls. Our AI system connects all three: the voice talks to your customer, the memory remembers them, and the automation takes action. One integrated system, not three disconnected tools.",
   },
   {
-    question: "How do I build an agent?",
+    question: "How fast can you build it?",
     answer:
-      "Building an agent involves defining its purpose, selecting the right tools and frameworks, training it with relevant data, and implementing it in your workflow. Our platform provides step-by-step guidance throughout this process.",
+      "Most systems are live in 4 weeks. Week 1: we audit your workflows. Week 2: we build. Week 3: we test with real scenarios. Week 4: you're live with monitoring.",
   },
   {
-    question: "What are tools?",
+    question: "What if the AI says something wrong to a customer?",
     answer:
-      "Tools are the building blocks that enable agents to perform specific tasks. They can include APIs, databases, machine learning models, and other software components that agents use to complete their objectives.",
+      "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails — things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
   },
   {
-    question: "Which LLMs do you support?",
+    question: "What tools do you integrate with?",
     answer:
-      "We support a wide range of Large Language Models including GPT-4, Claude, PaLM, and other leading models. Our platform is designed to be model-agnostic, allowing you to choose the best LLM for your specific use case.",
+      "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack — and custom APIs. The system plugs into your stack, not the other way around.",
   },
   {
-    question: "How does Relevance AI protect my privacy",
+    question: "How much does it cost?",
     answer:
-      "We implement enterprise-grade security measures including end-to-end encryption, strict access controls, and compliance with major privacy regulations like GDPR and CCPA. Your data is never used to train our models without explicit consent.",
+      "Projects typically start at $5,000 for the initial build, with ongoing monthly maintenance for monitoring and optimization. Every project is scoped based on your specific workflows. We'll give you a clear number before you commit to anything.",
   },
   {
-    question: "Who typically hires Agentic AI Labs?",
+    question: "Can the AI hand off to a real person?",
     answer:
-      "Founders, operations leaders, and CX teams across healthcare, real estate, B2B SaaS, logistics, and financial services. If you've got repetitive calls, chats, or back-office workflows that drain time, we tailor agents to your stack and compliance needs.",
+      "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure — via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
   },
   {
-    question: "How fast can we launch a production agent?",
+    question: "Who are your typical clients?",
     answer:
-      "Most teams see their first deployed agent in seven days. Day 1: workflow mapping and guardrails. Days 2–4: build plus integrations with HubSpot, Salesforce, Twilio, Zendesk, or internal APIs. Days 5–7: human QA, monitoring, and a live launch with rollback plans.",
+      "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work — calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
   },
   {
-    question: "Can AI agents safely hand off to humans?",
+    question: "What happens after the system goes live?",
     answer:
-      "Absolutely. We configure confidence thresholds and policy triggers so the agent escalates via live transfer, ticket creation, or Slack/Teams alerts, attaching transcripts and context. That keeps customers supported while humans handle judgment calls.",
-  },
-  {
-    question: "Do we get monitoring and ongoing optimization?",
-    answer:
-      "Yes. Every deployment includes dashboards for transcripts, resolution rates, CSAT, and error spikes. During a 30-day optimization window we review conversations, tune prompts, and ship updates—extendable for ongoing managed support.",
-  },
-  {
-    question: "How do pricing and engagement models work?",
-    answer:
-      "We start with a scoped pilot—fixed price for the first workflow—then expand into retainers or per-agent subscriptions once ROI is proven. You keep full ownership of prompts, integrations, and infrastructure choices.",
+      "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan — we watch the system, tune it, and ship updates as your business evolves.",
   },
 ];
 
@@ -83,14 +73,11 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
-            FREQUENTLY ASKED QUESTIONS
+            QUESTIONS
           </p>
-          <h2 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
-            AI is becoming an increasingly
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4">
+            You&apos;re probably wondering.
           </h2>
-          <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
-            integral part of our lives.
-          </h3>
         </div>
 
         {/* FAQ Accordion */}
