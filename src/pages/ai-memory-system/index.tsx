@@ -2,6 +2,8 @@ import { NextPageWithLayout } from "../../types";
 import MetaConfig from "src/components/MetaConfig";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 // Dynamic imports for below-fold sections (Next.js best practice)
 const FAQSection = dynamic(() => import("../ai-memory-system/components/FAQSection"), { ssr: true });
@@ -58,6 +60,20 @@ const CTAButton = ({
 );
 
 const AIMemorySystemPage: NextPageWithLayout = () => {
+    const [showStickyCTA, setShowStickyCTA] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 800) {
+                setShowStickyCTA(true);
+            } else {
+                setShowStickyCTA(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     const meta = {
         title: "AI Memory System: Build AI That Actually Remembers Your Customers | Agentic AI Labs",
         description: "You spent $50K on an AI receptionist. Your customer called twice. The AI asked for their name both times. You just paid for a parrot with a phone line.",
@@ -138,113 +154,215 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
 
-            {/* Hero Section - Minimal & Clean */}
-            <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] pt-32 pb-16 sm:py-24 flex items-center">
-                <div className="w-full px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
-                        <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
-                            {/* Main Headline */}
-                            <h1
-                                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-4 sm:mb-6 text-center font-mondwest tracking-tight"
-                                style={{ textWrap: "balance" }}
-                            >
-                                <span>You spent $50K on an AI receptionist. </span>
-                                <span className="text-gray-500">Your customer called twice. </span>
-                                <span className="text-blue-600 block sm:inline">The AI asked for their name both times.</span>
-                            </h1>
+            {/* Hero Section - Split Screen with Chat */}
+            <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)]">
+                <div className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+                    <div className="max-w-7xl mx-auto">
+                        {/* Split Layout */}
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                            {/* Left: Hero Content - Streamlined */}
+                            <div className="space-y-8">
+                                {/* Main Headline - Shorter & Punchier */}
+                                <div className="space-y-4">
+                                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] font-mondwest tracking-tight">
+                                        Your AI has the memory of a goldfish
+                                    </h1>
 
-                            {/* Subtitle */}
-                            <p className="text-center text-slate-600 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-3xl px-4">
-                                Your AI forgets your customers because memory tools ≠ memory systems.
-                            </p>
-                            <p className="text-center text-slate-800 text-base sm:text-lg lg:text-xl font-medium leading-relaxed max-w-3xl px-4">
-                                We build the full stack (voice + memory + automation) so your AI actually remembers who it's talking to.
-                            </p>
+                                    <p className="text-xl sm:text-2xl text-gray-600 font-sfpro leading-relaxed">
+                                        It forgot your customer. <span className="text-red-600 font-semibold">They booked with a competitor.</span>
+                                    </p>
+                                </div>
 
-                            {/* CTAs */}
-                            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-4">
-                                <CTAButton href="/book-a-call" label="Book a Free Memory Audit" />
-                                <a
-                                    href="#the-moment"
-                                    className="text-sm sm:text-base font-medium text-blue-600 hover:text-blue-700 transition-colors px-4 py-3"
-                                >
-                                    See What Breaks &darr;
-                                </a>
+                                {/* Value Prop - Single Line */}
+                                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200 shadow-sm">
+                                    <p className="text-base sm:text-lg text-gray-800 font-sfpro leading-relaxed">
+                                        We build AI memory systems that actually remember your customers—so you don't lose $50K patients to forgetful bots.
+                                    </p>
+                                </div>
+
+                                {/* CTAs */}
+                                <div className="flex flex-col sm:flex-row items-start gap-4">
+                                    <CTAButton href="/book-a-call" label="Book Free Memory Audit" />
+                                    <a
+                                        href="#what-is-ai-memory"
+                                        className="group flex items-center gap-2 text-base font-medium text-blue-600 hover:text-blue-700 transition-colors px-4 py-3 font-sfpro"
+                                    >
+                                        <span>See how it works</span>
+                                        <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                {/* Social Proof & Testimonial */}
+                                <div className="space-y-6 pt-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="flex -space-x-2">
+                                            <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">A</div>
+                                            <div className="w-8 h-8 rounded-full bg-purple-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">B</div>
+                                            <div className="w-8 h-8 rounded-full bg-green-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">C</div>
+                                        </div>
+                                        <p className="text-sm text-gray-600 font-sfpro">
+                                            Trusted by <span className="font-semibold text-gray-900">50+ AI-first companies</span>
+                                        </p>
+                                    </div>
+
+                                    {/* Injected Testimonial - Minimal & Fast */}
+                                    <div className="border-l-2 border-blue-200 pl-4 py-1">
+                                        <p className="text-gray-600 italic font-sfpro text-sm leading-relaxed">
+                                            "Our previous AI forgot patients the moment they hung up. Agentic's memory system remembers their kids' names 6 months later."
+                                        </p>
+                                        <p className="text-gray-900 font-bold text-xs mt-2 font-sfpro">— Dr. Sarah Jenkins, Dental Director</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right: Chat Conversation Preview - Keep as is */}
+                            <div className="lg:pl-8">
+                                <div className="space-y-4">
+                                    {/* Header */}
+                                    <div className="text-center lg:text-left mb-4">
+                                        <p className="text-sm font-medium text-gray-500 font-sfpro mb-1">This happened last Tuesday:</p>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-[#0A1128] font-mondwest">
+                                            The $50K Mistake
+                                        </h3>
+                                    </div>
+
+
+                                    {/* Animated Chat - Wednesday (The Problem) - Moved to Hero */}
+                                    <div className="bg-white rounded-xl shadow-lg border-2 border-red-300 overflow-hidden hover:shadow-xl transition-shadow mb-6">
+                                        {/* Chat Header */}
+                                        <div className="bg-gradient-to-r from-red-50 to-red-100 border-b border-red-200 px-5 py-4">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <p className="font-bold text-red-700 font-sfpro text-sm">
+                                                        3:42 PM — Wednesday
+                                                    </p>
+                                                    <p className="text-gray-600 font-sfpro text-xs mt-1">
+                                                        Return call - Reschedule request
+                                                    </p>
+                                                </div>
+                                                <div className="bg-red-100 border border-red-300 rounded-full px-3 py-1">
+                                                    <p className="text-red-700 font-sfpro text-xs font-medium">
+                                                        ✗ Failed
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Chat Messages - Animated Sequence */}
+                                        <div className="p-5 space-y-3 bg-gradient-to-b from-red-50/30 to-white min-h-[320px]">
+                                            {/* AI Message - No Memory */}
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-50px" }}
+                                                transition={{ duration: 0.4, delay: 0.1 }}
+                                                className="flex items-start gap-2"
+                                            >
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                                                    AI
+                                                </div>
+                                                <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 shadow-sm max-w-[75%] border-2 border-red-200">
+                                                    <p className="text-gray-800 font-sfpro text-sm leading-relaxed">
+                                                        Hi! How can I help you today?
+                                                    </p>
+                                                    <div className="flex items-center gap-1 mt-2 text-red-600">
+                                                        <span className="text-xs">⚠️</span>
+                                                        <p className="font-sfpro text-xs italic">
+                                                            No memory of Monday's call
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+
+                                            {/* Customer Message */}
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-50px" }}
+                                                transition={{ duration: 0.4, delay: 0.8 }}
+                                                className="flex items-start gap-2 justify-end"
+                                            >
+                                                <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm max-w-[75%]">
+                                                    <p className="text-white font-sfpro text-sm leading-relaxed">
+                                                        I need to reschedule my Thursday appointment.
+                                                    </p>
+                                                </div>
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 text-xs font-bold shadow-sm">
+                                                    S
+                                                </div>
+                                            </motion.div>
+
+                                            {/* AI Message - Asking Name */}
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-50px" }}
+                                                transition={{ duration: 0.4, delay: 1.5 }}
+                                                className="flex items-start gap-2"
+                                            >
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                                                    AI
+                                                </div>
+                                                <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 shadow-sm max-w-[75%] border-2 border-red-200">
+                                                    <p className="text-gray-800 font-sfpro text-sm leading-relaxed">
+                                                        Sure! What's your name?
+                                                    </p>
+                                                    <div className="flex items-center gap-1 mt-2 text-red-600">
+                                                        <span className="text-xs">⚠️</span>
+                                                        <p className="font-sfpro text-xs italic">
+                                                            Should already know this
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+
+                                            {/* Customer Message - Frustrated */}
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true, margin: "-50px" }}
+                                                transition={{ duration: 0.4, delay: 2.2 }}
+                                                className="flex items-start gap-2 justify-end"
+                                            >
+                                                <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm max-w-[75%]">
+                                                    <p className="text-white font-sfpro text-sm leading-relaxed">
+                                                        ...Sarah. I called Monday.
+                                                    </p>
+                                                </div>
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 text-xs font-bold shadow-sm">
+                                                    S
+                                                </div>
+                                            </motion.div>
+
+                                            {/* Call Ended */}
+                                            <div className="flex items-center justify-center py-3">
+                                                <div className="bg-red-100 border-2 border-red-400 rounded-full px-4 py-2 shadow-sm">
+                                                    <p className="text-red-700 font-sfpro text-xs font-bold">
+                                                        📞 Call ended → Booked with competitor
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Impact Statement */}
+                                    <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-600 rounded-r-lg p-4">
+                                        <p className="text-red-900 font-sfpro text-sm font-bold">
+                                            Lost: $50K/year patient
+                                        </p>
+                                        <p className="text-red-800 font-sfpro text-xs mt-1">
+                                            Because your AI has the memory of a goldfish.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {/* Section 1: The Moment (Story-Driven Pain) */}
-            <Section id="the-moment">
-                <div className="max-w-3xl mx-auto">
-                    {/* Section Header */}
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest mb-8 text-center">
-                        This happened last Tuesday.
-                    </h2>
-
-                    {/* Timeline */}
-                    <div className="space-y-8 border-l-4 border-blue-600 pl-6 sm:pl-8">
-                        {/* Monday 10:15 AM */}
-                        <div className="relative">
-                            <div className="absolute -left-[30px] sm:-left-[34px] w-4 h-4 rounded-full bg-blue-600 border-4 border-white" />
-                            <p className="font-bold text-blue-600 font-sfpro text-sm sm:text-base mb-2">
-                                10:15 AM — Monday
-                            </p>
-                            <p className="text-gray-700 font-sfpro text-base sm:text-lg mb-3">
-                                Sarah calls your dental practice.
-                            </p>
-                            <div className="space-y-2 text-gray-600 font-sfpro text-sm sm:text-base italic">
-                                <p><strong>AI Receptionist:</strong> "Hi! How can I help you today?"</p>
-                                <p><strong>Sarah:</strong> "I need to book a cleaning."</p>
-                                <p><strong>AI:</strong> "Great! How about Thursday at 2 PM?"</p>
-                                <p><strong>Sarah:</strong> "Perfect."</p>
-                                <p><strong>AI:</strong> "Done. You'll get a confirmation text."</p>
-                            </div>
-                        </div>
-
-                        {/* Wednesday 3:42 PM */}
-                        <div className="relative">
-                            <div className="absolute -left-[30px] sm:-left-[34px] w-4 h-4 rounded-full bg-blue-600 border-4 border-white" />
-                            <p className="font-bold text-blue-600 font-sfpro text-sm sm:text-base mb-2">
-                                3:42 PM — Wednesday
-                            </p>
-                            <p className="text-gray-700 font-sfpro text-base sm:text-lg mb-3">
-                                Sarah calls back.
-                            </p>
-                            <div className="space-y-2 text-gray-600 font-sfpro text-sm sm:text-base italic">
-                                <p><strong>AI Receptionist:</strong> "Hi! How can I help you today?"</p>
-                                <p><strong>Sarah:</strong> "I need to reschedule my Thursday appointment."</p>
-                                <p><strong>AI:</strong> "Sure! What's your name?"</p>
-                                <p><strong>Sarah:</strong> "...Sarah. I called Monday. You booked me for Thursday."</p>
-                                <p><strong>AI:</strong> "Let me look that up. Can you spell your last name?"</p>
-                            </div>
-                        </div>
-
-                        {/* Wednesday 3:43 PM */}
-                        <div className="relative">
-                            <div className="absolute -left-[30px] sm:-left-[34px] w-4 h-4 rounded-full bg-red-600 border-4 border-white" />
-                            <p className="font-bold text-red-600 font-sfpro text-sm sm:text-base mb-2">
-                                3:43 PM — Wednesday
-                            </p>
-                            <div className="space-y-2 text-gray-700 font-sfpro text-base sm:text-lg">
-                                <p>Sarah hangs up.</p>
-                                <p>She calls your competitor.</p>
-                                <p>Books with them instead.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Final Impact */}
-                    <div className="mt-8 p-6 bg-red-50 border-l-4 border-red-600 rounded-r-lg">
-                        <p className="text-red-900 font-sfpro text-lg sm:text-xl font-bold">
-                            You just lost a $50K/year patient because your AI has the memory of a goldfish.
-                        </p>
-                    </div>
-                </div>
-            </Section>
-
+            {/* Full Chat Conversation Section - Horizontal Cards */}
             {/* Section 2: The Uncomfortable Truth - Simplified */}
             <Section bgColor="gray">
                 <div className="max-w-4xl mx-auto">
@@ -369,75 +487,278 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                             The database knows <strong>what</strong> happened. Memory knows <strong>why</strong> it matters.
                         </p>
                     </div>
+
+                    {/* Brain-Centered Infographic */}
+                    <div className="mt-16 mb-8">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-[#0A1128] font-mondwest mb-8 text-center">
+                            How it works: One brain, multiple agents
+                        </h3>
+
+                        <div className="relative max-w-4xl mx-auto py-12">
+                            {/* Central Brain */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                                <div className="relative">
+                                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
+                                        <svg className="w-16 h-16 sm:w-20 sm:h-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                        </svg>
+                                    </div>
+                                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                        <p className="text-sm font-bold text-gray-900 font-sfpro">AI Memory</p>
+                                        <p className="text-xs text-gray-600 font-sfpro">Central Brain</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Agent Nodes - Positioned in a circle */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+                                {/* Voice Agent - Top Left */}
+                                <div className="flex flex-col items-center">
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-blue-300 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+                                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-sm font-semibold text-gray-900 font-sfpro mt-3 text-center">Voice Agent</p>
+                                    <p className="text-xs text-gray-600 font-sfpro text-center">Calls & Conversations</p>
+                                </div>
+
+                                {/* Receptionist Agent - Top Right */}
+                                <div className="flex flex-col items-center">
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-purple-300 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+                                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-sm font-semibold text-gray-900 font-sfpro mt-3 text-center">Receptionist</p>
+                                    <p className="text-xs text-gray-600 font-sfpro text-center">Scheduling & Booking</p>
+                                </div>
+
+                                {/* Follow-up Agent - Bottom Left */}
+                                <div className="flex flex-col items-center">
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-green-300 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+                                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-sm font-semibold text-gray-900 font-sfpro mt-3 text-center">Follow-up Agent</p>
+                                    <p className="text-xs text-gray-600 font-sfpro text-center">Reminders & Nurture</p>
+                                </div>
+
+                                {/* Support Agent - Bottom Right */}
+                                <div className="flex flex-col items-center">
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-orange-300 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+                                        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                        </svg>
+                                    </div>
+                                    <p className="text-sm font-semibold text-gray-900 font-sfpro mt-3 text-center">Support Agent</p>
+                                    <p className="text-xs text-gray-600 font-sfpro text-center">Help & Questions</p>
+                                </div>
+                            </div>
+
+                            {/* Connection Lines - SVG overlay */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none -z-0" style={{ top: 0, left: 0 }}>
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                        <polygon points="0 0, 10 3, 0 6" fill="#9CA3AF" />
+                                    </marker>
+                                </defs>
+                                {/* Lines connecting agents to brain - will be visible on larger screens */}
+                                <line x1="20%" y1="30%" x2="50%" y2="50%" stroke="#E5E7EB" strokeWidth="2" markerEnd="url(#arrowhead)" className="hidden md:block" />
+                                <line x1="80%" y1="30%" x2="50%" y2="50%" stroke="#E5E7EB" strokeWidth="2" markerEnd="url(#arrowhead)" className="hidden md:block" />
+                                <line x1="20%" y1="70%" x2="50%" y2="50%" stroke="#E5E7EB" strokeWidth="2" markerEnd="url(#arrowhead)" className="hidden md:block" />
+                                <line x1="80%" y1="70%" x2="50%" y2="50%" stroke="#E5E7EB" strokeWidth="2" markerEnd="url(#arrowhead)" className="hidden md:block" />
+                            </svg>
+                        </div>
+
+                        {/* Explanation */}
+                        <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 max-w-3xl mx-auto mt-8">
+                            <p className="text-blue-900 font-sfpro text-base sm:text-lg leading-relaxed text-center">
+                                <span className="font-bold">All agents share one memory.</span> When the Voice Agent learns something, the Receptionist remembers it. When Support answers a question, Follow-up knows the context. No repetition. No frustration.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </Section>
 
-            {/* Three Types of Memory */}
+            {/* Three Types of Memory - Minimal & Premium */}
             <Section id="memory-types">
-                <div className="max-w-4xl mx-auto">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-[#0A1128] font-mondwest mb-8 text-center">
-                        The three types of AI memory
-                    </h3>
-                    <p className="text-gray-700 font-sfpro text-base sm:text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-                        Modern AI memory systems (like the ones we build at Agentic AI Labs) use a <strong>layered architecture</strong>—similar to how human memory works:
-                    </p>
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h3 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest mb-4">
+                            The three types of AI memory
+                        </h3>
+                        <p className="text-gray-600 font-sfpro text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+                            Modern AI memory systems use a <span className="text-blue-600 font-semibold">layered architecture</span>—similar to how human memory works
+                        </p>
+                    </div>
 
-                    <div className="space-y-6">
-                        {/* Memory Type 1 */}
-                        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="text-3xl sm:text-4xl font-bold text-blue-600/15 font-mondwest">01</span>
-                                <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
-                                    Short-Term Memory (Working Memory)
-                                </h4>
+                    <div className="grid lg:grid-cols-3 gap-6 mb-10">
+                        {/* Memory Type 1 - Short-Term */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
+                            {/* Header with gradient accent */}
+                            <div className="bg-gradient-to-br from-blue-50 to-white p-6 border-b border-gray-100">
+                                <div className="flex items-center gap-3 mb-3">
+                                    <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-sm">
+                                        <span className="text-white font-bold text-xl font-mondwest">01</span>
+                                    </div>
+                                    <h4 className="text-lg font-bold text-[#0A1128] font-mondwest leading-tight">
+                                        Short-Term Memory
+                                    </h4>
+                                </div>
+                                <p className="text-sm text-gray-500 font-sfpro italic">Working Memory</p>
                             </div>
-                            <div className="space-y-3 text-sm sm:text-base text-gray-700 font-sfpro">
-                                <p><strong>What it does:</strong> Holds the immediate context of the current conversation.</p>
-                                <p><strong>Example:</strong> "You just told me you need an AI receptionist for a 5-doctor practice. Got it. Let me ask about your current call volume..."</p>
-                                <p><strong>Technical reality:</strong> This lives in the AI's prompt or temporary RAM. Limited by the model's context window (usually 8K-128K tokens).</p>
-                                <p><strong className="text-red-600">When it breaks:</strong> Long conversations exceed the context window. The AI "forgets" the beginning of the call by the end.</p>
+
+                            {/* Content */}
+                            <div className="p-6 space-y-4">
+                                <div>
+                                    <p className="text-xs font-bold text-blue-600 uppercase tracking-wide mb-1 font-sfpro">What it does</p>
+                                    <p className="text-sm text-gray-700 font-sfpro leading-relaxed">
+                                        Holds the immediate context of the current conversation.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1 font-sfpro">Example</p>
+                                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed italic">
+                                        "You just told me you need an AI receptionist for a 5-doctor practice. Got it."
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1 font-sfpro">Technical reality</p>
+                                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed">
+                                        Lives in the AI's prompt or temporary RAM. Limited by context window (8K-128K tokens).
+                                    </p>
+                                </div>
+
+                                <div className="pt-3 border-t border-red-100">
+                                    <p className="text-xs font-bold text-red-600 uppercase tracking-wide mb-1 font-sfpro">⚠️ When it breaks</p>
+                                    <p className="text-sm text-red-700 font-sfpro leading-relaxed">
+                                        Long conversations exceed the context window. The AI "forgets" the beginning.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Memory Type 2 */}
-                        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="text-3xl sm:text-4xl font-bold text-blue-600/15 font-mondwest">02</span>
-                                <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
-                                    Long-Term Memory (Episodic + Semantic Memory)
-                                </h4>
+                        {/* Memory Type 2 - Long-Term */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
+                            {/* Header with gradient accent */}
+                            <div className="bg-gradient-to-br from-purple-50 to-white p-6 border-b border-gray-100">
+                                <div className="flex items-center gap-3 mb-3">
+                                    <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center shadow-sm">
+                                        <span className="text-white font-bold text-xl font-mondwest">02</span>
+                                    </div>
+                                    <h4 className="text-lg font-bold text-[#0A1128] font-mondwest leading-tight">
+                                        Long-Term Memory
+                                    </h4>
+                                </div>
+                                <p className="text-sm text-gray-500 font-sfpro italic">Episodic + Semantic Memory</p>
                             </div>
-                            <div className="space-y-3 text-sm sm:text-base text-gray-700 font-sfpro">
-                                <p><strong>What it does:</strong> Stores past interactions, customer history, preferences, and learned patterns.</p>
-                                <p><strong>Episodic Memory:</strong> Specific events. "Sarah called on Feb 5 and asked about HIPAA compliance."</p>
-                                <p><strong>Semantic Memory:</strong> General knowledge. "Dental practices care about HIPAA. Real estate firms care about lead response time."</p>
-                                <p><strong>Example:</strong> When Sarah calls back 2 weeks later, the AI remembers her previous questions, her timeline, and her concerns—without asking again.</p>
-                                <p><strong>Technical reality:</strong> Stored in vector databases (embeddings for semantic search) + relational databases (structured event logs). Retrieval-Augmented Generation (RAG) pulls relevant memories into the current prompt.</p>
-                                <p><strong className="text-red-600">When it breaks:</strong> Poor retrieval logic. The AI remembers everything but can't find the right memory at the right time. Or it pulls irrelevant memories and pollutes the context.</p>
+
+                            {/* Content */}
+                            <div className="p-6 space-y-4">
+                                <div>
+                                    <p className="text-xs font-bold text-purple-600 uppercase tracking-wide mb-1 font-sfpro">What it does</p>
+                                    <p className="text-sm text-gray-700 font-sfpro leading-relaxed">
+                                        Stores past interactions, customer history, preferences, and learned patterns.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <div>
+                                        <p className="text-xs font-semibold text-gray-700 font-sfpro">Episodic Memory:</p>
+                                        <p className="text-sm text-gray-600 font-sfpro leading-relaxed">
+                                            "Sarah called Feb 5 about HIPAA compliance."
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-semibold text-gray-700 font-sfpro">Semantic Memory:</p>
+                                        <p className="text-sm text-gray-600 font-sfpro leading-relaxed">
+                                            "Dental practices care about HIPAA."
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1 font-sfpro">Technical reality</p>
+                                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed">
+                                        Vector databases + RAG pulls relevant memories into the current prompt.
+                                    </p>
+                                </div>
+
+                                <div className="pt-3 border-t border-red-100">
+                                    <p className="text-xs font-bold text-red-600 uppercase tracking-wide mb-1 font-sfpro">⚠️ When it breaks</p>
+                                    <p className="text-sm text-red-700 font-sfpro leading-relaxed">
+                                        Poor retrieval logic. Can't find the right memory at the right time.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Memory Type 3 */}
-                        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-gray-200">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="text-3xl sm:text-4xl font-bold text-blue-600/15 font-mondwest">03</span>
-                                <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
-                                    Procedural Memory (Shared Memory Across Agents)
-                                </h4>
+                        {/* Memory Type 3 - Procedural */}
+                        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
+                            {/* Header with gradient accent */}
+                            <div className="bg-gradient-to-br from-green-50 to-white p-6 border-b border-gray-100">
+                                <div className="flex items-center gap-3 mb-3">
+                                    <div className="w-12 h-12 rounded-xl bg-green-600 flex items-center justify-center shadow-sm">
+                                        <span className="text-white font-bold text-xl font-mondwest">03</span>
+                                    </div>
+                                    <h4 className="text-lg font-bold text-[#0A1128] font-mondwest leading-tight">
+                                        Procedural Memory
+                                    </h4>
+                                </div>
+                                <p className="text-sm text-gray-500 font-sfpro italic">Shared Memory Across Agents</p>
                             </div>
-                            <div className="space-y-3 text-sm sm:text-base text-gray-700 font-sfpro">
-                                <p><strong>What it does:</strong> Stores how to perform tasks, successful action patterns, and shared knowledge across multiple AI agents.</p>
-                                <p><strong>Example:</strong> Your AI Receptionist learns that "Dr. Smith's patients prefer morning appointments." Your AI Follow-Up Agent uses that same knowledge when scheduling callbacks.</p>
-                                <p><strong>Technical reality:</strong> Multi-agent systems share a unified memory layer. Agent A writes to memory. Agent B reads from it. They collaborate without repeating work.</p>
-                                <p><strong className="text-red-600">When it breaks:</strong> Memory silos. Each agent has its own memory. Your customer repeats themselves to every AI they talk to.</p>
+
+                            {/* Content */}
+                            <div className="p-6 space-y-4">
+                                <div>
+                                    <p className="text-xs font-bold text-green-600 uppercase tracking-wide mb-1 font-sfpro">What it does</p>
+                                    <p className="text-sm text-gray-700 font-sfpro leading-relaxed">
+                                        Stores how to perform tasks and shared knowledge across multiple AI agents.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1 font-sfpro">Example</p>
+                                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed italic">
+                                        AI Receptionist learns "Dr. Smith's patients prefer mornings." AI Follow-Up Agent uses that knowledge.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1 font-sfpro">Technical reality</p>
+                                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed">
+                                        Multi-agent systems share a unified memory layer. They collaborate without repeating work.
+                                    </p>
+                                </div>
+
+                                <div className="pt-3 border-t border-red-100">
+                                    <p className="text-xs font-bold text-red-600 uppercase tracking-wide mb-1 font-sfpro">⚠️ When it breaks</p>
+                                    <p className="text-sm text-red-700 font-sfpro leading-relaxed">
+                                        Memory silos. Your customer repeats themselves to every AI they talk to.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mt-8 text-center">
-                        <p className="font-bold text-blue-900 font-sfpro text-base sm:text-lg">
-                            Key Insight: Most AI tools give you short-term memory (the conversation context). We build systems with all three layers—connected.
-                        </p>
+                    {/* Key Insight Box */}
+                    <div className="bg-gradient-to-r from-blue-50 via-purple-50 to-blue-50 rounded-2xl p-8 border border-blue-200 shadow-sm">
+                        <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                                <span className="text-white text-xl">💡</span>
+                            </div>
+                            <div>
+                                <p className="text-sm font-bold text-blue-900 uppercase tracking-wide mb-2 font-sfpro">Key Insight</p>
+                                <p className="text-blue-900 font-sfpro text-base sm:text-lg leading-relaxed">
+                                    Most AI tools give you <span className="font-bold">short-term memory</span> (the conversation context).
+                                    We build systems with <span className="font-bold">all three layers—connected</span>.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Section>
@@ -508,6 +829,40 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                     </p>
                 </div>
             </Section>
+            {/* Sticky Bottom CTA - Scroll Triggered */}
+            <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: showStickyCTA ? 0 : 100, opacity: showStickyCTA ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-blue-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] py-4 px-6 md:px-8 hidden md:flex items-center justify-between"
+            >
+                <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+                        AI
+                    </div>
+                    <div>
+                        <p className="font-bold text-gray-900 font-sfpro text-sm sm:text-base">
+                            Stop losing customers to forgetful AI
+                        </p>
+                        <p className="text-gray-500 font-sfpro text-xs sm:text-sm">
+                            Get a memory system that improves LTV by 40%
+                        </p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-6">
+                    <div className="flex -space-x-2">
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-600">A</div>
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-600">B</div>
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-600">+</div>
+                    </div>
+                    <Link
+                        href="/book-a-call"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg text-sm font-sfpro whitespace-nowrap transform hover:-translate-y-0.5"
+                    >
+                        Book Free Audit
+                    </Link>
+                </div>
+            </motion.div>
         </>
     );
 };
