@@ -508,7 +508,7 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                                     </li>
                                 </ul>
                                 <div className="mt-8 pt-4 border-t border-slate-800 text-xs text-slate-500 font-mono">
-                                    // Knows facts, misses context.
+                                    {"// Knows facts, misses context."}
                                 </div>
                             </div>
 
