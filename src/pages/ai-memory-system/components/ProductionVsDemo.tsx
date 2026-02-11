@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const Section = ({
     children,
     bgColor = "white",
@@ -23,125 +26,179 @@ const Section = ({
     </div>
 );
 
-// Issue Card Component
-const IssueCard = ({
-    number,
-    title,
-    problem,
-    whatBreaks,
-    howWeFix,
-}: {
-    number: string;
-    title: string;
-    problem: string;
-    whatBreaks: string;
-    howWeFix: string;
-}) => (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
-        <h4 className="text-lg font-bold text-gray-900 mb-4 font-sfpro">
-            {number}. {title}
-        </h4>
-        <div className="space-y-3 text-sm sm:text-base text-gray-700 font-sfpro">
-            <p><strong className="text-gray-900">The Problem:</strong> {problem}</p>
-            <p><strong className="text-red-600">What breaks:</strong> {whatBreaks}</p>
-            <p><strong className="text-blue-600">How we fix it:</strong> {howWeFix}</p>
+// Data for the accordion
+const issues = [
+    {
+        number: "01",
+        title: "Context Window Limits",
+        summary: "Why your AI forgets older interactions even with 'large context' models.",
+        problem: "Most AI models have a context window (GPT-4: 128K tokens). Sounds like a lot, but a single customer with 50 interactions over 6 months generates 200K+ tokens. Your AI can't fit it all in the prompt.",
+        whatBreaks: "The AI 'forgets' older interactions. Your long-term VIP customers get treated like new sign-ups.",
+        howWeFix: "Intelligent Semantic Retrieval. We don't dump history into the prompt. We use semantic search to pull only the exact relevant memories for the current specific query."
+    },
+    {
+        number: "02",
+        title: "Retrieval Accuracy (The 'Wrong Sarah' Problem)",
+        summary: "Vector search is fuzzy. It often pulls the wrong memory.",
+        problem: "Your AI has 10,000 customer memories. When Sarah calls, vector search might pull a memory from 'Sara' or a similar context from another client.",
+        whatBreaks: "The AI hallucinates facts about the customer. Embarrassing and trust-destroying.",
+        howWeFix: "Tiered Retrieval Pipeline: 1. Hard-filter by Customer ID (Exact Match). 2. Semantic search within that ID. 3. Recency weighting. 4. Keyword boosting."
+    },
+    {
+        number: "03",
+        title: "Concurrency & Race Conditions",
+        summary: "What happens when 50 people talk to your AI at once?",
+        problem: "Two agents try to write to the same customer's memory at the same time. Agent A writes 'Prefers Mornings'. Agent B writes 'Prefers Afternoons' 100ms later.",
+        whatBreaks: "Memory corruption. The AI operates on stale or conflicting data.",
+        howWeFix: "Transactional Writes & Optimistic Locking. We treat memory updates like financial transactions. Atomic, consistent, isolated."
+    },
+    {
+        number: "04",
+        title: "Memory Pollution (Signal vs Noise)",
+        summary: "90% of conversation history is useless small talk.",
+        problem: "If you store every 'Hello' and 'Thanks', your retrieval system gets clogged with junk. Relevant operational data gets buried.",
+        whatBreaks: "Retrieval latency increases, and the AI misses key facts because they are drowned out by noise.",
+        howWeFix: "LLM-Based Summarization. Background agents compress conversations into key facts ('Insights') and discard the fluff before storage."
+    },
+    {
+        number: "05",
+        title: "Data Privacy & Compliance",
+        summary: "Storing PII in plain text is a liability.",
+        problem: "You are storing names, phones, and potentially health/financial data. If you use a standard vector DB, you might be violating GDPR/HIPAA.",
+        whatBreaks: "You fail an audit. You get sued.",
+        howWeFix: "PII Redaction & Pointer System. We store references ('Patient ID 12345') in the vector DB, not the raw data. Sensitive data stays in your secure, compliant database."
+    },
+    {
+        number: "06",
+        title: "Cost at Scale",
+        summary: "Vector DBs get expensive, fast.",
+        problem: "Storing 100k+ embedded vectors and querying them on every single message turn burns cash.",
+        whatBreaks: "Your infrastructure bill eats your entire margin.",
+        howWeFix: "Hot/Cold Storage Architecture. Active conversations stay in fast cache (Redis/Hot Vector). Old history moves to cheaper cold storage (S3/Parquet) and is only thawed when needed."
+    }
+];
+
+const ProductionIssuesAccordion = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    return (
+        <div className="space-y-4">
+            {issues.map((issue, index) => {
+                const isOpen = openIndex === index;
+                return (
+                    <div
+                        key={index}
+                        className={`bg-white rounded-xl border transition-all duration-300 overflow-hidden ${isOpen ? "border-blue-500 shadow-md" : "border-gray-200 hover:border-blue-300"
+                            }`}
+                    >
+                        <button
+                            onClick={() => setOpenIndex(isOpen ? null : index)}
+                            className="w-full flex items-center justify-between p-5 md:p-6 text-left group"
+                        >
+                            <div className="flex items-center gap-4 md:gap-6">
+                                <span className={`font-mondwest text-xl md:text-2xl ${isOpen ? "text-blue-600" : "text-gray-300 group-hover:text-blue-400"}`}>
+                                    {issue.number}
+                                </span>
+                                <div>
+                                    <h4 className={`font-bold font-sfpro text-lg md:text-xl transition-colors ${isOpen ? "text-blue-900" : "text-gray-900"}`}>
+                                        {issue.title}
+                                    </h4>
+                                    {!isOpen && (
+                                        <p className="text-sm text-gray-500 font-sfpro mt-1 hidden sm:block">
+                                            {issue.summary}
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+                            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-500"}`}>
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </button>
+
+                        <AnimatePresence>
+                            {isOpen && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                >
+                                    <div className="px-6 pb-6 md:px-20 md:pb-8 pt-0">
+                                        <div className="h-px w-full bg-gray-100 mb-6"></div>
+                                        <div className="space-y-6 text-sm md:text-base font-sfpro">
+                                            <div>
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">The Problem</p>
+                                                <p className="text-gray-700 leading-relaxed">{issue.problem}</p>
+                                            </div>
+                                            <div className="grid md:grid-cols-2 gap-6">
+                                                <div className="bg-red-50 p-4 rounded-lg border border-red-100">
+                                                    <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2">❌ What Breaks</p>
+                                                    <p className="text-red-800 leading-relaxed font-medium">{issue.whatBreaks}</p>
+                                                </div>
+                                                <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                                    <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">✅ How We Fix It</p>
+                                                    <p className="text-blue-800 leading-relaxed font-medium">{issue.howWeFix}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                );
+            })}
         </div>
-    </div>
-);
+    );
+};
 
 const ProductionVsDemo = () => {
     return (
         <Section bgColor="gray" id="production-vs-demo">
             <div className="max-w-4xl mx-auto">
                 {/* Section Header */}
-                <div className="text-center mb-8 sm:mb-12">
-                    <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 font-sfpro">
-                        TECHNICAL REALITY
+                <div className="text-center mb-12 sm:mb-16">
+                    <p className="text-red-500 font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 font-sfpro">
+                        Why Demos Don't Scale
                     </p>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest mb-6">
-                        Production-grade vs demo-grade memory
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-6">
+                        Production-grade vs demo-grade.
                     </h2>
-                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl">
-                        (what breaks at scale)
+                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                        It's easy to build a demo that remembers your name once. It's brutally hard to build a system that remembers 10,000 customers forever.
                     </p>
                 </div>
 
-                <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed font-sfpro mb-12">
-                    <p>Here's what nobody tells you about AI memory:</p>
-                    <p>It's easy to build a demo. It's brutally hard to build a system that works in production.</p>
-                    <p>We've taken over AI projects from founders who spent 3 months building "AI with memory." It worked great in testing. It broke with real customers.</p>
-                    <p className="font-bold text-gray-900 text-xl">Here's what breaks:</p>
-                </div>
+                {/* Accordion Component */}
+                <ProductionIssuesAccordion />
 
-                {/* Issues */}
-                <div className="space-y-6 mb-12">
-                    <IssueCard
-                        number="1"
-                        title="Context Window Limits"
-                        problem="Most AI models have a context window (how much text they can 'see' at once). GPT-4: 128K tokens. Claude: 200K tokens. Sounds like a lot. It's not. A single customer with 50 interactions over 6 months? That's 200K+ tokens of history. Your AI can't fit it all in the prompt."
-                        whatBreaks="The AI 'forgets' older interactions. It only remembers the last 10-20 conversations. Your long-term customers get treated like new customers."
-                        howWeFix="Intelligent memory retrieval. We don't dump the entire history into the prompt. We use semantic search to pull only the relevant memories for the current conversation. Sarah calls about rescheduling? We retrieve her appointment history and preferences. We don't load her entire 6-month conversation log."
-                    />
-
-                    <IssueCard
-                        number="2"
-                        title="Memory Retrieval Accuracy"
-                        problem="Your AI has 10,000 customer memories stored. When Sarah calls, it needs to find her memories—not someone else's. Sounds simple. It's not. Vector search (semantic similarity) can retrieve the wrong memories if the query is vague. Keyword search misses context. Hybrid search (combining both) requires careful tuning."
-                        whatBreaks="The AI pulls irrelevant memories. Sarah asks about her appointment. The AI references someone else's conversation. Embarrassing."
-                        howWeFix="Tiered retrieval pipeline: 1. Filter by customer ID (exact match) 2. Semantic search within that customer's history (find relevant past conversations) 3. Keyword boost for specific entities (appointment dates, product names, etc.) 4. Recency weighting (prioritize recent interactions over old ones)"
-                    />
-
-                    <IssueCard
-                        number="3"
-                        title="Concurrency and Race Conditions"
-                        problem="Your AI is handling 50 calls simultaneously. Two agents try to write to the same customer's memory at the same time."
-                        whatBreaks="Memory conflicts. Agent A writes 'Sarah prefers morning appointments.' Agent B writes 'Sarah prefers afternoon appointments' 2 seconds later. Which one is correct?"
-                        howWeFix="Transactional writes with conflict resolution. Last-write-wins for preferences. Append-only for event logs. Versioning for critical data."
-                    />
-
-                    <IssueCard
-                        number="4"
-                        title="Memory Pollution (Too Much Noise)"
-                        problem="Your AI remembers everything. Every 'hello,' every 'thank you,' every small talk comment. After 6 months, Sarah's memory is 90% noise, 10% signal."
-                        whatBreaks="The AI retrieves irrelevant memories. Sarah asks about pricing. The AI says, 'Last time you mentioned you like coffee!' Weird."
-                        howWeFix="Memory consolidation and summarization. We don't store every word. We store insights: 'Sarah is price-sensitive. She compared 3 vendors before choosing us.' 'Sarah prefers email follow-ups, not calls.' 'Sarah's decision timeline: wants to go live before March.' We compress 50 interactions into 5 key facts. Signal, not noise."
-                    />
-
-                    <IssueCard
-                        number="5"
-                        title="Data Integrity and Privacy"
-                        problem="You're storing customer data. HIPAA (healthcare), GDPR (EU), CCPA (California) all have rules."
-                        whatBreaks="You store sensitive data (SSN, health records, payment info) in memory. You get audited. You're non-compliant. You're sued."
-                        howWeFix="PII redaction: We don't store SSNs, credit cards, or health records in memory. We store references ('Patient ID 12345') and retrieve sensitive data from your secure system only when needed. User control: Customers can view, edit, or delete their memory. GDPR 'right to be forgotten' compliance. Encryption: Memory is encrypted at rest and in transit."
-                    />
-
-                    <IssueCard
-                        number="6"
-                        title="Cost at Scale"
-                        problem="Vector databases aren't free. Storing 100,000 customer memories with embeddings? That's $$$. Retrieving memories on every call? More $$$."
-                        whatBreaks="Your AI memory bill is higher than your revenue. You shut it down."
-                        howWeFix="Tiered storage: Hot memory (last 30 days) in fast, expensive storage. Cold memory (older than 30 days) in cheap, slow storage. Lazy loading: We don't load all memories upfront. We load on-demand. Batch embeddings: We don't re-embed the same text 100 times. We cache embeddings."
-                    />
-                </div>
-
-                {/* Comparison Table */}
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-                        <h4 className="font-bold text-red-900 mb-4 font-sfpro text-lg">Demo-Grade Memory:</h4>
-                        <ul className="space-y-2 text-red-800 font-sfpro text-sm sm:text-base">
-                            <li>• Works with 10-100 interactions</li>
-                            <li>• Breaks with concurrency</li>
-                            <li>• No privacy controls</li>
-                            <li>• Expensive at scale</li>
+                {/* Comparison Table - Redesigned as Summary Cards */}
+                <div className="grid md:grid-cols-2 gap-6 mt-16 text-center md:text-left">
+                    <div className="bg-white p-8 rounded-2xl border border-red-100 shadow-sm opacity-70 hover:opacity-100 transition-opacity">
+                        <h4 className="font-bold text-gray-900 mb-4 font-sfpro text-lg flex items-center justify-center md:justify-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                            The "Demo" Approach
+                        </h4>
+                        <ul className="space-y-3 text-gray-600 font-sfpro text-sm sm:text-base inline-block text-left">
+                            <li className="flex items-start gap-2">❌ Breaks after ~50 interactions</li>
+                            <li className="flex items-start gap-2">❌ "Hallucinates" wrong memories</li>
+                            <li className="flex items-start gap-2">❌ Non-compliant (GDPR/HIPAA risks)</li>
                         </ul>
                     </div>
-                    <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-                        <h4 className="font-bold text-green-900 mb-4 font-sfpro text-lg">Production-Grade Memory (What We Build):</h4>
-                        <ul className="space-y-2 text-green-800 font-sfpro text-sm sm:text-base">
-                            <li>• Works with 10,000+ interactions</li>
-                            <li>• Handles 50+ concurrent calls</li>
-                            <li>• HIPAA/GDPR compliant</li>
-                            <li>• Cost-optimized for scale</li>
+                    <div className="bg-white p-8 rounded-2xl border-2 border-blue-100 shadow-lg relative overflow-hidden">
+                        <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                            RECOMMENDED
+                        </div>
+                        <h4 className="font-bold text-blue-900 mb-4 font-sfpro text-lg flex items-center justify-center md:justify-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                            Production-Grade System
+                        </h4>
+                        <ul className="space-y-3 text-gray-700 font-sfpro text-sm sm:text-base inline-block text-left">
+                            <li className="flex items-start gap-2">✅ Scale to millions of vectors</li>
+                            <li className="flex items-start gap-2">✅ Atomic locking for concurrency</li>
+                            <li className="flex items-start gap-2">✅ Enterprise security & compliance</li>
                         </ul>
                     </div>
                 </div>
