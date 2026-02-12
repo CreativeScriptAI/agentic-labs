@@ -88,7 +88,7 @@ const ProductionIssuesAccordion = () => {
                 return (
                     <div
                         key={index}
-                        className={`bg-white rounded-xl border transition-all duration-300 overflow-hidden ${isOpen ? "border-blue-500 shadow-md" : "border-gray-200 hover:border-blue-300"
+                        className={`bg-white rounded-xl border transition-all duration-300 overflow-hidden scroll-mt-4 ${isOpen ? "border-blue-500 shadow-md" : "border-gray-200 hover:border-blue-300"
                             }`}
                     >
                         <button

@@ -261,7 +261,7 @@ const AIMemoryByRole = () => {
                     {roles.map((role, index) => {
                         const isOpen = openIndex === index;
                         return (
-                            <div key={index} className="group">
+                            <div key={index} className="group scroll-mt-4">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
                                     className={`w-full flex items-center justify-between p-6 xs:p-8 text-left transition-colors hover:bg-gray-50 ${isOpen ? "bg-gray-50" : "bg-white"}`}

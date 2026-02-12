@@ -128,7 +128,7 @@ const HowWeBuildIt = () => {
                     {weeks.map((week, index) => {
                         const isOpen = openIndex === index;
                         return (
-                            <div key={index} className="relative z-10">
+                            <div key={index} className="relative z-10 scroll-mt-4">
                                 <div
                                     className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen ? "border-blue-500 shadow-lg ring-1 ring-blue-100" : "border-gray-200 hover:border-blue-300 hover:shadow-md"
                                         }`}
