@@ -103,11 +103,9 @@ const ProductionIssuesAccordion = () => {
                                     <h4 className={`font-bold font-sfpro text-lg md:text-xl transition-colors ${isOpen ? "text-blue-900" : "text-gray-900"}`}>
                                         {issue.title}
                                     </h4>
-                                    {!isOpen && (
-                                        <p className="text-sm text-gray-500 font-sfpro mt-1 hidden sm:block">
-                                            {issue.summary}
-                                        </p>
-                                    )}
+                                    <p className="text-sm text-gray-500 font-sfpro mt-1 hidden sm:block">
+                                        {issue.summary}
+                                    </p>
                                 </div>
                             </div>
                             <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-500"}`}>
