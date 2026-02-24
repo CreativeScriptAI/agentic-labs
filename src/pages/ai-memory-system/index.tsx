@@ -201,9 +201,9 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                                 <div className="space-y-6 pt-4">
                                     <div className="flex items-center gap-3">
                                         <div className="flex -space-x-2">
-                                            <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">A</div>
-                                            <div className="w-8 h-8 rounded-full bg-purple-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">B</div>
-                                            <div className="w-8 h-8 rounded-full bg-green-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold">C</div>
+                                            <img src="/images/avatar-1.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                            <img src="/images/avatar-2.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                            <img src="/images/avatar-3.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
                                         </div>
                                         <p className="text-sm text-gray-600 font-sfpro">
                                             Proven on <span className="font-semibold text-gray-900">49,000+ minutes</span> of live calls
