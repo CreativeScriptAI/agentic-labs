@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
 const CALENDLY_LINK = "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11";
-const CANONICAL_URL = "https://www.tryagentikai.com/ai-receptionist-for-dental-practices";
+const CANONICAL_URL = "https://www.tryagentikai.com/ai-receptionist-for-medical-clinics";
 
 // ─── Reusable Section wrapper ──────────────────────────────────────────────────
 const Section = ({
@@ -105,10 +105,10 @@ const CountUp = ({ end, prefix = "", suffix = "" }: { end: number; prefix?: stri
 const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "AI Receptionist for Dental Practices",
+    name: "AI Receptionist for Medical Clinics",
     serviceType: "AI System",
     description:
-        "AI receptionist that answers every call, books appointments into Dentrix or Open Dental, and remembers every patient — 24/7 without human intervention.",
+        "AI receptionist that answers every call, books appointments into your EMR (Athena, Epic, or advancedMD), and remembers every patient — 24/7 without human intervention.",
     provider: {
         "@type": "Organization",
         name: "Agentic AI Labs",
@@ -124,7 +124,7 @@ const faqSchema = {
     mainEntity: [
         {
             "@type": "Question",
-            name: "How is this different from a dental answering service?",
+            name: "How is this different from a medical answering service?",
             acceptedAnswer: {
                 "@type": "Answer",
                 text: "Answering services take messages. They can't book appointments, access your scheduling software, or remember past conversations. Our AI Receptionist closes the loop completely — it books the appointment, sends the confirmation, and remembers the patient the next time they call. No follow-up required.",
@@ -135,7 +135,7 @@ const faqSchema = {
             name: "What scheduling software does it integrate with?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "We integrate with Dentrix, Open Dental, Athena, Eaglesoft, and most practice management systems with an API. We use GHL or n8n for the automation layer depending on your setup.",
+                text: "We integrate with Athena, Epic, AdvancedMD, DrChrono, and most practice management systems with an API. We use GHL or n8n for the automation layer depending on your setup.",
             },
         },
         {
@@ -151,14 +151,14 @@ const faqSchema = {
             name: "How much does it cost?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Dental practice AI Receptionist systems start at $2,000–$5,000 for the initial build, with $800–$2,000/month for ongoing monitoring and optimization. Every project is scoped based on your call volume, tools, and specific workflows.",
+                text: "Medical clinic AI Receptionist systems start at $2,000–$5,000 for the initial build, with $800–$2,000/month for ongoing monitoring and optimization. Every project is scoped based on your call volume, tools, and specific workflows.",
             },
         },
     ],
 };
 
 // ─── Page Component ────────────────────────────────────────────────────────────
-const AiReceptionistDentalPage: NextPageWithLayout = () => {
+const AiReceptionistMedicalPage: NextPageWithLayout = () => {
     const [showSticky, setShowSticky] = useState(false);
     const [activeLayer, setActiveLayer] = useState(0);
 
@@ -175,20 +175,20 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
     }, []);
 
     const meta = {
-        title: "AI Receptionist for Dental Practices | Agentic AI Labs",
+        title: "AI Receptionist for Medical Clinics | Agentic AI Labs",
         description:
-            "Dental practices lose $67K+/yr to a $37,230/yr front desk and missed after-hours calls. We build an AI receptionist that answers every call, books into Dentrix, and remembers every patient — 24/7.",
+            "Medical clinics lose $73K+/yr to a $38,500/yr front desk and missed after-hours calls. We build an AI receptionist that answers every call, books into your EMR, and remembers every patient — 24/7.",
         type: "Page",
         url: CANONICAL_URL,
         canonical: CANONICAL_URL,
         keywords: [
-            "AI receptionist for dental practices",
-            "AI receptionist for dentists",
-            "dental AI receptionist",
-            "AI answering service for dental offices",
-            "dental answering service alternative",
-            "dental practice automation",
-            "AI voice agent dental",
+            "AI receptionist for medical clinics",
+            "AI receptionist for clinics",
+            "medical AI receptionist",
+            "AI answering service for medical clinics",
+            "medical answering service alternative",
+            "medical clinic automation",
+            "AI voice agent medical",
         ],
     };
 
@@ -226,7 +226,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
             ),
-            body: "Books directly into Dentrix, Open Dental, Athena, or Eaglesoft. Sends SMS confirmations instantly. Fires T-24hr reminder calls automatically. No human in the loop for routine calls.",
+            body: "Books directly into Athena, Epic, AdvancedMD, DrChrono, or your EMR API. Sends SMS confirmations instantly. Fires T-24hr reminder calls automatically. No human in the loop for routine calls.",
             detail: "Your team handles the patients in the chair — not the ones on the phone.",
         },
     ];
@@ -239,12 +239,12 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
 
     const faqs = [
         {
-            q: "How is this different from a dental answering service?",
-            a: "Answering services take messages. They can't book appointments, access your scheduling software, or remember past conversations. That's why searches for \"dental answering service\" are down 88% on Google — practices have been through that experience and moved on. Our AI closes the loop completely: books the appointment, sends the confirmation, remembers the patient next time. No follow-up required.",
+            q: "How is this different from a medical answering service?",
+            a: "Answering services take messages. They can't book appointments, access your scheduling software, or remember past conversations. That's why searches for \"medical answering service\" are down 88% on Google — practices have been through that experience and moved on. Our AI closes the loop completely: books the appointment, sends the confirmation, remembers the patient next time. No follow-up required.",
         },
         {
             q: "What scheduling software does it integrate with?",
-            a: "We integrate with the software you already use: Dentrix, Open Dental, Athena, Eaglesoft, and most practice management systems with an API. We use GHL or n8n for the automation layer depending on your setup. If you're unsure — ask us on the call. We'll tell you in 5 minutes.",
+            a: "We integrate with the software you already use: Athena, Epic, AdvancedMD, DrChrono, and most practice management systems with an API. We use GHL or n8n for the automation layer depending on your setup. If you're unsure — ask us on the call. We'll tell you in 5 minutes.",
         },
         {
             q: "What if the AI says something wrong to a patient?",
@@ -252,7 +252,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
         },
         {
             q: "Can it handle after-hours calls and weekends?",
-            a: "Yes — that's one of the main reasons dental practices use it. Calls at 9pm, Saturday morning, or during a busy stretch — the AI handles them the same as any other call. A patient who calls at 10pm gets booked and confirmed. They're in your calendar before you open on Monday.",
+            a: "Yes — that's one of the main reasons medical clinics use it. Calls at 9pm, Saturday morning, or during a busy stretch — the AI handles them the same as any other call. A patient who calls at 10pm gets booked and confirmed. They're in your calendar before you open on Monday.",
         },
         {
             q: "How does the memory actually work?",
@@ -260,7 +260,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
         },
         {
             q: "How much does it cost?",
-            a: "Dental practice AI Receptionist systems start at $2,000–$5,000 for the initial build, with $800–$2,000/month for ongoing monitoring and optimization. Every project is scoped to your call volume, tools, and workflows. We give you a clear number before you commit. No vague estimates.",
+            a: "Medical clinic AI Receptionist systems start at $2,000–$5,000 for the initial build, with $800–$2,000/month for ongoing monitoring and optimization. Every project is scoped to your call volume, tools, and workflows. We give you a clear number before you commit. No vague estimates.",
         },
     ];
 
@@ -281,7 +281,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             <li><span className="text-gray-300">/</span></li>
                             <li><span className="text-gray-400">AI Systems</span></li>
                             <li><span className="text-gray-300">/</span></li>
-                            <li className="text-gray-800 font-medium">AI Receptionist for Dental Practices</li>
+                            <li className="text-gray-800 font-medium">AI Receptionist for Medical Clinics</li>
                         </ol>
                     </nav>
                 </div>
@@ -314,7 +314,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase py-1.5 px-3 rounded-full font-sfpro"
                             >
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                                AI Receptionist · Dental Practices
+                                AI Receptionist · Medical Clinics
                             </motion.div>
 
                             {/* H1 */}
@@ -325,7 +325,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#0A1128] leading-[1.1] font-mondwest tracking-tight"
                             >
                                 AI Receptionist for{" "}
-                                <span className="text-blue-600">Dental Practices</span>
+                                <span className="text-blue-600">Medical Clinics</span>
                             </motion.h1>
 
                             {/* Subheadline */}
@@ -335,7 +335,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 transition={{ duration: 0.5, delay: 0.18 }}
                                 className="text-lg text-gray-600 leading-relaxed font-sfpro max-w-xl"
                             >
-                                Answers every call. Books directly into Dentrix or Open Dental. Remembers
+                                Answers every call. Books directly into your EMR (Athena, Epic, or advancedMD). Remembers
                                 returning patients. Sends confirmations. Runs 24/7 — without a front desk
                                 staff member on the phone.
                             </motion.p>
@@ -398,8 +398,8 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 </div>
                                 <div className="px-6 py-5 space-y-3">
                                     {[
-                                        { label: "Front desk salary (BLS 2024)", val: "$37,230 / yr" },
-                                        { label: "Missed after-hours appointments", val: "~$30,000 / yr" },
+                                        { label: "Front desk salary (BLS 2024)", val: "$38,500 / yr" },
+                                        { label: "Missed after-hours appointments", val: "~$35,000 / yr" },
                                     ].map((row, i) => (
                                         <div key={i} className="flex items-center justify-between">
                                             <span className="text-sm text-gray-600 font-sfpro">{row.label}</span>
@@ -408,7 +408,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                     ))}
                                     <div className="pt-3 mt-1 border-t border-gray-100 flex items-center justify-between">
                                         <span className="text-sm font-bold text-gray-800 font-sfpro">Total problem</span>
-                                        <span className="text-base font-bold text-red-600 font-mondwest">$67,000+ / yr</span>
+                                        <span className="text-base font-bold text-red-600 font-mondwest">$73,500+ / yr</span>
                                     </div>
                                 </div>
                                 <div className="bg-green-50 border-t border-green-100 px-6 py-4">
@@ -431,10 +431,10 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs font-bold text-blue-800 font-sfpro leading-relaxed">
-                                        DECA Dental Group deployed Pearl AI across 9 US states (Feb 2026).
+                                        Searches for \"medical clinic AI\" have grown 100% in 12 months.
                                     </p>
                                     <p className="text-xs text-blue-600 mt-0.5 font-sfpro">
-                                        Source: Dentistry Today, Feb 25 2026 · The industry is moving.
+                                        Source: Google Trends, United States · The industry is moving.
                                     </p>
                                 </div>
                             </div>
@@ -452,20 +452,20 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     Your front desk is your most expensive bottleneck.
                 </h2>
                 <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-10">
-                    If you run a dental practice, your front desk staff spends 4–6 hours every day answering
+                    If you run a medical clinic, your front desk staff spends 4–6 hours every day answering
                     the same calls. Appointment booking. Rescheduling. Insurance questions. Confirmation
                     reminders.
                 </p>
                 <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-10">
-                    The median dental receptionist salary is{" "}
-                    <strong className="text-gray-900">$37,230 per year</strong> — that's according to the
+                    The median medical receptionist salary is{" "}
+                    <strong className="text-gray-900">$38,500 per year</strong> — that's according to the
                     U.S. Bureau of Labor Statistics. For that money, you get someone who can only answer one
                     call at a time, can't work after 5pm, and is probably already stretched too thin.
                 </p>
                 <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-12">
                     And that's when someone picks up. When they're with a patient at the desk, the phone rings
                     out. When the office is closed, calls go to voicemail. Most patients don't leave one.{" "}
-                    <strong className="text-gray-900">They just call the next dentist.</strong>
+                    <strong className="text-gray-900">They just call the next clinic.</strong>
                 </p>
 
                 {/* Reddit quote */}
@@ -484,17 +484,13 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <blockquote className="text-gray-800 font-sfpro text-base leading-relaxed italic pt-4">
-                        "I opened my dermatology practice 18 months ago. Things are going well, too well,
-                        actually. I went from 12 patients a day to 28 in a year and a half. The problem is my
-                        overhead has scaled way faster than my revenue. I started with one front desk person and
-                        one MA. I've now added a second MA and a billing coordinator, and I still need more
-                        help."
+                        "My no show rate is atrocious - easily 60-70%. This is refractory to overbooking and patient calls (families confirm they will be here the day before then suddenly change their minds."
                     </blockquote>
                     <footer className="mt-4 text-xs text-gray-500 font-sfpro flex items-center gap-2">
                         <span className="inline-block bg-orange-100 text-orange-700 px-2 py-0.5 rounded font-bold text-[10px] uppercase tracking-wider">
-                            r/smallbusiness
+                            r/medicine
                         </span>
-                        <span>Practice owner, February 2026 · 192 upvotes</span>
+                        <span>Clinic Doctor, Oct 2025 · 397 upvotes</span>
                     </footer>
                 </motion.div>
 
@@ -516,7 +512,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         </div>
                         <div>
                             <p className="text-sm font-bold text-amber-900 font-sfpro">
-                                "Dental answering service" searches dropped 88% in 12 months (Google Trends, US).
+                                "Medical answering service" searches dropped 88% in 12 months (Google Trends, US).
                             </p>
                             <p className="text-xs text-amber-700 mt-1 font-sfpro">
                                 Practices are already moving away from legacy answering services.
@@ -539,7 +535,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                 </p>
                 <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-12">
                     We don't sell you a voice agent. We don't sell you an automation. We build one AI
-                    Receptionist for your dental practice where every layer is connected — and the whole thing
+                    Receptionist for your medical clinic where every layer is connected — and the whole thing
                     runs without you in the loop.
                 </p>
 
@@ -832,7 +828,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         { stat: 49496, suffix: "", label: "Minutes of live calls run", prefix: "" },
                         { stat: 85, suffix: "%", label: "Resolved without human", prefix: "" },
                         { stat: 4, suffix: " wks", label: "From audit to live", prefix: "" },
-                        { stat: 128500, suffix: "+", label: "Dental receptionist jobs open (BLS)", prefix: "" },
+                        { stat: 150000, suffix: "+", label: "Medical receptionist jobs open (BLS)", prefix: "" },
                     ].map((s, i) => (
                         <motion.div
                             key={i}
@@ -850,7 +846,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     ))}
                 </div>
                 <p className="text-xs text-gray-400 font-sfpro">
-                    49,496 mins: Vapi billing dashboard, Oct 2025 · BLS figure: OEWS 2024, 128,500 openings/yr
+                    49,496 mins: Vapi billing dashboard, Oct 2025 · BLS figure: OEWS 2024, 150,000 openings/yr
                 </p>
             </Section>
 
@@ -860,7 +856,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             <Section id="is-this-for-you" bg="white">
                 <SectionLabel text="Is This For You?" />
                 <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-10">
-                    Built for dental practices that have a phone problem.
+                    Built for medical clinics that have a phone problem.
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -963,7 +959,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             <section className="bg-[#0A1128] py-20 px-4">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-mondwest tracking-tight leading-tight">
-                        Your dental practice runs.
+                        Your medical clinic runs.
                         <br />
                         <span className="text-[#FCCA07]">Your AI should too.</span>
                     </h2>
@@ -1068,6 +1064,6 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
 };
 
 // ─── Layout ────────────────────────────────────────────────────────────────────
-AiReceptionistDentalPage.getLayout = (page) => page;
+AiReceptionistMedicalPage.getLayout = (page) => page;
 
-export default AiReceptionistDentalPage;
+export default AiReceptionistMedicalPage;

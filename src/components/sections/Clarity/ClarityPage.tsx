@@ -348,7 +348,11 @@ export default function ClarityPage({ isBooked, name, email, date }: ClarityPage
                                         borderBottom: "1px solid #f1f5f9",
                                     }}
                                 >
-                                    <CalendarIllustration />
+                                    <img
+                                        src="/AiClarity/aditya-photo.png"
+                                        alt="Aditya AI"
+                                        style={{ width: "120px", height: "auto", mixBlendMode: "multiply", opacity: 0.9 }}
+                                    />
                                 </div>
 
                                 <div style={{ padding: "20px 24px" }}>

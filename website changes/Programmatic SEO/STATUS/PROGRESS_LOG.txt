@@ -75,7 +75,7 @@
   │  ID     │  PAGE (URL slug)                                   │  STATUS  │
   ├─────────┼────────────────────────────────────────────────────┼──────────┤
   │  P-001  │  ai-receptionist-for-dental-practices              │  ✓ DONE  │
-  │  P-002  │  ai-receptionist-for-medical-clinics               │  pending │
+  │  P-002  │  ai-receptionist-for-medical-clinics               │  ✓ DONE  │
   │  P-003  │  ai-receptionist-for-med-spa                       │  pending │
   │  P-004  │  ai-interviewer-for-recruiting-agencies            │  pending │
   │  P-005  │  ai-sdr-for-ghl-agencies                           │  pending │
