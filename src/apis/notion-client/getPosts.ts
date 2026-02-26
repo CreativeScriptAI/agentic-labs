@@ -20,7 +20,7 @@ export const getPosts = async (): Promise<TPosts> => {
     try {
       const response = await api.getPage(id);
       id = idToUuid(id);
-      const collection = Object.values(response.collection)[0]?.value;
+      const collection = (Object.values(response.collection)[0] as any)?.value?.value;
       const block = response.block;
       const schema = collection?.schema;
 
@@ -34,7 +34,7 @@ export const getPosts = async (): Promise<TPosts> => {
         return [];
       }
 
-      const rawMetadata = block[id]?.value;
+      const rawMetadata = (block[id] as any)?.value?.value;
 
       if (!rawMetadata) {
         console.warn(`[getPosts] No metadata found for pageId: ${id}`);
@@ -61,10 +61,10 @@ export const getPosts = async (): Promise<TPosts> => {
             if (properties) {
               // Add fullwidth, createdtime to properties
               properties.createdTime = new Date(
-                block[id].value?.created_time
+                (block[id] as any).value?.value?.created_time
               ).toString();
               properties.fullWidth =
-                (block[id].value?.format as any)?.page_full_width ?? false;
+                (block[id] as any).value?.value?.format?.page_full_width ?? false;
 
               data.push(properties);
             }
