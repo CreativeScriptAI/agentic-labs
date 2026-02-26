@@ -47,9 +47,9 @@ const Clarity: NextPageWithLayout<ClarityPageProps> = (props) => {
                 <meta name="robots" content="noindex, follow" />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:url" content="https://www.tryagentikai.com/clarity" />
+                <meta property="og:url" content="https://www.tryagentikai.com/thankyou" />
                 <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://www.tryagentikai.com/clarity" />
+                <link rel="canonical" href="https://www.tryagentikai.com/thankyou" />
             </Head>
             <ClarityPage {...props} />
         </>

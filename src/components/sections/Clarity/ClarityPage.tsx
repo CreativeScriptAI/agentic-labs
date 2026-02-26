@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ClarityPageProps } from "src/pages/clarity/index";
+import { ClarityPageProps } from "src/pages/thankyou/index";
 import ctaLinks from "src/constants/cta-links";
 
 const CAL_LINK = ctaLinks.aiClarityWorkshop;
