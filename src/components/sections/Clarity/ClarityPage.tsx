@@ -349,7 +349,7 @@ export default function ClarityPage({ isBooked, name, email, date }: ClarityPage
                                     }}
                                 >
                                     <img
-                                        src="/AiClarity/aditya-photo.png"
+                                        src="/AiClarity/founder-laptop.png"
                                         alt="Aditya AI"
                                         style={{ width: "120px", height: "auto", mixBlendMode: "multiply", opacity: 0.9 }}
                                     />
