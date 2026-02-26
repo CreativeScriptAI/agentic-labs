@@ -118,8 +118,68 @@ const CheckIcon = () => (
     </svg>
 );
 
+/* ── Calendar illustration ──────────────────────────────────── */
+const CalendarIllustration = () => (
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 120, height: 120 }}>
+        {/* Background card */}
+        <rect x="8" y="16" width="104" height="92" rx="10" fill="#fff" stroke="#e5e7eb" strokeWidth="2" />
+        {/* Top colored bar */}
+        <rect x="8" y="16" width="104" height="28" rx="10" fill="#2563eb" />
+        <rect x="8" y="30" width="104" height="14" fill="#2563eb" />
+        {/* Calendar header pins */}
+        <rect x="30" y="10" width="8" height="14" rx="4" fill="#2563eb" />
+        <rect x="82" y="10" width="8" height="14" rx="4" fill="#2563eb" />
+        {/* Month label */}
+        <text x="60" y="35" textAnchor="middle" fill="#fff" fontSize="11" fontWeight="700" fontFamily="system-ui">CLARITY CALL</text>
+        {/* Grid dots - days */}
+        {[0, 1, 2, 3, 4, 5, 6].map(col => (
+            <rect key={col} x={20 + col * 13} y="56" width="8" height="8" rx="2" fill={col === 2 ? "#FCCA07" : "#f3f4f6"} />
+        ))}
+        {[0, 1, 2, 3, 4, 5, 6].map(col => (
+            <rect key={col} x={20 + col * 13} y="70" width="8" height="8" rx="2" fill={col === 5 ? "#2563eb" : "#f3f4f6"} />
+        ))}
+        {[0, 1, 2, 3, 4].map(col => (
+            <rect key={col} x={20 + col * 13} y="84" width="8" height="8" rx="2" fill="#f3f4f6" />
+        ))}
+        {/* Checkmark on highlighted day */}
+        <circle cx="36" cy="60" r="6" fill="#FCCA07" />
+        <path d="M33 60l2 2 4-4" stroke="#0A1128" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
+/* ── Envelope illustration ──────────────────────────────────── */
+const EnvelopeIllustration = () => (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 56, height: 56 }}>
+        <rect x="4" y="16" width="56" height="38" rx="6" fill="#fff" stroke="#e5e7eb" strokeWidth="1.5" />
+        <path d="M4 22l25.5 18a5 5 0 005 0L60 22" stroke="#2563eb" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle cx="50" cy="18" r="10" fill="#16a34a" />
+        <path d="M45 18l3.5 3.5L55 14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
+/* ── Prep item icons ────────────────────────────────────────── */
+const BriefcaseIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" style={{ width: 22, height: 22 }}>
+        <rect x="2" y="8" width="20" height="14" rx="3" stroke="#2563eb" strokeWidth="1.5" />
+        <path d="M8 8V6a4 4 0 018 0v2" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M2 13h20" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+);
+const PainIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" style={{ width: 22, height: 22 }}>
+        <circle cx="12" cy="12" r="9" stroke="#ef4444" strokeWidth="1.5" />
+        <path d="M12 8v5" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="12" cy="16" r="1" fill="#ef4444" />
+    </svg>
+);
+const IdeaIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" style={{ width: 22, height: 22 }}>
+        <path d="M9 21h6M12 3a6 6 0 00-3.5 10.9V17a1 1 0 001 1h5a1 1 0 001-1v-3.1A6 6 0 0012 3z" stroke="#FCCA07" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
 /* ─── main component ─────────────────────────────────────────── */
-export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) {
+export default function ClarityPage({ isBooked, name, email, date }: ClarityPageProps) {
     const firstName = name?.split(" ")[0] ?? null;
     const formattedDate = formatBookingDate(date);
 
@@ -156,8 +216,9 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
                 </Link>
 
                 {isBooked ? (
-                    <span style={{ fontSize: "13px", color: "#6b7280" }}>
-                        ✓ Confirmed{firstName ? ` · ${firstName}` : ""}
+                    <span style={{ fontSize: "13px", color: "#16a34a", fontWeight: 600, display: "flex", alignItems: "center", gap: "5px" }}>
+                        <svg viewBox="0 0 16 16" fill="none" style={{ width: 14, height: 14 }}><circle cx="8" cy="8" r="7" fill="#16a34a" /><path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                        {firstName ? `${firstName}'s call is confirmed` : "Call confirmed"}
                     </span>
                 ) : (
                     <a
@@ -283,41 +344,103 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
 
                     {/* CTA area */}
                     {isBooked ? (
+                        /* ── Illustrated booking confirmation card ── */
                         <div
                             style={{
-                                display: "inline-flex",
-                                alignItems: "flex-start",
-                                gap: "12px",
-                                backgroundColor: "#fff",
-                                border: "1px solid #e5e7eb",
-                                borderRadius: "12px",
-                                padding: "16px 20px",
                                 maxWidth: "480px",
-                                textAlign: "left",
-                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                margin: "0 auto",
+                                backgroundColor: "#fff",
+                                borderRadius: "20px",
+                                border: "1px solid #e5e7eb",
+                                boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                                overflow: "hidden",
                             }}
                         >
-                            <span
+                            {/* Top illustration strip */}
+                            <div
                                 style={{
-                                    width: "22px",
-                                    height: "22px",
-                                    borderRadius: "50%",
-                                    backgroundColor: "#16a34a",
+                                    backgroundColor: "#EEF4FF",
+                                    padding: "28px 24px 20px",
                                     display: "flex",
+                                    flexDirection: "column",
                                     alignItems: "center",
-                                    justifyContent: "center",
-                                    flexShrink: 0,
-                                    marginTop: "2px",
+                                    gap: "12px",
+                                    borderBottom: "1px solid #dbeafe",
                                 }}
                             >
-                                <svg viewBox="0 0 10 10" fill="none" style={{ width: 12, height: 12 }}>
-                                    <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </span>
-                            <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.5 }}>
-                                <strong style={{ color: "#0A1128", fontWeight: 600 }}>You&apos;re all set.</strong>{" "}
-                                Scroll down to see what we build and what to prepare for the call.
-                            </span>
+                                <CalendarIllustration />
+                                <div
+                                    style={{
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        gap: "6px",
+                                        backgroundColor: "#dcfce7",
+                                        border: "1px solid #bbf7d0",
+                                        borderRadius: "20px",
+                                        padding: "4px 12px",
+                                        fontSize: "12px",
+                                        fontWeight: 600,
+                                        color: "#15803d",
+                                    }}
+                                >
+                                    <svg viewBox="0 0 12 12" fill="none" style={{ width: 12, height: 12 }}>
+                                        <circle cx="6" cy="6" r="5" fill="#16a34a" />
+                                        <path d="M3.5 6l1.8 1.8L8.5 4.5" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    Booking confirmed
+                                </div>
+                            </div>
+
+                            {/* Body */}
+                            <div style={{ padding: "20px 24px" }}>
+                                {/* Date row */}
+                                {formattedDate && (
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "10px",
+                                            padding: "10px 14px",
+                                            backgroundColor: "#f9f6f4",
+                                            borderRadius: "10px",
+                                            marginBottom: "14px",
+                                        }}
+                                    >
+                                        <svg viewBox="0 0 20 20" fill="none" style={{ width: 18, height: 18, flexShrink: 0 }}>
+                                            <rect x="2" y="4" width="16" height="14" rx="3" stroke="#2563eb" strokeWidth="1.4" />
+                                            <path d="M6 2v3M14 2v3M2 9h16" stroke="#2563eb" strokeWidth="1.4" strokeLinecap="round" />
+                                        </svg>
+                                        <span style={{ fontSize: "13px", fontWeight: 600, color: "#0A1128" }}>{formattedDate}</span>
+                                    </div>
+                                )}
+
+                                {/* Email confirmation row */}
+                                {email && (
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "10px",
+                                            padding: "10px 14px",
+                                            backgroundColor: "#f0fdf4",
+                                            border: "1px solid #dcfce7",
+                                            borderRadius: "10px",
+                                            marginBottom: "16px",
+                                        }}
+                                    >
+                                        <EnvelopeIllustration />
+                                        <div>
+                                            <p style={{ fontSize: "11px", color: "#16a34a", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Invite sent to</p>
+                                            <p style={{ fontSize: "13px", color: "#0A1128", fontWeight: 600 }}>{email}</p>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Divider + next step */}
+                                <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6, textAlign: "center" }}>
+                                    Scroll down to understand what we build and what to prepare for the call.
+                                </p>
+                            </div>
                         </div>
                     ) : (
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
@@ -344,6 +467,60 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
                             </p>
                         </div>
                     )}
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* MEET THE FOUNDER                                     */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "0 0 48px" }}>
+                    <div
+                        className="flex flex-col md:flex-row items-center gap-8"
+                        style={{
+                            backgroundColor: "#fff",
+                            borderRadius: "24px",
+                            border: "1px solid #e5e7eb",
+                            boxShadow: "0 4px 24px rgba(0,0,0,0.04)",
+                            padding: "32px",
+                        }}
+                    >
+                        {/* Left: Video */}
+                        <div style={{ flex: "0 0 260px", margin: "0 auto", width: "100%", maxWidth: "320px" }}>
+                            <div style={{ position: "relative", paddingBottom: "177.78%", height: 0, overflow: "hidden", borderRadius: "16px", backgroundColor: "#000" }}>
+                                <iframe
+                                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                                    src="https://www.youtube.com/embed/jFnRKUxFBHI?rel=0"
+                                    title="Aditya - Founder of Agentic AI Labs"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        {/* Right: Text */}
+                        <div style={{ flex: 1 }}>
+                            <SectionLabel>Who you&apos;ll meet on the call</SectionLabel>
+                            <h2 style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(24px, 6vw, 42px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                                lineHeight: 1.15,
+                                marginBottom: "20px",
+                            }}>
+                                (say hi) to Aditya
+                            </h2>
+                            <p style={{ fontSize: "15px", color: "#475569", lineHeight: 1.7, marginBottom: "16px" }}>
+                                Hi, I&apos;m Aditya, the founder of Agentic AI Labs. I&apos;ll be the one you&apos;ll speak with on our Clarity Call.
+                            </p>
+                            <p style={{ fontSize: "15px", color: "#475569", lineHeight: 1.7, marginBottom: "24px" }}>
+                                My job right now isn&apos;t to sell you software — it&apos;s to figure out where your business is literally losing hours every single week, and map out exactly how we can automate it. No frills, no presentations. I look forward to meeting you.
+                            </p>
+                            <div style={{ display: "inline-flex", alignItems: "center", gap: "10px" }}>
+                                <span style={{ color: "#FCCA07", fontSize: "16px" }}>★★★</span>
+                                <span style={{ fontSize: "12px", fontWeight: 600, color: "#2563eb", textTransform: "uppercase", letterSpacing: "0.05em" }}>Founder & Lead Engineer</span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 {/* ═══════════════════════════════════════════════════  */}
@@ -577,7 +754,65 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
                 </section>
 
                 {/* ═══════════════════════════════════════════════════  */}
-                {/* TESTIMONIAL                                          */}
+                {/* MEET THE TEAM                                        */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "48px 0" }}>
+                    <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                        <SectionLabel>Behind the systems</SectionLabel>
+                        <h2 style={{
+                            fontFamily: "var(--font-mondwest), serif",
+                            fontSize: "clamp(24px, 6vw, 42px)",
+                            fontWeight: 700,
+                            color: "#0A1128",
+                            marginBottom: "8px",
+                            lineHeight: 1.15,
+                        }}>
+                            (say hi) to our team.
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#475569" }}>We are engineers, builders, and operators.</p>
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+                        {/* Video */}
+                        <div style={{
+                            width: "100%",
+                            borderRadius: "16px",
+                            overflow: "hidden",
+                            boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                            backgroundColor: "#000",
+                            border: "1px solid #e5e7eb",
+                        }}>
+                            <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                                <iframe
+                                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                                    src="https://www.youtube.com/embed/k9mjlkEDkGk?rel=0"
+                                    title="The Team behind Agentic AI Labs"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        {/* Image */}
+                        <div style={{
+                            width: "100%",
+                            borderRadius: "16px",
+                            overflow: "hidden",
+                            boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                            backgroundColor: "#fff",
+                            border: "1px solid #e5e7eb",
+                        }}>
+                            <img
+                                src="/AiClarity/team-illustration.png"
+                                alt="Agentic AI Labs Team"
+                                style={{ width: "100%", height: "auto", display: "block" }}
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* TESTIMONIALS                                         */}
                 {/* ═══════════════════════════════════════════════════  */}
                 <section
                     style={{
@@ -585,35 +820,92 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
                         width: "calc(100% + 32px)",
                         marginLeft: "-16px",
                         marginRight: "-16px",
-                        padding: "48px 16px",
+                        padding: "64px 16px",
                     }}
                 >
-                    <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-                        <SectionLabel>What founders say</SectionLabel>
-                        <div
-                            style={{
-                                backgroundColor: "#fff",
-                                borderRadius: "16px",
-                                border: "1px solid #f3f4f6",
-                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-                                padding: "28px 24px",
-                            }}
-                        >
-                            <p
-                                style={{
-                                    fontSize: "clamp(15px, 3.5vw, 18px)",
-                                    color: "#334155",
-                                    fontStyle: "italic",
-                                    lineHeight: 1.65,
-                                    marginBottom: "16px",
-                                }}
-                            >
-                                &ldquo;Within 48 hours they built an AI caller that doubled our booking rate.
-                                It feels like having a full-time receptionist who never sleeps.&rdquo;
-                            </p>
-                            <p style={{ fontSize: "14px", color: "#6b7280", fontWeight: 500 }}>
-                                — Aiden, Founder · Healthcare
-                            </p>
+                    <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
+                        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+                            <SectionLabel>What founders say</SectionLabel>
+                            <h2 style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(24px, 6vw, 42px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                            }}>
+                                Proven results. Real clients.
+                            </h2>
+                        </div>
+
+                        {/* Videos Grid */}
+                        <div style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                            gap: "24px",
+                            marginBottom: "32px",
+                        }}>
+                            <div style={{ borderRadius: "16px", overflow: "hidden", backgroundColor: "#000", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
+                                <video
+                                    src="https://d34gt69eepjr0b.cloudfront.net/aiden_testimonial.mp4"
+                                    controls
+                                    playsInline
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: "block" }}
+                                />
+                            </div>
+                            <div style={{ borderRadius: "16px", overflow: "hidden", backgroundColor: "#000", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
+                                <video
+                                    src="https://d34gt69eepjr0b.cloudfront.net/olu_2f.mp4"
+                                    controls
+                                    playsInline
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: "block" }}
+                                />
+                            </div>
+                        </div>
+
+                        {/* Text grid */}
+                        <div style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                            gap: "20px",
+                        }}>
+                            {[
+                                {
+                                    quote: "Aditya definitely knows his stuff when it comes to AI and development. He brought strong technical expertise to the table and helped guide us through some complex systems with clarity and precision. It was a smooth and productive experience working with him, and I appreciated his thoughtful input throughout the project. Would absolutely recommend him to anyone needing high-level AI or dev support!",
+                                    name: "Founder",
+                                    role: "AI Integration Client"
+                                },
+                                {
+                                    quote: "Aditya helped me save tremendous amout of time with his expertise. I highly recommend him.",
+                                    name: "Founder",
+                                    role: "Operations Client"
+                                },
+                                {
+                                    quote: "These guys are super helpful and communicative! Definitely consider them on your next AI build or MVP.",
+                                    name: "Founder",
+                                    role: "Startup Client"
+                                }
+                            ].map((t, i) => (
+                                <div key={i} style={{
+                                    backgroundColor: "#fff",
+                                    borderRadius: "16px",
+                                    border: "1px solid #e5e7eb",
+                                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                                    padding: "24px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "space-between",
+                                }}>
+                                    <div>
+                                        <div style={{ color: "#FCCA07", fontSize: "14px", letterSpacing: "2px", marginBottom: "12px" }}>★★★★★</div>
+                                        <p style={{ fontSize: "14px", color: "#374151", lineHeight: 1.6, marginBottom: "20px", fontStyle: "italic" }}>
+                                            &ldquo;{t.quote}&rdquo;
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p style={{ fontSize: "14px", fontWeight: 700, color: "#0A1128" }}>{t.name}</p>
+                                        <p style={{ fontSize: "12px", color: "#6b7280" }}>{t.role}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -777,28 +1069,71 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
                                         fontSize: "clamp(22px, 5vw, 36px)",
                                         fontWeight: 700,
                                         color: "#0A1128",
-                                        marginBottom: "20px",
+                                        marginBottom: "6px",
                                     }}
                                 >
-                                    One thing to bring to the call.
+                                    {firstName ? `${firstName}, here's` : "Here's"} how to prepare.
                                 </h2>
-                                <div
-                                    style={{
-                                        backgroundColor: "#fff",
-                                        borderRadius: "16px",
-                                        border: "1px solid #f3f4f6",
-                                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-                                        padding: "24px",
-                                        textAlign: "left",
-                                        marginBottom: "20px",
-                                    }}
-                                >
-                                    <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.65, marginBottom: "12px" }}>
-                                        Think of your <strong style={{ color: "#0A1128" }}>top 3 repetitive tasks</strong> — the ones you or your team do every day that could theoretically run without you.
-                                    </p>
-                                    <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: 1.65 }}>
-                                        That&apos;s all the context we need. No prep deck. No slides. Just your honest answer on where the friction is.
-                                    </p>
+                                <p style={{ fontSize: "15px", color: "#6b7280", marginBottom: "24px" }}>3 things to think about before we meet.</p>
+
+                                {/* Illustrated prep checklist */}
+                                <div style={{ display: "flex", flexDirection: "column", gap: "12px", textAlign: "left", marginBottom: "20px" }}>
+                                    {[
+                                        {
+                                            icon: <BriefcaseIcon />,
+                                            bg: "#EEF4FF",
+                                            border: "#dbeafe",
+                                            label: "Your daily operations",
+                                            desc: "What does your team actually do every day that eats up time? Answering leads? Scheduling? Follow-ups? That's our starting point.",
+                                        },
+                                        {
+                                            icon: <PainIcon />,
+                                            bg: "#FFF5F5",
+                                            border: "#fecaca",
+                                            label: "Your biggest bottleneck",
+                                            desc: "One thing — if it ran on autopilot — would change the week. That's what we'll map first.",
+                                        },
+                                        {
+                                            icon: <IdeaIcon />,
+                                            bg: "#FFFBEB",
+                                            border: "#fde68a",
+                                            label: "Any AI ideas you've had",
+                                            desc: "You've probably thought \"I wish AI could do ___\" — bring that gut sense. Even half-formed. We'll sharpen it.",
+                                        },
+                                    ].map((item, i) => (
+                                        <div
+                                            key={i}
+                                            style={{
+                                                backgroundColor: item.bg,
+                                                border: `1px solid ${item.border}`,
+                                                borderRadius: "14px",
+                                                padding: "16px 18px",
+                                                display: "flex",
+                                                gap: "14px",
+                                                alignItems: "flex-start",
+                                            }}
+                                        >
+                                            <div
+                                                style={{
+                                                    width: 40,
+                                                    height: 40,
+                                                    borderRadius: "10px",
+                                                    backgroundColor: "#fff",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    flexShrink: 0,
+                                                    boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+                                                }}
+                                            >
+                                                {item.icon}
+                                            </div>
+                                            <div>
+                                                <p style={{ fontSize: "14px", fontWeight: 700, color: "#0A1128", marginBottom: "4px" }}>{item.label}</p>
+                                                <p style={{ fontSize: "13px", color: "#475569", lineHeight: 1.6 }}>{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                                 <p style={{ fontSize: "13px", color: "#9ca3af", lineHeight: 1.6 }}>
                                     Questions?{" "}
