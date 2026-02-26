@@ -3,10 +3,9 @@ import Link from "next/link";
 import { ClarityPageProps } from "src/pages/clarity/index";
 import ctaLinks from "src/constants/cta-links";
 
-/* ─── design tokens ─────────────────────────────────────────── */
 const CAL_LINK = ctaLinks.aiClarityWorkshop;
 
-/* ─── tiny helpers ───────────────────────────────────────────── */
+/* ─── date formatter ─────────────────────────────────────────── */
 function formatBookingDate(raw: string | null): string {
     if (!raw) return "";
     try {
@@ -20,8 +19,36 @@ function formatBookingDate(raw: string | null): string {
     }
 }
 
-/* ─── intersection-observer fade-in hook ────────────────────── */
-function useFadeIn() {
+/* ─── animated counter ──────────────────────────────────────────*/
+function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
+    const [val, setVal] = useState(0);
+    const ref = useRef<HTMLSpanElement>(null);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const obs = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    obs.disconnect();
+                    let start = 0;
+                    const step = Math.ceil(to / 50);
+                    const id = setInterval(() => {
+                        start += step;
+                        if (start >= to) { setVal(to); clearInterval(id); }
+                        else setVal(start);
+                    }, 25);
+                }
+            },
+            { threshold: 0.5 }
+        );
+        obs.observe(el);
+        return () => obs.disconnect();
+    }, [to]);
+    return <span ref={ref}>{val}{suffix}</span>;
+}
+
+/* ─── scroll-reveal hook ────────────────────────────────────────*/
+function useReveal() {
     const ref = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const el = ref.current;
@@ -34,7 +61,7 @@ function useFadeIn() {
                     obs.disconnect();
                 }
             },
-            { threshold: 0.12 }
+            { threshold: 0.1 }
         );
         obs.observe(el);
         return () => obs.disconnect();
@@ -42,63 +69,47 @@ function useFadeIn() {
     return ref;
 }
 
-/* ─── animated counter ──────────────────────────────────────── */
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-    const [val, setVal] = useState(0);
-    const ref = useRef<HTMLSpanElement>(null);
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        const obs = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    obs.disconnect();
-                    let start = 0;
-                    const step = Math.ceil(to / 60);
-                    const id = setInterval(() => {
-                        start += step;
-                        if (start >= to) {
-                            setVal(to);
-                            clearInterval(id);
-                        } else {
-                            setVal(start);
-                        }
-                    }, 20);
-                }
-            },
-            { threshold: 0.5 }
-        );
-        obs.observe(el);
-        return () => obs.disconnect();
-    }, [to]);
-    return (
-        <span ref={ref}>
-            {val}
-            {suffix}
-        </span>
-    );
-}
-
-/* ─── section wrapper ────────────────────────────────────────── */
-function Section({
-    children,
-    className = "",
-    id,
-}: {
+/* ─── reveal wrapper ─────────────────────────────────────────── */
+function Reveal({ children, className = "", delay = 0 }: {
     children: React.ReactNode;
     className?: string;
-    id?: string;
+    delay?: number;
 }) {
-    const ref = useFadeIn();
+    const ref = useReveal();
     return (
         <div
-            id={id}
             ref={ref}
             className={className}
             style={{
                 opacity: 0,
-                transform: "translateY(28px)",
-                transition: "opacity 0.6s ease, transform 0.6s ease",
+                transform: "translateY(24px)",
+                transition: `opacity 0.55s ease ${delay}ms, transform 0.55s ease ${delay}ms`,
+            }}
+        >
+            {children}
+        </div>
+    );
+}
+
+/* ─── section-label component — matches site red label style ── */
+function SectionLabel({ children }: { children: React.ReactNode }) {
+    return (
+        <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
+            {children}
+        </p>
+    );
+}
+
+/* ─── full-bleed section helper — matches site pattern ─────── */
+function FullBleed({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+    return (
+        <div
+            className={`py-12 sm:py-16 lg:py-20 ${className}`}
+            style={{
+                backgroundColor: "#F9F6F4",
+                width: "calc(100% + 2rem)",
+                marginLeft: "-1rem",
+                marginRight: "-1rem",
             }}
         >
             {children}
@@ -112,626 +123,491 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
     const formattedDate = formatBookingDate(date);
 
     return (
-        <>
-            <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+        <div
+            className="min-h-screen"
+            style={{ backgroundColor: "#F9F6F4", fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif" }}
+        >
 
-        .clarity-root {
-          font-family: 'DM Sans', sans-serif;
-          background: #FAFAF8;
-          color: #111111;
-          min-height: 100vh;
-        }
-
-        .clarity-serif {
-          font-family: 'Instrument Serif', Georgia, serif;
-        }
-
-        /* ── top bar ── */
-        .clarity-topbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 20px 24px;
-          border-bottom: 1px solid #E8E6E1;
-          background: #FAFAF8;
-          position: sticky;
-          top: 0;
-          z-index: 50;
-          backdrop-filter: blur(8px);
-        }
-
-        .clarity-logo {
-          font-family: 'Instrument Serif', serif;
-          font-size: 17px;
-          color: #111;
-          text-decoration: none;
-          letter-spacing: -0.01em;
-        }
-
-        .clarity-cta-mini {
-          background: #111;
-          color: #fff;
-          border: none;
-          border-radius: 6px;
-          padding: 9px 18px;
-          font-size: 13px;
-          font-weight: 500;
-          cursor: pointer;
-          text-decoration: none;
-          letter-spacing: 0.01em;
-          transition: background 0.2s;
-        }
-
-        .clarity-cta-mini:hover { background: #2a2a2a; }
-
-        /* ── layout ── */
-        .clarity-inner {
-          max-width: 680px;
-          margin: 0 auto;
-          padding: 0 24px;
-        }
-
-        /* ── confirmation banner ── */
-        .clarity-confirm-banner {
-          background: #111;
-          color: #fff;
-          text-align: center;
-          padding: 14px 24px;
-          font-size: 14px;
-          font-weight: 500;
-          letter-spacing: 0.01em;
-        }
-
-        .clarity-confirm-banner span {
-          opacity: 0.7;
-          font-weight: 400;
-        }
-
-        /* ── trust badge ── */
-        .clarity-trust-badge {
-          text-align: center;
-          padding: 36px 0 8px;
-          font-size: 13px;
-          color: #888;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-        }
-
-        /* ── hero ── */
-        .clarity-hero {
-          padding: 28px 0 40px;
-          text-align: center;
-        }
-
-        .clarity-hero h1 {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(32px, 6vw, 52px);
-          line-height: 1.12;
-          letter-spacing: -0.025em;
-          color: #0D0D0D;
-          margin: 0 0 18px;
-          font-weight: 400;
-        }
-
-        .clarity-hero h1 em {
-          font-style: italic;
-          color: #555;
-        }
-
-        .clarity-hero-sub {
-          font-size: 16px;
-          line-height: 1.65;
-          color: #555;
-          max-width: 520px;
-          margin: 0 auto 32px;
-        }
-
-        /* ── divider ── */
-        .clarity-divider {
-          border: none;
-          border-top: 1px solid #E8E6E1;
-          margin: 40px 0;
-        }
-
-        /* ── section label ── */
-        .clarity-label {
-          font-size: 11px;
-          font-weight: 600;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: #888;
-          margin-bottom: 16px;
-        }
-
-        /* ── checkmarks ── */
-        .clarity-checks {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-        }
-
-        .clarity-checks li {
-          display: flex;
-          gap: 12px;
-          font-size: 15px;
-          line-height: 1.55;
-          color: #222;
-        }
-
-        .clarity-checks .ck-icon {
-          flex-shrink: 0;
-          width: 20px;
-          height: 20px;
-          background: #1a9e52;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 2px;
-        }
-
-        .clarity-checks .ck-icon svg {
-          width: 10px;
-          height: 10px;
-        }
-
-        /* ── stat bar ── */
-        .clarity-stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1px;
-          background: #E8E6E1;
-          border: 1px solid #E8E6E1;
-          border-radius: 10px;
-          overflow: hidden;
-          margin: 0;
-        }
-
-        .clarity-stat {
-          background: #fff;
-          padding: 24px 20px;
-          text-align: center;
-        }
-
-        .clarity-stat-num {
-          font-family: 'Instrument Serif', serif;
-          font-size: 38px;
-          line-height: 1;
-          color: #0D0D0D;
-          display: block;
-          margin-bottom: 4px;
-        }
-
-        .clarity-stat-label {
-          font-size: 12px;
-          color: #888;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-        }
-
-        /* ── client strip ── */
-        .clarity-clients {
-          text-align: center;
-          font-size: 14px;
-          color: #888;
-          padding: 16px 0;
-          letter-spacing: 0.04em;
-        }
-
-        /* ── testimonial ── */
-        .clarity-testimonial {
-          background: #fff;
-          border: 1px solid #E8E6E1;
-          border-radius: 12px;
-          padding: 32px;
-          position: relative;
-        }
-
-        .clarity-testimonial blockquote {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(17px, 3vw, 22px);
-          font-style: italic;
-          line-height: 1.5;
-          color: #1a1a1a;
-          margin: 0 0 20px;
-        }
-
-        .clarity-testimonial cite {
-          font-size: 13px;
-          color: #888;
-          font-style: normal;
-        }
-
-        .clarity-quote-mark {
-          font-family: Georgia, serif;
-          font-size: 80px;
-          line-height: 0.6;
-          color: #E8E6E1;
-          position: absolute;
-          top: 24px;
-          left: 28px;
-          pointer-events: none;
-          user-select: none;
-        }
-
-        /* ── steps ── */
-        .clarity-steps {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .clarity-step {
-          display: flex;
-          gap: 16px;
-          align-items: flex-start;
-        }
-
-        .clarity-step-num {
-          flex-shrink: 0;
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          border: 1.5px solid #E8E6E1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-          font-weight: 600;
-          color: #555;
-          margin-top: 2px;
-        }
-
-        .clarity-step-body h3 {
-          font-size: 15px;
-          font-weight: 600;
-          color: #111;
-          margin: 0 0 4px;
-        }
-
-        .clarity-step-body p {
-          font-size: 14px;
-          color: #666;
-          line-height: 1.55;
-          margin: 0;
-        }
-
-        /* ── final cta ── */
-        .clarity-final-cta {
-          background: #111;
-          border-radius: 14px;
-          padding: 48px 36px;
-          text-align: center;
-          color: #fff;
-        }
-
-        .clarity-final-cta h2 {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(24px, 4.5vw, 38px);
-          line-height: 1.15;
-          font-weight: 400;
-          margin: 0 0 12px;
-          letter-spacing: -0.02em;
-        }
-
-        .clarity-final-cta p {
-          font-size: 15px;
-          color: rgba(255,255,255,0.65);
-          line-height: 1.6;
-          margin: 0 0 28px;
-          max-width: 420px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .clarity-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: #fff;
-          color: #111;
-          border: none;
-          border-radius: 8px;
-          padding: 14px 32px;
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
-          text-decoration: none;
-          transition: background 0.2s, transform 0.15s;
-          width: 100%;
-          max-width: 400px;
-        }
-
-        .clarity-btn:hover {
-          background: #f0ede8;
-          transform: translateY(-1px);
-        }
-
-        .clarity-risk-reversal {
-          margin-top: 14px;
-          font-size: 12.5px;
-          color: rgba(255,255,255,0.45);
-          line-height: 1.5;
-        }
-
-        /* ── footer ── */
-        .clarity-footer {
-          padding: 40px 0 60px;
-          text-align: center;
-          font-size: 13px;
-          color: #888;
-          line-height: 1.8;
-        }
-
-        .clarity-footer a {
-          color: #555;
-          text-decoration: none;
-        }
-
-        .clarity-footer a:hover { text-decoration: underline; }
-
-        /* ── already-booked note ── */
-        .clarity-already-note {
-          background: #f0f7f3;
-          border: 1px solid #c2dece;
-          border-radius: 8px;
-          padding: 16px 20px;
-          font-size: 14px;
-          color: #1a6040;
-          text-align: center;
-          line-height: 1.6;
-        }
-
-        .clarity-already-note strong { font-weight: 600; }
-
-        @media (max-width: 480px) {
-          .clarity-topbar { padding: 16px 16px; }
-          .clarity-inner { padding: 0 16px; }
-          .clarity-final-cta { padding: 36px 20px; }
-          .clarity-testimonial { padding: 24px 20px; }
-          .clarity-stats { grid-template-columns: 1fr; }
-        }
-      `}</style>
-
-            <div className="clarity-root">
-
-                {/* ── Sticky Top Bar (logo + mini CTA) ── */}
-                <header className="clarity-topbar">
-                    <Link href="/" className="clarity-logo">
-                        Agentic AI Labs
-                    </Link>
-                    {!isBooked && (
-                        <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-cta-mini">
-                            Book Free Call →
-                        </a>
-                    )}
-                </header>
-
-                {/* ── Post-booking confirmation banner ── */}
-                {isBooked && (
-                    <div className="clarity-confirm-banner">
-                        ✓ You&apos;re confirmed{firstName ? `, ${firstName}` : ""}
-                        {formattedDate && (
-                            <>
-                                {" "}
-                                <span>· {formattedDate}</span>
-                            </>
-                        )}
-                        &nbsp;— a confirmation is on its way to your inbox
-                    </div>
+            {/* ── Minimal Top Bar — no site nav ───────────────────── */}
+            <header
+                className="sticky top-0 z-50 border-b border-gray-200 flex items-center justify-between px-4 sm:px-6 lg:px-8"
+                style={{ backgroundColor: "#F9F6F4", height: "60px" }}
+            >
+                <Link
+                    href="/"
+                    className="font-mondwest text-[#0A1128] text-base sm:text-lg tracking-tight hover:opacity-75 transition-opacity"
+                >
+                    Agentic AI Labs
+                </Link>
+                {!isBooked && (
+                    <a
+                        href={CAL_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg bg-[#FCCA07] px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
+                    >
+                        Book Free Call
+                    </a>
                 )}
+                {isBooked && (
+                    <span className="text-xs sm:text-sm text-slate-500 font-sfpro">
+                        ✓ Confirmed{firstName ? ` · ${firstName}` : ""}
+                    </span>
+                )}
+            </header>
 
-                <div className="clarity-inner">
+            {/* ── Post-booking confirmation banner ────────────────── */}
+            {isBooked && (
+                <div className="bg-[#0A1128] text-white text-center py-3 px-4 text-xs sm:text-sm font-sfpro">
+                    <span className="font-semibold">
+                        ✓ You&apos;re confirmed{firstName ? `, ${firstName}` : ""}
+                    </span>
+                    {formattedDate && (
+                        <span className="text-white/70"> · {formattedDate}</span>
+                    )}
+                    <span className="text-white/70"> — check your inbox for the calendar invite</span>
+                </div>
+            )}
 
-                    {/* ── Trust Badge ── */}
-                    <Section>
-                        <p className="clarity-trust-badge">
-                            ★★★★★ &nbsp; Trusted by founders in healthcare, real estate, B2B SaaS &amp; home services
-                        </p>
-                    </Section>
+            {/* ── Container ─────────────────────────────────────── */}
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    {/* ── HERO ── */}
-                    <Section className="clarity-hero">
-                        {isBooked ? (
-                            <h1>
-                                {firstName ? `${firstName}, your call` : "Your call"} is locked in.
-                                <br />
-                                <em>Here&apos;s what we do — and why it matters.</em>
-                            </h1>
-                        ) : (
-                            <h1>
-                                We build AI systems that run
-                                <br />
-                                <em>parts of your business autonomously.</em>
-                            </h1>
-                        )}
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 1: HERO                                     */}
+                {/* ─────────────────────────────────────────────────── */}
+                <div
+                    className="relative overflow-hidden pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20"
+                    style={{ width: "calc(100% + 2rem)", marginLeft: "-1rem", marginRight: "-1rem", paddingLeft: "1rem", paddingRight: "1rem" }}
+                >
+                    {/* Subtle background orbs — matches main site hero */}
+                    <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+                        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-100/40 rounded-full blur-3xl" />
+                        <div className="absolute bottom-10 left-10 w-64 h-64 bg-yellow-50/60 rounded-full blur-3xl" />
+                    </div>
 
-                        <p className="clarity-hero-sub">
-                            {isBooked
-                                ? "Before we meet — here's exactly what Agentic AI Labs does, how we work, and what to expect on the call. No slides. No pitch. Just a straight answer on where AI fits in your operations."
-                                : "Not tools. Not demos. Systems that work in production — 24/7, without you in the loop. Book your free 30-minute AI Clarity Call and walk away with a plan, not a pitch."}
-                        </p>
-
-                        {isBooked ? (
-                            <div className="clarity-already-note">
-                                <strong>You&apos;re all set.</strong> Scroll down to understand exactly what we build and what to prepare before the call.
+                    <div className="max-w-3xl mx-auto text-center">
+                        {/* Trust badge */}
+                        <Reveal delay={0}>
+                            <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
+                                <span className="flex">
+                                    {["★", "★", "★", "★", "★"].map((s, i) => (
+                                        <span key={i} className="text-[#FCCA07] text-base">
+                                            {s}
+                                        </span>
+                                    ))}
+                                </span>
+                                <span className="text-slate-500 font-sfpro text-xs sm:text-sm">
+                                    Trusted by 50+ founders in Healthcare, Real Estate & B2B SaaS
+                                </span>
                             </div>
-                        ) : (
-                            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-btn" style={{ background: "#111", color: "#fff", maxWidth: "380px" }}>
-                                → Book Your Free AI Clarity Call
-                            </a>
-                        )}
-                    </Section>
+                        </Reveal>
 
-                    <hr className="clarity-divider" />
+                        {/* Main headline */}
+                        <Reveal delay={80}>
+                            {isBooked ? (
+                                <h1
+                                    className="font-mondwest text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0A1128] leading-[1.1] tracking-tight mb-4 sm:mb-6"
+                                    style={{ textWrap: "balance" } as React.CSSProperties}
+                                >
+                                    {firstName ? `${firstName}, your call` : "Your call"} is{" "}
+                                    <span className="text-blue-600">locked in.</span>
+                                </h1>
+                            ) : (
+                                <h1
+                                    className="font-mondwest text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0A1128] leading-[1.1] tracking-tight mb-4 sm:mb-6"
+                                    style={{ textWrap: "balance" } as React.CSSProperties}
+                                >
+                                    We build AI systems that run{" "}
+                                    <span className="text-blue-600">
+                                        parts of your business
+                                    </span>{" "}
+                                    autonomously.
+                                </h1>
+                            )}
+                        </Reveal>
 
-                    {/* ── WHY FOUNDERS WORK WITH US ── */}
-                    <Section>
-                        <p className="clarity-label">Why Agentic AI Labs</p>
-                        <h2 className="clarity-serif" style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: 400, lineHeight: 1.2, marginBottom: "24px", letterSpacing: "-0.02em" }}>
-                            Built by engineers.<br />Trusted by founders.
-                        </h2>
-                        <ul className="clarity-checks">
-                            {[
-                                "3 technical co-founders — we build, we don't just consult.",
-                                "50+ AI systems shipped across healthcare, real estate, SaaS & home services.",
-                                "Within 48 hours of kickoff, most clients have a working prototype.",
-                                "We build systems that work in production — not demos that break with real customers.",
-                                "After go-live: 30 days of active monitoring. No disappearing act.",
-                            ].map((item, i) => (
-                                <li key={i}>
-                                    <span className="ck-icon">
-                                        <svg viewBox="0 0 10 10" fill="none">
+                        {/* Sub-headline */}
+                        <Reveal delay={140}>
+                            <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
+                                {isBooked
+                                    ? "Before we meet — here's exactly what Agentic AI Labs builds, how we work, and what to bring to the call. No slides. No demo. Just a straight answer on where AI fits in your operations."
+                                    : "Not tools. Not chatbots. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop. Voice. Memory. Automation."}
+                            </p>
+                        </Reveal>
+
+                        {/* CTA */}
+                        <Reveal delay={200}>
+                            {isBooked ? (
+                                <div className="inline-flex items-center gap-3 bg-white rounded-xl shadow-sm border border-gray-100 px-5 sm:px-6 py-4 text-sm font-sfpro text-slate-700">
+                                    <span className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+                                        <svg viewBox="0 0 10 10" fill="none" className="w-3 h-3">
                                             <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </span>
-                                    <span>{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </Section>
+                                    <span>
+                                        <strong className="font-semibold text-[#0A1128]">You&apos;re all set.</strong>{" "}
+                                        Scroll down to see what we build and what to prepare.
+                                    </span>
+                                </div>
+                            ) : (
+                                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                                    <a
+                                        href={CAL_LINK}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="rounded-lg bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-4 text-sm sm:text-base font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
+                                        id="clarity-hero-cta"
+                                    >
+                                        Book Your Free AI Clarity Call
+                                    </a>
+                                    <a
+                                        href="#what-to-expect"
+                                        className="text-sm sm:text-base font-medium text-blue-600 hover:text-blue-700 transition-colors px-4 py-3 cursor-pointer"
+                                    >
+                                        See what happens on the call ↓
+                                    </a>
+                                </div>
+                            )}
+                        </Reveal>
 
-                    <hr className="clarity-divider" />
+                        {/* Trust sub-line */}
+                        {!isBooked && (
+                            <Reveal delay={260}>
+                                <p className="text-slate-400 font-sfpro text-xs sm:text-sm mt-4">
+                                    Free. 30 minutes. Specific to your business. Not a sales pitch.
+                                </p>
+                            </Reveal>
+                        )}
+                    </div>
+                </div>
 
-                    {/* ── STATS BAR ── */}
-                    <Section>
-                        <div className="clarity-stats">
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">
-                                    <Counter to={50} suffix="+" />
-                                </span>
-                                <span className="clarity-stat-label">Projects</span>
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 2: WHY FOUNDERS WORK WITH US               */}
+                {/* ─────────────────────────────────────────────────── */}
+                <FullBleed>
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <Reveal>
+                            <div className="text-center mb-8 sm:mb-12 lg:mb-14">
+                                <SectionLabel>Why Agentic AI Labs</SectionLabel>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
+                                    Built by engineers.
+                                </h2>
+                                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 font-mondwest px-4">
+                                    Trusted by founders.
+                                </h3>
                             </div>
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">
-                                    <Counter to={4} suffix="+" />
-                                </span>
-                                <span className="clarity-stat-label">Industries</span>
-                            </div>
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">48hrs</span>
-                                <span className="clarity-stat-label">To Kickoff</span>
-                            </div>
-                        </div>
-                        <p className="clarity-clients" style={{ marginTop: "16px" }}>
-                            Healthcare · Real Estate · B2B SaaS · Home Services
-                        </p>
-                    </Section>
+                        </Reveal>
 
-                    <hr className="clarity-divider" />
-
-                    {/* ── TRUSTED BY / CLIENTS ── */}
-                    <Section>
-                        <p className="clarity-label">Worked with founders in</p>
-                        <p style={{ fontSize: "15px", color: "#555", lineHeight: "1.6", margin: 0 }}>
-                            PatientlyAI — an AI receptionist that doubled appointment booking rates, running 24/7 without a single human receptionist in the loop. Built and deployed in under 2 weeks.
-                        </p>
-                    </Section>
-
-                    <hr className="clarity-divider" />
-
-                    {/* ── TESTIMONIAL ── */}
-                    <Section>
-                        <p className="clarity-label">What founders say</p>
-                        <div className="clarity-testimonial">
-                            <span className="clarity-quote-mark" aria-hidden="true">&ldquo;</span>
-                            <blockquote>
-                                Within 48 hours they built an AI caller that doubled our booking rate. It feels like having a full-time receptionist who never sleeps.
-                            </blockquote>
-                            <cite>— Aiden, Founder · Healthcare industry</cite>
-                        </div>
-                    </Section>
-
-                    <hr className="clarity-divider" />
-
-                    {/* ── WHAT HAPPENS ON THE CALL ── */}
-                    <Section id="what-to-expect">
-                        <p className="clarity-label">What to expect</p>
-                        <h2 className="clarity-serif" style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: 400, lineHeight: 1.2, marginBottom: "28px", letterSpacing: "-0.02em" }}>
-                            30 minutes. A plan. Zero pitch.
-                        </h2>
-                        <div className="clarity-steps">
+                        {/* Feature cards — 2-col grid on desktop */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
                             {[
                                 {
-                                    title: "We look at your business and your workflows.",
-                                    desc: "Tell us what your team does every day. We listen first — no script, no slide deck.",
+                                    title: "3 technical co-founders",
+                                    desc: "We build — we don't just consult. Every system we deploy, we've architected and shipped ourselves.",
+                                    icon: (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                    ),
                                 },
                                 {
-                                    title: "We map your #1 AI opportunity — ranked by time and money saved.",
-                                    desc: "Every business has one or two workflows where AI can do the heavy lifting. We find yours.",
+                                    title: "50+ AI systems shipped",
+                                    desc: "Across healthcare, real estate, B2B SaaS, and home services — in production, with real customers.",
+                                    icon: (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                        </svg>
+                                    ),
                                 },
                                 {
-                                    title: "You leave with a clear \"build this first\" plan.",
-                                    desc: "Not a proposal. Not a follow-up. A plain-language plan you can act on — with us or on your own.",
+                                    title: "Working prototype in 48hrs",
+                                    desc: "Not a deck. Not wireframes. An actual running bot within two business days of kickoff.",
+                                    icon: (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    ),
                                 },
-                            ].map((step, i) => (
-                                <div key={i} className="clarity-step">
-                                    <span className="clarity-step-num">{i + 1}</span>
-                                    <div className="clarity-step-body">
-                                        <h3>{step.title}</h3>
-                                        <p>{step.desc}</p>
+                                {
+                                    title: "30 days active monitoring post-launch",
+                                    desc: "We watch every interaction, tune the model, and ship optimizations. No disappearing act.",
+                                    icon: (
+                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                        </svg>
+                                    ),
+                                },
+                            ].map((card, i) => (
+                                <Reveal key={i} delay={i * 60}>
+                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 sm:p-6 h-full">
+                                        <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white mb-4">
+                                            {card.icon}
+                                        </div>
+                                        <h4 className="font-bold text-[#0A1128] font-mondwest text-base sm:text-lg mb-2">
+                                            {card.title}
+                                        </h4>
+                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
+                                            {card.desc}
+                                        </p>
                                     </div>
-                                </div>
+                                </Reveal>
                             ))}
                         </div>
-                    </Section>
 
-                    <hr className="clarity-divider" />
-
-                    {/* ── FINAL CTA ── */}
-                    {!isBooked && (
-                        <Section>
-                            <div className="clarity-final-cta">
-                                <h2>Your business runs.<br />Your AI should too.</h2>
-                                <p>
-                                    Free. 30 minutes. Specific to your business.
-                                    No pitch. No pressure. Just a straight answer on where AI fits in your operations.
-                                </p>
-                                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-btn">
-                                    → Book Your Free AI Clarity Call
-                                </a>
-                                <p className="clarity-risk-reversal">
-                                    Worst case: 30 minutes. You know where you stand.<br />
-                                    Best case: You find an opportunity worth $X,XXX/month.
-                                </p>
+                        {/* Stats bar — matches ProofSection style */}
+                        <Reveal>
+                            <div className="grid grid-cols-3 gap-px bg-gray-200 rounded-xl overflow-hidden border border-gray-200">
+                                {[
+                                    { num: 50, suffix: "+", label: "Projects Shipped" },
+                                    { num: 4, suffix: "+", label: "Industries" },
+                                    { label: "48hrs", labelFixed: true, desc: "To First Prototype" },
+                                ].map((stat, i) => (
+                                    <div key={i} className="bg-white py-6 sm:py-8 px-4 text-center">
+                                        <span className="block font-mondwest text-3xl sm:text-4xl lg:text-5xl text-[#0A1128] mb-1">
+                                            {stat.labelFixed ? stat.label : <Counter to={stat.num as number} suffix={stat.suffix} />}
+                                        </span>
+                                        <span className="text-slate-500 font-sfpro text-xs sm:text-sm uppercase tracking-wider">
+                                            {stat.labelFixed ? stat.desc : stat.label}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
-                        </Section>
-                    )}
+                        </Reveal>
+                    </div>
+                </FullBleed>
 
-                    {/* ── If already booked — replace CTA with a prep reminder ── */}
-                    {isBooked && (
-                        <Section>
-                            <div className="clarity-final-cta">
-                                <h2>One thing to bring to the call.</h2>
-                                <p>
-                                    Think of your top 3 repetitive tasks — the ones you or your team do every day that could theoretically run without you. That&apos;s all we need to make this call genuinely useful.
-                                </p>
-                                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: 0 }}>
-                                    Questions before the call? Reply to your confirmation email — Aditya reads every one.
-                                </p>
-                            </div>
-                        </Section>
-                    )}
-
-                    {/* ── FOOTER CLOSE ── */}
-                    <Section>
-                        <div className="clarity-footer">
-                            <p style={{ marginBottom: "8px", color: "#333", fontStyle: "italic", fontFamily: "'Instrument Serif', serif", fontSize: "16px" }}>
-                                — Aditya
-                            </p>
-                            <p>
-                                Founder, Agentic AI Labs<br />
-                                <a href="https://www.tryagentikai.com">tryagentikai.com</a>
-                            </p>
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 3: FEATURED CASE STUDY (PatientlyAI)       */}
+                {/* ─────────────────────────────────────────────────── */}
+                <div className="py-12 sm:py-16 lg:py-20">
+                    <Reveal>
+                        <div className="text-center mb-8 sm:mb-12">
+                            <SectionLabel>Real results</SectionLabel>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
+                                We don&apos;t say &ldquo;trust us.&rdquo;
+                            </h2>
+                            <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
+                                We show you what we built.
+                            </h3>
                         </div>
-                    </Section>
+                    </Reveal>
 
+                    <Reveal delay={80}>
+                        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sm:p-8 lg:p-10">
+                            <div className="flex items-center gap-2 mb-4">
+                                <span className="rounded-lg bg-red-500 px-2 sm:px-3 py-1 text-gray-50 font-sfpro text-xs sm:text-sm font-medium">
+                                    FEATURED
+                                </span>
+                            </div>
+                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 font-mondwest mb-6">
+                                PatientlyAI — AI Voice Agent for Healthcare
+                            </h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-6">
+                                {[
+                                    {
+                                        label: "The problem:",
+                                        text: "A healthcare practice was losing leads every week because calls went unanswered after hours.",
+                                    },
+                                    {
+                                        label: "The system we built:",
+                                        text: "Voice agent that calls new leads instantly, follows up Day 1–5, qualifies, handles objections, books into GoHighLevel, and sends a Stripe deposit by SMS.",
+                                    },
+                                    {
+                                        label: "The result:",
+                                        text: "Doubled appointment booking rate. Running 24/7 with zero human receptionists in the loop. Built and deployed in under 2 weeks.",
+                                    },
+                                ].map((col, i) => (
+                                    <div key={i}>
+                                        <h4 className="text-sm sm:text-base font-semibold text-[#0A1128] font-sfpro mb-2">
+                                            {col.label}
+                                        </h4>
+                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
+                                            {col.text}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                            <Link
+                                href="/agent/patientlyai"
+                                className="inline-block rounded-lg bg-blue-600 text-white font-sfpro text-sm sm:text-base font-medium px-4 sm:px-6 py-2 sm:py-3 hover:bg-blue-700 transition-colors cursor-pointer"
+                            >
+                                View PatientlyAI →
+                            </Link>
+                        </div>
+                    </Reveal>
                 </div>
+
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 4: TESTIMONIAL                              */}
+                {/* ─────────────────────────────────────────────────── */}
+                <FullBleed>
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <Reveal>
+                            <div className="text-center mb-8 sm:mb-10">
+                                <SectionLabel>What founders say</SectionLabel>
+                            </div>
+                        </Reveal>
+                        <Reveal delay={80}>
+                            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 sm:p-8 text-center max-w-3xl mx-auto">
+                                <p className="text-slate-700 font-sfpro text-base sm:text-lg lg:text-xl leading-relaxed italic mb-4">
+                                    &ldquo;Within 48 hours they built an AI caller that doubled our booking rate.
+                                    It feels like having a full-time receptionist who never sleeps.&rdquo;
+                                </p>
+                                <p className="text-sm sm:text-base text-slate-500 font-sfpro font-medium">
+                                    — Aiden, Founder · Healthcare industry
+                                </p>
+                            </div>
+                        </Reveal>
+                    </div>
+                </FullBleed>
+
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 5: WHAT HAPPENS ON THE CALL                */}
+                {/* ─────────────────────────────────────────────────── */}
+                <div id="what-to-expect" className="py-12 sm:py-16 lg:py-20">
+                    <Reveal>
+                        <div className="text-center mb-8 sm:mb-12 lg:mb-14">
+                            <SectionLabel>What to expect</SectionLabel>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
+                                30 minutes. A plan. Zero pitch.
+                            </h2>
+                            <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
+                                Here&apos;s exactly what happens on the call.
+                            </h3>
+                        </div>
+                    </Reveal>
+
+                    <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+                        {[
+                            {
+                                title: "We look at your business and your workflows.",
+                                desc: "Tell us what your team does every day. We listen first — no script, no agenda, no slide deck. You do most of the talking.",
+                                effort: "You need: 10 minutes of honest context.",
+                            },
+                            {
+                                title: "We map your #1 AI opportunity — ranked by time and money saved.",
+                                desc: "Every business has one or two workflows where AI does the heavy lifting. We find yours — and explain how we'd build it.",
+                                effort: "We deliver: A specific, ranked recommendation.",
+                            },
+                            {
+                                title: "You leave with a clear 'build this first' plan.",
+                                desc: "Not a proposal. Not a follow-up deck. A plain-language plan you can act on — with us or on your own.",
+                                effort: "No pressure. No commitment required.",
+                            },
+                        ].map((step, i) => (
+                            <Reveal key={i} delay={i * 80}>
+                                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
+                                    <div className="flex-shrink-0">
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-600 flex items-center justify-center">
+                                            <span className="text-white font-mondwest text-lg sm:text-xl font-bold">
+                                                {i + 1}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="flex-grow">
+                                        <h3 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-2">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-3">
+                                            {step.desc}
+                                        </p>
+                                        <p className="text-blue-600 font-sfpro text-sm sm:text-base font-medium">
+                                            {step.effort}
+                                        </p>
+                                    </div>
+                                </div>
+                            </Reveal>
+                        ))}
+                    </div>
+                </div>
+
+                {/* ─────────────────────────────────────────────────── */}
+                {/* SECTION 6: FINAL CTA or PREP REMINDER              */}
+                {/* ─────────────────────────────────────────────────── */}
+                <FullBleed>
+                    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        {!isBooked ? (
+                            <>
+                                <Reveal>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
+                                        Your business runs.
+                                    </h2>
+                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 font-mondwest px-4 mb-6 sm:mb-8">
+                                        Your AI should too.
+                                    </h3>
+                                </Reveal>
+                                <Reveal delay={80}>
+                                    <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto mb-2">
+                                        Free. 30 minutes. Specific to your business.
+                                    </p>
+                                    <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed font-medium max-w-xl mx-auto mb-8 sm:mb-10">
+                                        No pitch. No pressure. A straight answer on where AI fits in your operations.
+                                    </p>
+                                </Reveal>
+                                <Reveal delay={140}>
+                                    <a
+                                        href={CAL_LINK}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block rounded-lg bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
+                                        id="clarity-final-cta"
+                                    >
+                                        Book Your Free AI Clarity Call
+                                    </a>
+                                    <p className="text-slate-400 font-sfpro text-xs sm:text-sm mt-4">
+                                        Worst case: 30 minutes. Best case: you find an opportunity worth $X,XXX/month.
+                                    </p>
+                                </Reveal>
+                            </>
+                        ) : (
+                            <>
+                                <Reveal>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-6">
+                                        One thing to bring to the call.
+                                    </h2>
+                                </Reveal>
+                                <Reveal delay={80}>
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sm:p-8 text-left max-w-xl mx-auto mb-6">
+                                        <p className="text-slate-700 font-sfpro text-sm sm:text-base leading-relaxed mb-4">
+                                            Think of your <strong className="text-[#0A1128]">top 3 repetitive tasks</strong> — the ones you or your team do every day that could theoretically run without you.
+                                        </p>
+                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
+                                            That&apos;s all the context we need to make the 30 minutes genuinely useful. No prep deck. No slides. Just your honest answer on where the friction is.
+                                        </p>
+                                    </div>
+                                </Reveal>
+                                <Reveal delay={140}>
+                                    <p className="text-slate-400 font-sfpro text-xs sm:text-sm">
+                                        Questions before the call? Email{" "}
+                                        <a href="mailto:hello@tryagentikai.com" className="text-blue-600 hover:text-blue-700 transition-colors">
+                                            hello@tryagentikai.com
+                                        </a>{" "}
+                                        — Aditya reads every one.
+                                    </p>
+                                </Reveal>
+                            </>
+                        )}
+                    </div>
+                </FullBleed>
+
+                {/* ─────────────────────────────────────────────────── */}
+                {/* FOOTER CLOSE                                        */}
+                {/* ─────────────────────────────────────────────────── */}
+                <div className="py-12 sm:py-16 text-center">
+                    <Reveal>
+                        <p className="font-mondwest text-lg sm:text-xl text-[#0A1128] mb-1">
+                            — Aditya
+                        </p>
+                        <p className="text-slate-500 font-sfpro text-sm">
+                            Founder, Agentic AI Labs &nbsp;·&nbsp;{" "}
+                            <a href="https://www.tryagentikai.com" className="text-blue-600 hover:text-blue-700 transition-colors">
+                                tryagentikai.com
+                            </a>
+                        </p>
+                    </Reveal>
+                </div>
+
             </div>
-        </>
+        </div>
     );
 }
