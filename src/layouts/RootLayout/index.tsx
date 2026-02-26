@@ -62,7 +62,7 @@ const RootLayout = ({
   }, []);
 
   // Pages that manage their own layout (no global nav needed)
-  const NO_NAV_ROUTES = ["/clarity"];
+  const NO_NAV_ROUTES = ["/thankyou"];
   const hideNav = NO_NAV_ROUTES.includes(router.pathname);
 
   return (
