@@ -1,0 +1,158 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        DATA SOURCES REFERENCE                                               ║
+║        All sources used by the Research Engine                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  All sources listed here are free, public, and require no paid subscription.
+  Attribution notes included — cite these in page copy for credibility.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SOURCE 1 — BUREAU OF LABOR STATISTICS (BLS)
+  ─────────────────────────────────────────────────────────────────────────────
+  URL:          https://api.bls.gov/publicAPI/v1/timeseries/data/
+  Docs:         https://www.bls.gov/developers/api_python.htm
+  Auth:         None required for v1 API (25 queries/day limit)
+                Register for v2 at bls.gov for 500 queries/day
+  Update cycle: OES data updated annually every May
+  Citation:     "Source: U.S. Bureau of Labor Statistics, Occupational
+                 Employment and Wage Statistics (OEWS), [year]"
+  What to cite: Median annual wage, mean annual wage, employment count,
+                top employing states
+
+  BLS SERIES ID FORMAT (OES data):
+    OE + [area type] + [area code] + [industry code] + [occupation] + [measure]
+    Example: OEUN000000000000043417100000W
+      OE = OES program
+      U  = US national
+      N  = not seasonally adjusted
+      000000000 = national (all areas)
+      0000 = all industries
+      43-4171 (without dash, padded) = Receptionists
+      00 = all ownership
+      00 = all levels
+      W  = mean annual wage
+
+  KEY SOC CODES RELEVANT TO OUR PAGES:
+    43-4171  Receptionists and Information Clerks       (AI Receptionist)
+    13-1071  Human Resources Specialists                (AI Interviewer)
+    41-3091  Sales Representatives (services)           (AI SDR)
+    43-4051  Customer Service Representatives           (AI Support Rep)
+    43-5032  Dispatchers (police, fire, ambulance)     (AI Dispatch Agent)
+    43-6014  Secretaries and Admin Assistants          (AI Showing Coordinator)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SOURCE 2 — REDDIT PUBLIC JSON API
+  ─────────────────────────────────────────────────────────────────────────────
+  URL:          https://www.reddit.com/r/{subreddit}/search.json
+  Docs:         https://www.reddit.com/dev/api
+  Auth:         None required for read-only public data
+  Rate limit:   60 requests/minute (without auth)
+  Update cycle: Real-time
+  Citation:     "Source: Reddit community discussion, r/{subreddit}, [date]"
+  What to cite: Direct verbatim quotes from practitioners, upvote counts
+
+  SUBREDDITS BY INDUSTRY:
+    Dental        →  r/Dentistry, r/DentalAssistants, r/smallbusiness
+    Recruiting    →  r/recruiting, r/humanresources, r/HRpros
+    GHL Agencies  →  r/GHLusergroup (check current name), r/DigitalMarketing
+    E-Commerce    →  r/ecommerce, r/shopify, r/FulfillmentByAmazon
+    Real Estate   →  r/realestateinvesting, r/REAgents
+    Home Services →  r/HVAC, r/Plumbing, r/HomeImprovement
+    Fitness/Gyms  →  r/gymowners, r/personaltraining
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SOURCE 3 — GOOGLE TRENDS (pytrends)
+  ─────────────────────────────────────────────────────────────────────────────
+  Library:      pytrends — unofficial Google Trends API wrapper
+  Install:      pip install pytrends
+  Auth:         None required
+  Rate limit:   Soft limit — avoid rapid repeated calls; add sleep(5) between
+  Update cycle: Real-time (trends update daily)
+  Citation:     "Source: Google Trends, [date range], United States"
+  What to cite: % interest growth over 12 months, top states by interest,
+                rising related queries
+
+  NOTES:
+    - pytrends can return 429 errors if called too rapidly
+    - Add time.sleep(5) between keyword calls in the script
+    - If blocked, run again after 1-2 hours
+    - Data is relative (0-100 scale), not absolute search volumes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SOURCE 4 — RSS NEWS FEEDS (feedparser)
+  ─────────────────────────────────────────────────────────────────────────────
+  Library:      feedparser — universal RSS/Atom parser
+  Install:      pip install feedparser
+  Auth:         None required (public RSS feeds)
+  Rate limit:   None (respect robots.txt)
+  Update cycle: Real-time (feeds update as articles publish)
+  Citation:     "[Publication name], [article title], [date]"
+  What to cite: Latest headline, statistics from articles, publication name
+
+  RSS FEEDS BY INDUSTRY:
+    Dental        →  https://www.dentistrytoday.com/feed/
+                     https://www.dentaleconomics.com/rss
+    Recruiting    →  https://www.ere.net/feed/
+                     https://www.shrm.org/rss/rss.aspx
+    GHL/Marketing →  https://www.searchenginejournal.com/feed
+                     https://marketingland.com/feed
+    E-Commerce    →  https://www.practicalecommerce.com/feed
+                     https://www.shopify.com/blog.atom
+    Real Estate   →  https://www.inman.com/feed/
+                     https://www.nar.realtor/rss/newsroom.xml
+    Home Services →  https://www.contractingbusiness.com/rss.xml
+                     https://www.achrnews.com/rss
+    Healthcare    →  https://www.modernhealthcare.com/rss
+                     https://www.healthcareit.net/rss
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SOURCE 5 — JOB MARKET INTELLIGENCE
+  ─────────────────────────────────────────────────────────────────────────────
+  Primary:      BLS OEWS data (same API as Source 1 — employment count)
+  Secondary:    Public Indeed search results (HTML scrape of result count)
+  URL:          https://www.indeed.com/jobs?q={title}&l=United+States
+  Auth:         None (public search page)
+  Rate limit:   Be respectful — add delays between requests
+  Update cycle: Indeed updates in real-time; BLS data annually
+  Citation:     "Source: Indeed job search, [date]" or "Source: BLS OEWS [year]"
+  What to cite: Open job count, salary range from postings, top cities
+
+  NOTE ON INDEED SCRAPING:
+    Indeed does not have a public API. The script reads the result count from
+    the search page HTML. This can break if Indeed updates their HTML structure.
+    If the script fails, check the CSS selector in node_05_job_market.py and
+    update it to match the current page structure.
+
+    Fallback: Use BLS employment count from Node 1 as the denominator instead.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  CITATION TEMPLATES (use in page copy)
+  ─────────────────────────────────────────────────────────────────────────────
+
+  For BLS salary data:
+    "According to the U.S. Bureau of Labor Statistics, the median annual
+    wage for [role] is $[X] — that's $[Y]/hour."
+
+  For Reddit quotes:
+    "On r/[subreddit], practitioners describe the problem directly:
+    '[verbatim quote]' — [upvotes] practitioners agreed."
+
+  For Google Trends:
+    "Searches for '[keyword]' have grown [X]% over the last 12 months
+    (Google Trends, [month year])."
+
+  For RSS news:
+    "According to [publication] ([date]): '[headline or stat].'"
+
+  For job market:
+    "There are [X] open [role] positions on Indeed right now,
+    with salary ranges of $[min]–$[max]/year."
+
+╚══════════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,419 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        PROGRAMMATIC SEO — AGENTIC AI LABS                                  ║
+║        Master Strategy & Opportunity Map  v2.0                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  Site       →  tryagentik.com  (tryagentikai.com)
+  Product    →  Custom AI Systems: Voice + Memory + Automation (the full stack)
+  Word owned →  "AI Systems" (not AI tools, not AI agents)
+  ICP        →  Non-technical founders, 1–10 stage, $100K–$5M ARR,
+                 US / Canada / UK markets
+  Competing  →  Vapi · Retell.ai · Bland.ai · n8n · Zapier · Relevance AI ·
+                 Botpress · generic dev agencies · DIY ChatGPT builds
+  Stack used →  ElevenLabs · Smallest AI · Mem0 · Supermemory · n8n ·
+                 GHL · HubSpot · Salesforce · Calendly · Stripe · Twilio
+  Current    →  /en-us /en-gb /en-in /en-au /en-ae /en-ca routing exists
+  voice       →  Founder-led. Builder-to-builder. Specific over vague.
+                 No: "seamless / transform / innovative / leverage"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  WHY PROGRAMMATIC SEO FITS THIS BUSINESS EXACTLY
+
+  The founder's journey (from Marketing Channels doc) has 4 stages:
+
+    Stage 1  →  Feels operational pain. On LinkedIn, Twitter, founder communities.
+    Stage 2  →  Tries DIY: Vapi, n8n, Zapier, ChatGPT. Breaks in 30 days.
+    Stage 3  →  DIY fails in production. Googles for real help.
+    Stage 4  →  Evaluates agencies. Checks website. Wants proof.
+
+  Programmatic SEO captures Stage 3 and pre-empts Stage 2.
+
+  The founder Googles:
+    - "vapi alternative for production"           ← they just hit the wall
+    - "AI receptionist for dental practice"       ← they know what they need
+    - "AI agent for gohighlevel"                  ← they're already in the tool
+    - "what is AI memory for voice agents"        ← they're learning
+    - "AI automation for recruiting agencies"     ← they've identified the pain
+
+  Every one of these is a page we can rank for. The content already exists in
+  your business brain. We're just putting it on URLs Google can index.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  YOUR DATA AXES  (These are the raw inputs for every page)
+
+  ──────────────────────────────────────────────────────────────────────────────
+  AI ROLES  (from Verbal Identity System + ICP Doc)
+  ──────────────────────────────────────────────────────────────────────────────
+
+    ROLE                      REPLACES                INDUSTRY
+    ────────────────────────  ──────────────────────  ──────────────────────────
+    AI Receptionist           Front desk / phones     Dental · Clinics · Med Spa
+    AI Interviewer            Junior recruiters       Recruiting · Staffing · HR
+    AI SDR                    SDR / outbound rep      GHL Agencies · B2B SaaS
+    AI Support Rep            Support team            E-Commerce · SaaS · DTC
+    AI Dispatch Agent         Operations / admin      HVAC · Plumbing · Pest Control
+    AI Showing Coordinator    Showing admin           Real Estate · Prop Management
+    AI Membership Advisor     Front desk staff        Fitness · Gyms
+
+  ──────────────────────────────────────────────────────────────────────────────
+  INDUSTRIES  (from ICP Targeting Strategy doc)
+  ──────────────────────────────────────────────────────────────────────────────
+
+    CURRENT FOCUS (Months 1–6)    NEXT (Months 6–12)     FUTURE (Year 2+)
+    ────────────────────────────  ─────────────────────  ──────────────────────
+    Dental / Medical clinics      Real estate            Enterprise sales teams
+    GHL marketing agencies        Fitness / gyms         Contact centers
+    Recruiting firms              Home services          Healthcare networks
+                                  (HVAC, plumbing, etc.)
+
+  ──────────────────────────────────────────────────────────────────────────────
+  TOOLS / INTEGRATIONS  (from Sales Narrative + Landing Page)
+  ──────────────────────────────────────────────────────────────────────────────
+
+    GoHighLevel (GHL)   HubSpot    Salesforce     Calendly
+    Stripe              Twilio     Zendesk        Slack
+    n8n                 Zapier     Make.com       ElevenLabs
+    Mem0                Supermemory               Vapi (what they were using before)
+
+  ──────────────────────────────────────────────────────────────────────────────
+  COMPETITORS / ALTERNATIVES  (from Landing Page + Sales Narrative)
+  ──────────────────────────────────────────────────────────────────────────────
+
+    Vapi              Retell.ai       Bland.ai          n8n
+    Zapier            Relevance AI    Botpress          Make.com
+    Inflection AI     Generic dev agencies              DIY ChatGPT builds
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  THE 6 PLAYBOOKS  —  PRIORITIZED FOR AGENTIC AI LABS
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌───────────────────────────────────────────────────────────────────────────┐
+  │  TIER 1  ·  START HERE  ·  HIGHEST CONVERSION INTENT                     │
+  └───────────────────────────────────────────────────────────────────────────┘
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 1   PERSONAS  —  "AI [Role] for [Industry]"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "AI [role] for [industry]"
+  Volume         HIGH — these are Stage 3 searches by buyers who know the pain
+  Why it wins    Your ICP doc explicitly names these domains as "high-conviction"
+                 Dental practices · GHL agencies · Recruiting firms
+                 Real ROI numbers already exist in your Sales Narrative doc
+
+  PRIORITY PAGES  (Current ICP — Months 1–6):
+
+    URL                                         SEARCH INTENT
+    ──────────────────────────────────────────  ──────────────────────────────
+    /ai-receptionist-for-dental-practices       Dental owner missing 150+ calls/wk
+    /ai-receptionist-for-medical-clinics        Clinic with 200 patients needing coverage
+    /ai-receptionist-for-med-spa                Med spa losing $30K/yr in missed calls
+    /ai-interviewer-for-recruiting-agencies     Recruiter drowning in 100+ screens/mo
+    /ai-sdr-for-ghl-agencies                    GHL agency that can't build AI themselves
+    /ai-sdr-for-b2b-saas                        SaaS founder with cold outreach problem
+    /ai-support-rep-for-ecommerce               DTC brand with 200+ support tickets/mo
+
+  NEXT-PRIORITY PAGES  (Adjacent ICP — Months 6–12):
+
+    URL                                         SEARCH INTENT
+    ──────────────────────────────────────────  ──────────────────────────────
+    /ai-showing-coordinator-for-real-estate     Agent drowning in inquiry calls
+    /ai-dispatch-agent-for-hvac                 HVAC company missing service calls
+    /ai-dispatch-agent-for-plumbers             Plumber missing calls = missed revenue
+    /ai-membership-advisor-for-gyms             Gym struggling with member re-engagement
+
+  Page template formula (use the Sales Narrative pitch per role):
+
+    Hero        →  "We build an AI [Role] that [action chain]."
+                   (e.g. "answers every call, books appointments, remembers
+                   returning patients, sends confirmations — 24/7")
+    Problem     →  The dollar-quantified pain from ICP doc
+                   (e.g. "$40K/yr receptionist + $30K/yr missed calls = $70K problem")
+    Status quo  →  What they tried (Zapier, Vapi, hiring a VA) and why it broke
+    Solution    →  Three layers: Voice + Memory + Automation — their role name
+    Proof       →  Numbers from case studies once available
+    CTA         →  Book a Free Call
+
+  Total estimated pages   35–55
+  File to create          01_PERSONA_PAGES.txt
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 2   INTEGRATIONS  —  "AI Agent for [Tool They're Already Using]"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "AI agent for [tool]"  /  "AI automation with [tool]"
+  Volume         MEDIUM-HIGH — these users are mid-evaluation, tool already chosen
+  Why it wins    GHL is the single biggest channel in your entire marketing plan.
+                 GHL agencies send you 3–5 projects each. Owning the SEO for
+                 "AI agent for GoHighLevel" captures them before outreach.
+
+  PRIORITY PAGES  (Match tools mentioned in Landing Page copy):
+
+    URL                                        WHAT THEY'RE DOING
+    ─────────────────────────────────────────  ────────────────────────────────
+    /ai-voice-agent-for-gohighlevel            GHL agency trying to add AI to clients
+    /ai-automation-for-gohighlevel-agencies    Agency wanting white-label AI systems
+    /ai-agent-hubspot-integration              HubSpot user wanting AI on top of CRM
+    /ai-voice-agent-with-twilio               Developer connecting voice to Twilio
+    /ai-agent-salesforce-integration           Salesforce user wanting AI overlaid
+    /ai-booking-system-with-calendly           Founder wanting AI-scheduled bookings
+    /ai-payment-automation-stripe              Fintech / DTC needing AI + payments
+    /ai-agent-with-elevenlabs                  Dev building voice, hit production wall
+    /ai-memory-with-mem0                       Dev who knows Mem0, needs integration help
+    /ai-workflow-automation-n8n               n8n user whose workflow broke in production
+
+  Note: The ICP doc confirms that GHL users are "Stage 2 buyers actively trying DIY."
+  These pages intercept them before they hit the wall and give up.
+
+  Total estimated pages   20–30
+  File to create          02_INTEGRATION_PAGES.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌───────────────────────────────────────────────────────────────────────────┐
+  │  TIER 2  ·  BUILD NEXT  ·  HIGH DECISION-STAGE INTENT                    │
+  └───────────────────────────────────────────────────────────────────────────┘
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 3   COMPARISONS  —  "[Competitor] Alternative"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "[tool] alternative"  /  "[tool] vs Agentic AI Labs"
+  Volume         HIGH INTENT — these are the buyers right before they decide
+  Why it wins    Your Landing Page already names the comparison:
+                 "Retell gives you voice — but no memory. n8n gives you
+                 automation — but no conversation." That IS the comp page content.
+                 You're halfway there.
+
+  PRIORITY PAGES  (Named competitors in your own copy):
+
+    URL                          WHY THEY'RE SEARCHING THIS
+    ───────────────────────────  ──────────────────────────────────────────────
+    /vapi-alternative            Vapi user: "works in demo, broke in production"
+    /retell-ai-alternative       Retell user: "no memory, customer forgot who they are"
+    /bland-ai-alternative        Bland user: voice only, no automation or memory layer
+    /n8n-alternative             n8n user: automation works, but no AI conversation
+    /zapier-ai-alternative       Zapier user: automation limits, can't do real AI
+    /relevance-ai-alternative    Relevance AI: no-code AI, but not production-grade
+    /botpress-alternative        Botpress: chatbot-level, not full systems
+    /ghl-ai-chatbot-alternative  GHL native chatbot user: "not production-ready"
+
+  Page template formula (your Sales Narrative "Status Quo" section maps to this):
+
+    What [tool] does well     →  Give credit. No cheap shots.
+    The exact wall you hit    →  The moment the demo breaks (memory? automation? calls?)
+    What's missing            →  The specific missing layer (Voice / Memory / Automation)
+    What a full system does   →  "With all three layers connected..."
+    CTA                       →  Demo or consultation
+
+  Voice rule: Use your brand language. "Works in a demo. Breaks with real customers."
+              NOT "Our product is better than theirs."
+
+  Total estimated pages   10–15
+  File to create          03_COMPARISON_PAGES.txt
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 4   GLOSSARY  —  "What is [AI Term your ICP doesn't understand]"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "what is [term]"  /  "[term] explained"
+  Volume         MEDIUM — topical authority builder, lifts your entire domain
+  Why it wins    Your content pillar #2 ("How AI Systems Work") is EXACTLY this.
+                 These pages are blog posts formatted for Google snippets.
+                 Ranking for "what is AI memory" signals expertise to Google
+                 and intercepts Stage 1 founders before they try DIY.
+
+  PRIORITY PAGES  (Terms from your Verbal Identity System + Sales Narrative):
+
+    URL                                        CONNECTS TO YOUR POSITIONING
+    ─────────────────────────────────────────  ──────────────────────────────────
+    /glossary/what-is-an-ai-voice-agent        Core layer 1 — voice
+    /glossary/what-is-ai-memory                Core layer 2 — memory (your moat)
+    /glossary/what-is-agentic-ai               You own this word literally
+    /glossary/what-is-an-ai-sdr               Named role in your pitch docs
+    /glossary/what-is-an-ai-receptionist       Highest-priority ICP domain
+    /glossary/ai-agent-vs-ai-system            "Tools vs Systems" — your core pillar 1
+    /glossary/what-is-production-grade-ai      Exact phrase from your copy
+    /glossary/what-is-gohighlevel-ai           GHL community intercept
+    /glossary/what-is-ai-automation-for-smbs   ICP-specific term
+    /glossary/voice-agent-vs-chatbot           Stage 1 founder confusion
+    /glossary/what-is-mem0                     Memory stack — developer search
+    /glossary/ai-handoff-to-human              Objection from your FAQ
+    /glossary/what-is-ai-workflow-automation   n8n/Zapier user education
+
+  Voice rule: Written "conversational, builder-to-builder." Not textbook.
+              Lead with the analogy: "A voice agent without memory is a parrot."
+
+  Total estimated pages   30–50
+  File to create          04_GLOSSARY_PAGES.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌───────────────────────────────────────────────────────────────────────────┐
+  │  TIER 3  ·  LONGER-TERM  ·  BUILD AFTER TIER 1 IS WORKING                │
+  └───────────────────────────────────────────────────────────────────────────┘
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 5   LOCATIONS  —  "AI [Role] in [City / Country]"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "AI receptionist in [city]"  /  "AI agent for [city] businesses"
+  Volume         Lower per-page but massive in aggregate
+  Why it wins    Geo routing already built: /en-us /en-gb /en-in /en-au /en-ae
+                 ICP doc says US / Canada / UK are primary markets.
+                 Adding city-level pages is zero infrastructure cost.
+
+  PRIORITY GEOS  (Match to ICP doc geographies):
+
+    Country route   Target cities
+    ──────────────  ─────────────────────────────────────────────────────────
+    /en-us/         Los Angeles · New York · Chicago · Dallas · Houston · Miami
+    /en-gb/         London · Manchester · Birmingham · Edinburgh
+    /en-au/         Sydney · Melbourne · Brisbane
+    /en-ca/         Toronto · Vancouver · Calgary
+    /en-in/         Mumbai · Bangalore · Delhi · Hyderabad
+
+  PRIORITY URLs  (Role × City, match to dental/recruiting priority ICP):
+
+    /en-us/ai-receptionist-dental-los-angeles
+    /en-us/ai-receptionist-for-clinics-new-york
+    /en-gb/ai-receptionist-medical-london
+    /en-us/ai-interviewer-recruiting-agencies-chicago
+    /en-au/ai-voice-agent-sydney-businesses
+    /en-in/ai-automation-mumbai-startups
+
+  Total estimated pages   50–200  (role × city × country)
+  File to create          05_LOCATION_PAGES.txt
+
+  ─────────────────────────────────────────────────────────────────────────────
+  PLAYBOOK 6   DIRECTORY  —  "Best AI Tools for [Industry / Role]"
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Pattern        "best AI tools for [industry]"  /  "top AI voice agents for [role]"
+  Volume         MEDIUM — great for backlink acquisition and featured snippets
+  Why it wins    Your ICP is looking for this comparison content at Stage 2.
+                 By being the author of the roundup, you frame the category,
+                 include yourself, and get backlinks from the tools you list.
+
+  PRIORITY PAGES:
+
+    URL                                         ANGLE
+    ──────────────────────────────────────────  ──────────────────────────────
+    /best-ai-tools-for-dental-practices         You're #1. Include Vapi, Retell as #2–3.
+    /best-ai-voice-agents-for-business          Rank Vapi, Retell — with honest gaps
+    /best-ai-for-gohighlevel-agencies           GHL community intercept
+    /best-ai-tools-for-recruiting-agencies      ATS + AI combo guide
+    /best-ai-automation-for-ecommerce           Shopify + AI guide
+
+  Total estimated pages   10–15
+  File to create          06_DIRECTORY_PAGES.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  FULL OPPORTUNITY MAP  —  UPDATED WITH BUSINESS CONTEXT
+
+  PLAYBOOK                    RANK   PAGES    INTENT           CONVERSION   ICP MATCH
+  ──────────────────────────  ─────  ───────  ───────────────  ───────────  ─────────
+  Personas  (Role × Industry)  #1    35–55    Stage 3 buyers   ★★★★★        ✓ Primary
+  Integrations (Tool-specific) #2    20–30    Stage 2–3        ★★★★★        ✓ GHL focus
+  Comparisons (vs Competitors) #3    10–15    Decision-stage   ★★★★         ✓ Exact
+  Glossary  (AI Education)     #4    30–50    Stage 1–2        ★★★          ✓ Content Pillar 2
+  Locations (Geo × Role)       #5    50–200   Local intent     ★★★          ✓ Infra exists
+  Directory (Best-of Lists)    #6    10–15    Research         ★★           ✓ Backlinks
+
+  Total possible pages   155 – 365
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  BRAND VOICE RULES FOR ALL PSEO PAGES
+  (From Verbal Identity System — these apply to every page written)
+
+    ✓  Write like Aditya talking to another founder over coffee
+    ✓  Lead with the problem. Always. ("Front desk spending 6 hours/day on phones.")
+    ✓  Quantify the pain. ($40K/yr receptionist + $30K/yr missed = $70K problem)
+    ✓  Use the role frame to pitch. Not "AI system." "AI Receptionist."
+    ✓  Use: "Production-grade" / "Works without you" / "Talk. Remember. Act."
+    ✗  Never use: "Seamless" / "Transform" / "Cutting-edge" / "Innovative" / "Leverage"
+    ✗  Never claim. Show numbers. "300 calls handled. 12 booked. Zero human."
+    ✗  Never pitch "AI systems" in a page headline — use the role.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  TECHNICAL IMPLEMENTATION  (Next.js — pages router)
+
+    URL structure    Subfolders only. Never subdomains.
+                     /[role]-for-[industry]        → persona pages
+                     /[tool]-alternative           → comparison pages
+                     /glossary/[term]              → glossary pages
+                     /en-[country]/[role]-[city]   → location pages
+
+    Data layer       All pages generated from a single TS data file.
+                     getStaticPaths + getStaticProps — pre-rendered at build time.
+                     No runtime API calls on page load.
+
+    Sitemap          sitemap.xml.tsx must be extended per page type.
+                     Separate sitemap: /sitemap-personas.xml, /sitemap-glossary.xml
+                     Crawl budget: exclude very thin pages with noindex.
+
+    Internal links   Hub-and-spoke model.
+                     /ai-receptionist  →  links to all dental/clinic/med-spa sub-pages
+                     Each spoke links back to hub + 2–3 related spokes
+
+    No orphan pages  Every pSEO page reachable from a hub. Every hub in the sitemap.
+
+    Schema           Service schema + FAQPage schema on every pSEO page.
+                     LocalBusiness schema on location pages.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  RECOMMENDED BUILD ORDER
+
+    1. 01_PERSONA_PAGES.txt        Start: AI Receptionist for Dental Practices
+                                   This is your highest-conviction ICP domain.
+                                   One template → ~15 pages in this domain alone.
+
+    2. 02_INTEGRATION_PAGES.txt    Start: AI Agent for GoHighLevel
+                                   GHL is your biggest outbound channel.
+                                   Own the SEO before you run the outreach.
+
+    3. 03_COMPARISON_PAGES.txt     Start: /vapi-alternative
+                                   Your landing page already has this copy.
+                                   Lowest effort, highest decision-stage intent.
+
+    4. 04_GLOSSARY_PAGES.txt       Start: /glossary/what-is-an-ai-receptionist
+                                   Maps directly to Content Pillar 2.
+                                   These pages age well and compound over time.
+
+    5. 05_LOCATION_PAGES.txt       Start: /en-us/ cities (dental + recruiting)
+                                   Leverage existing routing infrastructure.
+
+    6. 06_DIRECTORY_PAGES.txt      Start: Best AI tools for dental practices
+                                   Link magnet. Position yourself as the authority.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  HOW TO USE THIS FOLDER
+
+    FILE                               WHAT IT CONTAINS
+    ─────────────────────────────────  ──────────────────────────────────────────
+    00_OVERVIEW_AND_OPPORTUNITIES.txt  This file — master map v2.0
+    01_PERSONA_PAGES.txt               Full role × industry matrix + page template
+    02_INTEGRATION_PAGES.txt           Tool-specific pages + integration context
+    03_COMPARISON_PAGES.txt            Competitor teardown template + full list
+    04_GLOSSARY_PAGES.txt              Glossary template + 40+ AI terms
+    05_LOCATION_PAGES.txt              Location template + geo strategy
+    06_DIRECTORY_PAGES.txt             Directory curation template
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  START WITH FILE 01.
+  First page: /ai-receptionist-for-dental-practices
+  The Sales Narrative doc already has the pitch. The ICP doc has the dollar numbers.
+  One template. One data file. Thirty pages.
+
+╚══════════════════════════════════════════════════════════════════════════════╝

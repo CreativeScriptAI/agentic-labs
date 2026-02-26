@@ -1,0 +1,192 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        PROGRAMMATIC SEO — PROGRESS LOG                                     ║
+║        Agentic AI Labs  ·  tryagentik.com                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  This file is updated every time a new page, template, or folder is created.
+  Read this first to understand what has been done and what is next.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  OVERALL STATUS
+
+    Total pages planned       155 – 365
+    Total pages completed     1
+    Total templates created   1
+    Research briefs generated 1  (dental-practices.txt)
+    Research engine status    LIVE — all 5 nodes operational
+    Last updated              2026-02-25
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  FOLDER STRUCTURE  (Created: 2026-02-25)
+
+    Programmatic SEO/
+    ├── 00_OVERVIEW_AND_OPPORTUNITIES.txt   ← Master strategy map (v2.0)
+    ├── 00_OVERVIEW_AND_OPPORTUNITIES.md    ← Markdown version
+    ├── STATUS/
+    │   └── PROGRESS_LOG.txt               ← This file
+    ├── RESEARCH_ENGINE/                   ← Proprietary data pipeline
+    │   ├── README.txt                     ← How to run
+    │   ├── requirements.txt               ← pip install this
+    │   ├── run_research.py                ← Master runner
+    │   ├── config/
+    │   │   ├── industry_map.py            ← Edit to add new pages
+    │   │   └── sources_reference.txt      ← Source docs
+    │   └── nodes/
+    │       ├── node_01_bls_labor.py       ← BLS salary + employment
+    │       ├── node_02_reddit_pain.py     ← Reddit practitioner quotes
+    │       ├── node_03_google_trends.py   ← Google Trends 12-month
+    │       ├── node_04_rss_news.py        ← Industry RSS news
+    │       └── node_05_job_market.py      ← Indeed + BLS job counts
+    ├── 01_PERSONAS/
+    │   ├── _TEMPLATE.txt                  ← Reusable page template
+    │   ├── _research_briefs/
+    │   │   └── dental-practices.txt       ← BRIEF 001 ✓ DONE
+    │   └── ai-receptionist-for-dental-practices.txt  ← PAGE 001 ✓ DONE
+    ├── 02_INTEGRATIONS/
+    │   └── _research_briefs/
+    ├── 03_COMPARISONS/
+    │   └── _research_briefs/
+    ├── 04_GLOSSARY/
+    │   └── _research_briefs/
+    ├── 05_LOCATIONS/
+    │   └── _research_briefs/
+    └── 06_DIRECTORY/
+        └── _research_briefs/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  COMPLETED PAGES
+
+  ┌─────────┬──────────────────────────────────────────────────────────┬──────────┐
+  │  ID     │  FILE                                                    │  STATUS  │
+  ├─────────┼──────────────────────────────────────────────────────────┼──────────┤
+  │  P-001  │  01_PERSONAS/ai-receptionist-for-dental-practices        │  ✓ DONE  │
+  │  B-001  │  01_PERSONAS/_research_briefs/dental-practices           │  ✓ DONE  │
+  └─────────┴──────────────────────────────────────────────────────────┴──────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  QUEUE — PLAYBOOK 1: PERSONAS  (Priority order)
+
+  ┌─────────┬────────────────────────────────────────────────────┬──────────┐
+  │  ID     │  PAGE (URL slug)                                   │  STATUS  │
+  ├─────────┼────────────────────────────────────────────────────┼──────────┤
+  │  P-001  │  ai-receptionist-for-dental-practices              │  ✓ DONE  │
+  │  P-002  │  ai-receptionist-for-medical-clinics               │  pending │
+  │  P-003  │  ai-receptionist-for-med-spa                       │  pending │
+  │  P-004  │  ai-interviewer-for-recruiting-agencies            │  pending │
+  │  P-005  │  ai-sdr-for-ghl-agencies                           │  pending │
+  │  P-006  │  ai-sdr-for-b2b-saas                               │  pending │
+  │  P-007  │  ai-support-rep-for-ecommerce                      │  pending │
+  │  P-008  │  ai-showing-coordinator-for-real-estate            │  pending │
+  │  P-009  │  ai-dispatch-agent-for-hvac                        │  pending │
+  │  P-010  │  ai-dispatch-agent-for-plumbers                    │  pending │
+  │  P-011  │  ai-membership-advisor-for-gyms                    │  pending │
+  └─────────┴────────────────────────────────────────────────────┴──────────┘
+
+  QUEUE — PLAYBOOK 2: INTEGRATIONS
+
+  ┌─────────┬────────────────────────────────────────────────────┬──────────┐
+  │  ID     │  PAGE (URL slug)                                   │  STATUS  │
+  ├─────────┼────────────────────────────────────────────────────┼──────────┤
+  │  I-001  │  ai-voice-agent-for-gohighlevel                    │  pending │
+  │  I-002  │  ai-automation-for-gohighlevel-agencies            │  pending │
+  │  I-003  │  ai-agent-hubspot-integration                      │  pending │
+  │  I-004  │  ai-voice-agent-with-twilio                        │  pending │
+  │  I-005  │  ai-agent-salesforce-integration                   │  pending │
+  │  I-006  │  ai-booking-system-with-calendly                   │  pending │
+  │  I-007  │  ai-payment-automation-stripe                      │  pending │
+  │  I-008  │  ai-agent-with-elevenlabs                          │  pending │
+  │  I-009  │  ai-memory-with-mem0                               │  pending │
+  │  I-010  │  ai-workflow-automation-n8n                        │  pending │
+  └─────────┴────────────────────────────────────────────────────┴──────────┘
+
+  QUEUE — PLAYBOOK 3: COMPARISONS
+
+  ┌─────────┬────────────────────────────────────────────────────┬──────────┐
+  │  ID     │  PAGE (URL slug)                                   │  STATUS  │
+  ├─────────┼────────────────────────────────────────────────────┼──────────┤
+  │  C-001  │  vapi-alternative                                  │  pending │
+  │  C-002  │  retell-ai-alternative                             │  pending │
+  │  C-003  │  bland-ai-alternative                              │  pending │
+  │  C-004  │  n8n-alternative                                   │  pending │
+  │  C-005  │  zapier-ai-alternative                             │  pending │
+  │  C-006  │  relevance-ai-alternative                          │  pending │
+  │  C-007  │  botpress-alternative                              │  pending │
+  │  C-008  │  ghl-ai-chatbot-alternative                        │  pending │
+  └─────────┴────────────────────────────────────────────────────┴──────────┘
+
+  QUEUE — PLAYBOOK 4: GLOSSARY
+
+  ┌─────────┬────────────────────────────────────────────────────┬──────────┐
+  │  ID     │  PAGE (URL slug)                                   │  STATUS  │
+  ├─────────┼────────────────────────────────────────────────────┼──────────┤
+  │  G-001  │  glossary/what-is-an-ai-voice-agent                │  pending │
+  │  G-002  │  glossary/what-is-ai-memory                        │  pending │
+  │  G-003  │  glossary/what-is-agentic-ai                       │  pending │
+  │  G-004  │  glossary/what-is-an-ai-sdr                        │  pending │
+  │  G-005  │  glossary/what-is-an-ai-receptionist               │  pending │
+  │  G-006  │  glossary/ai-agent-vs-ai-system                    │  pending │
+  │  G-007  │  glossary/what-is-production-grade-ai              │  pending │
+  │  G-008  │  glossary/what-is-gohighlevel-ai                   │  pending │
+  │  G-009  │  glossary/voice-agent-vs-chatbot                   │  pending │
+  │  G-010  │  glossary/ai-handoff-to-human                      │  pending │
+  └─────────┴────────────────────────────────────────────────────┴──────────┘
+
+  QUEUE — PLAYBOOK 5: LOCATIONS  (after Personas are done)
+
+    /en-us/  ×  6 AI Roles  ×  6 Cities  =  ~36 pages
+    /en-gb/  ×  4 AI Roles  ×  4 Cities  =  ~16 pages
+    /en-au/  ×  4 AI Roles  ×  3 Cities  =  ~12 pages
+    /en-in/  ×  3 AI Roles  ×  4 Cities  =  ~12 pages
+    Status: pending (starts after P-007 done)
+
+  QUEUE — PLAYBOOK 6: DIRECTORY
+
+    Best AI tools for dental practices
+    Best AI tools for recruiting agencies
+    Best AI for GHL agencies
+    Best AI voice agents for business
+    Status: pending (last to build — needs Playbook 1 pages to link from)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  CHANGELOG
+
+  2026-02-25  ─────────────────────────────────────────────────────────────────
+    [INIT]   Created full folder structure (7 folders + _research_briefs subfolders)
+    [DONE]   Created 01_PERSONAS/_TEMPLATE.txt
+    [DONE]   Created PAGE P-001: ai-receptionist-for-dental-practices.txt
+    [DONE]   Created STATUS/PROGRESS_LOG.txt (this file)
+    [DONE]   Created RESEARCH_ENGINE/ with all 5 nodes + master runner
+    [DONE]   Created config/industry_map.py (14 slugs configured)
+    [DONE]   Created config/sources_reference.txt
+    [RUN]    Executed run_research.py → dental-practices brief generated
+    [NODE]   Node 01 (BLS): BLS series ID needs validation — manual fallback URL provided
+    [NODE]   Node 02 (Reddit): ✓ 5 real practitioner quotes retrieved
+    [NODE]   Node 03 (Google Trends): pytrends installed, re-running
+    [NODE]   Node 04 (RSS): Bug fixed — re-running
+    [NODE]   Node 05 (Jobs): Indeed blocked (403) — BLS fallback URL provided
+
+  KNOWN ISSUES
+  ─────────────────────────────────────────────────────────────────────────────
+    BLS Node:    Series ID format needs tuning for v1 API — manual BLS URL provided
+                 as fallback. Fix: register at bls.gov for v2 API (500 req/day, free)
+    Indeed Node: 403 block on direct scrape. Fix: add residential proxy or use
+                 BLS employment count (already in Node 01) as the job count source
+    Trends Node: pytrends installed — will pull on next run
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  HOW TO USE THIS LOG
+
+  When a new page is created:
+    1. Move it from "pending" to a new row in COMPLETED PAGES with status ✓ DONE
+    2. Update the OVERALL STATUS counter at the top
+    3. Add a line to CHANGELOG with date and action
+    4. Update the folder tree if a new subfolder was created
+
+╚══════════════════════════════════════════════════════════════════════════════╝

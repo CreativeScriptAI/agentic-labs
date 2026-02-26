@@ -1,0 +1,293 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        PERSONA PAGE TEMPLATE  —  "AI [ROLE] for [INDUSTRY]"                ║
+║        Playbook 1  ·  Agentic AI Labs Programmatic SEO                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  HOW TO USE THIS TEMPLATE
+  ─────────────────────────────────────────────────────────────────────────────
+  1. Duplicate this file and rename it to match the URL slug.
+     Example: ai-receptionist-for-dental-practices.txt
+  2. Replace every [BRACKET] with the specific values for that page.
+  3. Keep the structure exactly as-is. Google rewards consistent templates.
+  4. Do NOT use: seamless / transform / cutting-edge / leverage / innovative.
+  5. DO use: production-grade / works without you / Talk. Remember. Act.
+  6. Lead with the problem. Always. Numbers beat adjectives.
+  7. Update STATUS/PROGRESS_LOG.txt after creating the page.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SEO METADATA
+  ─────────────────────────────────────────────────────────────────────────────
+
+  URL SLUG        /ai-[role]-for-[industry]
+                  Example: /ai-receptionist-for-dental-practices
+
+  TITLE TAG       AI [Role] for [Industry] — [Specific hook, max 60 chars]
+                  Example: AI Receptionist for Dental Practices | Agentic AI Labs
+
+  META DESC       [2 sentences. Sentence 1: state the problem + pain cost.
+                  Sentence 2: state the solution with the 3 layers + CTA.]
+                  Max 155 characters.
+                  Example: "Dental practices lose $30K/yr in missed calls.
+                  We build an AI receptionist that answers every call,
+                  books appointments, and remembers every patient — 24/7."
+
+  H1              AI [Role] for [Industry]
+                  Example: AI Receptionist for Dental Practices
+
+  CANONICAL       https://tryagentikai.com/ai-[role]-for-[industry]
+
+  SCHEMA TYPES    Service, FAQPage
+  (note for dev)  Include: serviceType, areaServed, provider, description
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE CONTENT
+  ─────────────────────────────────────────────────────────────────────────────
+
+  ── HERO ──────────────────────────────────────────────────────────────────────
+
+  H1:
+    AI [Role] for [Industry]
+
+  Subheadline:
+    [State the full action chain the AI does — 1 sentence, no jargon.]
+    Example: "Answers every call. Books appointments. Remembers returning
+    patients. Sends confirmations. 24/7, without a human in the loop."
+
+  CTA Button:
+    Book a Free Call
+
+  Secondary link:
+    See how it works  →  scrolls to HOW WE BUILD IT section
+
+  ── PROBLEM ───────────────────────────────────────────────────────────────────
+
+  Section label:  THE PROBLEM
+
+  H2:
+    [State the specific pain of THIS industry in plain language.]
+    Example: "Your front desk is your bottleneck."
+
+  Body:
+    [2–4 short paragraphs. Write like a founder talking to another founder.
+    Name specific scenarios. Use concrete numbers from the ICP doc.
+    Structure: What is happening → How much it costs → Why it's getting worse.]
+
+    Paragraph 1: The daily reality (what's actually happening in their business)
+    Paragraph 2: The dollar cost (use numbers from Sales Narrative doc)
+    Paragraph 3: What they've tried that didn't work (Zapier, Vapi, hiring a VA)
+    Paragraph 4 (optional): Why it's getting worse if unaddressed
+
+  Pain cost callout (styled block):
+    [COST TYPE 1]:  $[X]/year
+    [COST TYPE 2]:  $[X]/year
+    ──────────────────────────
+    Total problem:  $[X]/year
+    We solve it for: $[setup fee] setup + $[monthly]/month
+
+  ── WHAT WE BUILD ─────────────────────────────────────────────────────────────
+
+  Section label:  WHAT WE BUILD
+
+  H2:
+    Talk. Remember. Act.
+    One AI system. Three layers. [Industry-specific closer.]
+    Example: "Zero missed calls."
+
+  Intro line:
+    We don't sell you a voice agent. We don't sell you an automation.
+    We build one AI [Role] where everything is connected.
+
+  Layer 1 – Voice:
+    [H3] Your AI talks.
+    [Body] [Describe specifically what the AI says and does on calls in this
+    industry. Name the exact scenarios: appointment booking, insurance questions,
+    lead qualification, etc. 2–3 lines max.]
+
+  Layer 2 – Memory:
+    [H3] Your AI remembers.
+    [Body] [Describe what memory means in this specific industry context.
+    "Returning patients never repeat themselves." Specific, not generic. 2–3 lines.]
+
+  Layer 3 – Automation:
+    [H3] Your AI acts.
+    [Body] [List the specific downstream actions: "Books into [their software].
+    Updates [their CRM]. Sends confirmation via SMS. Triggers a reminder 24h before."]
+    Name real tools they use: Dentrix, GHL, Salesforce, Calendly, etc.
+
+  Closing line:
+    Most AI gives you one of these. We connect all three.
+    That's the difference between a demo and a system that runs your [industry] ops.
+
+  ── HOW WE BUILD IT ───────────────────────────────────────────────────────────
+
+  Section label:  HOW IT WORKS
+
+  H2:
+    From "I need AI" to "my AI is live."
+    Four weeks.
+
+  Step 1 – Week 1  AUDIT
+    We map your workflows. Every call, every follow-up, every manual task in
+    your [industry] operation. We identify exactly what the AI handles and what
+    stays human.
+    You spend: 1 hour on a call with us.
+    We deliver: A clear plan for what we're building.
+
+  Step 2 – Week 2  BUILD
+    We build the AI [Role]. Voice agent, memory layer, automation workflows —
+    all connected, all integrated with [their tools: e.g. Dentrix / GHL / ATS].
+    You spend: Nothing. We build.
+
+  Step 3 – Week 3  TEST
+    Real scenarios. Real edge cases. The weird calls. The angry patients. We
+    break it on purpose so it doesn't break with your customers.
+    You spend: 30 minutes reviewing and giving feedback.
+
+  Step 4 – Week 4  LIVE
+    Your AI [Role] goes live. We monitor every interaction for the first 30 days.
+    You get a dashboard: calls handled, appointments booked, issues flagged.
+    You spend: Zero. It runs without you.
+
+  ── PROOF ─────────────────────────────────────────────────────────────────────
+
+  Section label:  RESULTS
+
+  H2:
+    We don't say "trust us."
+    We show you what we built.
+
+  Featured result (when available — use placeholder until real case study):
+    [INDUSTRY] CLIENT
+    The problem:  [1 sentence — specific]
+    The system:   [What we built — voice + memory + automation, named specifically]
+    The result:   [Numbers: calls, bookings, tickets, time saved]
+    [Quote if available]
+
+  Proof stat row (3 callouts):
+    [STAT 1]   [STAT 2]   [STAT 3]
+    Example: "300 calls handled" / "85% resolved without human" / "4 weeks to live"
+
+  ── IS THIS FOR YOU ───────────────────────────────────────────────────────────
+
+  Section label:  IS THIS FOR YOU?
+
+  H2:
+    Built for [industry type] who have traction but not enough time.
+
+  This is for you if:
+    ✓  You handle [X]+ [calls / tickets / inquiries] per [week/month]
+    ✓  Your [role — e.g. front desk / support team] is your bottleneck
+    ✓  You've tried [Vapi / Zapier / hiring a VA] and it broke in production
+    ✓  Your budget is $5K+ and you're serious about making AI actually work
+    ✓  You want a system that runs without you — not another tool to manage
+
+  This is NOT for you if:
+    ✗  You need a $500 chatbot
+    ✗  You want to "explore AI" with no specific pain to solve
+    ✗  You want to manage and maintain the AI yourself
+
+  ── FAQ ───────────────────────────────────────────────────────────────────────
+
+  Section label:  QUESTIONS
+
+  H2:  You're probably wondering.
+
+  [Minimum 4 Q&As — use industry-specific answers, not generic ones]
+  [These also serve as the FAQPage schema markup]
+
+  Q: How is this different from [closest competitor / tool they use]?
+  A: [Name the tool. Name what it does well. Name the specific missing layer.
+     "Vapi gives you voice. No memory. The AI forgets every conversation.
+     We build the full system — voice + memory + automation, connected."]
+
+  Q: What does it integrate with?
+  A: [Name tools specifically relevant to their industry.]
+
+  Q: What happens if the AI says something wrong?
+  A: [Standard answer — testing, guardrails, human handoff, 30-day monitoring.]
+
+  Q: How much does it cost?
+  A: [Standard answer — starts at $5K, scoped per workflow, clear number before commit.]
+
+  Q: How long does it take?
+  A: [Standard — 4 weeks. Week 1 audit. Week 2 build. Week 3 test. Week 4 live.]
+
+  ── FINAL CTA ─────────────────────────────────────────────────────────────────
+
+  H2:
+    Your [industry] runs.
+    Your AI should too.
+
+  Body:
+    One call. 15 minutes. We'll tell you exactly what an AI [Role] would look
+    like for your [industry] — and whether it even makes sense.
+    No pitch. No pressure. Just a straight answer.
+
+  CTA Button:  Book Your Free Call
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  INTERNAL LINKING RULES (required on every page)
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Link FROM this page TO:
+    →  Homepage (always — in CTA and footer)
+    →  The hub page for this role (e.g. /ai-receptionist links to all variants)
+    →  2–3 related persona pages (same role, different industry)
+    →  1 relevant glossary page (e.g. "what is an AI receptionist")
+    →  1 relevant integration page if applicable (e.g. /ai-voice-agent-for-gohighlevel)
+
+  Example anchor text (use natural language, not keyword-stuffed):
+    "See how our AI receptionist works for medical clinics →"
+    "Learn what an AI receptionist actually does →"
+    "Connect your GHL account →"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SCHEMA NOTES  (for dev implementation)
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Service schema:
+    @type: Service
+    name: "AI [Role] for [Industry]"
+    serviceType: "AI System"
+    description: "[Meta description text]"
+    provider: { @type: Organization, name: "Agentic AI Labs", url: "https://tryagentikai.com" }
+    areaServed: [geo based on page — omit for general pages]
+
+  FAQPage schema:
+    Each Q&A in the FAQ section → maps 1:1 to FAQPage schema items.
+    Minimum 4 items required.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE CHECKLIST  (confirm before marking complete in PROGRESS_LOG)
+  ─────────────────────────────────────────────────────────────────────────────
+
+  CONTENT
+    [ ]  H1 contains the exact target keyword (role + industry)
+    [ ]  Pain is quantified in dollars (from Sales Narrative / ICP doc)
+    [ ]  Three layers (Voice / Memory / Automation) each described specifically
+    [ ]  Specific tools named (not generic "your CRM")
+    [ ]  No banned words: seamless / transform / cutting-edge / leverage
+    [ ]  "Talk. Remember. Act." used at least once
+    [ ]  Minimum 4 FAQ items, each industry-specific
+
+  SEO
+    [ ]  Title tag ≤ 60 characters, contains keyword
+    [ ]  Meta description ≤ 155 characters
+    [ ]  H1 → H2 → H3 hierarchy clean (no skipped levels)
+    [ ]  Canonical URL defined
+    [ ]  Service + FAQPage schema noted for dev
+
+  INTERNAL LINKS
+    [ ]  Links to homepage
+    [ ]  Links to hub page for this role
+    [ ]  Links to 2–3 related pages
+    [ ]  Links to 1 glossary page
+
+  PROGRESS LOG
+    [ ]  PROGRESS_LOG.txt updated (status → ✓ DONE, changelog entry added)

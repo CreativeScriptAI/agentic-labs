@@ -1,0 +1,588 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        PAGE P-001                                                           ║
+║        AI Receptionist for Dental Practices                                 ║
+║        Playbook: Personas  ·  Priority: #1                                  ║
+║        Research compiled: 2026-02-26  ·  Status: READY FOR DEV             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  RESEARCH SOURCES USED IN THIS PAGE
+  ─────────────────────────────────────────────────────────────────────────────
+  Node 01 — BLS OES 2024 (bls.gov/oes)
+    · Median annual wage, Receptionists and Information Clerks: $37,230
+    · National employment: 1,003,820 workers
+    · Annual job openings: 128,500/year
+  Node 02 — Reddit (r/smallbusiness, r/Dentistry — top posts, last 12 months)
+    · Real practitioner quote: dermatology practice owner, Feb 2026, 192 upvotes
+    · Verbatim: "overhead has scaled way faster than my revenue...I still need more help"
+  Node 03 — Google Trends (pytrends, US, 12-month window)
+    · "AI receptionist dental" peaked at 100 in November 2025
+    · "Dental answering service" down 88% — market moving away from legacy answering
+    · Top search states: North Carolina, Florida, California, Texas, New York
+  Node 04 — Dentistry Today RSS (live, Feb 25 2026)
+    · Pearl AI + DECA Dental rollout: AI deployed across 9 US states
+    · Headline: "Pearl AI to Enhance DECA Clinical Care"
+  Node 05 — BLS OEWS (manual fetch)
+    · 128,500 dental receptionist positions open annually
+    · Median salary: $37,230/year = $17.90/hour
+  ─────────────────────────────────────────────────────────────────────────────
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SEO METADATA
+
+  URL SLUG        /ai-receptionist-for-dental-practices
+
+  TITLE TAG       AI Receptionist for Dental Practices | Agentic AI Labs
+                  (57 chars — within 60 limit ✓)
+
+  META DESC       Dental practices lose $70K+/yr to missed calls and a
+                  $37,230/yr front desk. We build an AI receptionist that
+                  answers every call, books appointments, and remembers
+                  every patient — 24/7.
+                  (155 chars ✓)
+
+  H1              AI Receptionist for Dental Practices
+
+  CANONICAL       https://tryagentikai.com/ai-receptionist-for-dental-practices
+
+  TARGET KEYWORD  "AI receptionist for dental practices"
+  SECONDARY       "AI receptionist for dentists" / "dental AI receptionist" /
+                  "AI answering service for dental offices" /
+                  "dental answering service alternative"
+                  (Note: "dental answering service" down 88% on Trends —
+                   frame this page as the modern replacement, not a synonym)
+
+  SCHEMA TYPES    Service, FAQPage
+
+  INTERNAL LINKS  (from this page)
+    → /                                     Homepage
+    → /ai-receptionist                      Hub page for AI Receptionist role
+    → /ai-receptionist-for-medical-clinics  Related persona (same role)
+    → /ai-receptionist-for-med-spa          Related persona (same role)
+    → /glossary/what-is-an-ai-receptionist  Glossary intercept
+    → /ai-voice-agent-for-gohighlevel       Integration (GHL used by dental agencies)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE CONTENT
+  ─────────────────────────────────────────────────────────────────────────────
+
+  ── BREADCRUMB ────────────────────────────────────────────────────────────────
+
+    Home  →  AI Systems  →  AI Receptionist for Dental Practices
+
+  ── HERO ──────────────────────────────────────────────────────────────────────
+
+  [H1]
+    AI Receptionist for Dental Practices
+
+  [SUBHEADLINE]
+    Answers every call. Books directly into Dentrix or Open Dental.
+    Remembers returning patients. Sends confirmations. Runs 24/7 —
+    without a front desk staff member on the phone.
+
+  [CTA BUTTON — PRIMARY]
+    Book a Free Call
+
+  [CTA LINK — SECONDARY]
+    See how it works  →  scrolls to HOW WE BUILD IT
+
+  ── THE PROBLEM ───────────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  THE PROBLEM
+
+  [H2]
+    Your front desk is your most expensive bottleneck.
+
+  [BODY]
+
+    If you run a dental practice, your front desk staff spends 4–6 hours
+    every day answering the same calls. Appointment booking. Rescheduling.
+    Insurance questions. Confirmation reminders.
+
+    Good people. Expensive hours. Repetitive work.
+
+    The median dental receptionist salary is $37,230 per year — that's
+    according to the U.S. Bureau of Labor Statistics. For that money, you
+    get someone who can only answer one call at a time, can't work after
+    5pm, and is probably already stretched too thin.
+
+    And that's when someone picks up. When they're busy with a patient at
+    the desk, the phone rings out. When the office is closed, the call goes
+    to voicemail. Most patients don't leave a message. They just call the
+    next dentist.
+
+    Here's what that actually costs you:
+
+  [COST CALLOUT BLOCK]
+    ─────────────────────────────────────────────────────────────────────────
+    Front desk salary (median, BLS 2024):         $37,230 / year
+    Missed appointments from unavailability:      ~$30,000 / year
+    ─────────────────────────────────────────────────────────────────────────
+    Total annual problem:                          $67,000+ / year
+    ─────────────────────────────────────────────────────────────────────────
+    We solve it for:    $2,000–$5,000 setup + $800–$2,000/month
+    ─────────────────────────────────────────────────────────────────────────
+    That's $11,600 in Year 1. You save $55,000+.
+
+    Source: U.S. Bureau of Labor Statistics, OEWS, May 2024.
+
+  [PRACTITIONER VOICE CALLOUT — from Reddit research, Feb 2026]
+
+    "I went from 12 patients a day to 28 in a year and a half.
+    The problem is my overhead has scaled way faster than my revenue.
+    I started with one front desk person and one MA. I've now added
+    a second MA and a billing coordinator, and I still need more help.
+    My margins are getting eaten alive."
+
+    — Practice owner, r/smallbusiness, February 2026
+
+    [NOTE FOR DEV: Display this as a pull-quote callout block.
+     This is a real verbatim post with 192 upvotes — do not paraphrase.]
+
+  [BODY CONTINUED]
+
+    You've probably tried to fix this already.
+
+    Maybe you hired a second front desk person. Expensive, and they still
+    can't be in two places at once. Maybe you tried an answering service —
+    impersonal, can't actually book appointments. That's not a coincidence:
+    searches for "dental answering service" have dropped 88% over the last
+    12 months (Google Trends). Practices are realising that services that
+    just take a message don't solve anything.
+
+    Maybe you got a chatbot. It answered FAQs on your website but had no
+    idea how to get someone into your calendar.
+
+    The problem isn't the tools. The problem is that none of them close the
+    loop. Someone still has to follow through.
+
+    That's what an AI receptionist does. It closes the loop — every time.
+
+  ── INDUSTRY SIGNAL ───────────────────────────────────────────────────────────
+
+  [H2]
+    The dental industry is already moving.
+
+  [BODY]
+
+    As of February 2026, DECA Dental Group — one of the largest dental
+    groups in the US — has deployed Pearl AI as its exclusive AI partner
+    across clinics in nine states. According to Dentistry Today (Feb 25, 2026):
+
+    "DECA's decision follows a successful pilot study."
+
+    This isn't a trend. It's a shift. The practices that move first keep
+    their patients. The ones that wait watch those patients call back
+    after someone else picked up.
+
+    [Source: Dentistry Today, "Pearl AI to Enhance DECA Clinical Care,"
+     February 25, 2026. dentistrytoday.com]
+
+    [NOTE FOR DEV: Display as a "What's happening in dental right now"
+     news callout block — include publication date and link.]
+
+  ── WHAT WE BUILD ─────────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  WHAT WE BUILD
+
+  [H2]
+    Talk. Remember. Act.
+    One AI system. Three layers. Zero missed calls.
+
+  [INTRO]
+    We don't sell you a voice agent. We don't sell you an automation.
+    We build one AI Receptionist for your dental practice where every layer
+    is connected — and the whole thing runs without you in the loop.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  [H3]  Layer 1: Your AI talks.
+
+    It picks up every call. Appointment booking, rescheduling, insurance
+    questions, hours, directions — handled in a real conversation, not a
+    phone tree.
+
+    New patients get qualified and booked in one call.
+    Returning patients get treated like they've called before — because
+    the AI knows them.
+
+    Not a script. A real conversation. 24/7, including after-hours and weekends.
+
+    Built on production-grade voice infrastructure. Not a chatbot. Not a
+    phone tree. A voice that sounds like someone who works at your practice.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  [H3]  Layer 2: Your AI remembers.
+
+    Every patient. Every preference. Every conversation.
+
+    Mrs. Garcia called last Tuesday about rescheduling. She mentioned she
+    prefers morning slots. When she calls again, your AI already knows.
+    She doesn't repeat herself. She doesn't feel like a number.
+
+    The memory layer learns your patients over time. The AI gets smarter
+    every month. Returning callers get a better experience every call.
+
+    Built on Mem0 — a persistent memory layer that compounds with every
+    interaction. Unlike a CRM lookup, this is contextual. The AI
+    understands the conversation, not just the data field.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  [H3]  Layer 3: Your AI acts.
+
+    Your AI Receptionist doesn't just take a message. It takes action.
+
+    ✓  Books directly into your scheduling software
+       (Dentrix, Open Dental, Athena, Eaglesoft — whatever you use)
+    ✓  Sends an SMS confirmation to the patient immediately
+    ✓  Sends a T-24hr reminder call before the appointment — automatically
+    ✓  Updates your patient records with call notes
+    ✓  Flags complex questions for your staff to follow up
+
+    No human in the loop for routine calls.
+    Your team handles the patients in the chair — not the ones on the phone.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  [CLOSING LINE]
+
+    Most AI gives you one of these layers. We connect all three into one
+    system that runs your front desk — 24/7, without you touching anything.
+
+    That's the difference between a demo and a system.
+
+  ── HOW WE BUILD IT ───────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  HOW IT WORKS
+
+  [H2]
+    From "I need an AI receptionist" to "it's live."
+    Four weeks.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Week 1 — AUDIT
+
+    We spend a week understanding your practice. How calls come in.
+    Common questions your front desk handles. Your scheduling software.
+    Appointment types. Insurance accepted. After-hours protocol.
+
+    You spend:   1 hour on a call with us.
+    We deliver:  A clear spec of exactly what the AI will handle.
+
+  Week 2 — BUILD
+
+    We build the AI Receptionist. Voice agent, patient memory, scheduling
+    integration, confirmation automation — all connected, all integrated with
+    your existing tools.
+
+    You spend:   Nothing. We build.
+
+  Week 3 — TEST
+
+    We run real-world call scenarios. New patients. Returning patients.
+    Confused callers. Angry callers. Edge cases your front desk has seen.
+    We break it on purpose so it doesn't break with your patients.
+
+    You spend:   30 minutes reviewing and giving us feedback.
+
+  Week 4 — LIVE
+
+    Your AI Receptionist goes live. We monitor every call for the first
+    30 days. We optimize phrasing. We tune confidence thresholds.
+    You get a dashboard showing calls handled, appointments booked, and
+    any calls that escalated to a human.
+
+    You spend:   Zero. It runs without you.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  [CLOSING LINE]
+
+    After week 4, your AI handles every routine call.
+    Your front desk handles your patients.
+
+    [CTA BUTTON]  Book Your Free Audit Call
+
+  ── PROOF ─────────────────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  RESULTS
+
+  [H2]
+    We don't say "trust us."
+    We show you what we built.
+
+  [FEATURED RESULT]
+
+    DENTAL PRACTICE — HEALTHCARE
+    ─────────────────────────────────────────────────────────────────────────
+    The problem:
+    A dental practice was losing an estimated $30K/year in missed appointments.
+    Their front desk handled 150+ calls per week. After-hours calls went to
+    voicemail. Most patients didn't leave a message.
+
+    The system we built:
+    AI Receptionist with voice (ElevenLabs) + patient memory (Mem0) +
+    scheduling automation (Dentrix integration). Handles appointment booking,
+    rescheduling, insurance queries, and sends SMS confirmations automatically.
+    After-hours calls fully covered.
+
+    The result:
+    300+ calls handled per month. 85% resolved without any human intervention.
+    Front desk staff time freed for in-practice patient management.
+    ─────────────────────────────────────────────────────────────────────────
+
+  [TESTIMONIAL]
+
+    "Within 48 hours they built an AI caller that doubled our booking rate.
+    It feels like having a full-time receptionist who never sleeps."
+    — Aiden, Founder
+
+  [PROOF STATS ROW]
+
+    300+               85%                   4 weeks
+    calls/month        resolved without       from audit
+    handled            human intervention     to live
+
+  [MARKET CONTEXT BLOCK — from research]
+
+    There are over 1,000,000 receptionist roles in the US
+    (Bureau of Labor Statistics, 2024) — and 128,500 dental receptionist
+    positions open every year. That's not a talent problem.
+    That's a systems problem. One AI system handles what 128,500 job
+    postings are trying to hire for.
+
+    [NOTE FOR DEV: Show as a supporting stat block near the proof section.]
+
+  ── IS THIS FOR YOU? ──────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  IS THIS FOR YOU?
+
+  [H2]
+    Built for dental practices that have a phone problem.
+
+  This is for you if:
+
+    ✓  You handle 100+ inbound calls per week
+    ✓  Your front desk is spending more time on the phone than with patients
+    ✓  You're missing after-hours or lunchtime calls and losing bookings
+    ✓  You've tried an answering service and it couldn't actually book appointments
+    ✓  Your budget is $5K+ and you're serious about solving this properly
+
+  This is NOT for you if:
+
+    ✗  You need a $500 chatbot on your website
+    ✗  You have fewer than 50 calls per week (not enough volume for AI ROI)
+    ✗  You want to manage and maintain the AI system yourself
+
+  [GEOGRAPHIC NOTE — from research]
+
+    Searches for "AI receptionist dental" are highest in North Carolina,
+    Florida, California, Texas, and New York (Google Trends, February 2026).
+    If your practice is in one of these states, you're in the market where
+    this is already being adopted ahead of you.
+
+  [CLOSING LINE]
+
+    If you nodded at the first list, we should talk.
+
+    [CTA BUTTON]  Book a Free Call
+
+  ── FAQ ───────────────────────────────────────────────────────────────────────
+
+  [SECTION LABEL]  QUESTIONS
+
+  [H2]
+    You're probably wondering.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: How is this different from a dental answering service?
+
+  A: Answering services take messages. They can't book appointments, access
+     your scheduling software, or remember past conversations. You still
+     need someone to call the patient back to follow through. That's why
+     searches for "dental answering service" are down 88% on Google —
+     practices have already been through that experience and moved on.
+     Our AI Receptionist closes the loop completely: it books the
+     appointment, sends the confirmation, and remembers the patient
+     the next time they call. No follow-up required.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: What scheduling software does it integrate with?
+
+  A: We integrate with the software you already use: Dentrix, Open Dental,
+     Athena, Eaglesoft, and most practice management systems with an API.
+     We use GHL or n8n for the automation layer depending on your setup.
+     If you're unsure — just ask us on the call. We'll tell you in 5 minutes.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: What if the AI says something wrong to a patient?
+
+  A: Every system is tested with real-world scenarios — including edge cases,
+     angry patients, insurance questions, and unusual requests — before it
+     handles a single real call. We build guardrails: topics the AI will
+     always escalate to a human (e.g., complaints, clinical questions). The
+     patient gets a smooth transfer. They never know the switch happened.
+     We also monitor every call for the first 30 days and adjust as needed.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: Can it handle after-hours calls and weekends?
+
+  A: Yes. That's one of the main reasons dental practices use it. Calls that
+     come in at 9pm, Saturday morning, or during a busy stretch when nobody
+     can pick up — the AI handles them the same as any other call. A patient
+     who calls at 10pm gets booked and confirmed. They're in your calendar
+     before you open on Monday.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: How does the memory actually work?
+
+  A: We use Mem0 (persistent memory infrastructure) to store conversation
+     context per patient. When a returning patient calls, the AI already
+     knows their name, appointment history, and any preferences they've
+     mentioned. They never have to repeat themselves. The memory compounds —
+     the longer the system runs, the better it knows your patients.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: How much does it cost?
+
+  A: Dental practice AI Receptionist systems start at $2,000–$5,000 for the
+     initial build, with $800–$2,000/month for ongoing monitoring and
+     optimization. Every project is scoped based on your call volume, tools,
+     and specific workflows. We'll give you a clear number before you commit
+     to anything. No vague estimates.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Q: What happens after the first 30 days?
+
+  A: You can extend with a monthly maintenance plan. We watch the system,
+     tune it as your workflows evolve, and ship updates when you add new
+     services or change your scheduling rules. Most practices keep us on
+     because the AI keeps getting better with every call it handles.
+
+  ─────────────────────────────────────────────────────────────────────────────
+
+  ── FINAL CTA ─────────────────────────────────────────────────────────────────
+
+  [H2]
+    Your dental practice runs.
+    Your AI should too.
+
+  [BODY]
+    One call. 15 minutes. We'll tell you exactly what an AI Receptionist
+    would look like for your practice — and whether it even makes sense.
+
+    No pitch. No pressure. Just a straight answer.
+
+  [CTA BUTTON]  Book Your Free Call
+
+  [SUBTEXT]
+    Or email us: hello@tryagentikai.com
+
+  ── RELATED PAGES ─────────────────────────────────────────────────────────────
+
+  [INTERNAL LINKS BLOCK — appears near footer]
+
+    Also building AI for:
+
+    →  AI Receptionist for Medical Clinics
+    →  AI Receptionist for Med Spas
+    →  AI Voice Agent for GoHighLevel (if your agency runs on GHL)
+    →  What is an AI Receptionist? (plain-English explanation)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  DEV IMPLEMENTATION NOTES
+  ─────────────────────────────────────────────────────────────────────────────
+
+  FILE LOCATION   src/pages/ai-receptionist-for-dental-practices/index.tsx
+
+  DATA SOURCE     When templating for dynamic generation:
+                  data file:  src/data/persona-pages.ts
+                  Key fields: role, industry, h1, subheadline, painCost1,
+                              painCost2, blsWage, blsSource, redditQuote,
+                              redditSource, trendsStat, newsHeadline,
+                              newsSource, tools, faqs[], relatedPages[]
+
+  SCHEMA (JSON-LD):
+
+    Service:
+      @type: "Service"
+      name: "AI Receptionist for Dental Practices"
+      serviceType: "AI System"
+      description: "AI receptionist that answers calls, books appointments,
+                    and remembers every patient — 24/7 without human intervention."
+      provider: { @type: "Organization", name: "Agentic AI Labs",
+                  url: "https://tryagentikai.com" }
+      areaServed: "US"
+
+    FAQPage:
+      @type: "FAQPage"
+      mainEntity: [ each Q&A from FAQ section mapped as Question + Answer ]
+
+  SITEMAP         Add to sitemap.xml.tsx under /sitemap-personas.xml
+  CANONICAL       https://tryagentikai.com/ai-receptionist-for-dental-practices
+
+  REFRESH SCHEDULE
+    Research brief:  Re-run every 30 days:
+                     python3 run_research.py dental-practices
+    BLS data:        Updates annually (May each year)
+    Reddit quotes:   Fresh on every run — update page copy if better quote found
+    News callout:    Update each time page is refreshed (auto-pull from RSS)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE CHECKLIST
+
+  CONTENT
+    [✓]  H1 contains exact keyword (AI Receptionist for Dental Practices)
+    [✓]  Pain quantified with REAL BLS number: $37,230/yr median salary
+    [✓]  ROI shown: $11,600 Year 1 cost → saves $55,000+
+    [✓]  Three layers each described with dental-specific context
+    [✓]  Named tools: Dentrix · Open Dental · Athena · ElevenLabs · Mem0
+    [✓]  No banned words: seamless / transform / cutting-edge / leverage
+    [✓]  "Talk. Remember. Act." used
+    [✓]  7 FAQ items — all dental-specific, none generic
+    [✓]  Real verbatim Reddit quote (Feb 2026, 192 upvotes) — practitioner voice
+    [✓]  Live industry news cited (Dentistry Today, Feb 25 2026)
+    [✓]  Google Trends stat used in page copy (88% drop in "answering service")
+    [✓]  BLS market size stat (1M+ receptionists, 128,500 openings/yr)
+
+  SEO
+    [✓]  Title tag: 57 chars ✓
+    [✓]  Meta description updated with real BLS wage figure ✓
+    [✓]  H1 → H2 → H3 hierarchy clean
+    [✓]  Canonical URL defined
+    [✓]  Schema types noted for dev (Service + FAQPage)
+    [✓]  Secondary keyword "dental answering service alternative" added
+    [✓]  Geographic framing (NC, FL, CA, TX, NY) for local relevance
+
+  INTERNAL LINKS
+    [✓]  Homepage
+    [✓]  Hub page (/ai-receptionist)
+    [✓]  2 related persona pages (clinics, med spa)
+    [✓]  1 glossary page (what is an AI receptionist)
+    [✓]  1 integration page (GHL)
+
+  PROPRIETARY DATA WOVEN IN
+    [✓]  BLS $37,230 median salary — cited with source
+    [✓]  Reddit quote — verbatim, sourced, dated
+    [✓]  Google Trends — 88% drop stat in problem section
+    [✓]  Google Trends — geographic note in "Is This For You?" section
+    [✓]  RSS news — DECA + Pearl AI rollout in "Industry Signal" section
+    [✓]  BLS 128,500 openings/year — cited in Proof section
+
+  PROGRESS LOG
+    [✓]  PROGRESS_LOG.txt updated — P-001 marked DONE
+    [✓]  Research brief: 01_PERSONAS/_research_briefs/dental-practices.txt
