@@ -70,8 +70,8 @@ const RootLayout = ({
       {/* <Scripts /> */}
       {!hideNav && <Header fullWidth={false} />}
       <main
-        className={`mx-auto w-full overflow-x-hidden ${hideNav ? "" : containerClassName
-          } ${router.pathname === "/contact" ? "px-0" : "px-4"}`}
+        className={`mx-auto w-full overflow-x-hidden ${hideNav ? "p-0" : `${containerClassName} ${router.pathname === "/contact" ? "px-0" : "px-4"}`
+          }`}
       >
         {children}
       </main>

@@ -3,10 +3,9 @@ import Link from "next/link";
 import { ClarityPageProps } from "src/pages/clarity/index";
 import ctaLinks from "src/constants/cta-links";
 
-/* ─── design tokens ─────────────────────────────────────────── */
 const CAL_LINK = ctaLinks.aiClarityWorkshop;
 
-/* ─── tiny helpers ───────────────────────────────────────────── */
+/* ─── date formatter ─────────────────────────────────────────── */
 function formatBookingDate(raw: string | null): string {
     if (!raw) return "";
     try {
@@ -20,91 +19,104 @@ function formatBookingDate(raw: string | null): string {
     }
 }
 
-/* ─── intersection-observer fade-in hook ────────────────────── */
-function useFadeIn() {
-    const ref = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        const obs = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                    obs.disconnect();
-                }
-            },
-            { threshold: 0.12 }
-        );
-        obs.observe(el);
-        return () => obs.disconnect();
-    }, []);
-    return ref;
-}
-
-/* ─── animated counter ──────────────────────────────────────── */
+/* ─── animated counter (only on client, only when visible) ──── */
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     const [val, setVal] = useState(0);
+    const [started, setStarted] = useState(false);
     const ref = useRef<HTMLSpanElement>(null);
+
     useEffect(() => {
         const el = ref.current;
-        if (!el) return;
+        if (!el || started) return;
         const obs = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     obs.disconnect();
-                    let start = 0;
-                    const step = Math.ceil(to / 60);
+                    setStarted(true);
+                    let current = 0;
+                    const step = Math.ceil(to / 40);
                     const id = setInterval(() => {
-                        start += step;
-                        if (start >= to) {
-                            setVal(to);
-                            clearInterval(id);
-                        } else {
-                            setVal(start);
-                        }
-                    }, 20);
+                        current += step;
+                        if (current >= to) { setVal(to); clearInterval(id); }
+                        else setVal(current);
+                    }, 30);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.4 }
         );
         obs.observe(el);
         return () => obs.disconnect();
-    }, [to]);
-    return (
-        <span ref={ref}>
-            {val}
-            {suffix}
-        </span>
-    );
+    }, [to, started]);
+
+    return <span ref={ref}>{val}{suffix}</span>;
 }
 
-/* ─── section wrapper ────────────────────────────────────────── */
-function Section({
-    children,
-    className = "",
+/* ─── CTA Button — guaranteed yellow regardless of global reset  */
+const CTAButton = ({
+    href,
     id,
+    children,
+    fullWidth = false,
 }: {
-    children: React.ReactNode;
-    className?: string;
+    href: string;
     id?: string;
-}) {
-    const ref = useFadeIn();
+    children: React.ReactNode;
+    fullWidth?: boolean;
+}) => (
+    <a
+        href={href}
+        id={id}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+            display: fullWidth ? "flex" : "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#FCCA07",
+            color: "#0A1128",
+            fontWeight: 600,
+            fontSize: "16px",
+            lineHeight: 1.25,
+            padding: fullWidth ? "18px 24px" : "14px 32px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            width: fullWidth ? "100%" : "auto",
+            cursor: "pointer",
+            transition: "background-color 0.15s ease",
+            WebkitTapHighlightColor: "transparent",
+            minHeight: "52px", /* 44px+ touch target */
+        }}
+        onMouseOver={e => (e.currentTarget.style.backgroundColor = "#f0bc00")}
+        onMouseOut={e => (e.currentTarget.style.backgroundColor = "#FCCA07")}
+    >
+        {children}
+    </a>
+);
+
+/* ─── section-label — matches site red label style ─────────── */
+function SectionLabel({ children }: { children: React.ReactNode }) {
     return (
-        <div
-            id={id}
-            ref={ref}
-            className={className}
+        <p
             style={{
-                opacity: 0,
-                transform: "translateY(28px)",
-                transition: "opacity 0.6s ease, transform 0.6s ease",
+                color: "#ef4444",
+                fontSize: "11px",
+                fontWeight: 500,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: "16px",
             }}
         >
             {children}
-        </div>
+        </p>
     );
 }
+
+/* ─── CheckIcon SVG ─────────────────────────────────────────── */
+const CheckIcon = () => (
+    <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: 20, height: 20, flexShrink: 0, color: "#16a34a", marginTop: 2 }}>
+        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.172l6.879-6.879a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+);
 
 /* ─── main component ─────────────────────────────────────────── */
 export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) {
@@ -112,626 +124,723 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
     const formattedDate = formatBookingDate(date);
 
     return (
-        <>
-            <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+        <div style={{ minHeight: "100vh", backgroundColor: "#F9F6F4", fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", overflowX: "hidden" }}>
 
-        .clarity-root {
-          font-family: 'DM Sans', sans-serif;
-          background: #FAFAF8;
-          color: #111111;
-          min-height: 100vh;
-        }
+            {/* ── Minimal Top Bar ───────────────────────────────────  */}
+            <header
+                style={{
+                    position: "sticky",
+                    top: 0,
+                    zIndex: 50,
+                    backgroundColor: "#F9F6F4",
+                    borderBottom: "1px solid #e5e7eb",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 16px",
+                    height: "60px",
+                }}
+            >
+                <Link
+                    href="/"
+                    style={{
+                        fontFamily: "var(--font-mondwest), serif",
+                        color: "#0A1128",
+                        fontSize: "16px",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        letterSpacing: "-0.01em",
+                    }}
+                >
+                    Agentic AI Labs
+                </Link>
 
-        .clarity-serif {
-          font-family: 'Instrument Serif', Georgia, serif;
-        }
+                {isBooked ? (
+                    <span style={{ fontSize: "13px", color: "#6b7280" }}>
+                        ✓ Confirmed{firstName ? ` · ${firstName}` : ""}
+                    </span>
+                ) : (
+                    <a
+                        href={CAL_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            backgroundColor: "#FCCA07",
+                            color: "#0A1128",
+                            fontWeight: 600,
+                            fontSize: "13px",
+                            padding: "8px 16px",
+                            borderRadius: "8px",
+                            textDecoration: "none",
+                            minHeight: "44px",
+                            cursor: "pointer",
+                            WebkitTapHighlightColor: "transparent",
+                        }}
+                    >
+                        Book Free Call
+                    </a>
+                )}
+            </header>
 
-        /* ── top bar ── */
-        .clarity-topbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 20px 24px;
-          border-bottom: 1px solid #E8E6E1;
-          background: #FAFAF8;
-          position: sticky;
-          top: 0;
-          z-index: 50;
-          backdrop-filter: blur(8px);
-        }
-
-        .clarity-logo {
-          font-family: 'Instrument Serif', serif;
-          font-size: 17px;
-          color: #111;
-          text-decoration: none;
-          letter-spacing: -0.01em;
-        }
-
-        .clarity-cta-mini {
-          background: #111;
-          color: #fff;
-          border: none;
-          border-radius: 6px;
-          padding: 9px 18px;
-          font-size: 13px;
-          font-weight: 500;
-          cursor: pointer;
-          text-decoration: none;
-          letter-spacing: 0.01em;
-          transition: background 0.2s;
-        }
-
-        .clarity-cta-mini:hover { background: #2a2a2a; }
-
-        /* ── layout ── */
-        .clarity-inner {
-          max-width: 680px;
-          margin: 0 auto;
-          padding: 0 24px;
-        }
-
-        /* ── confirmation banner ── */
-        .clarity-confirm-banner {
-          background: #111;
-          color: #fff;
-          text-align: center;
-          padding: 14px 24px;
-          font-size: 14px;
-          font-weight: 500;
-          letter-spacing: 0.01em;
-        }
-
-        .clarity-confirm-banner span {
-          opacity: 0.7;
-          font-weight: 400;
-        }
-
-        /* ── trust badge ── */
-        .clarity-trust-badge {
-          text-align: center;
-          padding: 36px 0 8px;
-          font-size: 13px;
-          color: #888;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-        }
-
-        /* ── hero ── */
-        .clarity-hero {
-          padding: 28px 0 40px;
-          text-align: center;
-        }
-
-        .clarity-hero h1 {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(32px, 6vw, 52px);
-          line-height: 1.12;
-          letter-spacing: -0.025em;
-          color: #0D0D0D;
-          margin: 0 0 18px;
-          font-weight: 400;
-        }
-
-        .clarity-hero h1 em {
-          font-style: italic;
-          color: #555;
-        }
-
-        .clarity-hero-sub {
-          font-size: 16px;
-          line-height: 1.65;
-          color: #555;
-          max-width: 520px;
-          margin: 0 auto 32px;
-        }
-
-        /* ── divider ── */
-        .clarity-divider {
-          border: none;
-          border-top: 1px solid #E8E6E1;
-          margin: 40px 0;
-        }
-
-        /* ── section label ── */
-        .clarity-label {
-          font-size: 11px;
-          font-weight: 600;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: #888;
-          margin-bottom: 16px;
-        }
-
-        /* ── checkmarks ── */
-        .clarity-checks {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-        }
-
-        .clarity-checks li {
-          display: flex;
-          gap: 12px;
-          font-size: 15px;
-          line-height: 1.55;
-          color: #222;
-        }
-
-        .clarity-checks .ck-icon {
-          flex-shrink: 0;
-          width: 20px;
-          height: 20px;
-          background: #1a9e52;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 2px;
-        }
-
-        .clarity-checks .ck-icon svg {
-          width: 10px;
-          height: 10px;
-        }
-
-        /* ── stat bar ── */
-        .clarity-stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1px;
-          background: #E8E6E1;
-          border: 1px solid #E8E6E1;
-          border-radius: 10px;
-          overflow: hidden;
-          margin: 0;
-        }
-
-        .clarity-stat {
-          background: #fff;
-          padding: 24px 20px;
-          text-align: center;
-        }
-
-        .clarity-stat-num {
-          font-family: 'Instrument Serif', serif;
-          font-size: 38px;
-          line-height: 1;
-          color: #0D0D0D;
-          display: block;
-          margin-bottom: 4px;
-        }
-
-        .clarity-stat-label {
-          font-size: 12px;
-          color: #888;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-        }
-
-        /* ── client strip ── */
-        .clarity-clients {
-          text-align: center;
-          font-size: 14px;
-          color: #888;
-          padding: 16px 0;
-          letter-spacing: 0.04em;
-        }
-
-        /* ── testimonial ── */
-        .clarity-testimonial {
-          background: #fff;
-          border: 1px solid #E8E6E1;
-          border-radius: 12px;
-          padding: 32px;
-          position: relative;
-        }
-
-        .clarity-testimonial blockquote {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(17px, 3vw, 22px);
-          font-style: italic;
-          line-height: 1.5;
-          color: #1a1a1a;
-          margin: 0 0 20px;
-        }
-
-        .clarity-testimonial cite {
-          font-size: 13px;
-          color: #888;
-          font-style: normal;
-        }
-
-        .clarity-quote-mark {
-          font-family: Georgia, serif;
-          font-size: 80px;
-          line-height: 0.6;
-          color: #E8E6E1;
-          position: absolute;
-          top: 24px;
-          left: 28px;
-          pointer-events: none;
-          user-select: none;
-        }
-
-        /* ── steps ── */
-        .clarity-steps {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .clarity-step {
-          display: flex;
-          gap: 16px;
-          align-items: flex-start;
-        }
-
-        .clarity-step-num {
-          flex-shrink: 0;
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          border: 1.5px solid #E8E6E1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-          font-weight: 600;
-          color: #555;
-          margin-top: 2px;
-        }
-
-        .clarity-step-body h3 {
-          font-size: 15px;
-          font-weight: 600;
-          color: #111;
-          margin: 0 0 4px;
-        }
-
-        .clarity-step-body p {
-          font-size: 14px;
-          color: #666;
-          line-height: 1.55;
-          margin: 0;
-        }
-
-        /* ── final cta ── */
-        .clarity-final-cta {
-          background: #111;
-          border-radius: 14px;
-          padding: 48px 36px;
-          text-align: center;
-          color: #fff;
-        }
-
-        .clarity-final-cta h2 {
-          font-family: 'Instrument Serif', serif;
-          font-size: clamp(24px, 4.5vw, 38px);
-          line-height: 1.15;
-          font-weight: 400;
-          margin: 0 0 12px;
-          letter-spacing: -0.02em;
-        }
-
-        .clarity-final-cta p {
-          font-size: 15px;
-          color: rgba(255,255,255,0.65);
-          line-height: 1.6;
-          margin: 0 0 28px;
-          max-width: 420px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .clarity-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: #fff;
-          color: #111;
-          border: none;
-          border-radius: 8px;
-          padding: 14px 32px;
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
-          text-decoration: none;
-          transition: background 0.2s, transform 0.15s;
-          width: 100%;
-          max-width: 400px;
-        }
-
-        .clarity-btn:hover {
-          background: #f0ede8;
-          transform: translateY(-1px);
-        }
-
-        .clarity-risk-reversal {
-          margin-top: 14px;
-          font-size: 12.5px;
-          color: rgba(255,255,255,0.45);
-          line-height: 1.5;
-        }
-
-        /* ── footer ── */
-        .clarity-footer {
-          padding: 40px 0 60px;
-          text-align: center;
-          font-size: 13px;
-          color: #888;
-          line-height: 1.8;
-        }
-
-        .clarity-footer a {
-          color: #555;
-          text-decoration: none;
-        }
-
-        .clarity-footer a:hover { text-decoration: underline; }
-
-        /* ── already-booked note ── */
-        .clarity-already-note {
-          background: #f0f7f3;
-          border: 1px solid #c2dece;
-          border-radius: 8px;
-          padding: 16px 20px;
-          font-size: 14px;
-          color: #1a6040;
-          text-align: center;
-          line-height: 1.6;
-        }
-
-        .clarity-already-note strong { font-weight: 600; }
-
-        @media (max-width: 480px) {
-          .clarity-topbar { padding: 16px 16px; }
-          .clarity-inner { padding: 0 16px; }
-          .clarity-final-cta { padding: 36px 20px; }
-          .clarity-testimonial { padding: 24px 20px; }
-          .clarity-stats { grid-template-columns: 1fr; }
-        }
-      `}</style>
-
-            <div className="clarity-root">
-
-                {/* ── Sticky Top Bar (logo + mini CTA) ── */}
-                <header className="clarity-topbar">
-                    <Link href="/" className="clarity-logo">
-                        Agentic AI Labs
-                    </Link>
-                    {!isBooked && (
-                        <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-cta-mini">
-                            Book Free Call →
-                        </a>
-                    )}
-                </header>
-
-                {/* ── Post-booking confirmation banner ── */}
-                {isBooked && (
-                    <div className="clarity-confirm-banner">
+            {/* ── Booking confirmation banner ───────────────────────  */}
+            {isBooked && (
+                <div
+                    style={{
+                        backgroundColor: "#0A1128",
+                        color: "#fff",
+                        textAlign: "center",
+                        padding: "10px 16px",
+                        fontSize: "13px",
+                        lineHeight: 1.5,
+                    }}
+                >
+                    <span style={{ fontWeight: 600 }}>
                         ✓ You&apos;re confirmed{firstName ? `, ${firstName}` : ""}
-                        {formattedDate && (
+                    </span>
+                    {formattedDate && (
+                        <span style={{ color: "rgba(255,255,255,0.65)" }}> · {formattedDate}</span>
+                    )}
+                    <span style={{ color: "rgba(255,255,255,0.65)" }}>
+                        {" "}— check your inbox for the calendar invite
+                    </span>
+                </div>
+            )}
+
+            {/* ── Max-width container ───────────────────────────────  */}
+            <div style={{ maxWidth: "1024px", margin: "0 auto", padding: "0 16px" }}>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* HERO SECTION                                         */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        paddingTop: "48px",
+                        paddingBottom: "48px",
+                        textAlign: "center",
+                        position: "relative",
+                    }}
+                >
+                    {/* Trust badge */}
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "8px",
+                            marginBottom: "24px",
+                            flexWrap: "wrap",
+                        }}
+                    >
+                        <span style={{ color: "#FCCA07", fontSize: "14px", letterSpacing: "2px" }}>★★★★★</span>
+                        <span style={{ color: "#6b7280", fontSize: "12px", fontWeight: 500 }}>
+                            50+ founders · Healthcare · Real Estate · B2B SaaS
+                        </span>
+                    </div>
+
+                    {/* Headline */}
+                    <h1
+                        style={{
+                            fontFamily: "var(--font-mondwest), serif",
+                            fontSize: "clamp(28px, 7vw, 56px)",
+                            fontWeight: 700,
+                            color: "#0A1128",
+                            lineHeight: 1.1,
+                            letterSpacing: "-0.02em",
+                            marginBottom: "20px",
+                            textWrap: "balance",
+                        } as React.CSSProperties}
+                    >
+                        {isBooked ? (
                             <>
-                                {" "}
-                                <span>· {formattedDate}</span>
+                                {firstName ? `${firstName}, your call` : "Your call"} is{" "}
+                                <span style={{ color: "#2563eb" }}>locked in.</span>
+                            </>
+                        ) : (
+                            <>
+                                We build AI systems that run{" "}
+                                <span style={{ color: "#2563eb" }}>parts of your business</span>{" "}
+                                autonomously.
                             </>
                         )}
-                        &nbsp;— a confirmation is on its way to your inbox
-                    </div>
-                )}
+                    </h1>
 
-                <div className="clarity-inner">
+                    {/* Sub-copy */}
+                    <p
+                        style={{
+                            color: "#475569",
+                            fontSize: "clamp(15px, 3.5vw, 18px)",
+                            lineHeight: 1.65,
+                            maxWidth: "600px",
+                            margin: "0 auto 32px",
+                        }}
+                    >
+                        {isBooked
+                            ? "Before we meet — here's exactly what we build, how we work, and what to bring. No slides. A straight answer on where AI fits your operations."
+                            : "Not tools. Not demos. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop."}
+                    </p>
 
-                    {/* ── Trust Badge ── */}
-                    <Section>
-                        <p className="clarity-trust-badge">
-                            ★★★★★ &nbsp; Trusted by founders in healthcare, real estate, B2B SaaS &amp; home services
-                        </p>
-                    </Section>
-
-                    {/* ── HERO ── */}
-                    <Section className="clarity-hero">
-                        {isBooked ? (
-                            <h1>
-                                {firstName ? `${firstName}, your call` : "Your call"} is locked in.
-                                <br />
-                                <em>Here&apos;s what we do — and why it matters.</em>
-                            </h1>
-                        ) : (
-                            <h1>
-                                We build AI systems that run
-                                <br />
-                                <em>parts of your business autonomously.</em>
-                            </h1>
-                        )}
-
-                        <p className="clarity-hero-sub">
-                            {isBooked
-                                ? "Before we meet — here's exactly what Agentic AI Labs does, how we work, and what to expect on the call. No slides. No pitch. Just a straight answer on where AI fits in your operations."
-                                : "Not tools. Not demos. Systems that work in production — 24/7, without you in the loop. Book your free 30-minute AI Clarity Call and walk away with a plan, not a pitch."}
-                        </p>
-
-                        {isBooked ? (
-                            <div className="clarity-already-note">
-                                <strong>You&apos;re all set.</strong> Scroll down to understand exactly what we build and what to prepare before the call.
-                            </div>
-                        ) : (
-                            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-btn" style={{ background: "#111", color: "#fff", maxWidth: "380px" }}>
-                                → Book Your Free AI Clarity Call
+                    {/* CTA area */}
+                    {isBooked ? (
+                        <div
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "flex-start",
+                                gap: "12px",
+                                backgroundColor: "#fff",
+                                border: "1px solid #e5e7eb",
+                                borderRadius: "12px",
+                                padding: "16px 20px",
+                                maxWidth: "480px",
+                                textAlign: "left",
+                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                            }}
+                        >
+                            <span
+                                style={{
+                                    width: "22px",
+                                    height: "22px",
+                                    borderRadius: "50%",
+                                    backgroundColor: "#16a34a",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexShrink: 0,
+                                    marginTop: "2px",
+                                }}
+                            >
+                                <svg viewBox="0 0 10 10" fill="none" style={{ width: 12, height: 12 }}>
+                                    <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                            <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.5 }}>
+                                <strong style={{ color: "#0A1128", fontWeight: 600 }}>You&apos;re all set.</strong>{" "}
+                                Scroll down to see what we build and what to prepare for the call.
+                            </span>
+                        </div>
+                    ) : (
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+                            <CTAButton href={CAL_LINK} id="clarity-hero-cta" fullWidth={false}>
+                                Book Your Free AI Clarity Call
+                            </CTAButton>
+                            <a
+                                href="#what-to-expect"
+                                style={{
+                                    fontSize: "14px",
+                                    color: "#2563eb",
+                                    textDecoration: "none",
+                                    display: "inline-block",
+                                    padding: "8px",
+                                    minHeight: "44px",
+                                    lineHeight: "28px",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                See what happens on the call ↓
                             </a>
-                        )}
-                    </Section>
+                            <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "-4px" }}>
+                                Free. 30 minutes. Not a sales pitch.
+                            </p>
+                        </div>
+                    )}
+                </section>
 
-                    <hr className="clarity-divider" />
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* WHY US — Feature Cards                               */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
+                        <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                            <SectionLabel>Why Agentic AI Labs</SectionLabel>
+                            <h2
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(22px, 5vw, 38px)",
+                                    fontWeight: 700,
+                                    color: "#0A1128",
+                                    lineHeight: 1.2,
+                                    marginBottom: "4px",
+                                }}
+                            >
+                                Built by engineers.
+                            </h2>
+                            <h3
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(22px, 5vw, 38px)",
+                                    fontWeight: 700,
+                                    color: "#2563eb",
+                                    lineHeight: 1.2,
+                                }}
+                            >
+                                Trusted by founders.
+                            </h3>
+                        </div>
 
-                    {/* ── WHY FOUNDERS WORK WITH US ── */}
-                    <Section>
-                        <p className="clarity-label">Why Agentic AI Labs</p>
-                        <h2 className="clarity-serif" style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: 400, lineHeight: 1.2, marginBottom: "24px", letterSpacing: "-0.02em" }}>
-                            Built by engineers.<br />Trusted by founders.
-                        </h2>
-                        <ul className="clarity-checks">
+                        {/* Feature list — mobile: stacked checkmarks, desktop: 2-col cards */}
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                                gap: "12px",
+                                marginBottom: "24px",
+                            }}
+                        >
                             {[
-                                "3 technical co-founders — we build, we don't just consult.",
-                                "50+ AI systems shipped across healthcare, real estate, SaaS & home services.",
-                                "Within 48 hours of kickoff, most clients have a working prototype.",
-                                "We build systems that work in production — not demos that break with real customers.",
-                                "After go-live: 30 days of active monitoring. No disappearing act.",
+                                { text: "3 technical co-founders — we build, we don't just consult." },
+                                { text: "50+ AI systems shipped across healthcare, real estate, SaaS, and home services." },
+                                { text: "Working prototype within 48 hours of kickoff — not a deck, a running bot." },
+                                { text: "30 days active monitoring post-launch. We watch every interaction. No disappearing act." },
                             ].map((item, i) => (
-                                <li key={i}>
-                                    <span className="ck-icon">
-                                        <svg viewBox="0 0 10 10" fill="none">
-                                            <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
+                                <div
+                                    key={i}
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        borderRadius: "12px",
+                                        border: "1px solid #f3f4f6",
+                                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                        padding: "16px 20px",
+                                        display: "flex",
+                                        alignItems: "flex-start",
+                                        gap: "12px",
+                                    }}
+                                >
+                                    <CheckIcon />
+                                    <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.55, fontWeight: 500 }}>
+                                        {item.text}
                                     </span>
-                                    <span>{item}</span>
-                                </li>
+                                </div>
                             ))}
-                        </ul>
-                    </Section>
-
-                    <hr className="clarity-divider" />
-
-                    {/* ── STATS BAR ── */}
-                    <Section>
-                        <div className="clarity-stats">
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">
-                                    <Counter to={50} suffix="+" />
-                                </span>
-                                <span className="clarity-stat-label">Projects</span>
-                            </div>
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">
-                                    <Counter to={4} suffix="+" />
-                                </span>
-                                <span className="clarity-stat-label">Industries</span>
-                            </div>
-                            <div className="clarity-stat">
-                                <span className="clarity-stat-num">48hrs</span>
-                                <span className="clarity-stat-label">To Kickoff</span>
-                            </div>
                         </div>
-                        <p className="clarity-clients" style={{ marginTop: "16px" }}>
-                            Healthcare · Real Estate · B2B SaaS · Home Services
-                        </p>
-                    </Section>
 
-                    <hr className="clarity-divider" />
-
-                    {/* ── TRUSTED BY / CLIENTS ── */}
-                    <Section>
-                        <p className="clarity-label">Worked with founders in</p>
-                        <p style={{ fontSize: "15px", color: "#555", lineHeight: "1.6", margin: 0 }}>
-                            PatientlyAI — an AI receptionist that doubled appointment booking rates, running 24/7 without a single human receptionist in the loop. Built and deployed in under 2 weeks.
-                        </p>
-                    </Section>
-
-                    <hr className="clarity-divider" />
-
-                    {/* ── TESTIMONIAL ── */}
-                    <Section>
-                        <p className="clarity-label">What founders say</p>
-                        <div className="clarity-testimonial">
-                            <span className="clarity-quote-mark" aria-hidden="true">&ldquo;</span>
-                            <blockquote>
-                                Within 48 hours they built an AI caller that doubled our booking rate. It feels like having a full-time receptionist who never sleeps.
-                            </blockquote>
-                            <cite>— Aiden, Founder · Healthcare industry</cite>
-                        </div>
-                    </Section>
-
-                    <hr className="clarity-divider" />
-
-                    {/* ── WHAT HAPPENS ON THE CALL ── */}
-                    <Section id="what-to-expect">
-                        <p className="clarity-label">What to expect</p>
-                        <h2 className="clarity-serif" style={{ fontSize: "clamp(22px, 4vw, 30px)", fontWeight: 400, lineHeight: 1.2, marginBottom: "28px", letterSpacing: "-0.02em" }}>
-                            30 minutes. A plan. Zero pitch.
-                        </h2>
-                        <div className="clarity-steps">
+                        {/* Stats bar */}
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(3, 1fr)",
+                                gap: "1px",
+                                backgroundColor: "#e5e7eb",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                                border: "1px solid #e5e7eb",
+                            }}
+                        >
                             {[
-                                {
-                                    title: "We look at your business and your workflows.",
-                                    desc: "Tell us what your team does every day. We listen first — no script, no slide deck.",
-                                },
-                                {
-                                    title: "We map your #1 AI opportunity — ranked by time and money saved.",
-                                    desc: "Every business has one or two workflows where AI can do the heavy lifting. We find yours.",
-                                },
-                                {
-                                    title: "You leave with a clear \"build this first\" plan.",
-                                    desc: "Not a proposal. Not a follow-up. A plain-language plan you can act on — with us or on your own.",
-                                },
-                            ].map((step, i) => (
-                                <div key={i} className="clarity-step">
-                                    <span className="clarity-step-num">{i + 1}</span>
-                                    <div className="clarity-step-body">
-                                        <h3>{step.title}</h3>
-                                        <p>{step.desc}</p>
+                                { num: 50, suffix: "+", label: "Projects" },
+                                { num: 4, suffix: "+", label: "Industries" },
+                                { fixed: "48h", label: "To Prototype" },
+                            ].map((s, i) => (
+                                <div
+                                    key={i}
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        padding: "20px 8px",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "clamp(24px, 6vw, 40px)",
+                                            fontWeight: 700,
+                                            color: "#0A1128",
+                                            lineHeight: 1,
+                                            marginBottom: "6px",
+                                        }}
+                                    >
+                                        {s.fixed ? s.fixed : <Counter to={s.num as number} suffix={s.suffix} />}
+                                    </div>
+                                    <div
+                                        style={{
+                                            fontSize: "10px",
+                                            color: "#6b7280",
+                                            textTransform: "uppercase",
+                                            letterSpacing: "0.06em",
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        {s.label}
                                     </div>
                                 </div>
                             ))}
                         </div>
-                    </Section>
+                    </div>
+                </section>
 
-                    <hr className="clarity-divider" />
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* CASE STUDY — PatientlyAI                            */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "48px 0" }}>
+                    <div style={{ textAlign: "center", marginBottom: "28px" }}>
+                        <SectionLabel>Real results</SectionLabel>
+                        <h2
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(22px, 5vw, 36px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                                marginBottom: "4px",
+                            }}
+                        >
+                            We don&apos;t say &ldquo;trust us.&rdquo;
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#334155" }}>We show you what we built.</p>
+                    </div>
 
-                    {/* ── FINAL CTA ── */}
-                    {!isBooked && (
-                        <Section>
-                            <div className="clarity-final-cta">
-                                <h2>Your business runs.<br />Your AI should too.</h2>
-                                <p>
-                                    Free. 30 minutes. Specific to your business.
-                                    No pitch. No pressure. Just a straight answer on where AI fits in your operations.
-                                </p>
-                                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="clarity-btn">
-                                    → Book Your Free AI Clarity Call
-                                </a>
-                                <p className="clarity-risk-reversal">
-                                    Worst case: 30 minutes. You know where you stand.<br />
-                                    Best case: You find an opportunity worth $X,XXX/month.
-                                </p>
-                            </div>
-                        </Section>
-                    )}
+                    <div
+                        style={{
+                            backgroundColor: "#fff",
+                            borderRadius: "16px",
+                            border: "1px solid #f3f4f6",
+                            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                            padding: "24px",
+                        }}
+                    >
+                        <span
+                            style={{
+                                display: "inline-block",
+                                backgroundColor: "#ef4444",
+                                color: "#fff",
+                                fontSize: "11px",
+                                fontWeight: 600,
+                                padding: "3px 10px",
+                                borderRadius: "6px",
+                                letterSpacing: "0.06em",
+                                marginBottom: "12px",
+                            }}
+                        >
+                            FEATURED
+                        </span>
+                        <h3
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(18px, 4vw, 28px)",
+                                fontWeight: 700,
+                                color: "#2563eb",
+                                marginBottom: "20px",
+                                lineHeight: 1.2,
+                            }}
+                        >
+                            PatientlyAI — AI Voice Agent for Healthcare
+                        </h3>
 
-                    {/* ── If already booked — replace CTA with a prep reminder ── */}
-                    {isBooked && (
-                        <Section>
-                            <div className="clarity-final-cta">
-                                <h2>One thing to bring to the call.</h2>
-                                <p>
-                                    Think of your top 3 repetitive tasks — the ones you or your team do every day that could theoretically run without you. That&apos;s all we need to make this call genuinely useful.
-                                </p>
-                                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: 0 }}>
-                                    Questions before the call? Reply to your confirmation email — Aditya reads every one.
-                                </p>
-                            </div>
-                        </Section>
-                    )}
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                                gap: "20px",
+                                marginBottom: "20px",
+                            }}
+                        >
+                            {[
+                                { label: "The problem:", text: "A healthcare practice was losing leads every week because calls went unanswered after hours." },
+                                { label: "The system we built:", text: "Voice agent: calls new leads instantly, follows up Day 1–5, qualifies, handles objections, books into GoHighLevel, sends a Stripe deposit by SMS." },
+                                { label: "The result:", text: "Doubled appointment booking rate. Running 24/7 with zero human receptionists in the loop. Built and deployed in under 2 weeks." },
+                            ].map((col, i) => (
+                                <div key={i}>
+                                    <p style={{ fontSize: "13px", fontWeight: 600, color: "#0A1128", marginBottom: "6px" }}>
+                                        {col.label}
+                                    </p>
+                                    <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6 }}>{col.text}</p>
+                                </div>
+                            ))}
+                        </div>
 
-                    {/* ── FOOTER CLOSE ── */}
-                    <Section>
-                        <div className="clarity-footer">
-                            <p style={{ marginBottom: "8px", color: "#333", fontStyle: "italic", fontFamily: "'Instrument Serif', serif", fontSize: "16px" }}>
-                                — Aditya
+                        <Link
+                            href="/agent/patientlyai"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                backgroundColor: "#2563eb",
+                                color: "#fff",
+                                fontSize: "14px",
+                                fontWeight: 600,
+                                padding: "10px 20px",
+                                borderRadius: "8px",
+                                textDecoration: "none",
+                                minHeight: "44px",
+                                cursor: "pointer",
+                            }}
+                        >
+                            View PatientlyAI →
+                        </Link>
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* TESTIMONIAL                                          */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
+                        <SectionLabel>What founders say</SectionLabel>
+                        <div
+                            style={{
+                                backgroundColor: "#fff",
+                                borderRadius: "16px",
+                                border: "1px solid #f3f4f6",
+                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                padding: "28px 24px",
+                            }}
+                        >
+                            <p
+                                style={{
+                                    fontSize: "clamp(15px, 3.5vw, 18px)",
+                                    color: "#334155",
+                                    fontStyle: "italic",
+                                    lineHeight: 1.65,
+                                    marginBottom: "16px",
+                                }}
+                            >
+                                &ldquo;Within 48 hours they built an AI caller that doubled our booking rate.
+                                It feels like having a full-time receptionist who never sleeps.&rdquo;
                             </p>
-                            <p>
-                                Founder, Agentic AI Labs<br />
-                                <a href="https://www.tryagentikai.com">tryagentikai.com</a>
+                            <p style={{ fontSize: "14px", color: "#6b7280", fontWeight: 500 }}>
+                                — Aiden, Founder · Healthcare
                             </p>
                         </div>
-                    </Section>
+                    </div>
+                </section>
 
-                </div>
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* WHAT HAPPENS ON THE CALL                            */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section id="what-to-expect" style={{ padding: "48px 0" }}>
+                    <div style={{ textAlign: "center", marginBottom: "28px" }}>
+                        <SectionLabel>What to expect</SectionLabel>
+                        <h2
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(22px, 5vw, 36px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                                marginBottom: "4px",
+                            }}
+                        >
+                            30 minutes. A plan. Zero pitch.
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#334155" }}>
+                            Here&apos;s exactly what happens on the call.
+                        </p>
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                        {[
+                            {
+                                title: "We look at your business and your workflows.",
+                                desc: "Tell us what your team does every day. We listen first — no script, no agenda, no slide deck. You do most of the talking.",
+                                note: "You need: 10 minutes of honest context.",
+                            },
+                            {
+                                title: "We map your #1 AI opportunity — ranked by time and money saved.",
+                                desc: "Every business has one or two workflows where AI does the heavy lifting. We find yours — and explain how we'd build it.",
+                                note: "We deliver: A specific, ranked recommendation.",
+                            },
+                            {
+                                title: "You leave with a clear 'build this first' plan.",
+                                desc: "Not a proposal. Not a follow-up deck. A plain-language plan you can act on — with us or on your own.",
+                                note: "No pressure. No commitment required.",
+                            },
+                        ].map((step, i) => (
+                            <div
+                                key={i}
+                                style={{
+                                    backgroundColor: "#fff",
+                                    borderRadius: "12px",
+                                    border: "1px solid #f3f4f6",
+                                    boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                    padding: "20px",
+                                    display: "flex",
+                                    gap: "16px",
+                                    alignItems: "flex-start",
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        width: "36px",
+                                        height: "36px",
+                                        borderRadius: "50%",
+                                        backgroundColor: "#2563eb",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexShrink: 0,
+                                        marginTop: "2px",
+                                    }}
+                                >
+                                    <span
+                                        style={{
+                                            color: "#fff",
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "16px",
+                                            fontWeight: 700,
+                                        }}
+                                    >
+                                        {i + 1}
+                                    </span>
+                                </div>
+                                <div style={{ flex: 1 }}>
+                                    <h3
+                                        style={{
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "clamp(15px, 3.5vw, 18px)",
+                                            fontWeight: 700,
+                                            color: "#0A1128",
+                                            marginBottom: "8px",
+                                            lineHeight: 1.3,
+                                        }}
+                                    >
+                                        {step.title}
+                                    </h3>
+                                    <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "8px" }}>
+                                        {step.desc}
+                                    </p>
+                                    <p style={{ fontSize: "13px", color: "#2563eb", fontWeight: 600 }}>
+                                        {step.note}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* FINAL CTA or PREP REMINDER                          */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
+                        {!isBooked ? (
+                            <>
+                                <h2
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(24px, 6vw, 40px)",
+                                        fontWeight: 700,
+                                        color: "#0A1128",
+                                        lineHeight: 1.15,
+                                        marginBottom: "4px",
+                                    }}
+                                >
+                                    Your business runs.
+                                </h2>
+                                <h3
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(24px, 6vw, 40px)",
+                                        fontWeight: 700,
+                                        color: "#2563eb",
+                                        lineHeight: 1.15,
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    Your AI should too.
+                                </h3>
+                                <p style={{ fontSize: "15px", color: "#475569", lineHeight: 1.65, marginBottom: "28px", maxWidth: "440px", margin: "0 auto 28px" }}>
+                                    Free. 30 minutes. No pitch. No pressure. A straight answer on where AI fits in your operations.
+                                </p>
+                                <CTAButton href={CAL_LINK} id="clarity-final-cta" fullWidth>
+                                    Book Your Free AI Clarity Call →
+                                </CTAButton>
+                                <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "12px" }}>
+                                    Worst case: 30 minutes. Best case: an opportunity worth thousands per month.
+                                </p>
+                            </>
+                        ) : (
+                            <>
+                                <h2
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(22px, 5vw, 36px)",
+                                        fontWeight: 700,
+                                        color: "#0A1128",
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    One thing to bring to the call.
+                                </h2>
+                                <div
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        borderRadius: "16px",
+                                        border: "1px solid #f3f4f6",
+                                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                        padding: "24px",
+                                        textAlign: "left",
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.65, marginBottom: "12px" }}>
+                                        Think of your <strong style={{ color: "#0A1128" }}>top 3 repetitive tasks</strong> — the ones you or your team do every day that could theoretically run without you.
+                                    </p>
+                                    <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: 1.65 }}>
+                                        That&apos;s all the context we need. No prep deck. No slides. Just your honest answer on where the friction is.
+                                    </p>
+                                </div>
+                                <p style={{ fontSize: "13px", color: "#9ca3af", lineHeight: 1.6 }}>
+                                    Questions?{" "}
+                                    <a
+                                        href="mailto:hello@tryagentikai.com"
+                                        style={{ color: "#2563eb", textDecoration: "none" }}
+                                    >
+                                        hello@tryagentikai.com
+                                    </a>
+                                    {" "}— Aditya reads every one.
+                                </p>
+                            </>
+                        )}
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* FOUNDER SIGN-OFF                                     */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "40px 0", textAlign: "center" }}>
+                    <p
+                        style={{
+                            fontFamily: "var(--font-mondwest), serif",
+                            fontSize: "18px",
+                            color: "#0A1128",
+                            marginBottom: "4px",
+                        }}
+                    >
+                        — Aditya
+                    </p>
+                    <p style={{ fontSize: "13px", color: "#6b7280" }}>
+                        Founder, Agentic AI Labs &nbsp;·&nbsp;{" "}
+                        <a
+                            href="https://www.tryagentikai.com"
+                            style={{ color: "#2563eb", textDecoration: "none" }}
+                        >
+                            tryagentikai.com
+                        </a>
+                    </p>
+                </section>
+
             </div>
-        </>
+        </div>
     );
 }
