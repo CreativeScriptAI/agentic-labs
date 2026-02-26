@@ -19,103 +19,104 @@ function formatBookingDate(raw: string | null): string {
     }
 }
 
-/* ─── animated counter ──────────────────────────────────────────*/
+/* ─── animated counter (only on client, only when visible) ──── */
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     const [val, setVal] = useState(0);
+    const [started, setStarted] = useState(false);
     const ref = useRef<HTMLSpanElement>(null);
+
     useEffect(() => {
         const el = ref.current;
-        if (!el) return;
+        if (!el || started) return;
         const obs = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     obs.disconnect();
-                    let start = 0;
-                    const step = Math.ceil(to / 50);
+                    setStarted(true);
+                    let current = 0;
+                    const step = Math.ceil(to / 40);
                     const id = setInterval(() => {
-                        start += step;
-                        if (start >= to) { setVal(to); clearInterval(id); }
-                        else setVal(start);
-                    }, 25);
+                        current += step;
+                        if (current >= to) { setVal(to); clearInterval(id); }
+                        else setVal(current);
+                    }, 30);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.4 }
         );
         obs.observe(el);
         return () => obs.disconnect();
-    }, [to]);
+    }, [to, started]);
+
     return <span ref={ref}>{val}{suffix}</span>;
 }
 
-/* ─── scroll-reveal hook ────────────────────────────────────────*/
-function useReveal() {
-    const ref = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        const obs = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                    obs.disconnect();
-                }
-            },
-            { threshold: 0.1 }
-        );
-        obs.observe(el);
-        return () => obs.disconnect();
-    }, []);
-    return ref;
-}
-
-/* ─── reveal wrapper ─────────────────────────────────────────── */
-function Reveal({ children, className = "", delay = 0 }: {
+/* ─── CTA Button — guaranteed yellow regardless of global reset  */
+const CTAButton = ({
+    href,
+    id,
+    children,
+    fullWidth = false,
+}: {
+    href: string;
+    id?: string;
     children: React.ReactNode;
-    className?: string;
-    delay?: number;
-}) {
-    const ref = useReveal();
-    return (
-        <div
-            ref={ref}
-            className={className}
-            style={{
-                opacity: 0,
-                transform: "translateY(24px)",
-                transition: `opacity 0.55s ease ${delay}ms, transform 0.55s ease ${delay}ms`,
-            }}
-        >
-            {children}
-        </div>
-    );
-}
+    fullWidth?: boolean;
+}) => (
+    <a
+        href={href}
+        id={id}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+            display: fullWidth ? "flex" : "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#FCCA07",
+            color: "#0A1128",
+            fontWeight: 600,
+            fontSize: "16px",
+            lineHeight: 1.25,
+            padding: fullWidth ? "18px 24px" : "14px 32px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            width: fullWidth ? "100%" : "auto",
+            cursor: "pointer",
+            transition: "background-color 0.15s ease",
+            WebkitTapHighlightColor: "transparent",
+            minHeight: "52px", /* 44px+ touch target */
+        }}
+        onMouseOver={e => (e.currentTarget.style.backgroundColor = "#f0bc00")}
+        onMouseOut={e => (e.currentTarget.style.backgroundColor = "#FCCA07")}
+    >
+        {children}
+    </a>
+);
 
-/* ─── section-label component — matches site red label style ── */
+/* ─── section-label — matches site red label style ─────────── */
 function SectionLabel({ children }: { children: React.ReactNode }) {
     return (
-        <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
+        <p
+            style={{
+                color: "#ef4444",
+                fontSize: "11px",
+                fontWeight: 500,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: "16px",
+            }}
+        >
             {children}
         </p>
     );
 }
 
-/* ─── full-bleed section helper — matches site pattern ─────── */
-function FullBleed({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-    return (
-        <div
-            className={`py-12 sm:py-16 lg:py-20 ${className}`}
-            style={{
-                backgroundColor: "#F9F6F4",
-                width: "calc(100% + 2rem)",
-                marginLeft: "-1rem",
-                marginRight: "-1rem",
-            }}
-        >
-            {children}
-        </div>
-    );
-}
+/* ─── CheckIcon SVG ─────────────────────────────────────────── */
+const CheckIcon = () => (
+    <svg viewBox="0 0 20 20" fill="currentColor" style={{ width: 20, height: 20, flexShrink: 0, color: "#16a34a", marginTop: 2 }}>
+        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 011.414-1.414L8.414 12.172l6.879-6.879a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+);
 
 /* ─── main component ─────────────────────────────────────────── */
 export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) {
@@ -123,489 +124,721 @@ export default function ClarityPage({ isBooked, name, date }: ClarityPageProps) 
     const formattedDate = formatBookingDate(date);
 
     return (
-        <div
-            className="min-h-screen"
-            style={{ backgroundColor: "#F9F6F4", fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif" }}
-        >
+        <div style={{ minHeight: "100vh", backgroundColor: "#F9F6F4", fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif", overflowX: "hidden" }}>
 
-            {/* ── Minimal Top Bar — no site nav ───────────────────── */}
+            {/* ── Minimal Top Bar ───────────────────────────────────  */}
             <header
-                className="sticky top-0 z-50 border-b border-gray-200 flex items-center justify-between px-4 sm:px-6 lg:px-8"
-                style={{ backgroundColor: "#F9F6F4", height: "60px" }}
+                style={{
+                    position: "sticky",
+                    top: 0,
+                    zIndex: 50,
+                    backgroundColor: "#F9F6F4",
+                    borderBottom: "1px solid #e5e7eb",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 16px",
+                    height: "60px",
+                }}
             >
                 <Link
                     href="/"
-                    className="font-mondwest text-[#0A1128] text-base sm:text-lg tracking-tight hover:opacity-75 transition-opacity"
+                    style={{
+                        fontFamily: "var(--font-mondwest), serif",
+                        color: "#0A1128",
+                        fontSize: "16px",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        letterSpacing: "-0.01em",
+                    }}
                 >
                     Agentic AI Labs
                 </Link>
-                {!isBooked && (
+
+                {isBooked ? (
+                    <span style={{ fontSize: "13px", color: "#6b7280" }}>
+                        ✓ Confirmed{firstName ? ` · ${firstName}` : ""}
+                    </span>
+                ) : (
                     <a
                         href={CAL_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-lg bg-[#FCCA07] px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            backgroundColor: "#FCCA07",
+                            color: "#0A1128",
+                            fontWeight: 600,
+                            fontSize: "13px",
+                            padding: "8px 16px",
+                            borderRadius: "8px",
+                            textDecoration: "none",
+                            minHeight: "44px",
+                            cursor: "pointer",
+                            WebkitTapHighlightColor: "transparent",
+                        }}
                     >
                         Book Free Call
                     </a>
                 )}
-                {isBooked && (
-                    <span className="text-xs sm:text-sm text-slate-500 font-sfpro">
-                        ✓ Confirmed{firstName ? ` · ${firstName}` : ""}
-                    </span>
-                )}
             </header>
 
-            {/* ── Post-booking confirmation banner ────────────────── */}
+            {/* ── Booking confirmation banner ───────────────────────  */}
             {isBooked && (
-                <div className="bg-[#0A1128] text-white text-center py-3 px-4 text-xs sm:text-sm font-sfpro">
-                    <span className="font-semibold">
+                <div
+                    style={{
+                        backgroundColor: "#0A1128",
+                        color: "#fff",
+                        textAlign: "center",
+                        padding: "10px 16px",
+                        fontSize: "13px",
+                        lineHeight: 1.5,
+                    }}
+                >
+                    <span style={{ fontWeight: 600 }}>
                         ✓ You&apos;re confirmed{firstName ? `, ${firstName}` : ""}
                     </span>
                     {formattedDate && (
-                        <span className="text-white/70"> · {formattedDate}</span>
+                        <span style={{ color: "rgba(255,255,255,0.65)" }}> · {formattedDate}</span>
                     )}
-                    <span className="text-white/70"> — check your inbox for the calendar invite</span>
+                    <span style={{ color: "rgba(255,255,255,0.65)" }}>
+                        {" "}— check your inbox for the calendar invite
+                    </span>
                 </div>
             )}
 
-            {/* ── Container ─────────────────────────────────────── */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* ── Max-width container ───────────────────────────────  */}
+            <div style={{ maxWidth: "1024px", margin: "0 auto", padding: "0 16px" }}>
 
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 1: HERO                                     */}
-                {/* ─────────────────────────────────────────────────── */}
-                <div
-                    className="relative overflow-hidden pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20"
-                    style={{ width: "calc(100% + 2rem)", marginLeft: "-1rem", marginRight: "-1rem", paddingLeft: "1rem", paddingRight: "1rem" }}
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* HERO SECTION                                         */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        paddingTop: "48px",
+                        paddingBottom: "48px",
+                        textAlign: "center",
+                        position: "relative",
+                    }}
                 >
-                    {/* Subtle background orbs — matches main site hero */}
-                    <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
-                        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-100/40 rounded-full blur-3xl" />
-                        <div className="absolute bottom-10 left-10 w-64 h-64 bg-yellow-50/60 rounded-full blur-3xl" />
+                    {/* Trust badge */}
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "8px",
+                            marginBottom: "24px",
+                            flexWrap: "wrap",
+                        }}
+                    >
+                        <span style={{ color: "#FCCA07", fontSize: "14px", letterSpacing: "2px" }}>★★★★★</span>
+                        <span style={{ color: "#6b7280", fontSize: "12px", fontWeight: 500 }}>
+                            50+ founders · Healthcare · Real Estate · B2B SaaS
+                        </span>
                     </div>
 
-                    <div className="max-w-3xl mx-auto text-center">
-                        {/* Trust badge */}
-                        <Reveal delay={0}>
-                            <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
-                                <span className="flex">
-                                    {["★", "★", "★", "★", "★"].map((s, i) => (
-                                        <span key={i} className="text-[#FCCA07] text-base">
-                                            {s}
-                                        </span>
-                                    ))}
-                                </span>
-                                <span className="text-slate-500 font-sfpro text-xs sm:text-sm">
-                                    Trusted by 50+ founders in Healthcare, Real Estate & B2B SaaS
-                                </span>
-                            </div>
-                        </Reveal>
-
-                        {/* Main headline */}
-                        <Reveal delay={80}>
-                            {isBooked ? (
-                                <h1
-                                    className="font-mondwest text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0A1128] leading-[1.1] tracking-tight mb-4 sm:mb-6"
-                                    style={{ textWrap: "balance" } as React.CSSProperties}
-                                >
-                                    {firstName ? `${firstName}, your call` : "Your call"} is{" "}
-                                    <span className="text-blue-600">locked in.</span>
-                                </h1>
-                            ) : (
-                                <h1
-                                    className="font-mondwest text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0A1128] leading-[1.1] tracking-tight mb-4 sm:mb-6"
-                                    style={{ textWrap: "balance" } as React.CSSProperties}
-                                >
-                                    We build AI systems that run{" "}
-                                    <span className="text-blue-600">
-                                        parts of your business
-                                    </span>{" "}
-                                    autonomously.
-                                </h1>
-                            )}
-                        </Reveal>
-
-                        {/* Sub-headline */}
-                        <Reveal delay={140}>
-                            <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
-                                {isBooked
-                                    ? "Before we meet — here's exactly what Agentic AI Labs builds, how we work, and what to bring to the call. No slides. No demo. Just a straight answer on where AI fits in your operations."
-                                    : "Not tools. Not chatbots. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop. Voice. Memory. Automation."}
-                            </p>
-                        </Reveal>
-
-                        {/* CTA */}
-                        <Reveal delay={200}>
-                            {isBooked ? (
-                                <div className="inline-flex items-center gap-3 bg-white rounded-xl shadow-sm border border-gray-100 px-5 sm:px-6 py-4 text-sm font-sfpro text-slate-700">
-                                    <span className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                                        <svg viewBox="0 0 10 10" fill="none" className="w-3 h-3">
-                                            <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </span>
-                                    <span>
-                                        <strong className="font-semibold text-[#0A1128]">You&apos;re all set.</strong>{" "}
-                                        Scroll down to see what we build and what to prepare.
-                                    </span>
-                                </div>
-                            ) : (
-                                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                                    <a
-                                        href={CAL_LINK}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="rounded-lg bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-4 text-sm sm:text-base font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
-                                        id="clarity-hero-cta"
-                                    >
-                                        Book Your Free AI Clarity Call
-                                    </a>
-                                    <a
-                                        href="#what-to-expect"
-                                        className="text-sm sm:text-base font-medium text-blue-600 hover:text-blue-700 transition-colors px-4 py-3 cursor-pointer"
-                                    >
-                                        See what happens on the call ↓
-                                    </a>
-                                </div>
-                            )}
-                        </Reveal>
-
-                        {/* Trust sub-line */}
-                        {!isBooked && (
-                            <Reveal delay={260}>
-                                <p className="text-slate-400 font-sfpro text-xs sm:text-sm mt-4">
-                                    Free. 30 minutes. Specific to your business. Not a sales pitch.
-                                </p>
-                            </Reveal>
+                    {/* Headline */}
+                    <h1
+                        style={{
+                            fontFamily: "var(--font-mondwest), serif",
+                            fontSize: "clamp(28px, 7vw, 56px)",
+                            fontWeight: 700,
+                            color: "#0A1128",
+                            lineHeight: 1.1,
+                            letterSpacing: "-0.02em",
+                            marginBottom: "20px",
+                            textWrap: "balance",
+                        } as React.CSSProperties}
+                    >
+                        {isBooked ? (
+                            <>
+                                {firstName ? `${firstName}, your call` : "Your call"} is{" "}
+                                <span style={{ color: "#2563eb" }}>locked in.</span>
+                            </>
+                        ) : (
+                            <>
+                                We build AI systems that run{" "}
+                                <span style={{ color: "#2563eb" }}>parts of your business</span>{" "}
+                                autonomously.
+                            </>
                         )}
-                    </div>
-                </div>
+                    </h1>
 
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 2: WHY FOUNDERS WORK WITH US               */}
-                {/* ─────────────────────────────────────────────────── */}
-                <FullBleed>
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <Reveal>
-                            <div className="text-center mb-8 sm:mb-12 lg:mb-14">
-                                <SectionLabel>Why Agentic AI Labs</SectionLabel>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-                                    Built by engineers.
-                                </h2>
-                                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 font-mondwest px-4">
-                                    Trusted by founders.
-                                </h3>
-                            </div>
-                        </Reveal>
+                    {/* Sub-copy */}
+                    <p
+                        style={{
+                            color: "#475569",
+                            fontSize: "clamp(15px, 3.5vw, 18px)",
+                            lineHeight: 1.65,
+                            maxWidth: "600px",
+                            margin: "0 auto 32px",
+                        }}
+                    >
+                        {isBooked
+                            ? "Before we meet — here's exactly what we build, how we work, and what to bring. No slides. A straight answer on where AI fits your operations."
+                            : "Not tools. Not demos. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop."}
+                    </p>
 
-                        {/* Feature cards — 2-col grid on desktop */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                    {/* CTA area */}
+                    {isBooked ? (
+                        <div
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "flex-start",
+                                gap: "12px",
+                                backgroundColor: "#fff",
+                                border: "1px solid #e5e7eb",
+                                borderRadius: "12px",
+                                padding: "16px 20px",
+                                maxWidth: "480px",
+                                textAlign: "left",
+                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                            }}
+                        >
+                            <span
+                                style={{
+                                    width: "22px",
+                                    height: "22px",
+                                    borderRadius: "50%",
+                                    backgroundColor: "#16a34a",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexShrink: 0,
+                                    marginTop: "2px",
+                                }}
+                            >
+                                <svg viewBox="0 0 10 10" fill="none" style={{ width: 12, height: 12 }}>
+                                    <path d="M2 5l2.5 2.5L8 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                            <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.5 }}>
+                                <strong style={{ color: "#0A1128", fontWeight: 600 }}>You&apos;re all set.</strong>{" "}
+                                Scroll down to see what we build and what to prepare for the call.
+                            </span>
+                        </div>
+                    ) : (
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+                            <CTAButton href={CAL_LINK} id="clarity-hero-cta" fullWidth={false}>
+                                Book Your Free AI Clarity Call
+                            </CTAButton>
+                            <a
+                                href="#what-to-expect"
+                                style={{
+                                    fontSize: "14px",
+                                    color: "#2563eb",
+                                    textDecoration: "none",
+                                    display: "inline-block",
+                                    padding: "8px",
+                                    minHeight: "44px",
+                                    lineHeight: "28px",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                See what happens on the call ↓
+                            </a>
+                            <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "-4px" }}>
+                                Free. 30 minutes. Not a sales pitch.
+                            </p>
+                        </div>
+                    )}
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* WHY US — Feature Cards                               */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "1024px", margin: "0 auto" }}>
+                        <div style={{ textAlign: "center", marginBottom: "32px" }}>
+                            <SectionLabel>Why Agentic AI Labs</SectionLabel>
+                            <h2
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(22px, 5vw, 38px)",
+                                    fontWeight: 700,
+                                    color: "#0A1128",
+                                    lineHeight: 1.2,
+                                    marginBottom: "4px",
+                                }}
+                            >
+                                Built by engineers.
+                            </h2>
+                            <h3
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(22px, 5vw, 38px)",
+                                    fontWeight: 700,
+                                    color: "#2563eb",
+                                    lineHeight: 1.2,
+                                }}
+                            >
+                                Trusted by founders.
+                            </h3>
+                        </div>
+
+                        {/* Feature list — mobile: stacked checkmarks, desktop: 2-col cards */}
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                                gap: "12px",
+                                marginBottom: "24px",
+                            }}
+                        >
                             {[
-                                {
-                                    title: "3 technical co-founders",
-                                    desc: "We build — we don't just consult. Every system we deploy, we've architected and shipped ourselves.",
-                                    icon: (
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    title: "50+ AI systems shipped",
-                                    desc: "Across healthcare, real estate, B2B SaaS, and home services — in production, with real customers.",
-                                    icon: (
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    title: "Working prototype in 48hrs",
-                                    desc: "Not a deck. Not wireframes. An actual running bot within two business days of kickoff.",
-                                    icon: (
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    title: "30 days active monitoring post-launch",
-                                    desc: "We watch every interaction, tune the model, and ship optimizations. No disappearing act.",
-                                    icon: (
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                        </svg>
-                                    ),
-                                },
-                            ].map((card, i) => (
-                                <Reveal key={i} delay={i * 60}>
-                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 sm:p-6 h-full">
-                                        <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white mb-4">
-                                            {card.icon}
-                                        </div>
-                                        <h4 className="font-bold text-[#0A1128] font-mondwest text-base sm:text-lg mb-2">
-                                            {card.title}
-                                        </h4>
-                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
-                                            {card.desc}
-                                        </p>
-                                    </div>
-                                </Reveal>
+                                { text: "3 technical co-founders — we build, we don't just consult." },
+                                { text: "50+ AI systems shipped across healthcare, real estate, SaaS, and home services." },
+                                { text: "Working prototype within 48 hours of kickoff — not a deck, a running bot." },
+                                { text: "30 days active monitoring post-launch. We watch every interaction. No disappearing act." },
+                            ].map((item, i) => (
+                                <div
+                                    key={i}
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        borderRadius: "12px",
+                                        border: "1px solid #f3f4f6",
+                                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                        padding: "16px 20px",
+                                        display: "flex",
+                                        alignItems: "flex-start",
+                                        gap: "12px",
+                                    }}
+                                >
+                                    <CheckIcon />
+                                    <span style={{ fontSize: "14px", color: "#374151", lineHeight: 1.55, fontWeight: 500 }}>
+                                        {item.text}
+                                    </span>
+                                </div>
                             ))}
                         </div>
 
-                        {/* Stats bar — matches ProofSection style */}
-                        <Reveal>
-                            <div className="grid grid-cols-3 gap-px bg-gray-200 rounded-xl overflow-hidden border border-gray-200">
-                                {[
-                                    { num: 50, suffix: "+", label: "Projects Shipped" },
-                                    { num: 4, suffix: "+", label: "Industries" },
-                                    { label: "48hrs", labelFixed: true, desc: "To First Prototype" },
-                                ].map((stat, i) => (
-                                    <div key={i} className="bg-white py-6 sm:py-8 px-4 text-center">
-                                        <span className="block font-mondwest text-3xl sm:text-4xl lg:text-5xl text-[#0A1128] mb-1">
-                                            {stat.labelFixed ? stat.label : <Counter to={stat.num as number} suffix={stat.suffix} />}
-                                        </span>
-                                        <span className="text-slate-500 font-sfpro text-xs sm:text-sm uppercase tracking-wider">
-                                            {stat.labelFixed ? stat.desc : stat.label}
-                                        </span>
+                        {/* Stats bar */}
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(3, 1fr)",
+                                gap: "1px",
+                                backgroundColor: "#e5e7eb",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                                border: "1px solid #e5e7eb",
+                            }}
+                        >
+                            {[
+                                { num: 50, suffix: "+", label: "Projects" },
+                                { num: 4, suffix: "+", label: "Industries" },
+                                { fixed: "48h", label: "To Prototype" },
+                            ].map((s, i) => (
+                                <div
+                                    key={i}
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        padding: "20px 8px",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "clamp(24px, 6vw, 40px)",
+                                            fontWeight: 700,
+                                            color: "#0A1128",
+                                            lineHeight: 1,
+                                            marginBottom: "6px",
+                                        }}
+                                    >
+                                        {s.fixed ? s.fixed : <Counter to={s.num as number} suffix={s.suffix} />}
                                     </div>
-                                ))}
-                            </div>
-                        </Reveal>
-                    </div>
-                </FullBleed>
-
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 3: FEATURED CASE STUDY (PatientlyAI)       */}
-                {/* ─────────────────────────────────────────────────── */}
-                <div className="py-12 sm:py-16 lg:py-20">
-                    <Reveal>
-                        <div className="text-center mb-8 sm:mb-12">
-                            <SectionLabel>Real results</SectionLabel>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-                                We don&apos;t say &ldquo;trust us.&rdquo;
-                            </h2>
-                            <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
-                                We show you what we built.
-                            </h3>
+                                    <div
+                                        style={{
+                                            fontSize: "10px",
+                                            color: "#6b7280",
+                                            textTransform: "uppercase",
+                                            letterSpacing: "0.06em",
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        {s.label}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </Reveal>
+                    </div>
+                </section>
 
-                    <Reveal delay={80}>
-                        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sm:p-8 lg:p-10">
-                            <div className="flex items-center gap-2 mb-4">
-                                <span className="rounded-lg bg-red-500 px-2 sm:px-3 py-1 text-gray-50 font-sfpro text-xs sm:text-sm font-medium">
-                                    FEATURED
-                                </span>
-                            </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 font-mondwest mb-6">
-                                PatientlyAI — AI Voice Agent for Healthcare
-                            </h3>
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-6">
-                                {[
-                                    {
-                                        label: "The problem:",
-                                        text: "A healthcare practice was losing leads every week because calls went unanswered after hours.",
-                                    },
-                                    {
-                                        label: "The system we built:",
-                                        text: "Voice agent that calls new leads instantly, follows up Day 1–5, qualifies, handles objections, books into GoHighLevel, and sends a Stripe deposit by SMS.",
-                                    },
-                                    {
-                                        label: "The result:",
-                                        text: "Doubled appointment booking rate. Running 24/7 with zero human receptionists in the loop. Built and deployed in under 2 weeks.",
-                                    },
-                                ].map((col, i) => (
-                                    <div key={i}>
-                                        <h4 className="text-sm sm:text-base font-semibold text-[#0A1128] font-sfpro mb-2">
-                                            {col.label}
-                                        </h4>
-                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
-                                            {col.text}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-                            <Link
-                                href="/agent/patientlyai"
-                                className="inline-block rounded-lg bg-blue-600 text-white font-sfpro text-sm sm:text-base font-medium px-4 sm:px-6 py-2 sm:py-3 hover:bg-blue-700 transition-colors cursor-pointer"
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* CASE STUDY — PatientlyAI                            */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "48px 0" }}>
+                    <div style={{ textAlign: "center", marginBottom: "28px" }}>
+                        <SectionLabel>Real results</SectionLabel>
+                        <h2
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(22px, 5vw, 36px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                                marginBottom: "4px",
+                            }}
+                        >
+                            We don&apos;t say &ldquo;trust us.&rdquo;
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#334155" }}>We show you what we built.</p>
+                    </div>
+
+                    <div
+                        style={{
+                            backgroundColor: "#fff",
+                            borderRadius: "16px",
+                            border: "1px solid #f3f4f6",
+                            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                            padding: "24px",
+                        }}
+                    >
+                        <span
+                            style={{
+                                display: "inline-block",
+                                backgroundColor: "#ef4444",
+                                color: "#fff",
+                                fontSize: "11px",
+                                fontWeight: 600,
+                                padding: "3px 10px",
+                                borderRadius: "6px",
+                                letterSpacing: "0.06em",
+                                marginBottom: "12px",
+                            }}
+                        >
+                            FEATURED
+                        </span>
+                        <h3
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(18px, 4vw, 28px)",
+                                fontWeight: 700,
+                                color: "#2563eb",
+                                marginBottom: "20px",
+                                lineHeight: 1.2,
+                            }}
+                        >
+                            PatientlyAI — AI Voice Agent for Healthcare
+                        </h3>
+
+                        <div
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                                gap: "20px",
+                                marginBottom: "20px",
+                            }}
+                        >
+                            {[
+                                { label: "The problem:", text: "A healthcare practice was losing leads every week because calls went unanswered after hours." },
+                                { label: "The system we built:", text: "Voice agent: calls new leads instantly, follows up Day 1–5, qualifies, handles objections, books into GoHighLevel, sends a Stripe deposit by SMS." },
+                                { label: "The result:", text: "Doubled appointment booking rate. Running 24/7 with zero human receptionists in the loop. Built and deployed in under 2 weeks." },
+                            ].map((col, i) => (
+                                <div key={i}>
+                                    <p style={{ fontSize: "13px", fontWeight: 600, color: "#0A1128", marginBottom: "6px" }}>
+                                        {col.label}
+                                    </p>
+                                    <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6 }}>{col.text}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <Link
+                            href="/agent/patientlyai"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                backgroundColor: "#2563eb",
+                                color: "#fff",
+                                fontSize: "14px",
+                                fontWeight: 600,
+                                padding: "10px 20px",
+                                borderRadius: "8px",
+                                textDecoration: "none",
+                                minHeight: "44px",
+                                cursor: "pointer",
+                            }}
+                        >
+                            View PatientlyAI →
+                        </Link>
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* TESTIMONIAL                                          */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
+                        <SectionLabel>What founders say</SectionLabel>
+                        <div
+                            style={{
+                                backgroundColor: "#fff",
+                                borderRadius: "16px",
+                                border: "1px solid #f3f4f6",
+                                boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                padding: "28px 24px",
+                            }}
+                        >
+                            <p
+                                style={{
+                                    fontSize: "clamp(15px, 3.5vw, 18px)",
+                                    color: "#334155",
+                                    fontStyle: "italic",
+                                    lineHeight: 1.65,
+                                    marginBottom: "16px",
+                                }}
                             >
-                                View PatientlyAI →
-                            </Link>
+                                &ldquo;Within 48 hours they built an AI caller that doubled our booking rate.
+                                It feels like having a full-time receptionist who never sleeps.&rdquo;
+                            </p>
+                            <p style={{ fontSize: "14px", color: "#6b7280", fontWeight: 500 }}>
+                                — Aiden, Founder · Healthcare
+                            </p>
                         </div>
-                    </Reveal>
-                </div>
-
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 4: TESTIMONIAL                              */}
-                {/* ─────────────────────────────────────────────────── */}
-                <FullBleed>
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <Reveal>
-                            <div className="text-center mb-8 sm:mb-10">
-                                <SectionLabel>What founders say</SectionLabel>
-                            </div>
-                        </Reveal>
-                        <Reveal delay={80}>
-                            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 sm:p-8 text-center max-w-3xl mx-auto">
-                                <p className="text-slate-700 font-sfpro text-base sm:text-lg lg:text-xl leading-relaxed italic mb-4">
-                                    &ldquo;Within 48 hours they built an AI caller that doubled our booking rate.
-                                    It feels like having a full-time receptionist who never sleeps.&rdquo;
-                                </p>
-                                <p className="text-sm sm:text-base text-slate-500 font-sfpro font-medium">
-                                    — Aiden, Founder · Healthcare industry
-                                </p>
-                            </div>
-                        </Reveal>
                     </div>
-                </FullBleed>
+                </section>
 
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 5: WHAT HAPPENS ON THE CALL                */}
-                {/* ─────────────────────────────────────────────────── */}
-                <div id="what-to-expect" className="py-12 sm:py-16 lg:py-20">
-                    <Reveal>
-                        <div className="text-center mb-8 sm:mb-12 lg:mb-14">
-                            <SectionLabel>What to expect</SectionLabel>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-                                30 minutes. A plan. Zero pitch.
-                            </h2>
-                            <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
-                                Here&apos;s exactly what happens on the call.
-                            </h3>
-                        </div>
-                    </Reveal>
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* WHAT HAPPENS ON THE CALL                            */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section id="what-to-expect" style={{ padding: "48px 0" }}>
+                    <div style={{ textAlign: "center", marginBottom: "28px" }}>
+                        <SectionLabel>What to expect</SectionLabel>
+                        <h2
+                            style={{
+                                fontFamily: "var(--font-mondwest), serif",
+                                fontSize: "clamp(22px, 5vw, 36px)",
+                                fontWeight: 700,
+                                color: "#0A1128",
+                                marginBottom: "4px",
+                            }}
+                        >
+                            30 minutes. A plan. Zero pitch.
+                        </h2>
+                        <p style={{ fontSize: "16px", color: "#334155" }}>
+                            Here&apos;s exactly what happens on the call.
+                        </p>
+                    </div>
 
-                    <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+                    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                         {[
                             {
                                 title: "We look at your business and your workflows.",
                                 desc: "Tell us what your team does every day. We listen first — no script, no agenda, no slide deck. You do most of the talking.",
-                                effort: "You need: 10 minutes of honest context.",
+                                note: "You need: 10 minutes of honest context.",
                             },
                             {
                                 title: "We map your #1 AI opportunity — ranked by time and money saved.",
                                 desc: "Every business has one or two workflows where AI does the heavy lifting. We find yours — and explain how we'd build it.",
-                                effort: "We deliver: A specific, ranked recommendation.",
+                                note: "We deliver: A specific, ranked recommendation.",
                             },
                             {
                                 title: "You leave with a clear 'build this first' plan.",
                                 desc: "Not a proposal. Not a follow-up deck. A plain-language plan you can act on — with us or on your own.",
-                                effort: "No pressure. No commitment required.",
+                                note: "No pressure. No commitment required.",
                             },
                         ].map((step, i) => (
-                            <Reveal key={i} delay={i * 80}>
-                                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
-                                    <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-600 flex items-center justify-center">
-                                            <span className="text-white font-mondwest text-lg sm:text-xl font-bold">
-                                                {i + 1}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="flex-grow">
-                                        <h3 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-2">
-                                            {step.title}
-                                        </h3>
-                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-3">
-                                            {step.desc}
-                                        </p>
-                                        <p className="text-blue-600 font-sfpro text-sm sm:text-base font-medium">
-                                            {step.effort}
-                                        </p>
-                                    </div>
+                            <div
+                                key={i}
+                                style={{
+                                    backgroundColor: "#fff",
+                                    borderRadius: "12px",
+                                    border: "1px solid #f3f4f6",
+                                    boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                    padding: "20px",
+                                    display: "flex",
+                                    gap: "16px",
+                                    alignItems: "flex-start",
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        width: "36px",
+                                        height: "36px",
+                                        borderRadius: "50%",
+                                        backgroundColor: "#2563eb",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        flexShrink: 0,
+                                        marginTop: "2px",
+                                    }}
+                                >
+                                    <span
+                                        style={{
+                                            color: "#fff",
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "16px",
+                                            fontWeight: 700,
+                                        }}
+                                    >
+                                        {i + 1}
+                                    </span>
                                 </div>
-                            </Reveal>
+                                <div style={{ flex: 1 }}>
+                                    <h3
+                                        style={{
+                                            fontFamily: "var(--font-mondwest), serif",
+                                            fontSize: "clamp(15px, 3.5vw, 18px)",
+                                            fontWeight: 700,
+                                            color: "#0A1128",
+                                            marginBottom: "8px",
+                                            lineHeight: 1.3,
+                                        }}
+                                    >
+                                        {step.title}
+                                    </h3>
+                                    <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "8px" }}>
+                                        {step.desc}
+                                    </p>
+                                    <p style={{ fontSize: "13px", color: "#2563eb", fontWeight: 600 }}>
+                                        {step.note}
+                                    </p>
+                                </div>
+                            </div>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* ─────────────────────────────────────────────────── */}
-                {/* SECTION 6: FINAL CTA or PREP REMINDER              */}
-                {/* ─────────────────────────────────────────────────── */}
-                <FullBleed>
-                    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* FINAL CTA or PREP REMINDER                          */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section
+                    style={{
+                        backgroundColor: "#F9F6F4",
+                        width: "calc(100% + 32px)",
+                        marginLeft: "-16px",
+                        marginRight: "-16px",
+                        padding: "48px 16px",
+                    }}
+                >
+                    <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
                         {!isBooked ? (
                             <>
-                                <Reveal>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-                                        Your business runs.
-                                    </h2>
-                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 font-mondwest px-4 mb-6 sm:mb-8">
-                                        Your AI should too.
-                                    </h3>
-                                </Reveal>
-                                <Reveal delay={80}>
-                                    <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto mb-2">
-                                        Free. 30 minutes. Specific to your business.
-                                    </p>
-                                    <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed font-medium max-w-xl mx-auto mb-8 sm:mb-10">
-                                        No pitch. No pressure. A straight answer on where AI fits in your operations.
-                                    </p>
-                                </Reveal>
-                                <Reveal delay={140}>
-                                    <a
-                                        href={CAL_LINK}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block rounded-lg bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500 cursor-pointer"
-                                        id="clarity-final-cta"
-                                    >
-                                        Book Your Free AI Clarity Call
-                                    </a>
-                                    <p className="text-slate-400 font-sfpro text-xs sm:text-sm mt-4">
-                                        Worst case: 30 minutes. Best case: you find an opportunity worth $X,XXX/month.
-                                    </p>
-                                </Reveal>
+                                <h2
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(24px, 6vw, 40px)",
+                                        fontWeight: 700,
+                                        color: "#0A1128",
+                                        lineHeight: 1.15,
+                                        marginBottom: "4px",
+                                    }}
+                                >
+                                    Your business runs.
+                                </h2>
+                                <h3
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(24px, 6vw, 40px)",
+                                        fontWeight: 700,
+                                        color: "#2563eb",
+                                        lineHeight: 1.15,
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    Your AI should too.
+                                </h3>
+                                <p style={{ fontSize: "15px", color: "#475569", lineHeight: 1.65, marginBottom: "28px", maxWidth: "440px", margin: "0 auto 28px" }}>
+                                    Free. 30 minutes. No pitch. No pressure. A straight answer on where AI fits in your operations.
+                                </p>
+                                <CTAButton href={CAL_LINK} id="clarity-final-cta" fullWidth>
+                                    Book Your Free AI Clarity Call →
+                                </CTAButton>
+                                <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "12px" }}>
+                                    Worst case: 30 minutes. Best case: an opportunity worth thousands per month.
+                                </p>
                             </>
                         ) : (
                             <>
-                                <Reveal>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-6">
-                                        One thing to bring to the call.
-                                    </h2>
-                                </Reveal>
-                                <Reveal delay={80}>
-                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sm:p-8 text-left max-w-xl mx-auto mb-6">
-                                        <p className="text-slate-700 font-sfpro text-sm sm:text-base leading-relaxed mb-4">
-                                            Think of your <strong className="text-[#0A1128]">top 3 repetitive tasks</strong> — the ones you or your team do every day that could theoretically run without you.
-                                        </p>
-                                        <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
-                                            That&apos;s all the context we need to make the 30 minutes genuinely useful. No prep deck. No slides. Just your honest answer on where the friction is.
-                                        </p>
-                                    </div>
-                                </Reveal>
-                                <Reveal delay={140}>
-                                    <p className="text-slate-400 font-sfpro text-xs sm:text-sm">
-                                        Questions before the call? Email{" "}
-                                        <a href="mailto:hello@tryagentikai.com" className="text-blue-600 hover:text-blue-700 transition-colors">
-                                            hello@tryagentikai.com
-                                        </a>{" "}
-                                        — Aditya reads every one.
+                                <h2
+                                    style={{
+                                        fontFamily: "var(--font-mondwest), serif",
+                                        fontSize: "clamp(22px, 5vw, 36px)",
+                                        fontWeight: 700,
+                                        color: "#0A1128",
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    One thing to bring to the call.
+                                </h2>
+                                <div
+                                    style={{
+                                        backgroundColor: "#fff",
+                                        borderRadius: "16px",
+                                        border: "1px solid #f3f4f6",
+                                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                                        padding: "24px",
+                                        textAlign: "left",
+                                        marginBottom: "20px",
+                                    }}
+                                >
+                                    <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.65, marginBottom: "12px" }}>
+                                        Think of your <strong style={{ color: "#0A1128" }}>top 3 repetitive tasks</strong> — the ones you or your team do every day that could theoretically run without you.
                                     </p>
-                                </Reveal>
+                                    <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: 1.65 }}>
+                                        That&apos;s all the context we need. No prep deck. No slides. Just your honest answer on where the friction is.
+                                    </p>
+                                </div>
+                                <p style={{ fontSize: "13px", color: "#9ca3af", lineHeight: 1.6 }}>
+                                    Questions?{" "}
+                                    <a
+                                        href="mailto:hello@tryagentikai.com"
+                                        style={{ color: "#2563eb", textDecoration: "none" }}
+                                    >
+                                        hello@tryagentikai.com
+                                    </a>
+                                    {" "}— Aditya reads every one.
+                                </p>
                             </>
                         )}
                     </div>
-                </FullBleed>
+                </section>
 
-                {/* ─────────────────────────────────────────────────── */}
-                {/* FOOTER CLOSE                                        */}
-                {/* ─────────────────────────────────────────────────── */}
-                <div className="py-12 sm:py-16 text-center">
-                    <Reveal>
-                        <p className="font-mondwest text-lg sm:text-xl text-[#0A1128] mb-1">
-                            — Aditya
-                        </p>
-                        <p className="text-slate-500 font-sfpro text-sm">
-                            Founder, Agentic AI Labs &nbsp;·&nbsp;{" "}
-                            <a href="https://www.tryagentikai.com" className="text-blue-600 hover:text-blue-700 transition-colors">
-                                tryagentikai.com
-                            </a>
-                        </p>
-                    </Reveal>
-                </div>
+                {/* ═══════════════════════════════════════════════════  */}
+                {/* FOUNDER SIGN-OFF                                     */}
+                {/* ═══════════════════════════════════════════════════  */}
+                <section style={{ padding: "40px 0", textAlign: "center" }}>
+                    <p
+                        style={{
+                            fontFamily: "var(--font-mondwest), serif",
+                            fontSize: "18px",
+                            color: "#0A1128",
+                            marginBottom: "4px",
+                        }}
+                    >
+                        — Aditya
+                    </p>
+                    <p style={{ fontSize: "13px", color: "#6b7280" }}>
+                        Founder, Agentic AI Labs &nbsp;·&nbsp;{" "}
+                        <a
+                            href="https://www.tryagentikai.com"
+                            style={{ color: "#2563eb", textDecoration: "none" }}
+                        >
+                            tryagentikai.com
+                        </a>
+                    </p>
+                </section>
 
             </div>
         </div>
