@@ -61,16 +61,17 @@ const RootLayout = ({
     Prism.highlightAll();
   }, []);
 
+  // Pages that manage their own layout (no global nav needed)
+  const NO_NAV_ROUTES = ["/clarity"];
+  const hideNav = NO_NAV_ROUTES.includes(router.pathname);
+
   return (
     <ThemeProvider scheme={scheme || "light"}>
       {/* <Scripts /> */}
-      {/* // TODO: replace react query */}
-      {/* {metaConfig.type !== "Paper" && <Header />} */}
-      <Header fullWidth={false} />
+      {!hideNav && <Header fullWidth={false} />}
       <main
-        className={`mx-auto w-full  overflow-x-hidden ${containerClassName} ${
-          router.pathname === "/contact" ? "px-0" : "px-4"
-        }`}
+        className={`mx-auto w-full overflow-x-hidden ${hideNav ? "" : containerClassName
+          } ${router.pathname === "/contact" ? "px-0" : "px-4"}`}
       >
         {children}
       </main>
