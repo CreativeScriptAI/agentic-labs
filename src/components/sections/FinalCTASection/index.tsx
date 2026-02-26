@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-const CALENDLY_LINK =
-  "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11";
+const CAL_LINK =
+  "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min";
 
 const FinalCTASection = () => {
   return (
@@ -35,7 +35,7 @@ const FinalCTASection = () => {
 
         {/* CTA */}
         <Link
-          href={CALENDLY_LINK}
+          href={CAL_LINK}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block rounded-lg bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-[#0A1128] transition-colors hover:bg-yellow-500"

@@ -30,7 +30,7 @@ const FooterSection = () => {
           <Link href="#" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Case Studies</Link>
           <Link href="/blog/" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Blog</Link>
           <Link href="#" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Partners</Link>
-          <Link href="https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Book a Call</Link>
+          <Link href="https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors">Book a Call</Link>
         </div>
 
         {/* Social Media Links */}

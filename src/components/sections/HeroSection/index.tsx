@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-const CALENDLY_LINK =
-  "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11";
+const CAL_LINK =
+  "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min";
 
 const HeroSection = () => {
   /* Removed unused isMobile state */
@@ -34,7 +34,7 @@ const HeroSection = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-4">
               <Link
-                href={CALENDLY_LINK}
+                href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg bg-[#FCCA07] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-[#0A1128] transition-colors hover:bg-yellow-500"

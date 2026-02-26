@@ -264,7 +264,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                     (window as any).gtag_report_conversion
                   ) {
                     return (window as any).gtag_report_conversion(
-                      "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
+                      "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
                     );
                   }
                   return true;
@@ -343,7 +343,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             <NavBar />
             {/* CountrySelector hidden - automatic routing only */}
             <Link
-              href="https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
+              href="https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
               rel="noopener noreferrer"
               className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
             >
@@ -465,7 +465,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                           (window as any).gtag_report_conversion
                         ) {
                           return (window as any).gtag_report_conversion(
-                            "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11"
+                            "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
                           );
                         }
                         return true;

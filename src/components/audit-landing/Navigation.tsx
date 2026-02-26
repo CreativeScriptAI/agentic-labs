@@ -102,7 +102,7 @@ export function Navigation() {
               <Button 
                 size="sm"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-2 text-sm rounded-lg font-medium"
-                onClick={() => window.open('https://calendly.com', '_blank')}
+                onClick={() => window.open('https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min', '_blank')}
               >
                 Contact Us
               </Button>
@@ -193,7 +193,7 @@ export function Navigation() {
                     className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-3 text-base font-medium rounded-lg"
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      window.open('https://calendly.com', '_blank');
+                      window.open('https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min', '_blank');
                     }}
                   >
                     Contact Us

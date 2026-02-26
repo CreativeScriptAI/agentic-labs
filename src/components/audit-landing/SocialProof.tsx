@@ -72,7 +72,7 @@ export function SocialProof() {
                 className="bg-[#0062ff] hover:bg-[#0052d9] box-border content-stretch flex gap-[6px] items-center px-[24px] py-[12px] relative rounded-[8px] shrink-0 transition-colors duration-300 w-full sm:w-auto"
                 onClick={() =>
                   window.open(
-                    "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                    "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
                     "_blank"
                   )
                 }
