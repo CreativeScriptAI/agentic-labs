@@ -283,189 +283,177 @@ export default function ClarityPage({ isBooked, name, email, date }: ClarityPage
                         position: "relative",
                     }}
                 >
-                    {/* Trust badge */}
-                    <div
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "8px",
-                            marginBottom: "24px",
-                            flexWrap: "wrap",
-                        }}
-                    >
-                        <span style={{ color: "#FCCA07", fontSize: "14px", letterSpacing: "2px" }}>★★★★★</span>
-                        <span style={{ color: "#6b7280", fontSize: "12px", fontWeight: 500 }}>
-                            50+ founders · Healthcare · Real Estate · B2B SaaS
-                        </span>
-                    </div>
-
-                    {/* Headline */}
-                    <h1
-                        style={{
-                            fontFamily: "var(--font-mondwest), serif",
-                            fontSize: "clamp(28px, 7vw, 56px)",
-                            fontWeight: 700,
-                            color: "#0A1128",
-                            lineHeight: 1.1,
-                            letterSpacing: "-0.02em",
-                            marginBottom: "20px",
-                            textWrap: "balance",
-                        } as React.CSSProperties}
-                    >
-                        {isBooked ? (
-                            <>
-                                {firstName ? `${firstName}, your call` : "Your call"} is{" "}
-                                <span style={{ color: "#2563eb" }}>locked in.</span>
-                            </>
-                        ) : (
-                            <>
-                                We build AI systems that run{" "}
-                                <span style={{ color: "#2563eb" }}>parts of your business</span>{" "}
-                                autonomously.
-                            </>
-                        )}
-                    </h1>
-
-                    {/* Sub-copy */}
-                    <p
-                        style={{
-                            color: "#475569",
-                            fontSize: "clamp(15px, 3.5vw, 18px)",
-                            lineHeight: 1.65,
-                            maxWidth: "600px",
-                            margin: "0 auto 32px",
-                        }}
-                    >
-                        {isBooked
-                            ? "Before we meet — here's exactly what we build, how we work, and what to bring. No slides. A straight answer on where AI fits your operations."
-                            : "Not tools. Not demos. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop."}
-                    </p>
-
-                    {/* CTA area */}
                     {isBooked ? (
-                        /* ── Illustrated booking confirmation card ── */
-                        <div
-                            style={{
-                                maxWidth: "480px",
-                                margin: "0 auto",
-                                backgroundColor: "#fff",
-                                borderRadius: "20px",
-                                border: "1px solid #e5e7eb",
-                                boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
-                                overflow: "hidden",
-                            }}
-                        >
-                            {/* Top illustration strip */}
-                            <div
-                                style={{
-                                    backgroundColor: "#EEF4FF",
-                                    padding: "28px 24px 20px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "center",
-                                    gap: "12px",
-                                    borderBottom: "1px solid #dbeafe",
-                                }}
-                            >
-                                <CalendarIllustration />
-                                <div
-                                    style={{
-                                        display: "inline-flex",
-                                        alignItems: "center",
-                                        gap: "6px",
-                                        backgroundColor: "#dcfce7",
-                                        border: "1px solid #bbf7d0",
-                                        borderRadius: "20px",
-                                        padding: "4px 12px",
-                                        fontSize: "12px",
-                                        fontWeight: 600,
-                                        color: "#15803d",
-                                    }}
-                                >
-                                    <svg viewBox="0 0 12 12" fill="none" style={{ width: 12, height: 12 }}>
+                        <>
+                            <div style={{ marginBottom: "20px" }}>
+                                <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#dcfce7", color: "#15803d", padding: "6px 14px", borderRadius: "20px", fontSize: "14px", fontWeight: 600, border: "1px solid #bbf7d0" }}>
+                                    <svg viewBox="0 0 12 12" fill="none" style={{ width: 14, height: 14 }}>
                                         <circle cx="6" cy="6" r="5" fill="#16a34a" />
                                         <path d="M3.5 6l1.8 1.8L8.5 4.5" stroke="#fff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
-                                    Booking confirmed
-                                </div>
+                                    Booking Confirmed
+                                </span>
                             </div>
-
-                            {/* Body */}
-                            <div style={{ padding: "20px 24px" }}>
-                                {/* Date row */}
-                                {formattedDate && (
-                                    <div
-                                        style={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            gap: "10px",
-                                            padding: "10px 14px",
-                                            backgroundColor: "#f9f6f4",
-                                            borderRadius: "10px",
-                                            marginBottom: "14px",
-                                        }}
-                                    >
-                                        <svg viewBox="0 0 20 20" fill="none" style={{ width: 18, height: 18, flexShrink: 0 }}>
-                                            <rect x="2" y="4" width="16" height="14" rx="3" stroke="#2563eb" strokeWidth="1.4" />
-                                            <path d="M6 2v3M14 2v3M2 9h16" stroke="#2563eb" strokeWidth="1.4" strokeLinecap="round" />
-                                        </svg>
-                                        <span style={{ fontSize: "13px", fontWeight: 600, color: "#0A1128" }}>{formattedDate}</span>
-                                    </div>
+                            <h1
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(36px, 8vw, 64px)",
+                                    fontWeight: 700,
+                                    color: "#0A1128",
+                                    lineHeight: 1.05,
+                                    letterSpacing: "-0.02em",
+                                    marginBottom: "16px",
+                                    textWrap: "balance",
+                                } as React.CSSProperties}
+                            >
+                                You&apos;re locked in{firstName ? `, ${firstName}` : ""}.
+                            </h1>
+                            <p
+                                style={{
+                                    color: "#475569",
+                                    fontSize: "clamp(16px, 4vw, 20px)",
+                                    lineHeight: 1.6,
+                                    maxWidth: "540px",
+                                    margin: "0 auto 40px",
+                                }}
+                            >
+                                {email ? (
+                                    <>We&apos;ve sent a calendar invite to <strong style={{ color: "#0A1128", fontWeight: 600 }}>{email}</strong> with the Google Meet link.</>
+                                ) : (
+                                    <>We&apos;ve sent a calendar invite to your inbox with the Google Meet link.</>
                                 )}
+                                {formattedDate ? ` See you on ${formattedDate}.` : " See you soon."}
+                            </p>
 
-                                {/* Email confirmation row */}
-                                {email && (
+                            {/* ── Illustrated booking confirmation card ── */}
+                            <div
+                                style={{
+                                    maxWidth: "480px",
+                                    margin: "0 auto",
+                                    backgroundColor: "#fff",
+                                    borderRadius: "20px",
+                                    border: "1px solid #e5e7eb",
+                                    boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                                    overflow: "hidden",
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        backgroundColor: "#f8fafc",
+                                        padding: "32px 24px",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        gap: "12px",
+                                        borderBottom: "1px solid #f1f5f9",
+                                    }}
+                                >
+                                    <CalendarIllustration />
+                                </div>
+
+                                <div style={{ padding: "20px 24px" }}>
                                     <div
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
                                             gap: "10px",
-                                            padding: "10px 14px",
-                                            backgroundColor: "#f0fdf4",
-                                            border: "1px solid #dcfce7",
-                                            borderRadius: "10px",
+                                            padding: "12px 16px",
+                                            backgroundColor: "#EEF4FF",
+                                            border: "1px solid #dbeafe",
+                                            borderRadius: "12px",
                                             marginBottom: "16px",
                                         }}
                                     >
-                                        <EnvelopeIllustration />
+                                        <svg viewBox="0 0 20 20" fill="none" style={{ width: 20, height: 20, flexShrink: 0 }}>
+                                            <rect x="2" y="4" width="16" height="14" rx="3" stroke="#2563eb" strokeWidth="1.5" />
+                                            <path d="M6 2v3M14 2v3M2 9h16" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+                                        </svg>
                                         <div>
-                                            <p style={{ fontSize: "11px", color: "#16a34a", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Invite sent to</p>
-                                            <p style={{ fontSize: "13px", color: "#0A1128", fontWeight: 600 }}>{email}</p>
+                                            <p style={{ fontSize: "11px", color: "#2563eb", fontWeight: 700, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.05em" }}>Next Step</p>
+                                            <p style={{ fontSize: "14px", color: "#0A1128", fontWeight: 600 }}>Scroll down to view what to prepare</p>
                                         </div>
                                     </div>
-                                )}
-
-                                {/* Divider + next step */}
-                                <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6, textAlign: "center" }}>
-                                    Scroll down to understand what we build and what to prepare for the call.
-                                </p>
+                                    <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6, textAlign: "center" }}>
+                                        No presentations or decks required.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </>
                     ) : (
-                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-                            <CTAButton href={CAL_LINK} id="clarity-hero-cta" fullWidth={false}>
-                                Book Your Free AI Clarity Call
-                            </CTAButton>
-                            <a
-                                href="#what-to-expect"
+                        <>
+                            {/* Trust badge */}
+                            <div
                                 style={{
-                                    fontSize: "14px",
-                                    color: "#2563eb",
-                                    textDecoration: "none",
-                                    display: "inline-block",
-                                    padding: "8px",
-                                    minHeight: "44px",
-                                    lineHeight: "28px",
-                                    cursor: "pointer",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    gap: "8px",
+                                    marginBottom: "24px",
+                                    flexWrap: "wrap",
                                 }}
                             >
-                                See what happens on the call ↓
-                            </a>
-                            <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "-4px" }}>
-                                Free. 30 minutes. Not a sales pitch.
+                                <span style={{ color: "#FCCA07", fontSize: "14px", letterSpacing: "2px" }}>★★★★★</span>
+                                <span style={{ color: "#6b7280", fontSize: "12px", fontWeight: 500 }}>
+                                    50+ founders · Healthcare · Real Estate · B2B SaaS
+                                </span>
+                            </div>
+
+                            {/* Headline */}
+                            <h1
+                                style={{
+                                    fontFamily: "var(--font-mondwest), serif",
+                                    fontSize: "clamp(28px, 7vw, 56px)",
+                                    fontWeight: 700,
+                                    color: "#0A1128",
+                                    lineHeight: 1.1,
+                                    letterSpacing: "-0.02em",
+                                    marginBottom: "20px",
+                                    textWrap: "balance",
+                                } as React.CSSProperties}
+                            >
+                                We build AI systems that run{" "}
+                                <span style={{ color: "#2563eb" }}>parts of your business</span>{" "}
+                                autonomously.
+                            </h1>
+
+                            {/* Sub-copy */}
+                            <p
+                                style={{
+                                    color: "#475569",
+                                    fontSize: "clamp(15px, 3.5vw, 18px)",
+                                    lineHeight: 1.65,
+                                    maxWidth: "600px",
+                                    margin: "0 auto 32px",
+                                }}
+                            >
+                                Not tools. Not demos. Production-grade AI systems that talk to your customers, remember every interaction, and take action — without you in the loop.
                             </p>
-                        </div>
+
+                            {/* CTA area */}
+                            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+                                <CTAButton href={CAL_LINK} id="clarity-hero-cta" fullWidth={false}>
+                                    Book Your Free AI Clarity Call
+                                </CTAButton>
+                                <a
+                                    href="#what-to-expect"
+                                    style={{
+                                        fontSize: "14px",
+                                        color: "#2563eb",
+                                        textDecoration: "none",
+                                        display: "inline-block",
+                                        padding: "8px",
+                                        minHeight: "44px",
+                                        lineHeight: "28px",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    See what happens on the call ↓
+                                </a>
+                                <p style={{ fontSize: "12px", color: "#9ca3af", marginTop: "-4px" }}>
+                                    Free. 30 minutes. Not a sales pitch.
+                                </p>
+                            </div>
+                        </>
                     )}
                 </section>
 

@@ -1,0 +1,202 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        PERSONA PAGE COPY  —  "AI Receptionist for Medical Clinics"           ║
+║        Playbook 1  ·  Agentic AI Labs Programmatic SEO                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SEO METADATA
+  ─────────────────────────────────────────────────────────────────────────────
+
+  URL SLUG        /ai-receptionist-for-medical-clinics
+
+  TITLE TAG       AI Receptionist for Medical Clinics | Agentic AI Labs
+
+  META DESC       Medical clinics lose thousands in missed appointments and no-shows.
+                  We build an AI receptionist that answers every call, books
+                  appointments, and remembers every patient — 24/7.
+
+  H1              AI Receptionist for Medical Clinics
+
+  CANONICAL       https://tryagentikai.com/ai-receptionist-for-medical-clinics
+
+  SCHEMA TYPES    Service, FAQPage
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE CONTENT
+  ─────────────────────────────────────────────────────────────────────────────
+
+  ── HERO ──────────────────────────────────────────────────────────────────────
+
+  H1:
+    AI Receptionist for Medical Clinics
+
+  Subheadline:
+    Answers every call. Books directly into your EMR. Remembers returning
+    patients. Sends SMS confirmations. 24/7, without a human in the loop.
+
+  CTA Button:
+    Book a Free Call
+
+  Secondary link:
+    See how it works
+
+  ── PROBLEM ───────────────────────────────────────────────────────────────────
+
+  Section label:  THE PROBLEM
+
+  H2:
+    Your front desk is overwhelmed with routine calls.
+
+  Body:
+    If you run a medical clinic, your front desk staff spends half their day answering 
+    the same questions. Appointment booking. Rescheduling. Checking insurance accepted. 
+    Asking for directions. 
+    
+    The median medical receptionist salary safely sits around $38,500 per year. For that 
+    money, you get someone who can only answer one call at a time, goes home at 5pm, 
+    and is pulled away every time a patient stands in front of them at the desk.
+
+    When that happens, the phone rings out. Or patients leave voicemails that take 
+    hours to return. The result? New patients call the next clinic on Google, and 
+    existing patients get frustrated. It's a lose-lose.
+
+    You've probably tried to fix this. An answering service that just takes messages. 
+    A clunky phone tree. A basic chatbot. None of them close the loop — someone still 
+    has to follow up. That's what an AI receptionist fixes. It closes the loop.
+
+  Pain cost callout (styled block):
+    Medical Receptionist (Salary):        ~$38,500 / yr
+    Missed after-hours appointments:      ~$35,000 / yr
+    ───────────────────────────────────────────────
+    Total problem:                        $73,500+ / yr
+    We solve it for:                      ~$11,600 in Year 1
+
+  Data Callouts:
+    - "My no show rate is atrocious - easily 60-70%. Families confirm they will be here the day before then suddenly change their minds." — r/medicine community member (397 upvotes, Oct 2025)
+    - Searches for "medical clinic AI" have grown 100% in the last 12 months (Google Trends, US).
+
+  ── WHAT WE BUILD ─────────────────────────────────────────────────────────────
+
+  Section label:  WHAT WE BUILD
+
+  H2:
+    Talk. Remember. Act.
+    One AI system. Three layers. Zero missed calls.
+
+  Intro line:
+    We don't sell you a voice agent. We don't sell you an automation.
+    We build one AI Receptionist for your medical clinic where every layer is connected — 
+    and the whole thing runs without you in the loop.
+
+  Layer 1 – Voice:
+    [H3] Your AI talks.
+    [Body] Picks up every call — 24/7 including after-hours and weekends. Handles booking, 
+    rescheduling, basic clinic FAQs, triage routing. Not a robotic phone tree. A real 
+    conversation that sounds natural and empathetic.
+
+  Layer 2 – Memory:
+    [H3] Your AI remembers.
+    [Body] Built on Mem0 — persistent memory that compounds with use. When a returning patient 
+    calls, the AI already knows their name and appointment history. They never have to 
+    repeat themselves. 
+
+  Layer 3 – Automation:
+    [H3] Your AI acts.
+    [Body] Books directly into your EMR/EHR (Athena, Epic, advancedMD, or via API). 
+    Sends SMS confirmations instantly. Fires T-24hr reminder calls automatically to 
+    combat atrocious no-show rates. No human in the loop for routine calls.
+
+  Closing line:
+    Most AI gives you one of these layers. We connect all three into one system that 
+    runs your front desk ops — 24/7, without you touching anything.
+
+  ── HOW WE BUILD IT ───────────────────────────────────────────────────────────
+
+  Section label:  HOW IT WORKS
+
+  H2:
+    From "I need an AI receptionist" to "it's live."
+    Four weeks.
+
+  Step 1 – Week 1  AUDIT
+    We spend a week understanding your clinic — how calls come in, triage protocols, 
+    your scheduling software, appointment types, insurance accepted, after-hours protocol.
+    You spend: 1 hour on a call with us.
+    We deliver: A clear spec of exactly what the AI will handle.
+
+  Step 2 – Week 2  BUILD
+    We build the AI Receptionist. Voice agent, patient memory, EMR integration, 
+    confirmation automation — all connected, all integrated with your existing tools.
+    You spend: Nothing. We build.
+
+  Step 3 – Week 3  TEST
+    We run real-world call scenarios. New patients. Returning patients. Confused callers. 
+    We break it on purpose so it doesn't break with your patients.
+    You spend: 30 minutes reviewing and giving us feedback.
+
+  Step 4 – Week 4  LIVE
+    Your AI Receptionist goes live. We monitor every call for the first 30 days. 
+    We optimize phrasing and tune confidence thresholds. 
+    You spend: Zero. It runs without you.
+
+  ── RESULTS ───────────────────────────────────────────────────────────────────
+
+  Section label:  RESULTS
+
+  H2:
+    We don't say "trust us."
+    We show you what we built.
+
+  Featured result:
+    PatientlyAI is a real AI voice caller we built and deployed for healthcare practices.
+    The numbers below are from our actual Vapi billing dashboard — not projections.
+
+  (Include the PatientlyAI portfolio card and Vapi data block here)
+  - Oct 2025 Vapi Billing Period: $10,647.29 total cost
+  - 49,496 minutes of live healthcare calls
+  - $0.22 per minute cost
+
+  Proof stat row (4 callouts):
+    49,496 mins  live calls run
+    85%          resolved without human
+    4 wks        from audit to live
+    100%         Google Trends growth for "medical clinic AI"
+
+  ── FAQ ───────────────────────────────────────────────────────────────────────
+
+  Section label:  QUESTIONS
+
+  H2:  You're probably wondering.
+
+  Q: How is this different from a medical answering service?
+  A: Answering services just take messages and send you a transcript perfectly designed to create more work for your staff the next morning. They can't book appointments, access your EMR, or remember past conversations. Our AI closes the loop completely: books the appointment, sends the confirmation, remembers the patient next time.
+
+  Q: Will it violate HIPAA?
+  A: We use HIPAA-compliant providers and enterprise-grade security for the voice models, memory layer, and downstream automation. We sign BAAs where required. Patient PHI is handled securely.
+
+  Q: What EMR / scheduling software does it integrate with?
+  A: We integrate with the software you already use: Athena, AdvancedMD, Epic, DrChrono, and most practice management systems with an API. If you're unsure — ask us on the call. We'll tell you in 5 minutes.
+
+  Q: What if a patient has a severe medical emergency?
+  A: It is explicitly instructed to immediately redirect emergencies to 911 or a human triage nurse. Every system is tested with real-world edge cases to ensure rigid guardrails on clinical questions before it handles a single real call.
+
+  Q: Can it handle after-hours calls and weekends?
+  A: Yes — that's one of the main reasons medical clinics use it. Calls at 9pm or Saturday morning are handled the same as any other call. A patient who calls at 10pm gets booked and confirmed. They're in your calendar before you open on Monday.
+
+  Q: How much does it cost?
+  A: Medical clinic AI Receptionist systems start at $2,000–$5,000 for the initial build, with $800–$2,000/month for ongoing monitoring, optimization, and call minutes. Every project is scoped to your call volume, tools, and workflows.
+
+  ── FINAL CTA ─────────────────────────────────────────────────────────────────
+
+  H2:
+    Your clinic runs.
+    Your AI should too.
+
+  Body:
+    One call. 15 minutes. We'll tell you exactly what an AI Receptionist would look
+    like for your medical clinic — and whether it even makes sense.
+    No pitch. No pressure. Just a straight answer.
+
+  CTA Button:  Book a Free Call
