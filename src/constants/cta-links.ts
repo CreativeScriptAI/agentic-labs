@@ -1,5 +1,5 @@
 const ctaLinks = {
-    aiClarityWorkshop: "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+    aiClarityWorkshop: "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
 }
 
 export default ctaLinks;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const WhatHappensNext = () => {
   const steps = [
-    "Pick a slot on Calendly.",
+    "Pick a slot on our calendar.",
     "Will discuss your idea or existing problem on call.",
     "Then, we'll map roadmap with feasibility, timeline, and next steps.",
   ];
@@ -40,7 +40,7 @@ const WhatHappensNext = () => {
           <button
             onClick={() => {
               window.open(
-                "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
                 "_blank"
               );
             }}

@@ -34,7 +34,7 @@ const WhyBookThisSection = () => {
           <button
             onClick={() => {
               window.open(
-                "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11",
+                "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
                 "_blank"
               );
             }}

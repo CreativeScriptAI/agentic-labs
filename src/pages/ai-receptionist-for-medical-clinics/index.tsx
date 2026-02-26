@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
-const CALENDLY_LINK = "https://calendly.com/creative-script/get-free-ai-clarity?month=2025-11";
+const CAL_LINK = "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min";
 const CANONICAL_URL = "https://www.tryagentikai.com/ai-receptionist-for-medical-clinics";
 
 // ─── Reusable Section wrapper ──────────────────────────────────────────────────
@@ -347,7 +347,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
                                 transition={{ duration: 0.4, delay: 0.26 }}
                                 className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
                             >
-                                <CTAButton href={CALENDLY_LINK} label="Book a Free Call" />
+                                <CTAButton href={CAL_LINK} label="Book a Free Call" />
                                 <a
                                     href="#how-it-works"
                                     className="inline-flex items-center justify-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors py-3.5 px-4 border border-transparent hover:bg-blue-50 rounded-lg font-sfpro cursor-pointer"
@@ -711,7 +711,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
                         </p>
                         <p className="text-sm text-gray-500 font-sfpro mt-0.5">Your front desk handles your patients.</p>
                     </div>
-                    <CTAButton href={CALENDLY_LINK} label="Book Your Free Audit Call" />
+                    <CTAButton href={CAL_LINK} label="Book Your Free Audit Call" />
                 </div>
             </Section>
 
@@ -931,7 +931,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
-                    <CTAButton href={CALENDLY_LINK} label="Book a Free Call" />
+                    <CTAButton href={CAL_LINK} label="Book a Free Call" />
                     <p className="text-sm text-gray-500 font-sfpro pt-3 sm:pt-0 sm:self-center">
                         If you nodded at the first list, we should talk.
                     </p>
@@ -969,7 +969,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
                     </p>
                     <p className="text-sm text-gray-400 font-sfpro">No pitch. No pressure. Just a straight answer.</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                        <CTAButton href={CALENDLY_LINK} label="Book Your Free Call" />
+                        <CTAButton href={CAL_LINK} label="Book Your Free Call" />
                         <a
                             href="mailto:hello@tryagentikai.com"
                             className="text-sm text-gray-400 hover:text-white transition-colors font-sfpro"
@@ -1017,7 +1017,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
                             Ready to stop missing calls?
                         </p>
                         <Link
-                            href={CALENDLY_LINK}
+                            href={CAL_LINK}
                             className="flex-shrink-0 bg-[#FCCA07] text-[#0A1128] text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors cursor-pointer font-sfpro"
                         >
                             Book a Call
