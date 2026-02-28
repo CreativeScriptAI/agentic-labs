@@ -74,7 +74,7 @@ const nextConfig: NextConfig = {
         ? [
             {
               source:
-                "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop)",
+                "/(.*\\.html|/|/about|/contact|/services|/blog|/agent|/ai-clarity-workshop|/thankyou)",
               headers: [
                 {
                   key: "Cache-Control",

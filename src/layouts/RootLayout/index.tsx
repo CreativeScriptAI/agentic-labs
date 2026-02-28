@@ -4,7 +4,8 @@ import useScheme from "src/hooks/useScheme";
 import Header from "./Header";
 import Scripts from "src/layouts/RootLayout/Scripts";
 import { useRouter } from "next/router";
-import { useAutoCountryDetection } from "src/hooks/useAutoCountryDetection";
+// COMMENTED OUT: Language pages redirection disabled
+// import { useAutoCountryDetection } from "src/hooks/useAutoCountryDetection";
 // import useGtagEffect from "./useGtagEffect"
 import * as Prism from "prismjs";
 import "prismjs/components/prism-markup-templating.js";
@@ -53,13 +54,15 @@ const RootLayout = ({
   const [scheme] = useScheme();
   const router = useRouter();
 
-  // Automatically detect and redirect to user's country
-  useAutoCountryDetection();
+  // COMMENTED OUT: Auto-detect and redirect to language/locale pages disabled
+  // useAutoCountryDetection();
 
   // useGtagEffect()
   useEffect(() => {
+    // Skip Prism on pages that don't have code blocks (e.g. thankyou) — saves CPU
+    if (router.pathname === "/thankyou") return;
     Prism.highlightAll();
-  }, []);
+  }, [router.pathname]);
 
   // Pages that manage their own layout (no global nav needed)
   const NO_NAV_ROUTES = ["/thankyou"];

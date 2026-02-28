@@ -9,7 +9,8 @@ import TrustedSection from "src/components/sections/TrustedSection";
 import { GetStaticProps } from "next";
 import { fetchAgentsData } from "src/libs/api";
 import dynamic from "next/dynamic";
-import { useAutoCountryDetection } from "src/hooks/useAutoCountryDetection";
+// COMMENTED OUT: Language pages redirection disabled
+// import { useAutoCountryDetection } from "src/hooks/useAutoCountryDetection";
 
 // Performance Optimization: Code split heavy components to reduce initial bundle size
 
@@ -123,8 +124,8 @@ interface HomePageProps {
 }
 
 const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
-  // Auto-detect country and redirect (client-side fallback if middleware didn't catch it)
-  useAutoCountryDetection();
+  // COMMENTED OUT: Auto-detect country and redirect to language pages
+  // useAutoCountryDetection();
 
   // Debug logging (development only)
   if (process.env.NODE_ENV === 'development') {
