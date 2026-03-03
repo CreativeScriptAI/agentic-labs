@@ -2,9 +2,51 @@ import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import AgentInfoModal from "src/components/sections/AgentInfoModal";
 
 type AgentsSectionProps = {
   agents: any;
+};
+
+const agentNameCategoryMap: Record<string, string> = {
+  "m2.ai": "Voice",
+  fuzzie: "NLP & Content",
+  "landing pill": "Vision",
+  docsy: "NLP & Content",
+  naitik: "Voice Lead Agent",
+  fedforward: "Research",
+  "vc notebot": "Automation",
+  "aperio bot": "SaaS",
+  "patientlyai - your ai voice caller": "Voice",
+};
+
+const inferAgentCategory = (name: string, title: string, description: string) => {
+  const normalizedName = String(name || "").trim().toLowerCase();
+  const exactMapped = agentNameCategoryMap[normalizedName];
+  if (exactMapped) return exactMapped;
+
+  const text = `${name} ${title} ${description}`.toLowerCase();
+
+  if (/(voice|caller|call|calling|interview|lead)/.test(text)) {
+    return "Voice";
+  }
+  if (/(image|photo|visual|vision|landing page|diagnos)/.test(text)) {
+    return "Vision";
+  }
+  if (/(nlp|content|summar|notes|semantic|answer|document|file)/.test(text)) {
+    return "NLP & Content";
+  }
+  if (/(crm|pipeline|workflow|automate|follow-up|assistant)/.test(text)) {
+    return "Automation";
+  }
+  if (/(executive|insight|analytics|dashboard|mongo|saas)/.test(text)) {
+    return "SaaS";
+  }
+  if (/(research|analysis|qualif|risk|screening)/.test(text)) {
+    return "Research";
+  }
+
+  return "Automation";
 };
 
 const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
@@ -15,10 +57,9 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   }, [agents]);
 
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-  const [isHowItWorksOpen, setIsHowItWorksOpen] = useState(false);
-  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
+  const [isAgentModalOpen, setIsAgentModalOpen] = useState(false);
 
   // Detect locale prefix from current path (e.g., /en-in/, /en-ae/, etc.)
   const localePrefix = useMemo(() => {
@@ -35,15 +76,88 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const selectedProject: any | undefined = projects[selectedIndex];
   const selectedLabel: string = tabLabels[selectedIndex] || "Agent";
   const selectedOverview: any | undefined = selectedProject?.overview;
-  const howItWorksSrc: string | undefined = selectedOverview?.howitworks;
   const botImageSrc: string | undefined = selectedOverview?.botImage;
-  const isRemoteHowItWorks: boolean =
-    typeof howItWorksSrc === "string" && howItWorksSrc.startsWith("http");
+  const agentsBannerDesktop = "/images/all-agents-banner.svg";
+  const agentsBannerMobile = "/images/All Agents Repo Banner - Mobile.svg";
+  const agentsRepoHref = `${localePrefix}/agents-repo`;
+
+  const modalTitle: string =
+    selectedOverview?.name || selectedProject?.projectName || selectedLabel;
+  const modalSubtitle: string =
+    selectedOverview?.description || selectedOverview?.title || "";
+  const modalAbout: string =
+    selectedOverview?.aboutTheAgent ||
+    selectedOverview?.about ||
+    selectedOverview?.longDescription ||
+    modalSubtitle;
+
+  const featureBenefits: Array<any> = useMemo(() => {
+    const fromOverview = selectedOverview?.featureAndBenefits;
+    if (Array.isArray(fromOverview) && fromOverview.length > 0) {
+      return fromOverview;
+    }
+    const fromOverviewLower = selectedOverview?.featuresandbenefits;
+    if (Array.isArray(fromOverviewLower) && fromOverviewLower.length > 0) {
+      return fromOverviewLower;
+    }
+    const fromBenefits = selectedOverview?.benefits;
+    if (Array.isArray(fromBenefits) && fromBenefits.length > 0) {
+      return fromBenefits;
+    }
+    return [];
+  }, [selectedOverview]);
+
+  const categories: string[] = useMemo(() => {
+    const fromOverview = selectedOverview?.categories;
+    if (Array.isArray(fromOverview) && fromOverview.length > 0) {
+      return fromOverview.filter(Boolean);
+    }
+    const fromProject = selectedProject?.tags;
+    if (Array.isArray(fromProject) && fromProject.length > 0) {
+      return fromProject.filter(Boolean);
+    }
+
+    const inferred = inferAgentCategory(
+      selectedOverview?.name || selectedProject?.projectName || selectedLabel,
+      selectedOverview?.title || selectedOverview?.description || "",
+      selectedOverview?.description || ""
+    );
+
+    return [inferred, "Agents"];
+  }, [selectedOverview, selectedProject, selectedLabel]);
+
+  const howItWorksImage: string =
+    selectedOverview?.howitworks ||
+    selectedOverview?.workingModelImage ||
+    selectedOverview?.howItWorksImage ||
+    selectedProject?.works?.image ||
+    "/images/all-agents-banner.svg";
+
+  const heroMedia: string =
+    selectedProject?.hero?.heroImage ||
+    selectedOverview?.heroImage ||
+    botImageSrc ||
+    "/images/robot.png";
+
+  const selectedAgentRouteId: string =
+    selectedProject?._id ||
+    selectedProject?.id ||
+    selectedProject?.slug ||
+    selectedOverview?._id ||
+    selectedOverview?.id ||
+    selectedOverview?.slug ||
+    "";
 
   // Build agent URL with locale prefix
-  const agentHref = selectedProject?._id
-    ? `${localePrefix}/agent/${selectedProject._id}`
+  const agentHref = selectedAgentRouteId
+    ? `${localePrefix}/agent/${selectedAgentRouteId}`
     : "#";
+
+  const runTestLink: string =
+    selectedOverview?.runTestLink ||
+    selectedOverview?.tryButtonLink ||
+    selectedOverview?.projectLink ||
+    agentHref;
 
   // Navigation functions
   const updateEdgeStates = React.useCallback(
@@ -70,6 +184,14 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   const handlePrev = React.useCallback(() => {
     goToIndex(selectedIndex - 1);
   }, [selectedIndex, goToIndex]);
+
+  const openAgentModal = React.useCallback(() => {
+    setIsAgentModalOpen(true);
+  }, []);
+
+  const closeAgentModal = React.useCallback(() => {
+    setIsAgentModalOpen(false);
+  }, []);
 
   // Update edge states when selectedIndex changes
   React.useEffect(() => {
@@ -99,6 +221,50 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
           <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
             today, fully customizable
           </h3>
+        </div>
+
+        {/* Agents Banner */}
+        <div className="mb-8 sm:mb-12 lg:mb-14 sm:mx-0">
+          <div className="max-w-6xl mx-auto sm:rounded-xl sm:border sm:border-slate-200 overflow-hidden">
+            <Link href={agentsRepoHref} className="block">
+              <Image
+                src={agentsBannerDesktop}
+                alt="AI Agents Repo banner"
+                width={930}
+                height={248}
+                className="hidden sm:block w-full h-auto"
+                priority={false}
+              />
+              <div className="block sm:hidden">
+                <div className="relative mx-auto h-[426px] w-[327px] max-w-full overflow-hidden rounded-[8px] bg-white shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_6px_25px_0px_rgba(0,0,0,0.08),0px_2px_8px_0px_rgba(0,0,0,0.1)]">
+                  <Image
+                    src={agentsBannerMobile}
+                    alt="AI Agents Repo banner mobile"
+                    fill
+                    sizes="327px"
+                    className="object-cover object-center scale-[1.16]"
+                    quality={100}
+                    unoptimized
+                    priority={false}
+                  />
+
+                  <div className="absolute left-1/2 top-[40px] flex w-[258px] -translate-x-1/2 flex-col items-center gap-6 text-center">
+                    <div className="flex flex-col items-center gap-2 text-[#0A1128] w-full">
+                      <h3 className="font-mondwest text-[36px] leading-none w-[243px]">
+                        AI Agents Repo
+                      </h3>
+                      <p className="text-slate-800 text-[14px] leading-normal w-full">
+                        Live repository of AI agents deployed by Agentic AI Labs.
+                      </p>
+                    </div>
+                    <span className="inline-flex h-[44px] w-[169px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-[14px] leading-5 font-medium text-white">
+                      Try AI Agents for free
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
 
         {/* Agent Navigation */}
@@ -172,217 +338,68 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
 
         {/* Selected Agent Display */}
         <div className="max-w-5xl mx-auto px-4">
-          <div
-            className="rounded-xl lg:rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8"
-            style={{ backgroundColor: "#F9F6F4" }}
-          >
-            {/* Hero Section */}
-            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 mb-4 sm:mb-6">
-              <div className="flex-1 text-left md:text-center lg:text-left">
-                <div className="flex justify-start md:justify-center lg:justify-start items-center gap-3 mb-3 sm:mb-4">
-                  <span className="rounded-lg bg-red-500 flex px-2 sm:px-3 py-1 justify-center items-center text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-normal hidden md:block">
+          <div className="rounded-xl lg:rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-6 lg:p-8">
+            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+              <div className="flex-1 text-left">
+                <div className="mb-3 sm:mb-4">
+                  <span className="inline-flex rounded-lg bg-red-500 px-2.5 py-1 text-gray-50 font-sfpro text-xs sm:text-sm font-medium leading-none">
                     NEW
                   </span>
                 </div>
-                <h3 className="font-mondwest text-2xl sm:text-3xl lg:text-4xl font-normal text-blue-600 mb-3 sm:mb-4">
+
+                <h3 className="font-mondwest text-3xl sm:text-4xl lg:text-5xl font-normal text-blue-600 mb-3 sm:mb-4 leading-tight">
                   {selectedLabel}
                 </h3>
-                <Link href={agentHref}>
-                  <button className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium leading-5 hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 mx-0 md:mx-auto lg:mx-0 mb-4">
-                    <span>📁</span>
-                    Try {selectedLabel}
-                  </button>
-                </Link>
-                <h4 className="text-slate-800 font-sfpro text-lg sm:text-xl font-medium leading-normal mb-3 sm:mb-4">
+
+                <h4 className="text-slate-800 font-sfpro text-2xl sm:text-3xl lg:text-[40px] font-medium leading-tight mb-3 sm:mb-4 max-w-3xl">
                   {selectedOverview?.title || ""}
                 </h4>
-                <p className="text-slate-600 font-sfpro text-sm sm:text-base font-normal leading-relaxed mb-4 sm:mb-6">
+
+                <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg font-normal leading-relaxed mb-5 sm:mb-6 max-w-3xl">
                   {selectedOverview?.description || ""}
                 </p>
+
+                <button
+                  onClick={openAgentModal}
+                  className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium hover:bg-blue-700 transition-colors duration-200 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3"
+                >
+                  <span>📁</span>
+                  Try {selectedLabel}
+                </button>
               </div>
-              <div className="flex-shrink-0 order-first lg:order-last">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full flex items-center justify-center">
+
+              <div className="flex-shrink-0">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-[214px] lg:h-[214px] rounded-full bg-white flex items-center justify-center overflow-hidden">
                   <Image
                     src={botImageSrc || "/images/robot.png"}
-                    alt="Agent Robot"
-                    width={192}
-                    height={192}
+                    alt="Agent"
+                    width={214}
+                    height={214}
                     className="w-full h-full object-contain"
                   />
                 </div>
               </div>
             </div>
-
-            {/* Features & Benefits Section */}
-            <div className="mb-4 sm:mb-6 bg-white rounded-lg border border-slate-200 p-4 sm:p-6">
-              <div
-                className="flex items-center justify-between cursor-pointer group"
-                onClick={() => setIsFeaturesOpen(!isFeaturesOpen)}
-              >
-                <h3 className="text-base sm:text-lg lg:text-[20px] font-mondwest font-normal text-[#0A1128] mb-2 uppercase">
-                  FEATURE & BENEFITS
-                </h3>
-                <div
-                  className={`transition-transform duration-300 ${
-                    isFeaturesOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-gray-600 group-hover:text-blue-600 transition-colors duration-200 sm:w-6 sm:h-6"
-                  >
-                    <path
-                      d="M6 9l6 6 6-6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isFeaturesOpen
-                    ? "max-h-[800px] sm:max-h-[700px] opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 pt-4">
-                  {(selectedOverview?.featuresandbenefits || []).map(
-                    (
-                      item: {
-                        icons?: string;
-                        heading?: string;
-                        subheading?: string;
-                      },
-                      index: number
-                    ) => (
-                      <div
-                        key={index}
-                        className="flex flex-col sm:flex-row gap-3 rounded-lg p-3 sm:p-4"
-                        style={{ backgroundColor: "#F9F6F4" }}
-                      >
-                        <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                          >
-                            <path
-                              d="M12.3544 11.6481C12.4477 11.7418 12.5001 11.8687 12.5001 12.0009C12.5001 12.1332 12.4477 12.26 12.3544 12.3538C12.2863 12.4206 10.6763 14 8 14C5.66313 14 3.96688 12.6 3 11.5094V13C3 13.1326 2.94732 13.2598 2.85355 13.3536C2.75979 13.4473 2.63261 13.5 2.5 13.5C2.36739 13.5 2.24021 13.4473 2.14645 13.3536C2.05268 13.2598 2 13.1326 2 13V10C2 9.86739 2.05268 9.74021 2.14645 9.64645C2.24021 9.55268 2.36739 9.5 2.5 9.5H5.5C5.63261 9.5 5.75979 9.55268 5.85355 9.64645C5.94732 9.74021 6 9.86739 6 10C6 10.1326 5.94732 10.2598 5.85355 10.3536C5.75979 10.4473 5.63261 10.5 5.5 10.5H3.465C4.235 11.4594 5.8125 13 8 13C10.25 13 11.6337 11.6588 11.6475 11.645C11.7417 11.5517 11.869 11.4996 12.0016 11.5002C12.1341 11.5008 12.261 11.554 12.3544 11.6481ZM13.5 2.5C13.3674 2.5 13.2402 2.55268 13.1464 2.64645C13.0527 2.74021 13 2.86739 13 3V4.49062C12.0331 3.4 10.3369 2 8 2C5.32375 2 3.71375 3.57938 3.64625 3.64625C3.55226 3.7399 3.49933 3.86706 3.4991 3.99974C3.49886 4.13242 3.55135 4.25976 3.645 4.35375C3.73865 4.44774 3.86581 4.50067 3.99849 4.5009C4.13117 4.50114 4.25851 4.44865 4.3525 4.355C4.36625 4.34125 5.75 3 8 3C10.1875 3 11.765 4.54063 12.535 5.5H10.5C10.3674 5.5 10.2402 5.55268 10.1464 5.64645C10.0527 5.74021 10 5.86739 10 6C10 6.13261 10.0527 6.25979 10.1464 6.35355C10.2402 6.44732 10.3674 6.5 10.5 6.5H13.5C13.6326 6.5 13.7598 6.44732 13.8536 6.35355C13.9473 6.25979 14 6.13261 14 6V3C14 2.86739 13.9473 2.74021 13.8536 2.64645C13.7598 2.55268 13.6326 2.5 13.5 2.5Z"
-                              fill="#F8F9FA"
-                            />
-                          </svg>
-                        </div>
-                        <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                          <div className="text-[#1E293B] font-sfpro text-sm sm:text-[16px] font-[500] leading-normal mb-2">
-                            {item?.heading || ""}
-                          </div>
-                          <div className="text-slate-600 font-sfpro text-xs sm:text-sm font-normal leading-normal">
-                            {item?.subheading || ""}
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* How It Works Section */}
-            <div className="bg-white rounded-lg border border-slate-200 p-4 sm:p-6">
-              <div
-                className="flex items-center justify-between cursor-pointer group"
-                onClick={() => setIsHowItWorksOpen(!isHowItWorksOpen)}
-              >
-                <h3 className="text-base sm:text-lg lg:text-[20px] font-mondwest font-normal text-[#0A1128] mb-2 uppercase">
-                  HOW IT WORKS
-                </h3>
-                <div
-                  className={`transition-transform duration-300 ${
-                    isHowItWorksOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-gray-600 group-hover:text-blue-600 transition-colors duration-200 sm:w-6 sm:h-6"
-                  >
-                    <path
-                      d="M6 9l6 6 6-6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isHowItWorksOpen
-                    ? "max-h-[500px] sm:max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="flex flex-col items-center gap-4 sm:gap-8 pt-4">
-                  <div className="flex-1 text-center">
-                    <div
-                      className={`transition-all duration-700 ease-out ${
-                        isHowItWorksOpen
-                          ? "transform scale-100 opacity-100"
-                          : "transform scale-95 opacity-0"
-                      }`}
-                    >
-                      {howItWorksSrc ? (
-                        isRemoteHowItWorks ? (
-                          <>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              src={howItWorksSrc}
-                              alt={`${selectedLabel} How It Works`}
-                              style={{
-                                width: "auto",
-                                maxWidth: "100%",
-                                height: "auto",
-                              }}
-                              className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
-                            />
-                          </>
-                        ) : (
-                          <Image
-                            src={howItWorksSrc}
-                            alt={`${selectedLabel} How It Works`}
-                            height={285}
-                            width={0}
-                            style={{
-                              width: "auto",
-                              maxWidth: "100%",
-                              height: "auto",
-                            }}
-                            className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 mx-auto"
-                          />
-                        )
-                      ) : null}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+
+        <AgentInfoModal
+          isOpen={isAgentModalOpen}
+          onClose={closeAgentModal}
+          onPrev={handlePrev}
+          onNext={handleNext}
+          prevDisabled={isAtStart}
+          nextDisabled={isAtEnd}
+          title={modalTitle}
+          subtitle={modalSubtitle}
+          about={modalAbout}
+          features={featureBenefits}
+          categories={categories}
+          howItWorksImage={howItWorksImage}
+          heroMedia={heroMedia}
+          agentHref={agentHref}
+          runTestLink={runTestLink}
+        />
       </div>
     </div>
   );
