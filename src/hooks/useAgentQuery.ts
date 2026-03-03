@@ -6,6 +6,7 @@ import { getAgents, getRecordMap } from "src/apis";
 import { filterPosts } from "src/libs/utils/notion";
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts";
 
+
 const useAgentQuery = () => {
   const router = useRouter();
   const { slug } = router.query;
