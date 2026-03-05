@@ -15,7 +15,9 @@ type Props = {
 const Header: React.FC<Props> = ({ fullWidth }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const lastScrollYRef = useRef(0);
   const burgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const mobileBurgerButtonRef = useRef<HTMLButtonElement | null>(null);
   const [clipCenter, setClipCenter] = useState<{ x: number; y: number }>({
@@ -44,6 +46,20 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         requestAnimationFrame(() => {
           const scrollTop = window.scrollY;
           setIsScrolled(scrollTop > 10);
+
+          const delta = scrollTop - lastScrollYRef.current;
+          const isScrollingDown = delta > 6;
+          const isScrollingUp = delta < -6;
+
+          if (scrollTop <= 24) {
+            setIsHeaderVisible(true);
+          } else if (isScrollingDown && scrollTop > 96) {
+            setIsHeaderVisible(false);
+          } else if (isScrollingUp) {
+            setIsHeaderVisible(true);
+          }
+
+          lastScrollYRef.current = scrollTop;
           ticking = false;
         });
         ticking = true;
@@ -53,6 +69,12 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setIsHeaderVisible(true);
+    }
+  }, [isMobileMenuOpen]);
 
   const computeMaxRadius = useCallback((x: number, y: number) => {
     if (typeof window === "undefined") return 0;
@@ -147,7 +169,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <>
       {/* Ellipse background image - non-sticky */}
-      <div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
+      <div className="hidden md:flex justify-center absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
         <EllipseBackground />
       </div>
       <div className="block md:hidden absolute top-0 left-1/2 transform -translate-x-1/2 pointer-events-none z-10 w-full">
@@ -203,7 +225,9 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       </div>
 
       <header
-        className={`fixed top-0 left-0 w-full z-[99] transition-all duration-300 ease-in-out ${
+        className={`fixed left-0 w-full z-[99] transition-all duration-300 ease-in-out ${
+          isHeaderVisible ? "top-0" : "-top-24"
+        } ${
           isScrolled
             ? "md:bg-white md:shadow-lg pb-2"
             : "bg-[#F9F6F4] bg-transparent"
