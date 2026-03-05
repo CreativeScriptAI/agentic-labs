@@ -137,14 +137,14 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/55 p-0 sm:p-4"
+      className="fixed inset-0 z-[100] flex items-end sm:items-start sm:pt-20 justify-center bg-black/55 p-0 sm:p-4"
       onClick={(event) => {
         if (event.target === event.currentTarget) {
           onClose();
         }
       }}
     >
-      <div className="w-full h-[100dvh] sm:h-auto sm:max-h-[96vh] max-w-[1012px] overflow-hidden rounded-none sm:rounded-lg bg-[#F9F6F4] p-4 sm:p-6 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_6px_25px_0px_rgba(0,0,0,0.08),0px_2px_8px_0px_rgba(0,0,0,0.1)] flex flex-col">
+      <div className="w-full h-[100dvh] sm:h-auto sm:max-h-[calc(100vh-112px)] max-w-[1012px] overflow-hidden rounded-none sm:rounded-lg bg-[#F9F6F4] p-4 sm:p-6 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_6px_25px_0px_rgba(0,0,0,0.08),0px_2px_8px_0px_rgba(0,0,0,0.1)] flex flex-col">
         <div className="flex items-center justify-between mb-5 sm:mb-10">
           <div className="flex items-center gap-4">
             <button
@@ -182,11 +182,11 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
             <h3 className="text-slate-800 text-[34px] sm:text-2xl leading-tight">{title}</h3>
 
             <div className="space-y-2">
-              <div className="rounded-[15px] overflow-hidden">
+              <div className="rounded-[15px] overflow-hidden bg-slate-100 aspect-[16/9] w-full">
                 {isHeroVideo ? (
                   <video
                     src={heroMedia}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-contain"
                     controls
                     muted
                     playsInline
@@ -198,7 +198,7 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
                     alt={title}
                     width={964}
                     height={563}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-contain"
                   />
                 )}
               </div>
@@ -303,15 +303,15 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
           </div>
         </div>
 
-        <div className="border-t border-slate-300 mt-2 sm:mt-6 pt-4 sm:pt-6 pb-[calc(env(safe-area-inset-bottom)+0.25rem)] bg-[#F9F6F4] flex flex-row items-center justify-end gap-3">
+        <div className="border-t border-slate-300 mt-2 sm:mt-6 pt-4 sm:pt-6 pb-[calc(env(safe-area-inset-bottom)+0.25rem)] bg-[#F9F6F4] flex flex-row items-stretch justify-center sm:justify-end gap-2">
           {renderActionLink(
             agentHref,
-            "inline-flex flex-1 min-w-0 sm:min-w-[200px] items-center justify-center rounded-lg border border-[#0062FF] px-4 sm:px-6 py-2.5 text-sm font-medium text-[#0062FF]",
+            "inline-flex w-[150px] sm:w-[200px] self-stretch items-center justify-center gap-2 rounded-[8px] border border-[#0062FF] shadow-[inset_0_0_0_1px_#0062FF] bg-white px-3 py-3 text-sm font-medium text-[#0062FF] transition-colors hover:bg-blue-50",
             "Learn more"
           )}
           {renderActionLink(
             runTestLink,
-            "inline-flex flex-1 min-w-0 sm:min-w-[200px] items-center justify-center rounded-lg bg-[#0062FF] px-4 sm:px-6 py-2.5 text-sm font-medium text-white",
+            "inline-flex w-[150px] sm:w-[200px] self-stretch items-center justify-center gap-2 rounded-[8px] bg-[#0062FF] px-3 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-700",
             "Run Test",
             true
           )}

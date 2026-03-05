@@ -74,6 +74,23 @@ const categoryTabs = [
   "Vision",
 ];
 
+const agentThumbnailMap: Record<string, string> = {
+  "m2.ai": "/images/agents repo/M2AI - voice agent.svg",
+  "vc notebot": "/images/agents repo/VC Notebot.svg",
+  fuzzie: "/images/agents repo/Fuzzle.svg",
+  "landing pill": "/images/agents repo/Landing Pill.svg",
+  fedforward: "/images/agents repo/Fedforward.svg",
+  docsy: "/images/agents repo/Docsy.svg",
+  "aperio bot": "/images/agents repo/Aperio.svg",
+  "patientlyai - your ai voice caller": "/images/agents repo/Patiently AI - Medspa voice agent.svg",
+  patientlyai: "/images/agents repo/Patiently AI - Medspa voice agent.svg",
+};
+
+const getAgentThumbnail = (name: string, fallback: string) => {
+  const normalizedName = String(name || "").trim().toLowerCase();
+  return agentThumbnailMap[normalizedName] || fallback || "/images/robot.png";
+};
+
 const chevronIcon = (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
     <path
@@ -158,6 +175,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
       const inferredCategory = inferAgentCategory(name, title, description);
       const resolvedTags =
         apiCategories.length > 0 ? apiCategories : [inferredCategory, "Agents"];
+      const resolvedImage = getAgentThumbnail(name, overview?.botImage || "/images/robot.png");
 
       return {
         id: agent?._id || agent?.id || overview?._id || overview?.id || "",
@@ -171,7 +189,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
           "",
         name,
         subtitle: title,
-        image: overview?.botImage || "/images/robot.png",
+        image: resolvedImage,
         features: Array.isArray(features) ? features : [],
         tags: resolvedTags,
         raw: agent,
@@ -369,7 +387,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
 
   return (
     <section
-      className="pt-20 pb-12 sm:pt-24 sm:pb-12 bg-[url('/images/bg.svg')] bg-repeat bg-auto"
+      className="pt-28 pb-12 sm:pt-24 sm:pb-12"
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
@@ -401,7 +419,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
             </label>
           </div>
 
-          <div className="flex w-full flex-wrap items-center justify-start sm:justify-center gap-2">
+          <div className="flex w-full flex-wrap items-center justify-center gap-2">
             {categoryTabs.map((tab) => (
               <button
                 key={tab}
@@ -409,8 +427,8 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                 onClick={() => handleCategorySelect(tab)}
                 className={`shrink-0 rounded-[8px] px-3 py-2 text-[14px] font-normal uppercase transition-colors ${
                   tab === activeCategory
-                    ? "bg-slate-200 text-[#0A1128]"
-                    : "text-slate-600"
+                    ? "text-[#0A1128]"
+                    : "text-slate-600 hover:text-[#0A1128]"
                 }`}
               >
                 {tab}
@@ -466,12 +484,12 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         }
                       }}
                     >
-                      <div className="mb-4 aspect-[236/121.5] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
+                      <div className="mb-4 aspect-[241/141] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
                         <Image
                           src={agent.image}
                           alt={agent.name}
-                          width={236}
-                          height={122}
+                          width={964}
+                          height={564}
                           className="w-full h-full object-contain"
                         />
                       </div>
@@ -551,12 +569,12 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         }
                       }}
                     >
-                      <div className="mb-4 aspect-[236/121.5] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
+                      <div className="mb-4 aspect-[241/141] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
                         <Image
                           src={agent.image}
                           alt={agent.name}
-                          width={236}
-                          height={122}
+                          width={964}
+                          height={564}
                           className="w-full h-full object-contain"
                         />
                       </div>

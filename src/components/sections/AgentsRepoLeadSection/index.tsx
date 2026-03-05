@@ -6,7 +6,7 @@ const CAL_LINK =
 const AgentsRepoLeadSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-[url('/images/bg.svg')] bg-repeat bg-auto"
+      className="relative overflow-hidden"
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
@@ -16,20 +16,6 @@ const AgentsRepoLeadSection = () => {
         paddingBottom: "64px",
       }}
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 flex items-end justify-center"
-      >
-        <div
-          className="h-[676px] w-[1120px] rounded-[999px] opacity-25"
-          style={{
-            filter: "blur(80px)",
-            background: "linear-gradient(180deg, #0062FF 0%, #0062FF 100%)",
-            transform: "translateY(58%)",
-          }}
-        />
-      </div>
-
       <div className="relative z-10 max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-10 text-center">
         <p className="text-[#E53935] text-[14px] tracking-[0.04em] font-normal uppercase mb-4">
           We&apos;ll plug it into your workflow in under 48hrs.

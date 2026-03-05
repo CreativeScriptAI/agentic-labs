@@ -5,24 +5,22 @@ import React from "react";
 const AgentsRepoFooterSection = () => {
   return (
     <footer
-      className="bg-[url('/images/bg.svg')] bg-repeat bg-auto"
+      className=""
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
         marginLeft: "-1rem",
         marginRight: "-1rem",
-        paddingTop: "60px",
-        paddingBottom: "190px",
       }}
     >
-      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="w-[300px] space-y-6">
+      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-10 pt-[60px] pb-10 sm:pb-[120px]">
+        <div className="w-full max-w-[300px] mx-auto space-y-4 text-center">
           <div>
             <h4 className="font-mondwest text-[34px] leading-none text-blue-600 mb-4">Agentic AI Labs</h4>
             <p className="text-[14px] text-slate-600">The home of the AI Workforce</p>
           </div>
 
-          <div className="flex items-center gap-6 text-slate-600">
+          <div className="flex items-center justify-center gap-6 text-slate-600">
             <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="inline-flex h-6 w-6 items-center justify-center">
               <Image src="/icons/conversational-ai/GithubLogo.svg" alt="GitHub" width={24} height={24} className="h-6 w-6" />
             </Link>

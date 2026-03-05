@@ -69,7 +69,14 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
   }, [router.asPath]);
 
   const tabLabels: string[] = useMemo(
-    () => projects.map((p) => p?.overview?.name || p?.projectName || "Agent"),
+    () =>
+      projects.map((p) => {
+        const rawName = String(p?.overview?.name || p?.projectName || "Agent");
+        if (rawName.trim().toLowerCase() === "patientlyai - your ai voice caller") {
+          return "PatientlyAI";
+        }
+        return rawName;
+      }),
     [projects]
   );
 
@@ -226,15 +233,23 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
         {/* Agents Banner */}
         <div className="mb-8 sm:mb-12 lg:mb-14 sm:mx-0">
           <div className="max-w-6xl mx-auto sm:rounded-xl sm:border sm:border-slate-200 overflow-hidden">
-            <Link href={agentsRepoHref} className="block">
+            <div className="block">
+              <div className="relative hidden sm:block">
               <Image
                 src={agentsBannerDesktop}
                 alt="AI Agents Repo banner"
                 width={930}
                 height={248}
-                className="hidden sm:block w-full h-auto"
+                className="w-full h-auto"
                 priority={false}
               />
+                <Link
+                  href={agentsRepoHref}
+                  className="absolute inset-x-0 bottom-12 mx-auto inline-flex h-[35px] w-[180px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-center font-sfpro text-[16px] leading-[20px] font-medium text-[#F8F9FA]"
+                >
+                  Try AI Agents for free
+                </Link>
+              </div>
               <div className="block sm:hidden">
                 <div className="relative mx-auto h-[426px] w-[327px] max-w-full overflow-hidden rounded-[8px] bg-white shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_6px_25px_0px_rgba(0,0,0,0.08),0px_2px_8px_0px_rgba(0,0,0,0.1)]">
                   <Image
@@ -257,20 +272,23 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                         Live repository of AI agents deployed by Agentic AI Labs.
                       </p>
                     </div>
-                    <span className="inline-flex h-[44px] w-[169px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-[14px] leading-5 font-medium text-white">
+                    <Link
+                      href={agentsRepoHref}
+                      className="inline-flex h-[40px] w-[197px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-center font-sfpro text-[16px] leading-[20px] font-medium text-[#F8F9FA]"
+                    >
                       Try AI Agents for free
-                    </span>
+                    </Link>
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
 
         {/* Agent Navigation */}
-        <div className="mb-4 sm:mb-12 lg:mb-16">
+        <div className="mb-6">
           <div className="sm:block md:flex md:justify-center overflow-x-auto w-full -mx-4 no-scrollbar px-8 md:mx-0">
-            <div className="flex xl:flex xl:flex-wrap xl:justify-center gap-6">
+            <div className="flex flex-nowrap justify-start md:justify-center gap-6 min-w-max mx-auto">
               {tabLabels.map((agentName: string, idx: number) => (
                 <button
                   key={`${agentName}-${idx}`}
@@ -289,7 +307,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
         </div>
 
         {/* Navigation Arrows - Only visible on mobile (< 768px) */}
-        <div className="flex md:hidden justify-center gap-2 mb-4 sm:mb-12 lg:mb-16">
+        <div className="flex md:hidden justify-center gap-2 mb-6">
           <button
             onClick={handlePrev}
             className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -347,11 +365,11 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                   </span>
                 </div>
 
-                <h3 className="font-mondwest text-3xl sm:text-4xl lg:text-5xl font-normal text-blue-600 mb-3 sm:mb-4 leading-tight">
+                <h3 className="font-mondwest text-[36px] font-normal text-blue-600 mb-3 sm:mb-4 leading-tight">
                   {selectedLabel}
                 </h3>
 
-                <h4 className="text-slate-800 font-sfpro text-2xl sm:text-3xl lg:text-[40px] font-medium leading-tight mb-3 sm:mb-4 max-w-3xl">
+                <h4 className="text-slate-800 font-sfpro text-[20px] font-medium leading-tight mb-3 sm:mb-4 max-w-3xl">
                   {selectedOverview?.title || ""}
                 </h4>
 
@@ -363,7 +381,6 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                   onClick={openAgentModal}
                   className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium hover:bg-blue-700 transition-colors duration-200 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3"
                 >
-                  <span>📁</span>
                   Try {selectedLabel}
                 </button>
               </div>
