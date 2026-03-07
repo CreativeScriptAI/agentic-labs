@@ -3,6 +3,7 @@ export type ProgrammaticPageType =
   | "integration"
   | "comparison"
   | "glossary"
+  | "directory"
   | "memory-use-case";
 
 export type ProgrammaticPageData = {
@@ -1440,6 +1441,274 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "production ai definition",
       "production ready ai systems",
       "ai reliability",
+    ],
+  },
+  {
+    type: "directory",
+    pathSegments: ["best-ai-tools-for-dental-practices"],
+    title: "Best AI Tools for Dental Practices (2026) | Agentic AI Labs",
+    description:
+      "A practical guide to the best AI tools and systems for dental practices, including voice reception, memory, scheduling automation, and patient follow-up.",
+    canonicalUrl: makeCanonical(["best-ai-tools-for-dental-practices"]),
+    heroLabel: "Directory Page",
+    heroHeadline: "Best AI Tools for Dental Practices",
+    heroSubheadline:
+      "A founder-friendly shortlist for dental teams comparing AI options for calls, memory, and patient operations.",
+    painTitle: "Why most dental AI stacks underperform",
+    painPoints: [
+      "Tools solve one task but fail across full patient workflows.",
+      "No shared memory means repeat callers get repetitive experiences.",
+      "Automation breaks between voice, scheduling, and CRM layers.",
+    ],
+    statusQuoTitle: "How buyers usually evaluate",
+    statusQuoItems: [
+      "Compare voice quality only.",
+      "Ignore memory and handoff architecture.",
+      "Choose by demo instead of production behavior.",
+    ],
+    solutionTitle: "What to prioritize in your stack",
+    solutionItems: [
+      "Voice reliability for real patient call conditions.",
+      "Persistent memory for returning callers.",
+      "Automation that updates calendars and systems cleanly.",
+    ],
+    proofTitle: "Evaluation checklist",
+    proofBullets: [
+      "Can the system book and confirm without staff rescue?",
+      "Can it recall context from prior patient calls?",
+      "Can your team monitor failures before patients notice?",
+    ],
+    faq: [
+      {
+        question: "Should practices buy tools or a full system?",
+        answer:
+          "If call volume matters to revenue, a system approach usually wins because voice, memory, and automation must work together.",
+      },
+      {
+        question: "Is this relevant for small practices?",
+        answer:
+          "Yes. Smaller teams often feel missed-call cost faster, so workflow reliability matters even more.",
+      },
+      {
+        question: "How do we choose the first use case?",
+        answer:
+          "Start with missed-call recovery and booking workflows, then expand to follow-up and reactivation.",
+      },
+    ],
+    ctaLabel: "Book a Free Call",
+    ctaHref: "/book-a-call",
+    ctaSupportText: "We can audit your current stack and recommend what to keep, replace, or integrate.",
+    relatedLinks: [
+      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
+      { label: "AI Memory System", href: "/ai-memory-system" },
+      { label: "AI Memory for Dental Clinics", href: "/ai-memory-for-dental-clinics" },
+    ],
+    keywords: [
+      "best ai tools for dental practices",
+      "ai tools for dental clinics",
+      "dental ai automation",
+      "dental ai receptionist",
+    ],
+  },
+  {
+    type: "directory",
+    pathSegments: ["best-ai-voice-agents-for-business"],
+    title: "Best AI Voice Agents for Business (2026) | Agentic AI Labs",
+    description:
+      "Compare the best AI voice agent options for business by production readiness, memory capabilities, and workflow automation depth.",
+    canonicalUrl: makeCanonical(["best-ai-voice-agents-for-business"]),
+    heroLabel: "Directory Page",
+    heroHeadline: "Best AI Voice Agents for Business",
+    heroSubheadline:
+      "A practical comparison framework for teams choosing AI voice solutions beyond demos.",
+    painTitle: "Common buying mistakes",
+    painPoints: [
+      "Choosing by conversation quality alone.",
+      "Skipping integration and memory testing.",
+      "Underestimating production monitoring requirements.",
+    ],
+    statusQuoTitle: "What evaluation often misses",
+    statusQuoItems: [
+      "How failures are detected and recovered.",
+      "How context carries across interactions.",
+      "How calls update downstream systems.",
+    ],
+    solutionTitle: "How to evaluate correctly",
+    solutionItems: [
+      "Test for real-world edge-case handling.",
+      "Verify memory and multi-call continuity.",
+      "Validate end-to-end business workflow execution.",
+    ],
+    proofTitle: "What good looks like",
+    proofBullets: [
+      "Reliable latency and handoff quality.",
+      "Context-aware behavior on return calls.",
+      "Measured KPI improvements after launch.",
+    ],
+    faq: [
+      {
+        question: "Are voice agents enough by themselves?",
+        answer:
+          "Usually no. Teams need voice plus memory and automation to deliver stable business outcomes.",
+      },
+      {
+        question: "What industries benefit most?",
+        answer:
+          "Any industry with repeated inbound or outbound interactions tied to revenue or support outcomes.",
+      },
+      {
+        question: "How long should a pilot run?",
+        answer:
+          "Run pilots long enough to test edge cases and repeat-caller behavior, not just first-call success.",
+      },
+    ],
+    ctaLabel: "Book a Free Call",
+    ctaHref: "/book-a-call",
+    ctaSupportText: "We can map your selection criteria to production requirements.",
+    relatedLinks: [
+      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    ],
+    keywords: [
+      "best ai voice agents for business",
+      "best ai voice agent",
+      "voice ai tools for business",
+      "production ai voice systems",
+    ],
+  },
+  {
+    type: "directory",
+    pathSegments: ["best-ai-for-gohighlevel-agencies"],
+    title: "Best AI for GoHighLevel Agencies (2026) | Agentic AI Labs",
+    description:
+      "A practical guide to the best AI stack options for GoHighLevel agencies, including voice systems, memory layers, and automation orchestration.",
+    canonicalUrl: makeCanonical(["best-ai-for-gohighlevel-agencies"]),
+    heroLabel: "Directory Page",
+    heroHeadline: "Best AI for GoHighLevel Agencies",
+    heroSubheadline:
+      "How GHL agencies should compare AI options when the goal is pipeline outcomes, not just demos.",
+    painTitle: "Why agency stacks become fragile",
+    painPoints: [
+      "Too many disconnected tools and workflows.",
+      "Lead context gets lost across outreach stages.",
+      "Automation failures impact client trust and retention.",
+    ],
+    statusQuoTitle: "Common selection pattern",
+    statusQuoItems: [
+      "Pick tools by trend instead of architecture fit.",
+      "Build heavy workflow chains without fallback paths.",
+      "Delay observability until failures occur.",
+    ],
+    solutionTitle: "A better selection framework",
+    solutionItems: [
+      "Prioritize tools that fit your GHL pipeline model.",
+      "Require memory continuity for follow-up quality.",
+      "Enforce reliability checks before client rollout.",
+    ],
+    proofTitle: "What to verify",
+    proofBullets: [
+      "Can the system update opportunities accurately?",
+      "Can it preserve lead context across touches?",
+      "Can your team debug issues quickly when they happen?",
+    ],
+    faq: [
+      {
+        question: "Should agencies build this in-house?",
+        answer:
+          "Some do, but most growing agencies benefit from a system partner to avoid ongoing maintenance drag.",
+      },
+      {
+        question: "What is the first high-impact use case?",
+        answer:
+          "AI SDR and inbound qualification workflows usually show value fastest for GHL agencies.",
+      },
+      {
+        question: "Can we standardize this across clients?",
+        answer:
+          "Yes. Build a core architecture and adapt prompts, memory schemas, and routing by niche.",
+      },
+    ],
+    ctaLabel: "Book a Free Call",
+    ctaHref: "/book-a-call",
+    ctaSupportText: "We can help design a repeatable AI operating model for your agency.",
+    relatedLinks: [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "AI Memory for Marketing Agents", href: "/ai-memory-for-marketing-agents" },
+    ],
+    keywords: [
+      "best ai for gohighlevel agencies",
+      "gohighlevel ai tools",
+      "ai stack for agencies",
+      "ghl ai automation",
+    ],
+  },
+  {
+    type: "directory",
+    pathSegments: ["best-ai-tools-for-recruiting-agencies"],
+    title: "Best AI Tools for Recruiting Agencies (2026) | Agentic AI Labs",
+    description:
+      "A focused list of the best AI tools and systems for recruiting agencies, from screening automation to memory-driven candidate workflows.",
+    canonicalUrl: makeCanonical(["best-ai-tools-for-recruiting-agencies"]),
+    heroLabel: "Directory Page",
+    heroHeadline: "Best AI Tools for Recruiting Agencies",
+    heroSubheadline:
+      "How recruiting teams should evaluate AI options for screening, coordination, and candidate experience.",
+    painTitle: "Where recruiting operations leak time",
+    painPoints: [
+      "Manual screening consumes recruiter bandwidth.",
+      "Candidate context gets fragmented across tools.",
+      "Handoff quality drops between sourcing and submission.",
+    ],
+    statusQuoTitle: "What most teams do first",
+    statusQuoItems: [
+      "Adopt one-off tools for isolated steps.",
+      "Rely on forms that miss conversation nuance.",
+      "Manage handoffs manually in ATS notes.",
+    ],
+    solutionTitle: "Selection criteria that matter",
+    solutionItems: [
+      "Voice or chat screening quality for role-specific scenarios.",
+      "Memory for candidate preferences and constraints.",
+      "Automation into ATS workflows and recruiter routing.",
+    ],
+    proofTitle: "What to test",
+    proofBullets: [
+      "Can it improve screen-to-shortlist speed?",
+      "Can it preserve candidate context between interactions?",
+      "Can recruiters trust and audit outputs easily?",
+    ],
+    faq: [
+      {
+        question: "Is AI replacing recruiters?",
+        answer:
+          "No. It removes repetitive screening load so recruiters can focus on high-value conversations and placements.",
+      },
+      {
+        question: "Can this work with our existing ATS?",
+        answer:
+          "Yes, when integrations and data model mapping are planned upfront.",
+      },
+      {
+        question: "What is the best first workflow to automate?",
+        answer:
+          "First-round qualification and scheduling are usually the highest-leverage starting points.",
+      },
+    ],
+    ctaLabel: "Book a Free Call",
+    ctaHref: "/book-a-call",
+    ctaSupportText: "We can assess your recruiting workflow and recommend a production-first rollout plan.",
+    relatedLinks: [
+      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "AI Memory for Recruiting Teams", href: "/ai-memory-for-recruiting-teams" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    ],
+    keywords: [
+      "best ai tools for recruiting agencies",
+      "ai recruiting tools",
+      "ai for recruiting agencies",
+      "candidate screening ai",
     ],
   },
 ];
