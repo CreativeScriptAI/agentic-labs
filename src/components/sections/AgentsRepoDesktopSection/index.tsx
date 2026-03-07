@@ -79,6 +79,8 @@ const agentThumbnailMap: Record<string, string> = {
   "vc notebot": "/images/agents repo/VC Notebot.svg",
   fuzzie: "/images/agents repo/Fuzzle.svg",
   "landing pill": "/images/agents repo/Landing Pill.svg",
+  naitik: "/images/agents repo/Naitik Thumbnail.png",
+  "naitik ai": "/images/agents repo/Naitik Thumbnail.png",
   fedforward: "/images/agents repo/Fedforward.svg",
   docsy: "/images/agents repo/Docsy.svg",
   "aperio bot": "/images/agents repo/Aperio.svg",
@@ -102,31 +104,6 @@ const chevronIcon = (
     />
   </svg>
 );
-
-const arrowLeftIcon = (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-    <path
-      d="M12.5 5L7.5 10L12.5 15"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const arrowRightIcon = (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-    <path
-      d="M7.5 5L12.5 10L7.5 15"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 
 const searchIcon = (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -152,7 +129,6 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
 }) => {
   const [activeCategory, setActiveCategory] = useState("All Agents");
   const [searchQuery, setSearchQuery] = useState("");
-  const [carouselIndexes, setCarouselIndexes] = useState<Record<string, number>>({});
   const [selectedAgentIndex, setSelectedAgentIndex] = useState<number>(0);
   const [isAgentModalOpen, setIsAgentModalOpen] = useState(false);
   const sectionsRef = useRef<Record<string, HTMLDivElement | null>>({});
@@ -201,6 +177,13 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
     const query = searchQuery.trim().toLowerCase();
 
     return normalizedAgents.filter((agent) => {
+      if (
+        activeCategory !== "All Agents" &&
+        !agent.tags.some((tag) => String(tag).toLowerCase() === activeCategory.toLowerCase())
+      ) {
+        return false;
+      }
+
       if (!query) return true;
 
       return (
@@ -212,41 +195,12 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
   }, [normalizedAgents, activeCategory, searchQuery]);
 
   const groupedAgents = useMemo(() => {
-    const map = new Map<string, NormalizedAgent[]>();
+    if (activeCategory === "All Agents") {
+      return [["All Agents", filteredAgents] as [string, NormalizedAgent[]]];
+    }
 
-    filteredAgents.forEach((agent) => {
-      const category = String(agent.tags?.[0] || "Automation");
-      if (!map.has(category)) {
-        map.set(category, []);
-      }
-      map.get(category)?.push(agent);
-    });
-
-    const ordered = categoryTabs
-      .slice(1)
-      .filter((category) => map.has(category))
-      .map((category) => [category, map.get(category) || []] as [string, NormalizedAgent[]]);
-
-    const remaining = Array.from(map.entries()).filter(
-      ([category]) => !categoryTabs.includes(category)
-    );
-
-    return [...ordered, ...remaining];
-  }, [filteredAgents]);
-
-  useEffect(() => {
-    setCarouselIndexes((prev) => {
-      const next: Record<string, number> = {};
-
-      groupedAgents.forEach(([category, categoryAgents]) => {
-        const maxIndex = Math.max(0, categoryAgents.length - 3);
-        const current = prev[category] ?? 0;
-        next[category] = Math.min(current, maxIndex);
-      });
-
-      return next;
-    });
-  }, [groupedAgents]);
+    return [[activeCategory, filteredAgents] as [string, NormalizedAgent[]]];
+  }, [activeCategory, filteredAgents]);
 
   const modalAgent = filteredAgents[selectedAgentIndex] || filteredAgents[0];
   const selectedOverview = modalAgent?.raw?.overview || {};
@@ -347,25 +301,16 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
     };
   }, [isAgentModalOpen, filteredAgents.length]);
 
-  const goToPrevCategoryRow = (category: string, totalAgents: number) => {
-    if (totalAgents <= 3) return;
+  const scrollToElementWithOffset = (element: HTMLElement | null) => {
+    if (typeof window === "undefined" || !element) return;
 
-    setCarouselIndexes((prev) => {
-      const current = prev[category] ?? 0;
-      const maxIndex = Math.max(0, totalAgents - 3);
-      const nextIndex = current <= 0 ? maxIndex : current - 1;
-      return { ...prev, [category]: nextIndex };
-    });
-  };
+    // Keep category tabs visible after a jump by stopping a bit before the section top.
+    const topOffset = window.innerWidth < 640 ? 120 : 160;
+    const targetTop = window.scrollY + element.getBoundingClientRect().top - topOffset;
 
-  const goToNextCategoryRow = (category: string, totalAgents: number) => {
-    if (totalAgents <= 3) return;
-
-    setCarouselIndexes((prev) => {
-      const current = prev[category] ?? 0;
-      const maxIndex = Math.max(0, totalAgents - 3);
-      const nextIndex = current >= maxIndex ? 0 : current + 1;
-      return { ...prev, [category]: nextIndex };
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: "smooth",
     });
   };
 
@@ -376,12 +321,12 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
 
     window.requestAnimationFrame(() => {
       if (tab === "All Agents") {
-        listTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollToElementWithOffset(listTopRef.current);
         return;
       }
 
       const targetSection = sectionsRef.current[tab];
-      targetSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollToElementWithOffset(targetSection);
     });
   };
 
@@ -425,10 +370,10 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                 key={tab}
                 type="button"
                 onClick={() => handleCategorySelect(tab)}
-                className={`shrink-0 rounded-[8px] px-3 py-2 text-[14px] font-normal uppercase transition-colors ${
+                className={`shrink-0 rounded-[8px] px-4 py-2 text-[14px] font-normal uppercase transition-all duration-200 ${
                   tab === activeCategory
-                    ? "text-[#0A1128]"
-                    : "text-slate-600 hover:text-[#0A1128]"
+                    ? "bg-[#E2E8F0] text-[#0A1128]"
+                    : "bg-transparent text-slate-600 hover:bg-white/60 hover:text-[#0A1128]"
                 }`}
               >
                 {tab}
@@ -451,29 +396,25 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                 sectionsRef.current[category] = element;
               }}
             >
-              <div className="flex items-center gap-4 mb-4">
-                <h2 className="text-[20px] leading-none text-[#0A1128] font-normal">
-                  {category}
-                </h2>
-                <p className="text-[14px] text-slate-400">
-                  {categoryAgents.length} agents
-                </p>
-              </div>
+              {activeCategory !== "All Agents" && (
+                <div className="flex items-center gap-4 mb-4">
+                  <h2 className="text-[20px] leading-none text-[#0A1128] font-normal">
+                    {category}
+                  </h2>
+                  <p className="text-[14px] text-slate-400">
+                    {categoryAgents.length} agents
+                  </p>
+                </div>
+              )}
 
-              <div className="hidden md:block w-full lg:w-[930px] overflow-hidden">
-                <div
-                  className="flex gap-4 transition-transform duration-300 ease-out"
-                  style={{
-                    transform: `translateX(-${(carouselIndexes[category] ?? 0) * 284}px)`,
-                  }}
-                >
-                  {categoryAgents.map((agent) => {
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {categoryAgents.map((agent) => {
                   const idx = filteredAgents.findIndex((item) => item.id === agent.id);
 
                   return (
                     <article
                       key={agent.id || agent.name}
-                      className="w-[268px] shrink-0 rounded-lg bg-white p-3 cursor-pointer"
+                      className="w-full rounded-lg bg-white p-3 cursor-pointer"
                       onClick={() => openAgentModalByIndex(Math.max(idx, 0))}
                       role="button"
                       tabIndex={0}
@@ -547,110 +488,8 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                       </button>
                     </article>
                   );
-                  })}
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 md:hidden">
-                {categoryAgents.map((agent) => {
-                  const idx = filteredAgents.findIndex((item) => item.id === agent.id);
-
-                  return (
-                    <article
-                      key={`${agent.id || agent.name}-mobile`}
-                      className="w-full rounded-lg bg-white p-3 cursor-pointer"
-                      onClick={() => openAgentModalByIndex(Math.max(idx, 0))}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(event) => {
-                        if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          openAgentModalByIndex(Math.max(idx, 0));
-                        }
-                      }}
-                    >
-                      <div className="mb-4 aspect-[241/141] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
-                        <Image
-                          src={agent.image}
-                          alt={agent.name}
-                          width={964}
-                          height={564}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-
-                      <h3 className="text-slate-800 text-[30px] leading-tight mb-2 font-normal font-sfpro">
-                        {agent.name}
-                      </h3>
-
-                      <p className="text-slate-600 text-[14px] leading-snug mb-3 line-clamp-2">
-                        {agent.subtitle}
-                      </p>
-
-                      <ul className="space-y-1.5 mb-3">
-                        {(agent.features.length > 0
-                          ? agent.features.slice(0, 3)
-                          : [
-                              { heading: "24x7 Auto Calling" },
-                              { heading: "Real Time Slot Booking" },
-                              { heading: "All Files Supported" },
-                            ]
-                        ).map((feature: any, featureIdx: number) => (
-                          <li
-                            key={`${agent.name}-mobile-feature-${featureIdx}`}
-                            className="flex items-center gap-1.5 text-[14px] text-slate-600"
-                          >
-                            <span className="text-[#0062FF]">✓</span>
-                            <span>{feature?.heading || feature?.title || "Feature"}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {agent.tags.slice(0, 2).map((tag: string, tagIndex: number) => (
-                          <span
-                            key={`${agent.name}-mobile-tag-${tagIndex}`}
-                            className="rounded bg-slate-200 px-2.5 py-1 text-[12px] font-medium text-[#0A1128]"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <button
-                        type="button"
-                        className="inline-flex items-center gap-1 text-[#0062FF] text-[14px]"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          openAgentModalByIndex(Math.max(idx, 0));
-                        }}
-                      >
-                        Test Agent
-                        {chevronIcon}
-                      </button>
-                    </article>
-                  );
                 })}
               </div>
-
-              {categoryAgents.length > 3 && (
-                <div className="hidden md:flex justify-end gap-2 mt-4">
-                  <button
-                    type="button"
-                    onClick={() => goToPrevCategoryRow(category, categoryAgents.length)}
-                    className="h-10 w-10 rounded-[8px] border-2 border-[#64748B] bg-white text-[#E53935] inline-flex items-center justify-center"
-                  >
-                    {arrowLeftIcon}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => goToNextCategoryRow(category, categoryAgents.length)}
-                    className="h-10 w-10 rounded-[8px] border-2 border-[#64748B] bg-white text-[#E53935] inline-flex items-center justify-center"
-                  >
-                    {arrowRightIcon}
-                  </button>
-                </div>
-              )}
             </div>
           ))}
         </div>

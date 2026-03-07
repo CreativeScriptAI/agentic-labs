@@ -238,6 +238,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
               <Image
                 src={agentsBannerDesktop}
                 alt="AI Agents Repo banner"
+                
                 width={930}
                 height={248}
                 className="w-full h-auto"
