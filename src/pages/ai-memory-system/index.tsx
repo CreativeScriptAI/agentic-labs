@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { AI_MEMORY_VARIABLE_LINKS } from "src/data/programmaticSeoPages";
 
 // Dynamic imports for below-fold sections (Next.js best practice)
 const FAQSection = dynamic(() => import("../ai-memory-system/components/FAQSection"), { ssr: true });
@@ -81,8 +82,18 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
         url: "https://www.tryagentikai.com/ai-memory-system",
         keywords: [
             "ai memory system",
+            "memory as a service",
             "ai agent memory",
             "persistent ai memory",
+            "shared memory for ai agents",
+            "long term memory for ai",
+            "ai context memory",
+            "multi agent memory system",
+            "ai memory layer",
+            "ai agents with memory",
+            "memory infrastructure for ai",
+            "agentic memory",
+            "long term memory for ai agents",
             "ai that remembers customers",
             "production ai memory",
             "ai receptionist with memory",
@@ -878,6 +889,38 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
 
             {/* AI Memory by Industry */}
             <AIMemoryByIndustry />
+
+            {/* Programmatic Hub: AI Memory for Use Cases */}
+            <Section bgColor="gray" id="ai-memory-use-cases">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-bold text-blue-600 tracking-[0.14em] uppercase mb-3 font-sfpro">
+                            Programmatic Memory Pages
+                        </p>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-[#0A1128] font-mondwest mb-3">
+                            AI Memory by role, industry, workflow, and agent type
+                        </h3>
+                        <p className="text-gray-700 font-sfpro text-base sm:text-lg leading-relaxed">
+                            Explore focused pages built from the same memory-system architecture: persistent AI memory, shared memory for AI agents, and long-term context memory.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-3 sm:grid-cols-2">
+                        {AI_MEMORY_VARIABLE_LINKS.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="group rounded-xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md hover:border-blue-300 transition-all"
+                            >
+                                <p className="text-[#0A1128] font-semibold font-sfpro group-hover:text-blue-700 transition-colors">
+                                    {link.label}
+                                </p>
+                                <p className="text-xs text-gray-500 mt-1 font-sfpro">{link.href}</p>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </Section>
 
             {/* How We Build It */}
             <HowWeBuildIt />

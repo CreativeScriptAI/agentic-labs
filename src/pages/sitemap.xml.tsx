@@ -4,6 +4,7 @@ import { CONFIG } from "site.config";
 import { getServerSideSitemapLegacy, ISitemapField } from "next-sitemap";
 import { GetServerSidePropsContext } from "next";
 import { filterPosts } from "src/libs/utils/notion";
+import { PROGRAMMATIC_SEO_PAGES } from "src/data/programmaticSeoPages";
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
@@ -47,6 +48,16 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
         lastmod: new Date().toISOString(),
         changefreq: "weekly" as const,
         priority,
+      });
+    });
+
+    // Add programmatic SEO routes (root level)
+    PROGRAMMATIC_SEO_PAGES.forEach((page) => {
+      fields.push({
+        loc: `${base}/${page.pathSegments.join("/")}/`,
+        lastmod: new Date().toISOString(),
+        changefreq: "weekly" as const,
+        priority: page.type === "persona" || page.type === "integration" ? 0.85 : 0.75,
       });
     });
 
