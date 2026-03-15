@@ -63,9 +63,11 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
 
   // Detect locale prefix from current path (e.g., /en-in/, /en-ae/, etc.)
   const localePrefix = useMemo(() => {
-    const path = router.asPath;
-    const localeMatch = path.match(/^\/(en-(?:in|ae|us|gb|au|ca))\//);
-    return localeMatch ? `/${localeMatch[1]}` : "";
+    // COMMENTED OUT: Auto-detection disabled to enforce global routes.
+    // const path = router.asPath;
+    // const localeMatch = path.match(/^\/(en-(?:in|ae|us|gb|au|ca))\//);
+    // return localeMatch ? `/${localeMatch[1]}` : "";
+    return "";
   }, [router.asPath]);
 
   const tabLabels: string[] = useMemo(

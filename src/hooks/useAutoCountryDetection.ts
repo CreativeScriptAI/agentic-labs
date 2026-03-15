@@ -23,6 +23,9 @@ export function useAutoCountryDetection() {
 
     // Only run once on mount
     const detectAndRedirect = async () => {
+      // COMMENTED OUT: Auto country detection is temporarily disabled.
+      return;
+      /*
       console.log("🔍 [Country Detection] Starting...");
       console.log("📍 [Country Detection] pathname:", router.pathname);
       console.log("📍 [Country Detection] asPath:", router.asPath);
@@ -155,6 +158,7 @@ export function useAutoCountryDetection() {
         setIsDetecting(false);
         console.log("🏁 [Country Detection] Detection complete");
       }
+      */
     };
 
     // Run detection immediately (removed delay for debugging)

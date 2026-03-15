@@ -277,6 +277,23 @@ INDUSTRY_MAP = {
         "job_search_title": "receptionist",
     },
 
+    "recruiting-teams": {
+        "playbook": "00_AI_MEMORY",
+        "page_title": "AI Memory for Recruiting Teams",
+        "role": "AI Memory System",
+        "industry": "Recruiting Teams",
+        "replaced_role": "Recruiter / HR Sourcer",
+        "bls_soc": "13-1071",
+        "subreddits": ["recruiting", "humanresources", "HRpros"],
+        "reddit_keywords": ["repeat", "lost context", "handoff", "candidate notes", "ATS integration"],
+        "rss_feeds": [
+            "https://www.ere.net/feed/",
+            "https://www.shrm.org/rss/rss.aspx",
+        ],
+        "trends_keywords": ["AI recruiter memory", "recruitment context AI", "candidate history AI"],
+        "job_search_title": "recruiter",
+    },
+
 }
 
 

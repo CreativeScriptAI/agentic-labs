@@ -1,0 +1,1220 @@
+{
+    "generatedAt": "2026-02-28T06:47:25.505Z",
+    "totalVoices": 46,
+    "successful": 46,
+    "failed": 0,
+    "results": [
+        {
+            "model": "bulbul:v3",
+            "speaker": "shubh",
+            "filename": "bulbul_v3_shubh.wav",
+            "text": "नमस्ते! मैं shubh हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "shubh",
+                "isDefault": true,
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_shubh.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "aditya",
+            "filename": "bulbul_v3_aditya.wav",
+            "text": "नमस्ते! मैं aditya हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "aditya",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_aditya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "rahul",
+            "filename": "bulbul_v3_rahul.wav",
+            "text": "नमस्ते! मैं rahul हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "rahul",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_rahul.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "rohan",
+            "filename": "bulbul_v3_rohan.wav",
+            "text": "नमस्ते! मैं rohan हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "rohan",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_rohan.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "amit",
+            "filename": "bulbul_v3_amit.wav",
+            "text": "नमस्ते! मैं amit हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "amit",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_amit.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "dev",
+            "filename": "bulbul_v3_dev.wav",
+            "text": "नमस्ते! मैं dev हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "dev",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_dev.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "ratan",
+            "filename": "bulbul_v3_ratan.wav",
+            "text": "नमस्ते! मैं ratan हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "ratan",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_ratan.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "varun",
+            "filename": "bulbul_v3_varun.wav",
+            "text": "नमस्ते! मैं varun हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "varun",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_varun.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "manan",
+            "filename": "bulbul_v3_manan.wav",
+            "text": "नमस्ते! मैं manan हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "manan",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_manan.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "sumit",
+            "filename": "bulbul_v3_sumit.wav",
+            "text": "नमस्ते! मैं sumit हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "sumit",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_sumit.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "kabir",
+            "filename": "bulbul_v3_kabir.wav",
+            "text": "नमस्ते! मैं kabir हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "kabir",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_kabir.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "aayan",
+            "filename": "bulbul_v3_aayan.wav",
+            "text": "नमस्ते! मैं aayan हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "aayan",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_aayan.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "ashutosh",
+            "filename": "bulbul_v3_ashutosh.wav",
+            "text": "नमस्ते! मैं ashutosh हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "ashutosh",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_ashutosh.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "advait",
+            "filename": "bulbul_v3_advait.wav",
+            "text": "नमस्ते! मैं advait हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "advait",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_advait.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "anand",
+            "filename": "bulbul_v3_anand.wav",
+            "text": "नमस्ते! मैं anand हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "anand",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_anand.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "tarun",
+            "filename": "bulbul_v3_tarun.wav",
+            "text": "नमस्ते! मैं tarun हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "tarun",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_tarun.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "sunny",
+            "filename": "bulbul_v3_sunny.wav",
+            "text": "नमस्ते! मैं sunny हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "sunny",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_sunny.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "mani",
+            "filename": "bulbul_v3_mani.wav",
+            "text": "नमस्ते! मैं mani हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "mani",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_mani.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "gokul",
+            "filename": "bulbul_v3_gokul.wav",
+            "text": "नमस्ते! मैं gokul हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "gokul",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_gokul.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "vijay",
+            "filename": "bulbul_v3_vijay.wav",
+            "text": "नमस्ते! मैं vijay हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "vijay",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_vijay.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "mohit",
+            "filename": "bulbul_v3_mohit.wav",
+            "text": "नमस्ते! मैं mohit हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "mohit",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_mohit.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "rehan",
+            "filename": "bulbul_v3_rehan.wav",
+            "text": "नमस्ते! मैं rehan हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "rehan",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_rehan.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "soham",
+            "filename": "bulbul_v3_soham.wav",
+            "text": "नमस्ते! मैं soham हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "soham",
+                "gender": "male",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_soham.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "ritu",
+            "filename": "bulbul_v3_ritu.wav",
+            "text": "नमस्ते! मैं ritu हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "ritu",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_ritu.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "priya",
+            "filename": "bulbul_v3_priya.wav",
+            "text": "नमस्ते! मैं priya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "priya",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_priya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "neha",
+            "filename": "bulbul_v3_neha.wav",
+            "text": "नमस्ते! मैं neha हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "neha",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_neha.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "pooja",
+            "filename": "bulbul_v3_pooja.wav",
+            "text": "नमस्ते! मैं pooja हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "pooja",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_pooja.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "simran",
+            "filename": "bulbul_v3_simran.wav",
+            "text": "नमस्ते! मैं simran हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "simran",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_simran.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "kavya",
+            "filename": "bulbul_v3_kavya.wav",
+            "text": "नमस्ते! मैं kavya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "kavya",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_kavya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "ishita",
+            "filename": "bulbul_v3_ishita.wav",
+            "text": "नमस्ते! मैं ishita हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "ishita",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_ishita.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "shreya",
+            "filename": "bulbul_v3_shreya.wav",
+            "text": "नमस्ते! मैं shreya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "shreya",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_shreya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "roopa",
+            "filename": "bulbul_v3_roopa.wav",
+            "text": "नमस्ते! मैं roopa हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "roopa",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_roopa.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "amelia",
+            "filename": "bulbul_v3_amelia.wav",
+            "text": "नमस्ते! मैं amelia हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "amelia",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_amelia.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "sophia",
+            "filename": "bulbul_v3_sophia.wav",
+            "text": "नमस्ते! मैं sophia हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "sophia",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_sophia.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "tanya",
+            "filename": "bulbul_v3_tanya.wav",
+            "text": "नमस्ते! मैं tanya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "tanya",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_tanya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "shruti",
+            "filename": "bulbul_v3_shruti.wav",
+            "text": "नमस्ते! मैं shruti हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "shruti",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_shruti.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "suhani",
+            "filename": "bulbul_v3_suhani.wav",
+            "text": "नमस्ते! मैं suhani हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "suhani",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_suhani.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "kavitha",
+            "filename": "bulbul_v3_kavitha.wav",
+            "text": "नमस्ते! मैं kavitha हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "kavitha",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_kavitha.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v3",
+            "speaker": "rupali",
+            "filename": "bulbul_v3_rupali.wav",
+            "text": "नमस्ते! मैं rupali हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "rupali",
+                "gender": "female",
+                "model": "bulbul:v3"
+            },
+            "modelInfo": {
+                "characterLimit": 2500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000,
+                    32000,
+                    44100,
+                    48000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v3_rupali.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "anushka",
+            "filename": "bulbul_v2_anushka.wav",
+            "text": "नमस्ते! मैं anushka हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "anushka",
+                "gender": "female",
+                "isDefault": true,
+                "description": "Clear and professional",
+                "characteristics": [
+                    "clear",
+                    "professional"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_anushka.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "manisha",
+            "filename": "bulbul_v2_manisha.wav",
+            "text": "नमस्ते! मैं manisha हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "manisha",
+                "gender": "female",
+                "description": "Warm and friendly",
+                "characteristics": [
+                    "warm",
+                    "friendly"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_manisha.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "vidya",
+            "filename": "bulbul_v2_vidya.wav",
+            "text": "नमस्ते! मैं vidya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "vidya",
+                "gender": "female",
+                "description": "Articulate and precise",
+                "characteristics": [
+                    "articulate",
+                    "precise"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_vidya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "arya",
+            "filename": "bulbul_v2_arya.wav",
+            "text": "नमस्ते! मैं arya हूँ, एजेंटिक AI लैब्स की AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकती हूँ?",
+            "metadata": {
+                "name": "arya",
+                "gender": "female",
+                "description": "Young and energetic",
+                "characteristics": [
+                    "young",
+                    "energetic"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_arya.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "abhilash",
+            "filename": "bulbul_v2_abhilash.wav",
+            "text": "नमस्ते! मैं abhilash हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "abhilash",
+                "gender": "male",
+                "description": "Deep and authoritative",
+                "characteristics": [
+                    "deep",
+                    "authoritative"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_abhilash.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "karun",
+            "filename": "bulbul_v2_karun.wav",
+            "text": "नमस्ते! मैं karun हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "karun",
+                "gender": "male",
+                "description": "Natural and conversational",
+                "characteristics": [
+                    "natural",
+                    "conversational"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_karun.wav",
+            "success": true
+        },
+        {
+            "model": "bulbul:v2",
+            "speaker": "hitesh",
+            "filename": "bulbul_v2_hitesh.wav",
+            "text": "नमस्ते! मैं hitesh हूँ, एजेंटिक AI लैब्स का AI वॉयस एजेंट। आज की दुनिया में समय बहुत कीमती है, और इसीलिए एजेंटिक AI लैब्स ने मुझे बनाया है — ताकि आपका हर काम आसान और तेज़ हो सके। चाहे आपको कोई जानकारी चाहिए, अपॉइंटमेंट बुक करनी हो, या कोई सवाल पूछना हो — मैं हमेशा आपकी मदद के लिए तैयार हूँ। आपकी आवाज़ ही मेरा इशारा है। तो बताइए, आज मैं आपके लिए क्या कर सकता हूँ?",
+            "metadata": {
+                "name": "hitesh",
+                "gender": "male",
+                "description": "Professional and engaging",
+                "characteristics": [
+                    "professional",
+                    "engaging"
+                ],
+                "model": "bulbul:v2"
+            },
+            "modelInfo": {
+                "characterLimit": 1500,
+                "sampleRates": [
+                    8000,
+                    16000,
+                    22050,
+                    24000
+                ],
+                "defaultSampleRate": 24000
+            },
+            "audioUrl": "https://voicedirectory.s3.us-east-2.amazonaws.com/bulbul_v2_hitesh.wav",
+            "success": true
+        }
+    ]
+}

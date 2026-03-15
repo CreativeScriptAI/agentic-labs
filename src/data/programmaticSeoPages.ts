@@ -1719,11 +1719,33 @@ type MemoryVariableSeed = {
   category: MemoryVariableCategory;
   value: string;
   slug: string;
+  customPainPoints?: string[];
+  customStatusQuo?: string[];
+  customProofBullets?: string[];
 };
 
 const MEMORY_VARIABLE_SEEDS: MemoryVariableSeed[] = [
   { category: "role", value: "marketing agents", slug: "marketing-agents" },
-  { category: "role", value: "recruiting teams", slug: "recruiting-teams" },
+  { 
+    category: "role", 
+    value: "recruiting teams", 
+    slug: "recruiting-teams",
+    customPainPoints: [
+      "File names like 'resume_final_v3' with no helpful candidate metadata slow down manual screening (r/recruiting).",
+      "Hiring managers deal with candidates who sound good in interviews but lack practical skills on the job.",
+      "Success requires building real relationships with hiring managers, not just fast sourcing without context."
+    ],
+    customStatusQuo: [
+      "Relying on entirely manual reading of resumes with no automated filtering or ATS context constraints.",
+      "The 'find resume, submit resume, repeat' cycle with zero continuity.",
+      "Scattered candidate notes that force recruiters to start from scratch on every follow-up."
+    ],
+    customProofBullets: [
+      "Searches for 'AI recruiter memory' have surged to peak interest this year, especially in tech hubs like California (Google Trends).",
+      "Fewer repeated questions and zero time wasted on manual file renaming and organization.",
+      "Consistent candidate history tracking that actually supports long-term hiring manager relationships."
+    ]
+  },
   { category: "industry", value: "fintech startups", slug: "fintech-startups" },
   { category: "industry", value: "dental clinics", slug: "dental-clinics" },
   { category: "workflow", value: "legal workflows", slug: "legal-workflows" },
@@ -1761,13 +1783,13 @@ const buildMemoryVariablePage = (seed: MemoryVariableSeed): ProgrammaticPageData
     heroSubheadline:
       `We build persistent AI memory infrastructure for ${seed.value} so every interaction starts with context, not guesswork.`,
     painTitle: `What breaks without memory in ${titleValue}`,
-    painPoints: [
+    painPoints: seed.customPainPoints || [
       `Teams in ${seed.value} repeat the same context every interaction.`,
       "Agents lose continuity after handoffs across channels.",
       "Operational quality drops because decisions are made without historical context.",
     ],
     statusQuoTitle: "What most teams try first",
-    statusQuoItems: [
+    statusQuoItems: seed.customStatusQuo || [
       "Chat history exports without retrieval logic.",
       "Prompt patching with no persistent memory layer.",
       "Disconnected tools that cannot share memory between agents.",
@@ -1779,7 +1801,7 @@ const buildMemoryVariablePage = (seed: MemoryVariableSeed): ProgrammaticPageData
       "Long-term memory + short-term context routing with policy controls.",
     ],
     proofTitle: "Expected outcomes",
-    proofBullets: [
+    proofBullets: seed.customProofBullets || [
       "Fewer repeated questions and smoother user experience.",
       "Higher task completion rates in multi-step workflows.",
       "More reliable automation decisions with context memory.",
