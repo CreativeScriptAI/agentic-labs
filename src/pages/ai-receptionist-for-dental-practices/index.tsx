@@ -975,10 +975,10 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                         <CTAButton href={CAL_LINK} label="Book Your Free Call" />
                         <a
-                            href="mailto:hello@tryagentikai.com"
+                            href="mailto:aditya@tryagentikai.com"
                             className="text-sm text-gray-400 hover:text-white transition-colors font-sfpro"
                         >
-                            Or email hello@tryagentikai.com
+                            Or email aditya@tryagentikai.com
                         </a>
                     </div>
                 </div>

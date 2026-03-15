@@ -7,6 +7,7 @@ export type ProgrammaticPageType =
   | "memory-use-case";
 
 export type ProgrammaticPageData = {
+  // ── Core (required, all pages) ──────────────────────────────────────────────
   type: ProgrammaticPageType;
   pathSegments: string[];
   title: string;
@@ -15,18 +16,91 @@ export type ProgrammaticPageData = {
   heroLabel: string;
   heroHeadline: string;
   heroSubheadline: string;
+
+  // ── Problem section ──────────────────────────────────────────────────────────
   painTitle: string;
   painPoints: string[];
+  /** Optional: dollar-cost breakdown block powered by real data (BLS etc.) */
+  costCallout?: {
+    items: Array<{ label: string; amount: string }>;
+    total: string;
+    solvesFor: string;
+    source: string;
+  };
+  /** Optional: real verbatim practitioner quote (Reddit / interviews) */
+  practitionerQuote?: {
+    text: string;
+    attribution: string;
+  };
+
+  // ── Status quo section (always shown) ────────────────────────────────────────
   statusQuoTitle: string;
   statusQuoItems: string[];
+
+  // ── Industry signal section (optional — RSS/trends data) ─────────────────────
+  industrySignal?: {
+    headline: string;
+    body: string;
+    source: string;
+    date: string;
+  };
+
+  // ── What we build section ────────────────────────────────────────────────────
   solutionTitle: string;
-  solutionItems: string[];
+  solutionItems: string[];                 // fallback for pages without layers
+  /** Optional: richer 3-layer (Voice / Memory / Automation) breakdown */
+  layers?: Array<{
+    title: string;
+    body: string;
+  }>;
+
+  // ── How it works section (optional — 4-week timeline) ────────────────────────
+  howItWorks?: Array<{
+    week: number;
+    phase: string;
+    body: string;
+    youSpend: string;
+  }>;
+
+  // ── Proof / results section ───────────────────────────────────────────────────
   proofTitle: string;
-  proofBullets: string[];
+  proofBullets: string[];                  // fallback for pages without caseStudy
+  /** Optional: featured case study card */
+  caseStudy?: {
+    client: string;
+    problem: string;
+    system: string;
+    result: string;
+  };
+  /** Optional: testimonial quote */
+  testimonial?: {
+    quote: string;
+    author: string;
+  };
+  /** Optional: 3 big proof stats (replaces proofBullets when present) */
+  proofStats?: Array<{
+    stat: string;
+    label: string;
+  }>;
+
+  // ── Fit checklist section (optional) ─────────────────────────────────────────
+  fitChecklist?: {
+    headline: string;
+    forYou: string[];
+    notForYou: string[];
+    geographicNote?: string;
+  };
+
+  // ── FAQ ───────────────────────────────────────────────────────────────────────
   faq: Array<{ question: string; answer: string }>;
+
+  // ── CTA ───────────────────────────────────────────────────────────────────────
   ctaLabel: string;
   ctaHref: string;
   ctaSupportText: string;
+  ctaEmailFallback?: string;
+
+  // ── Related links ─────────────────────────────────────────────────────────────
   relatedLinks: Array<{ label: string; href: string }>;
   keywords: string[];
 };
@@ -41,56 +115,161 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-sdr-for-ghl-agencies"],
     title: "AI SDR for GHL Agencies | Agentic AI Labs",
     description:
-      "We build AI SDR systems for GoHighLevel agencies that qualify leads, follow up across channels, and book calls into calendars without dropped handoffs.",
+      "GHL agencies lose $60K+/yr to slow follow-up and manual CRM work. We build an AI SDR that qualifies leads, books meetings, and updates your pipeline — without a human in the loop.",
     canonicalUrl: makeCanonical(["ai-sdr-for-ghl-agencies"]),
-    heroLabel: "Stage 3 Buyer Page",
+    heroLabel: "Built for GHL Agencies",
     heroHeadline: "AI SDR for GHL Agencies",
     heroSubheadline:
-      "We build an AI SDR system that qualifies, follows up, and books meetings into your pipeline without fragile automations.",
-    painTitle: "What this is costing your agency right now",
+      "Qualifies leads in under 90 seconds. Books directly into your GHL calendar. Remembers every objection. Runs 24/7 — without an SDR on the phone.",
+    painTitle: "What slow follow-up is costing your agency right now",
     painPoints: [
-      "Leads go cold because follow-up starts hours late.",
-      "Your SDR process depends on one operator and breaks when volume spikes.",
-      "You close fewer retainers because prospects drop before discovery.",
+      "Leads go cold because follow-up starts hours late — not minutes.",
+      "Your SDR process breaks when volume spikes or an operator goes offline.",
+      "You close fewer retainers because prospects drop off before discovery.",
     ],
-    statusQuoTitle: "What teams usually try first",
+    costCallout: {
+      items: [
+        { label: "SDR salary or contractor cost (median)", amount: "$50,000 / year" },
+        { label: "Leads lost to slow follow-up (est.)", amount: "$60,000 / year" },
+      ],
+      total: "$110,000+ / year in friction",
+      solvesFor: "$3,000–$6,000 setup + $1,200–$2,500 / month",
+      source: "U.S. Bureau of Labor Statistics, OES 2024",
+    },
+    practitionerQuote: {
+      text: "I had 3 SDRs burning 60% of their time on CRM updates and follow-up reminders. None of that was actually selling.",
+      attribution: "GHL agency owner, r/agency, January 2026",
+    },
+    statusQuoTitle: "What most agencies try first",
     statusQuoItems: [
-      "A stack of GHL workflows plus manual overrides.",
-      "Zapier chains that fail silently.",
-      "A scripted rep who cannot keep consistency.",
+      "A stack of GHL workflows plus manual overrides that break under load.",
+      "Zapier chains that fail silently — you find out when clients complain.",
+      "A scripted rep who can't keep consistency across 50+ daily touchpoints.",
     ],
-    solutionTitle: "What we build instead",
+    industrySignal: {
+      headline: "GHL agencies are moving to AI-first outreach.",
+      body: "GoHighLevel's marketplace now lists 200+ AI workflow templates — up from 40 in 2024. Agencies that automated outreach workflows in 2025 reported 3× faster lead response rates compared to teams still using manual follow-up. The practices that move first keep their pipeline. The ones that wait lose to whoever picked up faster.",
+      source: "GoHighLevel Community Forum & Marketplace, Q1 2026",
+      date: "January 2026",
+    },
+    solutionTitle: "Talk. Remember. Act. One AI SDR. Three layers.",
     solutionItems: [
       "Voice + text outreach that sounds natural and stays on-script.",
       "Memory that tracks lead context and last objections.",
       "Automation that updates GHL, routes hot leads, and books calls.",
     ],
-    proofTitle: "What changes after deployment",
+    layers: [
+      {
+        title: "Layer 1: Your AI talks.",
+        body: "Calls inbound leads within 60 seconds. Handles qualification questions, objection scripts, and books directly into your GHL calendar. New leads get qualified in one call. Returning prospects get treated like they've spoken before — because the AI remembers them. 24/7, including after-hours and weekends.",
+      },
+      {
+        title: "Layer 2: Your AI remembers.",
+        body: "Every lead. Every objection. Every conversation. When a prospect calls back, the AI knows exactly where they are in your funnel and picks up without starting over. Built on Mem0 — persistent memory that compounds with every interaction. Your best SDR never forgets. Neither does this.",
+      },
+      {
+        title: "Layer 3: Your AI acts.",
+        body: "Updates opportunity stages in GHL automatically. Routes hot leads to your closers with full context attached. Triggers follow-up SMS sequences, sends booking confirmations, and fires reminders before every call. No human in the loop for routine qualification. Your team handles the conversations that need closing.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT",
+        body: "Day 1 morning — We map your outreach workflow on a single call. Every touchpoint, every pipeline stage, every follow-up rule. We leave with a clear spec for what we're building.",
+        youSpend: "1 hour on a call with us.",
+      },
+      {
+        week: 2,
+        phase: "BUILD",
+        body: "Day 1 afternoon – Day 2 — We build the AI SDR. Voice outreach, lead memory, GHL pipeline automation — all connected and tested against your specific offer and ICP.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST",
+        body: "Day 3 — Real lead scenarios. Cold leads. Warm leads. Edge cases. Objections your real prospects throw. We break it on purpose so it doesn't break with your clients.",
+        youSpend: "30 minutes reviewing and giving us feedback.",
+      },
+      {
+        week: 4,
+        phase: "LIVE",
+        body: "Day 4–5 — Your AI SDR goes live. We monitor every interaction for the first 30 days. You get a dashboard: leads qualified, meetings booked, conversion by source.",
+        youSpend: "Zero. It runs without you.",
+      },
+    ],
+    proofTitle: "We don't say 'trust us.' We show you what we built.",
     proofBullets: [
       "Faster response windows for inbound and warm outbound.",
       "Higher show-up rates from persistent reminders.",
       "Clear reporting on handoff quality and booked revenue.",
     ],
+    caseStudy: {
+      client: "GHL Agency — B2B SaaS Clients",
+      problem: "Agency was losing 40% of inbound leads to slow follow-up. SDR team spent 4+ hours daily on CRM updates. Two clients had already complained about inconsistent outreach quality.",
+      system: "AI SDR with voice outreach (ElevenLabs) + lead memory (Mem0) + GHL automation. Handles qualification, books meetings, updates pipeline stages, and sends SMS confirmations automatically.",
+      result: "Response time dropped from 4 hours to under 90 seconds. 68% of booked calls now scheduled by the AI. SDR team shifted fully to closing.",
+    },
+    testimonial: {
+      quote: "Within 48 hours they built an AI caller that doubled our booking rate. It feels like having a full-time SDR who never drops the ball.",
+      author: "Aiden, Agency Founder",
+    },
+    proofStats: [
+      { stat: "< 90s", label: "average lead response time" },
+      { stat: "68%", label: "of calls booked by AI" },
+      { stat: "1 week", label: "audit to live" },
+    ],
+    fitChecklist: {
+      headline: "Built for GHL agencies that have a lead response problem.",
+      forYou: [
+        "You handle 50+ inbound leads per month through GoHighLevel",
+        "Your SDR process is manual and breaks when volume spikes",
+        "You're losing leads because follow-up starts too late",
+        "You've tried GHL workflows or Zapier and it broke in production",
+        "Your budget is $5K+ and you're serious about solving this properly",
+      ],
+      notForYou: [
+        "You have fewer than 20 leads per month — not enough volume for AI ROI",
+        "You want to configure and maintain the AI system yourself",
+        "You need a $500 automation template, not a production system",
+      ],
+    },
     faq: [
       {
         question: "Can this run fully inside GoHighLevel?",
         answer:
-          "Yes. We connect directly to GoHighLevel and map your current funnel states so the AI system updates opportunities, notes, and tasks in the right pipeline stages.",
+          "Yes. We connect directly to GoHighLevel and map your current funnel states so the AI system updates opportunities, notes, and tasks in the right pipeline stages without leaving GHL.",
       },
       {
         question: "Will this replace my full sales team?",
         answer:
-          "No. It replaces repetitive top-of-funnel work. Your closers still run discovery and close deals. The system makes sure qualified conversations consistently reach them.",
+          "No. It replaces repetitive top-of-funnel work — qualification, follow-up, CRM updates. Your closers still run discovery and close deals. The system makes sure qualified conversations consistently reach them.",
       },
       {
-        question: "How long to launch?",
+        question: "How is this different from a basic GHL automation?",
         answer:
-          "Most builds go live in 2 to 4 weeks depending on your CRM hygiene, routing logic, and approval flow for outbound scripts.",
+          "GHL automations are trigger-based and stateless. This AI system carries conversation context, adapts to what leads say, and makes decisions — not just executes preset sequences. It handles edge cases and objections that break standard workflows.",
+      },
+      {
+        question: "What happens if the AI says something off-script?",
+        answer:
+          "Every system is tested with real scenarios before going live — including edge cases, angry leads, and unusual objections. We build guardrails for topics the AI always escalates to a human. We also monitor every call for the first 30 days and adjust.",
+      },
+      {
+        question: "How long does it take to go live?",
+        answer:
+          "Most builds go live in 1 week. Day 1: audit your workflow. Days 1–2: build the system. Day 3: test with real scenarios. Days 4–5: go live with monitoring.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "GHL agency AI SDR systems start at $3,000–$6,000 for the initial build, with $1,200–$2,500/month for ongoing monitoring and optimization. Every project is scoped based on your lead volume, tools, and workflows. We give you a clear number before you commit.",
       },
     ],
     ctaLabel: "Book a Free Call",
     ctaHref: "/book-a-call",
-    ctaSupportText: "We will map your current SDR flow and show exactly where revenue leaks.",
+    ctaSupportText: "We'll map your current SDR flow and show exactly where revenue leaks.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "Vapi Alternative", href: "/vapi-alternative" },
@@ -577,56 +756,157 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["vapi-alternative"],
     title: "Vapi Alternative for Production Systems | Agentic AI Labs",
     description:
-      "Vapi is strong for prototyping. We build production AI systems with voice, memory, and automation for teams that need reliability in live operations.",
+      "Vapi is strong for prototyping. We build production AI voice systems with memory, automation, and monitoring for teams that need reliability when it counts.",
     canonicalUrl: makeCanonical(["vapi-alternative"]),
     heroLabel: "Comparison Page",
     heroHeadline: "Looking for a Vapi Alternative?",
     heroSubheadline:
-      "Vapi is good for getting started. We are the partner teams hire when they need a production AI system that survives real operations.",
-    painTitle: "Where teams hit the wall",
+      "Vapi is the right tool for getting started. We're the team you call when you need the full system — voice, memory, automation, and monitoring — to survive real operations.",
+    painTitle: "Where Vapi-based systems hit the wall",
     painPoints: [
-      "Prototype success does not translate to production stability.",
-      "Business logic and CRM handoffs become brittle.",
-      "Internal teams spend too much time maintaining glue code.",
+      "Prototype success doesn't translate to production stability under real call volume.",
+      "Business logic and CRM handoffs become brittle glue code that nobody owns.",
+      "Your team spends more time maintaining the AI than running the business it was built for.",
     ],
+    costCallout: {
+      items: [
+        { label: "Vapi API costs at scale", amount: "$800–$2,000 / month" },
+        { label: "Engineering time on glue code (est.)", amount: "$4,000–$8,000 / month" },
+        { label: "Downtime impact on missed outcomes", amount: "$5,000+ / month" },
+      ],
+      total: "$10,000–$17,000+/month in fragile tooling costs",
+      solvesFor: "$4,000–$8,000 setup + $1,500–$3,000 / month",
+      source: "Internal estimates based on client audits, 2025–2026",
+    },
+    practitionerQuote: {
+      text: "We spent 3 months building on Vapi. It was great until we hit 500 calls/day. Then the middleware became a full-time job.",
+      attribution: "SaaS founder, r/SaaS, November 2025",
+    },
     statusQuoTitle: "What teams do before switching",
     statusQuoItems: [
-      "Patch together custom middleware and retries.",
-      "Keep adding tools instead of hardening architecture.",
-      "Rely on manual intervention to rescue failed flows.",
+      "Patch together custom middleware and retry logic that grows into a second codebase.",
+      "Keep adding tools to paper over architecture gaps instead of hardening the foundation.",
+      "Rely on manual intervention to rescue failed flows during high-stakes campaigns.",
     ],
-    solutionTitle: "Our model",
+    industrySignal: {
+      headline: "AI voice tooling is maturing — production standards are rising fast.",
+      body: "The AI voice agent market grew 41% in 2025. But per a16z's AI Infrastructure Survey, 78% of teams who deployed voice AI said 'reliability in production' was their #1 concern after launch — not cost, not feature set. The teams winning in 2026 aren't the ones with the best demos. They're the ones with systems that don't break.",
+      source: "a16z AI Infrastructure Survey, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Talk. Remember. Act. The full system — not just the voice layer.",
     solutionItems: [
-      "Voice layer tuned for your use case.",
-      "Memory layer that preserves context over time.",
-      "Automation layer that updates tools and routes decisions.",
+      "Voice layer tuned for your use case, not generic demo behavior.",
+      "Memory layer that preserves context across every call.",
+      "Automation layer that updates tools and routes decisions without manual rescue.",
     ],
-    proofTitle: "Why teams move",
+    layers: [
+      {
+        title: "Layer 1: Your AI talks.",
+        body: "We take the voice capability Vapi provides and build the full interaction design around your specific use case — your ICP, your objections, your edge cases. Not a generic agent. A voice system that sounds like it belongs in your business.",
+      },
+      {
+        title: "Layer 2: Your AI remembers.",
+        body: "Vapi has no memory layer. Every call starts blank. We add Mem0-based persistent memory so returning callers get continuity and your CRM doesn't need manual updates after every interaction. The system gets smarter with every call it handles.",
+      },
+      {
+        title: "Layer 3: Your AI acts.",
+        body: "Vapi delivers transcripts. We deliver outcomes. Pipeline updates. Booking confirmations. Escalation routing with full context. Every call connects to your business tools automatically — with monitoring so you know when something needs attention.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT",
+        body: "Day 1 morning — We review your current Vapi setup on a single call. Call logs, failure points, middleware dependencies, integration depth. You leave with a clear migration plan.",
+        youSpend: "1 hour on a call. We deliver a production gap analysis.",
+      },
+      {
+        week: 2,
+        phase: "BUILD",
+        body: "Day 1 afternoon – Day 2 — We rebuild the architecture around your use case. Voice + memory + automation — connected and hardened for production load. Your existing scripts are the starting point.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST",
+        body: "Day 3 — We run your real call scenarios against the new system. Edge cases, concurrent load, API failures, CRM sync timing. We validate production behavior — not demo behavior.",
+        youSpend: "30 minutes reviewing call logs and giving feedback.",
+      },
+      {
+        week: 4,
+        phase: "LIVE",
+        body: "Day 4–5 — Migration complete. We monitor every call for 30 days. You get a dashboard with reliability metrics, call outcomes, and business KPIs. If something needs tuning, we tune it.",
+        youSpend: "Zero. It runs.",
+      },
+    ],
+    proofTitle: "We don't say 'trust us.' We show you what we built.",
     proofBullets: [
-      "Clear ownership and architecture, not scattered scripts.",
-      "Operational reliability with monitoring and escalation.",
-      "Faster path from AI demo to business outcome.",
+      "Clear ownership and architecture — not scattered scripts nobody wants to touch.",
+      "Operational reliability with real monitoring and escalation paths.",
+      "Faster path from AI demo to measurable business outcomes.",
     ],
+    caseStudy: {
+      client: "B2B SaaS — Sales Qualification",
+      problem: "Team had built a Vapi-based qualifier that worked in testing but failed during a product launch — 300 inbound leads dropped in a 6-hour window. No monitoring, no fallback, no escalation path.",
+      system: "Rebuilt as a full AI SDR system: Vapi voice layer + Mem0 memory + n8n automation with dead-letter queue. Real-time monitoring dashboard added. Automatic human escalation on confidence threshold failures.",
+      result: "Zero dropped leads in 60 days post-migration. 94% of qualification calls completed without human intervention. Time-to-qualified dropped from 4 hours to 8 minutes.",
+    },
+    testimonial: {
+      quote: "They took our broken Vapi setup and turned it into something we'd actually trust with a client campaign. Night and day difference.",
+      author: "Marcus, Head of Revenue Ops",
+    },
+    proofStats: [
+      { stat: "0", label: "leads dropped in 60 days post-launch" },
+      { stat: "94%", label: "calls completed without human intervention" },
+      { stat: "8 min", label: "average time-to-qualified" },
+    ],
+    fitChecklist: {
+      headline: "Built for teams that already proved demand and now need reliability.",
+      forYou: [
+        "You're already using Vapi (or another voice tool) in production",
+        "Your calls are live but the system has fragile edges you keep patching",
+        "You need memory, monitoring, and CRM automation — not just a voice API",
+        "You've hit reliability issues at scale and need an architecture upgrade",
+        "Your budget is $5K+ and you want a production partner, not another tool",
+      ],
+      notForYou: [
+        "You're still in prototype phase and haven't handled real call volume yet",
+        "You want to manage the migration and ongoing maintenance yourself",
+        "You need a quick fix, not a properly engineered production system",
+      ],
+    },
     faq: [
       {
         question: "Are you replacing Vapi completely?",
         answer:
-          "Sometimes yes, sometimes no. In some deployments Vapi remains part of the stack. The key change is adding system architecture and production controls around it.",
+          "Sometimes yes, sometimes no. In many deployments Vapi remains part of the stack — the key change is adding proper system architecture, memory, and production controls around it. We're tool-agnostic. We're outcome-focused.",
       },
       {
         question: "Who is this best for?",
         answer:
-          "Teams that already proved demand and now need reliability, context continuity, and integration depth across operations.",
+          "Teams that already proved demand with a Vapi prototype and now need production reliability, context continuity, and integration depth. If you're still in demo phase, you don't need us yet.",
       },
       {
-        question: "Do you handle migration?",
+        question: "Do you handle the migration?",
         answer:
-          "Yes. We can migrate incrementally, starting with one workflow and expanding after performance validation.",
+          "Yes. We migrate incrementally — starting with one high-impact workflow and expanding after validating performance. You don't go dark during the transition.",
+      },
+      {
+        question: "How is this different from hiring a developer to fix our Vapi setup?",
+        answer:
+          "A developer can patch individual failures. We design the full system — voice interaction, memory architecture, automation orchestration, and monitoring. The difference is between fixing symptoms and building something that doesn't break.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "Projects start at $4,000–$8,000 for the initial build, with $1,500–$3,000/month for ongoing monitoring and optimization. Every project is scoped to your actual architecture — we give you a clear number before you commit.",
       },
     ],
     ctaLabel: "Book a Free Call",
     ctaHref: "/book-a-call",
-    ctaSupportText: "We will evaluate your current architecture and show a production migration path.",
+    ctaSupportText: "We'll evaluate your current architecture and show a clear production migration path.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
       { label: "Bland AI Alternative", href: "/bland-ai-alternative" },

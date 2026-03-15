@@ -1777,10 +1777,10 @@ export default function ClarityPage({
                 >
                   Questions?{" "}
                   <a
-                    href="mailto:hello@tryagentikai.com"
+                    href="mailto:aditya@tryagentikai.com"
                     style={{ color: "#2563eb", textDecoration: "none" }}
                   >
-                    hello@tryagentikai.com
+                    aditya@tryagentikai.com
                   </a>{" "}
                   — Aditya reads every one.
                 </p>

@@ -45,7 +45,7 @@ const FinalCTASection = () => {
 
         {/* Subtext */}
         <p className="text-slate-400 font-sfpro text-xs sm:text-sm mt-4">
-          Or email us: hello@tryagentikai.com
+          Or email us: aditya@tryagentikai.com
         </p>
       </div>
     </div>
