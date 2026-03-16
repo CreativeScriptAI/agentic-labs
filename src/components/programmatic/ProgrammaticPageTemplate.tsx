@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import MetaConfig from "src/components/MetaConfig";
 import { ProgrammaticPageData } from "src/data/programmaticSeoPages";
 import {
@@ -91,8 +93,8 @@ const Section = ({
   </section>
 );
 
-const Eyebrow = ({ label }: { label: string }) => (
-  <p className="text-xs font-semibold text-blue-600 tracking-[0.14em] uppercase font-sfpro mb-2">
+const Eyebrow = ({ label, center }: { label: string; center?: boolean }) => (
+  <p className={`text-xs font-bold text-blue-600 tracking-widest uppercase font-sfpro mb-4 ${center ? "text-center" : ""}`}>
     {label}
   </p>
 );
@@ -120,7 +122,28 @@ const XIcon = () => (
 
 // ─── Main template ──────────────────────────────────────────────────────────────
 
+// ─── Step icons for How It Works accordion ─────────────────────────────────
+const STEP_ICONS = [
+  // Day 1 — Audit
+  <svg key="d1" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+  </svg>,
+  // Day 2 — Build
+  <svg key="d2" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>,
+  // Day 3 — Deploy
+  <svg key="d3" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>,
+  // Day 4 — Optimize
+  <svg key="d4" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>,
+];
+
 const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
+  const [openStepIndex, setOpenStepIndex] = useState<number | null>(0);
   const slug = page.pathSegments.join("-");
   const photoId = pickImageId(page.type, slug);
   const imgSrc = `https://images.unsplash.com/photo-${photoId}?w=900&q=80&auto=format&fit=crop`;
@@ -211,7 +234,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
         <div className="space-y-6">
           <div>
             <Eyebrow label="The Problem" />
-            <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.painTitle}</h2>
+            <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.painTitle}</h2>
           </div>
 
           <div className="grid gap-3">
@@ -269,7 +292,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
         <div className="space-y-5">
           <div>
             <Eyebrow label="What Teams Try Instead" />
-            <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.statusQuoTitle}</h2>
+            <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.statusQuoTitle}</h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {page.statusQuoItems.map((item) => (
@@ -287,7 +310,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           <div className="space-y-5">
             <div>
               <Eyebrow label="What's Happening Now" />
-              <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.industrySignal.headline}</h2>
+              <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.industrySignal.headline}</h2>
             </div>
             <div className="rounded-xl border border-gray-200 bg-[#F9F6F4] p-6 space-y-3">
               <p className="text-base text-gray-800 font-sfpro leading-relaxed">{page.industrySignal.body}</p>
@@ -305,7 +328,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
         <div className="space-y-6">
           <div>
             <Eyebrow label="What We Build" />
-            <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.solutionTitle}</h2>
+            <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.solutionTitle}</h2>
           </div>
 
           {page.layers ? (
@@ -343,35 +366,123 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* ── 6. HOW IT WORKS (optional) ───────────────────────────────────────── */}
       {page.howItWorks && (
         <Section bg="white" id="how-it-works">
-          <div className="space-y-6">
-            <div>
-              <Eyebrow label="How It Works" />
-              <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">
+          <div className="space-y-8">
+            {/* Section header */}
+            <div className="text-center">
+              <Eyebrow label="How It Works" center />
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mondwest text-[#0A1128] leading-tight mb-4">
                 From &ldquo;I need AI&rdquo; to &ldquo;it&apos;s live.&rdquo; One week.
               </h2>
+              <p className="text-gray-600 font-sfpro text-lg max-w-2xl mx-auto">
+                We don&apos;t hand you a tool and walk away. We build, configure, and deploy your system end-to-end.
+              </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {page.howItWorks.map((step) => (
-                <div key={step.phase} className="rounded-xl border border-gray-200 bg-white p-5 space-y-3 hover:border-gray-300 hover:shadow-sm transition-all duration-200">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0A1128] text-xs font-bold text-white">
-                      D{step.week}
-                    </span>
-                    <span className="text-xs font-bold tracking-[0.14em] uppercase text-blue-600 font-sfpro">
-                      {step.phase}
-                    </span>
+
+            {/* Animated accordion steps */}
+            <div className="space-y-4 max-w-3xl mx-auto">
+              {page.howItWorks.map((step, index) => {
+                const isOpen = openStepIndex === index;
+                const icon = STEP_ICONS[index % STEP_ICONS.length];
+                return (
+                  <div key={step.phase} className="relative z-10">
+                    <div
+                      className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${
+                        isOpen
+                          ? "border-blue-500 shadow-lg ring-1 ring-blue-100"
+                          : "border-gray-200 hover:border-blue-300 hover:shadow-md"
+                      }`}
+                    >
+                      <button
+                        onClick={() => setOpenStepIndex(isOpen ? null : index)}
+                        className="w-full flex items-center gap-4 sm:gap-6 p-5 sm:p-7 text-left"
+                      >
+                        {/* Icon box */}
+                        <div
+                          className={`flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center transition-all ${
+                            isOpen
+                              ? "bg-blue-600 text-white shadow-md scale-110"
+                              : "bg-blue-50 text-blue-600"
+                          }`}
+                        >
+                          {icon}
+                        </div>
+                        {/* Header text */}
+                        <div className="flex-grow min-w-0">
+                          <p
+                            className={`text-xs font-bold tracking-widest uppercase mb-1 font-sfpro ${
+                              isOpen ? "text-blue-600" : "text-gray-400"
+                            }`}
+                          >
+                            DAY {step.week}
+                          </p>
+                          <h3
+                            className={`text-lg sm:text-xl font-bold font-mondwest transition-colors ${
+                              isOpen ? "text-[#0A1128]" : "text-gray-700"
+                            }`}
+                          >
+                            {step.phase}
+                          </h3>
+                        </div>
+                        {/* Chevron */}
+                        <div
+                          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                            isOpen
+                              ? "bg-blue-100 text-blue-600 rotate-180"
+                              : "bg-gray-50 text-gray-400"
+                          }`}
+                        >
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </button>
+
+                      {/* Expanded content */}
+                      <AnimatePresence>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                          >
+                            <div className="px-5 sm:px-7 pb-7 pt-0">
+                              <div className="sm:pl-20">
+                                <p className="text-gray-600 font-sfpro text-base sm:text-lg mb-5 leading-relaxed border-l-2 border-blue-100 pl-4">
+                                  {step.body}
+                                </p>
+                                <div className="rounded-xl bg-blue-50/50 border border-blue-100 px-5 py-4">
+                                  <p className="text-xs font-bold text-blue-900 font-sfpro uppercase tracking-wide mb-1 flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block" />
+                                    Your time investment
+                                  </p>
+                                  <p className="text-sm text-gray-700 font-sfpro">{step.youSpend}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
-                  <p className="text-base text-gray-700 font-sfpro leading-relaxed">{step.body}</p>
-                  <div className="pt-1 border-t border-gray-100">
-                    <p className="text-xs text-gray-500 font-sfpro">
-                      <span className="font-semibold text-gray-700">You spend:</span> {step.youSpend}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-            <div className="flex justify-center pt-2">
-              <CTAButton href={page.ctaHref} label="Book Your Free Audit Call" />
+
+            {/* Guarantee box */}
+            <div className="max-w-3xl mx-auto mt-8 bg-white rounded-2xl p-7 border-2 border-blue-100 text-center shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400" />
+              <p className="text-blue-600 font-bold text-xs tracking-widest uppercase mb-3 font-sfpro">
+                Our Guarantee
+              </p>
+              <p className="text-[#0A1128] font-sfpro text-base sm:text-lg font-medium max-w-xl mx-auto">
+                If we can&apos;t deploy a working system in one week,{" "}
+                <span className="text-blue-600 font-bold">we don&apos;t charge you.</span>
+              </p>
+              <p className="text-gray-400 text-sm mt-2 italic">(We&apos;ve never missed a deadline.)</p>
+              <div className="mt-5">
+                <CTAButton href={page.ctaHref} label="Book Your Free Audit Call" />
+              </div>
             </div>
           </div>
         </Section>
@@ -382,7 +493,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
         <div className="space-y-6">
           <div>
             <Eyebrow label="Results" />
-            <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.proofTitle}</h2>
+            <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.proofTitle}</h2>
           </div>
 
           {page.caseStudy ? (
@@ -453,7 +564,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           <div className="space-y-6">
             <div>
               <Eyebrow label="Is This for You?" />
-              <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">{page.fitChecklist.headline}</h2>
+              <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">{page.fitChecklist.headline}</h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {/* For you */}
@@ -496,10 +607,10 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
 
       {/* ── 9. FAQ ───────────────────────────────────────────────────────────── */}
       <Section bg={page.fitChecklist ? "warm" : "white"} id="faq">
-        <div className="space-y-5">
-          <div>
-            <Eyebrow label="Common Questions" />
-            <h2 className="text-2xl sm:text-3xl font-mondwest text-[#0A1128]">You&apos;re probably wondering.</h2>
+        <div className="space-y-6">
+          <div className="text-center mb-2">
+            <Eyebrow label="Common Questions" center />
+            <h2 className="text-3xl sm:text-4xl font-mondwest text-[#0A1128] leading-tight">You&apos;re probably wondering.</h2>
           </div>
           <Accordion type="single" collapsible className="w-full space-y-2">
             {page.faq.map((item, index) => (
@@ -524,7 +635,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       <Section bg="navy" id="next-steps">
         <div className="space-y-6">
           <Eyebrow label="Next Steps" />
-          <h2 className="text-2xl sm:text-3xl font-mondwest text-white">
+          <h2 className="text-3xl sm:text-4xl font-mondwest text-white leading-tight">
             Build this as a system, not a patchwork
           </h2>
           <p className="text-gray-300 font-sfpro max-w-3xl leading-relaxed text-base sm:text-lg">

@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Memory for Recruiting Teams                                           ║
+║        AI Agent HubSpot Integration                                             ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        recruiting-teams                                                ║
-║  Playbook:    00_AI_MEMORY                                                    ║
-║  Generated:   2026-03-16 11:35                                                ║
-║  AI Role:     AI Memory System                                                ║
-║  Industry:    Recruiting Teams                                                ║
-║  Replaces:    Recruiter / HR Sourcer                                          ║
+║  Slug:        hubspot                                                         ║
+║  Playbook:    02_INTEGRATIONS                                                 ║
+║  Generated:   2026-03-16 11:33                                                ║
+║  AI Role:     AI Agent                                                        ║
+║  Industry:    HubSpot Users                                                   ║
+║  Replaces:    Sales / Support Rep                                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,14 +25,14 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC code:      13-1071
+Role replaced:     Sales / Support Rep
+Industry:          HubSpot Users
+BLS SOC code:      41-3091
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
 Series IDs queried:
-  Wage (mean annual):  OEUN0000000000131071000W
-  Employment count:    OEUN0000000000131071000E
+  Wage (mean annual):  OEUN0000000000413091000W
+  Employment count:    OEUN0000000000413091000E
 
 MEAN ANNUAL WAGE:      N/A 
   Period:              N/A N/A
@@ -41,76 +41,79 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Recruiter / HR Sourcer earns N/A — that's the fixed
+  'The average Sales / Support Rep earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
   Employment and Wage Statistics (OEWS), N/A.
 
 BLS DETAIL PAGE:
-  https://www.bls.gov/oes/current/oes131071.htm
+  https://www.bls.gov/oes/current/oes413091.htm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Recruiting Teams
-Subreddits:    r/recruiting, r/humanresources, r/HRpros
-Keywords:      repeat, lost context, handoff, candidate notes, ATS integration
+Industry:      HubSpot Users
+Subreddits:    r/hubspot, r/sales, r/CRM
+Keywords:      HubSpot AI, CRM automation, sales AI, HubSpot integration
 Source:        Reddit public JSON API (last 12 months, top posts)
 
 FOUND 5 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/recruiting
-  Upvotes:    197
-  Date:       2025-08-14
-  Title:      How I Finally Nailed My Interviews
-  Quote:      "I've bombed more interviews than I'd like to admit awkward silences, vague answers, rambling, you name it. But after months of trial and error (and a lot of research), I finally got the hang of it. Here’s what I did.
-
-Channel your nerves into energy. Instead of trying to "calm down," I'd use that adrenaline. Before every interview, I'd do a power p..."
-  URL:        https://reddit.com/r/recruiting/comments/1mpxg91/how_i_finally_nailed_my_interviews/
+  Subreddit:  r/hubspot
+  Upvotes:    54
+  Date:       2025-12-01
+  Title:      Hubspot - Unpleasant experience
+  Quote:      "Our company uses about 8+ enterprise saas and the hubspot experience has been THE absolute worst - revolving door or reps, fear mongering sales practices, condescending and generally unhelpful support/CSMs with single line responses to a problem we’re trying to solve. With agentic AI around the corner, these saas companies are going to ZERO if they..."
+  URL:        https://reddit.com/r/hubspot/comments/1pbjvj1/hubspot_unpleasant_experience/
 
   QUOTE 2
-  Subreddit:  r/recruiting
-  Upvotes:    188
-  Date:       2025-07-25
-  Title:      For those of us still manually screening resumes — what are your quietest pet peeves? [N/A]
-  Quote:      "I have to add flair tags what am i using for this : 
-For context : I still read most resumes by hand no filters, no A T S yet ..  
+  Subreddit:  r/hubspot
+  Upvotes:    36
+  Date:       2025-10-13
+  Title:      Does Anyone Actually Like Hubspot AI?
+  Quote:      "Every time I use Hubspot's AI I'm disappointed. From the bad generate property AI to the useless workflow action generations, everytime I try it I feel like I wasted time. 
 
-One …file names like resume_final_v3 or doc1 with no name, role, or anything helpful. I end up renaming half of them before sending them. Not a dealbreaker for me, just an unnecessary step that adds annoyance when I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1m8ko1x/for_those_of_us_still_manually_screening_resumes/
+In workflows I see a lot of interesting AI agents but I just can't convince myself it's even worth the time to test. Can anyone tell me I'm wrong and they actually are worth te..."
+  URL:        https://reddit.com/r/hubspot/comments/1o5uuqt/does_anyone_actually_like_hubspot_ai/
 
   QUOTE 3
-  Subreddit:  r/recruiting
-  Upvotes:    110
-  Date:       2025-10-03
-  Title:      Hired a UX designer who turned out to just UI focused.. how to aim for someone with problem-solving skills?
-  Quote:      "Had a new hire for our UX designer position 12 weeks ago and it's not going well.  
+  Subreddit:  r/hubspot
+  Upvotes:    36
+  Date:       2025-06-17
+  Title:      I built a GPT for every area of HubSpot
+  Quote:      "I’m big into AI, and HubSpot, so I put some HubSpot into my AI.  
   
-This guy gave a good impression to me (recruitr) and my hiring partner during the interview like he presented a neat portfolio, spoke on the importance of research and testing but now when he has the chance to work with actual clients he's being sloppy (focused o..."
-  URL:        https://reddit.com/r/recruiting/comments/1nx21ov/hired_a_ux_designer_who_turned_out_to_just_ui/
+I scraped thousands of posts from HubSpot’s Sales & CRM forums and stuffed them into a GPT.  
+  
+It’s live on the GPT store now - “Sales and CRM for HubSpotters” - I put out a little post on my linkedIn and in just over a week it’s already propelled to 100 chats!  
+  
+The most int..."
+  URL:        https://reddit.com/r/hubspot/comments/1ldiozw/i_built_a_gpt_for_every_area_of_hubspot/
 
   QUOTE 4
-  Subreddit:  r/recruiting
+  Subreddit:  r/hubspot
   Upvotes:    31
-  Date:       2026-02-21
-  Title:      building relationships with hiring managers actually matters more than i thought
-  Quote:      "I used to think recruiting was just about finding good candidates fast. find resume, submit resume, repeat but i've realized the recruiters who actually succeed long-term are the ones who build real relationships with hiring managers
+  Date:       2025-08-05
+  Title:      AMA with Jennifer Nixon, Community-builder bridging the gap between marketers and developers
+  Quote:      "I'm Jennifer Nixon, HubSpot Developer Community Manager. My job? Bridging the gap between highly enabled builders and highly technical developers by empowering HubSpot users through AI literacy, mentorship, and engaging community events.
 
-When you actually understand what a hiring manager cares about beyond the jd, what their team dynamics are, why the..."
-  URL:        https://reddit.com/r/recruiting/comments/1ranzeq/building_relationships_with_hiring_managers/
+My career journey has been anything but typical. I've been part of the HubSpot ecosystem since 2016, first as a..."
+  URL:        https://reddit.com/r/hubspot/comments/1miapx5/ama_with_jennifer_nixon_communitybuilder_bridging/
 
   QUOTE 5
-  Subreddit:  r/recruiting
-  Upvotes:    22
-  Date:       2025-06-05
-  Title:      Venting, company probably going under
-  Quote:      "So I just need to bitch a little bit.
+  Subreddit:  r/hubspot
+  Upvotes:    29
+  Date:       2025-12-17
+  Title:      My 5 big predictions for HubSpot in 2026
+  Quote:      "**1. Agents will become the new apps**
 
-I have been a recruiter for about 14 years, 8 years at a big corporation agency and the last 6 for a small tech start up.  The large corp was my first "real job" out of college and for awhile it was great.  Started making good money, learned a lot, it gave me a career and I am thankful for my time there.  I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1l4941j/venting_company_probably_going_under/
+For the last decade, the App Marketplace was about integration (connecting Tool A to Tool B so data could flow between them) and functionality (allowing your team to do things the native tools can't).
+
+In 2026, the marketplace will shift its focus to action. We are already seeing the early signs with the Bree..."
+  URL:        https://reddit.com/r/hubspot/comments/1pp2k83/my_5_big_predictions_for_hubspot_in_2026/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -121,30 +124,30 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Recruiting Teams
-Role:            AI Memory System
-Keywords:        AI recruiter memory, recruitment context AI, candidate history AI
+Industry:        HubSpot Users
+Role:            AI Agent
+Keywords:        HubSpot AI integration, AI for HubSpot, HubSpot automation AI
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI recruiter memory"
-  12-month range:   0 → 0 (relative interest, 0-100)
+KEYWORD: "HubSpot AI integration"
+  12-month range:   0 → 2 (relative interest, 0-100)
   Growth:           N/A (started from 0) over 12 months
-  Peak interest:    9 in March 2026
+  Peak interest:    17 in February 2026
 
-KEYWORD: "recruitment context AI"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in August 2025
+KEYWORD: "AI for HubSpot"
+  12-month range:   6 → 8 (relative interest, 0-100)
+  Growth:           +33% over 12 months
+  Peak interest:    100 in September 2025
 
 TOP STATES BY SEARCH INTEREST:
-  Mississippi          100
-  California           29
-  Alabama              0
-  Pennsylvania         0
-  New Hampshire        0
+  New Mexico           33
+  Utah                 21
+  Indiana              19
+  Wisconsin            18
+  Tennessee            18
 
 CITE IN PAGE COPY:
-  'Searches for "AI recruiter memory" have grown [X]% in the last 12 months
+  'Searches for "HubSpot AI integration" have grown [X]% in the last 12 months
    (Google Trends, United States).'
   Use the rising related queries as additional H2/H3 topics to target.
 
@@ -152,19 +155,36 @@ CITE IN PAGE COPY:
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Recruiting Teams
-Feeds:       2 configured
+Industry:    HubSpot Users
+Feeds:       1 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.ere.net/feed/
-URL:  https://www.ere.net/feed/
+FEED: Marketing
+URL:  https://blog.hubspot.com/marketing/rss.xml
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   The simple genius behind this long-forgotten Google Chrome ad
+  Date:    2026-03-11
+  Link:    https://blog.hubspot.com/marketing/goal-dilution-effect
+  Summary: We trust simple promises more than long lists. When brands focus on one clear benefit, it feels more believable than trying to do everything at once. Take it from Google.
 
-FEED: https://www.shrm.org/rss/rss.aspx
-URL:  https://www.shrm.org/rss/rss.aspx
+  Article 2:
+  Title:   Community marketing: How to use it to drive customer advocacy and reduce CAC
+  Date:    2026-03-10
+  Link:    https://blog.hubspot.com/marketing/community-marketing
+  Summary: Community marketing is a growth strategy centered on participation. It brings customers together to share knowledge, solve problems, and build trust. In the process, it drives advocacy, retention, and lower customer acquisition costs.
 
-  [NO ITEMS] Feed returned no articles.
+  Article 3:
+  Title:   Competitor analysis tools marketing teams actually use in 2026
+  Date:    2026-03-10
+  Link:    https://blog.hubspot.com/marketing/competitor-analysis-tools
+  Summary: Competitor analysis tools are software platforms that help marketing teams monitor and compare competitor strategies across SEO, social, PPC, and market intelligence . Think of them as marketer’s best friend: they expedite the competitor analysis process, so you can see where your competition is making moves (and where the gaps are wide open ). The best tools work passively, updating in the backgr...
+
+  Article 4:
+  Title:   Answer engine optimization strategy beyond basic SEO and AEO tactics
+  Date:    2026-03-09
+  Link:    https://blog.hubspot.com/marketing/enterprise-seo-audit
+  Summary: If you’re not in the trenches of search every single day, it’s hard to know how seriously to take answer engine optimization strategy. There are two dominant camps right now: those who see generative AI as the most disruptive shift search has ever experienced, and those who argue that AEO (or GEO ) is simply an extension of traditional SEO.
 
 ────────────────────────────────────────────────────────────
 ALL STATISTICS EXTRACTED FROM NEWS:
@@ -180,21 +200,21 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC:           13-1071
-Indeed search:     "recruiter"
+Role replaced:     Sales / Support Rep
+Industry:          HubSpot Users
+BLS SOC:           41-3091
+Indeed search:     "HubSpot specialist"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
-  Manual: https://www.bls.gov/oes/current/oes131071.htm
+  Manual: https://www.bls.gov/oes/current/oes413091.htm
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=recruiter&l=United+States
+  Manual: https://www.indeed.com/jobs?q=HubSpot%20specialist&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Recruiter / HR Sourcer positions in the US right now,
+  'There are [X] open Sales / Support Rep positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:

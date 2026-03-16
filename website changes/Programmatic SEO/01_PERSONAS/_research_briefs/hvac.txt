@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Memory for Recruiting Teams                                           ║
+║        AI Dispatch Agent for HVAC Companies                                     ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        recruiting-teams                                                ║
-║  Playbook:    00_AI_MEMORY                                                    ║
-║  Generated:   2026-03-16 11:35                                                ║
-║  AI Role:     AI Memory System                                                ║
-║  Industry:    Recruiting Teams                                                ║
-║  Replaces:    Recruiter / HR Sourcer                                          ║
+║  Slug:        hvac                                                            ║
+║  Playbook:    01_PERSONAS                                                     ║
+║  Generated:   2026-03-16 11:31                                                ║
+║  AI Role:     AI Dispatch Agent                                               ║
+║  Industry:    HVAC Companies                                                  ║
+║  Replaces:    Dispatcher / Service Coordinator                                ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,14 +25,14 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC code:      13-1071
+Role replaced:     Dispatcher / Service Coordinator
+Industry:          HVAC Companies
+BLS SOC code:      43-5032
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
 Series IDs queried:
-  Wage (mean annual):  OEUN0000000000131071000W
-  Employment count:    OEUN0000000000131071000E
+  Wage (mean annual):  OEUN0000000000435032000W
+  Employment count:    OEUN0000000000435032000E
 
 MEAN ANNUAL WAGE:      N/A 
   Period:              N/A N/A
@@ -41,76 +41,69 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Recruiter / HR Sourcer earns N/A — that's the fixed
+  'The average Dispatcher / Service Coordinator earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
   Employment and Wage Statistics (OEWS), N/A.
 
 BLS DETAIL PAGE:
-  https://www.bls.gov/oes/current/oes131071.htm
+  https://www.bls.gov/oes/current/oes435032.htm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Recruiting Teams
-Subreddits:    r/recruiting, r/humanresources, r/HRpros
-Keywords:      repeat, lost context, handoff, candidate notes, ATS integration
+Industry:      HVAC Companies
+Subreddits:    r/HVAC, r/hvacadvice, r/smallbusiness
+Keywords:      dispatch, missed calls, scheduling, service calls, technician
 Source:        Reddit public JSON API (last 12 months, top posts)
 
 FOUND 5 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/recruiting
-  Upvotes:    197
-  Date:       2025-08-14
-  Title:      How I Finally Nailed My Interviews
-  Quote:      "I've bombed more interviews than I'd like to admit awkward silences, vague answers, rambling, you name it. But after months of trial and error (and a lot of research), I finally got the hang of it. Here’s what I did.
-
-Channel your nerves into energy. Instead of trying to "calm down," I'd use that adrenaline. Before every interview, I'd do a power p..."
-  URL:        https://reddit.com/r/recruiting/comments/1mpxg91/how_i_finally_nailed_my_interviews/
+  Subreddit:  r/HVAC
+  Upvotes:    719
+  Date:       2025-05-26
+  Title:      Everytime I think I'm out. They drag me back in
+  Quote:      "Everytime I think I'm out. They drag me back in"
+  URL:        https://reddit.com/r/HVAC/comments/1kvv3es/everytime_i_think_im_out_they_drag_me_back_in/
 
   QUOTE 2
-  Subreddit:  r/recruiting
-  Upvotes:    188
-  Date:       2025-07-25
-  Title:      For those of us still manually screening resumes — what are your quietest pet peeves? [N/A]
-  Quote:      "I have to add flair tags what am i using for this : 
-For context : I still read most resumes by hand no filters, no A T S yet ..  
-
-One …file names like resume_final_v3 or doc1 with no name, role, or anything helpful. I end up renaming half of them before sending them. Not a dealbreaker for me, just an unnecessary step that adds annoyance when I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1m8ko1x/for_those_of_us_still_manually_screening_resumes/
+  Subreddit:  r/HVAC
+  Upvotes:    580
+  Date:       2025-08-20
+  Title:      Lies.
+  Quote:      "Lies."
+  URL:        https://reddit.com/r/HVAC/comments/1mvnxk3/lies/
 
   QUOTE 3
-  Subreddit:  r/recruiting
-  Upvotes:    110
-  Date:       2025-10-03
-  Title:      Hired a UX designer who turned out to just UI focused.. how to aim for someone with problem-solving skills?
-  Quote:      "Had a new hire for our UX designer position 12 weeks ago and it's not going well.  
-  
-This guy gave a good impression to me (recruitr) and my hiring partner during the interview like he presented a neat portfolio, spoke on the importance of research and testing but now when he has the chance to work with actual clients he's being sloppy (focused o..."
-  URL:        https://reddit.com/r/recruiting/comments/1nx21ov/hired_a_ux_designer_who_turned_out_to_just_ui/
+  Subreddit:  r/HVAC
+  Upvotes:    302
+  Date:       2025-12-24
+  Title:      Best text I got all year
+  Quote:      "Best text I got all year"
+  URL:        https://reddit.com/r/HVAC/comments/1puc8au/best_text_i_got_all_year/
 
   QUOTE 4
-  Subreddit:  r/recruiting
-  Upvotes:    31
-  Date:       2026-02-21
-  Title:      building relationships with hiring managers actually matters more than i thought
-  Quote:      "I used to think recruiting was just about finding good candidates fast. find resume, submit resume, repeat but i've realized the recruiters who actually succeed long-term are the ones who build real relationships with hiring managers
+  Subreddit:  r/HVAC
+  Upvotes:    282
+  Date:       2025-03-22
+  Title:      Dispatch can go fuck themselves
+  Quote:      "Yesterday I said NO to my last call for the first time. 
 
-When you actually understand what a hiring manager cares about beyond the jd, what their team dynamics are, why the..."
-  URL:        https://reddit.com/r/recruiting/comments/1ranzeq/building_relationships_with_hiring_managers/
+We use service titan and I’m unable to see my schedule for the day under the guise of “the schedule is constantly changing”
+Kind of a BS reason and I can’t plan my day around not knowing how many or where my calls are going to be. 
+Yesterday I had friends coming over at 6 and I’ve been regul..."
+  URL:        https://reddit.com/r/HVAC/comments/1jhet3z/dispatch_can_go_fuck_themselves/
 
   QUOTE 5
-  Subreddit:  r/recruiting
-  Upvotes:    22
-  Date:       2025-06-05
-  Title:      Venting, company probably going under
-  Quote:      "So I just need to bitch a little bit.
-
-I have been a recruiter for about 14 years, 8 years at a big corporation agency and the last 6 for a small tech start up.  The large corp was my first "real job" out of college and for awhile it was great.  Started making good money, learned a lot, it gave me a career and I am thankful for my time there.  I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1l4941j/venting_company_probably_going_under/
+  Subreddit:  r/HVAC
+  Upvotes:    272
+  Date:       2025-12-31
+  Title:      Dispatcher “simple single system maintenance, easy access”
+  Quote:      "Dispatcher “simple single system maintenance, easy access”"
+  URL:        https://reddit.com/r/HVAC/comments/1q0d4kt/dispatcher_simple_single_system_maintenance_easy/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -121,50 +114,56 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Recruiting Teams
-Role:            AI Memory System
-Keywords:        AI recruiter memory, recruitment context AI, candidate history AI
+Industry:        HVAC Companies
+Role:            AI Dispatch Agent
+Keywords:        AI HVAC dispatch, HVAC scheduling software AI, field service AI
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI recruiter memory"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    9 in March 2026
+  [ERROR] The request failed: Google returned a response with code 429
 
-KEYWORD: "recruitment context AI"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in August 2025
-
-TOP STATES BY SEARCH INTEREST:
-  Mississippi          100
-  California           29
-  Alabama              0
-  Pennsylvania         0
-  New Hampshire        0
-
-CITE IN PAGE COPY:
-  'Searches for "AI recruiter memory" have grown [X]% in the last 12 months
-   (Google Trends, United States).'
-  Use the rising related queries as additional H2/H3 topics to target.
+  Common fix: Wait 30-60 minutes if rate-limited (429 error).
+  Manual fallback:
+  https://trends.google.com/trends/explore?q=AI HVAC dispatch&geo=US
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Recruiting Teams
+Industry:    HVAC Companies
 Feeds:       2 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.ere.net/feed/
-URL:  https://www.ere.net/feed/
+FEED: https://www.achrnews.com/rss
+URL:  https://www.achrnews.com/rss
 
   [NO ITEMS] Feed returned no articles.
 
-FEED: https://www.shrm.org/rss/rss.aspx
-URL:  https://www.shrm.org/rss/rss.aspx
+FEED: Published Content Feed | Contracting Business
+URL:  https://www.contractingbusiness.com/rss.xml
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   The Rise of Dual Fuel HVAC Solutions
+  Date:    2026-03-10
+  Link:    https://www.contractingbusiness.com/residential-hvac/article/55358566/the-rise-of-dual-fuel-hvac-solutions
+  Summary: Insights from February’s AHR Expo reveal a shift in industry focus — and why dual fuel technologies matter now more than ever.
+
+  Article 2:
+  Title:   Combustion Essentials: HVACR Pros Can Test Their Knowledge in Part 2 Quiz
+  Date:    2026-03-09
+  Link:    https://www.contractingbusiness.com/quizzes/article/55361082/combustion-essentials-hvacr-pros-can-test-their-knowledge-in-part-2-quiz
+  Summary: Technicians rely on combustion expertise daily. Test your skills and reinforce critical gas and oil heating concepts in this new HVAC quiz.
+
+  Article 3:
+  Title:   Bosch Home Comfort Announces Commercial Split Systems With Single- and Dual-Circuit Options
+  Date:    2026-03-06
+  Link:    https://www.contractingbusiness.com/product-news/product/55362449/bosch-home-comfort-announces-commercial-split-systems-with-single-and-dual-circuit-options
+  Summary: Designed for commercial HVAC applications, these systems are available as air conditioners, heat pumps, and air handlers to support multiple system configurations.
+
+  Article 4:
+  Title:   Contractor University’s Cracking the Code: The Buying Triggers Most HVAC Contractors Miss
+  Date:    2026-03-06
+  Link:    https://www.contractingbusiness.com/contracting-business-success/article/55362832/contractor-universitys-cracking-the-code-the-buying-triggers-most-hvac-contractors-miss
+  Summary: This episode explores the power of education and emotional currency in building trust and becoming the contractor customers prefer, without traditional selling tactics.
 
 ────────────────────────────────────────────────────────────
 ALL STATISTICS EXTRACTED FROM NEWS:
@@ -180,21 +179,21 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC:           13-1071
-Indeed search:     "recruiter"
+Role replaced:     Dispatcher / Service Coordinator
+Industry:          HVAC Companies
+BLS SOC:           43-5032
+Indeed search:     "HVAC dispatcher"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
-  Manual: https://www.bls.gov/oes/current/oes131071.htm
+  Manual: https://www.bls.gov/oes/current/oes435032.htm
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=recruiter&l=United+States
+  Manual: https://www.indeed.com/jobs?q=HVAC%20dispatcher&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Recruiter / HR Sourcer positions in the US right now,
+  'There are [X] open Dispatcher / Service Coordinator positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:

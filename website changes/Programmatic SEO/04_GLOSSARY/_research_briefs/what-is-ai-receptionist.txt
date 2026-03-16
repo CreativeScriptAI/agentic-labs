@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Memory for Recruiting Teams                                           ║
+║        What is an AI Receptionist?                                              ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        recruiting-teams                                                ║
-║  Playbook:    00_AI_MEMORY                                                    ║
-║  Generated:   2026-03-16 11:35                                                ║
-║  AI Role:     AI Memory System                                                ║
-║  Industry:    Recruiting Teams                                                ║
-║  Replaces:    Recruiter / HR Sourcer                                          ║
+║  Slug:        what-is-ai-receptionist                                         ║
+║  Playbook:    04_GLOSSARY                                                     ║
+║  Generated:   2026-03-16 11:34                                                ║
+║  AI Role:     AI Receptionist                                                 ║
+║  Industry:    General                                                         ║
+║  Replaces:    Receptionist                                                    ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,14 +25,14 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC code:      13-1071
+Role replaced:     Receptionist
+Industry:          General
+BLS SOC code:      43-4171
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
 Series IDs queried:
-  Wage (mean annual):  OEUN0000000000131071000W
-  Employment count:    OEUN0000000000131071000E
+  Wage (mean annual):  OEUN0000000000434171000W
+  Employment count:    OEUN0000000000434171000E
 
 MEAN ANNUAL WAGE:      N/A 
   Period:              N/A N/A
@@ -41,76 +41,51 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Recruiter / HR Sourcer earns N/A — that's the fixed
+  'The average Receptionist earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
   Employment and Wage Statistics (OEWS), N/A.
 
 BLS DETAIL PAGE:
-  https://www.bls.gov/oes/current/oes131071.htm
+  https://www.bls.gov/oes/current/oes434171.htm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Recruiting Teams
-Subreddits:    r/recruiting, r/humanresources, r/HRpros
-Keywords:      repeat, lost context, handoff, candidate notes, ATS integration
+Industry:      General
+Subreddits:    r/artificial, r/smallbusiness, r/Dentistry
+Keywords:      AI receptionist, virtual receptionist, automated answering
 Source:        Reddit public JSON API (last 12 months, top posts)
 
-FOUND 5 QUALIFYING POSTS
+FOUND 3 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/recruiting
-  Upvotes:    197
-  Date:       2025-08-14
-  Title:      How I Finally Nailed My Interviews
-  Quote:      "I've bombed more interviews than I'd like to admit awkward silences, vague answers, rambling, you name it. But after months of trial and error (and a lot of research), I finally got the hang of it. Here’s what I did.
-
-Channel your nerves into energy. Instead of trying to "calm down," I'd use that adrenaline. Before every interview, I'd do a power p..."
-  URL:        https://reddit.com/r/recruiting/comments/1mpxg91/how_i_finally_nailed_my_interviews/
+  Subreddit:  r/smallbusiness
+  Upvotes:    158
+  Date:       2025-05-21
+  Title:      How are you managing client calls while running a small business?
+  Quote:      "I run a small insurance agency and have been overwhelmed by nonstop client calls—it’s hard to focus on anything else. People rarely left voicemails, so if I missed a call, it often meant missed business. I recently started using Sonant, a virtual receptionist powered by artificial intelligence that answers calls 24/7, handles intake questions and a..."
+  URL:        https://reddit.com/r/smallbusiness/comments/1ksbu5a/how_are_you_managing_client_calls_while_running_a/
 
   QUOTE 2
-  Subreddit:  r/recruiting
-  Upvotes:    188
-  Date:       2025-07-25
-  Title:      For those of us still manually screening resumes — what are your quietest pet peeves? [N/A]
-  Quote:      "I have to add flair tags what am i using for this : 
-For context : I still read most resumes by hand no filters, no A T S yet ..  
-
-One …file names like resume_final_v3 or doc1 with no name, role, or anything helpful. I end up renaming half of them before sending them. Not a dealbreaker for me, just an unnecessary step that adds annoyance when I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1m8ko1x/for_those_of_us_still_manually_screening_resumes/
+  Subreddit:  r/artificial
+  Upvotes:    142
+  Date:       2025-04-11
+  Title:      AI Receptionist to handle calls I reject
+  Quote:      "AI Receptionist to handle calls I reject"
+  URL:        https://reddit.com/r/artificial/comments/1jwctui/ai_receptionist_to_handle_calls_i_reject/
 
   QUOTE 3
-  Subreddit:  r/recruiting
-  Upvotes:    110
-  Date:       2025-10-03
-  Title:      Hired a UX designer who turned out to just UI focused.. how to aim for someone with problem-solving skills?
-  Quote:      "Had a new hire for our UX designer position 12 weeks ago and it's not going well.  
-  
-This guy gave a good impression to me (recruitr) and my hiring partner during the interview like he presented a neat portfolio, spoke on the importance of research and testing but now when he has the chance to work with actual clients he's being sloppy (focused o..."
-  URL:        https://reddit.com/r/recruiting/comments/1nx21ov/hired_a_ux_designer_who_turned_out_to_just_ui/
+  Subreddit:  r/smallbusiness
+  Upvotes:    15
+  Date:       2026-02-25
+  Title:      How are small teams handling inbound leads after hours without hiring more staff?
+  Quote:      "We run a local service business. Phones ring after hours. Website forms come in late. Social messages show up at random times. I need to automate this somehow.
 
-  QUOTE 4
-  Subreddit:  r/recruiting
-  Upvotes:    31
-  Date:       2026-02-21
-  Title:      building relationships with hiring managers actually matters more than i thought
-  Quote:      "I used to think recruiting was just about finding good candidates fast. find resume, submit resume, repeat but i've realized the recruiters who actually succeed long-term are the ones who build real relationships with hiring managers
-
-When you actually understand what a hiring manager cares about beyond the jd, what their team dynamics are, why the..."
-  URL:        https://reddit.com/r/recruiting/comments/1ranzeq/building_relationships_with_hiring_managers/
-
-  QUOTE 5
-  Subreddit:  r/recruiting
-  Upvotes:    22
-  Date:       2025-06-05
-  Title:      Venting, company probably going under
-  Quote:      "So I just need to bitch a little bit.
-
-I have been a recruiter for about 14 years, 8 years at a big corporation agency and the last 6 for a small tech start up.  The large corp was my first "real job" out of college and for awhile it was great.  Started making good money, learned a lot, it gave me a career and I am thankful for my time there.  I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1l4941j/venting_company_probably_going_under/
+We don't have the budget to staff evenings, and waiting until the next morning clearly costs us jobs. If you're a small team, are you handling after-hours inbound without expanding payroll?..."
+  URL:        https://reddit.com/r/smallbusiness/comments/1redyyz/how_are_small_teams_handling_inbound_leads_after/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -121,30 +96,33 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Recruiting Teams
-Role:            AI Memory System
-Keywords:        AI recruiter memory, recruitment context AI, candidate history AI
+Industry:        General
+Role:            AI Receptionist
+Keywords:        AI receptionist, virtual receptionist AI, what is AI receptionist
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI recruiter memory"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    9 in March 2026
+KEYWORD: "AI receptionist"
+  12-month range:   13 → 42 (relative interest, 0-100)
+  Growth:           +223% over 12 months
+  Peak interest:    100 in February 2026
 
-KEYWORD: "recruitment context AI"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in August 2025
+KEYWORD: "virtual receptionist AI"
+  12-month range:   9 → 4 (relative interest, 0-100)
+  Growth:           -56% over 12 months
+  Peak interest:    39 in September 2025
 
 TOP STATES BY SEARCH INTEREST:
-  Mississippi          100
-  California           29
-  Alabama              0
-  Pennsylvania         0
-  New Hampshire        0
+  Indiana              100
+  Idaho                100
+  Nebraska             100
+  Montana              100
+  Alaska               100
+
+RISING RELATED QUERIES for "AI receptionist":
+  beside ai receptionist  (value: 103000)
 
 CITE IN PAGE COPY:
-  'Searches for "AI recruiter memory" have grown [X]% in the last 12 months
+  'Searches for "AI receptionist" have grown [X]% in the last 12 months
    (Google Trends, United States).'
   Use the rising related queries as additional H2/H3 topics to target.
 
@@ -152,23 +130,47 @@ CITE IN PAGE COPY:
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Recruiting Teams
+Industry:    General
 Feeds:       2 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.ere.net/feed/
-URL:  https://www.ere.net/feed/
+FEED: https://www.therundown.ai/rss
+URL:  https://www.therundown.ai/rss
 
   [NO ITEMS] Feed returned no articles.
 
-FEED: https://www.shrm.org/rss/rss.aspx
-URL:  https://www.shrm.org/rss/rss.aspx
+FEED: TechCrunch
+URL:  https://techcrunch.com/feed/
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   The billionaires made a promise — now some want out
+  Date:    2026-03-16
+  Link:    https://techcrunch.com/2026/03/15/the-billionaires-made-a-promise-now-some-want-out/
+  Summary: In 2010, Warren Buffett and Bill Gates launched a disarmingly simple campaign they called the Giving Pledge: a public commitment, open to the world’s wealthiest people, to give away more than half their fortune during their lifetime or upon their death. The moment seemed to call for it. Tech was minting billionaires faster than any […]
+
+  Article 2:
+  Title:   Netflix’s ‘Frankenstein’ wins three Oscars, ‘KPop Demon Hunters’ wins two
+  Date:    2026-03-16
+  Link:    https://techcrunch.com/2026/03/15/netflixs-frankenstein-wins-three-oscars-kpop-demon-hunters-wins-two/
+  Summary: “Frankenstein” won for Best Production Design, Best Costume Design, and Best Makeup and Hairstyling, while “KPop Demon Hunters” won for Best Animated Feature and Best Original Song.
+
+  Article 3:
+  Title:   Google, Accel India accelerator chooses 5 startups and none are ‘AI wrappers’
+  Date:    2026-03-16
+  Link:    https://techcrunch.com/2026/03/15/google-and-accel-cut-through-wrappers-in-4000-ai-startup-pitches-to-pick-five-tied-to-india/
+  Summary: Google and Accel say about 70% of AI startup pitches tied to India were "wrappers" as they reviewed more than 4,000 applications for their Atoms cohort.
+  Stats:   70% | 4,000 applications
+
+  Article 4:
+  Title:   ByteDance reportedly pauses global launch of its Seedance 2.0 video generator
+  Date:    2026-03-15
+  Link:    https://techcrunch.com/2026/03/15/bytedance-reportedly-pauses-global-launch-of-its-seedance-2-0-video-generator/
+  Summary: The company is reportedly delaying the launch as its engineers and lawyers work to avert further legal issues.
 
 ────────────────────────────────────────────────────────────
 ALL STATISTICS EXTRACTED FROM NEWS:
-  None found in summaries — check full articles manually.
+  • 70%
+  • 4,000 applications
 
 CITE IN PAGE COPY:
   Add a 'What's happening in [industry] right now' section
@@ -180,21 +182,21 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC:           13-1071
-Indeed search:     "recruiter"
+Role replaced:     Receptionist
+Industry:          General
+BLS SOC:           43-4171
+Indeed search:     "receptionist"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
-  Manual: https://www.bls.gov/oes/current/oes131071.htm
+  Manual: https://www.bls.gov/oes/current/oes434171.htm
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=recruiter&l=United+States
+  Manual: https://www.indeed.com/jobs?q=receptionist&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Recruiter / HR Sourcer positions in the US right now,
+  'There are [X] open Receptionist positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:

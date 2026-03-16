@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Memory for Recruiting Teams                                           ║
+║        AI Support Rep for E-Commerce                                            ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        recruiting-teams                                                ║
-║  Playbook:    00_AI_MEMORY                                                    ║
-║  Generated:   2026-03-16 11:35                                                ║
-║  AI Role:     AI Memory System                                                ║
-║  Industry:    Recruiting Teams                                                ║
-║  Replaces:    Recruiter / HR Sourcer                                          ║
+║  Slug:        ecommerce                                                       ║
+║  Playbook:    01_PERSONAS                                                     ║
+║  Generated:   2026-03-16 11:30                                                ║
+║  AI Role:     AI Support Rep                                                  ║
+║  Industry:    E-Commerce                                                      ║
+║  Replaces:    Customer Support Representative                                 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,14 +25,14 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC code:      13-1071
+Role replaced:     Customer Support Representative
+Industry:          E-Commerce
+BLS SOC code:      43-4051
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
 Series IDs queried:
-  Wage (mean annual):  OEUN0000000000131071000W
-  Employment count:    OEUN0000000000131071000E
+  Wage (mean annual):  OEUN0000000000434051000W
+  Employment count:    OEUN0000000000434051000E
 
 MEAN ANNUAL WAGE:      N/A 
   Period:              N/A N/A
@@ -41,76 +41,85 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Recruiter / HR Sourcer earns N/A — that's the fixed
+  'The average Customer Support Representative earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
   Employment and Wage Statistics (OEWS), N/A.
 
 BLS DETAIL PAGE:
-  https://www.bls.gov/oes/current/oes131071.htm
+  https://www.bls.gov/oes/current/oes434051.htm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Recruiting Teams
-Subreddits:    r/recruiting, r/humanresources, r/HRpros
-Keywords:      repeat, lost context, handoff, candidate notes, ATS integration
+Industry:      E-Commerce
+Subreddits:    r/ecommerce, r/shopify, r/FulfillmentByAmazon
+Keywords:      support tickets, returns, order status, customer service, chargeback
 Source:        Reddit public JSON API (last 12 months, top posts)
 
 FOUND 5 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/recruiting
-  Upvotes:    197
-  Date:       2025-08-14
-  Title:      How I Finally Nailed My Interviews
-  Quote:      "I've bombed more interviews than I'd like to admit awkward silences, vague answers, rambling, you name it. But after months of trial and error (and a lot of research), I finally got the hang of it. Here’s what I did.
+  Subreddit:  r/ecommerce
+  Upvotes:    32
+  Date:       2025-05-25
+  Title:      AI will never replace human customer support agents
+  Quote:      "Here are 3 reasons why:
 
-Channel your nerves into energy. Instead of trying to "calm down," I'd use that adrenaline. Before every interview, I'd do a power p..."
-  URL:        https://reddit.com/r/recruiting/comments/1mpxg91/how_i_finally_nailed_my_interviews/
+
+
+1. Humans like to talk to other humans.
+
+
+
+When an AI says "I understand your problem" or "I feel bad for what you had to go through" somehow it doesn't help us calm down because we know the AI has no feelings or emotions. It's totally different when a human says the same thing.
+
+
+
+2. The real world is complex and chaotic..."
+  URL:        https://reddit.com/r/ecommerce/comments/1kuwilf/ai_will_never_replace_human_customer_support/
 
   QUOTE 2
-  Subreddit:  r/recruiting
-  Upvotes:    188
-  Date:       2025-07-25
-  Title:      For those of us still manually screening resumes — what are your quietest pet peeves? [N/A]
-  Quote:      "I have to add flair tags what am i using for this : 
-For context : I still read most resumes by hand no filters, no A T S yet ..  
-
-One …file names like resume_final_v3 or doc1 with no name, role, or anything helpful. I end up renaming half of them before sending them. Not a dealbreaker for me, just an unnecessary step that adds annoyance when I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1m8ko1x/for_those_of_us_still_manually_screening_resumes/
+  Subreddit:  r/ecommerce
+  Upvotes:    29
+  Date:       2026-01-19
+  Title:      E-commerce Industry News Recap 🔥 Week of Jan 19th, 2026
+  Quote:      "Hi r/ecommerce \- I'm Paul and I follow the e-commerce industry closely for my Shopifreaks E-commerce Newsletter. Every week for the past 5 years I've posted a summary recap of the week's top stories on this subreddit, which I cover in depth with sources in the full edition. Let's dive in to this week's top e-commerce news...
+___
+**STAT OF THE WEEK..."
+  URL:        https://reddit.com/r/ecommerce/comments/1qhgrhr/ecommerce_industry_news_recap_week_of_jan_19th/
 
   QUOTE 3
-  Subreddit:  r/recruiting
-  Upvotes:    110
-  Date:       2025-10-03
-  Title:      Hired a UX designer who turned out to just UI focused.. how to aim for someone with problem-solving skills?
-  Quote:      "Had a new hire for our UX designer position 12 weeks ago and it's not going well.  
-  
-This guy gave a good impression to me (recruitr) and my hiring partner during the interview like he presented a neat portfolio, spoke on the importance of research and testing but now when he has the chance to work with actual clients he's being sloppy (focused o..."
-  URL:        https://reddit.com/r/recruiting/comments/1nx21ov/hired_a_ux_designer_who_turned_out_to_just_ui/
+  Subreddit:  r/ecommerce
+  Upvotes:    24
+  Date:       2025-09-22
+  Title:      E-commerce Industry News Recap 🔥 Week of Sep 22nd, 2025
+  Quote:      "Hi r/ecommerce - I'm Paul and I follow the e-commerce industry closely for my Shopifreaks E-commerce Newsletter. Every week for the past 4 years I've posted a summary recap of the week's top stories on this subreddit, which I cover in depth with sources in the full edition. Let's dive in to this week's top e-commerce news...
+___
+**STAT OF THE WEEK:..."
+  URL:        https://reddit.com/r/ecommerce/comments/1nnx0v0/ecommerce_industry_news_recap_week_of_sep_22nd/
 
   QUOTE 4
-  Subreddit:  r/recruiting
-  Upvotes:    31
-  Date:       2026-02-21
-  Title:      building relationships with hiring managers actually matters more than i thought
-  Quote:      "I used to think recruiting was just about finding good candidates fast. find resume, submit resume, repeat but i've realized the recruiters who actually succeed long-term are the ones who build real relationships with hiring managers
-
-When you actually understand what a hiring manager cares about beyond the jd, what their team dynamics are, why the..."
-  URL:        https://reddit.com/r/recruiting/comments/1ranzeq/building_relationships_with_hiring_managers/
+  Subreddit:  r/ecommerce
+  Upvotes:    20
+  Date:       2025-07-21
+  Title:      E-commerce Industry News Recap 🔥 Week of July 21st, 2025
+  Quote:      "Hi r/ecommerce \- I'm Paul and I follow the e-commerce industry closely for my Shopifreaks E-commerce Newsletter. Every week for the past 4 years I've posted a summary recap of the week's top stories on this subreddit, which I cover in depth with sources in the full edition. Let's dive in to this week's top e-commerce news...
+___
+**STAT OF THE WEEK..."
+  URL:        https://reddit.com/r/ecommerce/comments/1m5q3et/ecommerce_industry_news_recap_week_of_july_21st/
 
   QUOTE 5
-  Subreddit:  r/recruiting
-  Upvotes:    22
-  Date:       2025-06-05
-  Title:      Venting, company probably going under
-  Quote:      "So I just need to bitch a little bit.
-
-I have been a recruiter for about 14 years, 8 years at a big corporation agency and the last 6 for a small tech start up.  The large corp was my first "real job" out of college and for awhile it was great.  Started making good money, learned a lot, it gave me a career and I am thankful for my time there.  I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1l4941j/venting_company_probably_going_under/
+  Subreddit:  r/ecommerce
+  Upvotes:    19
+  Date:       2025-06-09
+  Title:      E-commerce Industry News Recap 🔥 Week of June 9th, 2025
+  Quote:      "Hi r/ecommerce \- I'm Paul and I follow the e-commerce industry closely for my Shopifreaks E-commerce Newsletter. Every week for the past 4 years I've posted a summary recap of the week's top stories on this subreddit, which I cover in depth with sources in the full edition. Let's dive in to this week's top e-commerce news...
+___
+**STAT OF THE WEEK..."
+  URL:        https://reddit.com/r/ecommerce/comments/1l7cupm/ecommerce_industry_news_recap_week_of_june_9th/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -121,30 +130,32 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Recruiting Teams
-Role:            AI Memory System
-Keywords:        AI recruiter memory, recruitment context AI, candidate history AI
+Industry:        E-Commerce
+Role:            AI Support Rep
+Keywords:        AI customer support ecommerce, Shopify AI chatbot, ecommerce AI support
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI recruiter memory"
+KEYWORD: "AI customer support ecommerce"
   12-month range:   0 → 0 (relative interest, 0-100)
   Growth:           N/A (started from 0) over 12 months
-  Peak interest:    9 in March 2026
+  Peak interest:    100 in September 2025
 
-KEYWORD: "recruitment context AI"
+KEYWORD: "Shopify AI chatbot"
   12-month range:   0 → 0 (relative interest, 0-100)
   Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in August 2025
+  Peak interest:    86 in July 2025
 
 TOP STATES BY SEARCH INTEREST:
-  Mississippi          100
-  California           29
-  Alabama              0
-  Pennsylvania         0
-  New Hampshire        0
+  Wyoming              100
+  Tennessee            100
+  North Carolina       100
+  Michigan             100
+  Maryland             100
+
+  [Related queries skipped: The request failed: Google returned a response with code 429]
 
 CITE IN PAGE COPY:
-  'Searches for "AI recruiter memory" have grown [X]% in the last 12 months
+  'Searches for "AI customer support ecommerce" have grown [X]% in the last 12 months
    (Google Trends, United States).'
   Use the rising related queries as additional H2/H3 topics to target.
 
@@ -152,17 +163,39 @@ CITE IN PAGE COPY:
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Recruiting Teams
+Industry:    E-Commerce
 Feeds:       2 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.ere.net/feed/
-URL:  https://www.ere.net/feed/
+FEED: Practical Ecommerce
+URL:  https://www.practicalecommerce.com/feed
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   Launch Your Own Private-Label Brand
+  Date:    2026-03-15
+  Link:    https://www.practicalecommerce.com/launch-your-own-private-label-brand
+  Summary: Private-label brands remove one or more layers of intermediaries from the supply chain. The post Launch Your Own Private-Label Brand appeared first on Practical Ecommerce .
 
-FEED: https://www.shrm.org/rss/rss.aspx
-URL:  https://www.shrm.org/rss/rss.aspx
+  Article 2:
+  Title:   How Vessi Sells Waterproof Shoes
+  Date:    2026-03-13
+  Link:    https://www.practicalecommerce.com/how-vessi-sells-waterproof-shoes
+  Summary: Director of ecommerce Ray Hua shares the challenges of targeting the right audience, cross-border selling, diversifying, and more. The post How Vessi Sells Waterproof Shoes appeared first on Practical Ecommerce .
+
+  Article 3:
+  Title:   Why OpenAI Acquired Promptfoo
+  Date:    2026-03-12
+  Link:    https://www.practicalecommerce.com/why-openai-acquired-promptfoo
+  Summary: Acquisitions by OpenAI and Meta foretell an agent-driven world with evolving security risks. The post Why OpenAI Acquired Promptfoo appeared first on Practical Ecommerce .
+
+  Article 4:
+  Title:   New Ecommerce Tools: March 11, 2026
+  Date:    2026-03-11
+  Link:    https://www.practicalecommerce.com/new-ecommerce-tools-march-11-2026
+  Summary: This week's rundown includes product feeds, localized commerce, installment payments, risk intelligence, social commerce, agentic commerce, parcel lockers, and more. The post New Ecommerce Tools: March 11, 2026 appeared first on Practical Ecommerce .
+
+FEED: https://www.shopify.com/blog.atom
+URL:  https://www.shopify.com/blog.atom
 
   [NO ITEMS] Feed returned no articles.
 
@@ -180,21 +213,21 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC:           13-1071
-Indeed search:     "recruiter"
+Role replaced:     Customer Support Representative
+Industry:          E-Commerce
+BLS SOC:           43-4051
+Indeed search:     "ecommerce customer support"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
-  Manual: https://www.bls.gov/oes/current/oes131071.htm
+  Manual: https://www.bls.gov/oes/current/oes434051.htm
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=recruiter&l=United+States
+  Manual: https://www.indeed.com/jobs?q=ecommerce%20customer%20support&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Recruiter / HR Sourcer positions in the US right now,
+  'There are [X] open Customer Support Representative positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:

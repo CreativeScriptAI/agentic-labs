@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Memory for Recruiting Teams                                           ║
+║        AI Voice Agent for GoHighLevel                                           ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        recruiting-teams                                                ║
-║  Playbook:    00_AI_MEMORY                                                    ║
-║  Generated:   2026-03-16 11:35                                                ║
-║  AI Role:     AI Memory System                                                ║
-║  Industry:    Recruiting Teams                                                ║
-║  Replaces:    Recruiter / HR Sourcer                                          ║
+║  Slug:        gohighlevel                                                     ║
+║  Playbook:    02_INTEGRATIONS                                                 ║
+║  Generated:   2026-03-16 11:33                                                ║
+║  AI Role:     AI Voice Agent                                                  ║
+║  Industry:    GoHighLevel Agencies                                            ║
+║  Replaces:    SDR / Customer Success                                          ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,14 +25,14 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC code:      13-1071
+Role replaced:     SDR / Customer Success
+Industry:          GoHighLevel Agencies
+BLS SOC code:      41-3091
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
 Series IDs queried:
-  Wage (mean annual):  OEUN0000000000131071000W
-  Employment count:    OEUN0000000000131071000E
+  Wage (mean annual):  OEUN0000000000413091000W
+  Employment count:    OEUN0000000000413091000E
 
 MEAN ANNUAL WAGE:      N/A 
   Period:              N/A N/A
@@ -41,76 +41,69 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Recruiter / HR Sourcer earns N/A — that's the fixed
+  'The average SDR / Customer Success earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
   Employment and Wage Statistics (OEWS), N/A.
 
 BLS DETAIL PAGE:
-  https://www.bls.gov/oes/current/oes131071.htm
+  https://www.bls.gov/oes/current/oes413091.htm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Recruiting Teams
-Subreddits:    r/recruiting, r/humanresources, r/HRpros
-Keywords:      repeat, lost context, handoff, candidate notes, ATS integration
+Industry:      GoHighLevel Agencies
+Subreddits:    r/GHLusergroup, r/DigitalMarketing, r/agency
+Keywords:      GHL AI, GoHighLevel voice, automation, AI calls, workflow
 Source:        Reddit public JSON API (last 12 months, top posts)
 
-FOUND 5 QUALIFYING POSTS
+FOUND 3 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/recruiting
-  Upvotes:    197
-  Date:       2025-08-14
-  Title:      How I Finally Nailed My Interviews
-  Quote:      "I've bombed more interviews than I'd like to admit awkward silences, vague answers, rambling, you name it. But after months of trial and error (and a lot of research), I finally got the hang of it. Here’s what I did.
+  Subreddit:  r/DigitalMarketing
+  Upvotes:    23
+  Date:       2025-03-30
+  Title:      A Marketing Degree is not Worth it 👀
+  Quote:      "A marketing degree is not worth it. 
 
-Channel your nerves into energy. Instead of trying to "calm down," I'd use that adrenaline. Before every interview, I'd do a power p..."
-  URL:        https://reddit.com/r/recruiting/comments/1mpxg91/how_i_finally_nailed_my_interviews/
+College fun came to an end for me in 2010.
+
+I went to college for marketing but during that time I noticed the rapid changes. 
+
+I originally thought I would be doing TV commercials type of commercials at the time after college. 
+
+I saw the rise of internet ads such as Facebook ads and Google ads.
+
+By the time c..."
+  URL:        https://reddit.com/r/DigitalMarketing/comments/1jndpgi/a_marketing_degree_is_not_worth_it/
 
   QUOTE 2
-  Subreddit:  r/recruiting
-  Upvotes:    188
-  Date:       2025-07-25
-  Title:      For those of us still manually screening resumes — what are your quietest pet peeves? [N/A]
-  Quote:      "I have to add flair tags what am i using for this : 
-For context : I still read most resumes by hand no filters, no A T S yet ..  
+  Subreddit:  r/DigitalMarketing
+  Upvotes:    12
+  Date:       2026-02-09
+  Title:      I’ve done SEO for 8 years — here’s the digital marketing strategy that will matter most in 2026 (SEO = Traditional + RLO + BRO)
+  Quote:      "I’ve been doing SEO for about 8 years, mostly working with SaaS brands.
 
-One …file names like resume_final_v3 or doc1 with no name, role, or anything helpful. I end up renaming half of them before sending them. Not a dealbreaker for me, just an unnecessary step that adds annoyance when I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1m8ko1x/for_those_of_us_still_manually_screening_resumes/
+Over the last year, I’ve noticed a big shift: traditional SEO still matters, but it’s no longer enough on its own — especially with AI search, LLM citations, and “zero-click” results becoming more common.
+
+Here’s the framework I’m using going into 2026, and what I’ve seen actu..."
+  URL:        https://reddit.com/r/DigitalMarketing/comments/1r04sss/ive_done_seo_for_8_years_heres_the_digital/
 
   QUOTE 3
-  Subreddit:  r/recruiting
-  Upvotes:    110
-  Date:       2025-10-03
-  Title:      Hired a UX designer who turned out to just UI focused.. how to aim for someone with problem-solving skills?
-  Quote:      "Had a new hire for our UX designer position 12 weeks ago and it's not going well.  
-  
-This guy gave a good impression to me (recruitr) and my hiring partner during the interview like he presented a neat portfolio, spoke on the importance of research and testing but now when he has the chance to work with actual clients he's being sloppy (focused o..."
-  URL:        https://reddit.com/r/recruiting/comments/1nx21ov/hired_a_ux_designer_who_turned_out_to_just_ui/
+  Subreddit:  r/agency
+  Upvotes:    11
+  Date:       2026-02-27
+  Title:      How I structure my agency's operations (I was drowning in Google Drive)
+  Quote:      "For years I ran my business like most founders do.
 
-  QUOTE 4
-  Subreddit:  r/recruiting
-  Upvotes:    31
-  Date:       2026-02-21
-  Title:      building relationships with hiring managers actually matters more than i thought
-  Quote:      "I used to think recruiting was just about finding good candidates fast. find resume, submit resume, repeat but i've realized the recruiters who actually succeed long-term are the ones who build real relationships with hiring managers
+I had a Google Drive with folders for clients, marketing, goals, admin, contracts, you name it.
 
-When you actually understand what a hiring manager cares about beyond the jd, what their team dynamics are, why the..."
-  URL:        https://reddit.com/r/recruiting/comments/1ranzeq/building_relationships_with_hiring_managers/
+I'd share folders with team members and add clients to specific folders for fulfillment and do my best to try to keep it organized.
 
-  QUOTE 5
-  Subreddit:  r/recruiting
-  Upvotes:    22
-  Date:       2025-06-05
-  Title:      Venting, company probably going under
-  Quote:      "So I just need to bitch a little bit.
-
-I have been a recruiter for about 14 years, 8 years at a big corporation agency and the last 6 for a small tech start up.  The large corp was my first "real job" out of college and for awhile it was great.  Started making good money, learned a lot, it gave me a career and I am thankful for my time there.  I ha..."
-  URL:        https://reddit.com/r/recruiting/comments/1l4941j/venting_company_probably_going_under/
+For example, there'd be a client folder and inside of it was the wee..."
+  URL:        https://reddit.com/r/agency/comments/1rgjvjh/how_i_structure_my_agencys_operations_i_was/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -121,30 +114,30 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Recruiting Teams
-Role:            AI Memory System
-Keywords:        AI recruiter memory, recruitment context AI, candidate history AI
+Industry:        GoHighLevel Agencies
+Role:            AI Voice Agent
+Keywords:        GoHighLevel AI, GHL voice agent, GHL automation AI
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI recruiter memory"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    9 in March 2026
+KEYWORD: "GoHighLevel AI"
+  12-month range:   7 → 29 (relative interest, 0-100)
+  Growth:           +314% over 12 months
+  Peak interest:    100 in February 2026
 
-KEYWORD: "recruitment context AI"
+KEYWORD: "GHL voice agent"
   12-month range:   0 → 0 (relative interest, 0-100)
   Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in August 2025
+  Peak interest:    1 in March 2026
 
 TOP STATES BY SEARCH INTEREST:
-  Mississippi          100
-  California           29
-  Alabama              0
-  Pennsylvania         0
-  New Hampshire        0
+  Alabama              100
+  Massachusetts        100
+  Minnesota            100
+  Nevada               100
+  New Jersey           100
 
 CITE IN PAGE COPY:
-  'Searches for "AI recruiter memory" have grown [X]% in the last 12 months
+  'Searches for "GoHighLevel AI" have grown [X]% in the last 12 months
    (Google Trends, United States).'
   Use the rising related queries as additional H2/H3 topics to target.
 
@@ -152,19 +145,36 @@ CITE IN PAGE COPY:
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Recruiting Teams
-Feeds:       2 configured
+Industry:    GoHighLevel Agencies
+Feeds:       1 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.ere.net/feed/
-URL:  https://www.ere.net/feed/
+FEED: Search Engine Journal
+URL:  https://www.searchenginejournal.com/feed
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   SEO Vs. PPC Strategy: What’s Right For Your Business? via @sejournal, @brookeosmundson
+  Date:    2026-03-14
+  Link:    https://www.searchenginejournal.com/seo-vs-ppc/234681/
+  Summary: Decide where to invest by understanding how SEO and PPC truly scale, compete, and drive business growth differently. The post SEO Vs. PPC Strategy: What’s Right For Your Business? appeared first on Search Engine Journal .
 
-FEED: https://www.shrm.org/rss/rss.aspx
-URL:  https://www.shrm.org/rss/rss.aspx
+  Article 2:
+  Title:   Google Discover Core Update Data: Local Publishers Lost Reach via @sejournal, @MattGSouthern
+  Date:    2026-03-13
+  Link:    https://www.searchenginejournal.com/google-discover-core-update-data-local-publishers-lost-reach/569735/
+  Summary: New third-party data shows local publishers lost national reach after Google's Discover core update. The post Google Discover Core Update Data: Local Publishers Lost Reach appeared first on Search Engine Journal .
 
-  [NO ITEMS] Feed returned no articles.
+  Article 3:
+  Title:   Starting Or Steering The Wave
+  Date:    2026-03-13
+  Link:    https://www.searchenginejournal.com/starting-or-steering-the-wave/569556/
+  Summary: Why traditional “utility SEO” content is losing value, and how marketers can create demand instead of chasing existing searches. The post Starting Or Steering The Wave appeared first on Search Engine Journal .
+
+  Article 4:
+  Title:   AI Mode Data, Ask Maps & Branded Queries Go Live – SEO Pulse via @sejournal, @MattGSouthern
+  Date:    2026-03-13
+  Link:    https://www.searchenginejournal.com/seo-pulse-ai-mode-data-ask-maps-branded-queries-go-live/569648/
+  Summary: In SEO Pulse: AI Mode keeps more links inside Google, Maps adds conversational discovery, and Search Console rolls out automated brand segmentation. The post AI Mode Data, Ask Maps & Branded Queries Go Live – SEO Pulse appeared first on Search Engine Journal .
 
 ────────────────────────────────────────────────────────────
 ALL STATISTICS EXTRACTED FROM NEWS:
@@ -180,21 +190,21 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Recruiter / HR Sourcer
-Industry:          Recruiting Teams
-BLS SOC:           13-1071
-Indeed search:     "recruiter"
+Role replaced:     SDR / Customer Success
+Industry:          GoHighLevel Agencies
+BLS SOC:           41-3091
+Indeed search:     "GoHighLevel specialist"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
-  Manual: https://www.bls.gov/oes/current/oes131071.htm
+  Manual: https://www.bls.gov/oes/current/oes413091.htm
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=recruiter&l=United+States
+  Manual: https://www.indeed.com/jobs?q=GoHighLevel%20specialist&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Recruiter / HR Sourcer positions in the US right now,
+  'There are [X] open SDR / Customer Success positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:

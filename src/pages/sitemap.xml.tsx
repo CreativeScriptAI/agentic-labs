@@ -52,12 +52,18 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     });
 
     // Add programmatic SEO routes (root level)
+    const pSeoPriority = (type: string) => {
+      if (type === "persona" || type === "integration") return 0.85;
+      if (type === "comparison" || type === "memory-use-case") return 0.80;
+      if (type === "directory") return 0.70;
+      return 0.75; // glossary
+    };
     PROGRAMMATIC_SEO_PAGES.forEach((page) => {
       fields.push({
         loc: `${base}/${page.pathSegments.join("/")}/`,
         lastmod: new Date().toISOString(),
         changefreq: "weekly" as const,
-        priority: page.type === "persona" || page.type === "integration" ? 0.85 : 0.75,
+        priority: pSeoPriority(page.type),
       });
     });
 

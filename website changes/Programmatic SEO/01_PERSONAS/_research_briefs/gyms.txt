@@ -1,14 +1,14 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║        RESEARCH BRIEF                                                       ║
-║        AI Receptionist for Medical Clinics                                      ║
+║        AI Membership Advisor for Gyms                                           ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║  Slug:        medical-clinics                                                 ║
+║  Slug:        gyms                                                            ║
 ║  Playbook:    01_PERSONAS                                                     ║
-║  Generated:   2026-03-16 11:28                                                ║
-║  AI Role:     AI Receptionist                                                 ║
-║  Industry:    Medical Clinics                                                 ║
-║  Replaces:    Medical Receptionist                                            ║
+║  Generated:   2026-03-16 11:32                                                ║
+║  AI Role:     AI Membership Advisor                                           ║
+║  Industry:    Fitness / Gyms                                                  ║
+║  Replaces:    Gym Front Desk / Membership Sales                               ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
   HOW TO USE THIS BRIEF
@@ -25,8 +25,8 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 NODE 01 — BLS LABOR MARKET DATA
 ────────────────────────────────────────────────────────────
-Role replaced:     Medical Receptionist
-Industry:          Medical Clinics
+Role replaced:     Gym Front Desk / Membership Sales
+Industry:          Fitness / Gyms
 BLS SOC code:      43-4171
 Source:            U.S. Bureau of Labor Statistics (OEWS)
 
@@ -41,7 +41,7 @@ NATIONAL EMPLOYMENT:   N/A
   Period:              N/A N/A
 
 CITE IN PAGE COPY:
-  'The average Medical Receptionist earns N/A — that's the fixed
+  'The average Gym Front Desk / Membership Sales earns N/A — that's the fixed
    annual cost before a single missed call or training hour.'
 
   Source citation: U.S. Bureau of Labor Statistics, Occupational
@@ -54,66 +54,66 @@ BLS DETAIL PAGE:
 
 NODE 02 — REDDIT PAIN INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Industry:      Medical Clinics
-Subreddits:    r/medicine, r/healthcareworkers, r/smallbusiness
-Keywords:      receptionist, missed calls, scheduling, phone, front desk
+Industry:      Fitness / Gyms
+Subreddits:    r/gymowners, r/personaltraining, r/fitness
+Keywords:      membership, churn, cancellations, front desk, booking
 Source:        Reddit public JSON API (last 12 months, top posts)
 
+  [WARNING] r/gymowners → 404 Client Error: Not Found for url: https://www.reddit.com/r/gymowners/search.json?q=membership&sort=top&t=year&limit=10&restrict_sr=1
+  [WARNING] r/gymowners → 404 Client Error: Not Found for url: https://www.reddit.com/r/gymowners/search.json?q=churn&sort=top&t=year&limit=10&restrict_sr=1
 FOUND 5 QUALIFYING POSTS
 
   QUOTE 1
-  Subreddit:  r/medicine
-  Upvotes:    1,339
-  Date:       2025-06-16
-  Title:      Hospitals should be 100% owned and operated by healthcare workers. Change my mind.
-  Quote:      "Why do we allow people with no medical knowledge make decisions that impact patient care? 
+  Subreddit:  r/personaltraining
+  Upvotes:    153
+  Date:       2025-05-08
+  Title:      Personal Training Harsh Truths - Guide for New Trainers
+  Quote:      "My fellow professionals and shitposters, this one is for the aspirants today.
 
-We can all name policies that were forced on us by naive administrators, which ultimately harmed patients. 
+Been around the block over the last 14 years, learned some things, some things I wish I knew a bit better when I started, and today I want to dole some of that out to the aspiring among us.
 
-Excepting the obvious roles (accounting, billing, receptionist, security), hospitals should only be owned and operated by healthcare workers who are ..."
-  URL:        https://reddit.com/r/medicine/comments/1lct2ga/hospitals_should_be_100_owned_and_operated_by/
+>***Being a personal trainer is the best job I've ever had.***
+
+>***But the best..."
+  URL:        https://reddit.com/r/personaltraining/comments/1khwa0h/personal_training_harsh_truths_guide_for_new/
 
   QUOTE 2
-  Subreddit:  r/medicine
-  Upvotes:    726
-  Date:       2025-12-22
-  Title:      NP Misses Vert Dissection in Clinic
-  Quote:      "Text here: https://expertwitness.substack.com/p/missed-vertebral-artery-dissection
+  Subreddit:  r/personaltraining
+  Upvotes:    83
+  Date:       2025-07-08
+  Title:      PT Studio Owner Making $20k/m — AMA
+  Quote:      "Hey everyone! I'm the owner of a personal training studio currently generating over $20k per month in revenue. I started from scratch and built this business through years of hard work, learning, and consistency.
 
-tl;dr
-
-22-year-old man wakes up with left side weakness and dizziness.
-
-Calls PCP, they get him in later that day.
-
-Symptoms were mostly resolved so NP orders labs and sends him back home.
-
-Next morning has worsening symptoms including left side weakness, left side ..."
-  URL:        https://reddit.com/r/medicine/comments/1pt5bhm/np_misses_vert_dissection_in_clinic/
+I'm here to answer any questions you have about running a successful personal training business. I'm not sharing this to brag, but to sh..."
+  URL:        https://reddit.com/r/personaltraining/comments/1lv1n16/pt_studio_owner_making_20km_ama/
 
   QUOTE 3
-  Subreddit:  r/medicine
-  Upvotes:    427
-  Date:       2025-04-19
-  Title:      A happy day working in medicine
-  Quote:      "Yesterday was a happy day for me. I saw a patient who was medically complex and undergoing chemo for a recently diagnosed malignancy. He saw me for symptoms from a lesion that were initially thought to be 2/2 his malignancy, but these symptoms persisted despite weeks of chemo with good response otherwise. Being concerned that he had a concurrent se..."
-  URL:        https://reddit.com/r/medicine/comments/1k33t0k/a_happy_day_working_in_medicine/
+  Subreddit:  r/personaltraining
+  Upvotes:    77
+  Date:       2025-10-18
+  Title:      Micro Gym &amp; Wellness spa - I have a Vision...
+  Quote:      "I just started breaking ground on a large 2-storey shop on my country acreage with a 900 sq ft attached private gym. The small local town is 2 miles away and there is no gym - and likely not enough clientele to support one.
+
+The vision: a high end, luxury/exclusive gym space for a handful of interested local memberships and some private training or..."
+  URL:        https://reddit.com/r/personaltraining/comments/1oa6sqy/micro_gym_wellness_spa_i_have_a_vision/
 
   QUOTE 4
-  Subreddit:  r/medicine
-  Upvotes:    422
-  Date:       2025-03-28
-  Title:      As a PCP, ER staff…please finish your notes within 48 hours if you want the patient to follow up with us.
-  Quote:      "Edit: I’m not saying all ER clinicians do this, but I have been seeing more it lately. Sorry for the generalization, needed to vent. Just asking to not forget about us with everything going on. I appreciate the work you guys do. I’m not trying to turn this into an ED versus PCP battle. It is my job as the PCP to have my note done and staffed with t..."
-  URL:        https://reddit.com/r/medicine/comments/1jlv9i7/as_a_pcp_er_staffplease_finish_your_notes_within/
+  Subreddit:  r/personaltraining
+  Upvotes:    74
+  Date:       2026-02-26
+  Title:      PT at luxury gym — this shit ain’t worth it
+  Quote:      "PT for almost 2 years at a luxury gym and I feel like I’m fighting for my life… constantly. Fighting for 35 sessions/pay period because too many clients take turns going away, getting sick, their kid being sick, ect ect. I do free assessments all the same showcase my value and experience, show them what they need to work on and how what we’d do tog..."
+  URL:        https://reddit.com/r/personaltraining/comments/1rfb13s/pt_at_luxury_gym_this_shit_aint_worth_it/
 
   QUOTE 5
-  Subreddit:  r/medicine
-  Upvotes:    396
-  Date:       2025-10-13
-  Title:      Angry at no shows
-  Quote:      "Hello all, I am early career peds subspecialty in an underserved area. I have never been angry at patients until today. For background, I work in an academic medical center. My no show rate is atrocious - easily 60-70%. This is refractory to overbooking and patient calls (families confirm they will be here the day before then suddenly change their ..."
-  URL:        https://reddit.com/r/medicine/comments/1o5mzaq/angry_at_no_shows/
+  Subreddit:  r/personaltraining
+  Upvotes:    50
+  Date:       2026-02-11
+  Title:      Gave notice I was moving gyms, immediately banned
+  Quote:      "I’m a newer independent personal trainer and just went through my first big gym transition, and I’m trying to sanity-check how I handled it.
+
+I was training clients out of a small gym with no formal contracts or waivers, paying a rental fee per session. After the owner tried to bully me into doing unpaid work and involve me in an MLM situation, I g..."
+  URL:        https://reddit.com/r/personaltraining/comments/1r1lo33/gave_notice_i_was_moving_gyms_immediately_banned/
 
 CITE IN PAGE COPY:
   Use verbatim quotes in a callout block or 'What practitioners say' section.
@@ -124,54 +124,61 @@ CITE IN PAGE COPY:
 
 NODE 03 — GOOGLE TRENDS
 ────────────────────────────────────────────────────────────
-Industry:        Medical Clinics
-Role:            AI Receptionist
-Keywords:        AI medical receptionist, medical clinic AI, healthcare AI answering
+Industry:        Fitness / Gyms
+Role:            AI Membership Advisor
+Keywords:        AI gym membership, fitness studio AI, gym automation
 Source:          Google Trends via pytrends (12-month window, US)
 
-KEYWORD: "AI medical receptionist"
-  12-month range:   0 → 0 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    12 in November 2025
+  [ERROR] The request failed: Google returned a response with code 429
 
-KEYWORD: "medical clinic AI"
-  12-month range:   0 → 55 (relative interest, 0-100)
-  Growth:           N/A (started from 0) over 12 months
-  Peak interest:    100 in February 2026
-
-TOP STATES BY SEARCH INTEREST:
-  New Jersey           18
-  Georgia              17
-  Washington           12
-  Texas                12
-  Florida              11
-
-CITE IN PAGE COPY:
-  'Searches for "AI medical receptionist" have grown [X]% in the last 12 months
-   (Google Trends, United States).'
-  Use the rising related queries as additional H2/H3 topics to target.
+  Common fix: Wait 30-60 minutes if rate-limited (429 error).
+  Manual fallback:
+  https://trends.google.com/trends/explore?q=AI gym membership&geo=US
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 NODE 04 — RSS NEWS FEED
 ────────────────────────────────────────────────────────────
-Industry:    Medical Clinics
+Industry:    Fitness / Gyms
 Feeds:       2 configured
 Source:      Industry trade publication RSS feeds
 
-FEED: https://www.modernhealthcare.com/rss
-URL:  https://www.modernhealthcare.com/rss
+FEED: https://www.clubindustry.com/rss
+URL:  https://www.clubindustry.com/rss
 
   [NO ITEMS] Feed returned no articles.
 
-FEED: https://www.healthcareit.net/rss
-URL:  https://www.healthcareit.net/rss
+FEED: Health & Fitness Association
+URL:  https://www.ihrsa.org/feed/
 
-  [NO ITEMS] Feed returned no articles.
+  Article 1:
+  Title:   Dozens of New Products and Partnerships to Debut at The HFA Show 2026
+  Date:    2026-03-13
+  Link:    https://www.healthandfitness.org/dozens-of-new-products-and-partnerships-to-debut-at-the-hfa-show-2026/
+  Summary: New Product Zone will spotlight emerging innovations as companies debut new products and partnerships at The HFA Show San Diego, CA–March 13, 2026–Innovation will take center stage at The HFA Show 2026. On March 17-18 in San Diego, the event’s trade show will host the debut of a number of new products and partnerships, offering... The post Dozens of New Products and Partnerships to Debut at The HF...
+
+  Article 2:
+  Title:   Health & Fitness Association Responds to FTC Review of Subscription Cancellation Rules
+  Date:    2026-03-12
+  Link:    https://www.healthandfitness.org/health-fitness-association-responds-to-ftc-review-of-subscription-cancellation-rules/
+  Summary: Industry group says new rulemaking process will allow regulators to better understand membership-based fitness businesses Washington, DC–March 12, 2026– The Health & Fitness Association (HFA) today responded to the Federal Trade Commission’s Advance Notice of Proposed Rulemaking (ANPR) initiating a new rulemaking process on subscription and recurring billing practices, commonly referred to as “neg...
+
+  Article 3:
+  Title:   Fitness Formula Clubs Named Chicago’s Best Gym for the Third Consecutive Year
+  Date:    2026-03-06
+  Link:    https://www.healthandfitness.org/fitness-formula-clubs-named-chicagos-best-gym-for-the-third-consecutive-year/
+  Summary: The recognition comes as part of Chicago Reader’s annual “Best of Chicago” awards, where more than 100,000 Chicagoans participated in the nomination and voting process, making this achievement especially meaningful. Chicago, Illinois – Fitness Formula Clubs (FFC) is proud to announce it has been named Chicago’s Best Gym for 2025, marking the third consecutive year... The post Fitness Formula Clubs...
+  Stats:   100,000 Chicagoans
+
+  Article 4:
+  Title:   HomePlunge Unveils the Bella: A Compact, Affordable Cold Plunge Chiller for Every Home
+  Date:    2026-03-06
+  Link:    https://www.healthandfitness.org/homeplunge-unveils-the-bella-a-compact-affordable-cold-plunge-chiller-for-every-home/
+  Summary: The award-winning bathtub cold plunge brand expands its lineup with a smaller, quieter, and more accessible chiller — debuting publicly at the HFA Show 2026 in San Diego SAN FRANCISCO, March 6, 2026 – HomePlunge, creator of the first and only cold plunge chiller to win a CES Innovation Award, today announced the HomePlunge Bella... The post HomePlunge Unveils the Bella: A Compact, Affordable Cold ...
 
 ────────────────────────────────────────────────────────────
 ALL STATISTICS EXTRACTED FROM NEWS:
-  None found in summaries — check full articles manually.
+  • 100,000 Chicagoans
 
 CITE IN PAGE COPY:
   Add a 'What's happening in [industry] right now' section
@@ -183,10 +190,10 @@ CITE IN PAGE COPY:
 
 NODE 05 — JOB MARKET INTELLIGENCE
 ────────────────────────────────────────────────────────────
-Role replaced:     Medical Receptionist
-Industry:          Medical Clinics
+Role replaced:     Gym Front Desk / Membership Sales
+Industry:          Fitness / Gyms
 BLS SOC:           43-4171
-Indeed search:     "medical receptionist"
+Indeed search:     "gym membership sales"
 
 BLS EMPLOYMENT DATA:
   [ERROR] No data returned for this series
@@ -194,10 +201,10 @@ BLS EMPLOYMENT DATA:
 
 INDEED JOB LISTINGS (live, United States):
   [ERROR] Indeed blocked the request (403). Use BLS data instead.
-  Manual: https://www.indeed.com/jobs?q=medical%20receptionist&l=United+States
+  Manual: https://www.indeed.com/jobs?q=gym%20membership%20sales&l=United+States
 
 CITE IN PAGE COPY:
-  'There are [X] open Medical Receptionist positions in the US right now,
+  'There are [X] open Gym Front Desk / Membership Sales positions in the US right now,
    with salaries ranging from [range]. That's the annual cost AI eliminates.'
 
   Source citations:
