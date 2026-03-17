@@ -173,22 +173,19 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
         <div>
-          <SectionLabel text="Guftugu — AI Conversation System by Agentic AI Labs" dark />
+          <SectionLabel text="Guftugu by Agentic AI Labs" dark />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-6">
-            The call came in at 10pm.
+            You missed 3 calls today.
             <br />
-            <span className="text-white/70">You were asleep.</span>
+            <span className="text-white/70">You told yourself you&apos;d call back.</span>
             <br />
-            Your competitor wasn&apos;t.
+            You won&apos;t.
           </h1>
-          <p className="text-lg sm:text-xl text-white/70 max-w-xl mb-2 leading-relaxed">
-            Guftugu answers every call and follows up on WhatsApp. Automatically. In Hindi or English. 24/7.
+          <p className="text-lg sm:text-xl text-white/70 max-w-xl mb-10 leading-relaxed">
+            The longer you wait, the colder the lead. Guftugu answers every call the moment it comes in and follows up on WhatsApp automatically — whether you remember to or not. Dhvani handles the voice. Sandesh handles the message.
           </p>
-          <p className="text-base text-white/50 mb-10">
-            Dhvani handles the voice. Sandesh handles the message. Together, nothing gets missed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
-            <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
+            <PrimaryBtn href={CAL_LINK} label="Go Live in 30 Minutes" size="lg" />
             {STATS.demoNumber ? (
               <OutlineBtn
                 href={`tel:${STATS.demoNumber}`}
@@ -205,9 +202,12 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
               </button>
             )}
           </div>
+          <p className="text-sm text-white/50 mb-2">
+            Not a demo. A setup call. You tell us how your business works — Guftugu goes live before we hang up.
+          </p>
           <p className="text-sm text-white/40">
-            We learn your business first. Then we build.{" "}
-            <span className="text-white/60 font-medium">Live in 7 days.</span>
+            We don&apos;t demo. We deploy.{" "}
+            <span className="text-white/60 font-medium">One call — 30 minutes — your AI is live.</span>
           </p>
         </div>
 
@@ -493,7 +493,7 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
 // ─── SOCIAL PROOF BAR ─────────────────────────────────────────────────────────
 const SocialProofBar = () => {
   const metrics = [
-    { value: "7", label: "Days to Go Live" },
+    { value: "30m", label: "To Go Live" },
     { value: "₹0", label: "To Start" },
     { value: "24/7", label: "Always On" },
     { value: "2s", label: "Answer Time" },
@@ -701,21 +701,21 @@ const HowItWorksSection = () => {
   const steps = [
     {
       number: "01",
-      title: "We learn your business",
-      subtitle: "One 30-minute call. No slides. No pitch.",
-      body: "We map how your callers talk, what they ask most, and what your current process looks like. Bring call recordings if you have them — we train your AI on your actual conversations, your language, your tone, the exact objections your callers raise.",
-      note: "By the end of the call, we know exactly what to build.",
+      title: "You tell us how your business works",
+      subtitle: "30 minutes. No slides. No pitch.",
+      body: "We ask how your callers talk, what they ask, what your current process looks like. Bring call recordings if you have them. By the end of this conversation, we know exactly what Guftugu needs to say and do.",
+      note: null,
     },
     {
       number: "02",
-      title: "We build it",
-      subtitle: "Done-for-you. Live in 7 days.",
-      body: "We write the script, train the AI on your business, set up WhatsApp flows, and connect to your calendar or CRM. You don't touch the technology.",
+      title: "We configure Guftugu on the call",
+      subtitle: "Done-for-you — while you're still on the line.",
+      body: "Script written. Dhvani trained on your business. Sandesh flows set up. Calendar connected. You don't touch the technology. We build it in front of you.",
       note: null,
     },
     {
       number: "03",
-      title: "Your AI goes to work",
+      title: "You go live before we hang up",
       subtitle: "You only get pinged when a lead is ready.",
       body: "Every call answered. Every lead followed up. You get a WhatsApp message when someone is actually ready to book. That's the only time you need to pick up the phone.",
       note: null,
@@ -727,9 +727,9 @@ const HowItWorksSection = () => {
       <Container>
         <SectionLabel text="Process" />
         <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-4">
-          Three steps.
+          One call. Three things happen.
           <br />
-          <span className="text-gray-400">You barely have to show up.</span>
+          <span className="text-gray-400">You go live.</span>
         </h2>
 
         <div className="mt-12 space-y-0">
@@ -758,7 +758,7 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
+          <PrimaryBtn href={CAL_LINK} label="Go Live in 30 Minutes" size="lg" />
         </div>
       </Container>
     </section>
@@ -1035,14 +1035,14 @@ const WhyDifferentSection = () => {
       <Container>
         <SectionLabel text="What makes us different" />
         <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-4 max-w-2xl">
-          Every other AI company starts with a demo.
+          Every other AI company shows you a demo.
           <br />
-          <span className="text-gray-400">We start with a question.</span>
+          <span className="text-gray-400">We hand you a live system.</span>
         </h2>
         <p className="text-gray-500 mb-10 max-w-xl text-base">
-          Demos always work. Then you go live. Your callers speak Hinglish. Three calls come in at once.
-          Most voice AI is built for demos — not for the actual chaos of an Indian business at 11am on a Monday.
-          That&apos;s where it breaks. <span className="text-[#0A1128] font-medium">Guftugu is built for that chaos.</span>
+          Other tools demo beautifully. Then you go live. Your callers speak Hinglish. Three calls come in at once. The AI gives the wrong slot because nobody configured it for your actual business.
+          Most voice AI is built for demos — not for the chaos of an Indian business at 11am on a Monday.{" "}
+          <span className="text-[#0A1128] font-medium">Guftugu is configured for your business on the setup call itself. What goes live has already heard how your callers talk.</span>
         </p>
 
         {/* Competitor cards */}
@@ -1401,11 +1401,11 @@ const FAQSection = () => {
     },
     {
       q: "How fast does it go live?",
-      a: "7 business days for most setups. We need your script, calendar access, and one 30-minute call. We handle everything else.",
+      a: "30 minutes. We configure Guftugu on the setup call itself — Dhvani trained on your business, Sandesh flows set up, calendar connected. You go live before we hang up. No waiting. No back-and-forth over email.",
     },
     {
       q: "Is there a guarantee?",
-      a: "If your AI isn't live within 10 business days of us receiving your setup materials, we refund the setup fee. No questions asked. Once live, we tune at no extra cost until it performs to spec.",
+      a: "If Guftugu isn't live by the end of your setup call, you don't pay. Once live, we tune at no extra cost for the first 30 days until it's performing to spec.",
     },
   ];
 
@@ -1458,11 +1458,11 @@ const FinalCTA = () => (
         The leads are there. The calls are coming in. The problem isn&apos;t demand — it&apos;s that your business can&apos;t respond fast enough, at all hours, in both languages, with follow-through that lasts more than a day.
       </p>
       <p className="text-white/50 mb-10 max-w-lg mx-auto text-sm">
-        That&apos;s exactly what Guftugu fixes. The first step is a 30-minute call. No slides. No pitch. We learn how your business works, then we build what actually fits.
+        One call. 30 minutes. You describe your business — we configure Guftugu on the spot. By the time we hang up, Dhvani is answering your calls and Sandesh is working your leads.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-        <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
+        <PrimaryBtn href={CAL_LINK} label="Go Live in 30 Minutes" size="lg" />
       </div>
 
       <p className="text-white/40 text-sm mb-4">Not ready to talk? Start with a free audit:</p>
@@ -1490,7 +1490,7 @@ const FinalCTA = () => (
 
       <div className="mt-10 pt-8 border-t border-white/10">
         <p className="text-white/50 text-sm font-medium">
-          Rs 0 to start &nbsp;·&nbsp; Live in 7 days &nbsp;·&nbsp; We learn your business first, then we build.
+          Rs 0 to start &nbsp;·&nbsp; Live before the call ends &nbsp;·&nbsp; We don&apos;t demo. We deploy.
         </p>
       </div>
     </Container>
@@ -1508,7 +1508,7 @@ const PageFooter = () => (
         <nav className="flex flex-wrap gap-6 text-sm text-white/40">
           <button onClick={() => smoothScrollTo("use-cases")} className="hover:text-white/70 transition-colors">Use Cases</button>
           <button onClick={() => smoothScrollTo("pricing")} className="hover:text-white/70 transition-colors">Pricing</button>
-          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Book a Discovery Call</a>
+          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Go Live in 30 Minutes</a>
           <button onClick={() => smoothScrollTo("faq")} className="hover:text-white/70 transition-colors">Free Audit</button>
         </nav>
       </div>
@@ -1537,7 +1537,7 @@ const StickyMobileCTA = () => {
   if (!visible) return null;
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-4 py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
-      <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" fullWidth size="lg" />
+      <PrimaryBtn href={CAL_LINK} label="Go Live in 30 Minutes" fullWidth size="lg" />
     </div>
   );
 };
