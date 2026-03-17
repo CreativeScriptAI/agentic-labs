@@ -107,7 +107,7 @@ export type ProgrammaticPageData = {
 
 const BASE_URL = "https://www.tryagentikai.com";
 
-const makeCanonical = (pathSegments: string[]) => `${BASE_URL}/${pathSegments.join("/")}`;
+const makeCanonical = (pathSegments: string[]) => `${BASE_URL}/${pathSegments.join("/")}/`;
 
 const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {

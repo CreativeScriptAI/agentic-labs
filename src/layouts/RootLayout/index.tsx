@@ -68,12 +68,16 @@ const RootLayout = ({
   const NO_NAV_ROUTES = ["/thankyou"];
   const hideNav = NO_NAV_ROUTES.includes(router.pathname);
 
+  // Pages that need full-width treatment (no max-width / padding constraint)
+  const FULL_WIDTH_ROUTES = ["/ai-voice-agent"];
+  const isFullWidth = FULL_WIDTH_ROUTES.includes(router.pathname);
+
   return (
     <ThemeProvider scheme={scheme || "light"}>
       {/* <Scripts /> */}
       {!hideNav && <Header fullWidth={false} />}
       <main
-        className={`mx-auto w-full overflow-x-hidden ${hideNav ? "p-0" : `${containerClassName} ${router.pathname === "/contact" ? "px-0" : "px-4"}`
+        className={`mx-auto w-full overflow-x-hidden ${hideNav ? "p-0" : isFullWidth ? "max-w-full p-0" : `${containerClassName} ${router.pathname === "/contact" ? "px-0" : "px-4"}`
           }`}
       >
         {children}
