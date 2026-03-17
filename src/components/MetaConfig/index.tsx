@@ -24,8 +24,19 @@ export type MetaConfigProps = {
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
   const router = useRouter();
   const baseUrl = "https://www.tryagentikai.com";
+  
+  // Helper to ensure URL has a trailing slash
+  const ensureTrailingSlash = (url: string) => {
+    if (!url) return url;
+    // Don't add slash to file extensions or if it already has one
+    if (url.includes(".") && !url.endsWith("/")) return url;
+    return url.endsWith("/") ? url : `${url}/`;
+  };
+
   const fullTitle = props.title; // Use title as-is, no suffix
-  const canonicalUrl = props.canonical || props.url;
+  const rawCanonical = props.canonical || props.url;
+  const canonicalUrl = ensureTrailingSlash(rawCanonical);
+  
   console.log("canonicalUrl", canonicalUrl);
   const ogImage = props.image || "/og.jpg";
   const fullImageUrl = props.image?.startsWith("http")
@@ -59,7 +70,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
     // Add x-default for global version
     hreflangs.push({
       hreflang: "x-default",
-      href: `${baseUrl}${basePath || "/"}`,
+      href: ensureTrailingSlash(`${baseUrl}${basePath || ""}`),
     });
 
     // Add each country version
@@ -67,7 +78,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       const countryRoute = COUNTRY_ROUTES[countryCode];
       // Format: en-IN, en-US, en-CA, en-AU, en-AE, en-GB (all uppercase for hreflang)
       const hreflangCode = `en-${countryCode}`;
-      const href = `${baseUrl}/${countryRoute}${basePath || ""}`;
+      const href = ensureTrailingSlash(`${baseUrl}/${countryRoute}${basePath || ""}`);
 
       hreflangs.push({
         hreflang: hreflangCode,
