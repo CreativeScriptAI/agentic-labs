@@ -169,6 +169,16 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         backgroundSize: "60px 60px",
       }}
     />
+    {/* Grain texture overlay — Lomo/Organic Gradients aesthetic */}
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        opacity: 0.045,
+        mixBlendMode: "overlay",
+      }}
+    />
     <Container size="lg" className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
@@ -370,7 +380,10 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
   const formatTime = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
   return (
-    <section id="hear-it" className="py-20 sm:py-24 bg-[#0A1128]">
+    <section id="hear-it" className="py-20 sm:py-24 bg-[#0A1128] relative overflow-hidden">
+      {/* Atmospheric colour blobs — Digital Impressionism, shifts with active tab */}
+      <div aria-hidden="true" style={{ position: "absolute", top: "-15%", left: "-8%", width: 360, height: 360, borderRadius: "50%", background: demo.color, filter: "blur(90px)", opacity: 0.07, transition: "background 0.6s ease", pointerEvents: "none" }} />
+      <div aria-hidden="true" style={{ position: "absolute", bottom: "-10%", right: "-5%", width: 280, height: 280, borderRadius: "50%", background: demo.color, filter: "blur(80px)", opacity: 0.05, transition: "background 0.6s ease", pointerEvents: "none" }} />
       <Container size="lg">
         <div className="text-center mb-12">
           <SectionLabel text="Hear it yourself" dark />
@@ -736,10 +749,10 @@ const HowItWorksSection = () => {
           {steps.map((step, i) => (
             <div key={i} className="relative flex gap-6 sm:gap-8 pb-10 last:pb-0">
               {i < steps.length - 1 && (
-                <div className="absolute left-[19px] top-12 bottom-0 w-0.5 bg-gray-100" />
+                <div className="absolute left-[19px] top-12 bottom-0" style={{ borderLeft: "2px dashed #d1d5db" }} />
               )}
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#0A1128] flex items-center justify-center z-10">
-                <span className="text-xs font-bold text-white">{step.number}</span>
+              <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-[#0A1128] bg-white flex items-center justify-center z-10">
+                <span className="text-xs font-bold text-[#0A1128]">{step.number}</span>
               </div>
               <div className="flex-1 bg-[#F9F6F4] rounded-2xl p-6 sm:p-8">
                 <p className="text-xs font-bold text-blue-600 tracking-widest uppercase mb-1 flex items-center gap-2">
