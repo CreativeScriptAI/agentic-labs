@@ -7,7 +7,7 @@ const CAL_LINK =
 const FinalCTASection = () => {
   return (
     <div
-      className="py-12 sm:py-16 lg:py-20"
+      className="relative overflow-hidden py-12 sm:py-16 lg:py-20"
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
@@ -15,7 +15,10 @@ const FinalCTASection = () => {
         marginRight: "-1rem",
       }}
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Atmospheric blobs */}
+      <div aria-hidden="true" style={{ position: "absolute", top: "-30%", right: "-10%", width: 400, height: 400, borderRadius: "50%", background: "#0062FF", filter: "blur(110px)", opacity: 0.05, pointerEvents: "none" }} />
+      <div aria-hidden="true" style={{ position: "absolute", bottom: "-30%", left: "-10%", width: 360, height: 360, borderRadius: "50%", background: "#FCCA07", filter: "blur(100px)", opacity: 0.06, pointerEvents: "none" }} />
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Headline */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
           Your business runs.

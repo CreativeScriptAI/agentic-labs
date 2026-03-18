@@ -73,8 +73,8 @@ const HowWeWorkSection = () => {
             >
               {/* Step Number */}
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-600 flex items-center justify-center">
-                  <span className="text-white font-mondwest text-lg sm:text-xl font-bold">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#0A1128] bg-white flex items-center justify-center">
+                  <span className="text-[#0A1128] font-mondwest text-lg sm:text-xl font-bold">
                     {index + 1}
                   </span>
                 </div>
