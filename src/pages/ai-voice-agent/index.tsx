@@ -532,39 +532,53 @@ const ProblemSection = () => {
   const costs = [
     { industry: "1 missed dental patient", cost: "Rs 15,000", note: "in lost revenue" },
     { industry: "1 missed real estate inquiry", cost: "Rs 40,000", note: "in lost commission" },
-    { industry: "1 missed AC repair call", cost: "Rs 1,500", note: "gone. Plus a one-star Google review." },
+    { industry: "1 missed AC repair call", cost: "Rs 1,500", note: "gone. Plus a one-star review." },
   ];
+
+  const coldLeads = [
+    "The WhatsApp sent at 8pm that nobody replied to.",
+    <>The lead who said &quot;call me later.&quot; Nobody did.</>,
+    "The candidate who applied Monday and got screened Thursday.",
+  ];
+
   return (
     <section className="py-20 sm:py-24 bg-white">
       <Container>
+
+        {/* Eyebrow + H2 */}
         <SectionLabel text="The real problem" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-6 max-w-2xl">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-[#0A1128] leading-tight mb-10 max-w-2xl">
           You&apos;re not losing leads to bad marketing.
           <br />
           You&apos;re losing them to missed calls.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          <div className="text-gray-600 space-y-4 text-base leading-relaxed">
-            <p>
-              Your receptionist is with a patient. Phone rings.
-              <br />
-              Your agent is in a showing. Phone rings.
-              <br />
+        {/* Two columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+
+          {/* Left — story */}
+          <div className="text-gray-500 space-y-5 text-base leading-relaxed">
+            <p className="leading-loose">
+              Your receptionist is with a patient. Phone rings.<br />
+              Your agent is in a showing. Phone rings.<br />
               Your recruiter finished for the day. Phone rings.
             </p>
-            <p>Nobody answers. The lead waits three seconds. Then calls the next number on Google Maps.</p>
-            <p className="font-semibold text-[#0A1128]">That&apos;s not a bad day. That&apos;s Tuesday.</p>
+            <p>
+              Nobody answers. The lead waits three seconds.
+              Then calls the next number on Google Maps.
+            </p>
           </div>
+
+          {/* Right — cost cards, bigger numbers */}
           <div className="space-y-3">
             {costs.map((c, i) => (
-              <div key={i} className="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-red-400 mt-1.5" />
-                <div>
-                  <p className="text-sm text-gray-500">{c.industry}</p>
-                  <p className="text-xl font-bold text-red-600">
+              <div key={i} className="flex items-center gap-4 border border-red-100 rounded-xl p-4 bg-red-50/60">
+                <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-red-400" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">{c.industry}</p>
+                  <p className="text-2xl font-bold text-red-600 leading-tight">
                     {c.cost}{" "}
-                    <span className="text-sm font-normal text-gray-500">{c.note}</span>
+                    <span className="text-sm font-normal text-gray-400">{c.note}</span>
                   </p>
                 </div>
               </div>
@@ -572,15 +586,33 @@ const ProblemSection = () => {
           </div>
         </div>
 
-        <div className="bg-[#F9F6F4] rounded-2xl p-6 sm:p-8 text-gray-600 space-y-3 text-base leading-relaxed">
-          <p>It doesn&apos;t end at the missed call.</p>
-          <p>The WhatsApp sent at 8pm that nobody replied to.</p>
-          <p>The lead who said &quot;call me later.&quot; Nobody did.</p>
-          <p>The candidate who applied Monday and got screened Thursday.</p>
-          <p className="font-semibold text-[#0A1128]">
-            Every one of these is revenue you already earned. Left on the table.
+        {/* Punchline — full-width visual break */}
+        <div className="border-y border-gray-100 py-8 mb-14 text-center">
+          <p className="font-eb-garamond italic text-[#0A1128] text-2xl sm:text-3xl lg:text-4xl">
+            That&apos;s not a bad day. That&apos;s Tuesday.
           </p>
         </div>
+
+        {/* Cold lead lines — no card, bare rows */}
+        <div className="mb-10">
+          <p className="text-sm text-gray-400 uppercase tracking-widest mb-6">It doesn&apos;t end at the missed call.</p>
+          {coldLeads.map((line, i) => (
+            <div key={i} className="flex items-baseline gap-4 py-4 border-b border-gray-100 last:border-0">
+              <span className="text-gray-200 text-sm flex-shrink-0 select-none">—</span>
+              <p className="text-gray-500 text-base">{line}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Closing statement */}
+        <div className="rounded-xl border border-red-100 bg-red-50/40 px-6 py-5">
+          <p className="text-base text-gray-600">
+            Every one of these is{" "}
+            <span className="font-semibold text-[#0A1128]">revenue you already earned.</span>{" "}
+            Left on the table.
+          </p>
+        </div>
+
       </Container>
     </section>
   );

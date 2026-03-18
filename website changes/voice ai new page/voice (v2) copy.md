@@ -1,6 +1,6 @@
 # tryagentic.ai | India Page Copy — Guftugu by Agentic AI Labs
-**Version:** v7 (Guftugu branding)
-**Market:** India | **Currency:** INR | **Primary CTA:** Book a Discovery Call
+**Version:** v8 (30-min go-live positioning)
+**Market:** India | **Currency:** INR | **Primary CTA:** Go Live in 30 Minutes
 **Product name:** Guftugu — AI conversation system by Agentic AI Labs
 **Components:** Dhvani (voice) + Sandesh (WhatsApp/text) = Guftugu (conversation)
 **Awareness level:** Level 2 — visitor knows they miss calls, doesn't yet know an AI system can fix it
@@ -11,7 +11,7 @@
 ## NAV
 
 ```
-tryagentic.ai      [Use Cases]   [Pricing]   [Book a Discovery Call]
+[Agentic AI Labs](https://tryagentikai.com)      [Use Cases]   [Pricing]   [Go Live in 30 Minutes]
 ```
 
 ---
@@ -19,33 +19,35 @@ tryagentic.ai      [Use Cases]   [Pricing]   [Book a Discovery Call]
 ## HERO
 
 **[Eyebrow]**
-Guftugu — AI Conversation System by Agentic AI Labs
+Guftugu by Agentic AI Labs
 
 **[H1]**
-The call came in at 10pm.
-You were asleep.
-Your competitor wasn't.
+You missed 3 calls today.
+You told yourself you'd call back.
+You won't.
 
 **[Subhead]**
-Guftugu answers every call and follows up on WhatsApp. Automatically. In Hindi or English. 24/7.
-Dhvani handles the voice. Sandesh handles the message. Together, nothing gets missed.
+The longer you wait, the colder the lead. Guftugu answers every call the moment it comes in and follows up on WhatsApp automatically — whether you remember to or not. Dhvani handles the voice. Sandesh handles the message.
 
 **[Primary CTA]**
-Book a Discovery Call
+Go Live in 30 Minutes
+
+**[CTA subtext]**
+Not a demo. A setup call. You tell us how your business works — Guftugu goes live before we hang up.
 
 **[Secondary CTA]**
-Or call our AI right now: [[DEMO NUMBER]]
-*(2 minutes. You'll hear exactly what your callers hear.)*
+Or call Guftugu right now: [[DEMO NUMBER]]
+*(Hear exactly what your callers will hear. 2 minutes.)*
 
 **[Trust line]**
-We learn your business first. Then we build. Live in 7 days.
+We don't demo. We deploy. One call — 30 minutes — your AI is live.
 
 ---
 
 ## SOCIAL PROOF BAR
 
 ```
-[[X]] businesses live   ·   [[X,XXX]] calls answered   ·   Live in under 7 days   ·   Rs 0 to start
+[[X]] businesses live   ·   [[X,XXX]] calls answered   ·   Live in 30 minutes   ·   Rs 0 to start
 ```
 
 [[Client logos]]
@@ -121,28 +123,106 @@ Together, Guftugu does what your best employee would do — answer, follow up, o
 
 ---
 
+## HOW DHVANI AND SANDESH WORK TOGETHER
+
+**[Section label]**
+See it in action
+
+**[H2]**
+One lead. Two channels.
+One conversation.
+
+Dhvani and Sandesh don't work independently. Every call Dhvani takes, Sandesh follows up. Every WhatsApp Sandesh sends, Dhvani backs up with a call. The lead never falls through the gap between the two.
+
+**[Designer note: Show as 3 tappable scenario cards. Each expands to reveal the step-by-step flow below.]**
+
+---
+
+**SCENARIO 1 — Missed call at 9pm**
+
+```
+9:03pm   Lead calls. You're asleep.
+9:03pm   Dhvani answers. Takes their name and requirement.
+9:03pm   Sandesh fires on WhatsApp: "Hi, sorry we missed you — how can we help?"
+9:05pm   Lead replies: "I wanted to book a consultation."
+9:05pm   Sandesh: "We have slots Tuesday 11am or Wednesday 3pm. Which works?"
+9:06pm   Lead: "Tuesday."
+9:06pm   Booking confirmed. Calendar updated.
+9:06pm   You get a WhatsApp alert: "New booking — Rahul Sharma, Tuesday 11am."
+```
+
+You were asleep the whole time.
+
+---
+
+**SCENARIO 2 — Lead books but doesn't show up**
+
+```
+Day 0    Lead books via Dhvani.
+Day 0    Sandesh sends WhatsApp confirmation.
+Day 1    Sandesh sends appointment reminder.
+2hrs before  Sandesh: "Still coming in at 11am today?"
+             No reply.
+             Dhvani calls to confirm.
+             Lead picks up. Reschedules for Thursday.
+Thursday Sandesh sends new reminder. Lead shows up.
+```
+
+One no-show recovered. Zero effort from you.
+
+---
+
+**SCENARIO 3 — Lead goes cold**
+
+```
+Day 0    Lead calls, says "I'll think about it."
+Day 1    Sandesh: follow-up WhatsApp.
+Day 3    Dhvani: outbound call.
+Day 5    Sandesh: value message.
+Day 7    Dhvani: final call.
+Day 14   Sandesh: re-engagement message.
+Day 14   Lead replies: "Okay, let's do it."
+```
+
+Most closures happen Day 5 to Day 7.
+Guftugu was working the lead the whole time. You weren't.
+
+---
+
+**[Smart switching note — show as a callout card]**
+
+**They never get spammed from both sides.**
+
+Lead replies on WhatsApp? Dhvani's outbound calls pause automatically.
+Lead picks up Dhvani's call? Sandesh's WhatsApp messages pause.
+
+Guftugu always knows which channel the lead is on.
+It switches. You don't have to.
+
+---
+
 ## HOW IT WORKS
 
 **[H2]**
-Three steps. You barely have to show up.
+One call. Three things happen. You go live.
 
 ```
-STEP 1: WE LEARN YOUR BUSINESS
+STEP 1: YOU TELL US HOW YOUR BUSINESS WORKS
 ----------------------------------------------
-One 30-minute call. We map how your callers talk,
-what they ask, and what your process looks like.
-Bring call recordings if you have them — we train
-your AI on your actual conversations.
-----------------------------------------------
-
-STEP 2: WE BUILD IT
-----------------------------------------------
-We write the script, train the AI, set up WhatsApp
-flows, and connect to your calendar or CRM.
-Done-for-you. Live in 7 days.
+We ask how your callers talk, what they ask,
+what your current process looks like.
+Bring call recordings if you have them.
+30 minutes. No slides. No pitch.
 ----------------------------------------------
 
-STEP 3: YOUR AI GOES TO WORK
+STEP 2: WE CONFIGURE GUFTUGU ON THE CALL
+----------------------------------------------
+Script written. Dhvani trained on your business.
+Sandesh flows set up. Calendar connected.
+Done-for-you — while you're still on the call.
+----------------------------------------------
+
+STEP 3: YOU GO LIVE BEFORE WE HANG UP
 ----------------------------------------------
 Every call answered. Every lead followed up.
 You get a WhatsApp when someone is ready to book.
@@ -150,7 +230,7 @@ That's the only time you need to pick up the phone.
 ----------------------------------------------
 ```
 
-Book a Discovery Call
+Go Live in 30 Minutes
 
 ---
 
@@ -280,12 +360,12 @@ Don't see your industry? Talk to us. We've built for 20+ use cases.
 ## WHAT MAKES US DIFFERENT
 
 **[H2]**
-Every other AI company starts with a demo.
-We start with a question.
+Every other AI company shows you a demo.
+We hand you a live system.
 
-Demos always work. Then you go live. Your callers speak Hinglish. Three calls come in at once. The AI gives the wrong slot because it wasn't synced to your calendar.
+Other tools demo beautifully. Then you go live. Your callers speak Hinglish. Three calls come in at once. The AI gives the wrong slot because nobody configured it for your actual business.
 
-Most voice AI is built for demos — not for the actual chaos of an Indian business at 11am on a Monday. That's where it breaks. Guftugu is built for that chaos.
+Most voice AI is built for demos — not for the chaos of an Indian business at 11am on a Monday. Guftugu is configured for your business on the setup call itself. What goes live has already heard how your callers talk.
 
 ```
 PLATFORM COMPANIES (built for developers)
@@ -353,7 +433,7 @@ Think of this as your Junior Associate. Knows your business, handles objections,
 
 **Best for:** Dental clinics, real estate agencies, and hiring teams who want the full system.
 
-Book a Discovery Call
+Go Live in 30 Minutes
 
 ---
 
@@ -457,12 +537,12 @@ No. We forward calls from your existing business number. Your callers see your n
 ---
 
 **Q: How fast does it go live?**
-7 business days for most setups. We need your script, calendar access, and one 30-minute call. We handle everything else.
+30 minutes. We configure Guftugu on the setup call itself — Dhvani trained on your business, Sandesh flows set up, calendar connected. You go live before we hang up. No waiting. No back-and-forth over email.
 
 ---
 
 **Q: Is there a guarantee?**
-If your AI isn't live within 10 business days of us receiving your setup materials, we refund the setup fee. No questions asked. Once live, we tune at no extra cost until it performs to spec.
+If Guftugu isn't live by the end of your setup call, you don't pay. Once live, we tune at no extra cost for the first 30 days until it's performing to spec.
 
 ---
 
@@ -476,26 +556,26 @@ The leads are there. The calls are coming in. The problem isn't demand — it's 
 
 That's exactly what this fixes.
 
-The first step is a 30-minute call. No slides. No pitch. We learn how your business works, then we build what actually fits.
+One call. 30 minutes. You describe your business — we configure Guftugu on the spot. By the time we hang up, Dhvani is answering your calls and Sandesh is working your leads.
 
-**Book a Discovery Call**
+**Go Live in 30 Minutes**
 
-Not ready to talk? Start with a free audit:
+Not ready to commit? Start with a free audit:
 Ghost Patient Report · Speed-to-Lead Test · Hiring Audit · Other
 
-Or call our AI right now: [[DEMO NUMBER]]
+Or call Guftugu right now: [[DEMO NUMBER]]
 Hear what your callers will hear. Takes 2 minutes.
 
-**Rs 0 to start. Live in 7 days.**
+**Rs 0 to start. Live before the call ends.**
 
 ---
 
 ## FOOTER
 
 ```
-tryagentic.ai
+[Agentic AI Labs](https://tryagentikai.com)
 
-[Use Cases]   [Pricing]   [Book a Discovery Call]   [Free Audit]
+[Use Cases]   [Pricing]   [Go Live in 30 Minutes]   [Free Audit]
 
 Guftugu by Agentic AI Labs. Dhvani answers the call. Sandesh works the lead. Built in India. Running everywhere.
 
