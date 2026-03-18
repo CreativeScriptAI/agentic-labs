@@ -344,10 +344,10 @@ const sections = [
         <p className="text-slate-600">
           To exercise any of these rights, contact us at{" "}
           <a
-            href="mailto:contact@creativescript.org"
+            href="mailto:aditya@tryagentikai.com"
             className="text-blue-600 hover:underline"
           >
-            contact@creativescript.org
+            aditya@tryagentikai.com
           </a>
           . We will respond within 30 days. We may need to verify your identity
           before acting on your request.
@@ -458,10 +458,10 @@ const sections = [
           <p>
             Email:{" "}
             <a
-              href="mailto:contact@creativescript.org"
+              href="mailto:aditya@tryagentikai.com"
               className="text-blue-600 hover:underline"
             >
-              contact@creativescript.org
+              aditya@tryagentikai.com
             </a>
           </p>
           <p>
@@ -566,10 +566,10 @@ const PrivacyPolicyPage = () => {
         <div className="mt-16 mb-8 text-center text-sm text-slate-400">
           Last updated: 18 March 2026 &nbsp;·&nbsp; Agentic AI Labs &nbsp;·&nbsp;{" "}
           <a
-            href="mailto:contact@creativescript.org"
+            href="mailto:aditya@tryagentikai.com"
             className="text-blue-500 hover:underline"
           >
-            contact@creativescript.org
+            aditya@tryagentikai.com
           </a>
         </div>
       </div>
