@@ -179,6 +179,9 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         mixBlendMode: "overlay",
       }}
     />
+    {/* Atmospheric blobs — Digital Impressionism */}
+    <div aria-hidden="true" style={{ position: "absolute", top: "-15%", right: "-5%", width: 500, height: 500, borderRadius: "50%", background: "#0062FF", filter: "blur(130px)", opacity: 0.08, pointerEvents: "none" }} />
+    <div aria-hidden="true" style={{ position: "absolute", bottom: "-20%", left: "-8%", width: 420, height: 420, borderRadius: "50%", background: "#FCCA07", filter: "blur(120px)", opacity: 0.06, pointerEvents: "none" }} />
     <Container size="lg" className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
@@ -542,8 +545,10 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <Container>
+    <section className="py-20 sm:py-24 bg-white relative overflow-hidden">
+      {/* Grain texture */}
+      <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`, opacity: 0.025, mixBlendMode: "multiply", pointerEvents: "none" }} />
+      <Container className="relative">
 
         {/* Eyebrow + H2 */}
         <SectionLabel text="The real problem" />
@@ -1076,8 +1081,10 @@ const WhyDifferentSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <Container>
+    <section className="py-20 sm:py-24 bg-white relative overflow-hidden">
+      {/* Grain texture */}
+      <div aria-hidden="true" style={{ position: "absolute", inset: 0, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")`, opacity: 0.025, mixBlendMode: "multiply", pointerEvents: "none" }} />
+      <Container className="relative">
         <SectionLabel text="What makes us different" />
         <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-4 max-w-2xl">
           Every other AI company shows you a demo.
@@ -1491,8 +1498,11 @@ const FAQSection = () => {
 
 // ─── FINAL CTA ────────────────────────────────────────────────────────────────
 const FinalCTA = () => (
-  <section className="py-20 sm:py-24 bg-[#0A1128]">
-    <Container className="text-center">
+  <section className="py-20 sm:py-24 bg-[#0A1128] relative overflow-hidden">
+    {/* Atmospheric blobs */}
+    <div aria-hidden="true" style={{ position: "absolute", top: "-20%", right: "-8%", width: 460, height: 460, borderRadius: "50%", background: "#0062FF", filter: "blur(120px)", opacity: 0.08, pointerEvents: "none" }} />
+    <div aria-hidden="true" style={{ position: "absolute", bottom: "-20%", left: "-8%", width: 380, height: 380, borderRadius: "50%", background: "#FCCA07", filter: "blur(110px)", opacity: 0.06, pointerEvents: "none" }} />
+    <Container className="text-center relative">
       <SectionLabel text="Ready?" dark />
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-white leading-tight mb-4">
         Your competitor picked up that call.
