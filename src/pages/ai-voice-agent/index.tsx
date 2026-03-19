@@ -124,12 +124,12 @@ const DEMOS: Record<DemoTab, {
     color: "#FF5500",
     audioSrc: "/audio/demo-dental.mp3",
     transcript: [
-      { speaker: "Caller", text: "Hello, Dr. Mehta ki clinic hai? Main appointment lena chahta tha — cleaning aur checkup ke liye." },
+      { speaker: "Caller", text: "Hello, Dr. Mehta ki clinic hai? Main appointment lena chahta tha, cleaning aur checkup ke liye." },
       { speaker: "Dhvani", text: "Haan ji! Aap naye patient hain ya pehle aaye hain humare yahan?" },
       { speaker: "Caller", text: "Naya hoon. Bhai ne refer kiya tha. Fees kitni hai cleaning ki?" },
-      { speaker: "Dhvani", text: "Cleaning aur checkup combo ₹800 mein hota hai. Kal subah 10 baje ya Thursday 4 baje — kaunsa time suit karega?" },
+      { speaker: "Dhvani", text: "Cleaning aur checkup combo ₹800 mein hota hai. Kal subah 10 baje ya Thursday 4 baje, kaunsa time suit karega?" },
       { speaker: "Caller", text: "Thursday 4 baje perfect rahega." },
-      { speaker: "Dhvani", text: "Done Rahul ji! Thursday 4 baje confirm ho gayi. WhatsApp pe reminder aayega 2 ghante pehle — aur directions bhi. Dhanyawaad!" },
+      { speaker: "Dhvani", text: "Done Rahul ji! Thursday 4 baje confirm ho gayi. WhatsApp pe reminder aayega 2 ghante pehle, aur directions bhi. Dhanyawaad!" },
     ],
   },
   realestate: {
@@ -140,7 +140,7 @@ const DEMOS: Record<DemoTab, {
     color: "#3300FF",
     audioSrc: "/audio/demo-realestate.mp3",
     transcript: [
-      { speaker: "Caller", text: "Bhai, wo 2BHK Bandra West mein — abhi bhi available hai? MagicBricks pe dekha." },
+      { speaker: "Caller", text: "Bhai, wo 2BHK Bandra West mein, abhi bhi available hai? MagicBricks pe dekha." },
       { speaker: "Dhvani", text: "Haan ji available hai! ₹1.2 crore mein listed hai. Aapka budget range kya hai?" },
       { speaker: "Caller", text: "1 to 1.5 crore ke beech mein soch rahe hain. Covered parking bhi chahiye." },
       { speaker: "Dhvani", text: "Parking included hai is flat mein. Saturday ko site visit ka time doon?" },
@@ -156,10 +156,10 @@ const DEMOS: Record<DemoTab, {
     color: "#FF0055",
     audioSrc: "/audio/demo-hiring.mp3",
     transcript: [
-      { speaker: "Caller", text: "Hello, main Naukri pe warehouse supervisor ki vacancy dekhi thi — usi ke baare mein call kiya tha." },
+      { speaker: "Caller", text: "Hello, main Naukri pe warehouse supervisor ki vacancy dekhi thi, usi ke baare mein call kiya tha." },
       { speaker: "Dhvani", text: "Ji bilkul Suresh ji! Aapka warehouse management mein kitne saal ka experience hai?" },
-      { speaker: "Caller", text: "3 saal se zyada. Pehle ek logistics company mein tha — 20 logon ki team handle karta tha." },
-      { speaker: "Dhvani", text: "Bahut achha. Joining kab tak possible hai — 2 hafte mein ho sakta hai?" },
+      { speaker: "Caller", text: "3 saal se zyada. Pehle ek logistics company mein tha, 20 logon ki team handle karta tha." },
+      { speaker: "Dhvani", text: "Bahut achha. Joining kab tak possible hai, 2 hafte mein ho sakta hai?" },
       { speaker: "Caller", text: "Haan, 2 hafte mein ho jayega. Urgent ho toh pehle bhi kar sakta hoon." },
       { speaker: "Dhvani", text: "Perfect. Recruiter ka call 24 ghante mein aayega. Aapki details ka summary WhatsApp pe bhej raha hoon. Shukriya!" },
     ],
@@ -178,7 +178,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         backgroundSize: "60px 60px",
       }}
     />
-    {/* Saffron/turmeric ambient glow — Indian warmth */}
+    {/* Saffron/turmeric ambient glow, Indian warmth */}
     <div
       aria-hidden="true"
       className="absolute pointer-events-none"
@@ -190,7 +190,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         background: "radial-gradient(ellipse at center, rgba(255,136,0,0.10) 0%, transparent 65%)",
       }}
     />
-    {/* Deep magenta glow — right side warmth */}
+    {/* Deep magenta glow, right side warmth */}
     <div
       aria-hidden="true"
       className="absolute pointer-events-none"
@@ -216,7 +216,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
         <div>
-          <SectionLabel text="Guftugu — AI Conversation System by Agentic AI Labs" dark />
+          <SectionLabel text="Guftugu · Calls answered. Follow-ups on WhatsApp." dark />
 
           <h1 className="text-4xl sm:text-5xl lg:text-[3.6rem] font-bold text-white leading-[1.08] tracking-[-0.02em] mb-6">
             <span className="text-[#FF8800]">7 leads</span> called<br />
@@ -224,12 +224,12 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             <span className="text-white/65">All 7 got answered.</span>
           </h1>
 
-          {/* Outcome-first sub — Indian framing */}
+          {/* Outcome-first sub, Indian framing */}
           <p className="text-lg sm:text-xl text-white/80 max-w-lg mb-3 leading-relaxed">
-            Guftugu answers every call and follows up on WhatsApp — automatically, in Hindi or English, 24/7.
+            Guftugu answers every call and follows up on WhatsApp, automatically, in Hindi or English, 24/7.
           </p>
           <p className="text-base text-white/50 mb-4 max-w-md leading-relaxed">
-            Like a full-time receptionist — except she costs{" "}
+            Like a full-time receptionist, except she costs{" "}
             <span className="text-white/75 font-semibold">₹2,499/month</span> and never misses a call.
           </p>
 
@@ -273,14 +273,14 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1 h-1 rounded-full bg-[#FCCA07]/70 flex-shrink-0" />
-              <span className="text-white/55 font-medium">Live in 7 days</span>
+              <span className="text-white/55 font-medium">Live in 30 mins</span>
             </span>
           </div>
         </div>
 
         {/* Right: Aura card collage */}
         <div className="relative hidden lg:block h-[600px]" style={{ perspective: "1000px" }}>
-          {/* Card 1 — Dental · saffron + gold */}
+          {/* Card 1, Dental · saffron + gold */}
           <div className="absolute" style={{ top: "10%", right: "20%", transform: "rotate(8deg)", zIndex: 3 }}>
             <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
               <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
@@ -307,7 +307,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             </div>
           </div>
 
-          {/* Card 2 — Hiring · pink + cyan */}
+          {/* Card 2, Hiring · pink + cyan */}
           <div className="absolute" style={{ top: "30%", right: "42%", transform: "rotate(-12deg) scale(0.95)", zIndex: 2 }}>
             <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
               <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
@@ -334,7 +334,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             </div>
           </div>
 
-          {/* Card 3 — Real Estate · blue + teal */}
+          {/* Card 3, Real Estate · blue + teal */}
           <div className="absolute" style={{ top: "48%", right: "8%", transform: "rotate(15deg) scale(0.9)", zIndex: 1 }}>
             <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
               <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
@@ -428,7 +428,7 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
     audio.ontimeupdate = () => setCurrentTime(audio.currentTime);
     audio.onended = () => { setIsPlaying(false); setCurrentTime(0); };
     audio.play().catch(() => {
-      // No audio file — simulate with transcript animation only
+      // No audio file, simulate with transcript animation only
     });
     setIsPlaying(true);
     // Animate transcript regardless of audio
@@ -447,7 +447,7 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
 
   return (
     <section id="hear-it" className="py-20 sm:py-24 bg-[#0A1128] relative overflow-hidden">
-      {/* Atmospheric colour blobs — Digital Impressionism, shifts with active tab */}
+      {/* Atmospheric colour blobs, Digital Impressionism, shifts with active tab */}
       <div aria-hidden="true" style={{ position: "absolute", top: "-15%", left: "-8%", width: 360, height: 360, borderRadius: "50%", background: demo.color, filter: "blur(90px)", opacity: 0.07, transition: "background 0.6s ease", pointerEvents: "none" }} />
       <div aria-hidden="true" style={{ position: "absolute", bottom: "-10%", right: "-5%", width: 280, height: 280, borderRadius: "50%", background: demo.color, filter: "blur(80px)", opacity: 0.05, transition: "background 0.6s ease", pointerEvents: "none" }} />
       <Container size="lg">
@@ -457,7 +457,7 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
             Bharosa mat karo. Sun lo.
           </h2>
           <p className="text-white/70 text-base max-w-lg mx-auto mb-2">
-            Yahi sunenge aapke customers — Hindi mein, English mein, ya dono ek saath.
+            Yahi sunenge aapke customers, Hindi mein, English mein, ya dono ek saath.
           </p>
           <p className="text-white/40 text-sm max-w-md mx-auto">
             Real Indian business scenarios. This is exactly what your callers hear on the first ring.
@@ -568,7 +568,7 @@ const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab;
         </div>
 
         <p className="text-center text-white/25 text-xs mt-6">
-          Sample conversations — representative of actual Dhvani agent behavior across Indian businesses
+          Sample conversations, representative of actual Dhvani agent behavior across Indian businesses
         </p>
       </Container>
     </section>
@@ -667,7 +667,7 @@ const ProblemSection = () => {
     {
       scenario: "Dental clinic misses 1 new patient call",
       cost: "₹15,000",
-      note: "in lost revenue — per call",
+      note: "in lost revenue, per call",
       icon: (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -677,7 +677,7 @@ const ProblemSection = () => {
     {
       scenario: "Real estate agent misses 1 property inquiry",
       cost: "₹40,000",
-      note: "in commission — gone in 40 minutes",
+      note: "in commission, gone in 40 minutes",
       icon: (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/>
@@ -717,7 +717,7 @@ const ProblemSection = () => {
           They lose them in the 3 seconds after the phone rings and nobody picks up.
         </p>
 
-        {/* Ledger — scenario + consequence on the same row */}
+        {/* Ledger, scenario + consequence on the same row */}
         <div className="mb-3">
           <div className="flex items-center justify-between pb-3 border-b border-gray-100 mb-1">
             <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-300">The scenario</p>
@@ -744,7 +744,7 @@ const ProblemSection = () => {
                 </svg>
               </div>
 
-              {/* Cost — the punchline */}
+              {/* Cost, the punchline */}
               <div className="flex-shrink-0 text-right">
                 <span className="font-eb-garamond italic text-3xl sm:text-4xl text-red-600 leading-none">{c.cost}</span>
               </div>
@@ -823,7 +823,7 @@ const ProblemSection = () => {
             ))}
           </div>
 
-          {/* Footer — closing statement */}
+          {/* Footer, closing statement */}
           <div className="px-6 sm:px-8 py-6 border-t border-white/[0.08]">
             <p className="font-eb-garamond italic text-white text-xl sm:text-2xl leading-snug">
               Yeh sab revenue aapne pehle se kama liya tha.
@@ -842,7 +842,7 @@ const SolutionSection = () => (
   <section className="py-20 sm:py-24 bg-[#F9F6F4]">
     <Container size="md">
 
-      {/* Transition — dismiss the half-fixes fast */}
+      {/* Transition, dismiss the half-fixes fast */}
       <div className="flex flex-col gap-1.5 mb-6">
         {["Hire a second receptionist. She gets busy too.", "Add a WhatsApp chatbot. Half your leads call instead of typing.", "Buy a voice bot. Lead goes cold. Nobody follows up."].map((t, i) => (
           <div key={i} className="flex items-center gap-2.5 text-sm text-gray-400">
@@ -855,7 +855,7 @@ const SolutionSection = () => (
         None of them fix the whole pipeline. Guftugu is the whole pipeline.
       </p>
 
-      {/* Heading — leverage framing */}
+      {/* Heading, leverage framing */}
       <SectionLabel text="The system · Guftugu" />
       <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-3 max-w-xl">
         Every call answered.<br />
@@ -863,15 +863,15 @@ const SolutionSection = () => (
         <span className="text-gray-400">You get pinged only when it&apos;s hot.</span>
       </h2>
       <p className="text-base text-gray-500 mb-10 max-w-lg leading-relaxed">
-        Guftugu is not a chatbot or a voice bot — it&apos;s your complete lead pipeline, trained on your business and running 24/7 without you.
+        Guftugu is not a chatbot or a voice bot, it&apos;s your complete lead pipeline, trained on your business and running 24/7 without you.
       </p>
 
-      {/* ICP leverage statements — 3 lines */}
+      {/* ICP leverage statements, 3 lines */}
       <div className="space-y-2 mb-12">
         {[
-          { who: "Doctor/Clinic", line: "While you're with a patient — Guftugu is booking your next one." },
-          { who: "Real Estate", line: "While you're in a site visit — Guftugu is qualifying the next buyer." },
-          { who: "Recruiter", line: "While your team screens one candidate — Guftugu is screening the other 139." },
+          { who: "Doctor/Clinic", line: "While you're with a patient, Guftugu is booking your next one." },
+          { who: "Real Estate", line: "While you're in a site visit, Guftugu is qualifying the next buyer." },
+          { who: "Recruiter", line: "While your team screens one candidate, Guftugu is screening the other 139." },
         ].map((s, i) => (
           <div key={i} className="flex items-baseline gap-3">
             <span className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-300 w-24 flex-shrink-0">{s.who}</span>
@@ -880,7 +880,7 @@ const SolutionSection = () => (
         ))}
       </div>
 
-      {/* Flowchart — two-character system */}
+      {/* Flowchart, two-character system */}
       <div className="mb-6">
         <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-300 mb-4">How Guftugu runs</p>
 
@@ -917,7 +917,7 @@ const SolutionSection = () => (
             </div>
             <div className="space-y-2.5">
               {[
-                "Answers in under 2 seconds — Hindi, English, or Hinglish",
+                "Answers in under 2 seconds, Hindi, English, or Hinglish",
                 "Asks your exact questions. Captures name, need, intent.",
                 "Books directly into your calendar. No IVR. No press-1.",
               ].map((t, i) => (
@@ -929,7 +929,7 @@ const SolutionSection = () => (
             </div>
           </div>
 
-          {/* Handoff arrow — center */}
+          {/* Handoff arrow, center */}
           <div className="flex items-center justify-center h-full py-6 sm:py-0">
             <svg width="20" height="12" viewBox="0 0 20 12" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round" className="hidden sm:block"><line x1="0" y1="6" x2="16" y2="6"/><polyline points="12,2 18,6 12,10"/></svg>
             <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round" className="sm:hidden"><line x1="6" y1="0" x2="6" y2="16"/><polyline points="2,12 6,18 10,12"/></svg>
@@ -952,7 +952,7 @@ const SolutionSection = () => (
             <div className="space-y-2.5">
               {[
                 "Didn't pick up? WhatsApp fires automatically within 5 seconds.",
-                "Booked? Reminder sent 2 hours before — no-shows drop.",
+                "Booked? Reminder sent 2 hours before, no-shows drop.",
                 "Went cold? 14-day follow-up runs. You get pinged when they're hot.",
               ].map((t, i) => (
                 <div key={i} className="flex gap-2.5 text-xs text-gray-600">
@@ -973,16 +973,16 @@ const SolutionSection = () => (
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-2 bg-[#FCCA07] rounded-full px-5 py-2.5">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
-            <span className="text-xs font-bold text-[#0A1128]">You get pinged — only when the lead is hot</span>
+            <span className="text-xs font-bold text-[#0A1128]">You get pinged, only when the lead is hot</span>
           </div>
         </div>
       </div>
 
-      {/* Memory callout — compounding advantage */}
+      {/* Memory callout, compounding advantage */}
       <div className="bg-[#0A1128] rounded-2xl p-6 sm:p-8 text-white">
         <p className="font-semibold text-white text-base mb-1">Gets sharper with every call.</p>
         <p className="text-white/50 text-sm leading-relaxed mb-5">
-          Every conversation Guftugu handles makes the next one better. It learns what your callers actually say — so it handles them better than a new hire ever could.
+          Every conversation Guftugu handles makes the next one better. It learns what your callers actually say, so it handles them better than a new hire ever could.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
@@ -999,7 +999,7 @@ const SolutionSection = () => (
             {
               when: "Month 2",
               headline: "Filters your best leads",
-              icp: "Your agent, doctor, recruiter — only talks to people worth their time.",
+              icp: "Your agent, doctor, recruiter, only talks to people worth their time.",
             },
           ].map((m, i) => (
             <div key={i} className="bg-white/[0.06] rounded-xl px-4 py-3 border border-white/[0.06]">
@@ -1028,12 +1028,12 @@ const HowItWorksSection = () => {
       ),
       title: "You talk. We listen.",
       sub: "One call. No slides. No commitment.",
-      bullets: ["We map your callers, your questions, your tone.", "Bring recordings if you have them — we'll train on real calls."],
+      bullets: ["We map your callers, your questions, your tone.", "Bring recordings if you have them, we'll train on real calls."],
       you: "Your effort: 30 minutes.",
     },
     {
       num: "02",
-      badge: "7 days",
+      badge: "30 mins",
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
@@ -1068,7 +1068,7 @@ const HowItWorksSection = () => {
           <span className="text-gray-400">You barely have to show up.</span>
         </h2>
 
-        {/* Step cards — horizontal on desktop */}
+        {/* Step cards, horizontal on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           {steps.map((step, i) => (
             <div key={i} className="relative bg-[#F9F6F4] border border-gray-200 rounded-2xl p-5 flex flex-col gap-4">
@@ -1095,7 +1095,7 @@ const HowItWorksSection = () => {
               <ul className="space-y-1.5 flex-1">
                 {step.bullets.map((b, j) => (
                   <li key={j} className="flex gap-2 text-xs text-gray-600 leading-relaxed">
-                    <span className="text-gray-400 flex-shrink-0 mt-0.5">—</span>
+                    <span className="text-gray-400 flex-shrink-0 mt-0.5">-</span>
                     {b}
                   </li>
                 ))}
@@ -1104,7 +1104,7 @@ const HowItWorksSection = () => {
               {/* Your effort callout */}
               <p className="text-[11px] font-semibold text-[#0A1128] border-t border-gray-300 pt-3">{step.you}</p>
 
-              {/* Connector arrow — hidden on last */}
+              {/* Connector arrow, hidden on last */}
               {i < steps.length - 1 && (
                 <div className="hidden sm:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 justify-center">
                   <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round"><line x1="0" y1="6" x2="12" y2="6"/><polyline points="8,2 14,6 8,10"/></svg>
@@ -1156,19 +1156,19 @@ const useCaseData = {
     ],
     punchline: "Not bad marketing. Just an unanswered phone.",
     outcomes: [
-      { icon: "clock", text: "24/7 booking — even at 11pm" },
+      { icon: "clock", text: "24/7 booking, even at 11pm" },
       { icon: "lang", text: "Hindi + English, in the same call" },
       { icon: "bell", text: "WhatsApp reminders → no-shows drop" },
       { icon: "alert", text: "High-value inquiry? You get pinged instantly" },
       { icon: "refresh", text: "Auto follow-up on every missed call" },
-      { icon: "rupee", text: "Full reception — ₹2,499/mo, no extra staff" },
+      { icon: "rupee", text: "Full reception, ₹2,499/mo, no extra staff" },
     ],
     comparison: [
       { metric: "After-hours calls", before: "Voicemail / missed", after: "Answered & booked" },
       { metric: "Response time", before: "30+ min callback", after: "< 2 seconds" },
-      { metric: "No-show rate", before: "High — no reminders", after: "WhatsApp reminders sent" },
+      { metric: "No-show rate", before: "High, no reminders", after: "WhatsApp reminders sent" },
     ],
-    cta: { label: "Get a Free Ghost Patient Report", note: "We call your clinic as a mystery patient — at peak hours and at 9pm." },
+    cta: { label: "Get a Free Ghost Patient Report", note: "We call your clinic as a mystery patient, at peak hours and at 9pm." },
   },
   realestate: {
     label: "Real Estate",
@@ -1183,10 +1183,10 @@ const useCaseData = {
     punchline: "Your pipeline isn't broken. Your phone response is.",
     outcomes: [
       { icon: "phone", text: "Answered during site visits, drives, meetings" },
-      { icon: "qualify", text: "Budget, area, timeline — qualified on the call" },
+      { icon: "qualify", text: "Budget, area, timeline, qualified on the call" },
       { icon: "crm", text: "Auto-logged to your CRM or Google Sheet" },
       { icon: "wa", text: "14-day WhatsApp follow-up for cold leads" },
-      { icon: "bolt", text: "<2s response — faster than any competitor" },
+      { icon: "bolt", text: "<2s response, faster than any competitor" },
       { icon: "star", text: "You call back as the most prepared agent" },
     ],
     comparison: [
@@ -1212,7 +1212,7 @@ const useCaseData = {
       { icon: "lang", text: "Hindi, English, Gujarati, Tamil, Marathi" },
       { icon: "mic", text: "Every call recorded for compliance + QA" },
       { icon: "wa", text: "WhatsApp follow-up for candidates who didn't pick up" },
-      { icon: "filter", text: "Clean shortlist — only the qualified ones" },
+      { icon: "filter", text: "Clean shortlist, only the qualified ones" },
       { icon: "clock", text: "40 hours/month back to senior staff" },
     ],
     comparison: [
@@ -1295,7 +1295,7 @@ const UseCasesSection = () => {
             </div>
           </div>
 
-          {/* Problem snapshot + Outcome chips — 2 col on desktop */}
+          {/* Problem snapshot + Outcome chips, 2 col on desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-5 border-b border-gray-100">
             {/* Problem snapshot */}
             <div className="sm:col-span-2 px-6 sm:px-8 py-6 bg-gray-50 border-b border-gray-100 sm:border-b-0 sm:border-r sm:border-gray-100">
@@ -1453,7 +1453,7 @@ const AllUseCasesGrid = () => {
       {/* Header */}
       <div className="mb-8">
         <p className="text-xl sm:text-2xl font-eb-garamond italic text-[#0A1128] mb-1">One system. Seven industries. Zero missed calls.</p>
-        <p className="text-sm text-gray-500">Same Guftugu — configured for how your business actually works.</p>
+        <p className="text-sm text-gray-500">Same Guftugu, configured for how your business actually works.</p>
       </div>
 
       {/* Grid */}
@@ -1482,7 +1482,7 @@ const AllUseCasesGrid = () => {
       <div className="bg-[#0A1128] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <p className="text-white font-semibold text-sm">Don&apos;t see your industry?</p>
-          <p className="text-white/50 text-xs mt-0.5">We&apos;ve built for 20+ use cases. If you have calls, leads, or candidates — Guftugu works.</p>
+          <p className="text-white/50 text-xs mt-0.5">We&apos;ve built for 20+ use cases. If you have calls, leads, or candidates, Guftugu works.</p>
         </div>
         <PrimaryBtn href={CAL_LINK} label="Talk to us" size="sm" />
       </div>
@@ -1519,7 +1519,7 @@ const WhyDifferentSection = () => {
     },
     {
       title: 'No IVR. No "press 1 for service."',
-      body: "Conversational from the first second — in Hindi, English, or both.",
+      body: "Conversational from the first second, in Hindi, English, or both.",
       icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>,
     },
     {
@@ -1645,12 +1645,12 @@ const PricingSection = () => {
         "1,500 voice minutes/month",
         "2 agents (Dhvani + Sandesh)",
         "3 concurrent calls",
-        "Bilingual — auto Hindi ↔ English mid-sentence",
+        "Bilingual, auto Hindi ↔ English mid-sentence",
         "Done-for-you script engineering, unlimited tweaks",
         "14-day WhatsApp + voice follow-up sequence",
         "Smart channel switching",
         "Owner WhatsApp alerts: new lead, hot flag, booking",
-        "No-Show Recovery — Sandesh checks in 2 hours before",
+        "No-Show Recovery, Sandesh checks in 2 hours before",
         "1-way CRM export: Sheets, Airtable, Webhook",
         "Priority WhatsApp support, 24h SLA",
       ],
@@ -1672,8 +1672,8 @@ const PricingSection = () => {
         "10+ concurrent calls",
         "Up to 3 dedicated Indian business numbers",
         "Any supported language, multilingual routing",
-        "Dead Lead Reactivation — 30-day drip campaign",
-        "Autonomous A/B testing — AI adopts winner automatically",
+        "Dead Lead Reactivation, 30-day drip campaign",
+        "Autonomous A/B testing, AI adopts winner automatically",
         "2-way CRM sync: Salesforce, HubSpot, Zoho",
         "Weekly WhatsApp performance summary",
         "Dedicated Account Manager",
@@ -1691,10 +1691,10 @@ const PricingSection = () => {
     { feature: "Script setup", values: ["DIY", "Done-for-you", "Done-for-you"] },
     { feature: "WhatsApp instant reply", values: ["✓", "✓", "✓"] },
     { feature: "Missed-call fallback", values: ["✓", "✓", "✓"] },
-    { feature: "14-day follow-up", values: ["—", "✓", "✓"] },
-    { feature: "No-Show Recovery", values: ["—", "✓", "✓"] },
-    { feature: "Dead Lead Reactivation", values: ["—", "—", "✓"] },
-    { feature: "A/B testing", values: ["—", "—", "✓"] },
+    { feature: "14-day follow-up", values: ["-", "✓", "✓"] },
+    { feature: "No-Show Recovery", values: ["-", "✓", "✓"] },
+    { feature: "Dead Lead Reactivation", values: ["-", "-", "✓"] },
+    { feature: "A/B testing", values: ["-", "-", "✓"] },
     { feature: "Support", values: ["Email 48h", "WhatsApp 24h", "Dedicated AM"] },
   ];
 
@@ -1739,7 +1739,7 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              {/* Features — compact, no stretching */}
+              {/* Features, compact, no stretching */}
               <div className="px-6 py-5">
                 <ul className="space-y-2.5">
                   {t.features.map((f, j) => (
@@ -1756,7 +1756,7 @@ const PricingSection = () => {
               {/* Spacer pushes footer to bottom */}
               <div className="flex-1" />
 
-              {/* Footer — always at bottom */}
+              {/* Footer, always at bottom */}
               <div className={`px-6 pb-6 pt-5 border-t ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
                 {t.overage && (
                   <p className={`text-xs mb-2 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>
@@ -1831,7 +1831,7 @@ const PricingSection = () => {
                         key={j}
                         className={`px-4 py-2.5 text-center ${
                           j === 1 ? "bg-blue-50 font-semibold text-blue-800" : "text-gray-600"
-                        } ${v === "✓" ? "text-green-600 text-lg" : ""} ${v === "—" ? "text-gray-300" : ""}`}
+                        } ${v === "✓" ? "text-green-600 text-lg" : ""} ${v === "-" ? "text-gray-300" : ""}`}
                       >
                         {v}
                       </td>
@@ -1857,7 +1857,7 @@ const FreeAuditSection = () => {
       icon: "👻",
       name: "Ghost Patient Report",
       for: "for clinics",
-      desc: "We call your clinic as a mystery patient — at peak hours and at 9pm. You see what a new patient hears on first contact.",
+      desc: "We call your clinic as a mystery patient, at peak hours and at 9pm. You see what a new patient hears on first contact.",
     },
     {
       icon: "⚡",
@@ -1883,7 +1883,7 @@ const FreeAuditSection = () => {
           <span className="text-gray-400">Before you spend anything.</span>
         </h2>
         <p className="text-gray-500 mb-10 max-w-xl">
-          The audit makes the invisible visible — missed calls, response times, follow-through.
+          The audit makes the invisible visible, missed calls, response times, follow-through.
           After seeing it, you&apos;ll know exactly what needs fixing.{" "}
           <strong className="text-[#0A1128]">48 hours. Free. No commitment.</strong>
         </p>
@@ -1918,35 +1918,35 @@ const FAQSection = () => {
   const faqs = [
     {
       q: "Can it handle callers who speak Hindi, English, or switch between both?",
-      a: "Yes — Guftugu is built specifically for Indian callers who code-switch mid-conversation. It responds in the language the caller uses and handles Hinglish naturally. You can set a default language or allow both. Most other voice AI tools break on this.",
+      a: "Yes, Guftugu is built specifically for Indian callers who code-switch mid-conversation. It responds in the language the caller uses and handles Hinglish naturally. You can set a default language or allow both. Most other voice AI tools break on this.",
     },
     {
       q: "What's the difference between Guftugu and a WhatsApp chatbot?",
-      a: "A WhatsApp chatbot waits for the customer to message. Guftugu answers the phone — where the majority of Indian SMB leads arrive first. Sandesh (the WhatsApp layer) handles follow-up after the call. You get both channels, connected. Chatbots handle text. Guftugu handles conversations.",
+      a: "A WhatsApp chatbot waits for the customer to message. Guftugu answers the phone, where the majority of Indian SMB leads arrive first. Sandesh (the WhatsApp layer) handles follow-up after the call. You get both channels, connected. Chatbots handle text. Guftugu handles conversations.",
     },
     {
       q: "How does it compare to hiring a human receptionist?",
-      a: "A trained receptionist costs ₹15,000–₹25,000/month, works 8 hours a day, and takes weekends off. Guftugu starts at ₹2,499/month, answers every call in under 2 seconds, works 24/7, and never calls in sick. It handles the volume your team can't — so your staff focuses on the clients who show up.",
+      a: "A trained receptionist costs ₹15,000–₹25,000/month, works 8 hours a day, and takes weekends off. Guftugu starts at ₹2,499/month, answers every call in under 2 seconds, works 24/7, and never calls in sick. It handles the volume your team can't, so your staff focuses on the clients who show up.",
     },
     {
       q: "Will my callers know they're talking to an AI?",
-      a: "Most don't ask — they want their question answered and their appointment booked. If a caller directly asks, Guftugu answers honestly. Trust comes from how fast and accurately it responds, not whether it's human. Our clinic clients report no drop in booking conversion after switching.",
+      a: "Most don't ask, they want their question answered and their appointment booked. If a caller directly asks, Guftugu answers honestly. Trust comes from how fast and accurately it responds, not whether it's human. Our clinic clients report no drop in booking conversion after switching.",
     },
     {
       q: "What if the AI doesn't know the answer?",
-      a: "It never guesses. If it can't answer something, it says 'let me have the team get back to you' — logs the full message and sends your team an immediate WhatsApp alert with the caller's name and question. Every call has a human escalation path built in from day one.",
+      a: "It never guesses. If it can't answer something, it says 'let me have the team get back to you', logs the full message and sends your team an immediate WhatsApp alert with the caller's name and question. Every call has a human escalation path built in from day one.",
     },
     {
       q: "How does the AI learn my specific business?",
-      a: "We start with a 30-minute onboarding call. You walk us through your most common questions, your booking process, and your pricing. If you have existing call recordings, they accelerate training. What goes live is trained on your actual business — not a generic script that fits nobody.",
+      a: "We start with a 30-minute onboarding call. You walk us through your most common questions, your booking process, and your pricing. If you have existing call recordings, they accelerate training. What goes live is trained on your actual business, not a generic script that fits nobody.",
     },
     {
       q: "What happens when a caller needs a human?",
-      a: "Guftugu routes it immediately. For urgent or complex queries, it either transfers the call live to your number (hot transfer) or sends you a WhatsApp alert with the caller's full context — name, question, urgency — so you call back fully briefed. You're always in control of the handoff.",
+      a: "Guftugu routes it immediately. For urgent or complex queries, it either transfers the call live to your number (hot transfer) or sends you a WhatsApp alert with the caller's full context, name, question, urgency, so you call back fully briefed. You're always in control of the handoff.",
     },
     {
       q: "How fast does it go live?",
-      a: "7 business days for most setups. We need your business details, calendar access, and one 30-minute call. We handle the entire build, testing, and QA — you don't touch any tech.",
+      a: "30 minutes to set up. We need your business details, calendar access, and one 30-minute call. We handle the entire build, testing, and QA, you don't touch any tech.",
     },
     {
       q: "Do I need a new phone number?",
@@ -1954,7 +1954,7 @@ const FAQSection = () => {
     },
     {
       q: "Is there a money-back guarantee?",
-      a: "If your system isn't live within 10 business days of us receiving your setup materials, we refund the setup fee — no questions asked. Once live, we tune the system at no extra cost until it performs to your specification.",
+      a: "If your system isn't live within the same session of us receiving your setup materials, we refund the setup fee, no questions asked. Once live, we tune the system at no extra cost until it performs to your specification.",
     },
   ];
 
@@ -1994,78 +1994,146 @@ const FAQSection = () => {
 };
 
 // ─── FINAL CTA ────────────────────────────────────────────────────────────────
-const FinalCTA = () => (
-  <section className="py-20 sm:py-24 bg-[#0A1128]">
-    <Container className="text-center">
-      <SectionLabel text="Ready?" dark />
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-white leading-tight mb-4">
-        Your competitor picked up that call.
-        <br />
-        You can answer the next one.
-      </h2>
-      <p className="text-white/60 mb-3 max-w-xl mx-auto">
-        The leads are there. The calls are coming in. The problem isn&apos;t demand — it&apos;s that your business can&apos;t respond fast enough, at all hours, in both languages, with follow-through that lasts more than a day.
-      </p>
-      <p className="text-white/50 mb-10 max-w-lg mx-auto text-sm">
-        That&apos;s exactly what Guftugu fixes. The first step is a 30-minute call. No slides. No pitch. We learn how your business works, then we build what actually fits.
-      </p>
+const FinalCTA = () => {
+  const audits = [
+    {
+      label: "Ghost Patient Report",
+      desc: "For dental & medical clinics",
+      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C8.5 2 6 4.5 6 8c0 2.5.8 4.5 1.8 6.2C8.8 16 9.5 17.5 9.5 20h5c0-2.5.7-4 1.7-5.8C17.2 12.5 18 10.5 18 8c0-3.5-2.5-6-6-6z"/></svg>,
+    },
+    {
+      label: "Speed-to-Lead Test",
+      desc: "For real estate agencies",
+      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+    },
+    {
+      label: "Hiring Volume Audit",
+      desc: "For staffing & recruiting",
+      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+    },
+  ];
 
-      <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-        <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
-      </div>
-
-      <p className="text-white/40 text-sm mb-4">Not ready to talk? Start with a free audit:</p>
-      <div className="flex flex-wrap gap-3 justify-center mb-8">
-        {["Ghost Patient Report", "Speed-to-Lead Test", "Hiring Audit"].map((label) => (
-          <a
-            key={label}
-            href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-white/50 hover:text-white transition-colors underline underline-offset-2"
-          >
-            {label}
-          </a>
-        ))}
-      </div>
-
-      {STATS.demoNumber && (
-        <p className="text-white/30 text-sm">
-          Or call our AI right now: <span className="text-white/60 font-medium">{STATS.demoNumber}</span>
+  return (
+    <section className="py-20 sm:py-28 bg-[#0A1128]">
+      <Container className="text-center" size="md">
+        <SectionLabel text="Get started today" dark />
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-white leading-tight mb-4">
+          Your competitor picked up that call.
           <br />
-          <span className="text-xs">Hear exactly what your callers will hear. Takes 2 minutes.</span>
+          <span className="text-white/60">You can answer the next one.</span>
+        </h2>
+        <p className="text-white/50 mb-10 max-w-md mx-auto text-sm leading-relaxed">
+          30-minute call. No slides. No pitch. We learn how your business works, then we build what actually fits.
         </p>
-      )}
 
-      <div className="mt-10 pt-8 border-t border-white/10">
-        <p className="text-white/50 text-sm font-medium">
-          Rs 0 to start &nbsp;·&nbsp; Live in 7 days &nbsp;·&nbsp; We learn your business first, then we build.
-        </p>
-      </div>
-    </Container>
-  </section>
-);
+        <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
+
+        {STATS.demoNumber && (
+          <p className="mt-4 text-white/30 text-xs">
+            Or call our AI right now: <span className="text-white/50 font-medium">{STATS.demoNumber}</span>
+          </p>
+        )}
+
+        {/* Audit cards */}
+        <div className="mt-12 mb-10">
+          <p className="text-white/30 text-xs font-bold tracking-widest uppercase mb-5">Not ready to talk? Start with a free audit</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {audits.map((a) => (
+              <a
+                key={a.label}
+                href={CAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-4 hover:bg-white/[0.08] hover:border-white/20 transition-all"
+              >
+                <span className="text-[#FCCA07]/80 group-hover:text-[#FCCA07] transition-colors">{a.icon}</span>
+                <p className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">{a.label}</p>
+                <p className="text-[11px] text-white/35">{a.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Trust bar */}
+        <div className="pt-8 border-t border-white/10">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {["₹0 to start", "Live in 30 mins", "No tech setup", "Cancel anytime"].map((t, i) => (
+              <span key={i} className="flex items-center gap-1.5 text-xs text-white/40">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FCCA07" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="opacity-60"><polyline points="20 6 9 17 4 12"/></svg>
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 // ─── FOOTER ───────────────────────────────────────────────────────────────────
 const PageFooter = () => (
-  <footer className="bg-[#060D1F] py-10">
+  <footer className="bg-[#060D1F] pt-14 pb-8">
     <Container size="lg">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <Link href="/" className="font-mondwest text-xl text-white/80 font-normal tracking-[-0.02em]">
-          tryagentic.ai
-        </Link>
-        <nav className="flex flex-wrap gap-6 text-sm text-white/40">
-          <button onClick={() => smoothScrollTo("use-cases")} className="hover:text-white/70 transition-colors">Use Cases</button>
-          <button onClick={() => smoothScrollTo("pricing")} className="hover:text-white/70 transition-colors">Pricing</button>
-          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Book a Discovery Call</a>
-          <button onClick={() => smoothScrollTo("faq")} className="hover:text-white/70 transition-colors">Free Audit</button>
-        </nav>
+      {/* Main footer grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/[0.08]">
+
+        {/* Brand block */}
+        <div className="lg:col-span-2">
+          <Link href="/" className="font-mondwest text-lg text-white font-normal tracking-[-0.02em] mb-2 block">
+            Guftugu
+          </Link>
+          <p className="text-xs text-white/40 mb-1">Voice + WhatsApp AI</p>
+          <p className="text-sm text-white/55 leading-relaxed mt-3 max-w-xs">
+            Dhvani answers the call. Sandesh follows up on WhatsApp. Your business never misses a lead again.
+          </p>
+          <div className="flex items-center gap-4 mt-5">
+            <a
+              href="mailto:aditya@tryagentikai.com"
+              className="flex items-center gap-1.5 text-xs text-white/35 hover:text-white/60 transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              aditya@tryagentikai.com
+            </a>
+            <a
+              href="https://wa.me/919999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-white/35 hover:text-[#25D366] transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp us
+            </a>
+          </div>
+        </div>
+
+        {/* Product links */}
+        <div>
+          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">Product</p>
+          <nav className="flex flex-col gap-2.5">
+            <button onClick={() => smoothScrollTo("use-cases")} className="text-sm text-white/50 hover:text-white text-left transition-colors">Use Cases</button>
+            <button onClick={() => smoothScrollTo("pricing")} className="text-sm text-white/50 hover:text-white text-left transition-colors">Pricing</button>
+            <button onClick={() => smoothScrollTo("faq")} className="text-sm text-white/50 hover:text-white text-left transition-colors">FAQ</button>
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Book a Call</a>
+          </nav>
+        </div>
+
+        {/* Free audits */}
+        <div>
+          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">Free Audits</p>
+          <nav className="flex flex-col gap-2.5">
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Ghost Patient Report</a>
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Speed-to-Lead Test</a>
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Hiring Volume Audit</a>
+          </nav>
+        </div>
       </div>
-      <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4">
-        <p className="text-xs text-white/30">
-          Guftugu by Agentic AI Labs. Dhvani answers the call. Sandesh works the lead. Built in India. Running everywhere.
+
+      {/* Bottom bar */}
+      <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p className="text-xs text-white/25">
+          © 2026 Agentic AI Labs. Built in India.
         </p>
-        <div className="flex gap-4 text-xs text-white/30">
+        <div className="flex gap-5 text-xs text-white/25">
           <Link href="/privacy" className="hover:text-white/50 transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white/50 transition-colors">Terms of Service</Link>
           <Link href="/contact" className="hover:text-white/50 transition-colors">Contact</Link>
@@ -2102,7 +2170,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
   return (
     <>
       <MetaConfig
-        title="Guftugu — AI Voice Agent for Indian Businesses | tryagentic.ai"
+        title="Guftugu, AI Voice Agent for Indian Businesses | tryagentic.ai"
         description="Guftugu answers every call and follows up on WhatsApp. Automatically. In Hindi or English. 24/7. Dhvani handles voice. Sandesh handles the message. Built for dental clinics, real estate agencies, and hiring teams."
         type="Website"
         url={CANONICAL_URL}

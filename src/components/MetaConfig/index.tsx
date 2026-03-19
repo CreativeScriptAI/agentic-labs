@@ -28,16 +28,37 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
   // Helper to ensure URL has a trailing slash
   const ensureTrailingSlash = (url: string) => {
     if (!url) return url;
-    // Don't add slash to file extensions or if it already has one
-    if (url.includes(".") && !url.endsWith("/")) return url;
-    return url.endsWith("/") ? url : `${url}/`;
+    
+    // Split to separate domain from path
+    try {
+      const urlObj = new URL(url);
+      const pathname = urlObj.pathname;
+      
+      // If it's just the root, it's fine
+      if (pathname === "/") return url;
+      
+      // Check if the path part has a file extension (dot in the last segment)
+      const segments = pathname.split("/").filter(Boolean);
+      const lastSegment = segments[segments.length - 1];
+      
+      // If last segment has a dot and it's not a slash-only URL, treat as file
+      if (lastSegment?.includes(".") && !pathname.endsWith("/")) {
+        return url;
+      }
+      
+      // Add trailing slash if missing
+      return url.endsWith("/") ? url : `${url}/`;
+    } catch (e) {
+      // Fallback for relative URLs or malformed URLs
+      if (url.includes(".") && !url.endsWith("/") && url.split("/").pop()?.includes(".")) return url;
+      return url.endsWith("/") ? url : `${url}/`;
+    }
   };
 
   const fullTitle = props.title; // Use title as-is, no suffix
   const rawCanonical = props.canonical || props.url;
   const canonicalUrl = ensureTrailingSlash(rawCanonical);
   
-  console.log("canonicalUrl", canonicalUrl);
   const ogImage = props.image || "/og.jpg";
   const fullImageUrl = props.image?.startsWith("http")
     ? props.image
@@ -49,18 +70,33 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
 
   // Generate hreflang links for all country versions
   const generateHreflangs = () => {
-    // Use asPath to get the actual resolved slug, not the internal [slug] filename
-    const asPathWithoutQuery = router.asPath.split("?")[0].split("#")[0];
-    const pathParts = asPathWithoutQuery.split("/").filter(Boolean);
+    // Try to get current path from props.url first as it's more reliable on SSR
+    let currentPath = "";
+    if (props.url) {
+      try {
+        currentPath = new URL(props.url).pathname;
+      } catch (e) {
+        currentPath = props.url;
+      }
+    } else {
+      currentPath = router.asPath.split("?")[0].split("#")[0];
+    }
+
+    // fallback: if currentPath still has placeholders or is empty, use a safer best-guess
+    if (currentPath.includes("[") || !currentPath) {
+      currentPath = router.asPath.split("?")[0].split("#")[0];
+    }
+
+    const pathParts = currentPath.split("/").filter(Boolean);
     const countryRoutes = getAllCountryRoutes();
 
     // Get the base path without country prefix
-    let basePath = asPathWithoutQuery;
+    let basePath = currentPath;
     if (pathParts.length > 0 && countryRoutes.includes(pathParts[0])) {
       basePath = "/" + pathParts.slice(1).join("/");
     }
 
-    // Clean up basePath: ensure it starts with / but doesn't end with / (we add it later)
+    // Clean up basePath: ensure it starts with / but doesn't end with /
     if (basePath === "/" || basePath === "") {
       basePath = "";
     } else {
