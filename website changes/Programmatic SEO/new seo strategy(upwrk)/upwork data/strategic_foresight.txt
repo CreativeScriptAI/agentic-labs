@@ -1,0 +1,543 @@
+
+  ============================================================================
+         STRATEGIC FORESIGHT REPORT  —  THE INVISIBLE CODE HYPOTHESIS
+         For: Agentic AI Labs  |  AI Agent Development Agency
+         Analyst: Market Intelligence + Historical Pattern Recognition
+         Date: February 2026
+  ============================================================================
+
+  "When a technology becomes invisible, the people who built it for novelty
+   disappear — and the people who use it for leverage become giants."
+
+                                             — Derived from the dot-com analogy
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART I  —  THE HISTORICAL MIRROR
+             What the Dot-Com Era Tells Us About Where We Are Right Now
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  THE DOT-COM PARALLEL  ───────────────────────────────────────────────┐
+
+  1994-1999: Every business suddenly needed "a website."
+  Web designers charged $5,000–$50,000 to build what is now a Squarespace
+  template. The scarcity was TECHNICAL KNOWLEDGE, not ideas or strategy.
+
+  2000: The bubble burst. NASDAQ fell 78%. $5 trillion wiped out.
+
+  2001-2005: The real winners emerged.
+  Not the companies that built websites — but the companies that used the
+  web as infrastructure for something else entirely.
+
+     Amazon didn't win because it built a website.
+     It won because it built LOGISTICS INTELLIGENCE on top of the web.
+
+     Google didn't win because it built a website.
+     It won because it built an ATTENTION ECONOMY on top of the web.
+
+     Salesforce didn't win because it built a website.
+     It won because it made SOFTWARE DELIVERY invisible via the browser.
+
+  The web became the plumbing. Nobody charges $50,000 for plumbing anymore.
+  The money moved to what ran THROUGH the plumbing.
+
+
+  ┌─  THE EXACT SAME MOVIE IS PLAYING RIGHT NOW  ──────────────────────────┐
+
+  2022-2024: Every business suddenly needed "an AI solution."
+  AI agencies charged $5,000–$50,000 to build what will soon be a
+  template or a no-code drag-and-drop. The scarcity right now is
+  TECHNICAL KNOWLEDGE OF AI, not ideas or strategy.
+
+  2025-2027: The bubble pressure is building.
+             (You're already seeing it in your Upwork data.)
+
+  The key indicators are already visible:
+    - Coding job postings fell 21% since 2022
+    - 78% of dev teams now use AI coding tools
+    - GitHub Copilot generates 46% of code automatically
+    - Cursor reached $1B revenue in 2 years — it commoditized coding
+    - Median Upwork fixed price: $300 (down from $1,200+)
+    - 89% of hourly jobs pay under $30/hr
+
+  The price compression IS the signal. It mirrors 2001-2003 in web design
+  exactly. The technology is becoming plumbing.
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART II  —  THE INVISIBLE CODE HYPOTHESIS
+              Why "Code" is No Longer the Moat
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  WHAT "INVISIBLE" ACTUALLY MEANS  ────────────────────────────────────┐
+
+  Electricity was once a competitive advantage.
+  The first factory to electrify had a massive edge over competitors.
+  Then everyone electrified. Electricity became invisible infrastructure.
+  Nobody hires an "electricity expert" as their strategic advantage anymore.
+
+  The same happened to:
+    - Websites  (1995 advantage  →  2005 commodity  →  2010 invisible)
+    - Mobile apps  (2009 advantage  →  2015 commodity  →  2020 invisible)
+    - Cloud hosting  (2008 advantage  →  2015 commodity  →  2020 invisible)
+
+  CODE IS NEXT.
+
+  Specifically: the ability to write code has already started its
+  invisibility arc. AI writes 46%+ of code today. By 2028, it will
+  write 80%+. The person who "knows how to code" won't be the rare
+  resource — the AI will do that. The rare resource will be the person
+  who knows WHAT to build and WHY.
+
+  The moat is shifting from EXECUTION to JUDGMENT.
+
+
+  ┌─  THE THREE STAGES OF TECHNOLOGY BECOMING INVISIBLE  ──────────────────┐
+
+  Stage 1 — NOVELTY
+    The technology is new. Having it at all is the advantage.
+    "We built a chatbot!" was a differentiator in 2022.
+    Web agencies charged $30,000 for a website in 1997.
+
+  Stage 2 — COMPETITION  (YOU ARE HERE)
+    Everyone has it. Price compresses. Volume increases.
+    Upwork is flooded with "AI automation experts" at $15/hr.
+    45,742 jobs in 8 months — but median fixed price only $300.
+    This is 2001 for the web. The shakeout is beginning.
+
+  Stage 3 — INVISIBLE INFRASTRUCTURE
+    The technology is assumed. Nobody pays for it alone.
+    The value is in what's BUILT ON TOP of it.
+    What do you build on top of invisible code?
+    That's the question this report answers.
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART III  —  KEY INDICATORS  (The Warning Signals in Plain Sight)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  INDICATOR 01  — Price Compression is Accelerating  ──────────────────┐
+
+  Your data:
+    Median Upwork fixed price  ..........  $300
+    Average Upwork fixed price  .........  $1,362   (pulled up by outliers)
+    89% of hourly jobs  .................  under $30/hr
+
+  Historical parallel:
+    Web design average project fee in 1997  ..  $25,000–$50,000
+    Web design average project fee in 2005  ..  $3,000–$8,000
+    Web design template (Squarespace) today .  $12/month
+
+  What it means:
+  The race to the bottom for "AI automation" has already started.
+  The window to charge for the NOVELTY of building AI things is closing.
+  Agencies that don't evolve their value proposition in 2026 will be
+  competing on price by 2027 — against offshore teams and AI itself.
+
+
+  ┌─  INDICATOR 02  — Tool Commoditization Happening in Real Time  ─────────┐
+
+  In the dot-com era, "knowing HTML" was a skill companies paid for.
+  Then Dreamweaver made it a tool. Then WordPress made it a template.
+  Then Squarespace made it invisible.
+
+  Right now in AI:
+    Building an n8n workflow  .....  skill today, template by 2027
+    Setting up a GoHighLevel CRM  .  skill today, AI-configured by 2027
+    Creating a RAG chatbot  .......  skill today, product by 2027
+
+  Vapi, ElevenLabs, Voiceflow, Botpress — they are all building
+  no-code interfaces for exactly what agencies are charging to build.
+  The tool companies are eating the agency's lunch, one interface at a time.
+
+  The moat of "I know how to configure n8n" has a 12–18 month shelf life.
+
+
+  ┌─  INDICATOR 03  — The SaaSpocalypse is Already Underway  ──────────────┐
+
+  Research finding: Traditional SaaS companies are experiencing a
+  "structural valuation collapse" as AI agents replace per-seat software.
+
+  What this actually means for you:
+  The software that clients are currently PAYING FOR — CRMs, schedulers,
+  email tools, reporting dashboards — is becoming native functionality
+  inside AI agents. Clients won't need 5 SaaS subscriptions. They'll
+  need 1 AI system that does what all 5 did.
+
+  This is the Amazon moment. Amazon didn't beat Barnes & Noble by
+  having a better bookstore. It replaced the bookstore entirely.
+
+  The AI agency that builds "the system that replaces 5 SaaS tools"
+  for a specific industry vertical will win that vertical.
+
+
+  ┌─  INDICATOR 04  — The Upwork Data Shows a Vocabulary Shift  ───────────┐
+
+  From your 8-month dataset:
+    "chatbot"       ....  946 jobs   (2022 vocabulary)
+    "ai agent"      ....  945 jobs   (2025 vocabulary — near identical demand)
+    "ai automation" ....  990 jobs   (transitional vocabulary)
+    "voice"         .... 1050 jobs   (emerging vocabulary)
+
+  When demand for new terminology matches demand for old terminology,
+  you are at the INFLECTION POINT OF A VOCABULARY SHIFT. In the dot-com
+  era, this was when "website" started being replaced by "web application"
+  — signaling that the market was maturing past novelty.
+
+  "Chatbot" is the old vocabulary. "AI agent" is the new one.
+  The clients who understand the difference have the bigger budgets.
+
+
+  ┌─  INDICATOR 05  — The "Expert" Floor is Rising  ───────────────────────┐
+
+  From your data: 52% Expert + 44% Intermediate = 96% of all jobs.
+  Zero demand for beginners. This means the floor of what clients
+  consider "acceptable" has risen dramatically in 12 months.
+
+  In the dot-com era, by 2002: clients stopped hiring anyone who "knew HTML"
+  and started demanding proven UX, conversion, and strategic thinking.
+  The bar rose and pushed the bottom 60% of web designers out of the market.
+
+  The same culling is beginning in AI. The bottom 60% of "automation
+  freelancers" with basic n8n skills will be pushed out by better tools
+  and offshore competition by 2027.
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART IV  —  THE GAPS  (Where the Market is Underserved Right Now)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  GAP 01  — Nobody Is Selling Outcomes, Everyone Is Selling Tools  ─────┐
+
+  Every Upwork profile says: "I build AI automations with n8n and GHL."
+  Zero Upwork profiles say: "I reduce your client acquisition cost by 40%
+  using AI-powered outreach pipelines — guaranteed."
+
+  The gap is OUTCOME-BASED PRICING AND POSITIONING.
+
+  In the post-dot-com era, the agencies that survived stopped saying
+  "I build websites." They started saying "I increase your conversion
+  rate." The tool became invisible. The result took center stage.
+
+  No AI agency at the SMB level is doing this yet. They're all still
+  selling the tool, not the outcome.
+
+
+  ┌─  GAP 02  — Vertical-Specific AI Systems Don't Exist at Scale  ─────────┐
+
+  Right now: AI agencies build generic solutions for any industry.
+  A chatbot is a chatbot whether it's for a dentist or a law firm or
+  a real estate agency.
+
+  The gap: Industry-specific AI operating systems.
+
+  In the dot-com era, the agencies that survived post-2001 were the
+  ones who picked an industry — healthcare, legal, financial services —
+  and built deep expertise in that industry's SPECIFIC problems.
+  They stopped being "web agencies" and became "healthcare web agencies."
+
+  The exact same specialization play is available right now in AI:
+    - AI system for real estate agencies  (lead gen + nurture + qualifying)
+    - AI system for law firms  (intake + document processing + scheduling)
+    - AI system for e-commerce brands  (support + upsell + churn prevention)
+    - AI system for recruitment agencies  (sourcing + screening + scheduling)
+
+  The word "system" is key — not a chatbot, not an automation. A SYSTEM
+  designed specifically for one industry's end-to-end workflow.
+
+
+  ┌─  GAP 03  — The Human-Agent Collaboration Layer Doesn't Exist Yet  ─────┐
+
+  Current state: AI agents are built to either (a) fully automate or
+  (b) assist. Nobody has built the sophisticated HANDOFF layer — where
+  the AI does 80% of the work autonomously and routes the critical 20%
+  to a human with full context.
+
+  This is the hardest engineering problem and the least-addressed gap.
+
+  McKinsey research: Organizations that successfully deploy AI see 3-5x
+  ROI when human-AI collaboration is thoughtfully designed vs. when AI
+  is bolted onto existing workflows.
+
+  The gap: Designing the human-AI collaboration architecture, not just
+  the AI automation. This requires organizational psychology + systems
+  design + technical implementation — a combination almost no agency offers.
+
+
+  ┌─  GAP 04  — AI Governance and Reliability for Non-Tech Clients  ─────────┐
+
+  The research finding: Only 33% of developers fully trust AI outputs.
+  AI-generated code has 1.7x more defects without proper review.
+
+  For non-tech business owners deploying AI agents: this is terrifying.
+  They don't know what they don't know. They can't audit what the AI does.
+  They have no way to know when it fails silently.
+
+  The gap: AI governance, monitoring, and reliability as a SERVICE.
+  Not building the AI — but being the ongoing quality control layer
+  that ensures it keeps working, keeps improving, and doesn't break
+  the business when something goes wrong.
+
+  This is the "website maintenance" contract of the AI era — except with
+  10x higher stakes because AI agents can make real business decisions.
+
+
+  ┌─  GAP 05  — Voice AI Has Demand But Zero Established Providers  ─────────┐
+
+  From your data: 1,050 voice-related jobs in 8 months.
+  From market research: near-zero Upwork profiles optimized for Voice AI.
+
+  The technical stack for voice AI (Vapi + ElevenLabs + Twilio +
+  LangChain + CRM webhook) is not trivial. Latency is a real problem.
+  Conversation design is a discipline most coders don't understand.
+
+  The gap: End-to-end voice AI system as a productized offering.
+  Not "I can build you a voice bot" — but a packaged, tested, deployed,
+  monitored voice AI system for appointment-setting / inbound support /
+  outbound follow-up — with SLA guarantees.
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART V  —  THE OPPORTUNITIES  (What to Build on Top of Invisible Code)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  THE AMAZON LESSON FOR AI AGENCIES  ───────────────────────────────────┐
+
+  Amazon's stock fell from $100 to under $7 during the dot-com crash.
+  They survived because they didn't treat the web as the product.
+  They treated the web as INFRASTRUCTURE for logistics intelligence.
+
+  The equivalent for you:
+  Don't treat AI as the product. Treat AI as infrastructure for
+  BUSINESS INTELLIGENCE AND OPERATIONAL LEVERAGE.
+
+  Your clients don't want "an AI agent." They want:
+    - More revenue with the same headcount
+    - Faster response times without hiring more support staff
+    - Leads qualified at 3am without paying someone to do it
+    - Decisions made from data they couldn't previously access
+
+  The AI is invisible. The LEVERAGE is the product.
+
+
+  ┌─  OPPORTUNITY 01  —  "Service as Software"  ────────────────────────────┐
+
+  The emerging model validated by research: Deploy AI agents to deliver
+  a service with software-level margins and scalability.
+
+  Instead of: "We build AI automation for $5,000."
+  Say: "We run your lead qualification process for $2,000/month."
+
+  The AI does the work. You own the system. Client pays for outcomes.
+  Gross margin: 80%+ (vs. 30-40% for project-based agency work).
+
+  This is what survived post-dot-com: companies that built recurring
+  infrastructure revenue, not one-time project fees.
+
+  Google didn't charge per search. It charged per OUTCOME (ad click).
+  Salesforce didn't charge per line of code. It charged per MONTH OF USE.
+
+  The AI agency equivalent: outcome-based or retainer-based delivery
+  where you own and maintain the AI infrastructure, clients pay for
+  the results it produces.
+
+
+  ┌─  OPPORTUNITY 02  —  Industry Operating Systems  ───────────────────────┐
+
+  Pick ONE vertical. Go impossibly deep. Build the AI operating system
+  for that industry.
+
+  Framework for choosing the vertical:
+    - High repeat-purchase potential  (clients need you monthly, not once)
+    - Data-rich environment  (AI gets smarter over time with more data)
+    - Labor cost problem  (the industry overpays humans for repetitive work)
+    - Regulatory pressure  (compliance needs create sticky relationships)
+
+  Best candidates based on your Upwork data patterns:
+    1. Real estate agencies  (GHL + voice AI + lead qualification)
+    2. Recruitment / staffing firms  (screening + scheduling + outreach)
+    3. Healthcare / dental / wellness  (booking + follow-up + intake)
+    4. E-commerce brands  (support + retention + upsell)
+    5. B2B SaaS companies  (SDR AI + demo scheduling + churn prediction)
+
+  The dot-com equivalent: Veeva Systems picked pharmaceutical CRM.
+  They ignored every other industry. Today they're a $30B company.
+  While generic CRM companies competed on price, Veeva competed on depth.
+
+
+  ┌─  OPPORTUNITY 03  —  The AI Systems Integrator  ────────────────────────┐
+
+  The role that didn't exist in web agencies but needed to:
+  Systems architect who speaks both business and technology.
+
+  Today's equivalent: The AI Systems Integrator.
+
+  Not someone who builds AI tools.
+  Not someone who configures platforms.
+  Someone who maps a client's ENTIRE BUSINESS WORKFLOW, identifies where
+  AI creates leverage at each step, and designs the full AI system
+  architecture — then orchestrates the build across tools and agents.
+
+  This requires:
+    - Business process analysis  (understanding the client's operations)
+    - AI capability mapping  (knowing what each tool can and can't do)
+    - System architecture design  (designing multi-agent pipelines)
+    - Integration engineering  (making everything talk to each other)
+    - Change management  (helping the human team adapt)
+
+  Nobody on Upwork is positioning this way. Not a single profile.
+  The market for it: every mid-size business (10-200 employees) trying
+  to figure out WHICH AI to deploy and HOW to integrate it.
+
+  Addressable market: Massive. Competition: Near zero at this positioning.
+
+
+  ┌─  OPPORTUNITY 04  —  Proprietary Data Layer as Competitive Moat  ───────┐
+
+  The deepest lesson from the post-dot-com era:
+
+  Google's moat wasn't its algorithm. Its moat was the DATA its algorithm
+  ran on — 25 years of accumulated search behavior.
+
+  Amazon's moat wasn't its website. Its moat was its SUPPLY CHAIN DATA
+  and customer purchase history.
+
+  For an AI agency: the moat of the future is PROPRIETARY TRAINING DATA
+  and FINE-TUNED MODELS for specific industries.
+
+  Generic AI (ChatGPT, Claude) is good at everything.
+  Which means it's perfect for nothing specific.
+
+  An AI trained on 10,000 real estate conversations will outperform
+  generic AI at real estate conversations EVERY TIME.
+
+  An AI trained on a law firm's 20 years of case outcomes will give
+  better intake recommendations than any generic AI.
+
+  The opportunity: Build AI systems that accumulate PROPRIETARY DATA
+  as part of the service delivery. The longer the client uses the system,
+  the smarter it gets — and the harder it is to replace you.
+
+  This is the recurring revenue moat that generic AI agencies will never
+  be able to replicate.
+
+
+  ┌─  OPPORTUNITY 05  —  The "Picks and Shovels" Play  ─────────────────────┐
+
+  During the California Gold Rush, the people who got rich weren't
+  primarily the gold miners — they were the people who sold picks
+  and shovels to the miners.
+
+  During the dot-com boom, infrastructure companies like Cisco survived
+  because even when websites failed, the internet still needed routers.
+
+  The AI equivalent: Build the INFRASTRUCTURE and TOOLS that AI agencies
+  need to operate — not the end client solutions.
+
+    - AI Agent Testing & QA tools
+    - Prompt version control and management systems
+    - Client-facing AI performance dashboards
+    - Multi-agent orchestration frameworks
+    - AI system monitoring and alerting
+
+  If the AI agency market grows to $183B by 2033 (per research), the
+  tooling market for AI agencies will be $20-40B. And it barely exists yet.
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PART VI  —  THE STRATEGIC DECISION FRAMEWORK
+              What to Do in 2026 Before the Window Closes
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  ┌─  THE 3 CHOICES EVERY AI AGENCY FACES RIGHT NOW  ──────────────────────┐
+
+  CHOICE A  —  RACE TO THE BOTTOM  (Don't choose this)
+    Keep building generic AI automations for anyone on Upwork.
+    Compete on price. Watch margins compress from $300 to $100.
+    Be replaced by better-trained offshore agencies by 2027.
+    This is the path of 80% of dot-com web agencies that didn't survive.
+
+  CHOICE B  —  SPECIALIZE AND OWN A VERTICAL  (Good choice)
+    Pick one industry. Go impossibly deep. Become the AI agency for
+    THAT vertical. Build recurring revenue. Accumulate proprietary data.
+    This is the Veeva path — specific, defensible, scalable.
+
+  CHOICE C  —  BUILD THE LAYER ABOVE  (Best choice — but hardest)
+    Stop being a builder. Become an operator.
+    Don't sell AI systems. Deliver AI-powered business outcomes on retainer.
+    Your code becomes invisible. Your results are the product.
+    Gross margins: 70-85%. Client retention: 2-3 years average.
+    This is the Amazon/Salesforce path — infrastructure that compounds.
+
+
+  ┌─  THE WINDOW  ─────────────────────────────────────────────────────────┐
+
+  The dot-com shakeout took 3 years (2000-2003).
+  The agencies that repositioned in 2001 survived.
+  The ones that waited until 2003 were too late.
+
+  You are in 2001 right now. The shakeout has begun (evidence: Upwork
+  margins compressing, AI coding tools commoditizing execution, offshore
+  competition intensifying). You have approximately 12-18 months to
+  reposition before the window for easy differentiation closes.
+
+  The good news: Most AI agencies are not thinking this way.
+  The bad news: They will be, within 18 months.
+
+
+  ┌─  A FINAL WORD FROM HISTORY  ──────────────────────────────────────────┐
+
+  After the dot-com crash, the most counterintuitive thing happened:
+  The internet became MORE important, not less. Usage grew. Commerce grew.
+  The infrastructure expanded. The world changed MORE, not less.
+
+  The agencies that saw the crash as "the end of the internet era" died.
+  The ones that saw it as "the beginning of the SERIOUS internet era" won.
+
+  The same is true here. The commoditization of AI code is not the end
+  of the AI agency era. It is the beginning of the SERIOUS AI era —
+  where the real business value gets extracted by the people who can
+  think in systems, own outcomes, and compound proprietary intelligence.
+
+  CODE IS BECOMING INVISIBLE.
+  WHAT WILL YOU BUILD ON TOP OF IT?
+
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  APPENDIX  —  DATA SOURCES & RESEARCH REFERENCES
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PRIMARY DATA:
+    - 45,742 unique Upwork job postings, July 2025 – February 2026
+    - Telegram job alert bot (3 profiles: Aditya, Yash, Sarthak)
+    - Analysis: analyze_upwork.py  |  Full report: analysis_report.txt
+
+  MARKET RESEARCH:
+    - AI coding assistant market: $6.8B (2025) → $8.5B (2026)
+    - GitHub Copilot: 20M users, generates 46% of code, 55% faster
+    - Cursor: $1B ARR in 2 years, 18% market share
+    - Coding job postings: -21% decline since 2022
+    - AI agent market projection: $183B by 2033
+    - Traditional SaaS: structural valuation collapse underway
+    - AI-generated code defects: 1.7x higher without human review
+    - Only 33% of developers fully trust AI outputs
+
+  HISTORICAL REFERENCE:
+    - Dot-com bubble peak: March 2000
+    - NASDAQ decline: 78% over 2 years
+    - Market cap lost: $5 trillion
+    - Survivors: Amazon, eBay, Google, Salesforce — all pivoted to
+      infrastructure/platform models, not pure website builders
+    - Web design agency average fee: $25-50K (1998) → $3-8K (2005)
+      → $12/month Squarespace template (2015)
+
+  ============================================================================
+         Report compiled by: Agentic AI Labs Intelligence Unit
+         Based on: Proprietary Upwork data + Web research, Feb 2026
+  ============================================================================

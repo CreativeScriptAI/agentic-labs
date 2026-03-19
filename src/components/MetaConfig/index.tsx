@@ -49,20 +49,23 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
 
   // Generate hreflang links for all country versions
   const generateHreflangs = () => {
-    const pathParts = router.pathname.split("/").filter(Boolean);
+    // Use asPath to get the actual resolved slug, not the internal [slug] filename
+    const asPathWithoutQuery = router.asPath.split("?")[0].split("#")[0];
+    const pathParts = asPathWithoutQuery.split("/").filter(Boolean);
     const countryRoutes = getAllCountryRoutes();
 
     // Get the base path without country prefix
-    let basePath = router.pathname;
+    let basePath = asPathWithoutQuery;
     if (pathParts.length > 0 && countryRoutes.includes(pathParts[0])) {
       basePath = "/" + pathParts.slice(1).join("/");
     }
 
-    // Handle root path
-    if (basePath === "" || basePath === "/") {
+    // Clean up basePath: ensure it starts with / but doesn't end with / (we add it later)
+    if (basePath === "/" || basePath === "") {
       basePath = "";
-    } else if (!basePath.startsWith("/")) {
-      basePath = "/" + basePath;
+    } else {
+      if (!basePath.startsWith("/")) basePath = "/" + basePath;
+      if (basePath.endsWith("/")) basePath = basePath.slice(0, -1);
     }
 
     const hreflangs: Array<{ hreflang: string; href: string }> = [];
@@ -78,6 +81,7 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       const countryRoute = COUNTRY_ROUTES[countryCode];
       // Format: en-IN, en-US, en-CA, en-AU, en-AE, en-GB (all uppercase for hreflang)
       const hreflangCode = `en-${countryCode}`;
+      // baseUrl is already without trailing slash
       const href = ensureTrailingSlash(`${baseUrl}/${countryRoute}${basePath || ""}`);
 
       hreflangs.push({
