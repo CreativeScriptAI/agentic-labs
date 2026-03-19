@@ -179,26 +179,26 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               </button>
 
               {isOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 overflow-hidden z-50">
+                <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 overflow-hidden z-50">
                   {/* Triangle pointer */}
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
+                  <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
                   <ul className="p-2">
                     {item.items.map((sub) => (
                       <li key={sub.to}>
                         <Link
                           href={sub.to}
                           onClick={() => { setOpenDropdown(null); onLinkClick?.(); }}
-                          className={`flex items-start gap-3 px-3 py-2.5 rounded-xl transition-colors group hover:bg-gray-50 ${
+                          className={`flex items-center justify-between gap-3 px-3 py-3 rounded-xl transition-colors group hover:bg-gray-50 ${
                             isActive(sub.to) ? "bg-gray-50" : ""
                           }`}
                         >
-                          <div className="flex-1 min-w-0">
+                          <div className="min-w-0">
                             <div className="flex items-center gap-2">
-                              <span className={`text-sm font-semibold ${isActive(sub.to) ? "text-[#0A1128]" : "text-[#0A1128] group-hover:text-[#0A1128]"}`}>
+                              <span className="text-sm font-semibold text-[#0A1128] whitespace-nowrap">
                                 {sub.name}
                               </span>
                               {sub.badge && (
-                                <span className="text-[9px] font-bold bg-[#FCCA07] text-[#0A1128] px-1.5 py-0.5 rounded-full tracking-wide">
+                                <span className="text-[9px] font-bold bg-[#FCCA07] text-[#0A1128] px-1.5 py-0.5 rounded-full tracking-wide whitespace-nowrap">
                                   {sub.badge}
                                 </span>
                               )}
@@ -207,7 +207,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                               <p className="text-xs text-gray-400 mt-0.5 leading-snug">{sub.desc}</p>
                             )}
                           </div>
-                          <svg className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 mt-1 group-hover:text-gray-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 group-hover:text-gray-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </Link>
