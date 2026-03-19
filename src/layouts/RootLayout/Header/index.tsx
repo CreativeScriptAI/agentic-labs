@@ -282,7 +282,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             <Link
               href="https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
               rel="noopener noreferrer"
-              className="rounded-lg bg-[#FCCA07] px-6 py-2 text-sm font-medium text-[#0A1128] transition-colors focus:outline-none"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-5 py-2.5 text-xs font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
             >
               Book Free Call
             </Link>
@@ -407,7 +407,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                         }
                         return true;
                       }}
-                      className="block w-full text-center rounded-lg bg-yellow-400 px-4 py-4 text-base font-medium text-black transition-colors hover:bg-yellow-500 focus:outline-none overflow-hidden"
+                      className="block w-full text-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-6 py-3 text-sm font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
                     >
                       Book Free Call
                     </button>

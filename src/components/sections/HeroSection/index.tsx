@@ -37,7 +37,7 @@ const HeroSection = () => {
                 href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-lg bg-[#FCCA07] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-[#0A1128] transition-colors hover:bg-yellow-500"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-7 py-3.5 text-sm font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
               >
                 Book a Free Call
               </Link>

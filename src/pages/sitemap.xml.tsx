@@ -67,22 +67,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       });
     });
 
-    // Add country-specific static routes - COMMENTED OUT
-    // countries.forEach((country) => {
-    //   staticRoutes.forEach(({ path, priority }) => {
-    //     // Adjust priority slightly lower for country-specific pages
-    //     const countryPriority = path === "" ? 0.9 : priority * 0.9;
-    //     const countryPath = path === "" ? `/${country}/` : `/${country}${path}`;
-    // 
-    //     fields.push({
-    //       loc: `${base}${countryPath}`,
-    //       lastmod: new Date().toISOString(),
-    //       changefreq: "weekly" as const,
-    //       priority: countryPriority,
-    //     });
-    //   });
-    // });
-
     // Add blog posts - with trailing slashes for SEO
     publicPosts.forEach((post) => {
       fields.push({
@@ -93,18 +77,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
         changefreq: "weekly" as const,
         priority: 0.7,
       });
-
-      // Add country-specific blog posts - COMMENTED OUT
-      // countries.forEach((country) => {
-      //   fields.push({
-      //     loc: `${base}/${country}/blog/${post.slug}/`,
-      //     lastmod: new Date(
-      //       post.date?.start_date || post.createdTime
-      //     ).toISOString(),
-      //     changefreq: "weekly" as const,
-      //     priority: 0.65,
-      //   });
-      // });
     });
 
     // Add agent pages - with trailing slashes for SEO
@@ -117,18 +89,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
         changefreq: "weekly" as const,
         priority: 0.7,
       });
-
-      // Add country-specific agent pages - COMMENTED OUT
-      // countries.forEach((country) => {
-      //   fields.push({
-      //     loc: `${base}/${country}/agent/${agent.slug}/`,
-      //     lastmod: new Date(
-      //       agent.date?.start_date || agent.createdTime
-      //     ).toISOString(),
-      //     changefreq: "weekly" as const,
-      //     priority: 0.65,
-      //   });
-      // });
     });
 
     return getServerSideSitemapLegacy(ctx, fields);

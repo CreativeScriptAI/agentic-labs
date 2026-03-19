@@ -65,11 +65,11 @@ const PrimaryBtn = ({
   size?: "sm" | "md" | "lg";
 }) => {
   const sizeMap = {
-    sm: "px-5 py-2.5 text-sm min-h-[40px]",
-    md: "px-7 py-3.5 text-sm min-h-[48px]",
-    lg: "px-8 py-4 text-base min-h-[52px]",
+    sm: "px-5 py-2.5 text-xs",
+    md: "px-6 py-3 text-sm",
+    lg: "px-7 py-3.5 text-sm",
   };
-  const cls = `inline-flex items-center justify-center rounded-lg bg-[#FCCA07] text-[#0A1128] font-semibold transition-all hover:bg-[#f0bd00] active:scale-[0.98] cursor-pointer ${sizeMap[size]} ${fullWidth ? "w-full" : ""}`;
+  const cls = `inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] text-[#0A1128] font-semibold transition-all hover:bg-[#f0bd00] active:scale-[0.98] cursor-pointer ${sizeMap[size]} ${fullWidth ? "w-full" : ""}`;
   if (onClick) return <button onClick={onClick} className={cls}>{label}</button>;
   return <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
 };

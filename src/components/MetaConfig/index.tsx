@@ -68,68 +68,6 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
   const isProduction = CONFIG.isProd;
   const robotsContent = "index, follow";
 
-  // Generate hreflang links for all country versions
-  const generateHreflangs = () => {
-    // Try to get current path from props.url first as it's more reliable on SSR
-    let currentPath = "";
-    if (props.url) {
-      try {
-        currentPath = new URL(props.url).pathname;
-      } catch (e) {
-        currentPath = props.url;
-      }
-    } else {
-      currentPath = router.asPath.split("?")[0].split("#")[0];
-    }
-
-    // fallback: if currentPath still has placeholders or is empty, use a safer best-guess
-    if (currentPath.includes("[") || !currentPath) {
-      currentPath = router.asPath.split("?")[0].split("#")[0];
-    }
-
-    const pathParts = currentPath.split("/").filter(Boolean);
-    const countryRoutes = getAllCountryRoutes();
-
-    // Get the base path without country prefix
-    let basePath = currentPath;
-    if (pathParts.length > 0 && countryRoutes.includes(pathParts[0])) {
-      basePath = "/" + pathParts.slice(1).join("/");
-    }
-
-    // Clean up basePath: ensure it starts with / but doesn't end with /
-    if (basePath === "/" || basePath === "") {
-      basePath = "";
-    } else {
-      if (!basePath.startsWith("/")) basePath = "/" + basePath;
-      if (basePath.endsWith("/")) basePath = basePath.slice(0, -1);
-    }
-
-    const hreflangs: Array<{ hreflang: string; href: string }> = [];
-
-    // Add x-default for global version
-    hreflangs.push({
-      hreflang: "x-default",
-      href: ensureTrailingSlash(`${baseUrl}${basePath || ""}`),
-    });
-
-    // Add each country version
-    SUPPORTED_COUNTRIES.forEach((countryCode) => {
-      const countryRoute = COUNTRY_ROUTES[countryCode];
-      // Format: en-IN, en-US, en-CA, en-AU, en-AE, en-GB (all uppercase for hreflang)
-      const hreflangCode = `en-${countryCode}`;
-      // baseUrl is already without trailing slash
-      const href = ensureTrailingSlash(`${baseUrl}/${countryRoute}${basePath || ""}`);
-
-      hreflangs.push({
-        hreflang: hreflangCode,
-        href: href,
-      });
-    });
-
-    return hreflangs;
-  };
-
-  const hreflangs = generateHreflangs();
 
   return (
     <Head>
@@ -141,15 +79,6 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* Hreflang tags for international SEO */}
-      {hreflangs.map((link) => (
-        <link
-          key={link.hreflang}
-          rel="alternate"
-          hrefLang={link.hreflang}
-          href={link.href}
-        />
-      ))}
 
       {/* Security Headers - Only add noindex for staging/preview environments */}
       {/* {process.env.VERCEL_ENV === "preview" && (

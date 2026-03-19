@@ -257,6 +257,37 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Localized routes redirects to global
+      {
+        source: "/en-in/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
+        source: "/en-us/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
+        source: "/en-ca/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
+        source: "/en-au/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
+        source: "/en-ae/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+      {
+        source: "/en-gb/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
     ];
   },
   // Rewrites for external API calls and Partytown

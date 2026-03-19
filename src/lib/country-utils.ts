@@ -1,31 +1,9 @@
-// Country configuration
-export const SUPPORTED_COUNTRIES = [
-  "IN",
-  "US",
-  "CA",
-  "AU",
-  "AE",
-  "GB",
-] as const;
+export const SUPPORTED_COUNTRIES = [] as const;
 export type SupportedCountry = (typeof SUPPORTED_COUNTRIES)[number];
 
-export const COUNTRY_ROUTES: Record<SupportedCountry, string> = {
-  IN: "en-in",
-  US: "en-us",
-  CA: "en-ca",
-  AU: "en-au",
-  AE: "en-ae",
-  GB: "en-gb",
-};
+export const COUNTRY_ROUTES: Record<string, string> = {};
 
-export const COUNTRY_NAMES: Record<SupportedCountry, string> = {
-  IN: "India",
-  US: "United States",
-  CA: "Canada",
-  AU: "Australia",
-  AE: "United Arab Emirates",
-  GB: "United Kingdom",
-};
+export const COUNTRY_NAMES: Record<string, string> = {};
 
 // Get country route from country code
 export function getCountryRoute(countryCode: string): string | null {

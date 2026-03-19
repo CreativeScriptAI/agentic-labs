@@ -56,9 +56,9 @@ const CTAButton = ({
 }) => (
     <Link
         href={href}
-        className={`inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 cursor-pointer ${fullWidth ? "w-full" : ""
+        className={`inline-flex items-center justify-center whitespace-nowrap gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 cursor-pointer active:scale-[0.98] ${fullWidth ? "w-full" : ""
             } ${variant === "primary"
-                ? "bg-[#FCCA07] text-[#0A1128] hover:bg-yellow-400 shadow-sm hover:shadow-md"
+                ? "bg-[#FCCA07] text-[#0A1128] hover:bg-[#f0bd00]"
                 : "bg-white text-[#0A1128] border border-gray-200 hover:border-gray-300 hover:shadow-sm"
             }`}
     >
@@ -1022,7 +1022,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         </p>
                         <Link
                             href={CAL_LINK}
-                            className="flex-shrink-0 bg-[#FCCA07] text-[#0A1128] text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors cursor-pointer font-sfpro"
+                            className="flex-shrink-0 inline-flex items-center justify-center whitespace-nowrap bg-[#FCCA07] text-[#0A1128] text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#f0bd00] transition-all active:scale-[0.98] cursor-pointer"
                         >
                             Book a Call
                         </Link>
