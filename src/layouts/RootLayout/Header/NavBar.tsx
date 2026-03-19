@@ -68,10 +68,10 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
           <li key={link.id}>
             <Link
               href={link.to}
-              className={`text-sm font-medium transition-colors hover:text-blue-600 ${currentPath === link.to.replace(/\/$/, "") ||
+              className={`text-sm font-medium transition-colors hover:text-white ${currentPath === link.to.replace(/\/$/, "") ||
                 currentPath === link.to
-                ? "text-blue-600 font-semibold"
-                : "text-[#475569] dark:text-gray-200"
+                ? "text-white font-semibold"
+                : "text-white/65"
                 }`}
               onClick={onLinkClick}
             >

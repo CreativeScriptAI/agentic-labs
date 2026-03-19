@@ -47,7 +47,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     });
 
     const detailPosts = filterPosts(posts, filter);
-    const postDetail = detailPosts.find((t) => t.slug === slug);
+    // Harden slug matching: trim slashes and ensure comparison is resilient
+    const normalizedSlug = (slug as string)?.replace(/\/$/, "");
+    const postDetail = detailPosts.find((t) => 
+      t.slug?.replace(/\/$/, "") === normalizedSlug
+    );
 
     if (!postDetail?.id) {
       return { notFound: true };
