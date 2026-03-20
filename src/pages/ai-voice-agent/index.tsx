@@ -1746,8 +1746,18 @@ const PricingSection = () => {
                     Replaces: {t.replaces}
                   </div>
 
+                  {/* Price */}
+                  <p className={`text-xs font-medium mb-0.5 ${t.highlight ? "text-white/50" : "text-gray-400"}`}>{t.setup}</p>
+                  <div className="flex items-baseline gap-1.5 mb-1">
+                    <span className="text-4xl font-bold tracking-tight">{t.monthly}</span>
+                    <span className={`text-sm ${t.highlight ? "text-white/50" : "text-gray-400"}`}>/month</span>
+                  </div>
+                  <p className={`text-xs mb-4 font-medium ${t.highlight ? "text-[#FCCA07]/70" : "text-gray-400"}`}>
+                    {t.perDay} — less than your chai per appointment
+                  </p>
+
                   {/* Value stack */}
-                  <div className={`rounded-xl px-4 py-3 mb-4 ${t.highlight ? "bg-white/8" : "bg-gray-100"}`}>
+                  <div className={`rounded-xl px-4 py-3 ${t.highlight ? "bg-white/8" : "bg-gray-100"}`}>
                     <p className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${t.highlight ? "text-white/50" : "text-gray-500"}`}>
                       Total value inside
                     </p>
@@ -1755,18 +1765,7 @@ const PricingSection = () => {
                       <span className={`text-lg font-bold line-through ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.worthOf}</span>
                       <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${t.highlight ? "bg-white/15 text-white/70" : "bg-gray-300 text-gray-600"}`}>you save</span>
                     </div>
-                    <p className={`text-[11px] mt-0.5 font-medium ${t.highlight ? "text-white/50" : "text-gray-500"}`}>You pay just ↓</p>
                   </div>
-
-                  {/* Price */}
-                  <p className={`text-xs font-medium mb-0.5 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.setup}</p>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-4xl font-bold tracking-tight">{t.monthly}</span>
-                    <span className={`text-sm ${t.highlight ? "text-white/40" : "text-gray-400"}`}>/month</span>
-                  </div>
-                  <p className={`text-xs mt-1.5 font-medium ${t.highlight ? "text-[#FCCA07]/70" : "text-gray-400"}`}>
-                    {t.perDay} — less than your chai per appointment
-                  </p>
                 </div>
 
                 {/* ROI callout */}
