@@ -179,7 +179,10 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               </button>
 
               {isOpen && (
-                <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50">
+                <div
+                  className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50"
+                  style={{ width: "280px" }}
+                >
                   {/* Triangle pointer */}
                   <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
                   <ul className="p-2">
@@ -188,28 +191,23 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                         <Link
                           href={sub.to}
                           onClick={() => { setOpenDropdown(null); onLinkClick?.(); }}
-                          className={`flex items-center justify-between gap-3 px-3 py-3 rounded-xl transition-colors group hover:bg-gray-50 ${
+                          className={`block px-3 py-3 rounded-xl transition-colors hover:bg-gray-50 ${
                             isActive(sub.to) ? "bg-gray-50" : ""
                           }`}
                         >
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2">
-                              <span className="text-sm font-semibold text-[#0A1128] whitespace-nowrap">
-                                {sub.name}
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-sm font-semibold text-[#0A1128]" style={{ whiteSpace: "nowrap" }}>
+                              {sub.name}
+                            </span>
+                            {sub.badge && (
+                              <span className="text-[9px] font-bold bg-[#FCCA07] text-[#0A1128] px-1.5 py-0.5 rounded-full tracking-wide" style={{ whiteSpace: "nowrap", flexShrink: 0 }}>
+                                {sub.badge}
                               </span>
-                              {sub.badge && (
-                                <span className="text-[9px] font-bold bg-[#FCCA07] text-[#0A1128] px-1.5 py-0.5 rounded-full tracking-wide whitespace-nowrap">
-                                  {sub.badge}
-                                </span>
-                              )}
-                            </div>
-                            {sub.desc && (
-                              <p className="text-xs text-gray-400 mt-0.5 leading-snug">{sub.desc}</p>
                             )}
                           </div>
-                          <svg className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 group-hover:text-gray-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
+                          {sub.desc && (
+                            <p className="text-xs text-gray-400 leading-snug">{sub.desc}</p>
+                          )}
                         </Link>
                       </li>
                     ))}
