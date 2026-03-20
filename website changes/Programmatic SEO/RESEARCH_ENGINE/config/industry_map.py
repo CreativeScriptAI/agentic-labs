@@ -294,6 +294,143 @@ INDUSTRY_MAP = {
         "job_search_title": "recruiter",
     },
 
+    # ─────────────────────────────────────────────────────────────────────────
+    # PLAYBOOK 7: COMMUNITY BLOGS
+    # Source: Voice AI WhatsApp Community (637 messages, Mar 2026)
+    # ─────────────────────────────────────────────────────────────────────────
+
+    "india-outbound-spam": {
+        "playbook": "07_BLOGS",
+        "page_title": "Why Indian Outbound Calls Get Marked SPAM — and How to Fix It",
+        "role": "Voice AI",
+        "industry": "Outbound Calling / India Telephony",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "india", "Entrepreneur"],
+        "reddit_keywords": ["outbound calls spam", "india calling spam", "truecaller spam", "call pickup rate india"],
+        "rss_feeds": [
+            "https://techcrunch.com/feed/",
+            "https://www.therundown.ai/rss",
+        ],
+        "trends_keywords": ["outbound calls marked spam", "truecaller spam fix", "voice AI india calling"],
+        "image_queries": [
+            "truecaller spam call screenshot india",
+            "airtel jio spam call india phone",
+            "outbound call center india AI voice",
+        ],
+        "job_search_title": "NA",
+    },
+
+    "vapi-to-livekit": {
+        "playbook": "07_BLOGS",
+        "page_title": "Vapi to LiveKit/Pipecat — Migration Guide for Production Voice AI Builders",
+        "role": "Voice AI",
+        "industry": "Voice AI Infrastructure",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "MachineLearning", "selfhosted"],
+        "reddit_keywords": ["Vapi alternative", "LiveKit voice agent", "Pipecat production", "switch from Vapi"],
+        "rss_feeds": [
+            "https://techcrunch.com/feed/",
+            "https://www.therundown.ai/rss",
+        ],
+        "trends_keywords": ["Vapi alternative", "LiveKit voice AI", "Pipecat vs Vapi"],
+        "image_queries": [
+            "LiveKit voice agent dashboard screenshot",
+            "Vapi AI voice platform dashboard",
+            "voice AI infrastructure pipeline diagram",
+        ],
+        "job_search_title": "NA",
+    },
+
+    "amd-voicemail-detection": {
+        "playbook": "07_BLOGS",
+        "page_title": "AMD for AI Voice Agents — Detect Voicemail Under 2 Seconds",
+        "role": "Voice AI",
+        "industry": "Outbound Calling / Compliance",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "VOIP", "legaladvice"],
+        "reddit_keywords": ["answering machine detection", "AMD voicemail", "TCPA compliance AI", "voicemail detection accuracy"],
+        "rss_feeds": [
+            "https://techcrunch.com/feed/",
+            "https://www.therundown.ai/rss",
+        ],
+        "trends_keywords": ["answering machine detection AI", "AMD TCPA compliance", "voicemail detection voice agent"],
+        "image_queries": [
+            "voicemail detection AI call center dashboard",
+            "TCPA compliance outbound calling",
+            "answering machine detection diagram",
+        ],
+        "job_search_title": "NA",
+    },
+
+    "telephony-vs-pipeline-latency": {
+        "playbook": "07_BLOGS",
+        "page_title": "Telephony Latency vs Pipeline Latency — Why Builders Confuse Them",
+        "role": "Voice AI",
+        "industry": "Voice AI / Telephony",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "VOIP", "MachineLearning"],
+        "reddit_keywords": ["voice AI latency", "SIP latency", "telephony latency", "STT LLM TTS latency"],
+        "rss_feeds": [
+            "https://techcrunch.com/feed/",
+            "https://www.therundown.ai/rss",
+        ],
+        "trends_keywords": ["voice AI latency", "SIP latency optimization", "PSTN latency voice agent"],
+        "image_queries": [
+            "voice AI latency benchmark chart STT LLM TTS",
+            "SIP telephony network latency diagram",
+            "Deepgram speech recognition latency dashboard",
+        ],
+        "job_search_title": "NA",
+    },
+
+    "scaling-pipecat-concurrent": {
+        "playbook": "07_BLOGS",
+        "page_title": "Scaling Voice AI to 50+ Concurrent Calls — Infra Guide for Pipecat and LiveKit",
+        "role": "Voice AI",
+        "industry": "Voice AI Infrastructure / DevOps",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "devops", "kubernetes"],
+        "reddit_keywords": ["Pipecat scaling", "LiveKit concurrent calls", "voice AI kubernetes", "concurrent voice agents"],
+        "rss_feeds": [
+            "https://techcrunch.com/feed/",
+            "https://www.therundown.ai/rss",
+        ],
+        "trends_keywords": ["Pipecat scaling", "LiveKit scaling", "voice AI concurrent calls kubernetes"],
+        "image_queries": [
+            "Pipecat AI voice agent architecture diagram",
+            "LiveKit concurrent calls kubernetes scaling",
+            "voice AI production infrastructure dashboard",
+        ],
+        "job_search_title": "NA",
+    },
+
+    "first-paying-client-voice-ai": {
+        "playbook": "07_BLOGS",
+        "page_title": "How to Get Your First Paying Client for an AI Voice Agent Business",
+        "role": "Voice AI",
+        "industry": "AI Agency / Business Development",
+        "replaced_role": "NA",
+        "bls_soc": "NA",
+        "subreddits": ["VoiceAutomationAI", "agency", "Entrepreneur"],
+        "reddit_keywords": ["first AI client", "sell voice AI", "AI agency first customer", "voice agent business"],
+        "rss_feeds": [
+            "https://www.therundown.ai/rss",
+            "https://techcrunch.com/feed/",
+        ],
+        "trends_keywords": ["sell AI voice agent", "AI agency first client", "voice AI business how to start"],
+        "image_queries": [
+            "AI voice agent business client meeting",
+            "voice AI agency sales outreach LinkedIn",
+            "AI startup first customer deal signed",
+        ],
+        "job_search_title": "NA",
+    },
+
 }
 
 

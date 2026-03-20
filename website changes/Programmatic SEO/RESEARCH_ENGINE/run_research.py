@@ -45,6 +45,7 @@ PLAYBOOK_FOLDERS = {
     "04_GLOSSARY":     os.path.join(PROJECT_ROOT, "04_GLOSSARY",     "_research_briefs"),
     "05_LOCATIONS":    os.path.join(PROJECT_ROOT, "05_LOCATIONS",    "_research_briefs"),
     "06_DIRECTORY":    os.path.join(PROJECT_ROOT, "06_DIRECTORY",    "_research_briefs"),
+    "07_BLOGS":        os.path.join(PROJECT_ROOT, "new seo strategy(upwrk)", "community_blogs", "_research_briefs"),
 }
 
 
@@ -171,6 +172,7 @@ def main():
     from nodes import node_03_google_trends
     from nodes import node_04_rss_news
     from nodes import node_05_job_market
+    from nodes import node_06_images
 
     # ── Run each node ─────────────────────────────────────────────────────────
     print("Running research nodes:")
@@ -184,6 +186,8 @@ def main():
     outputs.append(run_node("Node 04 — RSS News Feed",      node_04_rss_news,      config))
     time.sleep(1)
     outputs.append(run_node("Node 05 — Job Market",         node_05_job_market,    config))
+    time.sleep(2)
+    outputs.append(run_node("Node 06 — Image Scout",        node_06_images,        config))
 
     print("")
 
