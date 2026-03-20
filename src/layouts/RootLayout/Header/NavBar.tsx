@@ -179,7 +179,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               </button>
 
               {isOpen && (
-                <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 overflow-hidden z-50">
+                <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50">
                   {/* Triangle pointer */}
                   <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
                   <ul className="p-2">
@@ -192,7 +192,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                             isActive(sub.to) ? "bg-gray-50" : ""
                           }`}
                         >
-                          <div className="min-w-0">
+                          <div className="flex-1">
                             <div className="flex items-center gap-2">
                               <span className="text-sm font-semibold text-[#0A1128] whitespace-nowrap">
                                 {sub.name}
