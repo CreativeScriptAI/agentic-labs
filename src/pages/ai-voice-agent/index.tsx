@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import MetaConfig from "src/components/MetaConfig";
 import { NextPageWithLayout } from "../../types";
@@ -115,6 +116,12 @@ const DEMOS: Record<DemoTab, {
   color: string;
   audioSrc: string;
   transcript: { speaker: "Caller" | "Dhvani"; text: string }[];
+  whatsappMessage: string;
+  crmData: {
+    status: string;
+    notes: string;
+    source: string;
+  };
 }> = {
   dental: {
     label: "Dental Clinic",
@@ -124,13 +131,17 @@ const DEMOS: Record<DemoTab, {
     color: "#FF5500",
     audioSrc: "/audio/demo-dental.mp3",
     transcript: [
-      { speaker: "Caller", text: "Hello, Dr. Mehta ki clinic hai? Main appointment lena chahta tha, cleaning aur checkup ke liye." },
-      { speaker: "Dhvani", text: "Haan ji! Aap naye patient hain ya pehle aaye hain humare yahan?" },
-      { speaker: "Caller", text: "Naya hoon. Bhai ne refer kiya tha. Fees kitni hai cleaning ki?" },
-      { speaker: "Dhvani", text: "Cleaning aur checkup combo ₹800 mein hota hai. Kal subah 10 baje ya Thursday 4 baje, kaunsa time suit karega?" },
-      { speaker: "Caller", text: "Thursday 4 baje perfect rahega." },
-      { speaker: "Dhvani", text: "Done Rahul ji! Thursday 4 baje confirm ho gayi. WhatsApp pe reminder aayega 2 ghante pehle, aur directions bhi. Dhanyawaad!" },
+      { speaker: "Caller", text: "Hello, Dr. Mehta ki clinic mein appointment mil sakta hai cleaning ke liye?" },
+      { speaker: "Dhvani", text: "Haan ji! Rahul ji, Thursday 4 baje ya Saturday 11 baje, kaunsa suit karega?" },
+      { speaker: "Caller", text: "Thursday 4 baje perfect rahega. Fees kitni hai?" },
+      { speaker: "Dhvani", text: "Fees ₹800 hai. Done! Baaki details aur clinic directions hum WhatsApp kar rahe hain." },
     ],
+    whatsappMessage: "Hi Rahul! Your appointment with Dr. Mehta for **Cleaning & Checkup** is confirmed for **Thursday at 4:00 PM**. \n\n📍 Location: https://maps.google.com/?q=Mehta+Clinic",
+    crmData: {
+      status: "Appointment Booked",
+      notes: "Cleaning combo - Thursday 4PM. New patient.",
+      source: "Dhvani AI (Voice)"
+    }
   },
   realestate: {
     label: "Real Estate",
@@ -140,13 +151,17 @@ const DEMOS: Record<DemoTab, {
     color: "#3300FF",
     audioSrc: "/audio/demo-realestate.mp3",
     transcript: [
-      { speaker: "Caller", text: "Bhai, wo 2BHK Bandra West mein, abhi bhi available hai? MagicBricks pe dekha." },
-      { speaker: "Dhvani", text: "Haan ji available hai! ₹1.2 crore mein listed hai. Aapka budget range kya hai?" },
-      { speaker: "Caller", text: "1 to 1.5 crore ke beech mein soch rahe hain. Covered parking bhi chahiye." },
-      { speaker: "Dhvani", text: "Parking included hai is flat mein. Saturday ko site visit ka time doon?" },
-      { speaker: "Caller", text: "Haan Saturday subah kaafi acha rahega." },
-      { speaker: "Dhvani", text: "Saturday 11 baje confirm Vikram ji. Agent ka number aur exact address abhi WhatsApp pe bhej raha hoon." },
+      { speaker: "Caller", text: "Bhai, wo 2BHK Bandra West wala flat abhi bhi available hai?" },
+      { speaker: "Dhvani", text: "Ji Vikram ji, available hai! Price ₹1.2 Cr hai. Saturday site visit rakhein?" },
+      { speaker: "Caller", text: "Haan Saturday subah 11 baje kaafi acha rahega." },
+      { speaker: "Dhvani", text: "Confirmed! Agent ki details aur location abhi WhatsApp pe bhej rahi hoon." },
     ],
+    whatsappMessage: "Hi Vikram! Here are the details for the **2BHK Bandra West** flat. Site visit confirmed for **Saturday 11:00 AM**. \n\nAgent Number: +91 98765 43210",
+    crmData: {
+      status: "Site Visit Scheduled",
+      notes: "Interested in 2BHK Bandra West. Sat 11AM visit.",
+      source: "Dhvani AI (Voice)"
+    }
   },
   hiring: {
     label: "Hiring Agency",
@@ -156,13 +171,17 @@ const DEMOS: Record<DemoTab, {
     color: "#FF0055",
     audioSrc: "/audio/demo-hiring.mp3",
     transcript: [
-      { speaker: "Caller", text: "Hello, main Naukri pe warehouse supervisor ki vacancy dekhi thi, usi ke baare mein call kiya tha." },
-      { speaker: "Dhvani", text: "Ji bilkul Suresh ji! Aapka warehouse management mein kitne saal ka experience hai?" },
-      { speaker: "Caller", text: "3 saal se zyada. Pehle ek logistics company mein tha, 20 logon ki team handle karta tha." },
-      { speaker: "Dhvani", text: "Bahut achha. Joining kab tak possible hai, 2 hafte mein ho sakta hai?" },
-      { speaker: "Caller", text: "Haan, 2 hafte mein ho jayega. Urgent ho toh pehle bhi kar sakta hoon." },
-      { speaker: "Dhvani", text: "Perfect. Recruiter ka call 24 ghante mein aayega. Aapki details ka summary WhatsApp pe bhej raha hoon. Shukriya!" },
+      { speaker: "Caller", text: "Hello, main Warehouse Supervisor ki vacancy ke baare mein call kiya tha." },
+      { speaker: "Dhvani", text: "Ji Suresh ji! Aapka 3 saal ka experience hai management mein?" },
+      { speaker: "Caller", text: "Haan ji, 20 logon ki team handle karta tha. Joining 2 hafte mein ho jayegi." },
+      { speaker: "Dhvani", text: "Perfect. Recruiter aapko call karenge. Interview details WhatsApp kar di hain." },
     ],
+    whatsappMessage: "Hi Suresh! Thank you for applying for the **Warehouse Supervisor** role. Your profile has been shortlisted. \n\nRecruiter will call within 24 hours. Keep your docs ready!",
+    crmData: {
+      status: "Lead Qualified",
+      notes: "Warehouse Supervisor. 3y exp. 2wk joining.",
+      source: "Dhvani AI (Voice)"
+    }
   },
 };
 
@@ -243,7 +262,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
-            <PrimaryBtn href={CAL_LINK} label="Book a Free Discovery Call" size="lg" />
+            <PrimaryBtn href={CAL_LINK} label="Take Your AI Agent Live in 30 Mins" size="lg" />
             <button
               onClick={() => smoothScrollTo("pricing")}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-xl text-white text-sm font-semibold transition-all hover:bg-white/10 active:scale-[0.98]" style={{ border: "1px solid rgba(255,255,255,0.55)" }}
@@ -360,22 +379,21 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
   </section>
 );
 
-// ─── HEAR IT YOURSELF ─────────────────────────────────────────────────────────
+// ─── END-TO-END AUTOMATION LOOP ────────────────────────────────────────────────
 const WaveformBars = ({ isPlaying, color }: { isPlaying: boolean; color: string }) => {
-  const BAR_COUNT = 28;
-  const heights = [30, 55, 70, 45, 80, 60, 90, 40, 75, 50, 85, 35, 65, 95, 45, 70, 55, 80, 40, 65, 50, 90, 35, 75, 60, 85, 45, 70];
+  const heights = [35, 60, 40, 75, 55, 90, 45, 80, 65, 30, 85, 50, 70, 45, 95, 60, 80, 40, 75, 55, 90, 45, 80, 65, 30, 85, 50, 70, 45, 95, 60, 40];
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 3, height: 48 }}>
-      {Array.from({ length: BAR_COUNT }).map((_, i) => (
-        <div
-          key={i}
+    <div className="flex items-center justify-center gap-[3px] h-12 w-full">
+      {heights.map((h, i) => (
+        <div key={i}
           style={{
             width: 3,
-            borderRadius: 2,
-            background: isPlaying ? color : "#d1d5db",
-            height: isPlaying ? `${heights[i % heights.length]}%` : "30%",
-            transition: "height 0.15s ease, background 0.3s ease",
-            animation: isPlaying ? `waveBar${(i % 4) + 1} ${0.6 + (i % 3) * 0.15}s ease-in-out infinite alternate` : "none",
+            borderRadius: "4px",
+            background: isPlaying ? color : "rgba(255,255,255,0.15)",
+            height: isPlaying ? `${h}%` : "15%",
+            transition: "height 0.2s ease, background 0.4s ease",
+            animation: isPlaying ? `waveBarAnim ${0.8 + (i % 5) * 0.2}s ease-in-out infinite alternate` : "none",
+            animationDelay: `${i * 0.05}s`
           }}
         />
       ))}
@@ -383,187 +401,304 @@ const WaveformBars = ({ isPlaying, color }: { isPlaying: boolean; color: string 
   );
 };
 
-const HearItYourselfSection = ({ activeTab, onTabChange }: { activeTab: DemoTab; onTabChange: (t: DemoTab) => void }) => {
+const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName: string; data: any }) => {
+  return (
+    <div className="bg-slate-50 rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl relative h-full flex flex-col font-sfpro transition-all">
+      <div className="bg-white px-6 py-5 flex items-center justify-between border-b border-slate-200 shadow-sm relative z-10">
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          </div>
+          <h5 className="text-slate-800 text-xs font-bold tracking-widest uppercase">Lead CRM</h5>
+        </div>
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-50 border border-emerald-100">
+           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
+           <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700">Live Sync</span>
+        </div>
+      </div>
+      <div className="flex-1 p-5 bg-slate-50 overflow-hidden relative">
+        <div className="absolute left-7 top-6 bottom-6 w-px bg-slate-200" />
+        <div className="space-y-4 relative h-full">
+          {[
+            { name: "Priya K.", status: "Contacted", time: "2h ago", color: "bg-blue-100 text-blue-700 border-blue-200" },
+            { name: "Amit S.", status: "Closed", time: "5h ago", color: "bg-amber-100 text-amber-700 border-amber-200" },
+          ].map((lead, i) => (
+            <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-white border border-slate-200 shadow-sm opacity-50 relative ml-8">
+              <div className="absolute -left-10 w-2.5 h-2.5 rounded-full bg-slate-200 border-2 border-slate-50" />
+              <div className="flex items-center gap-3.5">
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold border ${lead.color}`}>{lead.name[0]}</div>
+                <div>
+                    <p className="text-sm text-slate-700 font-bold">{lead.name}</p>
+                    <p className="text-[10px] text-slate-400 font-medium">{lead.time}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+          <AnimatePresence>
+            {isVisible && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 10 }} animate={{ opacity: 1, scale: 1, y: 0 }}
+                className="p-5 rounded-2xl border border-[#2D22FF]/20 bg-white relative shadow-xl ml-8 z-10"
+              >
+                <div className="absolute -left-[40px] top-6 w-3 h-3 rounded-full bg-[#2D22FF] border-2 border-slate-50 shadow-[0_0_12px_rgba(45,34,255,0.4)]" />
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2D22FF] to-[#1e17ba] flex items-center justify-center text-sm font-bold text-white shadow-md">{leadName[0]}</div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold text-slate-800 truncate">{leadName}</p>
+                      <p className="text-[10px] text-slate-500 font-medium">Synced via Voice</p>
+                    </div>
+                  </div>
+                  <span className="px-2.5 py-1 rounded-full text-[9px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-100 leading-none">Appointment Booked</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex flex-col gap-1.5 flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase">Summary</span>
+                      <span className="text-[9px] text-[#2D22FF] font-bold bg-[#2D22FF]/5 px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg> Voice Agent
+                      </span>
+                    </div>
+                    <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                      <p className="text-xs text-slate-600 leading-relaxed italic">&quot;{data.notes}&quot;</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+      <div className="py-4 bg-white border-t border-slate-100 flex items-center justify-center gap-1.5 opacity-40 grayscale">
+         <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Powered by Guftugu</span>
+      </div>
+    </div>
+  );
+};
+
+const WhatsAppMockup = ({ isVisible, message }: { isVisible: boolean; message: string }) => {
+  return (
+    <div className="h-full flex flex-col font-sfpro bg-[#e5ddd5]" style={{ backgroundImage: "url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')", backgroundSize: "450px" }}>
+      <div className="bg-[#075e54] pt-10 pb-3 px-3 flex items-center shadow-md z-20 sticky top-0">
+        <div className="flex items-center gap-1 text-white mr-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm">G</div>
+        </div>
+        <div className="flex-1 min-w-0">
+          <h5 className="text-white text-[16px] font-bold leading-tight truncate">Guftugu AI</h5>
+          <p className="text-white/70 text-[11px] leading-none mt-0.5">online</p>
+        </div>
+        <div className="flex items-center gap-4 text-white/90 ml-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.01c-.36-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+        </div>
+      </div>
+      <div className="flex-1 p-3 overflow-y-auto scrollbar-hide flex flex-col gap-2">
+        <AnimatePresence>
+          {isVisible && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 10, transformOrigin: 'top left' }} animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="bg-white p-2.5 rounded-[12px] rounded-tl-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-start mt-2"
+            >
+              <div className="absolute top-0 -left-2 w-3 h-3 bg-white" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
+              <div className="pr-12 min-w-[120px]">
+                <p className="text-[#111b21] text-[14px] leading-[1.4] whitespace-pre-wrap"
+                  dangerouslySetInnerHTML={{ __html: message.replace(/\n/g, '<br/>').replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#111b21]">$1</strong>') }} />
+              </div>
+              <div className="absolute bottom-1 right-1.5 flex items-center gap-0.5 opacity-50">
+                <span className="text-[9px] text-[#667781] font-medium leading-none">16:42</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="-ml-[11px]"/></svg>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+      <div className="p-2 pb-6 flex gap-2 items-center bg-transparent z-10">
+        <div className="bg-white rounded-full flex-1 h-[42px] px-3 flex items-center gap-3 shadow-sm border border-black/5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
+          <span className="text-[#667781] text-sm flex-1">Message</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19"/></svg>
+        </div>
+        <div className="w-[42px] h-[42px] rounded-full bg-[#00a884] flex items-center justify-center text-white shadow-md active:scale-95 transition-transform">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const StepArrow = ({ isActive }: { isActive: boolean }) => (
+  <div className="hidden xl:flex items-center justify-center w-12 -mx-6 z-20">
+    <motion.svg width="32" height="24" viewBox="0 0 32 24" fill="none" animate={{ opacity: isActive ? 1 : 0.05, x: isActive ? 0 : -8 }} transition={{ duration: 0.5 }}>
+      <path d="M2 12H30M30 12L22 4M30 12L22 20" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={isActive ? "animate-pulse" : ""} />
+    </motion.svg>
+  </div>
+);
+
+const HearItYourselfSection = ({ 
+  activeTab, 
+  onTabChange, 
+  autoPlayTrigger 
+}: { 
+  activeTab: DemoTab; 
+  onTabChange: (t: DemoTab) => void; 
+  autoPlayTrigger?: number 
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [visibleMessages, setVisibleMessages] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0); 
+  const [hasScrolledIn, setHasScrolledIn] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const transcriptRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const demo = DEMOS[activeTab];
 
-  // Reset transcript when tab changes
   useEffect(() => {
-    setVisibleMessages(0);
-    setIsPlaying(false);
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
+    setVisibleMessages(0); setIsPlaying(false); setCurrentStep(0);
+    if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
   }, [activeTab]);
 
-  // Auto-scroll transcript
   useEffect(() => {
-    if (transcriptRef.current) {
-      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
-    }
+    if (transcriptRef.current) { transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight; }
   }, [visibleMessages]);
 
   const handlePlay = useCallback(() => {
-    if (isPlaying) {
-      audioRef.current?.pause();
-      setIsPlaying(false);
-      return;
-    }
-    // Try real audio first, fall back to transcript simulation
-    const audio = new Audio(demo.audioSrc);
-    audioRef.current = audio;
-    audio.onloadedmetadata = () => setDuration(audio.duration);
-    audio.ontimeupdate = () => setCurrentTime(audio.currentTime);
-    audio.onended = () => { setIsPlaying(false); setCurrentTime(0); };
-    audio.play().catch(() => {
-      // No audio file, simulate with transcript animation only
-    });
-    setIsPlaying(true);
-    // Animate transcript regardless of audio
-    setVisibleMessages(0);
-    const intervals: ReturnType<typeof setTimeout>[] = [];
-    demo.transcript.forEach((_, i) => {
-      const t = setTimeout(() => setVisibleMessages(i + 1), i * 2200 + 400);
-      intervals.push(t);
-    });
-    const done = setTimeout(() => setIsPlaying(false), demo.transcript.length * 2200 + 600);
-    intervals.push(done);
+    if (isPlaying) { audioRef.current?.pause(); setIsPlaying(false); return; }
+    setIsPlaying(true); setCurrentStep(1); setVisibleMessages(0);
+    const audio = new Audio(demo.audioSrc); audioRef.current = audio; 
+    audio.play().catch(() => {});
+    
+    const intervals: any[] = [];
+    demo.transcript.forEach((_, i) => { intervals.push(setTimeout(() => setVisibleMessages(i + 1), i * 1800 + 400)); });
+    const callEndDelay = demo.transcript.length * 1900 + 600;
+    
+    intervals.push(setTimeout(() => { setIsPlaying(false); setCurrentStep(2); setTimeout(() => setCurrentStep(3), 2800); }, callEndDelay));
     return () => intervals.forEach(clearTimeout);
   }, [isPlaying, demo]);
 
-  const formatTime = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  // Handle intersection observer to auto-play on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting && !hasScrolledIn && !isPlaying) {
+        setHasScrolledIn(true);
+        handlePlay();
+      }
+    }, { threshold: 0.4 });
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [hasScrolledIn, isPlaying, handlePlay]);
+
+  // Handle external trigger (Hero play icon)
+  useEffect(() => {
+    if (autoPlayTrigger && !isPlaying) {
+      handlePlay();
+    }
+  }, [autoPlayTrigger, isPlaying, handlePlay]);
 
   return (
-    <section id="hear-it" className="py-20 sm:py-24 bg-[#0A1128] relative overflow-hidden">
-      {/* Atmospheric colour blobs, Digital Impressionism, shifts with active tab */}
-      <div aria-hidden="true" style={{ position: "absolute", top: "-15%", left: "-8%", width: 360, height: 360, borderRadius: "50%", background: demo.color, filter: "blur(90px)", opacity: 0.07, transition: "background 0.6s ease", pointerEvents: "none" }} />
-      <div aria-hidden="true" style={{ position: "absolute", bottom: "-10%", right: "-5%", width: 280, height: 280, borderRadius: "50%", background: demo.color, filter: "blur(80px)", opacity: 0.05, transition: "background 0.6s ease", pointerEvents: "none" }} />
-      <Container size="lg">
-        <div className="text-center mb-12">
-          <SectionLabel text="Suno khud · Hear it yourself" dark />
-          <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-white leading-tight mb-3">
-            Bharosa mat karo. Sun lo.
-          </h2>
-          <p className="text-white/70 text-base max-w-lg mx-auto mb-2">
-            Yahi sunenge aapke customers, Hindi mein, English mein, ya dono ek saath.
-          </p>
-          <p className="text-white/40 text-sm max-w-md mx-auto">
-            Real Indian business scenarios. This is exactly what your callers hear on the first ring.
-          </p>
+    <section ref={sectionRef} id="hear-it" className="py-24 sm:py-32 bg-[#050B1B] relative overflow-hidden">
+      <div aria-hidden="true" className="absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full blur-[100px] pointer-events-none transition-all duration-1000"
+        style={{ background: `radial-gradient(circle, ${demo.color}15 0%, transparent 70%)`, opacity: isPlaying ? 0.8 : 0.3 }} />
+      <Container>
+        <div className="text-center mb-16">
+          <SectionLabel text="Automation Stack" dark />
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-eb-garamond italic text-white leading-tight mb-6">Experience the <span className="text-white/80">End-to-End</span> Loop.</h2>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto font-sfpro">Watch how Dhvani answers the call, triggers Sandesh for follow-up, and logs everything to your CRM in real-time.</p>
         </div>
 
-        {/* Tab pills */}
-        <div className="flex justify-center gap-2 mb-10 flex-wrap">
+        {/* Tab Pills */}
+        <div className="flex justify-center gap-3 mb-16">
           {(Object.keys(DEMOS) as DemoTab[]).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => onTabChange(tab)}
-              style={{
-                padding: "8px 20px",
-                borderRadius: 999,
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: "pointer",
-                border: "1.5px solid",
-                transition: "all 0.15s ease",
-                background: activeTab === tab ? DEMOS[tab].color : "transparent",
-                borderColor: activeTab === tab ? DEMOS[tab].color : "rgba(255,255,255,0.2)",
-                color: activeTab === tab ? "#fff" : "rgba(255,255,255,0.5)",
-              }}
-            >
+            <button key={tab} onClick={() => onTabChange(tab)}
+              className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 border-2 ${activeTab === tab ? "bg-[#2D22FF] border-[#2D22FF] text-white shadow-lg" : "border-white/10 text-white/40 hover:text-white"}`}>
               {DEMOS[tab].label}
             </button>
           ))}
         </div>
 
-        {/* Player card */}
-        <div className="max-w-2xl mx-auto rounded-2xl overflow-hidden border border-white/10" style={{ background: "rgba(255,255,255,0.04)" }}>
-          {/* Header bar */}
-          <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div style={{ width: 36, height: 36, borderRadius: "50%", background: demo.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
-                </svg>
+        <div className="max-w-[1400px] mx-auto relative mt-8">
+          <div className="flex flex-col xl:flex-row items-stretch gap-10 xl:gap-6">
+            
+            {/* 1. VOICE APP */}
+            <div className={`flex-[1.4] transition-all duration-700 ${currentStep < 1 ? "opacity-20 blur-[2px]" : "opacity-100"}`}>
+              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+                 <div className={`w-2 h-2 rounded-full ${currentStep === 1 ? 'bg-[#2D22FF] animate-pulse' : 'bg-white/10'}`} /> 01. Voice Agent (Dhvani)
               </div>
-              <div>
-                <p className="text-white text-sm font-semibold">{demo.callerName} → Dhvani AI</p>
-                <p className="text-white/40 text-xs">{isPlaying ? "Call in progress..." : visibleMessages > 0 ? "Call ended" : demo.scenario}</p>
+              <div className={`rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[600px] flex flex-col transition-all duration-500 bg-[#0A0D14] shadow-2xl`}>
+                <div className="px-6 pt-12 pb-5 border-b border-white/5 flex items-center justify-between bg-black/40 backdrop-blur-xl z-20">
+                  <div className="flex items-center gap-4 min-w-0 flex-1">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${currentStep >= 1 ? "bg-[#2D22FF] shadow-[0_0_20px_#2D22FF66]" : "bg-white/5"}`}>
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
+                    </div>
+                    <div className="flex flex-col min-w-0">
+                      <div className="text-white text-[15px] font-bold flex items-center gap-1.5 leading-tight truncate">
+                         {demo.callerName} <span className="text-white/20 font-normal">to</span> <span className="text-[#818cf8] shrink-0">Dhvani AI</span>
+                      </div>
+                      <p className="text-white/30 text-[10px] font-bold mt-1 uppercase tracking-wider truncate">{demo.scenario}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative flex-1 overflow-hidden bg-[#0A0D14]">
+                  <AnimatePresence mode="wait">
+                    {currentStep === 0 ? (
+                      <motion.div key="p" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex flex-col items-center justify-center p-8 text-center">
+                        <button onClick={handlePlay} className="w-20 h-20 rounded-full bg-[#2D22FF] flex items-center justify-center mb-6 shadow-[0_0_40px_#2D22FF88] transition-transform hover:scale-110 active:scale-95"><svg width="36" height="36" viewBox="0 0 24 24" fill="white" className="ml-1.5"><path d="M5 3l14 9-14 9V3z"/></svg></button>
+                        <p className="text-white/20 text-[11px] font-bold tracking-[0.2em] uppercase">Simulate Real Interaction</p>
+                      </motion.div>
+                    ) : (
+                      <motion.div key="t" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full px-5 py-8 overflow-y-auto scrollbar-hide flex flex-col gap-6 pb-20" ref={transcriptRef}>
+                        {demo.transcript.slice(0, visibleMessages).map((msg, i) => (
+                          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} key={i} className={`flex gap-3 max-w-[85%] ${msg.speaker === "Dhvani" ? "flex-row mr-auto" : "flex-row-reverse ml-auto"}`}>
+                            <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center text-[10px] font-bold mt-auto mb-1 shadow-sm ${msg.speaker === "Dhvani" ? "bg-[#1e293b] text-white" : "bg-white/10 text-white/60"}`}>{msg.speaker === "Dhvani" ? "D" : demo.callerName[0]}</div>
+                            <div className={`px-4 py-3 rounded-[1.25rem] text-[13.5px] shadow-sm leading-relaxed ${msg.speaker === "Dhvani" ? "bg-[#1e293b]/80 border border-white/5 text-white/90 rounded-bl-none" : "bg-[#2D22FF] text-white rounded-br-none"}`}><p>{msg.text}</p></div>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                <div className="p-6 bg-black/40 backdrop-blur-xl border-t border-white/5 flex flex-col gap-4 sticky bottom-0 z-20">
+                  <WaveformBars isPlaying={isPlaying} color="#818cf8" />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2"><div className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-400 animate-ping' : 'bg-white/10'}`} /><span className="text-[10px] text-white/30 font-bold uppercase tracking-widest">{isPlaying ? 'Processing Voice' : 'Ready'}</span></div>
+                    {currentStep > 0 && <button onClick={handlePlay} className="text-[10px] text-[#2D22FF] font-bold uppercase tracking-widest">Restart</button>}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="text-white/30 text-xs font-mono">
-              {duration > 0 ? `${formatTime(currentTime)} / ${formatTime(duration)}` : visibleMessages > 0 ? `${visibleMessages}/${demo.transcript.length} exchanges` : ""}
-            </div>
-          </div>
 
-          {/* Transcript */}
-          <div
-            ref={transcriptRef}
-            className="px-6 py-5 space-y-3 overflow-y-auto"
-            style={{ minHeight: 240, maxHeight: 280 }}
-          >
-            {visibleMessages === 0 && !isPlaying && (
-              <div className="flex flex-col items-center justify-center h-32 gap-1">
-                <p className="text-white/20 text-sm">Play karo aur suno</p>
-                <p className="text-white/12 text-xs">{demo.scenario}</p>
-              </div>
-            )}
-            {demo.transcript.slice(0, visibleMessages).map((msg, i) => (
-              <div key={i} className={`flex gap-3 ${msg.speaker === "Dhvani" ? "flex-row" : "flex-row-reverse"}`}>
-                <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, background: msg.speaker === "Dhvani" ? demo.color : "rgba(255,255,255,0.15)", color: "white" }}>
-                  {msg.speaker === "Dhvani" ? "D" : demo.callerName[0]}
-                </div>
-                <div style={{ maxWidth: "72%", padding: "8px 12px", borderRadius: msg.speaker === "Dhvani" ? "4px 14px 14px 14px" : "14px 4px 14px 14px", background: msg.speaker === "Dhvani" ? `${demo.color}22` : "rgba(255,255,255,0.08)", border: `1px solid ${msg.speaker === "Dhvani" ? `${demo.color}40` : "rgba(255,255,255,0.1)"}` }}>
-                  <p className="text-[11px] font-bold mb-0.5" style={{ color: msg.speaker === "Dhvani" ? demo.color : "rgba(255,255,255,0.4)" }}>
-                    {msg.speaker === "Dhvani" ? "Dhvani" : demo.callerName}
-                  </p>
-                  <p className="text-white/80 text-sm leading-relaxed">{msg.text}</p>
-                </div>
-              </div>
-            ))}
-            {isPlaying && visibleMessages < demo.transcript.length && (
-              <div className="flex gap-3">
-                <div style={{ width: 28, height: 28, borderRadius: "50%", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, background: demo.color, color: "white" }}>D</div>
-                <div style={{ padding: "10px 14px", borderRadius: "4px 14px 14px 14px", background: `${demo.color}22`, border: `1px solid ${demo.color}40`, display: "flex", gap: 4, alignItems: "center" }}>
-                  {[0, 1, 2].map(d => <div key={d} style={{ width: 6, height: 6, borderRadius: "50%", background: demo.color, animation: `dotPulse 1.2s ease-in-out ${d * 0.2}s infinite` }} />)}
-                </div>
-              </div>
-            )}
-          </div>
+            <StepArrow isActive={currentStep >= 2} />
 
-          {/* Waveform + Controls */}
-          <div className="px-6 py-5 border-t border-white/10">
-            <div className="mb-4">
-              <WaveformBars isPlaying={isPlaying} color={demo.color} />
+            {/* 2. WHATSAPP */}
+            <div className={`flex-[1.1] transition-all duration-700 ${currentStep < 2 ? "opacity-10 blur-[3px] scale-95" : "opacity-100 scale-100"}`}>
+              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+                <div className={`w-2 h-2 rounded-full ${currentStep === 2 ? 'bg-[#25D366] animate-pulse' : 'bg-white/10'}`} /> 02. WhatsApp (Sandesh)
+              </div>
+              <div className="h-[600px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
+                 <WhatsAppMockup isVisible={currentStep >= 2} message={demo.whatsappMessage} />
+              </div>
             </div>
-            <div className="flex items-center justify-between">
-              <p className="text-white/30 text-xs">
-                {isPlaying ? "Dhvani bol rahi hai..." : "Play karke suno"}
-              </p>
-              <button
-                onClick={handlePlay}
-                style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 20px", borderRadius: 8, background: isPlaying ? "rgba(255,255,255,0.1)" : demo.color, border: "none", cursor: "pointer", color: "white", fontSize: 13, fontWeight: 600, transition: "all 0.15s ease" }}
-              >
-                {isPlaying ? (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-                ) : (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                )}
-                {isPlaying ? "Pause" : "Play call"}
-              </button>
+
+            <StepArrow isActive={currentStep >= 3} />
+
+            {/* 3. CRM */}
+            <div className={`flex-[1.1] transition-all duration-700 ${currentStep < 3 ? "opacity-10 blur-[3px] scale-95" : "opacity-100 scale-100"}`}>
+              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+                <div className={`w-2 h-2 rounded-full ${currentStep === 3 ? 'bg-emerald-400 animate-pulse' : 'bg-white/10'}`} /> 03. Sync (CRM)
+              </div>
+              <div className="h-[600px]"><CRMMockup isVisible={currentStep >= 3} leadName={demo.callerName} data={demo.crmData} /></div>
             </div>
           </div>
         </div>
 
-        <p className="text-center text-white/25 text-xs mt-6">
-          Sample conversations, representative of actual Dhvani agent behavior across Indian businesses
-        </p>
+        <div className="mt-16 flex flex-col items-center gap-4 text-center">
+           <div className="w-12 h-px bg-white/10" />
+           <p className="max-w-md text-white/20 text-xs font-medium tracking-wide font-sfpro leading-relaxed px-6">
+             Showing actual Guftugu behavior: Dhvani handles the conversation over voice, and Sandesh automatically triggers the relevant follow-up in the recipient&apos;s WhatsApp — in this case, {demo.callerName}.
+           </p>
+        </div>
       </Container>
     </section>
   );
@@ -630,23 +765,26 @@ const SocialProofBar = () => {
     },
   ];
   return (
-    <div className="bg-[#F9F6F4] border-b border-gray-200">
+    <div className="bg-[#FAF9F8] border-b border-black/[0.04]">
       <Container size="lg">
-        <div className="py-10 sm:py-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-4">
+        <div className="py-8 sm:py-10 grid grid-cols-2 lg:grid-cols-5 gap-y-8 gap-x-4 items-center justify-center">
           {metrics.map((m, i) => (
-            <div key={i} className="flex flex-col items-center text-center gap-3">
-              <span className="text-gray-300">{m.icon}</span>
-              {/* Number: elegant serif + tiny mono unit */}
-              <div className="flex items-baseline justify-center gap-0.5 leading-none">
+            <div key={i} className="flex flex-col items-center justify-center text-center group">
+              <span className="text-[#0A1128]/15 mb-2.5 transition-colors duration-300 group-hover:text-[#0A1128]/30">
+                {m.icon}
+              </span>
+              <div className="flex items-baseline justify-center gap-[2px]">
                 {m.prefix && (
-                  <span className="font-mono text-lg text-gray-400 mr-0.5 leading-none" style={{ fontFeatureSettings: '"tnum"' }}>{m.prefix}</span>
+                  <span className="font-mono text-sm text-[#0A1128]/30 mr-0.5" style={{ fontFeatureSettings: '"tnum"' }}>{m.prefix}</span>
                 )}
-                <span className="font-eb-garamond italic text-5xl sm:text-6xl text-[#0A1128] leading-none">{m.num}</span>
+                <span className="font-eb-garamond italic text-[2.75rem] sm:text-[3rem] text-[#0A1128] leading-none tracking-tight">{m.num}</span>
                 {m.unit && (
-                  <span className="font-mono text-base text-gray-400 ml-0.5 leading-none" style={{ fontFeatureSettings: '"tnum"' }}>{m.unit}</span>
+                  <span className="font-mono text-xs text-[#0A1128]/30 ml-0.5 uppercase tracking-[0.1em]">{m.unit}</span>
                 )}
               </div>
-              <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-400 leading-tight">{m.label}</p>
+              <p className="text-[9px] font-bold tracking-[0.22em] uppercase text-[#0A1128]/30 mt-3">
+                {m.label}
+              </p>
             </div>
           ))}
         </div>
@@ -661,168 +799,292 @@ const ProblemSection = () => {
     {
       scenario: "Dental clinic misses 1 new patient call",
       cost: "₹15,000",
-      note: "in lost revenue, per call",
-      icon: (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-      ),
+      note: "loss per missed patient call",
+      impact: "₹1.8L monthly leakage",
     },
     {
-      scenario: "Real estate agent misses 1 property inquiry",
+      scenario: "Real estate broker misses 1 property inquiry",
       cost: "₹40,000",
-      note: "in commission, gone in 40 minutes",
-      icon: (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-      ),
+      note: "lost commission per inquiry",
+      impact: "₹3.2L monthly leakage",
     },
     {
       scenario: "Home service misses 1 AC repair call",
       cost: "₹1,500",
-      note: "lost + a one-star Google review on top",
-      icon: (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-      ),
+      note: "lost repair + Google 1-star risk",
+      impact: "₹25k monthly leakage",
     },
   ];
 
-  const leakage = [
-    { text: "WhatsApp message sent at 8pm.", sub: "Nobody replied. Lead went cold." },
-    { text: "\"Call me later,\" the lead said.", sub: "Nobody called. They booked with someone who did." },
-    { text: "Candidate applied on Monday.", sub: "Got screened Thursday. Joined elsewhere on Wednesday." },
-  ];
-
   return (
-    <section className="py-20 sm:py-28 bg-white overflow-hidden">
-      <Container size="md">
-
-        {/* Header */}
-        <SectionLabel text="Asli problem" />
-        <h2 className="text-3xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.1] mb-4 max-w-3xl">
-          Aapka marketing theek hai.<br />
-          <span className="text-gray-400">Missed calls problem hai.</span>
-        </h2>
-        <p className="text-base text-gray-500 max-w-xl mb-12 leading-relaxed">
-          Most Indian businesses don&apos;t lose leads to bad ads or wrong pricing.
-          They lose them in the 3 seconds after the phone rings and nobody picks up.
-        </p>
-
-        {/* Ledger, scenario + consequence on the same row */}
-        <div className="mb-3">
-          <div className="flex items-center justify-between pb-3 border-b border-gray-100 mb-1">
-            <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-300">The scenario</p>
-            <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-300">What it costs</p>
-          </div>
-
-          {costs.map((c, i) => (
-            <div key={i} className="group py-5 border-b border-gray-100 flex items-center gap-4 sm:gap-6">
-              {/* Icon */}
-              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-[#F9F6F4] flex items-center justify-center text-gray-300">
-                {c.icon}
+    <section className="py-24 sm:py-32 bg-white overflow-hidden">
+      <Container size="lg">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          
+          {/* Left: The Premise */}
+          <div className="lg:col-span-5">
+            <SectionLabel text="The Problem" />
+            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-6">
+              Aapka marketing theek hai. <br />
+              <span className="text-gray-400">Missed calls problem hai.</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Most Indian businesses don&apos;t lose leads to big competitors or wrong pricing. 
+              They lose them in the <span className="text-[#0A1128] font-bold">3 seconds</span> after the phone rings and nobody picks up.
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex gap-4 p-5 rounded-2xl bg-[#0A1128]/[0.02] border border-[#0A1128]/5">
+                <div className="w-10 h-10 rounded-full bg-[#0A1128] text-[#FCCA07] flex items-center justify-center flex-shrink-0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <p className="font-bold text-[#0A1128] text-sm mb-1">The 3-Second Rule</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">If you don&apos;t answer, a lead takes 3 seconds to open Google Maps and call your next competitor. You never get a second chance.</p>
+                </div>
               </div>
-
-              {/* Scenario text */}
-              <div className="flex-1 min-w-0">
-                <p className="text-sm sm:text-base text-[#0A1128] leading-snug">{c.scenario}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{c.note}</p>
-              </div>
-
-              {/* Arrow */}
-              <div className="hidden sm:block flex-shrink-0 text-gray-200">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-
-              {/* Cost, the punchline */}
-              <div className="flex-shrink-0 text-right">
-                <span className="font-eb-garamond italic text-3xl sm:text-4xl text-red-600 leading-none">{c.cost}</span>
+              
+              <div className="pl-5 border-l-2 border-[#0A1128]/10">
+                <p className="text-sm text-gray-400 italic font-eb-garamond text-lg">
+                  &quot;Nobody answers. Lead waits. Lead calls next clinic. You just paid FB/Google for your competitor&apos;s lead.&quot;
+                </p>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Punchline under the ledger */}
-        <div className="pl-4 border-l-2 border-[#0A1128] mb-12">
-          <p className="text-sm text-gray-500">
-            Nobody answers. Lead waits 3 seconds. Then opens Google Maps and calls the next clinic, agent, or recruiter.
-          </p>
-          <p className="mt-2 text-base font-semibold text-[#0A1128]">
-            Yeh ek bura din nahi hai. Yeh Tuesday hai.
-          </p>
-        </div>
-
-        {/* Leakage block */}
-        <div className="bg-[#0A1128] rounded-2xl overflow-hidden">
-          {/* Header */}
-          <div className="px-6 sm:px-8 pt-7 pb-6">
-            <p className="text-white font-semibold text-lg leading-snug">
-              Sirf missed call nahi hai yeh.
-            </p>
-            <p className="text-white/40 text-sm mt-1">
-              The leak happens at every step after the call too.
-            </p>
           </div>
 
-          {/* Rows */}
-          <div className="border-t border-white/[0.08] divide-y divide-white/[0.06]">
-            {[
-              {
-                icon: (
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-[#25D366]">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                ),
-                text: "WhatsApp message sent at 8pm.",
-                sub: "Nobody replied. Lead went cold.",
-                tag: "Lead lost",
-              },
-              {
-                icon: (
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-white/40">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
-                  </svg>
-                ),
-                text: "\"Call me later,\" the lead said.",
-                sub: "Nobody called. They booked with someone who did.",
-                tag: "Booking lost",
-              },
-              {
-                icon: (
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-white/40">
-                    <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
-                  </svg>
-                ),
-                text: "Candidate applied on Monday.",
-                sub: "Got screened Thursday. Joined elsewhere on Wednesday.",
-                tag: "Hire lost",
-              },
-            ].map((l, i) => (
-              <div key={i} className="px-6 sm:px-8 py-4 flex items-center gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center">
-                  {l.icon}
+          {/* Right: The Ledger of Losses */}
+          <div className="lg:col-span-7">
+            <div className="bg-white rounded-[2rem] border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden flex flex-col">
+              
+              {/* Header */}
+              <div className="px-7 py-5 bg-[#0A1128] flex justify-between items-center z-10">
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/50">Ledger of Uncaptured Revenue</p>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-400/80 animate-pulse" />
+                  <p className="text-[9px] font-bold text-rose-300/80 tracking-wider uppercase">Active Leakage</p>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-white/80 text-sm font-medium">{l.text}</p>
-                  <p className="text-white/35 text-xs mt-0.5">{l.sub}</p>
-                </div>
-                <span className="flex-shrink-0 text-[10px] font-bold tracking-[0.1em] uppercase text-white/25 bg-white/[0.06] border border-white/10 rounded-full px-2.5 py-1">
-                  {l.tag}
-                </span>
               </div>
-            ))}
+
+              {/* Rows */}
+              <div className="divide-y divide-gray-100/80 bg-white">
+                {costs.map((c, i) => (
+                  <div key={i} className="group px-7 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all hover:bg-gray-50/50">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">{c.scenario}</p>
+                      <p className="text-sm text-[#0A1128] font-medium max-w-xs">{c.note}</p>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <span className="font-eb-garamond italic text-3xl sm:text-[2.25rem] text-[#D44A4A] leading-none mb-1.5 tracking-tight group-hover:text-rose-700 transition-colors duration-300">{c.cost}</span>
+                      <span className="text-[9px] font-bold text-gray-300 uppercase tracking-wider">{c.impact}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* The "Hidden Cost Flow" dark block */}
+              <div className="bg-[#050A14] p-8 text-white relative border-t border-gray-100 flex-1">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-[40px] pointer-events-none" />
+                
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 mb-6 flex items-center gap-3">
+                  <span className="w-8 h-px bg-white/10" /> The Hidden Cost Flow
+                </p>
+                
+                <div className="space-y-4">
+                  {[
+                    { t: "WhatsApp message sent at 8pm.", s: "Nobody replied. Lead went cold.", tag: "82% Drop-off" },
+                    { t: "\"Call me later,\" the lead said.", s: "Nobody called. They booked elsewhere.", tag: "Lost Booking" },
+                    { t: "Candidate applied on Monday.", s: "Screened Thursday. Joined elsewhere.", tag: "Hire Lost" },
+                  ].map((row, i) => (
+                    <div key={i} className="flex items-center gap-4 group">
+                      <div className="w-7 h-7 rounded bg-white/[0.02] border border-white/5 flex items-center justify-center flex-shrink-0 text-white/30 text-[10px] font-mono group-hover:bg-white/5 transition-colors">
+                        0{i+1}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[13px] font-medium text-white/80 truncate mb-0.5">{row.t}</p>
+                        <p className="text-[11px] text-white/30">{row.s}</p>
+                      </div>
+                      <div className="text-[9px] font-semibold px-2.5 py-1 rounded bg-white/[0.03] text-white/40 border border-white/5 whitespace-nowrap">
+                        {row.tag}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/5">
+                  <p className="font-eb-garamond italic text-[1.35rem] text-white/90 leading-snug">
+                    Yeh sab revenue aapne pehle se kama liya tha. <br/>
+                    <span className="text-white/30 italic">Table pe pada reh gaya.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Footer, closing statement */}
-          <div className="px-6 sm:px-8 py-6 border-t border-white/[0.08]">
-            <p className="font-eb-garamond italic text-white text-xl sm:text-2xl leading-snug">
-              Yeh sab revenue aapne pehle se kama liya tha.
-            </p>
-            <p className="text-white/40 text-sm mt-1">Table pe pada reh gaya.</p>
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+
+// ─── SOLUTION ─────────────────────────────────────────────────────────────────
+const SolutionSection = () => {
+  return (
+    <section className="py-24 sm:py-32 bg-[#F9F6F4] relative overflow-hidden">
+      {/* Background accents */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+      <Container size="lg">
+        {/* The Transition */}
+        <div className="flex flex-col gap-3 mb-12">
+          {["Hire a second receptionist. She gets busy too.", "Add a WhatsApp chatbot. Half your leads call instead of typing.", "Buy a generic voice bot. Lead goes cold. Nobody follows up."].map((t, i) => (
+            <div key={i} className="flex items-center gap-3 text-sm text-gray-400 group">
+              <div className="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center flex-shrink-0 group-hover:border-red-200 group-hover:bg-red-50 group-hover:text-red-400 transition-colors">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </div>
+              {t}
+            </div>
+          ))}
+          <p className="text-lg font-bold text-[#0A1128] mt-4 flex items-center gap-2">
+            <span className="w-8 h-[2px] bg-[#0A1128]/10" />
+            None of them fix the whole pipeline. Guftugu is the whole pipeline.
+          </p>
+        </div>
+
+        {/* Heading */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-16">
+          <div>
+            <SectionLabel text="The System · Guftugu" />
+            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-4">
+              Every call answered.<br />
+              Every lead followed up.<br />
+              <span className="text-gray-400">You only get pinged when it&apos;s hot.</span>
+            </h2>
+          </div>
+          <p className="text-lg text-gray-500 max-w-md leading-relaxed mb-1">
+            Guftugu is not a &quot;chatbot&quot; or a &quot;voice bot.&quot; It&apos;s your complete lead generation system, trained on your data and running 24/7.
+          </p>
+        </div>
+
+        {/* The Duo Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
+          
+          {/* Connector Line (Desktop) */}
+          <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14"/><path d="M13 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+
+          {/* Dhvani (Voice) */}
+          <div className="group bg-white rounded-[32px] p-8 sm:p-10 border border-orange-100 shadow-sm transition-all hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 rounded-3xl overflow-hidden border-2 border-orange-50 flex-shrink-0 bg-gray-50">
+                <img src="https://www.facehash.dev/api/avatar?name=Dhvani&size=128&shape=round" width={64} height={64} alt="Dhvani" loading="lazy" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-orange-500 bg-orange-50 px-2 py-0.5 rounded">The Voice</span>
+                <p className="text-2xl font-bold text-[#0A1128]">Dhvani</p>
+              </div>
+            </div>
+
+            <ul className="space-y-5">
+              {[
+                { t: "Instant Response", s: "Answers in <2 seconds, faster than a human, in Hindi, English, or Hinglish." },
+                { t: "Deep Qualification", s: "Asks your exact questions. Captures specific intent, budget, and urgency." },
+                { t: "Auto-Scheduling", s: "Books directly into your calendar. No IVR menu. No \"Press 1\" friction." },
+              ].map((f, i) => (
+                <li key={i} className="flex gap-4">
+                  <div className="w-6 h-6 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center flex-shrink-0 text-orange-500 mt-0.5">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-[#0A1128] mb-0.5">{f.t}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed">{f.s}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Sandesh (WhatsApp) */}
+          <div className="group bg-white rounded-[32px] p-8 sm:p-10 border border-green-100 shadow-sm transition-all hover:shadow-xl hover:shadow-green-500/5 hover:-translate-y-1">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 rounded-3xl overflow-hidden border-2 border-green-50 flex-shrink-0 bg-gray-50">
+                <img src="https://www.facehash.dev/api/avatar?name=Sandesh&size=128&shape=round" width={64} height={64} alt="Sandesh" loading="lazy" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded">The Text</span>
+                <p className="text-2xl font-bold text-[#0A1128]">Sandesh</p>
+              </div>
+            </div>
+
+            <ul className="space-y-5">
+              {[
+                { t: "Immediate Follow-up", s: "Missed call? Or finished call? WhatsApp fires within 5 seconds for higher trust." },
+                { t: "No-Show Recovery", s: "Reminders sent 2 hours before every booking. No-shows drop by up to 40%." },
+                { t: "14-Day Drip Cadence", s: "Lead went cold? 14-day sequence keeps you top of mind automagically." },
+              ].map((f, i) => (
+                <li key={i} className="flex gap-4">
+                  <div className="w-6 h-6 rounded-full bg-green-50 border border-green-100 flex items-center justify-center flex-shrink-0 text-green-600 mt-0.5">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-[#0A1128] mb-0.5">{f.t}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed">{f.s}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Outcome Node */}
+        <div className="flex flex-col items-center mt-12 mb-20">
+          <div className="w-1 h-12 bg-gradient-to-b from-gray-200 to-[#FCCA07] mb-4 rounded-full" />
+          <div className="bg-[#0A1128] text-white px-8 py-4 rounded-2xl flex items-center gap-4 shadow-xl">
+            <div className="w-10 h-10 rounded-full bg-[#FCCA07] flex items-center justify-center text-[#0A1128] flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <div>
+              <p className="text-sm font-bold leading-tight">You only get pinged when a lead is HOT.</p>
+              <p className="text-[10px] text-white/40 uppercase tracking-widest mt-0.5">Direct WhatsApp alert to your personal phone</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Memory / Compounding Layer */}
+        <div className="bg-white rounded-[32px] p-8 sm:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#0A1128]/[0.02] rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
+            <div className="lg:col-span-4">
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black tracking-widest uppercase">
+                Continuous Improvement
+              </div>
+              <h3 className="text-3xl font-eb-garamond italic text-[#0A1128] mb-4">Gets sharper with every call.</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Unlike a human hire, Guftugu never stops learning. It analyzes every rejection, every doubt, and every question to refine your script automatically.
+              </p>
+            </div>
+            
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { w: "Week 1: Foundations", h: "Answering & Capture", s: "Your phone stops ringing after hours. Calender starts filling up.", icon: "🎯" },
+                { w: "Week 3: Pattern Match", h: "Context Awareness", s: "Recognizes returning callers, maps frequent doubts automatically.", icon: "🧠" },
+                { w: "Month 2: High Gear", h: "Lead Filtering", s: "Your team only talks to pre-qualified leads worth their time.", icon: "⚡" },
+              ].map((m, i) => (
+                <div key={i} className="p-6 rounded-2xl bg-gray-50 border border-gray-100 group transition-all hover:bg-[#0A1128] hover:text-white">
+                  <div className="text-2xl mb-4 grayscale group-hover:grayscale-0 transition-all">{m.icon}</div>
+                  <p className="text-[10px] font-black tracking-widest uppercase text-gray-400 group-hover:text-white/40 mb-2">{m.w}</p>
+                  <p className="font-bold text-sm mb-2 text-[#0A1128] group-hover:text-white">{m.h}</p>
+                  <p className="text-xs text-gray-500 group-hover:text-white/60 leading-relaxed">{m.s}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -831,262 +1093,111 @@ const ProblemSection = () => {
   );
 };
 
-// ─── SOLUTION ─────────────────────────────────────────────────────────────────
-const SolutionSection = () => (
-  <section className="py-20 sm:py-24 bg-[#F9F6F4]">
-    <Container size="md">
-
-      {/* Transition, dismiss the half-fixes fast */}
-      <div className="flex flex-col gap-1.5 mb-6">
-        {["Hire a second receptionist. She gets busy too.", "Add a WhatsApp chatbot. Half your leads call instead of typing.", "Buy a voice bot. Lead goes cold. Nobody follows up."].map((t, i) => (
-          <div key={i} className="flex items-center gap-2.5 text-sm text-gray-400">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 text-gray-300"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            {t}
-          </div>
-        ))}
-      </div>
-      <p className="text-base font-semibold text-[#0A1128] mb-12">
-        None of them fix the whole pipeline. Guftugu is the whole pipeline.
-      </p>
-
-      {/* Heading, leverage framing */}
-      <SectionLabel text="The system · Guftugu" />
-      <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-3 max-w-xl">
-        Every call answered.<br />
-        Every lead followed up.<br />
-        <span className="text-gray-400">You get pinged only when it&apos;s hot.</span>
-      </h2>
-      <p className="text-base text-gray-500 mb-10 max-w-lg leading-relaxed">
-        Guftugu is not a chatbot or a voice bot, it&apos;s your complete lead pipeline, trained on your business and running 24/7 without you.
-      </p>
-
-      {/* ICP leverage statements, 3 lines */}
-      <div className="space-y-2 mb-12">
-        {[
-          { who: "Doctor/Clinic", line: "While you're with a patient, Guftugu is booking your next one." },
-          { who: "Real Estate", line: "While you're in a site visit, Guftugu is qualifying the next buyer." },
-          { who: "Recruiter", line: "While your team screens one candidate, Guftugu is screening the other 139." },
-        ].map((s, i) => (
-          <div key={i} className="flex items-baseline gap-3">
-            <span className="text-[10px] font-bold tracking-[0.12em] uppercase text-gray-300 w-24 flex-shrink-0">{s.who}</span>
-            <p className="text-sm text-gray-700">{s.line}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Flowchart, two-character system */}
-      <div className="mb-6">
-        <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-gray-300 mb-4">How Guftugu runs</p>
-
-        {/* Trigger node */}
-        <div className="flex justify-center mb-3">
-          <div className="inline-flex items-center gap-2 border border-gray-200 rounded-full bg-white px-4 py-2">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
-            <span className="text-xs font-semibold text-gray-500">Call comes in</span>
-          </div>
-        </div>
-
-        {/* Down arrow */}
-        <div className="flex justify-center mb-3">
-          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round"><line x1="6" y1="0" x2="6" y2="16"/><polyline points="2,12 6,18 10,12"/></svg>
-        </div>
-
-        {/* Two-bot zone */}
-        <div className="grid grid-cols-1 sm:grid-cols-[1fr,40px,1fr] gap-0 items-start">
-
-          {/* Dhvani zone */}
-          <div className="bg-white border border-orange-100 rounded-2xl p-5" style={{ boxShadow: "0 2px 12px rgba(255,136,0,0.06)" }}>
-            {/* Character avatar */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-orange-50 border border-orange-100 flex items-center justify-center flex-shrink-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8800" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
-                  <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/>
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs font-bold tracking-[0.12em] uppercase text-orange-500">Dhvani</p>
-                <p className="text-[10px] text-gray-400">Voice AI</p>
-              </div>
-            </div>
-            <div className="space-y-2.5">
-              {[
-                "Answers in under 2 seconds, Hindi, English, or Hinglish",
-                "Asks your exact questions. Captures name, need, intent.",
-                "Books directly into your calendar. No IVR. No press-1.",
-              ].map((t, i) => (
-                <div key={i} className="flex gap-2.5 text-xs text-gray-600">
-                  <span className="text-orange-300 flex-shrink-0 mt-0.5">→</span>
-                  {t}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Handoff arrow, center */}
-          <div className="flex items-center justify-center h-full py-6 sm:py-0">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round" className="hidden sm:block"><line x1="0" y1="6" x2="16" y2="6"/><polyline points="12,2 18,6 12,10"/></svg>
-            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round" className="sm:hidden"><line x1="6" y1="0" x2="6" y2="16"/><polyline points="2,12 6,18 10,12"/></svg>
-          </div>
-
-          {/* Sandesh zone */}
-          <div className="bg-white border border-green-100 rounded-2xl p-5" style={{ boxShadow: "0 2px 12px rgba(37,211,102,0.06)" }}>
-            {/* Character avatar */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-green-50 border border-green-100 flex items-center justify-center flex-shrink-0">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-              </div>
-              <div>
-                <p className="text-xs font-bold tracking-[0.12em] uppercase text-green-600">Sandesh</p>
-                <p className="text-[10px] text-gray-400">WhatsApp</p>
-              </div>
-            </div>
-            <div className="space-y-2.5">
-              {[
-                "Didn't pick up? WhatsApp fires automatically within 5 seconds.",
-                "Booked? Reminder sent 2 hours before, no-shows drop.",
-                "Went cold? 14-day follow-up runs. You get pinged when they're hot.",
-              ].map((t, i) => (
-                <div key={i} className="flex gap-2.5 text-xs text-gray-600">
-                  <span className="text-green-400 flex-shrink-0 mt-0.5">→</span>
-                  {t}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Down arrow to outcome */}
-        <div className="flex justify-center my-3">
-          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeLinecap="round"><line x1="6" y1="0" x2="6" y2="16"/><polyline points="2,12 6,18 10,12"/></svg>
-        </div>
-
-        {/* Outcome node */}
-        <div className="flex justify-center">
-          <div className="inline-flex items-center gap-2 bg-[#FCCA07] rounded-full px-5 py-2.5">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
-            <span className="text-xs font-bold text-[#0A1128]">You get pinged, only when the lead is hot</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Memory callout, compounding advantage */}
-      <div className="bg-[#0A1128] rounded-2xl p-6 sm:p-8 text-white">
-        <p className="font-semibold text-white text-base mb-1">Gets sharper with every call.</p>
-        <p className="text-white/50 text-sm leading-relaxed mb-5">
-          Every conversation Guftugu handles makes the next one better. It learns what your callers actually say, so it handles them better than a new hire ever could.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {[
-            {
-              when: "Week 1",
-              headline: "Live and answering",
-              icp: "Your chair stops sitting empty after hours.",
-            },
-            {
-              when: "Week 3",
-              headline: "Knows your regulars",
-              icp: "Returning patient? Warm buyer? It recognises them.",
-            },
-            {
-              when: "Month 2",
-              headline: "Filters your best leads",
-              icp: "Your agent, doctor, recruiter, only talks to people worth their time.",
-            },
-          ].map((m, i) => (
-            <div key={i} className="bg-white/[0.06] rounded-xl px-4 py-3 border border-white/[0.06]">
-              <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-1">{m.when}</p>
-              <p className="text-sm font-semibold text-white/80 mb-1">{m.headline}</p>
-              <p className="text-xs text-white/40 leading-relaxed">{m.icp}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-    </Container>
-  </section>
-);
 
 // ─── HOW IT WORKS ─────────────────────────────────────────────────────────────
 const HowItWorksSection = () => {
   const steps = [
     {
       num: "01",
-      badge: "30 min",
+      badge: "Discovery",
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       ),
-      title: "You talk. We listen.",
-      sub: "One call. No slides. No commitment.",
-      bullets: ["We map your callers, your questions, your tone.", "Bring recordings if you have them, we'll train on real calls."],
-      you: "Your effort: 30 minutes.",
+      title: "The 30-Min Audit",
+      sub: "We map your current call flow, points of failure, and existing script.",
+      bullets: [
+        "Audit existing call recordings",
+        "Map your qualification criteria",
+        "Identify high-intent keywords",
+      ],
+      you: "Your effort: 30-min call",
     },
     {
       num: "02",
-      badge: "30 mins",
+      badge: "Building",
+      title: "The Agent Buildout",
+      sub: "We build your exact logic into Dhvani and Sandesh. You review and approve.",
+      bullets: [
+        "Prompt engineering for your brand",
+        "WhatsApp cadence automation",
+        "Calendar & CRM integration",
+      ],
+      you: "Your effort: 5-min review",
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
       ),
-      title: "We build everything.",
-      sub: "Done-for-you. You don't touch the tech.",
-      bullets: ["Script written. AI trained. WhatsApp flows set up.", "Connected to your calendar or CRM."],
-      you: "Your effort: zero.",
     },
     {
       num: "03",
-      badge: "24/7",
+      badge: "Live",
+      title: "Day Zero. Go Live.",
+      sub: "We route your calls to Guftugu. Your phone stops ringing during deep work.",
+      bullets: [
+        "Zero downtime transition",
+        "Testing on actual numbers",
+        "Live dashboard access",
+      ],
+      you: "Your effort: Set forwarding",
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
         </svg>
       ),
-      title: "Guftugu runs. You get leads.",
-      sub: "You only pick up when it's worth it.",
-      bullets: ["Every call answered. Every lead followed up.", "You get a WhatsApp ping when someone is ready to book."],
-      you: "Your effort: show up for the close.",
     },
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <Container size="md">
-        <SectionLabel text="Process" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-10">
-          Three steps.<br />
-          <span className="text-gray-400">You barely have to show up.</span>
-        </h2>
+    <section className="py-24 sm:py-32 bg-white overflow-hidden relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      
+      <Container size="lg">
+        {/* Header */}
+        <div className="text-center mb-16 relative">
+          <SectionLabel text="The Process" />
+          <h2 className="text-4xl sm:text-6xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-4">
+            Three steps. <br />
+            <span className="text-gray-400">You barely have to show up.</span>
+          </h2>
+          <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
+            We are a done-for-you service. We handle the prompts, the telephony, and the integrations. You just answer the qualified pings.
+          </p>
+        </div>
 
-        {/* Step cards, horizontal on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+          
+          {/* Connector Arcs (Desktop) */}
+          <div className="hidden lg:block absolute top-[120px] left-[30%] right-[30%] h-px pointer-events-none">
+             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+          </div>
+
           {steps.map((step, i) => (
-            <div key={i} className="relative bg-[#F9F6F4] border border-gray-200 rounded-2xl p-5 flex flex-col gap-4">
-              {/* Step number + badge row */}
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-bold text-gray-400">{step.num}</span>
-                <span className="text-[10px] font-bold tracking-[0.1em] uppercase bg-[#0A1128] text-white rounded-full px-2.5 py-1">
+            <div key={i} className="group relative bg-[#F9F6F4]/50 border border-gray-100 rounded-[32px] p-8 transition-all hover:bg-white hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1">
+              {/* Step number + Badge */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-[#0A1128] text-[#FCCA07] flex items-center justify-center font-bold text-xl shadow-lg shadow-black/10">
+                  {step.num}
+                </div>
+                <div className="px-3 py-1 rounded-full bg-[#0A1128]/5 border border-[#0A1128]/5 text-[#0A1128] text-[10px] font-black tracking-widest uppercase">
                   {step.badge}
-                </span>
+                </div>
               </div>
 
-              {/* Icon */}
-              <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-[#0A1128]">
-                {step.icon}
+              {/* Icon & Title */}
+              <div className="mb-6">
+                <div className="w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center text-[#0A1128] mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                  {step.icon}
+                </div>
+                <h3 className="text-2xl font-eb-garamond italic text-[#0A1128] mb-3">{step.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed min-h-[48px]">{step.sub}</p>
               </div>
 
-              {/* Title + sub */}
-              <div>
-                <p className="font-eb-garamond italic text-[#0A1128] text-xl leading-snug mb-0.5">{step.title}</p>
-                <p className="text-xs text-gray-500">{step.sub}</p>
-              </div>
-
-              {/* Bullets */}
-              <ul className="space-y-1.5 flex-1">
+              {/* Action List */}
+              <ul className="space-y-3 mb-8">
                 {step.bullets.map((b, j) => (
                   <li key={j} className="flex gap-2 text-xs text-gray-600 leading-relaxed">
                     <span className="text-gray-400 flex-shrink-0 mt-0.5">-</span>
@@ -1109,7 +1220,7 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <PrimaryBtn href={CAL_LINK} label="Book your 30-min call" size="lg" />
+          <PrimaryBtn href={CAL_LINK} label="Take Your AI Agent Live in 30 Mins" size="lg" />
         </div>
       </Container>
     </section>
@@ -1368,235 +1479,229 @@ const AllUseCasesGrid = () => {
       role: "Guftugu Receptionist",
       outcome: "Every missed call becomes a booked appointment.",
       accent: "#F97316",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2C8.5 2 6 4.5 6 8c0 2.5.8 4.5 1.8 6.2C8.8 16 9.5 17.5 9.5 20h5c0-2.5.7-4 1.7-5.8C17.2 12.5 18 10.5 18 8c0-3.5-2.5-6-6-6z"/>
-        </svg>
-      ),
+      avatar: "Priya",
+      metric: "₹15k leakage/missed call",
     },
     {
       industry: "Real Estate Agencies",
       role: "Guftugu Lead Qualifier",
       outcome: "Every inquiry answered, qualified, and followed up.",
       accent: "#3B82F6",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-      ),
+      avatar: "Arjun",
+      metric: "40 min callback delay cut to <2s",
     },
     {
       industry: "Hiring & Staffing Agencies",
       role: "Guftugu Interviewer",
       outcome: "140 screened in 24h. Your recruiter gets only the qualified.",
       accent: "#8B5CF6",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-      ),
+      avatar: "Kavita",
+      metric: "36 hours manual work automated",
     },
     {
       industry: "Home Services",
       role: "Guftugu Dispatcher",
       outcome: "Job qualified on the call. Brief on your team's WhatsApp.",
       accent: "#10B981",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-        </svg>
-      ),
+      avatar: "Rajesh",
+      metric: "Zero missed emergency leads",
     },
     {
       industry: "Hotels & Hospitality",
       role: "Guftugu Concierge",
       outcome: "Guest queries answered 24/7. Follow-up handled automatically.",
       accent: "#F59E0B",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-        </svg>
-      ),
+      avatar: "Meera",
+      metric: "24/7 night coverage at 1/10th cost",
     },
     {
       industry: "Marketing Agencies",
       role: "Guftugu for Agencies",
       outcome: "Run it for your clients. White-labelled under your brand.",
       accent: "#EC4899",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        </svg>
-      ),
+      avatar: "Neha",
+      metric: "Add ₹50k+ MRR to your agency",
     },
     {
       industry: "Technical Support",
       role: "Guftugu Support Line",
       outcome: "Fault triage handled by voice. Updates sent via WhatsApp.",
       accent: "#6366F1",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
-        </svg>
-      ),
+      avatar: "Vikram",
+      metric: "70% first-ring resolution rate",
     },
   ];
 
   return (
-    <Container className="mt-12">
+    <Container className="mt-16">
       {/* Header */}
-      <div className="mb-8">
-        <p className="text-xl sm:text-2xl font-eb-garamond italic text-[#0A1128] mb-1">One system. Seven industries. Zero missed calls.</p>
-        <p className="text-sm text-gray-500">Same Guftugu, configured for how your business actually works.</p>
+      <div className="mb-10">
+        <p className="text-xl sm:text-3xl font-eb-garamond italic text-[#0A1128] mb-1.5">One system. Seven industries. Zero missed calls.</p>
+        <p className="text-sm text-gray-500 max-w-lg">Same Guftugu, configured for how your business actually works.</p>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         {cases.map((c, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl p-5 border border-gray-100 flex flex-col gap-3"
-            style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}
+            className="group relative bg-white rounded-2xl p-6 border border-gray-100 flex flex-col gap-4 transition-all hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1"
+            style={{ borderTop: `2px solid ${c.accent}` }}
           >
-            {/* Icon badge */}
-            <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: `${c.accent}15`, color: c.accent }}>
-              {c.icon}
+            {/* Header: Persona + Industry */}
+            <div className="flex items-center gap-3">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0 bg-gray-50">
+                <img
+                  src={`https://www.facehash.dev/api/avatar?name=${c.avatar}&size=96&shape=round`}
+                  width={48}
+                  height={48}
+                  alt={c.avatar}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="text-[10px] font-black tracking-widest uppercase mb-0.5" style={{ color: c.accent }}>
+                  {c.role}
+                </p>
+                <p className="font-bold text-[#0A1128] text-sm truncate">{c.industry}</p>
+              </div>
             </div>
-            {/* Text */}
-            <div>
-              <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: c.accent }}>{c.role}</p>
-              <p className="font-semibold text-[#0A1128] text-sm mb-1">{c.industry}</p>
-              <p className="text-xs text-gray-500 leading-relaxed">{c.outcome}</p>
+
+            {/* Outcome */}
+            <p className="text-xs text-gray-500 leading-relaxed font-medium">
+              {c.outcome}
+            </p>
+
+            {/* Metric / ROI chip */}
+            <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+              <span className={`inline-flex px-2 py-1 rounded-md text-[9px] font-bold tracking-tight ${i % 2 === 0 ? "bg-blue-50 text-blue-600" : "bg-orange-50 text-orange-600"}`}>
+                {c.metric}
+              </span>
+              <svg className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#0A1128] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </div>
           </div>
         ))}
       </div>
 
       {/* CTA banner */}
-      <div className="bg-[#0A1128] rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <p className="text-white font-semibold text-sm">Don&apos;t see your industry?</p>
-          <p className="text-white/50 text-xs mt-0.5">We&apos;ve built for 20+ use cases. If you have calls, leads, or candidates, Guftugu works.</p>
+      <div className="bg-[#0A1128] rounded-2xl px-7 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none" />
+        <div className="relative">
+          <p className="text-white font-bold text-base mb-1">Don&apos;t see your industry?</p>
+          <p className="text-white/50 text-xs max-w-md leading-relaxed">
+            We&apos;ve built for 20+ use cases. If you have calls, leads, or candidates, Guftugu works. We build your exact script in 30 minutes.
+          </p>
         </div>
-        <PrimaryBtn href={CAL_LINK} label="Talk to us" size="sm" />
+        <div className="relative">
+          <PrimaryBtn href={CAL_LINK} label="Check your use case" size="md" />
+        </div>
       </div>
     </Container>
   );
 };
 
+
 // ─── WHY WE'RE DIFFERENT ──────────────────────────────────────────────────────
 const WhyDifferentSection = () => {
-  const criteria = [
-    { label: "Answers voice calls",         vals: [false, false, false, true] },
-    { label: "Built for Indian SMBs",       vals: [false, false, false, true] },
-    { label: "Done-for-you service",        vals: [false, false, false, true] },
-    { label: "No dev team required",        vals: [false, false, false, true] },
-    { label: "Hindi + English voice",       vals: [false, false, false, true] },
-    { label: "Learns your business",        vals: [false, false, false, true] },
-  ];
-
-  const differentiators = [
+  const points = [
     {
-      title: "Done-for-you, not a platform",
-      body: "We run Guftugu. You get the leads.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+      title: "Done-for-you Service",
+      sub: "Unlike platforms where you build the bot yourself, we build, train, and maintain your Guftugu agents. You don't write a single line of logic.",
+      icon: "🎯",
     },
     {
-      title: "Both channels, connected",
-      body: "Dhvani catches the call. Sandesh works the lead. Nothing falls through.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.34 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94M14.05 6A5 5 0 0 1 18 10"/></svg>,
+      title: "Built for Indian Chaos",
+      sub: "Handles Hinglish, heavy accents, and noisy backgrounds (traffic, fans, street noise) where US-based voice bots fail instantly.",
+      icon: "🇮🇳",
     },
     {
-      title: "Trained on your business",
-      body: "30-min call. Call recordings if you have them. It knows your clinic, agency, or team before going live.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>,
+      title: "The Whole Pipeline",
+      sub: "Voice + WhatsApp is one system. Dhvani qualifies on the call, Sandesh follows up on text. No complex Zapiers or integrations needed.",
+      icon: "⚡",
     },
     {
-      title: 'No IVR. No "press 1 for service."',
-      body: "Conversational from the first second, in Hindi, English, or both.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>,
-    },
-    {
-      title: "Gets smarter every month",
-      body: "Guftugu learns from every call. The longer it runs, the more it knows about your specific callers.",
-      icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
+      title: "Go Live in 30 Mins",
+      sub: "Our team builds your first agent while you're on the onboarding call. You leave the meeting with a working number.",
+      icon: "🚀",
     },
   ];
-
-  const Check = () => (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FCCA07]">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    </span>
-  );
-  const Cross = () => (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </span>
-  );
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <Container size="md">
-        <SectionLabel text="What makes us different" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-2 max-w-2xl">
-          Every other AI company starts with a demo.
-          <br />
-          <span className="text-gray-400">We start with a question.</span>
-        </h2>
-        <p className="text-gray-500 mb-10 text-sm max-w-lg">
-          Most voice AI breaks the moment it goes live in an Indian business. Guftugu is built for that chaos.
-        </p>
-
-        {/* Comparison table */}
-        <div className="rounded-2xl border border-gray-100 overflow-hidden mb-12" style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.04)" }}>
-          {/* Table header */}
-          <div className="grid grid-cols-[1fr_80px_80px_80px_100px] bg-gray-50 border-b border-gray-100">
-            <div className="px-5 py-3" />
-            {["Platform cos", "Enterprise", "WA Chatbots"].map((h) => (
-              <div key={h} className="py-3 text-center">
-                <p className="text-[10px] font-bold tracking-wider uppercase text-gray-400 leading-tight">{h}</p>
+    <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-l from-transparent via-gray-100 to-transparent" />
+      
+      <Container size="lg">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          
+          {/* Sticky Header */}
+          <div className="lg:col-span-5 lg:sticky lg:top-32">
+            <SectionLabel text="Guftugu Advantage" />
+            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-6">
+              Every other AI company starts with a demo. <br />
+              <span className="text-gray-400">We start with your business.</span>
+            </h2>
+            <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+              Most Voice AI breaks the moment it goes live in an Indian business. The accent is wrong, the background noise is too high, or the follow-up never happens.
+            </p>
+            
+            <div className="p-6 rounded-2xl bg-[#0A1128] text-white">
+              <p className="text-sm font-bold text-[#FCCA07] uppercase tracking-widest mb-2">The Guftugu Promise</p>
+              <p className="text-xs text-white/60 leading-relaxed mb-4">
+                We don&apos;t just sell software. We provide the headcount. Guftugu is your digital receptionist that actually works in the real world.
+              </p>
+              <div className="flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-white/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                No developers required
               </div>
-            ))}
-            <div className="py-3 text-center bg-[#0A1128]">
-              <p className="text-[10px] font-bold tracking-wider uppercase text-[#FCCA07] leading-tight">Guftugu</p>
             </div>
           </div>
 
-          {/* Rows */}
-          {criteria.map((row, i) => (
-            <div key={i} className={`grid grid-cols-[1fr_80px_80px_80px_100px] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
-              <div className="px-5 py-3.5 text-xs font-medium text-gray-600 self-center">{row.label}</div>
-              {row.vals.slice(0, 3).map((v, j) => (
-                <div key={j} className="py-3.5 flex items-center justify-center">
-                  {v ? <Check /> : <Cross />}
+          {/* Comparison Cards */}
+          <div className="lg:col-span-7 space-y-4">
+            {points.map((p, i) => (
+              <div key={i} className="group relative p-8 bg-gray-50 rounded-[32px] border border-gray-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-black/5 hover:border-[#FCCA07]/30">
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-white border border-gray-200 flex items-center justify-center text-2xl shadow-sm transition-transform group-hover:scale-110">
+                    {p.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold text-[#0A1128] mb-2">{p.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                      {p.sub}
+                    </p>
+                  </div>
+                  <div className="hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
                 </div>
-              ))}
-              <div className="py-3.5 flex items-center justify-center bg-[#0A1128]/[0.03]">
-                <Check />
+              </div>
+            ))}
+            
+            {/* The "Rest" muted block */}
+            <div className="mt-12 p-8 rounded-[32px] border border-dashed border-gray-200 opacity-50 bg-gray-50/50">
+              <p className="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 mb-6">Traditional Alternatives</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <p className="text-xs font-bold text-gray-400 mb-1 line-through">US-Based Platforms</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-tighter">Requires Dev Team · Accents fail · Higher cost</p>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-gray-400 mb-1 line-through">WhatsApp Chatbots</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-tighter">Lower conversion · Lead friction · Manual entry</p>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Differentiators */}
-        <p className="text-lg font-eb-garamond italic text-[#0A1128] mb-6">What you actually get with Guftugu</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
-          {differentiators.map((d, i) => (
-            <div key={i} className="flex gap-3">
-              <div className="w-8 h-8 rounded-lg bg-[#0A1128] flex items-center justify-center flex-shrink-0 mt-0.5 text-[#FCCA07]">
-                {d.icon}
-              </div>
-              <div>
-                <p className="font-semibold text-[#0A1128] text-sm mb-0.5">{d.title}</p>
-                <p className="text-xs text-gray-500 leading-relaxed">{d.body}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </Container>
     </section>
   );
 };
+
 
 // ─── PRICING ──────────────────────────────────────────────────────────────────
 const PricingSection = () => {
@@ -2030,7 +2135,7 @@ const FinalCTA = () => {
           30-minute call. No slides. No pitch. We learn how your business works, then we build what actually fits.
         </p>
 
-        <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" size="lg" />
+        <PrimaryBtn href={CAL_LINK} label="Take Your AI Agent Live in 30 Mins" size="lg" />
 
         {STATS.demoNumber && (
           <p className="mt-4 text-white/30 text-xs">
@@ -2158,7 +2263,7 @@ const StickyMobileCTA = () => {
   if (!visible) return null;
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-4 py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
-      <PrimaryBtn href={CAL_LINK} label="Book a Discovery Call" fullWidth size="lg" />
+      <PrimaryBtn href={CAL_LINK} label="Take Your AI Live in 30 Mins" fullWidth size="lg" />
     </div>
   );
 };
@@ -2166,9 +2271,11 @@ const StickyMobileCTA = () => {
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 const AiVoiceAgentPage: NextPageWithLayout = () => {
   const [demoTab, setDemoTab] = useState<DemoTab>("dental");
+  const [autoPlayTrigger, setAutoPlayTrigger] = useState<number>(0);
 
   const handleCardPlay = useCallback((tab: DemoTab) => {
     setDemoTab(tab);
+    setAutoPlayTrigger(Date.now());
   }, []);
 
   return (
@@ -2190,7 +2297,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       />
 
       <Hero onCardPlay={handleCardPlay} />
-      <HearItYourselfSection activeTab={demoTab} onTabChange={setDemoTab} />
+      <HearItYourselfSection activeTab={demoTab} onTabChange={setDemoTab} autoPlayTrigger={autoPlayTrigger} />
       <SocialProofBar />
       <ProblemSection />
       <SolutionSection />
@@ -2203,6 +2310,23 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       <FinalCTA />
       <PageFooter />
       <StickyMobileCTA />
+      <style jsx global>{`
+        @keyframes waveBarAnim {
+          0% { transform: scaleY(0.6); opacity: 0.4; }
+          100% { transform: scaleY(1.4); opacity: 1; }
+        }
+        @keyframes aura-breath {
+          0% { transform: scale(1) translate(0, 0); }
+          50% { transform: scale(1.05) translate(-2%, -2%); }
+          100% { transform: scale(1) translate(0, 0); }
+        }
+        @keyframes dotPulse {
+          0%, 100% { opacity: 0.3; transform: scale(0.8); }
+          50% { opacity: 1; transform: scale(1.1); }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </>
   );
 };
