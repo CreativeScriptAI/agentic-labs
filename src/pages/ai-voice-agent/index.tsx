@@ -1807,10 +1807,10 @@ const PricingSection = () => {
                   <p className={`text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>Best for: {t.best}</p>
                   <button
                     onClick={() => window.open(t.ctaHref, "_blank", "noopener,noreferrer")}
-                    className={`w-full py-3.5 rounded-xl text-sm font-bold transition-all active:scale-[0.98] cursor-pointer ${
+                    className={`inline-flex items-center justify-center w-full py-3 rounded-lg text-sm font-semibold transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap ${
                       t.highlight
                         ? "bg-[#FCCA07] text-[#0A1128] hover:bg-[#f0bd00]"
-                        : "border-2 border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white"
+                        : "bg-[#0A1128] text-white hover:bg-[#0d1633]"
                     }`}
                   >
                     Build My AI Agent
