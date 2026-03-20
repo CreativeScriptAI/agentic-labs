@@ -1608,243 +1608,235 @@ const WhyDifferentSection = () => {
 const PricingSection = () => {
   const tiers = [
     {
-      name: "Starter",
-      metaphor: "Think of this as hiring an intern.",
-      setup: "Rs 0 setup",
-      monthly: "Rs 2,499",
-      period: "/month",
+      tag: "STARTER",
       highlight: false,
-      cta: "Build My AI Agent",
+      badge: null,
+      setup: "₹0 setup",
+      monthly: "₹2,499",
+      perDay: "₹83/day",
+      worthOf: "₹18,000+",
+      replaces: "Part-time answering service",
+      roi: "Convert 1 extra lead/month and you've already broken even.",
       ctaHref: CAL_LINK,
-      best: "Clinics, brokers, and service businesses who want proof before committing.",
       features: [
-        "100 voice minutes/month",
-        "1 AI agent (support or sales)",
-        "1 dedicated Indian business number",
-        "1 language: Hindi or English",
-        "Instant WhatsApp reply to every inbound lead, 24/7",
-        "Missed-call WhatsApp fallback",
-        "Lead pipeline dashboard",
-        "3 script tweaks/month",
-        "Email support, 48h SLA",
+        { text: "100 voice minutes/month", val: null },
+        { text: "1 AI agent (support or sales)", val: null },
+        { text: "Dedicated Indian business number", val: null },
+        { text: "Hindi or English", val: null },
+        { text: "Instant WhatsApp reply to every lead, 24/7", val: "₹5,000/mo value" },
+        { text: "Missed-call WhatsApp fallback", val: null },
+        { text: "Lead pipeline dashboard", val: null },
+        { text: "3 script tweaks/month", val: null },
+        { text: "Email support, 48h SLA", val: null },
       ],
-      overage: "Rs 600 for 100 extra minutes",
+      overage: "₹600 per 100 extra minutes",
+      best: "Clinics, brokers, service businesses who want proof first.",
     },
     {
-      name: "Professional",
-      badge: "Most businesses upgrade here",
-      metaphor: "Think of this as your Junior Associate.",
-      setup: "Rs 15,000 setup",
-      monthly: "Rs 9,999",
-      period: "/month",
+      tag: "PROFESSIONAL",
       highlight: true,
-      cta: "Build My AI Agent",
+      badge: "Most businesses upgrade here",
+      setup: "₹15,000 setup",
+      monthly: "₹9,999",
+      perDay: "₹333/day",
+      worthOf: "₹65,000+",
+      replaces: "Full-time receptionist (₹25,000-35,000/mo salary)",
+      roi: "Convert 3 extra leads/month and the agent pays for itself 3x over.",
       ctaHref: CAL_LINK,
-      best: "Dental clinics, real estate agencies, and hiring teams who want the full system.",
       features: [
-        "1,500 voice minutes/month",
-        "2 agents (Dhvani + Sandesh)",
-        "3 concurrent calls",
-        "Bilingual, auto Hindi ↔ English mid-sentence",
-        "Done-for-you script engineering, unlimited tweaks",
-        "14-day WhatsApp + voice follow-up sequence",
-        "Smart channel switching",
-        "Owner WhatsApp alerts: new lead, hot flag, booking",
-        "No-Show Recovery, Sandesh checks in 2 hours before",
-        "1-way CRM export: Sheets, Airtable, Webhook",
-        "Priority WhatsApp support, 24h SLA",
+        { text: "1,500 voice minutes/month", val: null },
+        { text: "2 AI agents (Dhvani + Sandesh)", val: null },
+        { text: "3 concurrent calls", val: null },
+        { text: "Bilingual, auto Hindi ↔ English mid-sentence", val: null },
+        { text: "Done-for-you script engineering, unlimited tweaks", val: "₹15,000 value" },
+        { text: "14-day WhatsApp + voice follow-up sequence", val: "₹8,000 value" },
+        { text: "Smart channel switching", val: null },
+        { text: "Owner WhatsApp alerts: new lead, hot flag, booking", val: null },
+        { text: "No-Show Recovery — checks in 2 hrs before", val: "₹5,000 value" },
+        { text: "CRM export: Sheets, Airtable, Webhook", val: null },
+        { text: "Priority WhatsApp support, 24h SLA", val: null },
       ],
       overage: null,
+      best: "Dental clinics, real estate agencies, hiring teams.",
     },
     {
-      name: "Enterprise",
-      metaphor: "Think of this as the Senior Manager.",
-      setup: "Rs 45,000+ setup",
-      monthly: "Rs 24,999",
-      period: "/month",
+      tag: "ENTERPRISE",
       highlight: false,
-      cta: "Build My AI Agent",
+      badge: null,
+      setup: "₹45,000+ setup",
+      monthly: "₹24,999",
+      perDay: "₹833/day",
+      worthOf: "₹1,50,000+",
+      replaces: "3-person call center team (₹75,000-90,000/mo)",
+      roi: "Typical ROI: 8-12x within the first 90 days.",
       ctaHref: CAL_LINK,
-      best: "Hospitals, large brokerages, BPOs, staffing agencies, marketing agencies.",
       features: [
-        "5,000 voice minutes/month",
-        "Unlimited agents, custom routing",
-        "10+ concurrent calls",
-        "Up to 3 dedicated Indian business numbers",
-        "Any supported language, multilingual routing",
-        "Dead Lead Reactivation, 30-day drip campaign",
-        "Autonomous A/B testing, AI adopts winner automatically",
-        "2-way CRM sync: Salesforce, HubSpot, Zoho",
-        "Weekly WhatsApp performance summary",
-        "Dedicated Account Manager",
+        { text: "5,000 voice minutes/month", val: null },
+        { text: "Unlimited agents, custom routing", val: null },
+        { text: "10+ concurrent calls", val: null },
+        { text: "Up to 3 dedicated Indian business numbers", val: null },
+        { text: "Any language, multilingual routing", val: null },
+        { text: "Dead Lead Reactivation, 30-day drip campaign", val: "₹20,000 value" },
+        { text: "Autonomous A/B testing, AI adopts winner automatically", val: "₹15,000 value" },
+        { text: "2-way CRM sync: Salesforce, HubSpot, Zoho", val: null },
+        { text: "Weekly WhatsApp performance summary", val: null },
+        { text: "Dedicated Account Manager", val: "₹30,000 value" },
       ],
       overage: null,
+      best: "Hospitals, large brokerages, BPOs, staffing agencies.",
     },
-  ];
-
-  const tableRows = [
-    { feature: "Setup", values: ["Rs 0", "Rs 15,000", "Rs 45,000+"] },
-    { feature: "Monthly", values: ["Rs 2,499", "Rs 9,999", "Rs 24,999"] },
-    { feature: "Voice minutes", values: ["100", "1,500", "5,000"] },
-    { feature: "Concurrent calls", values: ["1", "3", "10+"] },
-    { feature: "Languages", values: ["1", "Bilingual", "Multilingual"] },
-    { feature: "Script setup", values: ["DIY", "Done-for-you", "Done-for-you"] },
-    { feature: "WhatsApp instant reply", values: ["✓", "✓", "✓"] },
-    { feature: "Missed-call fallback", values: ["✓", "✓", "✓"] },
-    { feature: "14-day follow-up", values: ["-", "✓", "✓"] },
-    { feature: "No-Show Recovery", values: ["-", "✓", "✓"] },
-    { feature: "Dead Lead Reactivation", values: ["-", "-", "✓"] },
-    { feature: "A/B testing", values: ["-", "-", "✓"] },
-    { feature: "Support", values: ["Email 48h", "WhatsApp 24h", "Dedicated AM"] },
   ];
 
   return (
     <section id="pricing" className="py-20 sm:py-24 bg-[#F9F6F4]">
       <Container>
         <SectionLabel text="Pricing" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-2">
-          Start at Rs 0.
-        </h2>
-        <p className="text-gray-500 mb-1">Scale when the results justify it. (Usually by month 2.)</p>
-        <p className="text-sm text-gray-400 mb-10">No hidden charges. No confusing per-minute billing at month end.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 md:items-stretch">
+        {/* Headline */}
+        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-3">
+          One missed call costs more<br className="hidden sm:block" /> than your entire monthly plan.
+        </h2>
+        <p className="text-gray-500 mb-10 max-w-lg">
+          A single converted lead pays for 3 months. No hidden fees. No per-minute surprise billing at month end.
+        </p>
+
+        {/* Human vs AI anchor bar */}
+        <div className="flex flex-col sm:flex-row mb-12 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <div className="flex-1 bg-[#0A1128] px-6 py-5">
+            <p className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-1.5">What you pay a human receptionist</p>
+            <p className="text-2xl font-bold text-white">₹25,000 – ₹35,000<span className="text-sm font-normal text-white/40">/month</span></p>
+            <p className="text-xs text-white/40 mt-1">Salary only. Add training, sick days, and zero night/weekend coverage.</p>
+          </div>
+          <div className="flex items-center justify-center bg-[#FCCA07] px-5 py-3 sm:py-0">
+            <span className="text-[#0A1128] font-black text-base tracking-tight">VS</span>
+          </div>
+          <div className="flex-1 bg-white px-6 py-5">
+            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-1.5">Your Guftugu AI agent</p>
+            <p className="text-2xl font-bold text-[#0A1128]">₹2,499 – ₹24,999<span className="text-sm font-normal text-gray-400">/month</span></p>
+            <p className="text-xs text-gray-500 mt-1">Answers every call. Follows up on WhatsApp. Works 24/7. Never quits.</p>
+          </div>
+        </div>
+
+        {/* Pricing cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 md:items-stretch">
           {tiers.map((t, i) => (
-            <div key={i} className={`relative flex flex-col ${t.badge ? "mt-4" : ""}`}>
+            <div key={i} className={`relative flex flex-col ${t.badge ? "mt-5" : ""}`}>
               {t.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FCCA07] text-[#0A1128] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap z-10 shadow-sm">
                   {t.badge}
                 </div>
               )}
-              <div
-                className={`relative rounded-2xl border flex flex-col flex-1 ${
-                  t.highlight
-                    ? "bg-[#0A1128] border-[#0A1128] text-white"
-                    : "bg-white border-gray-200 text-[#0A1128]"
-                }`}
-              >
+              <div className={`rounded-2xl border flex flex-col flex-1 overflow-hidden ${
+                t.highlight ? "bg-[#0A1128] border-[#0A1128] text-white" : "bg-white border-gray-200 text-[#0A1128]"
+              }`}>
 
-              {/* Header */}
-              <div className="px-6 pt-8 pb-5 border-b border-current/10">
-                <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold tracking-[0.12em] uppercase mb-3 ${
-                  t.highlight ? "bg-blue-500/20 text-blue-300" : "bg-blue-50 text-blue-600"
-                }`}>
-                  {t.name}
-                </span>
-                <p className={`text-sm mb-4 ${t.highlight ? "text-white/60" : "text-gray-400"}`}>{t.metaphor}</p>
-                <p className={`text-xs font-medium mb-1 ${t.highlight ? "text-white/50" : "text-gray-400"}`}>{t.setup}</p>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold tracking-tight">{t.monthly}</span>
-                  <span className={`text-sm ${t.highlight ? "text-white/50" : "text-gray-400"}`}>{t.period}</span>
-                </div>
-              </div>
+                {/* Header */}
+                <div className={`px-6 pt-7 pb-5 border-b ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
+                  <span className={`inline-flex px-2.5 py-1 rounded-full text-[10px] font-bold tracking-[0.12em] uppercase mb-3 ${
+                    t.highlight ? "bg-blue-500/20 text-blue-300" : "bg-blue-50 text-blue-600"
+                  }`}>
+                    {t.tag}
+                  </span>
 
-              {/* Features, compact, no stretching */}
-              <div className="px-6 py-5">
-                <ul className="space-y-2.5">
-                  {t.features.map((f, j) => (
-                    <li key={j} className={`flex gap-2.5 text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
-                      <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${t.highlight ? "text-green-400" : "text-green-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  {/* Replaces */}
+                  <div className={`flex items-start gap-1.5 text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>
+                    <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                    </svg>
+                    Replaces: {t.replaces}
+                  </div>
 
-              {/* Spacer pushes footer to bottom */}
-              <div className="flex-1" />
+                  {/* Value stack */}
+                  <div className={`rounded-xl px-4 py-3 mb-4 ${t.highlight ? "bg-white/5" : "bg-gray-50"}`}>
+                    <p className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>
+                      Total value inside
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-lg font-bold line-through ${t.highlight ? "text-white/25" : "text-gray-300"}`}>{t.worthOf}</span>
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${t.highlight ? "bg-white/10 text-white/50" : "bg-gray-200 text-gray-500"}`}>you save</span>
+                    </div>
+                    <p className={`text-[11px] mt-0.5 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>You pay just ↓</p>
+                  </div>
 
-              {/* Footer, always at bottom */}
-              <div className={`px-6 pb-6 pt-5 border-t ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
-                {t.overage && (
-                  <p className={`text-xs mb-2 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>
-                    Overage: {t.overage}
+                  {/* Price */}
+                  <p className={`text-xs font-medium mb-0.5 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.setup}</p>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-4xl font-bold tracking-tight">{t.monthly}</span>
+                    <span className={`text-sm ${t.highlight ? "text-white/40" : "text-gray-400"}`}>/month</span>
+                  </div>
+                  <p className={`text-xs mt-1.5 font-medium ${t.highlight ? "text-[#FCCA07]/70" : "text-gray-400"}`}>
+                    {t.perDay} — less than your chai per appointment
                   </p>
-                )}
-                <p className={`text-xs mb-5 ${t.highlight ? "text-white/50" : "text-gray-400"}`}>
-                  Best for: {t.best}
-                </p>
-                <button
-                  onClick={() => window.open(t.ctaHref, "_blank", "noopener,noreferrer")}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "100%",
-                    boxSizing: "border-box",
-                    padding: "14px 20px",
-                    border: t.highlight ? "none" : "2px solid #0A1128",
-                    borderRadius: "8px",
-                    background: t.highlight ? "#FCCA07" : "transparent",
-                    color: t.highlight ? "#0A1128" : "#0A1128",
-                    fontSize: "14px",
-                    fontWeight: 700,
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                  }}
-                  onMouseEnter={e => {
-                    if (t.highlight) {
-                      (e.currentTarget as HTMLButtonElement).style.background = "#f0bd00";
-                    } else {
-                      (e.currentTarget as HTMLButtonElement).style.background = "#0A1128";
-                      (e.currentTarget as HTMLButtonElement).style.color = "#fff";
-                    }
-                  }}
-                  onMouseLeave={e => {
-                    if (t.highlight) {
-                      (e.currentTarget as HTMLButtonElement).style.background = "#FCCA07";
-                    } else {
-                      (e.currentTarget as HTMLButtonElement).style.background = "transparent";
-                      (e.currentTarget as HTMLButtonElement).style.color = "#0A1128";
-                    }
-                  }}
-                >
-                  {t.cta}
-                </button>
-              </div>
+                </div>
+
+                {/* ROI callout */}
+                <div className={`mx-5 mt-4 px-3.5 py-2.5 rounded-xl flex items-start gap-2.5 ${t.highlight ? "bg-green-400/10 border border-green-400/20" : "bg-green-50 border border-green-100"}`}>
+                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  <p className={`text-xs leading-snug ${t.highlight ? "text-green-300" : "text-green-700"}`}>{t.roi}</p>
+                </div>
+
+                {/* Features */}
+                <div className="px-6 py-5">
+                  <ul className="space-y-2">
+                    {t.features.map((f, j) => (
+                      <li key={j} className={`flex items-start gap-2.5 text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
+                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${t.highlight ? "text-green-400" : "text-green-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>
+                          {f.text}
+                          {f.val && (
+                            <span className={`ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-md ${t.highlight ? "bg-[#FCCA07]/20 text-[#FCCA07]" : "bg-blue-50 text-blue-500"}`}>
+                              {f.val}
+                            </span>
+                          )}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex-1" />
+
+                {/* Footer */}
+                <div className={`px-6 pb-6 pt-4 border-t ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
+                  {t.overage && (
+                    <p className={`text-xs mb-2 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>Overage: {t.overage}</p>
+                  )}
+                  <p className={`text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>Best for: {t.best}</p>
+                  <button
+                    onClick={() => window.open(t.ctaHref, "_blank", "noopener,noreferrer")}
+                    className={`w-full py-3.5 rounded-xl text-sm font-bold transition-all active:scale-[0.98] cursor-pointer ${
+                      t.highlight
+                        ? "bg-[#FCCA07] text-[#0A1128] hover:bg-[#f0bd00]"
+                        : "border-2 border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white"
+                    }`}
+                  >
+                    Build My AI Agent
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Comparison table */}
-        <div>
-          <p className="text-sm font-bold text-[#0A1128] mb-4">Full comparison</p>
-          <div className="overflow-x-auto rounded-xl border border-gray-200">
-            <table className="w-full min-w-[540px] text-sm">
-              <thead>
-                <tr className="bg-[#0A1128] text-white">
-                  <th className="text-left px-4 py-3 font-semibold">Feature</th>
-                  <th className="text-center px-4 py-3 font-semibold">Starter</th>
-                  <th className="text-center px-4 py-3 font-semibold bg-blue-900/50">Pro</th>
-                  <th className="text-center px-4 py-3 font-semibold">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableRows.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-4 py-2.5 font-medium text-gray-700">{row.feature}</td>
-                    {row.values.map((v, j) => (
-                      <td
-                        key={j}
-                        className={`px-4 py-2.5 text-center ${
-                          j === 1 ? "bg-blue-50 font-semibold text-blue-800" : "text-gray-600"
-                        } ${v === "✓" ? "text-green-600 text-lg" : ""} ${v === "-" ? "text-gray-300" : ""}`}
-                      >
-                        {v}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-400 mt-3">
-            WhatsApp charges billed directly to your Meta Business account at Meta&apos;s standard rates. We handle the full technical setup.
-          </p>
+        {/* Trust strip */}
+        <div className={`flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-5 px-6 rounded-2xl border border-gray-200 bg-white text-sm text-gray-500`}>
+          {["No hidden fees", "No per-minute billing surprises", "Cancel anytime", "Live in 30 mins", "TRAI-compliant numbers"].map((item) => (
+            <span key={item} className="flex items-center gap-1.5 whitespace-nowrap">
+              <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+              </svg>
+              {item}
+            </span>
+          ))}
         </div>
+
+        <p className="text-xs text-gray-400 mt-3 text-center">
+          WhatsApp charges billed directly to your Meta Business account at Meta&apos;s standard rates. We handle the full technical setup.
+        </p>
       </Container>
     </section>
   );
