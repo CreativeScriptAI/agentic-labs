@@ -225,15 +225,15 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       </div>
 
       <header
-        className={`fixed left-0 w-full z-[99] transition-all duration-300 ease-in-out ${
+        className={`fixed left-0 w-full z-[99] transition-all duration-300 ease-in-out backdrop-blur-xl border-b ${
           isHeaderVisible ? "top-0" : "-top-24"
         } ${
           isScrolled
-            ? "bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
-            : "bg-white/80 backdrop-blur-md"
+            ? "bg-white/90 border-black/[0.06] shadow-[0_2px_24px_rgba(0,0,0,0.07)]"
+            : "bg-white/60 border-white/30"
         }`}
       >
-        <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 translate-y-10 md:translate-y-[calc(40px_-_50%)] rounded-xl md:bg-transparent bg-white md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08),0_2px_8px_0_rgba(0,0,0,0.10)] relative">
+        <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 md:translate-y-0 rounded-xl md:bg-transparent bg-white/80 md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08)] relative">
           {/* Desktop Logo - hidden on mobile */}
           <div className="hidden md:flex flex-shrink-0">
             <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
