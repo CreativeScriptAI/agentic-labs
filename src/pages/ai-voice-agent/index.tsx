@@ -244,21 +244,15 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
             <PrimaryBtn href={CAL_LINK} label="Book a Free Discovery Call" size="lg" />
-            {STATS.demoNumber ? (
-              <OutlineBtn
-                href={`tel:${STATS.demoNumber}`}
-                label={`Call our AI: ${STATS.demoNumber}`}
-                dark
-                size="lg"
-              />
-            ) : (
-              <button
-                disabled
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-white/20 text-white/40 text-base font-medium min-h-[52px] cursor-not-allowed"
-              >
-                Demo number coming soon
-              </button>
-            )}
+            <button
+              onClick={() => smoothScrollTo("pricing")}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-xl border border-white/25 text-white text-sm font-semibold transition-all hover:border-white/50 hover:bg-white/10 active:scale-[0.98]"
+            >
+              Plans from ₹2,499/mo
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
           </div>
 
           {/* Trust footer */}
