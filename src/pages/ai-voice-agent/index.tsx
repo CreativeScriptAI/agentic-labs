@@ -246,7 +246,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             <PrimaryBtn href={CAL_LINK} label="Book a Free Discovery Call" size="lg" />
             <button
               onClick={() => smoothScrollTo("pricing")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-xl border border-white/40 text-white text-sm font-semibold transition-all hover:border-white/60 hover:bg-white/10 active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-xl text-white text-sm font-semibold transition-all hover:bg-white/10 active:scale-[0.98]" style={{ border: "1px solid rgba(255,255,255,0.55)" }}
             >
               Plans from ₹2,499/mo
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
