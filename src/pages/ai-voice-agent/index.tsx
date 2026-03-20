@@ -1703,17 +1703,17 @@ const PricingSection = () => {
         {/* Human vs AI anchor bar */}
         <div className="flex flex-col sm:flex-row mb-12 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <div className="flex-1 bg-[#0A1128] px-6 py-5">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-1.5">What you pay a human receptionist</p>
-            <p className="text-2xl font-bold text-white">₹25,000 – ₹35,000<span className="text-sm font-normal text-white/40">/month</span></p>
-            <p className="text-xs text-white/40 mt-1">Salary only. Add training, sick days, and zero night/weekend coverage.</p>
+            <p className="text-[10px] font-bold tracking-widest uppercase text-white/60 mb-1.5">What you pay a human receptionist</p>
+            <p className="text-2xl font-bold text-white">₹25,000 – ₹35,000<span className="text-sm font-normal text-white/60">/month</span></p>
+            <p className="text-xs text-white/60 mt-1">Salary only. Add training, sick days, and zero night/weekend coverage.</p>
           </div>
           <div className="flex items-center justify-center bg-[#FCCA07] px-5 py-3 sm:py-0">
             <span className="text-[#0A1128] font-black text-base tracking-tight">VS</span>
           </div>
           <div className="flex-1 bg-white px-6 py-5">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-1.5">Your Guftugu AI agent</p>
-            <p className="text-2xl font-bold text-[#0A1128]">₹2,499 – ₹24,999<span className="text-sm font-normal text-gray-400">/month</span></p>
-            <p className="text-xs text-gray-500 mt-1">Answers every call. Follows up on WhatsApp. Works 24/7. Never quits.</p>
+            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-600 mb-1.5">Your Guftugu AI agent</p>
+            <p className="text-2xl font-bold text-[#0A1128]">Starts at ₹2,499<span className="text-sm font-normal text-gray-500">/month</span></p>
+            <p className="text-xs text-gray-600 mt-1">Answers every call. Follows up on WhatsApp. Works 24/7. Never quits.</p>
           </div>
         </div>
 
@@ -1739,7 +1739,7 @@ const PricingSection = () => {
                   </span>
 
                   {/* Replaces */}
-                  <div className={`flex items-start gap-1.5 text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>
+                  <div className={`flex items-start gap-1.5 text-xs mb-4 ${t.highlight ? "text-white/60" : "text-gray-500"}`}>
                     <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                     </svg>
@@ -1747,15 +1747,15 @@ const PricingSection = () => {
                   </div>
 
                   {/* Value stack */}
-                  <div className={`rounded-xl px-4 py-3 mb-4 ${t.highlight ? "bg-white/5" : "bg-gray-50"}`}>
-                    <p className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>
+                  <div className={`rounded-xl px-4 py-3 mb-4 ${t.highlight ? "bg-white/8" : "bg-gray-100"}`}>
+                    <p className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${t.highlight ? "text-white/50" : "text-gray-500"}`}>
                       Total value inside
                     </p>
                     <div className="flex items-center gap-2">
-                      <span className={`text-lg font-bold line-through ${t.highlight ? "text-white/25" : "text-gray-300"}`}>{t.worthOf}</span>
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${t.highlight ? "bg-white/10 text-white/50" : "bg-gray-200 text-gray-500"}`}>you save</span>
+                      <span className={`text-lg font-bold line-through ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.worthOf}</span>
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${t.highlight ? "bg-white/15 text-white/70" : "bg-gray-300 text-gray-600"}`}>you save</span>
                     </div>
-                    <p className={`text-[11px] mt-0.5 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>You pay just ↓</p>
+                    <p className={`text-[11px] mt-0.5 font-medium ${t.highlight ? "text-white/50" : "text-gray-500"}`}>You pay just ↓</p>
                   </div>
 
                   {/* Price */}
