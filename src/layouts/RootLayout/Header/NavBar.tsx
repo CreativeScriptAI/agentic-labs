@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from "react";
 type Props = {
   isMobile?: boolean;
   onLinkClick?: () => void;
-  isScrolled?: boolean;
 };
 
 type DropdownItem = { name: string; to: string; badge?: string; desc?: string };
@@ -24,7 +23,7 @@ const ChevronDown = ({ open }: { open: boolean }) => (
   </svg>
 );
 
-const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick, isScrolled = false }) => {
+const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const router = useRouter();
   const { countryPrefix } = useCountry();
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -156,9 +155,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick, isScrolled = f
                   href={item.to}
                   onClick={onLinkClick}
                   className={`text-sm font-medium transition-colors ${
-                    isScrolled
-                      ? isActive(item.to) ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
-                      : isActive(item.to) ? "text-white font-semibold" : "text-white/65 hover:text-white"
+                    isActive(item.to) ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
                   }`}
                 >
                   {item.name}
@@ -174,9 +171,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick, isScrolled = f
               <button
                 onClick={() => setOpenDropdown(isOpen ? null : item.id)}
                 className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? groupActive ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
-                    : groupActive ? "text-white font-semibold" : "text-white/65 hover:text-white"
+                  groupActive ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
                 }`}
               >
                 {item.name}
