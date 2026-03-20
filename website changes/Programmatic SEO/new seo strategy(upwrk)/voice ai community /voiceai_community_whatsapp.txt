@@ -1,0 +1,1308 @@
+[28/02/26, 10:55:07 AM] Voice AI Builders: ‎Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them.
+[28/02/26, 10:55:07 AM] ~ Sunil😎: ‎~ Sunil😎 created this group
+[15/03/26, 9:48:41 PM] Voice AI Builders: ‎Welcome to the group: Voice AI Builders
+[15/03/26, 9:48:43 PM] ~ Umesh Pande: ‎~ Umesh Pande joined using a group link.
+[15/03/26, 10:07:22 PM] ~ Kaushik Tiwari: Hi guys
+[15/03/26, 10:09:51 PM] ~ Kaushik Tiwari: Nice to be on this group. I just joined from LinkedIn. Kaushik here. I am a YC w22 founder building a voice ai api https://openmic.ai love to get some feedback on webhooks, api documentation, anything else. ‎<This message was edited>
+[15/03/26, 10:10:38 PM] ~ Kaushik Tiwari: We are also looking for dev rel folks who can help us make content and evangelize the product. So if you have done content/ tutorials hit me up with links on dm.  Nice to follow along here :)
+[15/03/26, 10:29:02 PM] ‪+91 96212 49730‬: ‎‪+91 96212 49730‬ joined using a group link.
+[15/03/26, 10:38:31 PM] ~ Sahil Garg: ‎~ Sahil Garg joined using a group link.
+[15/03/26, 10:49:53 PM] ‪+91 82794 58423‬: ‎‪+91 82794 58423‬ joined using a group link.
+[15/03/26, 10:50:01 PM] ~ Myth: ‎~ Myth joined using a group link.
+[15/03/26, 10:34:23 PM] ~ Raghav: Hey, We have created AI based outbound call Center. The system makes calls in bulk - you can upload the details(Name, Phone number, purpose of calling, expected outcome) to it via Excel or through UI. 
+
+You can configure the call Center with details like - Name of call Center, Branding details, Type of Voice (male/female, American etc) 
+
+
+The pricing is purely per min For example 200 Rs for 5 hours of talk time and 50 calls daily.
+
+We are using realtime model hence latency is very less and it gives the experience of realtime conversation. ‎<This message was edited>
+[15/03/26, 10:36:21 PM] ~ Raghav: Let me know if anyone is interested in this…. I will be happy to schedule the demo.
+[15/03/26, 10:36:56 PM] ~ Subhankar: which platform is this @⁨~Raghav⁩ ?
+[15/03/26, 10:37:54 PM] ~ Neha Agarwal: 200rs fo 5 hours of talk time ?
+[15/03/26, 10:39:14 PM] ~ Subhankar: 200 Indian rupee for 5 hours
+😂😂
+[15/03/26, 10:40:18 PM] ~ Raghav: it’s a custom platform build by me and few other folks. 
+
+1. UI + Backend - React and .Net 
+2. ⁠LLM - GPT 4.o mini realtime model deployed on azure ai foundry with pay as you go configuration 
+3. ⁠Communication - Azure Coummincation Service (Phone number can be purchased or ported) 
+4. ⁠E2E Orchestration - Build using .Net
+[15/03/26, 10:41:00 PM] ~ Subhankar: if somebody wants to explore, how would they do
+[15/03/26, 10:43:19 PM] ~ Raghav: we can give you demo of the system.
+[15/03/26, 10:48:16 PM] ~ Raghav: If you’re looking forward to demo or discuss in more details please give thumps up to this text or text me personally. I will be very happy to give you walk through of ART on high level along with demo.
+[15/03/26, 10:49:01 PM] ~ Sunil😎: @⁨~Raghav⁩ here we are all builders we don’t want demo, people are curious about what thus its mean 200 indian rupees for 5hours ‎<This message was edited>
+[15/03/26, 10:51:10 PM] ~ Raghav: Plz go ahead and build… thank you 😉
+[15/03/26, 11:25:20 PM] ~ Arnab: My platform is using Twilio. But, will switcg to Telnyx soon and will keep Twilio as backup. Great to connect 🙏
+[15/03/26, 11:38:20 PM] ~ Arnab: Before going for high expense, I would make sure the transcripts are properly redacted and stored in ur own network and voice calls are made following a 2fa authz. For the rest if u need internal hosting, can go for enterprise plans. For my Advanced care planning usecase, we only needed to store redacted data in Aus
+[15/03/26, 11:39:45 PM] ~ Subhankar: what is your platform?
+[15/03/26, 11:39:50 PM] ~ Umesh Pande: Hello 👋 I’m the co-founder of startelelogic, a CX platform helping enterprise customers manage millions of interactions across voice and digital channels every day.
+[15/03/26, 11:42:09 PM] ~ Arnab: WIP sorry not ready to use yet. But on a high level a platform to build self correcting text and voice agents
+[15/03/26, 11:43:55 PM] ~ Subhankar: okay
+[15/03/26, 11:47:37 PM] ~ Subhankar: do u feel its worth building a new platform everything from scratch since there r good ones already out there?
+what do u feel?
+What is unique
+[15/03/26, 11:53:34 PM] ~ Arnab: If u ask me and what has worked for me is following SOLID principles when deciding on agent architecture and self reflection on the results produced. There is no no code agent builder that lets me build an agent following above.
+
+Also, no no code agent builder that marries voice and text agent. Once someone uses my platform, they will only build their own api layer for their own business logic.
+[15/03/26, 11:54:10 PM] ~ Arnab: Rest of the whole agent is built in the platform
+[15/03/26, 11:55:25 PM] ~ Subhankar: i guess there are no-code or low-code platform
+drag and drop which connect voice chat SMS
+[15/03/26, 11:56:08 PM] ~ Subhankar: I may be wrong if I did not understand your requirement
+[15/03/26, 11:58:58 PM] ~ Arnab: That is my bad. U can take it to  be a no code platform focusing on observability, reliability and self correction.
+[16/03/26, 12:01:04 AM] ~ Subhankar: agree with you, i dont see the self-correcting ones
+few r probably integrating
+[16/03/26, 12:10:02 AM] ~ Dileep: dograh is drag and drop no code platform for voice ai ‎<This message was edited>
+[16/03/26, 12:13:30 AM] ~ Subhankar: what is the drawbacks?
+I see low-code is better
+[16/03/26, 12:14:38 AM] ~ David Casem: i think we’re increasingly moving toward a world where everyone has a bot, and then no-code will probably become less important. it’ll all be about bot ux. ‎<This message was edited>
+[16/03/26, 12:16:05 AM] ~ Umesh Pande: Hey, please fix the social media links on the website. Right now, apart from ‘Book a Demo’, nothing else seems to be working for me. Also, if this is for WC W22, please add all the other relevant information as well.
+[16/03/26, 12:16:28 AM] ~ Su_hrid: Maybe try this:ConvoAI studio using your credentials here : https://console.agora.io/studio
+
+You can drag drop and publish your agent in production all under 10mins! ‎<This message was edited>
+[16/03/26, 12:19:46 AM] ~ Umesh Pande: Yes, each component will be powered by a dedicated bot that performs tasks according to its specific business logic and workflow.
+[16/03/26, 12:20:15 AM] ~ Subhankar: Agree David, u r guru in this field and have been working for long time. U have better iseas
+[16/03/26, 12:25:09 AM] ~ Arnab: I do not agree to this point completely. Gpt 5> gpt4>>>gpt3. That is why Sam Altman is going for Pentagon partnership to stay affloat. Basically AGI, can not be achieved with normal transformers. It's easier to generate code but it's also harder to vibe code stuff in prod. No code/ low code adds that speed to prod. That is why  Palantir uses its' own no code platflorm instead of vibe coding even now.
+[16/03/26, 12:26:11 AM] ~ David Casem: Yup, can agree to disagree. I vibe code into production on a daily basis. I don’t think Palantir is operating at the possibility frontier.
+[16/03/26, 12:26:42 AM] ~ Word Works AI-Voice Calls: ‎POLL:
+How many Voice Ai companies are here
+‎OPTION: Voice Ai full stack (23 votes)
+‎OPTION: Telephone service provider (4 votes)
+‎OPTION: SMS service provider (0 votes)
+‎OPTION: Data center company (0 votes)
+‎OPTION: STT/ TTS /LLM API provider (1 vote)
+‎OPTION: Other service provider (5 votes)
+[16/03/26, 12:29:27 AM] ~ Word Works AI-Voice Calls: ‎~ Word Works AI-Voice Calls pinned a message
+[16/03/26, 12:35:10 AM] ~ David Casem: Fit too many categories 🤷‍♂️
+[16/03/26, 2:57:56 AM] ~ Gabriele Proni: Hello all! Gabriele here, nice to meet you all :)
+
+I'm italian and i ran a pbx saas with 1600+ b2b active customers for the last 10 years, now enjoying the VoiceAI evolution.
+
+
+Hey @⁨~David Casem⁩! it's great to see you here. I take the occasion to share something it might be usefull to all :)
+
+I was evaluating the switch to telnyx (nowadays i have my hosted infra that i want to decommission).
+
+While doing some tests i realised that platforms like yours and twilio are not 100% compatible with SIP functions (
+re invite music on hold just as an example) and i was really "shocked" when i noticed that.
+
+Needless to say that voiceAI is present and future but i also think that a seamless integration with legacy systems (hardware phone) will be crucial in the next 2-3yrs at least. 
+
+Real world example: i am implementing a voiceAI for a chain of car-wash points. They need an intercom that when activated will allow the customer to talk with the AI for basic support, and eventually forward to the right extension depending on the issue. An all in one solution (legacy pbx + voiceAI) is really powerful here.
+
+PS: I added you on Linkedin as well :)
+[16/03/26, 3:06:53 AM] ~ David Casem: Yes, the infra was designed for class 4, not class 5. 
+
+That said, we're building out more class 5 functionality now like UAC. Generally the paradigm for PBX functionalities is call control. MoH works there -- and sends events for it when used with a endpoint like Yealink phone. ‎<This message was edited>
+[16/03/26, 3:07:51 AM] ~ David Casem: If there's other stuff missing, lmk, and I'll get it on roadmap
+[16/03/26, 3:10:47 AM] ~ Gabriele Proni: thanks for your quick answer. what about sip presence? that s another thing twilio is completely missing, idk if you guys are supporting
+[16/03/26, 3:14:45 AM] ~ David Casem: We support: 
+SUBSCRIBE
+NOTIFY
+PUBLISH
+
+Depends on your implementation. But again, you should use in combination with subdomains + call control. 
+
+The SIP trunking product is not designed to be a PBX replacement.
+[16/03/26, 3:15:51 AM] ~ David Casem: We have several folks building PBXs on top of call control APIs. If you are implementing something and it's missing, ping me. We'll build it quick.
+[16/03/26, 3:17:04 AM] ~ Gabriele Proni: Thanks David! will do for sure!
+[16/03/26, 3:17:49 AM] ~ David Casem: Right now we're knocking UAC support so folks can register Telnyx as extensions to things like WebEx or Zoom to easily add extensions. Going to do robust presence/blf review after but should be able to support most implementations today
+[16/03/26, 3:18:05 AM] ~ Gabriele Proni: Do you know Acrobits Cloudsoftphone? ‎<This message was edited>
+[16/03/26, 3:18:41 AM] ~ David Casem: Yeah
+[16/03/26, 3:18:59 AM] ~ Gabriele Proni: they are great guys, one of the founders was my investor (he did an exit with us)
+[16/03/26, 3:19:28 AM] ~ Gabriele Proni: a solution like theirs today is not compatible in plug and play with twilio
+[16/03/26, 3:19:41 AM] ~ David Casem: Try us :-D
+[16/03/26, 4:13:22 AM] ~ Sunil😎: ‎~ Sunil😎 changed the settings so only admins can edit the group settings
+[16/03/26, 4:15:23 AM] ‪+91 88007 89255‬: ‎‪+91 88007 89255‬ joined using a group link.
+[16/03/26, 4:15:26 AM] ‪+91 70236 22079‬: ‎‪+91 70236 22079‬ joined using a group link.
+[16/03/26, 4:15:29 AM] ‪+91 96540 38233‬: ‎‪+91 96540 38233‬ joined using a group link.
+[16/03/26, 4:15:31 AM] ‪+1 (903) 590‑7782‬: ‎‪+1 (903) 590‑7782‬ joined using a group link.
+[16/03/26, 4:15:34 AM] ‪+1 (270) 612‑1871‬: ‎‪+1 (270) 612‑1871‬ joined using a group link.
+[16/03/26, 3:19:46 AM] ~ Gabriele Proni: more with a platform like groundwire instead, i want to test again telnyx
+[16/03/26, 3:19:50 AM] ~ David Casem: Lmk what you find
+[16/03/26, 3:19:55 AM] ~ David Casem: Super curious
+[16/03/26, 3:20:40 AM] ~ Gabriele Proni: sure! i am a power user of 2600hz kazoo, i bet you know them as well :)
+[16/03/26, 3:20:53 AM] ~ Gabriele Proni: i'll play again with telnyx and come back to you
+[16/03/26, 3:21:01 AM] ~ David Casem: https://github.com/team-telnyx/telnyx-skills
+[16/03/26, 3:21:06 AM] ~ David Casem: If you're using Claude ^
+[16/03/26, 3:45:27 AM] ~ Eswara Naidu: Quick question/help
+
+We’re building CRM-native voice  AI applications for platforms like Salesforce and ServiceNow.
+
+Are there any API-first voice AI platforms like Vapi where we can initiate a call directly via API by just passing:
+
+• assistant config (prompt / tools / voice)
+• "to" number
+• "from" number
+
+Most platforms I tried require creating the assistant/agent first and then using the assistant ID in the API.
+
+Also seeing $100k–$200k commitments from Vapi for things like HIPAA or enterprise support, which is a huge investment for a startup.
+
+Curious if anyone has found developer-friendly alternatives that allow fully programmatic call creation.
+
+@⁨~David Casem⁩ @⁨~Suman Gandham⁩  @⁨‪+91 94403 08877‬⁩
+[16/03/26, 3:51:07 AM] ~ David Casem: 1) We support this out of the box. 
+2) We offer free support to all customers
+3) I’m going to work on modifying our HIPAA policy based on all the feedback I’m seeing here.
+[16/03/26, 3:51:31 AM] ~ David Casem: import telnyx
+import os
+
+telnyx.api_key = os.environ["TELNYX_API_KEY"]
+
+# One API call — define the entire agent inline
+call = telnyx.Call.create(
+    connection_id=os.environ["TELNYX_SIP_CONNECTION_ID"],
+    to="+14155551234",
+    from_="+18005559876",
+    ai={
+        "engine": "telnyx_ai",
+        "voice": {
+            "provider": "telnyx",
+            "voice_id": "Telnyx.Chloe"  # or any supported voice
+        },
+        "prompt": """You are a helpful sales assistant for Acme Corp.
+        
+Your goal is to confirm the customer's appointment scheduled for tomorrow 
+at 2pm. Be friendly and professional.
+
+If they want to reschedule, offer Monday or Tuesday next week.
+If they want to cancel, confirm cancellation and let them know 
+they can call back anytime.
+
+Keep responses concise — this is a phone call, not an essay.""",
+        "tools": [
+            {
+                "type": "function",
+                "function": {
+                    "name": "update_appointment",
+                    "description": "Update or cancel the customer's appointment",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "action": {
+                                "type": "string",
+                                "enum": ["reschedule", "cancel", "confirm"]
+                            },
+                            "new_date": {
+                                "type": "string",
+                                "description": "ISO date if rescheduling"
+                            }
+                        },
+                        "required": ["action"]
+                    }
+                }
+            }
+        ],
+        "tool_webhook_url": "https://your-app.com/api/voice-tools"
+    }
+)
+
+print(f"Call initiated: {call.call_control_id}"
+[16/03/26, 4:12:22 AM] ~ Ali Rafay: do twilio/vonage/telenyx/plivo offer any startup credits?
+[16/03/26, 4:15:05 AM] ~ David Casem: https://telnyx.com/startups-program ‎<This message was edited>
+[16/03/26, 4:15:37 AM] ‪+91 95917 33699‬: ‎‪+91 95917 33699‬ joined using a group link.
+[16/03/26, 4:15:40 AM] ‪+971 55 286 6651‬: ‎‪+971 55 286 6651‬ joined using a group link.
+[16/03/26, 4:15:43 AM] ~ Aditya: ‎~ Aditya joined using a group link.
+[16/03/26, 4:15:45 AM] ~ Subrat Sagar: ‎~ Subrat Sagar joined using a group link.
+[16/03/26, 4:15:48 AM] ‪+91 79092 90956‬: ‎‪+91 79092 90956‬ joined using a group link.
+[16/03/26, 4:15:52 AM] ‪+91 95304 66395‬: ‎‪+91 95304 66395‬ joined using a group link.
+[16/03/26, 4:15:55 AM] ‪+1 (281) 707‑0456‬: ‎‪+1 (281) 707‑0456‬ joined using a group link.
+[16/03/26, 4:23:55 AM] ‪+1 (647) 262‑4094‬: ‎‪+1 (647) 262‑4094‬ joined using a group link.
+[16/03/26, 4:23:57 AM] ‪+91 96431 91913‬: ‎‪+91 96431 91913‬ joined using a group link.
+[16/03/26, 4:24:00 AM] ‪+91 94503 28359‬: ‎‪+91 94503 28359‬ joined using a group link.
+[16/03/26, 4:24:03 AM] ~ brajmohan kumar: ‎~ brajmohan kumar joined using a group link.
+[16/03/26, 4:16:18 AM] ~ ~: @⁨~Sunil😎⁩ Hey Man, where did you add the group link so many people joining this quick
+[16/03/26, 4:17:19 AM] ~ Sunil😎: 😅 a post get little reach on linkedin
+[16/03/26, 4:18:37 AM] ~ Eswara Naidu: Thank you very much for the quick response David
+[16/03/26, 4:18:42 AM] ~ ~: I have been following your content on LinkedIn, looks like it's paying off. Great stuff. Also thanks for creating this group, it's the need of the hour
+[16/03/26, 7:12:34 AM] ‪+91 85274 28992‬: ‎‪+91 85274 28992‬ joined using a group link.
+[16/03/26, 7:12:38 AM] ~ Mohit: ‎~ Mohit joined using a group link.
+[16/03/26, 7:12:40 AM] ~ Shahil: ‎~ Shahil joined using a group link.
+[16/03/26, 5:46:52 AM] ~ Mehul Elision: We are a vno license holder in india. We provider mobile series number for your VoiceAi platform. Along with whitelisting from SPAM.
+[16/03/26, 5:46:53 AM] ~ Mehul Elision: https://voicelink.co.in/
+[16/03/26, 5:47:58 AM] ~ Mehul Elision: We offer startup credits for voiceai companies
+[16/03/26, 8:20:54 AM] ~ Sarthak: hey Mehul, do u support dynamic websocket endpoint? also, couldn’t find pricing on the website
+[16/03/26, 8:35:35 AM] ~ Ashwini Pai: Hello, Check out  ,https://epicode.in/iravoice/ and https://epicode.in/botcompose/ , we offer VoiceAI APIs with media streaming capabilities over a full duplex websocket and also Bot orchestration framework similar to your requirement of just passing the config and the rest is handled by our stack. Let me know if you are interested to explore more !
+[16/03/26, 8:48:47 AM] ~ Abhinash Khare: ‎~ Abhinash Khare joined using a group link.
+[16/03/26, 8:48:49 AM] ‪+91 98338 12620‬: ‎‪+91 98338 12620‬ joined using a group link.
+[16/03/26, 8:38:34 AM] ~ Mehul Elision: Yes we do support, let me connect with u
+[16/03/26, 8:40:47 AM] ~ Prabhu Dhanuskodi: Hi @⁨~Eswara Naidu⁩, We can help you ! Explore https://www.piopiy.ai/ ! DM me for a discussion !
+[16/03/26, 9:50:49 AM] ~ Ali Rafay: everybody here who is selling AI Voice Agents, how'd you get your first paying customer?
+[16/03/26, 10:02:16 AM] ~ Sunil😎: mostly cold outreach on linkedin
+[16/03/26, 10:06:13 AM] ~ Abhinash Khare: Things were easier for us, had some industry connects that helped land the projects. I feel if you are very early in the development, cold outreach, consulting could be right step. specially in the sector where you have connects, leverage.
+[16/03/26, 10:18:21 AM] ~ Nithish Bharadwaj: ‎~ Nithish Bharadwaj joined using a group link.
+[16/03/26, 11:36:02 AM] ~ Eswara Naidu: I saw the pricing, is it Rs.0.10 per minute or $0.10 per minute
+[16/03/26, 12:01:45 PM] ~ Ritu Malik: Hi Everyone,
+
+I am Ritu from RightSide (India). We build telephony infrastructure for large-scale calling systems.
+
+Our platform, HYDA Voice, provides the voice layer for AI agents, including GSM, SIP connectivity, PSTN routing, real-time audio streaming, call control, and integrations with STT/TTS/LLM pipelines.
+
+We currently support use cases such as AI voice bots, inbound/outbound automation, and contact centre AI integrations.
+
+We also build products on the same stack, including an omnichannel CRM, dialer, ticketing, and contact centre platform.
+
+Always interested in learning how others here are building voice agents and solving latency/telephony integration challenges.
+[16/03/26, 12:29:16 PM] ‪+1 (415) 940‑8428‬: ‎‪+1 (415) 940‑8428‬ joined using a group link.
+[16/03/26, 12:29:18 PM] ~ Rakshith Vikramraj: ‎~ Rakshith Vikramraj joined using a group link.
+[16/03/26, 1:32:43 PM] ~ Sunil😎: I’m looking for feedback on Simplismart AI for voice infrastructure.
+[16/03/26, 2:33:40 PM] ‪+91 91 22 8337 72‬: ‎‪+91 91 22 8337 72‬ joined using a group link.
+[16/03/26, 2:34:42 PM] ~ Sunil😎: so i guess not anyone knows about this😅
+[16/03/26, 2:35:14 PM] ~ Amol Derick Soans: Can you drop a link? Would love to check it out
+[16/03/26, 2:35:45 PM] ~ Sunil😎: https://simplismart.ai/
+‎[16/03/26, 3:14:15 PM] ~ Suman Paudel: Idk but Tesla t4 for most providers is super cheaper around <0.5$, bro for $1.20 you a100 80gb,  A100 $1.39 /hr on Runpod just 20 cents diff ‎image omitted
+‎[16/03/26, 3:14:18 PM] ~ Suman Paudel: Idk but Tesla t4 for most providers is super cheaper around <0.5$, bro for $1.20 you a100 80gb,  A100 $1.39 /hr on Runpod just 20 cents diff ‎image omitted
+[16/03/26, 3:56:08 PM] ~ Sunil😎: okay got it, thanks
+‎[16/03/26, 4:34:33 PM] ~ Neha Agarwal: Does anyone have idea how to increase the call pick up rate.. ? we have white labelled our Plivo number in Airtel and also in true caller… but still pick up rate is very low..  anyone getting this problem ? any recommendations  ? ‎image omitted
+[16/03/26, 4:37:49 PM] ~ Sonu: are you using 80 series, try to use phone number series like 9
+[16/03/26, 4:38:42 PM] ~ Neha Agarwal: yes.. this campaign was with 80 series.. now we get another one 022 series.. plivo do not have with 9 i think..
+[16/03/26, 4:39:28 PM] ~ Abhinash Khare: are these cold calls? if yes, then such calls tend to have this problem, even with different number series, your metric will just shift from call cut to picked but unanswered.
+[16/03/26, 4:39:43 PM] ~ Sonu: This will have low pickup rate, try to use non STD code like 71,91 etc.
+[16/03/26, 4:40:13 PM] ~ Neha Agarwal: ok.. need too fin out this series number..
+[16/03/26, 4:40:14 PM] ~ Sonu: most of the calls are always cold call only, even if we get numbers they will run next day or so. ‎<This message was edited>
+[16/03/26, 4:41:08 PM] ~ Rahul Gupta: plivo doesnt have these -they only have 022 and 080
+[16/03/26, 4:41:37 PM] ~ Neha Agarwal: ye and no.. these are CRMm numbers.. these customer queries in last 6 month for service .. currently they are dead in CRMm.. so doing AI Calling campaign to activate them… so not generic cold calls..
+[16/03/26, 4:42:05 PM] ~ Sonu: but still they are cold, its same like we call our leads and they do not pick..
+[16/03/26, 4:42:27 PM] ~ Neha Agarwal: exactly.. now where to find these series number
+[16/03/26, 4:43:07 PM] ~ Sonu: whats this campaign about, very low call duration < 2 minutes
+[16/03/26, 4:44:25 PM] ~ Neha Agarwal: yes.. its just lead qualification.. so our most qualified lead will go for max 2-3 mins..
+[16/03/26, 4:45:23 PM] ~ Subrat Sagar: Two problems here
+- Landline series number - By default lowers down the pick up rate but not more than 7-10%
+- ⁠Truecaller verified - Makes you a business - nobody wants to pick those
+
+Fixes
+don’t make it a business number. Let the number marked spam. Change numbers immediately it’s marked spam. Build logics for redials and use more numbers in back end to randomize the attempts.
+[16/03/26, 4:46:26 PM] ~ Sonu: how do you identify number is marked spam?
+[16/03/26, 4:47:31 PM] ~ Sonu: when we get the number, the number it self, the problem is also with Airtel Intelligence network they mark call spam as well.
+[16/03/26, 4:47:49 PM] ~ Subrat Sagar: Pick up rate will slow down
+Then you have to check those numbers over truecaller. 
+
+Problem is Airtel and Jio - They mark number SPAM at Telecom SBC end and once that’s marked, the cooling period is of 15 days
+[16/03/26, 4:48:29 PM] ~ Ojas Jain: Does anyone have contacts at Plivo ? Have been trying to get a number from them for India for my business, no luck so far
+[16/03/26, 4:48:49 PM] ~ Nilesh : Call SPAMMING is here to stay .. the networks these days have AI .. based on the frequency of the calls and requests that come in as headers on the networks the numbers are flagged as SPAM.
+[16/03/26, 4:49:47 PM] ~ Subrat Sagar: Ojas! Let me help you with this.
+[16/03/26, 4:49:54 PM] ~ Nilesh : What is required is robust call routing system.
+[16/03/26, 5:17:06 PM] ~ Prabhu Dhanuskodi: Hi @⁨~Neha Agarwal⁩, We can help you with 9 series numbers for India !
+[16/03/26, 5:34:06 PM] ~ Tarun Garg: Which cloud telephony provides hosting of physical lines in case of 160.
+
+Usecase - Customer has acquired 160 lines in their name from telco and wants us to use that only due to compliance.
+[16/03/26, 5:37:06 PM] ~ Subrat Sagar: You can terminate it at our DC.
+[16/03/26, 5:37:10 PM] ~ Subrat Sagar: Will provide you the streaming
+[16/03/26, 6:11:48 PM] ~ Arijit Chatterji: ‎~ Arijit Chatterji joined using a group link.
+[16/03/26, 8:10:21 PM] ~ V: This strategy sounds good, but the service providers will typically hate this. When spam  reports happen, the carrier reaches out to Plivo for proof that this is solicited calling. And if there is no convincing proof, Plivo has to close down that account.
+So throwing away numbers would not be a great long term strategy. 
+For the “let the number be marked spam” strategy to work, you should have enough volume of good traffic to blend cold outreach traffic with. ‎<This message was edited>
+[16/03/26, 8:12:45 PM] ~ V: Hey, you can signup here - https://cx.plivo.com/pungis2 for an account. 
+
+Note: 
+1. Select data region as India when signing up. 
+2. ⁠you will need go complete business verification and you ll be able to buy a number post that. Dming you more details ‎<This message was edited>
+[16/03/26, 8:21:21 PM] ~ V: Have you tried mixing other channels to follow up? Maybe WhatsApp messages + calls, or SMS or email? Follow ups would help here.
+[16/03/26, 8:28:15 PM] ~ Edgar: ‎~ Edgar joined using a group link.
+[16/03/26, 10:06:32 PM] ~ Mehul Elision: Hi Neha,  we can help u with 9 series number, which can help u to boost connectivity and numbers are so cost effective that u can change daily
+[16/03/26, 10:07:24 PM] ~ Sahil Garg: Anyone with experience of triggering outbound calls in the US?
+[16/03/26, 10:19:29 PM] Aditya: Hi everyone, I'm trying to train my voice agent. 
+I'm just confused: what are the details I should ask the client for? and what are the things I should keep in mind while we train the agent & prepare the meta prompt
+[16/03/26, 10:36:41 PM] ~ Nilesh : Yes .. you
+Need to have consent for outbound calls ..
+[16/03/26, 11:04:31 PM] ~ Suman Paudel: new video out, do help me by subscribing and liking the video, this video is about voice agent that can be a small part of the entire system.
+
+https://www.youtube.com/watch?v=bsvYUCqvHuo&t=66s
+[16/03/26, 11:09:22 PM] ~ Abhi: made open sourced version of wispr flow using telnyx API
+
+https://github.com/a692570/bolo
+[16/03/26, 11:11:09 PM] ~ Edgar: Hi all great to be part of this group! I am Edgar from Speechmatics so if you guys have any questions in regards to speech-to-text or text-to-speech in Voice AI let me know 😎
+[16/03/26, 11:41:23 PM] ~ Mihir: Hey folks, we launching season 2 of our muktam agents very soon.
+
+It's world's most affordable & intelligent voice agents platform with zero compromises.
+
+We're building specifically for enablers & builders.
+
+Right now we're looking for 3 folks who can stress test it with few hundreds calls & give back honest raw feedback - founder to founder.
+
+As a thankyou if you love it & end up using it, I'd be happy to offer our m2 or m3 model at a disscount of 1 rs per min on top of pricing on our website.
+
+muktam.online ‎<This message was edited>
+[17/03/26, 12:00:12 AM] ~ Arijit Chatterji: It's a pleasure to be in this thriving group.
+I am Arijit from C-Zentrix. We are Omni channel contact center provider. We also offer AI voice agent, chat agents and SIP lines plus streamer for voice bot companies to use call centre infra. Will like to learn from you all.
+www.c-zentrix.com
+[17/03/26, 12:29:06 AM] ~ V: @⁨~Neha Agarwal⁩ - DMing you about this. I lead product at Plivo. Want to brainstorm potential solutions that could solve this problem.
+[17/03/26, 12:29:48 AM] ~ Neha Agarwal: Sure
+[17/03/26, 12:33:59 AM] ~ Luca 🔱: Hello everyone, we are currently using telnyx as a proxy before 11labs agents, we use this proxy to have the control of the call and transfers. 
+
+Does anyone have this type of architecture?
+Are you guys using sip credential to register customer pbxs? 
+How do you handle the sip connections?
+[17/03/26, 4:35:14 AM] ‪+91 92053 39176‬: ‎‪+91 92053 39176‬ joined using a group link.
+[17/03/26, 4:35:18 AM] ‪+91 79785 26858‬: ‎‪+91 79785 26858‬ joined using a group link.
+[17/03/26, 4:35:21 AM] ~ Naman: ‎~ Naman joined using a group link.
+[17/03/26, 4:35:24 AM] ‪+91 99018 19354‬: ‎‪+91 99018 19354‬ joined using a group link.
+[17/03/26, 4:35:26 AM] ‪+91 98336 95674‬: ‎‪+91 98336 95674‬ joined using a group link.
+[17/03/26, 4:35:29 AM] ~ Mariner 💚♥️: ‎~ Mariner 💚♥️ joined using a group link.
+[17/03/26, 4:35:31 AM] ‪+91 75587 22946‬: ‎‪+91 75587 22946‬ joined using a group link.
+[17/03/26, 4:35:37 AM] ‪+91 90498 89888‬: ‎‪+91 90498 89888‬ joined using a group link.
+[17/03/26, 4:35:44 AM] ~ Tarun: ‎~ Tarun joined using a group link.
+[17/03/26, 4:35:47 AM] ~ Shobhan: ‎~ Shobhan joined using a group link.
+[17/03/26, 3:10:20 AM] ~ Subhankar: Cool demo for Voice + SMS Memory
+
+https://www.youtube.com/watch?v=W9FeHescsDY
+‎[17/03/26, 3:58:03 AM] ~ Subhankar: One patient HIPPA violation can cost healthcare company 5-10M Lawsuit ‎image omitted
+[17/03/26, 3:59:28 AM] ~ Subhankar: That is the reason we do not store any data and we dont charge for any HIPPA, and conversation get deleted after 30 mins
+[17/03/26, 4:36:37 AM] ‪+91 97381 18225‬: ‎‪+91 97381 18225‬ joined using a group link.
+[17/03/26, 4:36:50 AM] ~ Aditya Talwar: ‎~ Aditya Talwar joined using a group link.
+[17/03/26, 4:36:55 AM] ~ Julian: ‎~ Julian joined using a group link.
+[17/03/26, 4:37:03 AM] ‪+92 342 6048768‬: ‎‪+92 342 6048768‬ joined using a group link.
+[17/03/26, 4:37:43 AM] ‪+91 70877 43074‬: ‎‪+91 70877 43074‬ joined using a group link.
+[17/03/26, 4:37:46 AM] ~ Ashish | tidyhire.app 🚀: ‎~ Ashish | tidyhire.app 🚀 joined using a group link.
+[17/03/26, 9:27:07 AM] ~ Sahil Garg: If we have consent, but a challenge is that a lot of calls hit voicemail ultimately
+[17/03/26, 9:28:30 AM] ~ Subhankar: If user does not pick up, we cant do anything 
+so better idea to reach with Multiple channel
+[17/03/26, 9:29:11 AM] ~ Mohit: how are people solving for voicemail, call screeners ?
+with AI calling increasing, more and more ppl will start adopting this
+[17/03/26, 9:29:39 AM] ~ Nilesh : One thing everyone in the community is trying to achieve is get the call answered by real person.. but the fact of the matter is telephony as a channel is saturated .. it isn’t going to be different if the person is calling or an AI calls .. 
+
+This is because the very nature of SIP has allowed over last decade to spoof the calls which has led to lot of call masking and frauds and due to which the trust on the telephony call channel is eroded.
+[17/03/26, 9:31:10 AM] ~ Ali Rafay: hi everybody, asking this again:
+everybody here who is selling AI Voice Agents, how'd you get your first paying customer?
+[17/03/26, 9:31:49 AM] ~ Nilesh : The calling program and activity of outreach needs lot of discipline and these programs should be designed in way to get the best ROI and not been looked deployed as call flooding systems.
+[17/03/26, 9:31:56 AM] ~ Sahil Garg: Yes, also in the US has anyone seen that bot calls go to voicemail automatically?
+[17/03/26, 9:34:43 AM] ~ Subhankar: if user does not pick up, it will go in voicemail
+[17/03/26, 9:35:06 AM] ~ Subhankar: where is your market, whom u r targetting
+[17/03/26, 9:38:28 AM] ~ Kartheek: If anyone’s interested in testing out your voice agents, I’m currently working on a platform to do that. Meant to be like datadog but for voice agents where you can dissect each layer. Let me know if you have questions! 
+
+https://www.soundcheckai.ca/
+[17/03/26, 9:39:29 AM] ~ Ali Rafay: US home service businesses
+[17/03/26, 9:39:46 AM] ~ Ali Rafay: but we're remote
+[17/03/26, 9:39:55 AM] ~ Subhankar: did u talk to anyone who needs your solution?
+[17/03/26, 9:40:24 AM] ~ ~: You could get us numbers from Twilio and use them, would that not work ?
+[17/03/26, 9:40:43 AM] ~ Ali Rafay: embarrassing, but no. i'm doing outreach now
+[17/03/26, 9:41:31 AM] ~ Ali Rafay: home service businesses are using ai voice agents, so thats validation that there is a market for it, though. that's what i keep telling myself for comfort since i currently have no paying customers
+[17/03/26, 9:42:10 AM] ~ Ali Rafay: yeah, doing that. i was just asking if anybody here is selling ai voice agents, how they managed to get their first paying customers (regardless of industry or location)
+[17/03/26, 9:43:19 AM] ~ ~: Aah okay, my bad. I thought you were asking about calling the us numbers which is why I recommend twilio
+[17/03/26, 9:43:35 AM] ~ Suman Paudel: send sms or voice note
+[17/03/26, 9:44:59 AM] ~ Subhankar: without consent u can call, but u cant send sms
+there may be legal issue if user take action
+[17/03/26, 9:45:15 AM] ~ Subhankar: in USA
+[17/03/26, 9:48:54 AM] ~ Suman Paudel: yeah i know that and depends on usecase, in mine we provide services to the customers and customers kyc/form fill up has mentioned about we can send sms or voice note, so we good.
+[17/03/26, 9:49:32 AM] ~ Subhankar: yes this is good
+[17/03/26, 10:04:35 AM] ~ Nithish Bharadwaj: Hi. Nithish from Epicode here. We have a product for addressing this called IraCPA.
+
+It detects whether the call is answered by a human or answering machine in real time by analysing the first 1.75 seconds of audio of the call.
+
+It's being used by Five9 since 5 years and Zoom.us since 1.5 years and they say our solution gives over 90% accuracy while also being TCPA compliant (detecting under 2 seconds from first utterance).
+
+Reach out to us if you want to know more and want to get a sandbox environment.
+[17/03/26, 10:20:32 AM] ~ Sonu: What’s the intended use case for this? I’m trying to understand how we would act on the information that a call was answered by a machine. Given that a significant portion of calls—especially from unknown numbers—already tend to go to voicemail, would the main goal of the solution be to distinguish and tag those calls as voicemail versus human-answered?
+[17/03/26, 10:23:39 AM] ~ Umesh Pande: When running bulk outbound calls, AMD helps reduce unnecessary bandwidth usage by identifying whether a call is answered by a human or a machine so that you can allocate resources more efficiently and prioritize real user interactions—provided your platform can accurately distinguish between human or machine .
+[17/03/26, 10:26:16 AM] ~ Sonu: I see, so we're saying instead of spending one minute or so and listening to voicemail audio we can disconnect the call immediately.
+[17/03/26, 10:28:07 AM] ~ Nithish Bharadwaj: IraCPA runs on just CPU (no GPU), typically locally along with the telephony layer.
+The audio is streamed to IraCPA over a websocket and we analyse the rhythm, stress, intonation and give events on the same websocket back.
+
+You can decide to patch the call to a human agent or a voicebot when the event you get tells it's a human. When is an voicemail you can either drop the call, or even better - you can choose to continue the analysis till the beep is detected. When you get the event for the beep, you can leave a prerecorded message on the call. ‎<This message was edited>
+[17/03/26, 10:31:04 AM] ~ Nithish Bharadwaj: It is language agnostic since it is analysing the audio style and not the actual words being spoken.
+[17/03/26, 10:37:23 AM] ~ Umesh Pande: ys and these are few basic features  are already available in telephony and not sure which opensources you are usin to build.
+[17/03/26, 10:44:09 AM] ‪+91 75061 82254‬: ‎‪+91 75061 82254‬ joined using a group link.
+[17/03/26, 10:39:04 AM] ~ Sonu: I'm aware this feature exist out of the box and stt and prompt can also identify this, i was trying to understand value addition of IraCPA platform.
+[17/03/26, 10:40:53 AM] ~ Umesh Pande: actually for amd you don't need stt or any prompt. ‎<This message was edited>
+[17/03/26, 10:43:21 AM] ~ Umesh Pande: We just need to use DESA-2 algorithms..
+[17/03/26, 10:44:43 AM] ~ Nithish Bharadwaj: If you are happy with the accuracy you get from out of the box or opensource solutions, then good.
+
+For enterprises who need better accuracy and also high scalability, we can help. 😀
+[17/03/26, 10:49:40 AM] ~ Parag: Maybe its frequency based..not sure, but that’s probably why it’s faster. STT/prompt approaches usually take 3, 4seconds.
+[17/03/26, 11:55:41 AM] ‪+91 97112 83727‬: ‎‪+91 97112 83727‬ joined using a group link.
+[17/03/26, 2:02:05 PM] ~ Mariner 💚♥️: May I know if anybody has explored the CosyVoice3 model?
+[17/03/26, 4:08:30 PM] ~ Edgar: I see lot of people asking questions about Outbound /Inbound Dialler using Twilio and more. I have put together extensive examples with Livekit and pipecat and even raw webscockets in Academy here. Feel free to check out examples there are over 25 + different examples: https://github.com/speechmatics/speechmatics-academy
+[17/03/26, 4:08:54 PM] ~ Edgar: Hopefully it helps ;)
+[17/03/26, 4:16:19 PM] ~ ~ Parth: Hi everyone, if you're coming to AI Boomi this week, we’re hosting a curated Voice AI Founders & Builders Mixer on March 20 (5:30–8 PM) in Chennai, India.
+
+If you're building in voice, speech, conversational AI, or AI infra - would love to have you join this curated room of founders, builders, and investors.
+
+Register here: https://luma.com/bzkegezn
+(Please request invite / register to confirm your spot)
+[17/03/26, 4:28:25 PM] ‪+91 80590 40412‬: ‎‪+91 80590 40412‬ joined using a group link.
+[17/03/26, 4:36:27 PM] ~ Mehul Elision: I’m Mehul, founder & CEO of Elision (elisiontec.com). We hold a VNO license for Indian telephony and offer VoiceLink (voicelink.co.in) — a platform for Voice AI integration with carrier-grade Indian DIDs, SIP trunking, PSTN connectivity, developer APIs and fast onboarding.
+
+I’m in Chennai this week and Bangalore next week — keen to meet for partnerships (integrations, resellers, pilots).
+
+How VoiceLink helps & keeps your numbers reach customers
+
+- Carrier-grade Indian numbers & SIP trunking  
+- Fast integration (APIs/SDKs) and telephony + conversational stack support  
+- Number reputation: warm-up, consent management, correct CLI/CNAM, complaint handling  
+- Compliance, traffic shaping and fraud controls to stay off blocklists
+
+Interested? DM or email mehul@elisiontec.com — happy to set up a quick meet.
+[17/03/26, 5:18:45 PM] ~ Julian: ‎This message was deleted by admin ~ Sunil😎.
+[17/03/26, 5:19:12 PM] ~ Julian: ‎~ Sunil😎 removed ~ Julian
+[17/03/26, 5:56:11 PM] ‪+91 98100 50794‬: ‎‪+91 98100 50794‬ joined using a group link.
+[17/03/26, 7:05:57 PM] ~ Mathangi: ‎~ Mathangi joined using a group link.
+[17/03/26, 7:59:30 PM] ‪+919110672085‬: ‎‪+919110672085‬ joined using a group link.
+[17/03/26, 8:57:21 PM] ~ John Souza: Odd how the voice went up during the confirmation of the call though.
+[17/03/26, 9:04:14 PM] ~ Stan: 2nd node maybe
+[17/03/26, 9:54:42 PM] ~ Mohit: Any data vendor who can arrange 100-200hr (or even more) of human-human conversation data for model training ?
+[17/03/26, 9:55:15 PM] ~ Edgar: Hey everyone 👋
+
+We're opening a small closed exclusive preview of something we've been building at Speechmatics,  a new Speech-to-text API designed specifically for real-time voice agents.
+If you've ever had to stitch together STT, turn detection, and speaker handling from scratch... this was made for you 😅
+
+A few spots available and wanted you guys to get first access before it goes wider.
+* You get a dedicated API key (unbilled during preview), 
+* Your feedback literally shapes what we build next.
+* We've also got a ready-to-run sample in the Academy.
+
+Apply here if you want to play around and we'll get you set up:
+👉 https://forms.gle/kzus235kxe3qJn1Z9
+[17/03/26, 9:58:08 PM] ~ Direct Reinigen: Hello everyone,
+
+For the past two months, I’ve been trying to sell AI products, but I haven’t made any sales yet. About a month ago, I shifted my focus fully to AI agents, but I’m still running into the same challenges.
+
+I’m clearly missing something—either in positioning, targeting, or how I’m selling.
+
+What are practical, proven ways to sell AI agents more effectively? What actually works right now?
+
+Appreciate any honest insights.
+[17/03/26, 9:59:17 PM] ~ Suman Paudel: what’s your niche?
+[17/03/26, 9:59:46 PM] ~ Direct Reinigen: Physiotherapy/ dental clinics
+[17/03/26, 10:01:33 PM] ~ dee: What kind of problems can your AI product solve?
+[17/03/26, 10:02:21 PM] ~ Direct Reinigen: Availability, booking, change, cancel appointments
+[17/03/26, 10:03:01 PM] ~ ~: What kind of technique have you tried so far to get the clients ?
+[17/03/26, 10:03:04 PM] ~ V: What are the languages supported on this?
+[17/03/26, 10:03:22 PM] ~ Direct Reinigen: Cold calls, email cold outreach
+[17/03/26, 10:03:30 PM] ~ Suman Paudel: main thing is how reliably can it do?
+[17/03/26, 10:03:35 PM] ~ Edgar: Its raw API any language you can build using websockets
+[17/03/26, 10:03:44 PM] ~ Direct Reinigen: It is reliable
+[17/03/26, 10:03:46 PM] ~ Edgar: We have examples in python and JS to get started ‎<This message was edited>
+[17/03/26, 10:04:23 PM] ~ V: I did not mean programming languages
+[17/03/26, 10:04:32 PM] ~ V: 😂
+[17/03/26, 10:04:34 PM] ~ Suman Paudel: this should work, cuz I am also in healthcare domain, and I have built couple of  agents that went to prod. let’s connect and we can plan. ‎<This message was edited>
+[17/03/26, 10:06:30 PM] ~ CeeJay: ‎~ CeeJay joined using a group link.
+[17/03/26, 10:07:57 PM] ~ Direct Reinigen: Anyone?
+[17/03/26, 10:10:08 PM] ~ dee: Bro, I have sent the request. Please accept it
+[17/03/26, 10:10:11 PM] ~ Edgar: Got ya we support over 55 different languages including bilingual support also. Any specific language you are after?
+[17/03/26, 10:11:39 PM] ~ Edgar: here is full list will make it easier: https://docs.speechmatics.com/speech-to-text/languages
+[17/03/26, 10:22:40 PM] ~ V: Thanks. Will look up here.
+[17/03/26, 11:52:20 PM] ~ Rohit Choudhury: ‎~ Rohit Choudhury joined using a group link.
+[18/03/26, 1:06:41 AM] ~ V: ‎POLL:
+I have a question for voice AI builders who have launched to production. How do you deploy your Voice agent pipeline to production?
+‎OPTION: LiveKit Cloud (4 votes)
+‎OPTION: Pipecat Cloud (1 vote)
+‎OPTION: Self-host LiveKit/Pipecat on your cloud provider (12 votes)
+‎OPTION: Host your custom pipeline on your cloud provider (5 votes)
+‎OPTION: For any other option - text your reply to this poll (2 votes)
+[18/03/26, 1:12:21 AM] ~ Mithun Mohan: I guess the easiest way is to reach out to your existing network and build something for them.
+
+Creating content also works but it's a long term game you'll have to grind at it.
+
+That's how I got my first couple of clients.
+[18/03/26, 1:52:40 AM] Voice AI Builders: ‎Only messages that mention or people share with @Meta AI can be read by Meta. Meta can’t read any other messages in this chat, as your personal messages remain end-to-end encrypted.
+‎
+‎Messages are generated by AI. Some may be inaccurate or inappropriate.
+[18/03/26, 1:52:31 AM] ~ abhiram kamini: @⁨Meta AI⁩hey people,
+
+i see a lot of people here so ill ask how are you guys finding the right talent what kind of places areu posting
+
+we are trying our best to find people but all we can get is gen ai engineers nothing with experience in voice ai 
+
+any specific strategy you guys would suggest that worked for you all
+[18/03/26, 1:52:33 AM] Meta AI: ‎This message was deleted by admin ~ Sunil😎.
+[18/03/26, 1:52:50 AM] ~ abhiram kamini: ignore the meta was a typo😅
+[18/03/26, 2:05:14 AM] ~ Aditya Purohit: ‎~ Aditya Purohit joined using a group link.
+[18/03/26, 9:42:15 AM] ~ Sunil😎: https://www.linkedin.com/posts/the-ai-guy-sunil-ba50bb344_voiceai-aiagents-startupcommunity-activity-7439884735931117568-9iKd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFYoC-0BSxhLG-adlr2moaYA-8I8UqoJCu8
+[18/03/26, 9:43:14 AM] ~ Sunil😎: Hey Builders, 🚨 Next Reddit AMA Guest Announced
+
+QA agents are a must for Voice AI.
+
+That’s why I’ve brought Sidhant Kabra (Co-Founder, Cekura) - Cekura has raised $2.4 million & is backed by Y Combinator, working with 100+ Voice AI companies
+
+📅 18 March
+⏰ 10:30 PM IST / 10:00 AM PST
+[18/03/26, 10:09:43 AM] ‪+91 96202 01431‬: ‎‪+91 96202 01431‬ joined using a group link.
+[18/03/26, 10:09:46 AM] ~ Atee: ‎~ Atee joined using a group link.
+[18/03/26, 10:07:47 AM] ~ Subhankar: Devs today waste crazy time switching between tools: Teams, Jira, AWS, email, CI/CD.
+
+Imagine if all of it (infra, costs, deployments, issues, meetings) was unified in one place.
+
+Feels like massive productivity + cost savings opportunity.
+Or would it just become noise? 🤔
+
+curious to know ‎<This message was edited>
+[18/03/26, 10:09:43 AM] ~ Suman Paudel: so you mean that google, microsoft , open ai have unified platform for their services? it doesn't have to work like that. to some extent we can but not all
+[18/03/26, 10:11:48 AM] ~ Subhankar: Not exactly, I’m not saying everything needs to be fully unified like a single platform.
+
+More like a smart layer on top that brings the right signals from different tools into one place. Those tools which adds a lot of inefficiencies that varies org to org.
+
+Full unification is unrealistic, but selective visibility + actions in one place could still drive a lot of efficiency.
+[18/03/26, 10:13:09 AM] ~ Suman Paudel: yeah you can divide like that, infra layer, orchestration layer, tools layer, model layer and app layer not more than that.
+[18/03/26, 10:13:26 AM] ~ Subhankar: 😂😁😂
+[18/03/26, 10:15:13 AM] ~ Dileep: yeah I’m working on a side project similar to this
+[18/03/26, 10:15:28 AM] ~ Dileep: Just to save time for teams and increase productivity with automation ‎<This message was edited>
+[18/03/26, 10:15:55 AM] ~ Subhankar: nice, is it you are working for your org or you have plan for other orgs?
+[18/03/26, 10:16:35 AM] ~ Dileep: it’s a side project of my own
+[18/03/26, 10:16:53 AM] ~ Mayank: Like AWS slack and  GitHub combined?
+[18/03/26, 10:16:55 AM] ~ Dileep: So will open it for others when it’s working
+[18/03/26, 10:17:57 AM] ~ Subhankar: AWS, slack, Github, Teams, Emails, many
+Dev waste a lot of time going here and there
+[18/03/26, 10:21:52 AM] ~ Eswara Naidu: Please pin this Sunil
+[18/03/26, 10:29:52 AM] ~ Sunil😎: ‎~ Sunil😎 pinned a message
+[18/03/26, 10:24:18 AM] ‪+91 90100 80169‬: ‎‪+91 90100 80169‬ joined using a group link.
+[18/03/26, 10:24:21 AM] ‪+91 79873 09515‬: ‎‪+91 79873 09515‬ joined using a group link.
+[18/03/26, 10:23:22 AM] ~ Suman Paudel: why not use openclaw and provide all the creds in your self hosted vpc?
+[18/03/26, 10:24:47 AM] ~ Subhankar: this looks good in personal level
+think about 1000 of engs, 20 teams dependent on each others
+
+I dont know if that is the purpose for openclaw
+[18/03/26, 10:25:54 AM] ~ Suman Paudel: I can understand, but think from scaling perspective, personal = 1 user, later we can scale for teams, departments etc
+[18/03/26, 10:26:17 AM] ~ Mayank: I would still want to read those mails and msgs and tickets 
+Maybe not act on it myself
+And seeing them in telegram or any other chat feels kinda inconvenient tbh
+
+And why would I waste credits for things that I would eventually need to check myself
+[18/03/26, 10:26:38 AM] ~ Suman Paudel: we use slack, emails and git pr stuff like that using openclaw for our team
+[18/03/26, 10:27:41 AM] ~ Subhankar: how much it cost?
+[18/03/26, 10:28:11 AM] ~ Subhankar: u still have cloud info, meets, JIRA
+[18/03/26, 10:29:02 AM] ~ Suman Paudel: models cost is the most cuz we using opus 4.6, rest all in our AWS so less than $500 including slack api, github enterprise, emails google apis
+[18/03/26, 10:29:56 AM] ~ Subhankar: 500/month?
+how many users get benefitted?
+[18/03/26, 10:30:44 AM] ~ Suman Paudel: 20+
+[18/03/26, 10:31:42 AM] ~ Suman Paudel: if you want the minimal setup then use claude max plan, then integrate bunch of plugins that is the easy way forward.
+[18/03/26, 10:31:50 AM] ~ Subhankar: then u need one eng time to maintain
+another 200-300$/month
+[18/03/26, 10:33:01 AM] ~ Rakshith Vikramraj: there are products already in the market which is doing multiplatform integrations and i worked in a similar product like this.
+[18/03/26, 10:33:21 AM] ~ Subhankar: name few
+[18/03/26, 10:33:36 AM] ~ Subhankar: its not like multiplatform
+[18/03/26, 10:34:20 AM] ~ Suman Paudel: yeah scaling issues, first start with claude then you get to know how you can unify things.
+[18/03/26, 10:34:48 AM] ~ Rakshith Vikramraj: Check out Kaiburr
+[18/03/26, 10:35:35 AM] ~ Subhankar: did u not think using 3rd party?
+[18/03/26, 10:36:31 AM] ~ Suman Paudel: they all just marketing hype, tried bunch of things, now settled with first claude then openclaw using claude api
+[18/03/26, 10:38:09 AM] ~ Umesh Pande: Typically, all CCaaS platforms already have QA capabilities enabled, and many like us have now moved to AI-driven solutions that can handle most QA-related tasks. Even we  offer open APIs for QA, so a CCaaS platform license is not required.
+[18/03/26, 10:39:19 AM] ~ Sunil😎: good point
+[18/03/26, 10:50:18 AM] ~ Naman: Absolutely, agree.
+This platform may work like magic for AI based auto call QA,
+
+https://www.elisiontec.com/products/ai-voice-analysis/
+[18/03/26, 10:55:33 AM] ‪+91 80500 70392‬: ‎‪+91 80500 70392‬ joined using a group link.
+[18/03/26, 10:55:39 AM] ~ Vivek Agrawal: ‎~ Vivek Agrawal joined using a group link.
+[18/03/26, 11:50:11 AM] ~ ‎Unknown: Hello all, just wondering if you guys heard used any voice AI platform which provides voice in Turkish? Apart from eleven labs?
+[18/03/26, 12:34:07 PM] ‪+91 90067 77089‬: ‎‪+91 90067 77089‬ joined using a group link.
+[18/03/26, 12:39:35 PM] ~ Arnab: Yes, it ll be useful.
+[18/03/26, 12:43:53 PM] ~ Eswara Naidu: How on earth all the Voice AI startups differentiating at YC?
+[18/03/26, 12:44:33 PM] ~ Sunil😎: even i have this question 😅
+[18/03/26, 12:50:34 PM] ~ Subhankar: Happy to talk more if you have interest
+[18/03/26, 12:51:12 PM] ~ Dileep: cool i didn’t think people would need something like this 😂. i’m also building something similar ‎<This message was edited>
+[18/03/26, 12:52:48 PM] ~ Dileep: are you building this for your org or as a side project ?
+[18/03/26, 12:56:43 PM] ~ Sahil Garg: Haha, we are building in voice ai in YC as well, happy to talk
+[18/03/26, 12:57:04 PM] ~ Subhankar: we r building for one large org.
+[18/03/26, 12:57:08 PM] ~ Edgar: As the cost of technology is becoming 0 what will matter in long run is relationships and focus on communities. As the differentator line will blur more and more
+[18/03/26, 12:57:20 PM] ~ Mayank: same question, most use same architecture , 
+and why has a  big mnc not entered the race ,
+[18/03/26, 12:57:25 PM] ~ Dileep: cool
+[18/03/26, 1:04:42 PM] ~ Suman Paudel: big companies sells thier model, and other companies make together this thing and make business.
+[18/03/26, 1:07:21 PM] ~ Mayank: I don't understand this 
+Please help me understand this (I am a student)
+If you have the model , infra and capital 
+Why not also sell the final product, won't it be more profitable.
+[18/03/26, 1:10:51 PM] ~ Suman Paudel: most companies specialized in one particular niche, either llm, tts or stt but not all, even if they provide it, the genai hype/mainstream has just begun after openai voice mode, we are still in the early phase and early adopter, sooner or later once they have all the things it will be mainstream.
+[18/03/26, 1:11:10 PM] ~ Edgar: Many factors. Question of resource and focus. Just because we provide voice API and our propriety models doesn't mean we make scribe applications and voice agents but we provide models for others to do so
+[18/03/26, 1:12:36 PM] ~ Edgar: One thing hasn't changed is having focus for startups you can't do everything.
+[18/03/26, 1:20:52 PM] ~ Mayank: Okay,
+And ig  they can also acquire startups that do good
+[18/03/26, 1:23:22 PM] ~ Edgar: As an example elevenlabs focuses on many different services but they don't necessary excel in all those services. They have fantastic TTS but their STT services are very general and unprecise. In my book accuracy is no1 if the information you transcribe gets passed to LLM is wrong everything else fails in pipeline. I did video recently on benchmarks that got announced by pipecat to cover little on that.
+[18/03/26, 1:23:28 PM] ~ Edgar: https://www.linkedin.com/posts/edgars-adamovics_voiceagents-opensource-voiceai-activity-7429198864034856960-NKIb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAoFV2IB56ekIGj1Ab7DnnrgHvzUTLXL1ZI
+[18/03/26, 2:36:19 PM] ‪+91 72404 66915‬: ‎‪+91 72404 66915‬ joined using a group link.
+[18/03/26, 2:36:24 PM] ‪+91 78382 20303‬: ‎‪+91 78382 20303‬ joined using a group link.
+[18/03/26, 2:53:06 PM] ~ Cam: Thanks for sharing this and pipecat’s benchmarks. Super handy as I’m currently reviewing different STT providers and it’s really hard to get accurate information without doing real world tests on live customers.
+I’m currently building out a source of truth for ‘real’ WER based on our real recordings by transcribing the call offline with multiple different providers and aggregating the results to obtain a source of truth I can reference when A/B testing new providers.
+[18/03/26, 2:56:08 PM] ~ Edgar: Happy it was of help I would certainly dive deeper into the pipecat blog they explain everything really well. Its always challenge to get reliable benchmark on real world data.
+[18/03/26, 4:28:17 PM] ~ Eswara Naidu: Vapi
+[18/03/26, 4:29:37 PM] ~ Gabriele Proni: Hey guys, any suggestion on how to reduce the delay in response using vapi? i have a couple of agents that are working fine, but to get an answer sometimes i should wait even 5 seconds. What's your process to analyze and fix this kind of issues and optimize an agent?
+[18/03/26, 4:30:21 PM] ~ Edgar: Choose your LLM models wisely the bigest bottleneck in latency will be coming from that
+‎[18/03/26, 4:30:47 PM] ~ Edgar: ‎image omitted
+[18/03/26, 4:30:56 PM] ~ Edgar: Here is bit cheat table
+[18/03/26, 4:31:16 PM] ~ Edgar: take it with pinch of salt thou ;)
+[18/03/26, 4:31:21 PM] ~ Gabriele Proni: @⁨~Edgar⁩ thank you so much! in your experience what's the best for now?
+[18/03/26, 4:31:30 PM] ~ Suman Paudel: gpt-4.1.mini is the sweet spot
+[18/03/26, 4:31:40 PM] ~ Umesh Pande: Vapi operates over the public network, which will always introduce latency. To reduce latency for AI interactions, you need to establish private network connectivity.
+[18/03/26, 4:32:40 PM] ~ Chitrang: I’d start with pcap and work my way into logs to figure what part of the pipeline gives. If it’s the llm - I’ve noticed with GPT family - bringing your own from Azure (Datazone Standard deployment) would get you sub ~450ms ttft in us east, east-2 from exp. This is 4.1-mini
+[18/03/26, 4:34:41 PM] ~ Suman Paudel: if you want speed and natively for English, then alwaysuse groq, speed is amazing with kimi k2 and gpt oss 120b for tool calls ‎<This message was edited>
+[18/03/26, 4:35:29 PM] ~ Gabriele Proni: it's not english in this particular case unfortunately. it's an italian agent
+[18/03/26, 4:35:49 PM] ~ Arnab: Co locating the whole pipeline is also imp. Db for tools can stay to ur preferred location.
+[18/03/26, 4:36:02 PM] ~ Sahil Garg: Anyone doing Nepali voice ai?
+[18/03/26, 4:37:13 PM] ~ Suman Paudel: then expect latency at the cost of accuracy bro, cuz in my experience, english model has low TPS due to auto regressive nature of the models and trained on enough data and to switch multilingual prospect model internals compute extra tokens to reach the final value/id of target lang.
+[18/03/26, 4:37:33 PM] ~ Gabriele Proni: i'm using vapi just for speed of go to market, then my plan is to move to pipecat and have more control
+[18/03/26, 4:37:33 PM] ~ Suman Paudel: yup, I am mainly doing voice ai stuff and research on Nepali, since I am from Nepal..
+[18/03/26, 4:37:54 PM] ~ Gabriele Proni: ye i totally understand
+[18/03/26, 4:38:12 PM] ~ Gabriele Proni: i was just wondering if i could optimize a bit but i am not expecting miracles
+[18/03/26, 4:38:19 PM] ~ Chitrang: STT with Deepgram?
+[18/03/26, 4:38:48 PM] ~ Suman Paudel: I suggest go with livekit if you have time else pipecat is also good, for scaling always choose livekit.
+[18/03/26, 4:38:52 PM] ~ Mihir: What's latency you're getting right now?
+[18/03/26, 4:40:10 PM] ~ Gabriele Proni: so the logic works perfectly, the problem is that sometimes to get an answer i can even wait 4-5 seconds, and i do not perform any external request. just prompt + vapi KB (not big)
+[18/03/26, 4:40:49 PM] ~ Suman Paudel: for now switch to gemini realtime as well they have good multiligual properties with italian support, all under <1-2s
+[18/03/26, 4:41:20 PM] ~ Gabriele Proni: isn t it super expensive?
+[18/03/26, 4:41:36 PM] ~ Suman Paudel: using vapi yes but using other you only pay the model
+‎[18/03/26, 4:43:13 PM] ~ Suman Paudel: ‎image omitted
+[18/03/26, 4:44:21 PM] ~ Gabriele Proni: thanks for the tips
+[18/03/26, 4:44:23 PM] ~ Gabriele Proni: i should definitely move to an hosted solution and leave vapi
+[18/03/26, 4:44:37 PM] ~ Gabriele Proni: in the meantime i'll try both 4.1 mini and gemini there so i can compare
+[18/03/26, 4:45:12 PM] ~ support@hellloai: 4.1.mini , Gemini 2.5 flash through vertex
+[18/03/26, 4:45:18 PM] ~ Suman Paudel: yeah vapi and retell good for demos/poc but if you need control and cutomizaion it's bad
+[18/03/26, 4:45:38 PM] ~ Suman Paudel: even open ai uses livekit fyi
+[18/03/26, 4:47:32 PM] ~ SimsBuddy: For llm in my case use , Groq Llama 3.3 70B Versatile 128k was the best combination of latency, cost and doing the job with good standard. It is still not perfect of course.
+[18/03/26, 5:01:04 PM] ~ F~k~S: Good evening guys. For rent:- rtx 6000 ada 48gb vram + threadripper 3975 32core + 128gb ram + 2tb nvme server on 1gbps internet connection. Kindly connect or DM if anyone interested to run inference workloads. Thanks ‎<This message was edited>
+[18/03/26, 5:27:05 PM] ~ Edgar: I think everyone answered questions well. Generally Groq will do the trick if latency is no1 concern. One thing to consider also is where speech provider endpoints are being hosted Vapi has some customisation for that from some providers. E.g we provide multiple endpoints for US or EU.  In terms of frameworks. It really depends on your use case and what you building with voice if you require more customisation then Livekit or Pipecat is good considerations to make. But with more costumisation more complexity gets introduced 😃 ‎<This message was edited>
+[18/03/26, 5:27:48 PM] ~ Gabriele Proni: thank you call guys!
+[18/03/26, 5:28:11 PM] ~ Umesh Pande: Keep us posted 👍🏻
+[18/03/26, 5:30:01 PM] ~ Edgar: If you building something custom over websockets and require speech-to-text then you might find this interesting 👆
+[18/03/26, 5:36:33 PM] ~ Edgar: This is actually super interesting
+[18/03/26, 5:41:52 PM] ~ unni: Guys who are doing custom pipelines what's the exact reason ? Is it saving cost or something else?
+[18/03/26, 5:42:31 PM] ~ Suman Paudel: ec2 or gcp / containers/services/clusters
+[18/03/26, 5:43:40 PM] ~ Suman Paudel: tool call is the main reason, rest voice customizability
+[18/03/26, 5:44:51 PM] ~ Suman Paudel: check my recent youtube post that I did for hackathon, I deployed the entire agent in gcp for gemini, and aws for nova sonic. and also for other prods system which I maintain like 4 or 5 now, all in AWS. ‎<This message was edited>
+[18/03/26, 5:46:06 PM] ~ unni: Cool can you share the link?
+[18/03/26, 5:46:14 PM] ~ Suman Paudel: I was preferring websockets like 2 3 years ago, but real deal and ultra low latency is in webrtc bro... ‎<This message was edited>
+[18/03/26, 5:46:55 PM] ~ Suman Paudel: https://youtu.be/bsvYUCqvHuo
+https://youtu.be/MsQSDfb99lI
+[18/03/26, 5:47:43 PM] ~ unni: Additionally how you guys are handling scale ?  How many parallel calls are happening in a single server based on instance type
+[18/03/26, 5:59:08 PM] ~ Shiva: ‎~ Shiva joined using a group link.
+[18/03/26, 5:59:12 PM] ~ KY: ‎~ KY joined using a group link.
+[18/03/26, 5:49:07 PM] ~ Suman Paudel: my system on t2.xlarge for infra and t2.large for agents -> 50 concurrent and daily 10k + is my setup
+[18/03/26, 5:50:00 PM] ~ Suman Paudel: at max I did 200 concurrent using k8s auto scaler for like 8x c7 large and 4x n2 large
+[18/03/26, 6:02:15 PM] ~ Mohit: how are folks optimising for Livekit costs ?
+self-hosted vs other provider vs custom implementation
+[18/03/26, 6:03:59 PM] ~ Su_hrid: Hey @⁨~Mohit⁩ Maybe try out Agora.io, way cheaper than Livekit and better latency!
+[18/03/26, 6:04:50 PM] ~ Mohit: you using it or you building it ?
+what’s per min cost coming up for this ?
+[18/03/26, 6:19:12 PM] ~ Arnab: For me the need is none of the existing no code agent builders provide reliability following *Single responsibility*, *Open for extension and closed for modification*, *observable self reflection*, *runtime authz and overall a single view of multi agent orchestration*(think langgraph kind state based) . And no code coz I do not want to dig AI slop for every single usecase. Scale wise an avatar AI used by 30 session at a time an inbound call for a pizza shop that gets 2-3 calls in every 5 minutes on Fridays.
+[18/03/26, 6:19:38 PM] ~ Suman Paudel: oh you guys are that agora, nice I know few chinese folks in the community as well, nice use of ten-framework, yeah some sense it even beat livekit no doubt.
+[18/03/26, 6:20:05 PM] ~ Mohit: you using it ? any feedback?
+[18/03/26, 6:20:51 PM] ~ Suman Paudel: yeah but my main goto is livekit no doubt cuz of how dev friendly it is and because of rich docs and mcp for claude for docs, yeah ten is my second best bro, keep up the good work. ‎<This message was edited>
+[18/03/26, 6:21:49 PM] ~ Edgar: Depends if you batching or having real time both have advantage and disadvantage
+[18/03/26, 6:21:57 PM] ~ Abhinash Khare: hi, anyone building voice agent for Indian market? what are P50, P90 user perceived latency you are observing? Current Stack : pipecat, exotel (& custom telephony) 
+
+currently i am trying to reduce using filler phrase, but it often feels artificial.
+[18/03/26, 6:22:12 PM] ~ Neha Agarwal: Livekit u r using thier cloud/instance/self hosted - latency wise which is better
+[18/03/26, 6:23:02 PM] ~ Mohit: cloud, latency is manageable but definitely room for improvement
+[18/03/26, 6:23:09 PM] ~ Mohit: in between it slips
+[18/03/26, 6:23:33 PM] ~ Edgar: Livekit generally is more dev friendly I did hackathon 2 weeks ago 80% used livekit
+[18/03/26, 6:23:55 PM] ~ Edgar: Rest coustum pipelines
+[18/03/26, 6:24:13 PM] ~ Suman Paudel: custom telephony, p50 is around 900ms on stt+tts+llm
+[18/03/26, 6:24:36 PM] ~ Suman Paudel: it depends on the region, I do self hosted for the volumes i have
+[18/03/26, 6:24:52 PM] ~ Mohit: with custom, build effort will be high, but later livekit cost starts pinching
+[18/03/26, 6:26:25 PM] ‪+91 81064 60066‬: ‎‪+91 81064 60066‬ joined using a group link.
+[18/03/26, 6:26:35 PM] ‪+91 95660 74630‬: ‎‪+91 95660 74630‬ joined using a group link.
+[18/03/26, 6:25:32 PM] ~ Abhinash Khare: by ‘stt+llm+tts’ you mean just the system in/out processing time or does it include telephony as well? ‎<This message was edited>
+[18/03/26, 6:25:58 PM] ~ Neha Agarwal: Ok.. we are using different livekit region cloud accounts for india and Europe ‎<This message was edited>
+[18/03/26, 6:25:59 PM] ~ Suman Paudel: telephony extra 100ms due to PSTN overhead
+[18/03/26, 6:26:00 PM] ~ Naeem: I'm currently using Speechmatics + llm + Eleven labs for tts + llm + stt. Seeing some latency after a response. Any suggestions
+[18/03/26, 6:26:42 PM] ~ Edgar: Would be super cool to hear what you think about us!
+[18/03/26, 6:27:11 PM] ~ Su_hrid: Hey Suman, really appreciate the kind words! I’d love for you to give Agora another shot, especially now that we’ve made things much more developer-friendly. With MCP and the new Agora Skills, getting started is a lot simpler and more streamlined.
+
+Feel free to check it out here: https://docs.agora.io/en/build-with-ai#agora-skills
+
+Hoping we can change your thoughts on Agora 😁
+[18/03/26, 6:27:37 PM] ~ Edgar: Curious always to see what people say no bs!
+[18/03/26, 6:29:47 PM] ~ Edgar: It depends what models you are using for each part. Llm will always be biggest cause in latency, generally speaking
+[18/03/26, 6:29:54 PM] ~ Naeem: Working well at the moment, noticing a lot of latency but not sure where it's coming from. Whether it's the llm or Speechmatics
+[18/03/26, 6:30:02 PM] ~ Naeem: Yes exactly
+[18/03/26, 6:30:38 PM] ~ Naeem: Looking to tie down on what is causing the latency
+[18/03/26, 6:34:20 PM] ~ Arnab: Pipeline latency mostly depends on the server the agent is is running and the components of the pipeline is himosted. For US itz similar
+[18/03/26, 6:36:04 PM] ‪+91 75064 22202‬: ‎‪+91 75064 22202‬ joined using a group link.
+[18/03/26, 6:36:08 PM] ‪+1 (971) 303‑4142‬: ‎‪+1 (971) 303‑4142‬ joined using a group link.
+[18/03/26, 6:36:11 PM] ~ Edgar: I would recommend using speechmatics-voice package specifically for Voice agents. It has built in pipeline orchestration handles stt-llm-tts flow as single managed pipeline so you dont have to wire up streaming between each stage yourself. Also turn detection is built in endpointing so it knows when the user has finalised speaking reducing delay before the LLM among many other options ‎<This message was edited>
+[18/03/26, 6:36:44 PM] ~ Naeem: The voice agent was good, but we need to control flow and customise a lot of things
+[18/03/26, 6:36:46 PM] ~ Edgar: But yeah try to nail down cause. Otherwise shooting in dark ;) ‎<This message was edited>
+[18/03/26, 6:42:44 PM] ~ Edgar: Neat trick which can save perceived latency by 50% is to stream LLM output in sentence sized chunks into elevenlabs streaming TTS. The user will in essence hear the first sentence while the LLM is still generating the rest.
+[18/03/26, 6:45:14 PM] ~ Arta: ‎~ Arta joined using a group link.
+[18/03/26, 6:45:18 PM] ~ Rushil Rai: ‎~ Rushil Rai joined using a group link.
+[18/03/26, 6:51:38 PM] ~ Naeem: This is great info, thank you
+[18/03/26, 6:52:50 PM] ~ Suman Paudel: oh I thought that was the standard practice, asap llm chunks are coming send it tts part through streaming
+[18/03/26, 6:53:14 PM] ~ Neha Agarwal: Same here.. as per my understanding..
+[18/03/26, 6:57:19 PM] ~ Edgar: Generally speaking it is baseline but then question is wheather you are doing it efficiently. E.g awaiting unnecessarily like through even small await gaps between llm chunks TTS input can add up over many turns. Accumulating too much text between gaps before flushing to TTS
+[18/03/26, 7:00:57 PM] ~ Satyam Sonker: Hey everyone, 
+
+We’re looking for a full time dev, proficient in python,  aws and has some experience building livekit voiceagents. 
+
+If anyone’s interested please dm.
+[18/03/26, 7:15:11 PM] ~ Madeeha Arif: Is it remote based or wfo??
+[18/03/26, 7:24:23 PM] ~ Satyam Sonker: Yea we’re working remotely
+[18/03/26, 7:27:47 PM] ~ Shivam Vishwakarma: With the approach my LLM is hallucinating a little bit, the TTS starts speaking continuously at their own points and does not wait for users response. How can we tackle this??
+[18/03/26, 7:45:00 PM] ~ Edgar: It sounds like you have two problems there. LLM hallucination and LLm speaking over the user. This is likely a context / promt problem not streaming issue. Make sure you always sending finals transcript to the LLM not partials. Make sure you are passing clean and accurate turn history.  And make sure your promt has grounding like only respound on what the user actually said.
+[18/03/26, 7:51:15 PM] ~ Edgar: As additional bonus I would also look into pre enrolling Voice AI  agents voice so it ignores itself when speaking and having conversation with itself
+[18/03/26, 8:21:41 PM] ~ V: When you detect user speech, you should flush the TTS output that generated and also the audio frames that’s already queued to telephony. There should be APIs to help you flush the playback queued to the telephony.
+Ensure you are doing all of this - if you are orchestrating this yourself without using a franework.
+Are you using some VAd and turn detection models immediately after you get user input?
+[18/03/26, 8:40:13 PM] ~ shu: How can we identify in real time whether a call
+was  disconnected (call cut) vs missed call  in LiveKit 
+Is there a specific event, state change, or webhook that differentiates between these scenarios?
+[18/03/26, 8:40:42 PM] ~ Umesh Pande: Hi everyone,
+
+We’re looking to expand our CCaaS (Contact Center as a Service) offering into the US and European markets. If you have connections with potential resellers, partners, or system integrators in these regions who work in the contact center space, I’d really appreciate an introduction.
+
+Happy to share more details and explore collaboration opportunities. Thanks in advance!
+Email to reach umesh@startelelogic.com
+[18/03/26, 8:40:44 PM] ~ Aditya Purohit: You can do it based on the SIP response
+[18/03/26, 8:42:18 PM] ~ shu: but the sip callStatus are same in both case 
+"ringing"
+[18/03/26, 8:43:24 PM] ~ Satyam Sonker: The participant_left event contains a field disconnect reason mapped to livekit primitive enum values ‎<This message was edited>
+[18/03/26, 8:45:11 PM] ~ Edgar: These wont disntinguish between never answeared and was connected then dropped they will just tell you how the participant left the room not the SIP level call state
+[18/03/26, 8:45:55 PM] ~ Satyam Sonker: Alright, I might have misinterpreted the question
+[18/03/26, 8:46:32 PM] ~ Edgar: The most reliable approach is to track sip.callstatus attribute transitions
+[18/03/26, 8:46:50 PM] ~ Edgar: https://docs.livekit.io/reference/telephony/sip-participant/
+[18/03/26, 8:47:01 PM] ~ Aditya Purohit: In case of busy the SIP response is different and if the user disconnects (leaves the room) there is another SIP error
+[18/03/26, 8:49:26 PM] ~ shu: but call status is ringning, did you meant to say we should use state machine and based on past and current state we find some new state?
+[18/03/26, 8:51:19 PM] ~ Edgar: Exactly. SIP response code arrive at termination, you essentially need a state machine tthat tracks the full lifecycle
+[18/03/26, 8:52:00 PM] ~ Edgar: signal alone wont be enough it is the transition history that will in essence tell you what happened ‎<This message was edited>
+[18/03/26, 8:52:31 PM] ~ shu: but sip status won't change in this case right? 
+
+active: Participant is connected and the call is active.
+automation: For outbound calls using Dual-Tone Multi-Frequency (DTMF), this status indicates the call has successfully connected, but is still dialing DTMF numbers. After all the numbers are dialed, the status changes to active.
+dialing: Call is dialing and waiting to be picked up.
+hangup: Call has been ended by a participant.
+ringing: Inbound call is ringing for the caller. Status changes to active when the SIP participant subscribes to any remote audio tracks.
+
+So it will be always ringining, this is based on our call as well.
+[18/03/26, 8:53:13 PM] ~ Edgar: hmmm
+[18/03/26, 8:53:28 PM] ~ Dani: ‎~ Dani joined using a group link.
+[18/03/26, 8:53:31 PM] Sarthak Shukla: ‎You added Sarthak Shukla
+[18/03/26, 8:53:34 PM] ~ Devansh: ‎~ Devansh joined using a group link.
+[18/03/26, 8:55:45 PM] ~ Suman Paudel: there can be multiple ways, check even on participant joined or disconnected, check sip status, I know twillio gives few status that changes based on how user recvies the call, dialing-> ringing -> accepted -> hangup, check room participatns etc
+[18/03/26, 8:57:36 PM] ~ Kenneth: I want to answer your question
+[18/03/26, 8:57:42 PM] ~ Edgar: Right the SIP status alone wont change but thats exactly why the state machine approach still solve it because you are not relying soley on callstatus alone you are combining it with room level events
+[18/03/26, 9:11:59 PM] ~ shu: ok thanks ,
+let me check more
+[18/03/26, 9:12:29 PM] ~ Edgar: No worries let me know how you get on!
+[18/03/26, 9:12:48 PM] ~ shu: sure
+[18/03/26, 9:27:19 PM] ~ Shivam Vishwakarma: Hey thank you for the information, I guess I'm missing context engineering here thanks for reminding me. Can you pls tell me what is pre enrolling voice ai agents this is something new for me.
+[18/03/26, 9:29:22 PM] ~ Shivam Vishwakarma: I need to try this flushing technique, can you suggest some APIs for it. Also we are orchestrating ourselves. We added Vad but not sure if detection is turned on immediately We need to check this. Thanks for your help
+[18/03/26, 9:53:28 PM] ~ Edgar: You can utilise speaker id and capture voiceprint of your agent or a person save them to json and then you will be able to assign ignore tags for agent to ignore his own speech. See: https://github.com/speechmatics/speechmatics-academy/tree/main/integrations/livekit/01-simple-voice-assistant
+[18/03/26, 9:54:08 PM] ~ Shivam Vishwakarma: Ohh okay thank you so much
+[18/03/26, 9:56:00 PM] ~ Mayank Singla: How does ML-based turn detection for natural conversation flow work?
+[18/03/26, 10:00:28 PM] ~ Edgar: Runs an acoustic model that predicts the probability a turn is complete. Only ends the turn when the model is confident (e.g. probability > threshold).
+[18/03/26, 10:01:14 PM] ~ Edgar: Holds the turn open even during long pauses if the model thinks the speaker isn't done. May add ~3s+ of extra wait time.
+[18/03/26, 10:02:48 PM] ~ Edgar: That's how our ML model operates in general
+[18/03/26, 10:02:58 PM] ~ Mayank Singla: Is there any open source model / repo I can check out for the same?
+[18/03/26, 10:03:30 PM] ~ Edgar: You can try our voice api
+[18/03/26, 10:04:00 PM] ~ Mayank Singla: Can you share your website link plz?
+[18/03/26, 10:07:18 PM] ~ Edgar: Here is academy https://github.com/speechmatics/speechmatics-academy
+[18/03/26, 10:07:29 PM] ~ Edgar: The links all there
+[18/03/26, 10:09:22 PM] ~ KY: Hey all, anyone able to run more than 10-20 agent concurrently via pipecat could you share what kind of infra you are running ?
+[18/03/26, 10:09:23 PM] ~ Edgar: With all examples
+[18/03/26, 10:16:33 PM] ~ Tarun Garg: Any feedback on smart turn via Pipecat? Or using Noise Cancellation and then turn detection?
+[18/03/26, 10:16:41 PM] ~ Mayank Singla: Do you work with speechmatics?
+[18/03/26, 10:17:05 PM] ~ Edgar: Indeed I do
+[18/03/26, 10:18:26 PM] ~ KY: Works good ! Smart turn
+[18/03/26, 10:18:47 PM] ~ Edgar: Generally speaking it's great but I like using external mode on pipecat for more control. Giving me client based turn detection
+[18/03/26, 10:19:09 PM] ~ Edgar: Really comes down to your usecase
+[18/03/26, 10:19:25 PM] ~ Tarun Garg: Does it induces additional latency tho vs Silero based?
+[18/03/26, 10:22:11 PM] ~ Edgar: Certainly ML will but negligible if you want fastest then external mode.
+[18/03/26, 10:24:37 PM] ~ Edgar: I would say try and see for yourself. We have stuff in preview which is pretty cool to experiment.
+[18/03/26, 10:25:05 PM] ~ Tarun Garg: Interesting what is external mode? It's like pipecat construct or speechmatics construct?
+[18/03/26, 10:25:53 PM] ~ Edgar: Applying here. Designed specially for voice agents
+[18/03/26, 10:26:52 PM] ~ Edgar: Sorry on the move reply will be slower 😂 Check out here I give more descriptions https://github.com/speechmatics/speechmatics-academy/tree/main/basics/11-voice-api-explorer
+[18/03/26, 10:29:17 PM] ~ Tarun Garg: We're using deepgram 🫣
+[18/03/26, 10:29:28 PM] ~ Edgar: Oh noooo ^^
+[18/03/26, 10:29:50 PM] ~ Edgar: Haha then you should 100% look at us
+[18/03/26, 10:29:54 PM] ~ Tarun Garg: Would be relevant to check benchmarks on Hinglish 8k data, most stt excel at 16k but indian telephony is at 8K
+[18/03/26, 10:30:05 PM] ~ Tarun Garg: Everything is an opportunity ✨️
+[18/03/26, 10:30:14 PM] ~ Edgar: Did u see benchmarks done by pipecat?
+[18/03/26, 10:30:51 PM] ~ KY: Which one ?
+[18/03/26, 10:31:18 PM] ~ KY: https://github.com/pipecat-ai/stt-benchmark ?
+[18/03/26, 10:32:39 PM] ~ Tarun Garg: Just noticed today, but they also are on 16K sample rate and dataset used might notnhave hinglish
+[18/03/26, 10:32:43 PM] ~ Edgar: Here I link all sources
+[18/03/26, 10:33:19 PM] ~ Edgar: They benchmarks tool is in github so you could run your own test
+[18/03/26, 10:35:09 PM] ~ Edgar: Best is always run your own test 100% but this was really well done I would read their blog too gives lots of interesting insight
+[18/03/26, 10:38:15 PM] ~ Sunil😎: https://www.reddit.com/r/VoiceAutomationAI/comments/1rx9mnr/we_raised_24m_to_build_qa_observability_for_ai/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+[18/03/26, 10:38:24 PM] ~ Sunil😎: 🚨 AMA is LIVE
+
+Sidhant Kabra (Cekura AI) is now answering questions, working with 100+ Voice AI companies.
+
+Huge insights to learn here, don’t miss this.
+
+Drop your questions now 👇
+[18/03/26, 10:38:40 PM] ~ Edgar: Time to tune in
+[18/03/26, 10:42:30 PM] ~ Sunil😎: @⁨‎all⁩ he is working with 100+ voice ai companies rare chance to get insight directly from founder, drop your questions whenever you are free
+[18/03/26, 11:00:39 PM] ~ Sunil😎: ‎~ Sunil😎 pinned a message
+[18/03/26, 11:35:48 PM] ~ Arta: ‎~ Sunil😎 removed ~ Arta
+[18/03/26, 11:53:38 PM] ~ Arta: ‎~ Arta was added
+[18/03/26, 11:29:45 PM] ~ Arta: ‎This message was deleted by admin ~ Sunil😎.
+[18/03/26, 11:33:10 PM] ~ Kenneth: @⁨~Sunil😎⁩ pls ban @⁨~Arta⁩ immediatly
+[18/03/26, 11:34:25 PM] ~ Edgar: Oh jesus
+[18/03/26, 11:34:51 PM] ~ Edgar: @⁨~Sunil😎⁩  ban above
+[18/03/26, 11:36:06 PM] ~ Sunil😎: done 👍🏻
+[18/03/26, 11:48:54 PM] ~ V: Here is the API reference on how to do it - https://www.plivo.com/docs/voice-agents/audio-streaming/concepts/audio-streaming-reference#clearaudio
+
+I have a sample implementation of the same here - https://github.com/plivo/python-agents-examples/blob/e9de806ba4bcc3f00ca09e64ea4e9839fc60b5fc/gpt4.1mini-gpt4.1-deepgram-elevenlabs-native/inbound/agent.py#L1488-L1524
+
+Take a look and let me know if you have questions. This example doesn't use any voice agent framework. I assume that's how you are building.
+
+This same example shows the implementation of Pipecat's Smartturn model too. Check it out. ‎<This message was edited>
+[18/03/26, 11:52:38 PM] ~ V: Using Silero VAD + Smart-turn v3 is pretty magical. There is a lot of improvement in turn-detection. 
+The telephony provider should support noise cancellation. I am aware Plivo and Twilio do that in their audio-streaming products.
+[18/03/26, 11:53:21 PM] ~ Tarun Garg: But how do they? Do they just employ Krisp NC? I mean deepgram recommends not doing Noise Cancelation for better WER
+[18/03/26, 11:53:31 PM] ~ V: Yep.
+[18/03/26, 11:54:00 PM] ~ V: Krisp plugin for freeswitch. So the noise gets supressed earlier in the pipeline.
+[18/03/26, 11:55:30 PM] ~ V: Have to A/B test this. Generally, noise supression has resulted in better STT accuracy for me. We have seen customers use Deepgram Nova models and agents have  improved post NC launch at Plivo.
+[18/03/26, 11:56:01 PM] ~ V: I am unsure how the agent perform with noisy audio sent to DG's latest models.
+[18/03/26, 11:56:19 PM] ~ V: But the previous models have pretty much failed to handle noisy audio.
+[18/03/26, 11:56:53 PM] ~ V: Do you have a different observation?
+[18/03/26, 11:57:27 PM] ~ V: Most CPaaS default to Krisp NC afaik. Twilio does for sure. And Plivo too.
+[18/03/26, 11:57:29 PM] ~ Tarun Garg: Yes yes, basis our test runs NC eats up more characters and ends up worsening WER.
+[18/03/26, 11:57:32 PM] ~ Tarun Garg: Deepragm recos - https://deepgram.com/learn/the-noise-reduction-paradox-why-it-may-hurt-speech-to-text-accuracy
+[18/03/26, 11:58:11 PM] ~ Rishabh Pandey: Hey everyone, seeking some guidance here. 
+
+We have a Fintech prospect ~ will be building their usecases around lead qualification/basic onboarding voice flows. 
+
+Just to keep things under control as we scale with usecases ahead, any architecture preferences/bottle necks faced compared to agents in other industries?  
+
+Fintech looks lucrative which comes with max risk, so wanted to get opinions before building. 
+
+Any guidance is appreciated, thanks!
+[18/03/26, 11:59:43 PM] ~ Tarun Garg: Exotel don’t. Maybe it’s matter of sample rate etc as well. It works for Twilio because 16k sample rate ‎<This message was edited>
+[19/03/26, 12:00:40 AM] ~ V: Hardly any objective proof in the blog. Seems like an LLM generated blog. If they showed some metrics/comparison - I might consider the counterppoint to send noisy audio.
+[19/03/26, 12:01:41 AM] ~ V: But telephony audio is at 8khz anyway. And Krisp works with telephony audio too.
+[19/03/26, 12:01:53 AM] ~ V: Do you know if thye use a different NC?
+[19/03/26, 12:03:15 AM] ~ Tarun Garg: No they dont use any NC, raw audio from telco gets streamed.
+[19/03/26, 12:03:25 AM] ~ Tarun Garg: Oh I though US telco band is 16k etc?
+[19/03/26, 12:06:38 AM] ~ V: Nope. 8k.
+[19/03/26, 12:10:49 AM] ~ Kenneth: Depends
+[19/03/26, 12:13:47 AM] ~ Kenneth: It depends primarily on whether:
+- The telecommunications provider supports higher-quality codecs
+- The device is capable of making digital calls
+- Which network the caller is on (LTE, 4G, 5G)
+- Whether the other party can handle 16 kHz
+- Whether there are any encoding issues
+[19/03/26, 12:14:06 AM] ~ David Casem: 16k on Telnyx
+[19/03/26, 12:14:30 AM] ~ David Casem: Don't think anyone else has it.
+[19/03/26, 12:15:13 AM] ~ David Casem: +16504597189 from any HD enabled mobile.
+[19/03/26, 12:18:37 AM] ~ Kenneth: It also depends on:
+- At 8 kHz, the frequency is cut off and compressed, resulting in a loss of important high and low frequencies. NC can significantly degrade audio quality.
+- At 16 kHz, this problem is not as severe.
+- With NC, short sounds like “yes” can also be filtered out as noise, whereas STT already has trouble with short words and syllables.
+[19/03/26, 12:21:09 AM] ~ Kenneth: If you’d like, I can outline how we handle these situations. We likely operate in one of the toughest environments when it comes to this issue. Callers to our service are often
+- Stressed and in a hurry
+- Calling from environments that can be extremely noisy
+- From all age groups
+Some of our solutions are very pragmatic but effective
+[19/03/26, 12:21:49 AM] ~ Tarun Garg: Yes please ^
+[19/03/26, 12:21:55 AM] ~ Kenneth: That's something I really love about Telnyx, haha
+[19/03/26, 12:23:20 AM] ~ Tarun Garg: But is it true 16K or upsampled at Telnyx?
+[19/03/26, 12:23:28 AM] ~ Kenneth: true 16k ‎<This message was edited>
+[19/03/26, 12:24:34 AM] ~ Kenneth: Upsampling to 8 kHz wouldn't add any value because no additional audio data is added. The primary factor is which codec the other parties can negotiate
+[19/03/26, 12:24:59 AM] ~ Tarun Garg: Interesting, do they have Indian Ops?
+[19/03/26, 12:25:05 AM] ~ David Casem: Coming soon
+[19/03/26, 12:25:07 AM] ~ Tarun Garg: More on this please
+[19/03/26, 12:25:09 AM] ~ David Casem: Very soon
+[19/03/26, 12:25:22 AM] ~ David Casem: Gear en route
+[19/03/26, 12:25:34 AM] ~ Tarun Garg: Sign me up if you can offer true 16K, but I’m curious how - because if telcos don’t give it then how will you.
+[19/03/26, 12:25:57 AM] ~ Kenneth: It really depends on your specific use case. Could you briefly describe your use case?
+[19/03/26, 12:27:22 AM] ~ Tarun Garg: Typical usecase where we call people for collections, feedback gathering etc - all of it happens on telecoms.
+[19/03/26, 12:28:46 AM] ~ KY: Even in india they support ! 
+hard to get and platforms are not getting that easily and even if they have it not passing the profit to customer as of right now
+[19/03/26, 12:29:27 AM] ~ Tarun Garg: Sign me up if you get someone in India doing that.
+[19/03/26, 12:30:11 AM] ~ KY: Lets hope soon we can give out I am activity trying to acquire that
+[19/03/26, 12:30:28 AM] ~ Tarun Garg: Plivo/Exotel/Acefone/Vobiz of the world - sign me up when you’ve these or if anyone else I’m forgetting.
+[19/03/26, 12:31:27 AM] ~ KY: What product are you working on ?
+[19/03/26, 12:32:38 AM] ~ Tarun Garg: https://www.squadstack.ai/
+[19/03/26, 12:33:30 AM] ~ KY: Oh nice !
+[19/03/26, 12:33:40 AM] ~ Tarun Garg: And you?
+[19/03/26, 12:34:19 AM] ~ KY: Superfone
+[19/03/26, 12:42:25 AM] ~ Kenneth: So we handle noisy environments by 
+- distinguishing between speakers
+- counting interruptions and responding after X
+- filtering out irrelevant content in the STT pipeline and LLM
+
+But this only works well because we have a clear expectation of what the caller will say and, when in doubt, always transfer the call.
+
+People tend to be less open in their conversations, so this approach won’t work for many use cases, but it works for us because some people call us while drunk or in crowded places.
+[19/03/26, 12:43:08 AM] ~ Tarun Garg: And how do you distinguish between speakers? How do you accurately do Diarization so to say.
+[19/03/26, 12:50:21 AM] ~ KY: third point is actually good one. It does really work in some specific conditions
+[19/03/26, 12:50:49 AM] ~ Tarun Garg: Like? How to do?
+[19/03/26, 12:54:18 AM] ~ KY: For example, if you start your STT model with no hint 
+so what happens sometime, you might get some different language stt output due to noise which you can easily discard before it start the turn change or maybe LLM trigger
+[19/03/26, 12:55:14 AM] ~ V: Are you suggesting sending noisy audio to STT has worked better for you?
+
+Or, some sort of pre-processing is to be done before STT is hit? ‎<This message was edited>
+[19/03/26, 12:55:29 AM] ~ Sonu: one approach could be noise cancellation which can trim the noise using signal detection, it would not be a good idea to use LLM. Its best suited/solved using signal processing. Like Krisp.Another nice article from twilio https://www.twilio.com/docs/video/noise-cancellation
+[19/03/26, 1:00:07 AM] ~ Subrat Sagar: Not possible in India @⁨~Tarun Garg⁩
+[19/03/26, 1:00:17 AM] ~ Subrat Sagar: Right now
+[19/03/26, 1:08:11 AM] ~ V: Sure. It depends. It requires everything to fall in place for it to be a HD call end-to-end. I am referring to a regular telephony case.
+The benefit is only unlocked under certain conditions - not in-general I feel.
+[19/03/26, 1:09:17 AM] ~ V: @⁨~David Casem⁩ I'm curious about this too. Happy to be wrong on what I said about US telco band being 8k in general.
+[19/03/26, 1:09:31 AM] ~ Subrat Sagar: All telcos run G711 codec in india. Unlike other countries
+[19/03/26, 1:11:08 AM] ~ Subrat Sagar: US telcos run on G722
+Runs on 16K frequency - scalable ‎<This message was edited>
+[19/03/26, 1:13:16 AM] ~ Subrat Sagar: I had messaged Apurv regarding this. Would love to connect with you personally.
+[19/03/26, 1:13:21 AM] ~ Subrat Sagar: Let’s chat tomorrow
+[19/03/26, 1:14:37 AM] ~ Suman Gandham: G729
+[19/03/26, 1:14:43 AM] ~ Suman Gandham: If I am not wrong
+[19/03/26, 1:15:02 AM] ~ V: Don't think this is also widely adopted.
+[19/03/26, 1:15:39 AM] ~ Suman Gandham: What we do is upsample to 16khz , that’s the only way for better inference
+[19/03/26, 1:16:10 AM] ~ Suman Gandham: More than that it will distort, it’s like zooming 2MP image
+[19/03/26, 1:33:48 AM] ‪+91 98402 14295‬: ‎‪+91 98402 14295‬ joined using a group link.
+[19/03/26, 1:33:53 AM] ~ Vignesh🥳: ‎~ Vignesh🥳 joined using a group link.
+[19/03/26, 1:16:56 AM] ~ V: Yea. But the upsampling is actually not going to add any benefits. I assume you are upsampling it only to make it work with what the STT support - right?
+[19/03/26, 1:17:40 AM] ~ M Valera: Cool. Cekura is pushing hard. Shotout to them
+[19/03/26, 1:17:53 AM] ~ Suman Gandham: Why don’t we have a webinar it discussion on this?
+[19/03/26, 1:18:40 AM] ~ Suman Gandham: My CTO and cofounder will be the right person. He was the early engineer of Twilio and Plivo.
+‎[19/03/26, 1:18:44 AM] ~ M Valera: ‎image omitted
+[19/03/26, 1:19:01 AM] ~ Suman Gandham: And he was at bandwidth building their voice infra
+[19/03/26, 1:20:53 AM] ~ M Valera: We just got our small badge 😎 first voice agent ever insured! the same way you insure a house or a car
+[19/03/26, 1:24:42 AM] ~ Dileep: Curious about what it covers
+[19/03/26, 1:25:20 AM] ~ M Valera: covering different use cases and agent outcomes, for our customers
+[19/03/26, 1:34:28 AM] ~ Subrat Sagar: Need to check this @⁨~Suman Gandham⁩ 
+Will come back on this
+[19/03/26, 6:02:33 AM] ~ PC: Hi — we're building outbound Voice AI calling agents for insurance companies in India. Customers showed purchase intent on comparison platforms but dropped off. The agent's job: re-engage, pitch, handle objections, and close — all in one call.
+
+The core gap our clients care about: they don't want a lead qualifier. They want an end-to-end closer. An AI that sells, not just informs.
+
+The agent speaks Hinglish — the code-mixed Hindi-English urban Indians naturally use. "Dekhiye, aapki bike 3 saal purani hai — ek accident mein poora paisa doob jayega" or in English: "Look, one accident and you're paying everything out of pocket. This cover costs less than a tank of petrol." Warm, pushy, filler-word-rich. Not formal. Not scripted-sounding.
+
+---
+
+**The problems we're facing**
+
+**1. Sales flow adherence** — 
+Right now the entire agent — persona, sales philosophy, flow logic, all 7 stages, product data — lives in one long prompt. The LLM frequently jumps ahead in the recommendation sequence (pitching a policy it shouldn't yet) or skips stages entirely (examples pitches a budget friendly option ahead of the one with highest coverage per the flow). Also happens when the customer gives an ambiguous response like "hmm" or "ok."
+
+**2. Sales tone** — Even with detailed instructions, the model defaults to formal or neutral language. Failure sounds like: "Aapki concern samajh aa rahi hai. Yeh policy comprehensive coverage provide karti hai competitive premium pe" / "I understand your concern. This policy offers comprehensive coverage at a competitive premium." We need: "Arre bhai, sochke dekho — 800 rupaye mein poora cover. Itna sasta kahan milega?" / "Look — one claim and this pays for itself ten times over."
+
+**3. Repetition** — The agent repeats the same premium, cover amount, or question within the same conversation. Sounds unintelligent, kills trust. Prompt-level guards help partially but don't solve it.
+
+**4. Objection handling** — Top 5 objections: price too high, stalling ("sochta hoon" / "I'll think about it"), deferral ("baad mein" / "later"), already insured, DIY ("online kar lunga" / "I'll buy it myself"). Unsure whether to hardcode counter-scripts or let the LLM handle creatively.
+
+**5. Prompt iteration speed** — Every change — new product, new flow, new objection — means manually rewriting and retesting a large prompt. The cycle is slow.
+
+---
+
+**Our questions — happy for input on any subset**
+
+1. What prompt architecture actually enforces stage sequence in a multi-stage sales flow? Dynamic injection per turn vs. patterns within a monolith — what works?
+2. Is a multi-agent setup worth it — orchestrator deciding stage, separate FAQ agent, separate closing agent? What's worked in practice?
+3. Which LLM handles structured conversational sales best, especially in a code-mixed non-English language?
+4. What actually enforces a colloquial sales register — few-shot, fine-tuning, something else? Where in the prompt?
+5. SLM fine-tuned on real call transcripts vs. prompting a large model — which wins for tone?
+6. Most effective techniques to prevent repetition in long multi-turn conversations — prompt-level, architecture-level, or both?
+7. Hardcoded objection counter-scripts vs. LLM handling creatively on the fly — what actually converts better?
+8. What compresses prompt iteration time — templating, automated evals, synthetic conversation testing?
+
+---
+
+Happy to share the full prompt for context. Even a take on a few of these would be hugely valuable — thank you. Can do a short  call with any expert here
+[19/03/26, 6:07:48 AM] ~ Subhankar: what issues u r facing?
+Why its not able to sell, like users are not interested to buy or issue from the agent?
+[19/03/26, 6:07:56 AM] ~ Subhankar: @⁨~PC⁩
+[19/03/26, 6:08:24 AM] ~ David Casem: It's AMR-WB or EVS, not 729 (that's compressed - worse than 711-ulaw or alaw) ‎<This message was edited>
+[19/03/26, 6:09:06 AM] ~ David Casem: Given those have been traditionally licensed codecs (EVS still is under patent), we transcode to OPUS or 722.
+[19/03/26, 6:16:14 AM] ~ Nithish Bharadwaj: We at Epicode offer telephony APIs, and with Jio as the underlying SIP trunk provider we can offer true 16kHz if the customer is on 4G or 5G and supports VoLTE or VoNR on any Indian network.
+
+Jio uses G722 codec for 16kHz. Depending on which Indian telecom circle you are in, Tata can also be an option. Tata uses AMR-WB for 16kHz. ‎<This message was edited>
+[19/03/26, 6:21:35 AM] ~ Nithish Bharadwaj: We offer websocket based streaming similar to Exotel or Twilio for people using pipekit or custom orchestration.
+For Livekit we offer proxy mode. You have to define a gateway to us on Livekit SIP.
+
+We have our own orchestration if you want to try it out. The current version is closer in architecture to Vapi. You don't get fine grained control on the pipeline. But in the next couple of months, the new version we release will allow you to write the pipeline giving you more control. ‎<This message was edited>
+[19/03/26, 6:30:28 AM] ~ Nithish Bharadwaj: Our key strength is scalability. Our telephony stack is being used by large BFSI players in India scaling to multiple thousands of concurrent calls.
+
+We also let customers own the SIP trunk and thus the number, with direct billing with Jio, Airtel, Tata. We only charge for the middleware offering APIs, streaming and observability. Most large enterprises prefer this.
+[19/03/26, 6:32:52 AM] ~ Nithish Bharadwaj: Btw we also support WhatsApp calling as a channel, which is also true 16kHz. Opus at 16kHz is the underlying codec here.
+[19/03/26, 6:34:38 AM] ~ Subhankar: which company?
+[19/03/26, 6:35:25 AM] ~ Nithish Bharadwaj: https://www.epicode.in/
+[19/03/26, 8:07:40 AM] ‪+91 84288 96611‬: ‎‪+91 84288 96611‬ joined using a group link.
+[19/03/26, 8:07:43 AM] ~ Maahin .Vimlesh .Panchal: ‎~ Maahin .Vimlesh .Panchal joined using a group link.
+[19/03/26, 8:07:46 AM] ‪+91 91 1365 856 0‬: ‎‪+91 91 1365 856 0‬ joined using a group link.
+[19/03/26, 7:52:54 AM] ~ Rishabh Pandey: @all
+[19/03/26, 7:55:16 AM] ~ Subhankar: what r u looking for?
+[19/03/26, 7:56:13 AM] ~ Subhankar: what are the use cases you are building
+[19/03/26, 8:01:59 AM] ~ Rishabh Pandey: We have three usecases today 
+- Lead qualification 
+- Onboarding Assistance 
+- Inbound Support (which is simpler) 
+For the other two I feel there may be some hidden points of consideration because it's Fintech, so asking for that
+[19/03/26, 8:03:13 AM] ~ PC: Hey Subhankar...we have to reach a human level baseline of conversions min of not exceed...and we believe the issues outlined could be the underlying issues..
+[19/03/26, 8:03:21 AM] ~ Naman: voicelink.co.in
+
+
+Integrated with 35+ leading Voicebot providers, TRAI compliant telephony, offers mobile, landline plus 140/1600 compliant series.
+Just check this out ‎<This message was edited>
+[19/03/26, 8:04:57 AM] ~ Subhankar: i dont see any issues
+u know their business models and workflow
+[19/03/26, 8:08:14 AM] ~ Nithish Bharadwaj: Are you building your own orchestration pipeline are planning to use an existing orchestration engine?
+
+Which STT, LLM, TTS you plan to use? What is the end to end target price expected by your Fintech prospect?
+
+These will decide the architecture you will have to choose.
+[19/03/26, 8:25:10 AM] ‪+91 99932 34069‬: ‎‪+91 99932 34069‬ joined using a group link.
+[19/03/26, 8:13:47 AM] ~ Rishabh Pandey: We have the current architecture which works well for our Telecom Clients,  
+
+Cost of models/layers is not an issue
+
+ ~ majorly I want to prioritize security over anything. 
+
+~ platform masking, no data retention, 
+
+- Need to make a call on How much agentic it should be? 
+- I don't want to change something if it comes with risk, if it was working well before agents came, then I will stick to it. 
+
+These are initial thoughts over architecture/platform scalability
+[19/03/26, 8:14:56 AM] ~ Rishabh Pandey: Client is more risk averse, then trying to adopt new voice workflows.
+[19/03/26, 10:29:32 AM] ~ Vignesh🥳: How the latency across ASR-LLM-TTS is optimized ?
+
+Currently we have 1.5-2 seconds latency and wanna really speed it up.
+
+How are you tackling this ?
+[19/03/26, 10:34:06 AM] ~ Subhankar: which ASR, LLM and TTS u r using?
+[19/03/26, 10:34:33 AM] ~ Subhankar: ~1.5 is decent with Deepgram, Gpt 41, 11labs/cartesia
+[19/03/26, 11:12:34 AM] ~ KY: How is the latency for deepgram for stt ? We sometime see latency spikes any getting that issue ?
+[19/03/26, 11:17:27 AM] ~ Neha Agarwal: Yes..
+[19/03/26, 11:23:00 AM] ~ KY: Hey any idea what might be the issue, are you trying to connect via any cloud (aws gcp etc) ?,
+[19/03/26, 11:24:10 AM] ~ Nithish Bharadwaj: I find it significantly high compared to Azure or Google. More so when you stream from outside AWS or Azure.
+
+In my tests even if you set "endpointing" to 600ms, the transcript comes at around 1200ms after the user stops speaking.
+[19/03/26, 11:25:26 AM] ~ Subhankar: we did not face the issue, which platform you use?
+[19/03/26, 11:25:43 AM] ~ KY: Even more sometime
+
+we have some india based DC pops we connect from that a, I have not tested this in GCP/AWS yet tho ‎<This message was edited>
+[19/03/26, 11:25:48 AM] ~ Nithish Bharadwaj: Will try out Speechmatics since I am intrigued by Edgar's posts earlier.
+[19/03/26, 11:26:50 AM] ~ KY: How would that help ?
+[19/03/26, 11:28:49 AM] ~ Nithish Bharadwaj: Well I am not rigid on a particular provider. If speematics STT is fast and accurate, then I can use that.
+
+Me and my team are adding a collection of ready integrations to our own orchestration engine.
+[19/03/26, 11:29:18 AM] ~ Subhankar: which platform is yours?
+[19/03/26, 11:29:50 AM] ~ Subhankar: I know so far Deepgram is the best based on latency and accuracy, nothing near to that. Am I wrong?
+[19/03/26, 11:32:48 AM] ~ Nithish Bharadwaj: I am from Epicode. We call our orchestration engine BotCompose.
+We are focusing on cost optimization techniques to reduce STT duration, LLM tokens and TTS synthesis.
+It's in beta now. But we have a couple of partners already using it in production and handling 400 concurrent bot sessions.
+[19/03/26, 11:34:20 AM] ~ Nithish Bharadwaj: I find Google streaming STT far better compared to Deepgram, at least here in India. I have tried Deepgram from US AWS servers and there it is a lot faster compared to here in India. Eager to know others findings.
+[19/03/26, 11:35:17 AM] ~ Subhankar: its deployed in USA, so it will be slower in India. I agree what u r saying
+[19/03/26, 11:36:43 AM] ~ Viji: +1
+[19/03/26, 11:41:09 AM] ~ Vignesh🥳: Let’s put it this way. I am sharing layer by layer latency
+
+FYI - I am testing it with US servers only (But testing also happens from India)
+
+ASR - Deepgram (300 ms)
+LLM - Gemini (1.5-2.5 seconds)
+TTS - Deepgram- (400ms)
+
+
+Please share your stack and latency in this fashion. Let’s learn from others as well.
+[19/03/26, 11:48:33 AM] ~ Subhankar: it takes around 4s once u hear the first response without tool and with tool another 4s
+[19/03/26, 11:49:21 AM] ~ Subhankar: deepgram: ~200ms
+LLM: ~1s
+STT: ~200ms(we have our own TTS, but 11labs and Cartesia are similar)
+[19/03/26, 11:51:01 AM] ~ Subhankar: we get response ~1.5s without tool and with tool another 3s(depend on API), we r not prompt heavy, we mostly do tools heavy work where most of the time backend db gets interacted in real time
+[19/03/26, 11:51:16 AM] ~ V: Curious why do customers choose to orchestrate using Botcompose rather than using an OSS framework like LiveKit or Pipecat? ‎<This message was edited>
+[19/03/26, 12:06:45 PM] ~ Nithish Bharadwaj: 1. Proprietary VAD based STT cost optimization. Our VAD gives less false positives and false negatives when compared to silero VAD. We have silero VAD as an option too. Stop streaming to STT once the user stops speaking and you get the transcript. Start again when the user starts speaking.
+2. LLM tool pruning to reduce token count and also reduce unnecessary tool calls when not required.
+3. TTS caching. Most bot flows can use cached responses in at least 50% of the conversation. Not only does this save TTS costs, local cache lookup retrieves the TTS audio is under 2ms.
+4. Low hosting costs. Our telephony stack can handle 1000 concurrent calls in a 8 core 8 GB RAM server. One more 8 core server running BotCompose is also load tested to orchestrate 1000 bot conversations.
+5. Real time observability. We have dashboard showing the real time call count, average latency for last 30 second window, any errors which happened in the last 30 seconds etc.
+
+While all these can be built on top of the OSS solutions you mentioned, it takes significant engineering effort.
+[19/03/26, 12:11:35 PM] ‪+91 73370 66305‬: ‎‪+91 73370 66305‬ joined using a group link.
+[19/03/26, 12:11:38 PM] ‪+91 98407 30886‬: ‎‪+91 98407 30886‬ joined using a group link.
+[19/03/26, 12:10:17 PM] ~ Nithish Bharadwaj: Also ready integration with our Answering machine detection software. That's one piece which I think is better than the OSS solutions and also most of the competition. 😄
+[19/03/26, 12:16:19 PM] ~ Suman Paudel: yeah good for poc but can't scale
+[19/03/26, 12:17:52 PM] ~ Nithish Bharadwaj: Are you saying the OSS ones can't scale or are you referring to my orchestration engine?
+[19/03/26, 12:18:16 PM] ~ Suman Paudel: your orchestration
+[19/03/26, 12:18:43 PM] ~ Nithish Bharadwaj: Oh. How did you come to that conclusion without even trying it?
+[19/03/26, 12:19:05 PM] ~ Suman Paudel: how long have you tried the voice agents?
+[19/03/26, 12:21:49 PM] ~ Nithish Bharadwaj: Our telephony stack is being used for voice agents since 3.5 years. Initially by companies building Rasa based voice bots.
+
+Our largest deployment to date is 9000 concurrent channels in India by Bajaj Finserv. We deployed it as a geo redundant cluster across 3 DCs in India. With around 25% call connect rate, this was translating to 2200 concurrent bot calls. ‎<This message was edited>
+[19/03/26, 12:22:14 PM] ~ Nithish Bharadwaj: So I think I might know a thing or two about scaling. 😇
+[19/03/26, 12:23:07 PM] ~ Nithish Bharadwaj: What scale have you handled?
+[19/03/26, 12:51:18 PM] ~ Paian: ‎~ Paian joined using a group link.
+[19/03/26, 12:51:33 PM] ~ Arvind Karna: ‎~ Arvind Karna joined using a group link.
+[19/03/26, 12:51:40 PM] ‪+91 77209 75552‬: ‎‪+91 77209 75552‬ joined using a group link.
+[19/03/26, 12:49:33 PM] ~ Suman Paudel: 100k +
+[19/03/26, 12:49:44 PM] ~ Suman Paudel: but as a dev not as you know selling software ‎<This message was edited>
+[19/03/26, 12:50:10 PM] ~ Suman Paudel: custom requirements
+[19/03/26, 12:53:35 PM] ~ Paian: ‎This message was deleted by admin ~ Sunil😎.
+[19/03/26, 12:53:39 PM] ~ Paian: ‎This message was deleted by admin ~ Sunil😎.
+[19/03/26, 12:54:07 PM] ~ Paian: ‎~ Sunil😎 removed ~ Paian
+[19/03/26, 12:54:07 PM] ~ Nithish Bharadwaj: Scaling refers to concurrency here. My telephony stack has handled 500k+ concurrent bot calls per day in a single large deployment if that's the volume you are talking about.
+
+And I am also a dev with 14 years of experience in telephony, real time signal processing and system engineering. I am not a sales guy. Happy to get into a technical discussion if you feel the need. ‎<This message was edited>
+[19/03/26, 12:54:57 PM] ~ Suman Paudel: also the problem that i see most business owners is, they wanna build their own system to have complete control, no hard feeling but yeah as a dev I have seen many cases like that.
+[19/03/26, 12:56:05 PM] ~ Suman Paudel: 🔥, what is your system powering on WebRTC or some other your custom built system.
+[19/03/26, 1:01:51 PM] ~ Shuaib Basha: ‎~ Shuaib Basha joined using a group link.
+[19/03/26, 1:02:07 PM] ~ ~: ‎~ ~ joined using a group link.
+[19/03/26, 1:02:18 PM] ‪+91 74111 79773‬: ‎‪+91 74111 79773‬ joined using a group link.
+[19/03/26, 1:04:59 PM] ~ Nithish Bharadwaj: We use SIP for telephony. Not WebRTC. We do support WebRTC for human end of the call. You can embed a WebRTC phone widget using our js SDK to a webpage for either customers to call from or for human agents who will takeover the call with the voicebot transferring the call to them. Earlier this used to be IVR transferring to human agents. Now it's voice bots.
+[19/03/26, 1:07:25 PM] ~ Nithish Bharadwaj: For bot end since we recommend deploying the orchestration engine and telephony stack in the same LAN, we prefer streaming to orchestration engine over websocket.
+
+Since we handle codec handling, NAT traversal, jitter buffer etc in C++ code, we send raw PCM chunks over websocket which significantly reduces the compute required by the orchestration engine.
+[19/03/26, 1:07:52 PM] ~ Nithish Bharadwaj: For people using Livekit, we connect to Livekit using Livekit SIP.
+[19/03/26, 1:10:31 PM] ~ Tarun Garg: Which provider? Do they give detailed sip observability? Like checkpoints wise
+[19/03/26, 1:10:49 PM] ~ Suman Paudel: this is sick man
+[19/03/26, 1:35:33 PM] ~ Edgar: Well good morning world  looks like lot of great conversations happen. Time to sip coffee and wake up 🤣 If anyone has speechmatics related questions I be around most day
+[19/03/26, 1:35:46 PM] ~ Mihir: @⁨~Sunil😎⁩ for the number of telphony's that are coming in daily, I think there should be directory
+[19/03/26, 1:46:42 PM] ~ Nithish Bharadwaj: We are provider agnostic. We have worked with SIP trunks with multiple telecom operators in India, US and Europe.
+
+In India we have ready connectivity with Airtel, Jio, Vi, Tata.
+
+In US, our customers also use our stack with AWS Chime voice connector, and Twilio elastic SIP trunks.
+
+Since SIP is widely supported by legacy telephony systems and we support on prem deployment, there are also instances where we have SIP trunk to Avaya, Cisco and Genesys to send calls to them or get calls from them. So the human agents can continue to be on the telephony system the enterprise is already using and the voicebot can transfer calls to them when necessary.
+
+None of the telcos give detailed observability checkpoint wise.
+
+But we do monitor the trunk uptime and also monitor the call quality on the trunk and compute Mean Opinion Score (MOS) for every single call. So if there is packet loss happening in calls through some provider, our stack will know it. It will be shown on the dashboard and also pushed as events to the webhook to whoever is using our APIs to trigger the call or is accepting the incoming call. ‎<This message was edited>
+[19/03/26, 1:53:09 PM] ~ Mihir: Yea any telphony provider here who has fixed concurrent line based charges instead of per call?
+[19/03/26, 2:00:15 PM] ~ Devansh: yeah we have a concurrency based plan with Airtel, Jio, TATA. We can connect. ‎<This message was edited>
+[19/03/26, 2:00:40 PM] ~ Rahul Gupta: which company is this?
+[19/03/26, 2:02:40 PM] ~ Devansh: We operate as Taar AI
+
+Don’t go by the pricing on the website, those are for specific use cases 🙂
+
+We run for couple of large scale companies inc parts of Flipkart group. ‎<This message was edited>
+[19/03/26, 2:07:00 PM] ~ Edgar: Just dropping small message while sipping my coffee about Voice API preview from earlier.
+
+We are down to the last couple of spots so figured I will give a heads up before we close it out.
+
+For those who missed it we have been developing a new speech to text API specifically for voice agents this is a raw WebSocket API, no SDK required. You connect to an endpoint, send PCM audio, and get back structured JSON messages for transcription, turn detection, speaker tracking, the whole pipeline.
+
+What made me excited about this personally after years of stitching together VAD,  STT, diarization and dealing with all the edge cases around barge-in, speaker overlap, and turn boundaries  is that it handles all of that at the protocol level.
+
+You pick a turn detection profile adaptive, agile, smart (ML based), external and the API manages the rest.
+
+Mid-session you can do things like force end-of-utterance, request speaker IDs, or set speaker focus without tearing down the connection. If you wanna try this for free, fill in form and we will send you details!
+[19/03/26, 2:57:59 PM] ‪+44 7909 006885‬: ‎‪+44 7909 006885‬ joined using a group link.
+[19/03/26, 4:32:51 PM] ‪+44 7815 146543‬: ‎‪+44 7815 146543‬ joined using a group link.
+[19/03/26, 4:33:09 PM] ~ Kiran: ‎~ Kiran joined using a group link.
+[19/03/26, 4:38:20 PM] ~ ~Kapil: ‎~ ~Kapil joined using a group link.
+[19/03/26, 4:38:23 PM] ‪+91 96544 48997‬: ‎‪+91 96544 48997‬ joined using a group link.
+[19/03/26, 4:43:56 PM] ~ ~: Hi Everyone, We(Unpod.ai) are working with EkStep(Nanden Nilkeni’s Foundation) to bring open-source voice ai pieces together, if anyone building on something relevant to open-source voice/communication ai segment and wants to contribute/participate, plz DM me with details.
+[19/03/26, 4:48:46 PM] ~ Suman Gandham: @⁨~~⁩Unpod.dev glad you working with EkStep. welcome to the club
+[19/03/26, 4:50:11 PM] ~ ~: Thanks Suman, Wanted to connect to you as well on few things, let’s catch up sometime.
+[19/03/26, 4:51:25 PM] ~ Edgar: Welcome
+[19/03/26, 6:12:12 PM] ~ Vignesh🥳: Which framework you all use for ASR-LLM-TTS stitching ?
+
+Also tell me if it’s worth it.
+[19/03/26, 6:37:48 PM] ‪+91 91 1366 974 1‬: ‎‪+91 98341 43672‬ added ‪+91 91 1366 974 1‬
+[19/03/26, 6:37:55 PM] ‪+1 (567) 469‑3885‬: ‎‪+1 (567) 469‑3885‬ joined using a group link.
+[19/03/26, 6:22:57 PM] ~ Suman Paudel: Livekit, PipeCat and Ten-Framework
+[19/03/26, 6:25:11 PM] ~ Vignesh🥳: ‎POLL:
+Which stack are you using ?
+‎OPTION: Pipecat (6 votes)
+‎OPTION: Livekit (11 votes)
+‎OPTION: TEN Framework (1 vote)
+‎OPTION: Pipecat + Livekit (2 votes)
+‎OPTION: Pipecat + Livekit + Ten (1 vote)
+‎OPTION: Others (9 votes)
+[19/03/26, 6:38:06 PM] ‪+91 99120 20836‬: ‎‪+91 99120 20836‬ joined using a group link.
+[19/03/26, 6:54:43 PM] ~ Nilesh : Can any one help with indian phone numbers for WA ?
+[19/03/26, 8:25:00 PM] ~ Subhankar: for Washington?
+What help>
+[19/03/26, 8:28:16 PM] ~ V: WA = WhatsApp I think
+[19/03/26, 8:28:29 PM] ~ Nilesh : WhatsApp
+[19/03/26, 8:29:06 PM] ~ V: Do you already have an India virtual phone number? The same can be enabled with WA. ‎<This message was edited>
+[19/03/26, 8:30:34 PM] ~ V: Plivo provides phone numbers enabled with WA messages and WA calling.
+[19/03/26, 8:30:50 PM] ~ V: What do you plan to use it for? Calls or texts?
+[19/03/26, 8:35:34 PM] ~ V: Can guide you to set it up and try out a POC
+[19/03/26, 8:37:11 PM] ~ Sakthi Saravanan: ‎~ Sakthi Saravanan joined using a group link.
+[19/03/26, 8:37:15 PM] ‪+91 72084 95398‬: ‎‪+91 72084 95398‬ joined using a group link.
+[19/03/26, 8:37:24 PM] ~ KY: why people are using livekit ?
+[19/03/26, 8:38:55 PM] ~ Subhankar: these big numbers are when there is no STT, LLM, TTS involved?
+Please correct me if I am wrong.
+[19/03/26, 8:39:36 PM] ~ Kiran: Why not?
+[19/03/26, 8:39:44 PM] ~ Subhankar: its more like Jio is saying we have 100M concurrency.
+[19/03/26, 8:40:22 PM] ~ Subhankar: its just deterministic flow voice in and voice out.
+[19/03/26, 8:41:57 PM] ~ KY: why tho is my question you can answer not case also 😅 happy to learn that too
+[19/03/26, 8:42:08 PM] ~ KY: what company is that ?
+[19/03/26, 8:49:53 PM] ~ Nithish Bharadwaj: Those numbers were for NLP based voice bot. So while STT and TTS was involved, there was no LLM and instead there was NLP.
+
+But the role of my company being a telephony stack provider, remains the same irrespective of what stack the bot uses.
+
+Even with LLM based bots our stack was used to call 200k numbers per day.
+[19/03/26, 8:51:16 PM] ~ Kiran: My goto because of webrtc native nature
+[19/03/26, 8:51:38 PM] ~ Suman Paudel: why not?
+[19/03/26, 8:52:15 PM] ~ Umesh Pande: So you are saying 500k TPS?
+[19/03/26, 8:52:53 PM] ~ Nithish Bharadwaj: What's TPS?
+[19/03/26, 8:53:26 PM] ~ Umesh Pande: Transactions per Second
+[19/03/26, 8:56:09 PM] ~ Nithish Bharadwaj: God no. 500k transactions per second? That's unrealistic.
+
+I meant 500k connected bot sessions in a day over a span of 8 to 9 hours.
+[19/03/26, 8:57:22 PM] ~ KY: I know it’s more like. Can you tell the reason why you prefer it?
+[19/03/26, 8:57:50 PM] ~ V: This is an important question especially in the current context of really good coding agents being available. And these coding agents will only get better.
+
+In that world, how much value is a framework adding?
+[19/03/26, 8:58:07 PM] ~ ~: When we measure scale it is usually per sec or per minute to give exact idea abt system efficiency
+[19/03/26, 8:58:29 PM] ~ V: @⁨~KY⁩ is that your line of thought as well?
+[19/03/26, 8:59:06 PM] ~ Subhankar: what is the benefit pipecat have over livekit?
+is pipecat open sourced?
+[19/03/26, 8:59:27 PM] ~ Umesh Pande: You are doing around 17tps that’s not big number btw
+[19/03/26, 8:59:38 PM] ~ V: Same question for Pipecat as well. I am not just talking about LiveKit.
+[19/03/26, 9:01:31 PM] ~ V: I can see the framework adds value on top of the basic pipeline build out.
+[19/03/26, 9:01:40 PM] ~ V: Like observability
+[19/03/26, 9:01:45 PM] ~ V: And so on
+[19/03/26, 9:01:57 PM] ~ V: But want to understand what the community thinks
+[19/03/26, 9:02:40 PM] ~ Subhankar: we have much better observability than Livekit, also when it comes to tools calls no observibility because framework r not built for them
+[19/03/26, 9:02:43 PM] ~ Suman Paudel: why use livekit you say?
+- open ai is core funder of it and it’s transport layer is opensource
+- ⁠dev friednly, you can literally have agents in 5mins
+- ⁠scaling, tell me any framework that can scale to this scale
+- ⁠control every layer
+- ⁠easy of debugging, and deployment
+- ⁠better community than others
+- ⁠the worlds best webrtc framework written in GO, even rust is no enough
+
+I have been building voice agents in Prod for like 3 years now, no better framework come close from open source one ‎<This message was edited>
+[19/03/26, 9:03:51 PM] ~ Subhankar: I agree with the last point.
+[19/03/26, 9:04:11 PM] ~ Nithish Bharadwaj: There is a limitation put by the PSTN telecom carriers here.
+If you take a SIP trunk from a VNO, you are typically only allowed to make 1 call per second (CPS), and have to pay more to increase the concurrency.
+
+When we take SIP trunks from Telcos like Airtel, we typically get 30 CPS for a trunk allowing 1000 concurrent channels. That means you need will need at least 35 seconds to utilise the full capacity of the trunk making 30 calls each second. That is assuming all calls are answered. But that's not the case. Typically you will only have 20-25% of the calls answered and the rest go unanswered for different reasons (busy, not reachable, no answer etc)
+
+So no telephony system will allow you to make multiple thousands of calls per second.
+[19/03/26, 9:07:34 PM] ~ Kiran: Agree with scaling and less  
+application layer over head ‎<This message was edited>
+[19/03/26, 9:09:41 PM] ~ ~: All of above is true, let’s keep the telecom limitation aside n say we have unlimited cps then how may concurrent connections system can handle per minute / per sec n with what system config requirements
+[19/03/26, 9:09:51 PM] ~ Umesh Pande: There is no limitation from the telecom operators; it depends on the capacity of the channels you have provisioned or they have provisioned for you.
+[19/03/26, 9:12:17 PM] ~ Umesh Pande: that's should be our discussion points actually
+[19/03/26, 9:13:51 PM] ~ Suman Paudel: oh I forget to tell where livekit shines, it’s support for out of the box SIP.
+[19/03/26, 9:13:56 PM] ~ Suman Paudel: for telephony
+[19/03/26, 9:14:24 PM] ~ Nithish Bharadwaj: We can handle 1000 concurrent calls and stream the media for each call over a websocket, on a single server with 8 core 8 GB RAM. Dialing at 200 calls per second if the trunk allows it. This is with 100% of the calls also being recorded.
+
+This is the config in our prod environments.
+
+In case of Livekit instead of streaming over websocket, we make more more SIP session with Livekit SIP. ‎<This message was edited>
+[19/03/26, 9:14:26 PM] ~ Suman Paudel: I did so many custom sip for major platfors like Twilio, Plivo, Telnyx, Telecimi, Exotel, etc...
+[19/03/26, 9:15:04 PM] ~ Tarun Garg: Oh interesting 🤔, yes they said channels basis and how channels are used in pstn pstn vs IP pstn setup is also interesting,  like how does intermixing happens
+[19/03/26, 9:15:57 PM] ~ Tarun Garg: But if Exotel and likes provides their own sip solutions, why would you want it - usecase? Just curious.
+[19/03/26, 9:16:18 PM] ~ Tarun Garg: Or is it cost? And lastly how does it play with telephony?
+[19/03/26, 9:16:27 PM] ~ Suman Paudel: one act as server and one act as client…. ‎<This message was edited>
+[19/03/26, 9:17:05 PM] ~ Suman Paudel: port map and config and routing
+[19/03/26, 9:17:20 PM] ~ Umesh Pande: thats great and what is AHT? also what is format of recorded files? ‎<This message was edited>
+[19/03/26, 9:17:32 PM] ~ Devansh: is this a TRAI regulation or a VNO limitation. Haven’t faced this before. Have used 10+ CPS
+[19/03/26, 9:18:00 PM] ~ Tarun Garg: Didn't click yet. Can you maybe suggest w an example as to when it comes handy vs traditional
+[19/03/26, 9:20:12 PM] ~ Nithish Bharadwaj: I never said you can't use 10+ CPS. Indian Telcos don't give more CPS is what I told. They typically only give 30 CPS for every 1000 channels. So if you take 5000 channels, you will get 150 CPS.
+[19/03/26, 9:20:25 PM] ~ Suman Paudel: you connect your agent to telephony via SIP through PSTN networks. livekit framework provides sip server, then you simply contact telephony provdier and update the sip routes and voila your agent now can do inbound and outbound. ‎<This message was edited>
+[19/03/26, 9:20:44 PM] ~ Suman Gandham: It’s 4% of your volume is what they give on cps
+[19/03/26, 9:22:45 PM] ~ Nithish Bharadwaj: In voice bot calls AHT will typically be under a minute.
+
+Recording format is configurable. We support wav if you want lossless and MP3 if you want to reduce disk space.
+[19/03/26, 9:23:39 PM] ~ ~: What are you using under the hood?
+[19/03/26, 9:24:21 PM] ~ Umesh Pande: means its just play audio correct?
+[19/03/26, 9:24:54 PM] ~ Nithish Bharadwaj: Freeswitch for SIP stack and codec handling. With our own custom modules replacing the other opensource Freeswitch modules.
+[19/03/26, 9:25:23 PM] ~ KY: if you really need go then checkout https://github.com/square-key-labs/strawgo-ai
+
+it’s very early but pure go implement follow pipecat arch
+[19/03/26, 9:25:30 PM] ~ Maahin .Vimlesh .Panchal: Sorry to ask something typically related but not practically I need to ask one thing that SLM can be connected to livekit or pipecat and still communication can be fluent ? As I am starting with slm but before I need to ask which platform can more helpful I ask lm notebook it suggested but still
+..
+[19/03/26, 9:26:16 PM] ~ Nithish Bharadwaj: We are talking about Telephony layer here Umesh. We make the call and connect human to voicebot either over websocket or SIP trunk. After that whatever each other says flows.
+[19/03/26, 9:29:11 PM] ‪+91 78309 33922‬: ‎‪+91 78309 33922‬ joined using a group link.
+[19/03/26, 9:29:16 PM] ‪+91 88006 04703‬: ‎‪+91 88006 04703‬ joined using a group link.
+[19/03/26, 9:30:47 PM] ~ Suman Paudel: yes but you need customizations on the internals, have bidirectional websockets or openai compatible version
+[19/03/26, 9:31:25 PM] ~ ~: Nice
+[19/03/26, 9:32:25 PM] ~ Umesh Pande: If you are connecting calls—as I assume in cases where someone answers for a loan, card, or similar offering—there will be talk time, which is referred to as AHT (Average Handling Time). In any case, you will need SIP trunking or PRI, or similar connectivity.
+[19/03/26, 9:33:33 PM] ~ ~: Any testing/benchmarking numbers?
+[19/03/26, 9:33:57 PM] ~ Maahin .Vimlesh .Panchal: Okay but there are options for inference does it is useful for openai compatible version but how will manage bidirectional thing
+[19/03/26, 9:43:09 PM] ‪+91 70568 36652‬: ‎‪+91 70568 36652‬ joined using a group link.
+[19/03/26, 9:43:13 PM] ‪+91 6203 810 801‬: ‎‪+91 6203 810 801‬ joined using a group link.
+[19/03/26, 9:36:58 PM] ~ Suman Paudel: either use inference engines or create you own fastapi bi directional websockets or similar
+[19/03/26, 9:38:23 PM] ~ Maahin .Vimlesh .Panchal: Okay will look after it
+[19/03/26, 10:04:56 PM] ~ Raunaq Arora: ‎~ Raunaq Arora joined using a group link.
+[19/03/26, 10:05:00 PM] ‪+212 697‑275212‬: ‎‪+212 697‑275212‬ joined using a group link.
+[20/03/26, 12:08:13 AM] ‪+44 7565 875581‬: ‎‪+44 7565 875581‬ joined using a group link.
+[20/03/26, 12:08:18 AM] ‪+44 7952 543023‬: ‎‪+44 7952 543023‬ joined using a group link.
+[20/03/26, 12:08:22 AM] ‪+44 7796 686028‬: ‎‪+44 7796 686028‬ joined using a group link.
