@@ -181,7 +181,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               {isOpen && (
                 <div
                   className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50"
-                  style={{ width: "280px" }}
+                  style={{ width: "max-content", minWidth: "260px", maxWidth: "320px" }}
                 >
                   {/* Triangle pointer */}
                   <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
