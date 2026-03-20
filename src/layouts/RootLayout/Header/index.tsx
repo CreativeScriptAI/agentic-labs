@@ -277,7 +277,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
           {/* Desktop Navigation - positioned on the right end */}
           <div className="hidden md:flex items-center justify-center gap-4">
-            <NavBar />
+            <NavBar isScrolled={isScrolled} />
             {/* CountrySelector hidden - automatic routing only */}
             <Link
               href="https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
