@@ -1618,16 +1618,20 @@ const PricingSection = () => {
       replaces: "Part-time answering service",
       roi: "Convert 1 extra lead/month and you've already broken even.",
       ctaHref: CAL_LINK,
-      features: [
-        { text: "100 voice minutes/month", val: null },
-        { text: "1 AI agent (support or sales)", val: null },
-        { text: "Dedicated Indian business number", val: null },
-        { text: "Hindi or English", val: null },
-        { text: "Instant WhatsApp reply to every lead, 24/7", val: "₹5,000/mo value" },
-        { text: "Missed-call WhatsApp fallback", val: null },
-        { text: "Lead pipeline dashboard", val: null },
-        { text: "3 script tweaks/month", val: null },
-        { text: "Email support, 48h SLA", val: null },
+      featureGroups: [
+        { label: "Calls & Coverage", items: [
+          { text: "100 voice minutes/month", val: null },
+          { text: "1 AI agent — support or sales", val: null },
+          { text: "Indian business number + Hindi or English", val: null },
+        ]},
+        { label: "Follow-up", items: [
+          { text: "Instant WhatsApp reply to every lead, 24/7", val: "₹5,000/mo value" },
+          { text: "Missed-call WhatsApp fallback", val: null },
+        ]},
+        { label: "Tools & Support", items: [
+          { text: "Lead pipeline dashboard", val: null },
+          { text: "3 script tweaks/month + Email support, 48h", val: null },
+        ]},
       ],
       overage: "₹600 per 100 extra minutes",
       best: "Clinics, brokers, service businesses who want proof first.",
@@ -1643,18 +1647,23 @@ const PricingSection = () => {
       replaces: "Full-time receptionist (₹25,000-35,000/mo salary)",
       roi: "Convert 3 extra leads/month and the agent pays for itself 3x over.",
       ctaHref: CAL_LINK,
-      features: [
-        { text: "1,500 voice minutes/month", val: null },
-        { text: "2 AI agents (Dhvani + Sandesh)", val: null },
-        { text: "3 concurrent calls", val: null },
-        { text: "Bilingual, auto Hindi ↔ English mid-sentence", val: null },
-        { text: "Done-for-you script engineering, unlimited tweaks", val: "₹15,000 value" },
-        { text: "14-day WhatsApp + voice follow-up sequence", val: "₹8,000 value" },
-        { text: "Smart channel switching", val: null },
-        { text: "Owner WhatsApp alerts: new lead, hot flag, booking", val: null },
-        { text: "No-Show Recovery — checks in 2 hrs before", val: "₹5,000 value" },
-        { text: "CRM export: Sheets, Airtable, Webhook", val: null },
-        { text: "Priority WhatsApp support, 24h SLA", val: null },
+      featureGroups: [
+        { label: "Calls & Coverage", items: [
+          { text: "1,500 min · 2 agents (Dhvani + Sandesh)", val: null },
+          { text: "3 concurrent calls · Bilingual Hindi ↔ English", val: null },
+        ]},
+        { label: "Follow-up System", items: [
+          { text: "14-day WhatsApp + voice follow-up sequence", val: "₹8,000 value" },
+          { text: "No-Show Recovery — checks in 2 hrs before", val: "₹5,000 value" },
+          { text: "Smart channel switching + Owner alerts", val: null },
+        ]},
+        { label: "Setup & Automation", items: [
+          { text: "Done-for-you scripts, unlimited tweaks", val: "₹15,000 value" },
+          { text: "CRM export: Sheets, Airtable, Webhook", val: null },
+        ]},
+        { label: "Support", items: [
+          { text: "Priority WhatsApp support, 24h SLA", val: null },
+        ]},
       ],
       overage: null,
       best: "Dental clinics, real estate agencies, hiring teams.",
@@ -1670,17 +1679,20 @@ const PricingSection = () => {
       replaces: "3-person call center team (₹75,000-90,000/mo)",
       roi: "Typical ROI: 8-12x within the first 90 days.",
       ctaHref: CAL_LINK,
-      features: [
-        { text: "5,000 voice minutes/month", val: null },
-        { text: "Unlimited agents, custom routing", val: null },
-        { text: "10+ concurrent calls", val: null },
-        { text: "Up to 3 dedicated Indian business numbers", val: null },
-        { text: "Any language, multilingual routing", val: null },
-        { text: "Dead Lead Reactivation, 30-day drip campaign", val: "₹20,000 value" },
-        { text: "Autonomous A/B testing, AI adopts winner automatically", val: "₹15,000 value" },
-        { text: "2-way CRM sync: Salesforce, HubSpot, Zoho", val: null },
-        { text: "Weekly WhatsApp performance summary", val: null },
-        { text: "Dedicated Account Manager", val: "₹30,000 value" },
+      featureGroups: [
+        { label: "Calls & Coverage", items: [
+          { text: "5,000 min · Unlimited agents · 10+ concurrent", val: null },
+          { text: "3 numbers · Any language, multilingual routing", val: null },
+        ]},
+        { label: "Growth Automation", items: [
+          { text: "Dead Lead Reactivation, 30-day drip", val: "₹20,000 value" },
+          { text: "Autonomous A/B testing — AI picks the winner", val: "₹15,000 value" },
+          { text: "2-way CRM sync: Salesforce, HubSpot, Zoho", val: null },
+        ]},
+        { label: "Success & Reporting", items: [
+          { text: "Weekly WhatsApp performance summary", val: null },
+          { text: "Dedicated Account Manager", val: "₹30,000 value" },
+        ]},
       ],
       overage: null,
       best: "Hospitals, large brokerages, BPOs, staffing agencies.",
@@ -1777,24 +1789,31 @@ const PricingSection = () => {
                 </div>
 
                 {/* Features */}
-                <div className="px-6 py-5">
-                  <ul className="space-y-2">
-                    {t.features.map((f, j) => (
-                      <li key={j} className={`flex items-start gap-2.5 text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
-                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${t.highlight ? "text-green-400" : "text-green-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>
-                          {f.text}
-                          {f.val && (
-                            <span className={`ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-md ${t.highlight ? "bg-[#FCCA07]/20 text-[#FCCA07]" : "bg-blue-50 text-blue-500"}`}>
-                              {f.val}
+                <div className="px-6 py-5 space-y-5">
+                  {t.featureGroups.map((group, gi) => (
+                    <div key={gi}>
+                      <p className={`text-[9px] font-bold tracking-[0.14em] uppercase mb-2 ${t.highlight ? "text-white/35" : "text-gray-400"}`}>
+                        {group.label}
+                      </p>
+                      <ul className="space-y-1.5">
+                        {group.items.map((f, j) => (
+                          <li key={j} className={`flex items-start gap-2 text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
+                            <svg className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${t.highlight ? "text-green-400" : "text-green-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>
+                              {f.text}
+                              {f.val && (
+                                <span className={`ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-md ${t.highlight ? "bg-[#FCCA07]/20 text-[#FCCA07]" : "bg-blue-50 text-blue-500"}`}>
+                                  {f.val}
+                                </span>
+                              )}
                             </span>
-                          )}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="flex-1" />
