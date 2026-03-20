@@ -225,86 +225,73 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
       </div>
 
       <header
-        className={`fixed left-0 w-full z-[99] transition-all duration-300 ease-in-out backdrop-blur-xl border-b ${
+        className={`fixed left-0 w-full z-[99] transition-all duration-300 ease-in-out ${
           isHeaderVisible ? "top-0" : "-top-24"
-        } ${
-          isScrolled
-            ? "bg-white/90 border-black/[0.06] shadow-[0_2px_24px_rgba(0,0,0,0.07)]"
-            : "bg-white/60 border-white/30"
         }`}
       >
-        <div className="pt-0 px-4 md:px-24 lg:px-24 xl:px-24 md:px-4 mx-auto mx-2 md:mx-0 flex h-16 items-center justify-between ml-4 mr-4 md:translate-y-0 rounded-xl md:bg-transparent bg-white/80 md:shadow-none shadow-[0_0_0_1px_rgba(0,0,0,0.06),0_6px_25px_0_rgba(0,0,0,0.08)] relative">
-          {/* Desktop Logo - hidden on mobile */}
-          <div className="hidden md:flex flex-shrink-0">
+        {/* ── DESKTOP floating pill ─────────────────────────────────────────── */}
+        <div className="hidden md:flex items-center justify-center px-6 pt-4">
+          <div
+            className={`flex items-center gap-6 px-5 py-3 rounded-2xl border transition-all duration-300 ${
+              isScrolled
+                ? "bg-white/95 border-black/[0.07] shadow-[0_4px_28px_rgba(0,0,0,0.10)] backdrop-blur-xl"
+                : "bg-white/70 border-white/50 shadow-[0_2px_16px_rgba(0,0,0,0.06)] backdrop-blur-xl"
+            }`}
+          >
             <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
-          </div>
-
-          {/* Mobile Layout */}
-          <div className="md:hidden flex items-center justify-between w-full relative z-[102]">
-            <div className="flex-shrink-0">
-              <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
-            </div>
-
-            <button
-              className="flex flex-col justify-center items-center w-10 h-10 border-0 bg-transparent cursor-pointer -mr-2 active:opacity-70 transition-opacity"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                toggleMobileMenu();
-              }}
-              aria-label="Toggle mobile menu"
-              aria-expanded={isMobileMenuOpen}
-              ref={mobileBurgerButtonRef}
-              type="button"
-            >
-              <span
-                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                }`}
-              />
-            </button>
-          </div>
-
-          {/* Desktop Navigation - positioned on the right end */}
-          <div className="hidden md:flex items-center justify-center gap-4">
+            <div className="w-px h-5 bg-black/10" />
             <NavBar />
-            {/* CountrySelector hidden - automatic routing only */}
+            <div className="w-px h-5 bg-black/10" />
             <Link
               href="https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-5 py-2.5 text-xs font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-5 py-2 text-xs font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
             >
               Book Free Call
             </Link>
-            {/* <div
-              className="-ml-4 rounded-lg p-[6px] bg-white"
-              style={{ borderRadius: "8px", border: "1px solid #E0E0E0" }}
-              onClick={() => {
-                window.open("https://wa.me/919532555110", "_blank");
-              }}
-            >
-              <Image
-                src="/images/whatsappicon.png"
-                alt="WhatsApp"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-              />
-            </div> */}
+          </div>
+        </div>
+
+        {/* ── MOBILE bar ───────────────────────────────────────────────────── */}
+        <div className={`md:hidden flex items-center justify-between px-4 py-3 border-b transition-all duration-300 ${
+          isScrolled ? "bg-white/95 border-black/[0.07] shadow-sm backdrop-blur-xl" : "bg-white/80 border-white/40 backdrop-blur-xl"
+        }`}>
+          <div className="flex-shrink-0">
+            <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
           </div>
 
-          {/* Mobile Menu Button - Hidden on all screens */}
           <button
+            className="flex flex-col justify-center items-center w-10 h-10 border-0 bg-transparent cursor-pointer -mr-2 active:opacity-70 transition-opacity"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleMobileMenu();
+            }}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+            ref={mobileBurgerButtonRef}
+            type="button"
+          >
+            <span
+              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out ${
+                isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
+                isMobileMenuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
+                isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile Menu Button - Hidden on all screens */}
+        <button
             className="hidden flex-col justify-center items-center w-8 h-8 border-0 bg-transparent cursor-pointer"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
@@ -326,7 +313,6 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
               }`}
             />
           </button>
-        </div>
 
         {/* Mobile Menu Overlay - Simplified for performance */}
         <AnimatePresence>
