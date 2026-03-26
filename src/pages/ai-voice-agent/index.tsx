@@ -1951,7 +1951,80 @@ const PricingSection = () => {
           ))}
         </div>
 
-        <p className="text-xs text-gray-400 mt-3 text-center">
+        {/* Booster Packs */}
+        <div className="mt-8 border border-gray-200 rounded-2xl overflow-hidden bg-white">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3">
+            <div className="w-7 h-7 rounded-lg bg-[#FCCA07]/20 flex items-center justify-center flex-shrink-0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <div>
+              <p className="text-sm font-bold text-[#0A1128]">Need more? Add a Booster Pack.</p>
+              <p className="text-xs text-gray-500 mt-0.5">Pre-paid add-ons you can stack on any plan — no surprises, no per-minute billing.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+            {[
+              {
+                name: "Minutes Booster",
+                qty: "+ 500 min",
+                price: "₹999",
+                unit: "per pack",
+                desc: "Extra call minutes when your plan runs out. Rolls over unused minutes to next month.",
+                icon: (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                ),
+              },
+              {
+                name: "WhatsApp Booster",
+                qty: "+ 1,000 msgs",
+                price: "₹499",
+                unit: "per pack",
+                desc: "Extra outbound WhatsApp follow-ups, reminders, and confirmations beyond your plan quota.",
+                icon: (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374A9.86 9.86 0 012.157 11.892c0-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                ),
+              },
+              {
+                name: "Agent Booster",
+                qty: "+ 1 agent",
+                price: "₹799",
+                unit: "per month",
+                desc: "Add a dedicated AI agent for a new number, department, or vertical — fully configured.",
+                icon: (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                  </svg>
+                ),
+              },
+            ].map((pack, i) => (
+              <div key={i} className="px-5 py-4 flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    {pack.icon}
+                    <span className="text-xs font-bold text-[#0A1128] uppercase tracking-wide">{pack.name}</span>
+                  </div>
+                  <span className="text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full whitespace-nowrap">{pack.qty}</span>
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-lg font-bold text-[#0A1128]">{pack.price}</span>
+                  <span className="text-xs text-gray-400">{pack.unit}</span>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">{pack.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
+            <p className="text-[11px] text-gray-400 text-center">Booster Packs are pre-purchased blocks — not per-minute billing. You always know what you&apos;re spending.</p>
+          </div>
+        </div>
+
+        <p className="text-xs text-gray-400 mt-4 text-center">
           WhatsApp charges billed directly to your Meta Business account at Meta&apos;s standard rates. We handle the full technical setup.
         </p>
       </Container>
