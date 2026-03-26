@@ -229,7 +229,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           isHeaderVisible ? "top-0" : "-top-24"
         }`}
       >
-        {/* ── DESKTOP floating pill ─────────────────────────────────────────── */}
+        {/* ── DESKTOP floating pill — glass morphism, centered, all pages ──── */}
         <div className="hidden md:flex items-center justify-center px-6 pt-4">
           <div
             className={`flex items-center gap-6 px-5 py-3 rounded-2xl border transition-all duration-300 ${
