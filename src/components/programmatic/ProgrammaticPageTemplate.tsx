@@ -497,6 +497,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           </div>
 
           {page.caseStudy ? (
+
             <div className="space-y-5">
               {/* Case study card */}
               <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
@@ -645,6 +646,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             <CTAButton href={page.ctaHref} label={page.ctaLabel} />
           </div>
           {page.ctaEmailFallback && (
+
             <p className="text-sm text-gray-400 font-sfpro">
               Or email us:{" "}
               <a href={`mailto:${page.ctaEmailFallback}`} className="text-blue-300 hover:text-white transition-colors">
