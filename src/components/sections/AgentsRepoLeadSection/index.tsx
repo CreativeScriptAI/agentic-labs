@@ -1,7 +1,7 @@
 import React from "react";
 
 const CAL_LINK =
-  "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min";
+  "https://cal.com/ai-aditya/30min";
 
 const AgentsRepoLeadSection = () => {
   return (

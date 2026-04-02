@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
-const CAL_LINK = "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min";
+const CAL_LINK = "https://cal.com/ai-aditya/30min";
 const CANONICAL_URL = "https://www.tryagentikai.com/ai-receptionist-for-dental-practices";
 
 // ─── Reusable Section wrapper ──────────────────────────────────────────────────

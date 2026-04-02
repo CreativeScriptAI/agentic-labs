@@ -35,7 +35,7 @@ const WhoItsForSection = () => {
           <button
             onClick={() => {
               window.open(
-                "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
+                "https://cal.com/ai-aditya/30min",
                 "_blank"
               );
             }}

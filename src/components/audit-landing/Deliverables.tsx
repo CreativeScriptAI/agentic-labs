@@ -91,7 +91,7 @@ export function Deliverables() {
                 className="bg-[#0062ff] hover:bg-[#0052d9] box-border content-stretch flex gap-[6px] items-center px-[24px] py-[12px] relative rounded-[8px] shrink-0 transition-colors duration-300"
                 onClick={() =>
                   window.open(
-                    "https://cal.com/free-ai-clarity-call-avoid-costly-automation-mistakes/30min",
+                    "https://cal.com/ai-aditya/30min",
                     "_blank"
                   )
                 }
