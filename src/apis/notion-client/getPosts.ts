@@ -15,7 +15,7 @@ export const getPosts = async (): Promise<TPosts> => {
   try {
     let id = CONFIG.notionConfig.pageId as string;
     console.log(`[getPosts] Fetching posts from Notion pageId: ${id}`);
-    const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN });
+    const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: { mode: undefined as any } });
 
     try {
       const response = await api.getPage(id);
