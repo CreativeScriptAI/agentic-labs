@@ -2,108 +2,97 @@ import { CONFIG } from "site.config";
 import { NotionAPI } from "notion-client";
 import { idToUuid } from "notion-utils";
 
-import getAllPageIds from "src/libs/utils/notion/getAllPageIds";
 import getPageProperties from "src/libs/utils/notion/getPageProperties";
 import { TPosts } from "src/types";
 
-/**
- * @param {{ includePages: boolean }} - false: posts only / true: include pages
- */
+const NOTION_API_OPTIONS = {
+  authToken: process.env.NOTION_TOKEN,
+  kyOptions: { mode: undefined as any },
+};
 
-// TODO: react query를 사용해서 처음 불러온 뒤로는 해당데이터만 사용하도록 수정
 export const getPosts = async (): Promise<TPosts> => {
   try {
-    let id = CONFIG.notionConfig.pageId as string;
-    console.log(`[getPosts] Fetching posts from Notion pageId: ${id}`);
-    const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: { mode: undefined as any } });
+    const rawId = CONFIG.notionConfig.pageId as string;
+    console.log(`[getPosts] Fetching posts from Notion pageId: ${rawId}`);
+    const api = new NotionAPI(NOTION_API_OPTIONS);
 
-    try {
-      const response = await api.getPage(id);
-      id = idToUuid(id);
-      const collection = (Object.values(response.collection)[0] as any)?.value?.value;
-      const block = response.block;
-      const schema = collection?.schema;
+    // Step 1: getPage to get collection ID, view ID, schema
+    const pageResponse = await api.getPage(rawId);
 
-      if (!collection) {
-        console.warn(`[getPosts] No collection found in response for pageId: ${id}`);
-        return [];
-      }
+    const collectionId = Object.keys(pageResponse.collection || {})[0];
+    const collectionViewId = Object.keys(pageResponse.collection_view || {})[0];
 
-      if (!schema) {
-        console.warn(`[getPosts] No schema found in collection for pageId: ${id}`);
-        return [];
-      }
-
-      const rawMetadata = (block[id] as any)?.value?.value;
-
-      if (!rawMetadata) {
-        console.warn(`[getPosts] No metadata found for pageId: ${id}`);
-        return [];
-      }
-
-      // Check Type
-      if (
-        rawMetadata?.type !== "collection_view_page" &&
-        rawMetadata?.type !== "collection_view"
-      ) {
-        console.warn(`[getPosts] Page type is not collection_view_page or collection_view. Type: ${rawMetadata?.type}`);
-        return [];
-      } else {
-        // Construct Data
-        const pageIds = getAllPageIds(response);
-        console.log(`[getPosts] Found ${pageIds.length} page IDs in collection`);
-        const data = [];
-        for (let i = 0; i < pageIds.length; i++) {
-          const id = pageIds[i];
-          try {
-            const properties =
-              (await getPageProperties(id, block, schema)) || null;
-            if (properties) {
-              // Add fullwidth, createdtime to properties
-              properties.createdTime = new Date(
-                (block[id] as any).value?.value?.created_time
-              ).toString();
-              properties.fullWidth =
-                (block[id] as any).value?.value?.format?.page_full_width ?? false;
-
-              data.push(properties);
-            }
-          } catch (error) {
-            console.warn(`[getPosts] Failed to get properties for page ${id}:`, error);
-            // Skip this page and continue with others
-            continue;
-          }
-        }
-
-        console.log(`[getPosts] Successfully processed ${data.length} posts`);
-
-        // Sort by date
-        data.sort((a: any, b: any) => {
-          const dateA: any = new Date(a?.date?.start_date || a.createdTime);
-          const dateB: any = new Date(b?.date?.start_date || b.createdTime);
-          return dateB - dateA;
-        });
-
-        const posts = data as TPosts;
-        return posts;
-      }
-    } catch (error: any) {
-      console.error(`[getPosts] Failed to fetch posts from pageId: ${id}`, error);
-      console.error(`[getPosts] Error details:`, {
-        message: error?.message,
-        status: error?.response?.status || error?.status,
-        statusText: error?.response?.statusText,
-      });
-
-      // Return empty array if there's an API error during build
-      if (error?.response?.status === 400 || error?.status === 400) {
-        console.warn(`[getPosts] Returning empty posts array due to API error (400)`);
-        return [];
-      }
-
-      // Re-throw other errors
-      throw error;
+    if (!collectionId || !collectionViewId) {
+      console.warn(`[getPosts] Missing collectionId or viewId`);
+      return [];
     }
+
+    // Correct paths: schema lives at .value.value.schema (double-nested)
+    const schema = (pageResponse.collection as any)[collectionId]?.value?.value?.schema;
+    // Collection view object for getCollectionData lives at .value.value
+    const collectionViewObj = (pageResponse.collection_view as any)[collectionViewId]?.value?.value;
+
+    if (!schema) {
+      console.warn(`[getPosts] No schema found`);
+      return [];
+    }
+
+    console.log(`[getPosts] collectionId=${collectionId} viewId=${collectionViewId} schema keys=${Object.keys(schema).length}`);
+
+    // Step 2: fetch all collection rows explicitly
+    const collData = await api.getCollectionData(
+      collectionId,
+      collectionViewId,
+      collectionViewObj,
+      { limit: 999 }
+    );
+
+    // Block IDs live at result.reducerResults.collection_group_results.blockIds
+    const result = (collData as any)?.result;
+    const blockIds: string[] =
+      result?.reducerResults?.collection_group_results?.blockIds ??
+      result?.blockIds ??
+      [];
+
+    console.log(`[getPosts] Got ${blockIds.length} block IDs from collection`);
+
+    if (blockIds.length === 0) {
+      console.warn(`[getPosts] 0 block IDs returned`);
+      return [];
+    }
+
+    // Merge blocks from both responses
+    const block = {
+      ...pageResponse.block,
+      ...((collData as any)?.recordMap?.block ?? {}),
+    };
+
+    // Step 3: build post objects from block IDs
+    const data = [];
+    for (const id of blockIds) {
+      try {
+        const properties = (await getPageProperties(id, block, schema)) || null;
+        if (properties) {
+          const blockValue = (block[id] as any)?.value?.value ?? (block[id] as any)?.value;
+          properties.createdTime = new Date(blockValue?.created_time).toString();
+          properties.fullWidth = blockValue?.format?.page_full_width ?? false;
+          data.push(properties);
+        }
+      } catch (error) {
+        console.warn(`[getPosts] Skipping page ${id}:`, error);
+        continue;
+      }
+    }
+
+    console.log(`[getPosts] Successfully processed ${data.length} posts`);
+
+    data.sort((a: any, b: any) => {
+      const dateA: any = new Date(a?.date?.start_date || a.createdTime);
+      const dateB: any = new Date(b?.date?.start_date || b.createdTime);
+      return dateB - dateA;
+    });
+
+    return data as TPosts;
   } catch (error) {
     console.error("[getPosts] Error in getPosts:", error);
     return [];
