@@ -12,6 +12,7 @@ import { queryKey } from "src/constants/queryKey";
 import { dehydrate } from "@tanstack/react-query";
 import usePostQuery from "src/hooks/usePostQuery";
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts";
+import { useRouter } from "next/router";
 
 const filter: FilterPostsOptions = {
   acceptStatus: ["Public", "PublicOnDetail"],
@@ -117,7 +118,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const DetailPage: NextPageWithLayout = () => {
+  const router = useRouter();
   const post = usePostQuery();
+
+  // Wait for the router to be ready so router.query.slug is populated
+  // before the usePostQuery hook can find the correct cache entry.
+  // Without this, it looks up ["post", "undefined"] and returns null → CustomError.
+  if (!router.isReady || router.isFallback) return null;
 
   if (!post) return <CustomError />;
 
