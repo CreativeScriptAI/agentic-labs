@@ -60,9 +60,9 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
       id: 1,
       name: "Products",
       items: [
-        { name: "AI Voice Agent", to: "/ai-voice-agent/", badge: "New", desc: "Calls answered. Follow-ups on WhatsApp." },
-        { name: "AI Memory System", to: `${countryPrefix}/ai-memory-system/`, desc: "Memory that persists across every session." },
-        { name: "AI Workshop", to: `${countryPrefix}/ai-clarity-workshop/`, desc: "One session. A clear AI roadmap for your business." },
+        { name: "(Voice + Text) AI Agent", to: "/ai-voice-agent/", badge: "New", desc: "Calls answered. Follow-ups on WhatsApp." },
+        { name: "Second Brain for AI Agent", to: `${countryPrefix}/ai-memory-system/`, desc: "Memory that persists across every session." },
+        { name: "FREE AI Clarity Workshop", to: `${countryPrefix}/ai-clarity-workshop/`, desc: "One session. A clear AI roadmap for your business." },
       ],
     },
     { type: "link", id: 2, name: "Services", to: `${countryPrefix}/services/` },
