@@ -29,9 +29,14 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
       }
     };
 
-    const handleRouteChangeComplete = () => {
-      // Scroll to top on route change (except back navigation)
-      window.scrollTo(0, 0);
+    const handleRouteChangeComplete = (url: string) => {
+      // Scroll to top only on full page navigations — skip hash-only changes (#section)
+      // on the same path, which are in-page anchor jumps and should not reset scroll.
+      const currentPath = window.location.pathname;
+      const newPath = url.split("#")[0].split("?")[0];
+      if (newPath && newPath !== currentPath) {
+        window.scrollTo(0, 0);
+      }
     };
 
     // Set scroll restoration to manual on initial load

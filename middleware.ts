@@ -28,6 +28,65 @@ import { NextRequest, NextResponse } from "next/server";
 // ];
 
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // ── Voice agent geo-routing ───────────────────────────────────────────────
+  // India (IN) → /ai-voice-agent (India pricing)
+  // Everyone else → /ai-voice-agent-global (global pricing)
+  const isVoiceIndia  = pathname === "/ai-voice-agent"  || pathname === "/ai-voice-agent/";
+  const isVoiceGlobal = pathname === "/ai-voice-agent-global" || pathname === "/ai-voice-agent-global/";
+
+  if (isVoiceIndia || isVoiceGlobal) {
+    const url = request.nextUrl.clone();
+
+    // ── Manual override via ?version=global or ?version=india ────────────────
+    // Useful for demos: share /ai-voice-agent?version=global to show global
+    // pricing to a US client even when opening from India.
+    // The override is stored in a cookie so it persists for the session.
+    const versionParam = request.nextUrl.searchParams.get("version");
+    const versionCookie = request.cookies.get("voice-version")?.value;
+    const version = versionParam ?? versionCookie ?? null;
+
+    if (version === "global") {
+      url.pathname = "/ai-voice-agent-global";
+      url.searchParams.delete("version");
+      const res = NextResponse.rewrite(url);
+      if (versionParam) res.cookies.set("voice-version", "global", { path: "/", maxAge: 60 * 60 * 24 });
+      return res;
+    }
+
+    if (version === "india") {
+      url.pathname = "/ai-voice-agent";
+      url.searchParams.delete("version");
+      const res = NextResponse.rewrite(url);
+      if (versionParam) res.cookies.set("voice-version", "india", { path: "/", maxAge: 60 * 60 * 24 });
+      return res;
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+
+    // ── Geo-based routing (no override set) ──────────────────────────────────
+    const country =
+      request.headers.get("x-vercel-ip-country") ||
+      request.headers.get("cf-ipcountry") ||
+      request.headers.get("x-country-code") ||
+      null;
+
+    const isIndia = country === "IN";
+
+    // Non-Indian visitor on /ai-voice-agent → serve global page silently
+    if (!isIndia && isVoiceIndia) {
+      url.pathname = "/ai-voice-agent-global";
+      return NextResponse.rewrite(url);
+    }
+
+    // Indian visitor on /ai-voice-agent-global → serve India page silently
+    if (isIndia && isVoiceGlobal) {
+      url.pathname = "/ai-voice-agent";
+      return NextResponse.rewrite(url);
+    }
+  }
+  // ─────────────────────────────────────────────────────────────────────────
+
   // COMMENTED OUT: Auto-redirect to language/locale pages disabled
   // const { pathname } = request.nextUrl;
 

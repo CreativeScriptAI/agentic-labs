@@ -108,16 +108,22 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
+      // Save current scroll position before locking — without this the page jumps to top
+      const scrollY = window.scrollY;
       const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       // Prevent scroll on iOS
       document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
 
       return () => {
         document.body.style.overflow = originalOverflow;
         document.body.style.position = "";
+        document.body.style.top = "";
         document.body.style.width = "";
+        // Restore the scroll position
+        window.scrollTo(0, scrollY);
       };
     }
   }, [isMobileMenuOpen]);
