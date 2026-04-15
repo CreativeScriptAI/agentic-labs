@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import MetaConfig from "src/components/MetaConfig";
 import { NextPageWithLayout } from "../../types";
+import SocialProofSection from "src/components/sections/AiClarityWorkshop/SocialProofSection";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const CAL_LINK =
@@ -2621,6 +2622,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       <HowItWorksSection />
       <UseCasesSection />
       <WhyDifferentSection />
+      <SocialProofSection />
       <PricingSection />
       <FreeAuditSection />
       <FAQSection />
