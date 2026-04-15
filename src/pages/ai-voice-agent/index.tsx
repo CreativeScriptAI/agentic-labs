@@ -4,6 +4,7 @@ import Link from "next/link";
 import MetaConfig from "src/components/MetaConfig";
 import { NextPageWithLayout } from "../../types";
 import SocialProofSection from "src/components/sections/AiClarityWorkshop/SocialProofSection";
+import FounderTeamSection from "src/components/sections/AiVoiceAgent/FounderTeamSection";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const CAL_LINK =
@@ -2623,6 +2624,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       <UseCasesSection />
       <WhyDifferentSection />
       <SocialProofSection />
+      <FounderTeamSection />
       <PricingSection />
       <FreeAuditSection />
       <FAQSection />
