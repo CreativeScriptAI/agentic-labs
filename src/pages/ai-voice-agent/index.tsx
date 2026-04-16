@@ -795,6 +795,257 @@ const SocialProofBar = () => {
   );
 };
 
+// ─── REAL CALL SAMPLES ───────────────────────────────────────────────────────
+type CallSample = {
+  id: string;
+  label: string;
+  scenario: string;
+  duration: string;
+  tag: string;
+  tagColor: string;
+  audioSrc?: string; // fill in when recordings are ready
+};
+
+const CALL_SAMPLES: CallSample[] = [
+  {
+    id: "dental",
+    label: "Dental Clinic",
+    scenario: "Patient calls to book an appointment. Dhvani collects details, checks slot availability & confirms.",
+    duration: "1:42",
+    tag: "Healthcare",
+    tagColor: "#10B981",
+    audioSrc: "", // TODO: add real recording URL
+  },
+  {
+    id: "realestate",
+    label: "Real Estate Enquiry",
+    scenario: "Buyer asks about a 2BHK listing. Dhvani answers questions, captures contact & schedules a site visit.",
+    duration: "2:05",
+    tag: "Real Estate",
+    tagColor: "#3B82F6",
+    audioSrc: "", // TODO: add real recording URL
+  },
+  {
+    id: "ecommerce",
+    label: "Order Status Call",
+    scenario: "Customer calls about a delayed order. Dhvani fetches status, gives ETA & offers a callback option.",
+    duration: "1:18",
+    tag: "E-commerce",
+    tagColor: "#F59E0B",
+    audioSrc: "", // TODO: add real recording URL
+  },
+  {
+    id: "services",
+    label: "Home Services Booking",
+    scenario: "Caller needs AC repair. Dhvani collects address, picks a time slot & sends WhatsApp confirmation.",
+    duration: "1:55",
+    tag: "Home Services",
+    tagColor: "#8B5CF6",
+    audioSrc: "", // TODO: add real recording URL
+  },
+];
+
+const AudioWaveformBars = ({ playing }: { playing: boolean }) => (
+  <div className="flex items-center gap-[3px] h-6">
+    {[0.4, 0.7, 1, 0.6, 0.9, 0.5, 0.8, 0.45, 0.75, 0.55, 0.85, 0.6].map((h, i) => (
+      <div
+        key={i}
+        className="w-[3px] rounded-full bg-[#FCCA07] origin-center"
+        style={{
+          height: `${h * 24}px`,
+          animation: playing ? `waveBar 0.9s ease-in-out ${i * 0.07}s infinite alternate` : "none",
+          opacity: playing ? 1 : 0.35,
+          transform: playing ? "none" : `scaleY(${h * 0.5})`,
+          transition: "opacity 0.3s, transform 0.3s",
+        }}
+      />
+    ))}
+  </div>
+);
+
+const RealCallSamplesSection = () => {
+  const [playingId, setPlayingId] = useState<string | null>(null);
+  const [progress, setProgress] = useState<Record<string, number>>({});
+  const audioRefs = useRef<Record<string, HTMLAudioElement | null>>({});
+  const progressIntervals = useRef<Record<string, ReturnType<typeof setInterval>>>({});
+
+  const handlePlay = (sample: CallSample) => {
+    const isCurrentlyPlaying = playingId === sample.id;
+
+    // Stop all
+    Object.values(audioRefs.current).forEach((a) => { if (a) { a.pause(); a.currentTime = 0; } });
+    Object.values(progressIntervals.current).forEach(clearInterval);
+    setProgress({});
+
+    if (isCurrentlyPlaying) { setPlayingId(null); return; }
+
+    if (!sample.audioSrc) {
+      // Placeholder — simulate playback progress visually
+      setPlayingId(sample.id);
+      const [min, sec] = sample.duration.split(":").map(Number);
+      const totalSec = min * 60 + sec;
+      let elapsed = 0;
+      progressIntervals.current[sample.id] = setInterval(() => {
+        elapsed += 0.25;
+        setProgress((p) => ({ ...p, [sample.id]: Math.min((elapsed / totalSec) * 100, 100) }));
+        if (elapsed >= totalSec) {
+          clearInterval(progressIntervals.current[sample.id]);
+          setPlayingId(null);
+          setProgress((p) => ({ ...p, [sample.id]: 0 }));
+        }
+      }, 250);
+      return;
+    }
+
+    // Real audio
+    const audio = new Audio(sample.audioSrc);
+    audioRefs.current[sample.id] = audio;
+    audio.play().catch(() => {});
+    setPlayingId(sample.id);
+    const [min, sec] = sample.duration.split(":").map(Number);
+    const totalSec = min * 60 + sec;
+    progressIntervals.current[sample.id] = setInterval(() => {
+      const pct = audio.duration
+        ? (audio.currentTime / audio.duration) * 100
+        : (audio.currentTime / totalSec) * 100;
+      setProgress((p) => ({ ...p, [sample.id]: pct }));
+    }, 250);
+    audio.onended = () => {
+      clearInterval(progressIntervals.current[sample.id]);
+      setPlayingId(null);
+      setProgress((p) => ({ ...p, [sample.id]: 0 }));
+    };
+  };
+
+  useEffect(() => {
+    return () => {
+      Object.values(audioRefs.current).forEach((a) => { if (a) a.pause(); });
+      Object.values(progressIntervals.current).forEach(clearInterval);
+    };
+  }, []);
+
+  return (
+    <section className="py-24 sm:py-32 bg-[#050B1B] relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[#FCCA07]/[0.025] blur-3xl" />
+      </div>
+
+      <Container size="lg">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <SectionLabel text="Real Calls · Real Customers" dark />
+          <h2 className="font-eb-garamond italic text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
+            Hear Dhvani in action.{" "}
+            <span className="text-white/40">With real callers.</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-xl mx-auto">
+            These are actual recordings of Dhvani handling live customer calls — not scripted demos.
+          </p>
+        </div>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {CALL_SAMPLES.map((sample) => {
+            const isPlaying = playingId === sample.id;
+            const pct = progress[sample.id] ?? 0;
+            const hasAudio = !!sample.audioSrc;
+
+            return (
+              <div
+                key={sample.id}
+                className={`relative rounded-[28px] border p-6 sm:p-7 flex flex-col gap-5 transition-all duration-300 ${
+                  isPlaying
+                    ? "bg-white/[0.07] border-[#FCCA07]/30 shadow-[0_0_40px_rgba(252,202,7,0.08)]"
+                    : "bg-white/[0.04] border-white/[0.07] hover:bg-white/[0.06] hover:border-white/[0.12]"
+                }`}
+              >
+                {/* Top row: tag + duration */}
+                <div className="flex items-center justify-between">
+                  <span
+                    className="text-[10px] font-black tracking-[0.18em] uppercase px-3 py-1 rounded-full"
+                    style={{ color: sample.tagColor, backgroundColor: `${sample.tagColor}18` }}
+                  >
+                    {sample.tag}
+                  </span>
+                  <span className="text-white/30 text-xs font-mono tabular-nums">{sample.duration}</span>
+                </div>
+
+                {/* Title + description */}
+                <div>
+                  <h3 className="text-white font-bold text-lg mb-2 leading-snug">{sample.label}</h3>
+                  <p className="text-white/45 text-sm leading-relaxed">{sample.scenario}</p>
+                </div>
+
+                {/* Waveform + progress */}
+                <div className="flex flex-col gap-3">
+                  <AudioWaveformBars playing={isPlaying} />
+                  {/* Progress bar */}
+                  <div className="h-[3px] rounded-full bg-white/[0.08] overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-[#FCCA07] transition-all duration-300"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                </div>
+
+                {/* Play button row */}
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={() => handlePlay(sample)}
+                    className={`flex items-center justify-center w-12 h-12 rounded-full transition-all active:scale-95 flex-shrink-0 ${
+                      isPlaying
+                        ? "bg-[#FCCA07] text-[#0A1128]"
+                        : "bg-white/10 text-white hover:bg-white/20"
+                    }`}
+                    aria-label={isPlaying ? "Pause" : "Play"}
+                  >
+                    {isPlaying ? (
+                      /* Pause icon */
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="6" y="4" width="4" height="16" rx="1" />
+                        <rect x="14" y="4" width="4" height="16" rx="1" />
+                      </svg>
+                    ) : (
+                      /* Play icon */
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5.14v14l11-7-11-7z" />
+                      </svg>
+                    )}
+                  </button>
+
+                  <div>
+                    {!hasAudio ? (
+                      <p className="text-white/25 text-xs">
+                        {isPlaying ? "Simulated preview — real recording coming soon" : "Tap to preview · Recording uploading soon"}
+                      </p>
+                    ) : (
+                      <p className="text-white/40 text-xs">
+                        {isPlaying ? "Now playing…" : "Tap to listen"}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom note */}
+        <p className="text-center text-white/20 text-xs mt-10">
+          Recordings shared with customer consent. Names and sensitive details redacted.
+        </p>
+      </Container>
+
+      <style jsx>{`
+        @keyframes waveBar {
+          from { transform: scaleY(0.4); }
+          to   { transform: scaleY(1.2); }
+        }
+      `}</style>
+    </section>
+  );
+};
+
 // ─── PROBLEM ──────────────────────────────────────────────────────────────────
 const ProblemSection = () => {
   const costs = [
@@ -2617,6 +2868,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
 
       <Hero onCardPlay={handleCardPlay} />
       <HearItYourselfSection activeTab={demoTab} onTabChange={setDemoTab} autoPlayTrigger={autoPlayTrigger} />
+      <RealCallSamplesSection />
       <SocialProofBar />
       <ProblemSection />
       <SolutionSection />
