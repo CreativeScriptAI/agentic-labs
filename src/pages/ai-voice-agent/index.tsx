@@ -117,6 +117,7 @@ const DEMOS: Record<DemoTab, {
   scenario: string;
   color: string;
   audioSrc: string;
+  customerMessage: string;
   transcript: { speaker: "Caller" | "Dhvani"; text: string }[];
   whatsappMessage: string;
   crmData: {
@@ -132,11 +133,11 @@ const DEMOS: Record<DemoTab, {
     scenario: "Sunday 9:47pm · New patient inquiry",
     color: "#FF5500",
     audioSrc: "/audio/demo-dental.mp3",
+    customerMessage: "Hello, Dr. Mehta ke yahan cleaning appointment chahiye 🦷",
     transcript: [
-      { speaker: "Caller", text: "Hello, Dr. Mehta ki clinic mein appointment mil sakta hai cleaning ke liye?" },
-      { speaker: "Dhvani", text: "Haan ji! Rahul ji, Thursday 4 baje ya Saturday 11 baje, kaunsa suit karega?" },
-      { speaker: "Caller", text: "Thursday 4 baje perfect rahega. Fees kitni hai?" },
-      { speaker: "Dhvani", text: "Fees ₹800 hai. Done! Baaki details aur clinic directions hum WhatsApp kar rahe hain." },
+      { speaker: "Caller", text: "Dr. Mehta ki clinic mein appointment mil sakta hai cleaning ke liye?" },
+      { speaker: "Dhvani", text: "Haan ji! Thursday 4 baje ya Saturday 11 baje, kaunsa suit karega?" },
+      { speaker: "Caller", text: "Thursday 4 baje perfect rahega." },
     ],
     whatsappMessage: "Hi Rahul! Your appointment with Dr. Mehta for **Cleaning & Checkup** is confirmed for **Thursday at 4:00 PM**. \n\n📍 Location: https://maps.google.com/?q=Mehta+Clinic",
     crmData: {
@@ -152,11 +153,11 @@ const DEMOS: Record<DemoTab, {
     scenario: "Tuesday 3:12pm · Agent in a site visit",
     color: "#3300FF",
     audioSrc: "/audio/demo-realestate.mp3",
+    customerMessage: "Bhai, Bandra West 2BHK flat ke baare mein jaankari chahiye 🏠",
     transcript: [
-      { speaker: "Caller", text: "Bhai, wo 2BHK Bandra West wala flat abhi bhi available hai?" },
-      { speaker: "Dhvani", text: "Ji Vikram ji, available hai! Price ₹1.2 Cr hai. Saturday site visit rakhein?" },
-      { speaker: "Caller", text: "Haan Saturday subah 11 baje kaafi acha rahega." },
-      { speaker: "Dhvani", text: "Confirmed! Agent ki details aur location abhi WhatsApp pe bhej rahi hoon." },
+      { speaker: "Caller", text: "Wo 2BHK Bandra West wala flat abhi bhi available hai?" },
+      { speaker: "Dhvani", text: "Ji available hai! Price ₹1.2 Cr. Saturday site visit rakhein?" },
+      { speaker: "Caller", text: "Haan Saturday subah 11 baje perfect rahega." },
     ],
     whatsappMessage: "Hi Vikram! Here are the details for the **2BHK Bandra West** flat. Site visit confirmed for **Saturday 11:00 AM**. \n\nAgent Number: +91 98765 43210",
     crmData: {
@@ -172,11 +173,11 @@ const DEMOS: Record<DemoTab, {
     scenario: "Monday 8:30am · 140 applications pending",
     color: "#FF0055",
     audioSrc: "/audio/demo-hiring.mp3",
+    customerMessage: "Hello, Warehouse Supervisor ki vacancy ke liye apply karna tha 📋",
     transcript: [
-      { speaker: "Caller", text: "Hello, main Warehouse Supervisor ki vacancy ke baare mein call kiya tha." },
-      { speaker: "Dhvani", text: "Ji Suresh ji! Aapka 3 saal ka experience hai management mein?" },
-      { speaker: "Caller", text: "Haan ji, 20 logon ki team handle karta tha. Joining 2 hafte mein ho jayegi." },
-      { speaker: "Dhvani", text: "Perfect. Recruiter aapko call karenge. Interview details WhatsApp kar di hain." },
+      { speaker: "Caller", text: "Warehouse Supervisor ki vacancy ke baare mein call kiya tha." },
+      { speaker: "Dhvani", text: "Ji Suresh ji! Aapka management mein 3 saal ka experience hai?" },
+      { speaker: "Caller", text: "Haan, 20 logon ki team handle karta tha. 2 hafte mein join kar sakta hoon." },
     ],
     whatsappMessage: "Hi Suresh! Thank you for applying for the **Warehouse Supervisor** role. Your profile has been shortlisted. \n\nRecruiter will call within 24 hours. Keep your docs ready!",
     crmData: {
@@ -478,9 +479,21 @@ const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName
   );
 };
 
-const WhatsAppMockup = ({ isVisible, message }: { isVisible: boolean; message: string }) => {
+const WhatsAppMockup = ({
+  step,
+  customerMessage,
+  confirmMessage,
+}: {
+  step: number;
+  customerMessage: string;
+  confirmMessage: string;
+}) => {
+  const renderMsg = (html: string) =>
+    html.replace(/\n/g, "<br/>").replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#111b21]">$1</strong>');
+
   return (
     <div className="h-full flex flex-col font-sfpro bg-[#e5ddd5]" style={{ backgroundImage: "url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')", backgroundSize: "450px" }}>
+      {/* Header */}
       <div className="bg-[#075e54] pt-10 pb-3 px-3 flex items-center shadow-md z-20 sticky top-0">
         <div className="flex items-center gap-1 text-white mr-1">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
@@ -495,33 +508,77 @@ const WhatsAppMockup = ({ isVisible, message }: { isVisible: boolean; message: s
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.01c-.36-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
         </div>
       </div>
-      <div className="flex-1 p-3 overflow-y-auto scrollbar-hide flex flex-col gap-2">
+
+      {/* Messages */}
+      <div className="flex-1 p-3 overflow-y-auto scrollbar-hide flex flex-col gap-2 justify-end">
+        {/* Customer outbound message — right-aligned green bubble */}
         <AnimatePresence>
-          {isVisible && (
+          {step >= 1 && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 10, transformOrigin: 'top left' }} animate={{ opacity: 1, scale: 1, y: 0 }}
-              className="bg-white p-2.5 rounded-[12px] rounded-tl-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-start mt-2"
+              key="customer-msg"
+              initial={{ opacity: 0, scale: 0.9, y: 8 }} animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="bg-[#d9fdd3] p-2.5 rounded-[12px] rounded-tr-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-end"
+            >
+              <div className="absolute top-0 -right-2 w-3 h-3 bg-[#d9fdd3]" style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }} />
+              <p className="text-[#111b21] text-[14px] leading-[1.4] pr-10">{customerMessage}</p>
+              <div className="absolute bottom-1 right-1.5 flex items-center gap-0.5 opacity-50">
+                <span className="text-[9px] text-[#667781] font-medium leading-none">16:41</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="-ml-[11px]"/></svg>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* "Dhvani is calling you…" indicator between messages */}
+        <AnimatePresence>
+          {step >= 2 && step < 4 && (
+            <motion.div
+              key="calling-badge"
+              initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+              className="self-center"
+            >
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/10 backdrop-blur-sm">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[10px] text-[#333] font-semibold">Dhvani is calling you…</span>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Guftugu AI confirmation — left-aligned white bubble */}
+        <AnimatePresence>
+          {step >= 4 && (
+            <motion.div
+              key="confirm-msg"
+              initial={{ opacity: 0, scale: 0.9, y: 8 }} animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="bg-white p-2.5 rounded-[12px] rounded-tl-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-start"
             >
               <div className="absolute top-0 -left-2 w-3 h-3 bg-white" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
               <div className="pr-12 min-w-[120px]">
                 <p className="text-[#111b21] text-[14px] leading-[1.4] whitespace-pre-wrap"
-                  dangerouslySetInnerHTML={{ __html: message.replace(/\n/g, '<br/>').replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#111b21]">$1</strong>') }} />
+                  dangerouslySetInnerHTML={{ __html: renderMsg(confirmMessage) }} />
               </div>
               <div className="absolute bottom-1 right-1.5 flex items-center gap-0.5 opacity-50">
-                <span className="text-[9px] text-[#667781] font-medium leading-none">16:42</span>
+                <span className="text-[9px] text-[#667781] font-medium leading-none">16:43</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="-ml-[11px]"/></svg>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
+
+      {/* Input bar */}
       <div className="p-2 pb-6 flex gap-2 items-center bg-transparent z-10">
         <div className="bg-white rounded-full flex-1 h-[42px] px-3 flex items-center gap-3 shadow-sm border border-black/5">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
-          <span className="text-[#667781] text-sm flex-1">Message</span>
+          {step === 0 ? (
+            <span className="text-[#111b21] text-sm flex-1 truncate">{customerMessage}</span>
+          ) : (
+            <span className="text-[#667781] text-sm flex-1">Message</span>
+          )}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19"/></svg>
         </div>
-        <div className="w-[42px] h-[42px] rounded-full bg-[#00a884] flex items-center justify-center text-white shadow-md active:scale-95 transition-transform">
+        <div className={`w-[42px] h-[42px] rounded-full flex items-center justify-center text-white shadow-md transition-all ${step === 0 ? "bg-[#00a884] animate-pulse" : "bg-[#00a884]"}`}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
         </div>
       </div>
@@ -537,25 +594,30 @@ const StepArrow = ({ isActive }: { isActive: boolean }) => (
   </div>
 );
 
-const HearItYourselfSection = ({ 
-  activeTab, 
-  onTabChange, 
-  autoPlayTrigger 
-}: { 
-  activeTab: DemoTab; 
-  onTabChange: (t: DemoTab) => void; 
-  autoPlayTrigger?: number 
+const HearItYourselfSection = ({
+  activeTab,
+  onTabChange,
+  autoPlayTrigger
+}: {
+  activeTab: DemoTab;
+  onTabChange: (t: DemoTab) => void;
+  autoPlayTrigger?: number
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [visibleMessages, setVisibleMessages] = useState(0);
-  const [currentStep, setCurrentStep] = useState(0); 
+  // Steps: 0=idle, 1=WA msg sent, 2=voice call, 3=transcript playing, 4=WA confirmation, 5=CRM
+  const [currentStep, setCurrentStep] = useState(0);
   const [hasScrolledIn, setHasScrolledIn] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const transcriptRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLElement | null>(null);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const demo = DEMOS[activeTab];
 
+  const clearTimers = () => { timers.current.forEach(clearTimeout); timers.current = []; };
+
   useEffect(() => {
+    clearTimers();
     setVisibleMessages(0); setIsPlaying(false); setCurrentStep(0);
     if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
   }, [activeTab]);
@@ -564,54 +626,114 @@ const HearItYourselfSection = ({
     if (transcriptRef.current) { transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight; }
   }, [visibleMessages]);
 
+  const MSG_INTERVAL = 1000;
+  const FIRST_MSG_DELAY = 300;
+  const VOICE_START_DELAY = 800;
+  const CRM_DELAY = 1200;
+
   const handlePlay = useCallback(() => {
-    if (isPlaying) { audioRef.current?.pause(); setIsPlaying(false); return; }
-    setIsPlaying(true); setCurrentStep(1); setVisibleMessages(0);
-    const audio = new Audio(demo.audioSrc); audioRef.current = audio; 
-    audio.play().catch(() => {});
-    
-    const intervals: any[] = [];
-    demo.transcript.forEach((_, i) => { intervals.push(setTimeout(() => setVisibleMessages(i + 1), i * 1800 + 400)); });
-    const callEndDelay = demo.transcript.length * 1900 + 600;
-    
-    intervals.push(setTimeout(() => { setIsPlaying(false); setCurrentStep(2); setTimeout(() => setCurrentStep(3), 2800); }, callEndDelay));
-    return () => intervals.forEach(clearTimeout);
+    if (isPlaying) {
+      audioRef.current?.pause();
+      setIsPlaying(false);
+      clearTimers();
+      return;
+    }
+
+    clearTimers();
+    setVisibleMessages(0);
+
+    // Step 1: WhatsApp message sent immediately
+    setCurrentStep(1);
+
+    // Step 2: Voice call starts
+    timers.current.push(setTimeout(() => {
+      setCurrentStep(2);
+      setIsPlaying(true);
+      const audio = new Audio(demo.audioSrc);
+      audioRef.current = audio;
+      audio.play().catch(() => {});
+    }, VOICE_START_DELAY));
+
+    // Transcript messages
+    demo.transcript.forEach((_, i) => {
+      timers.current.push(setTimeout(() => {
+        setCurrentStep(3);
+        setVisibleMessages(i + 1);
+      }, VOICE_START_DELAY + FIRST_MSG_DELAY + i * MSG_INTERVAL));
+    });
+
+    // Call ends: step 4 (WhatsApp confirmation)
+    const callEndDelay = VOICE_START_DELAY + demo.transcript.length * MSG_INTERVAL + FIRST_MSG_DELAY + 400;
+    timers.current.push(setTimeout(() => {
+      setIsPlaying(false);
+      if (audioRef.current) { audioRef.current.pause(); }
+      setCurrentStep(4);
+    }, callEndDelay));
+
+    // Step 5: CRM
+    timers.current.push(setTimeout(() => {
+      setCurrentStep(5);
+    }, callEndDelay + CRM_DELAY));
+
   }, [isPlaying, demo]);
 
-  // Handle intersection observer to auto-play on scroll
+  // Cleanup timers on unmount
+  useEffect(() => () => clearTimers(), []);
+
+  const handleRestart = useCallback(() => {
+    clearTimers();
+    audioRef.current?.pause();
+    setIsPlaying(false);
+    setCurrentStep(0);
+    setVisibleMessages(0);
+    setTimeout(() => handlePlay(), 50);
+  }, [handlePlay]);
+
+  // Intersection observer — auto-play once
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting && !hasScrolledIn && !isPlaying) {
+      if (entries[0].isIntersecting && !hasScrolledIn && !isPlaying) {
         setHasScrolledIn(true);
         handlePlay();
       }
     }, { threshold: 0.4 });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, [hasScrolledIn, isPlaying, handlePlay]);
 
-  // Handle external trigger (Hero play icon)
+  // External trigger (Hero play icon)
   useEffect(() => {
-    if (autoPlayTrigger && !isPlaying) {
-      handlePlay();
-    }
-  }, [autoPlayTrigger, isPlaying, handlePlay]);
+    if (autoPlayTrigger && !isPlaying) handlePlay();
+  }, [autoPlayTrigger]);
+
+  // Mobile: show only the active panel
+  const mobileActivePanel = currentStep <= 1 ? 0 : currentStep <= 3 ? 1 : 2;
+
+  const stepPills = [
+    { label: "💬 WhatsApp", color: "#25D366" },
+    { label: "📞 Voice Call", color: "#818cf8" },
+    { label: "📋 CRM", color: "#10b981" },
+  ];
 
   return (
     <section ref={sectionRef} id="hear-it" className="py-24 sm:py-32 bg-[#050B1B] relative overflow-hidden">
       <div aria-hidden="true" className="absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full blur-[100px] pointer-events-none transition-all duration-1000"
         style={{ background: `radial-gradient(circle, ${demo.color}15 0%, transparent 70%)`, opacity: isPlaying ? 0.8 : 0.3 }} />
       <Container>
+        {/* Header */}
         <div className="text-center mb-16">
-          <SectionLabel text="Automation Stack" dark />
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-eb-garamond italic text-white leading-tight mb-6">Experience the <span className="text-white/80">End-to-End</span> Loop.</h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto font-sfpro">Watch how Dhvani answers the call, triggers Sandesh for follow-up, and logs everything to your CRM in real-time.</p>
+          <SectionLabel text="Live Demo" dark />
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-eb-garamond italic text-white leading-tight mb-6">
+            Text. Call. Done.{" "}
+            <span className="text-white/40">In under 2 minutes.</span>
+          </h2>
+          <p className="text-white/60 text-lg max-w-xl mx-auto font-sfpro">
+            Customer texts on WhatsApp → Dhvani calls back → confirms on WhatsApp → CRM updated. Automatically.
+          </p>
         </div>
 
-        {/* Tab Pills */}
-        <div className="flex justify-center gap-3 mb-16">
+        {/* Use-case tab pills */}
+        <div className="flex justify-center gap-3 mb-12">
           {(Object.keys(DEMOS) as DemoTab[]).map((tab) => (
             <button key={tab} onClick={() => onTabChange(tab)}
               className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 border-2 ${activeTab === tab ? "bg-[#2D22FF] border-[#2D22FF] text-white shadow-lg" : "border-white/10 text-white/40 hover:text-white"}`}>
@@ -620,23 +742,61 @@ const HearItYourselfSection = ({
           ))}
         </div>
 
-        <div className="max-w-[1400px] mx-auto relative mt-8">
-          <div className="flex flex-col xl:flex-row items-stretch gap-10 xl:gap-6">
-            
-            {/* 1. VOICE APP */}
-            <div className={`flex-[1.4] transition-all duration-700 ${currentStep < 1 ? "opacity-20 blur-[2px]" : "opacity-100"}`}>
+        {/* Mobile step pills */}
+        <div className="flex xl:hidden justify-center items-center gap-2 mb-8">
+          {stepPills.map((pill, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <motion.div
+                animate={{ backgroundColor: mobileActivePanel === i ? pill.color + "22" : "rgba(255,255,255,0.04)", borderColor: mobileActivePanel === i ? pill.color + "66" : "rgba(255,255,255,0.1)" }}
+                className="px-3 py-1.5 rounded-full border text-[11px] font-bold transition-all"
+                style={{ color: mobileActivePanel === i ? pill.color : "rgba(255,255,255,0.3)" }}
+              >
+                {pill.label}
+              </motion.div>
+              {i < 2 && <span className="text-white/15 text-xs">→</span>}
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-[1400px] mx-auto relative mt-4">
+          <div className="flex flex-col xl:flex-row items-stretch gap-8 xl:gap-6">
+
+            {/* 01. WHATSAPP */}
+            <div className={`flex-[1.1] transition-all duration-700 xl:opacity-100 xl:blur-0 xl:scale-100
+              ${mobileActivePanel === 0 ? "block" : "hidden xl:block"}
+              ${currentStep < 1 ? "xl:opacity-60 xl:scale-[0.98]" : "xl:opacity-100 xl:scale-100"}`}>
               <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
-                 <div className={`w-2 h-2 rounded-full ${currentStep === 1 ? 'bg-[#2D22FF] animate-pulse' : 'bg-white/10'}`} /> 01. Voice Agent (Dhvani)
+                <div className={`w-2 h-2 rounded-full ${currentStep >= 1 && currentStep <= 1 ? "bg-[#25D366] animate-pulse" : currentStep === 4 ? "bg-[#25D366] animate-pulse" : "bg-white/10"}`} />
+                01. WhatsApp (Customer)
               </div>
-              <div className={`rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[600px] flex flex-col transition-all duration-500 bg-[#0A0D14] shadow-2xl`}>
+              <div className="h-[520px] sm:h-[560px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
+                <WhatsAppMockup
+                  step={currentStep}
+                  customerMessage={demo.customerMessage}
+                  confirmMessage={demo.whatsappMessage}
+                />
+              </div>
+            </div>
+
+            <StepArrow isActive={currentStep >= 2} />
+
+            {/* 02. VOICE AGENT */}
+            <div className={`flex-[1.4] transition-all duration-700
+              ${mobileActivePanel === 1 ? "block" : "hidden xl:block"}
+              ${currentStep < 2 ? "xl:opacity-20 xl:blur-[2px]" : "xl:opacity-100"}`}>
+              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+                <div className={`w-2 h-2 rounded-full ${currentStep >= 2 && currentStep <= 3 ? "bg-[#2D22FF] animate-pulse" : "bg-white/10"}`} />
+                02. Voice Agent (Dhvani)
+              </div>
+              <div className="rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[520px] sm:h-[560px] flex flex-col bg-[#0A0D14] shadow-2xl">
                 <div className="px-6 pt-12 pb-5 border-b border-white/5 flex items-center justify-between bg-black/40 backdrop-blur-xl z-20">
                   <div className="flex items-center gap-4 min-w-0 flex-1">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${currentStep >= 1 ? "bg-[#2D22FF] shadow-[0_0_20px_#2D22FF66]" : "bg-white/5"}`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${currentStep >= 2 ? "bg-[#2D22FF] shadow-[0_0_20px_#2D22FF66]" : "bg-white/5"}`}>
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
                     </div>
                     <div className="flex flex-col min-w-0">
                       <div className="text-white text-[15px] font-bold flex items-center gap-1.5 leading-tight truncate">
-                         {demo.callerName} <span className="text-white/20 font-normal">to</span> <span className="text-[#818cf8] shrink-0">Dhvani AI</span>
+                        {demo.callerName} <span className="text-white/20 font-normal">to</span> <span className="text-[#818cf8] shrink-0">Dhvani AI</span>
                       </div>
                       <p className="text-white/30 text-[10px] font-bold mt-1 uppercase tracking-wider truncate">{demo.scenario}</p>
                     </div>
@@ -644,17 +804,35 @@ const HearItYourselfSection = ({
                 </div>
                 <div className="relative flex-1 overflow-hidden bg-[#0A0D14]">
                   <AnimatePresence mode="wait">
-                    {currentStep === 0 ? (
-                      <motion.div key="p" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex flex-col items-center justify-center p-8 text-center">
-                        <button onClick={handlePlay} className="w-20 h-20 rounded-full bg-[#2D22FF] flex items-center justify-center mb-6 shadow-[0_0_40px_#2D22FF88] transition-transform hover:scale-110 active:scale-95"><svg width="36" height="36" viewBox="0 0 24 24" fill="white" className="ml-1.5"><path d="M5 3l14 9-14 9V3z"/></svg></button>
-                        <p className="text-white/20 text-[11px] font-bold tracking-[0.2em] uppercase">Simulate Real Interaction</p>
+                    {currentStep < 2 ? (
+                      <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex flex-col items-center justify-center p-8 text-center">
+                        <button onClick={handlePlay} className="w-20 h-20 rounded-full bg-[#2D22FF] flex items-center justify-center mb-6 shadow-[0_0_40px_#2D22FF88] transition-transform hover:scale-110 active:scale-95">
+                          <svg width="36" height="36" viewBox="0 0 24 24" fill="white" className="ml-1.5"><path d="M5 3l14 9-14 9V3z"/></svg>
+                        </button>
+                        <p className="text-white/20 text-[11px] font-bold tracking-[0.2em] uppercase">
+                          {currentStep === 1 ? "Incoming call…" : "Tap to simulate"}
+                        </p>
+                        {currentStep === 1 && (
+                          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+                            className="mt-4 flex gap-1.5 items-center">
+                            {[0, 1, 2].map(i => (
+                              <div key={i} className="w-2 h-2 rounded-full bg-[#2D22FF]/50 animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
+                            ))}
+                          </motion.div>
+                        )}
                       </motion.div>
                     ) : (
-                      <motion.div key="t" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full px-5 py-8 overflow-y-auto scrollbar-hide flex flex-col gap-6 pb-20" ref={transcriptRef}>
+                      <motion.div key="transcript" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                        className="h-full px-5 py-8 overflow-y-auto scrollbar-hide flex flex-col gap-5 pb-20" ref={transcriptRef}>
                         {demo.transcript.slice(0, visibleMessages).map((msg, i) => (
-                          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} key={i} className={`flex gap-3 max-w-[85%] ${msg.speaker === "Dhvani" ? "flex-row mr-auto" : "flex-row-reverse ml-auto"}`}>
-                            <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center text-[10px] font-bold mt-auto mb-1 shadow-sm ${msg.speaker === "Dhvani" ? "bg-[#1e293b] text-white" : "bg-white/10 text-white/60"}`}>{msg.speaker === "Dhvani" ? "D" : demo.callerName[0]}</div>
-                            <div className={`px-4 py-3 rounded-[1.25rem] text-[13.5px] shadow-sm leading-relaxed ${msg.speaker === "Dhvani" ? "bg-[#1e293b]/80 border border-white/5 text-white/90 rounded-bl-none" : "bg-[#2D22FF] text-white rounded-br-none"}`}><p>{msg.text}</p></div>
+                          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} key={i}
+                            className={`flex gap-3 max-w-[85%] ${msg.speaker === "Dhvani" ? "flex-row mr-auto" : "flex-row-reverse ml-auto"}`}>
+                            <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center text-[10px] font-bold mt-auto mb-1 shadow-sm ${msg.speaker === "Dhvani" ? "bg-[#1e293b] text-white" : "bg-white/10 text-white/60"}`}>
+                              {msg.speaker === "Dhvani" ? "D" : demo.callerName[0]}
+                            </div>
+                            <div className={`px-4 py-3 rounded-[1.25rem] text-[13.5px] shadow-sm leading-relaxed ${msg.speaker === "Dhvani" ? "bg-[#1e293b]/80 border border-white/5 text-white/90 rounded-bl-none" : "bg-[#2D22FF] text-white rounded-br-none"}`}>
+                              <p>{msg.text}</p>
+                            </div>
                           </motion.div>
                         ))}
                       </motion.div>
@@ -664,42 +842,44 @@ const HearItYourselfSection = ({
                 <div className="p-6 bg-black/40 backdrop-blur-xl border-t border-white/5 flex flex-col gap-4 sticky bottom-0 z-20">
                   <WaveformBars isPlaying={isPlaying} color="#818cf8" />
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2"><div className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-400 animate-ping' : 'bg-white/10'}`} /><span className="text-[10px] text-white/30 font-bold uppercase tracking-widest">{isPlaying ? 'Processing Voice' : 'Ready'}</span></div>
-                    {currentStep > 0 && <button onClick={handlePlay} className="text-[10px] text-[#2D22FF] font-bold uppercase tracking-widest">Restart</button>}
+                    <div className="flex items-center gap-2">
+                      <div className={`w-2 h-2 rounded-full ${isPlaying ? "bg-emerald-400 animate-ping" : "bg-white/10"}`} />
+                      <span className="text-[10px] text-white/30 font-bold uppercase tracking-widest">
+                        {isPlaying ? "Processing Voice" : currentStep >= 4 ? "Call Ended" : "Ready"}
+                      </span>
+                    </div>
+                    {currentStep > 0 && (
+                      <button onClick={handleRestart} className="text-[10px] text-[#2D22FF] font-bold uppercase tracking-widest">
+                        Restart
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
 
-            <StepArrow isActive={currentStep >= 2} />
+            <StepArrow isActive={currentStep >= 5} />
 
-            {/* 2. WHATSAPP */}
-            <div className={`flex-[1.1] transition-all duration-700 ${currentStep < 2 ? "opacity-10 blur-[3px] scale-95" : "opacity-100 scale-100"}`}>
+            {/* 03. CRM */}
+            <div className={`flex-[1.1] transition-all duration-700
+              ${mobileActivePanel === 2 ? "block" : "hidden xl:block"}
+              ${currentStep < 5 ? "xl:opacity-10 xl:blur-[3px] xl:scale-95" : "xl:opacity-100 xl:scale-100"}`}>
               <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
-                <div className={`w-2 h-2 rounded-full ${currentStep === 2 ? 'bg-[#25D366] animate-pulse' : 'bg-white/10'}`} /> 02. WhatsApp (Sandesh)
+                <div className={`w-2 h-2 rounded-full ${currentStep === 5 ? "bg-emerald-400 animate-pulse" : "bg-white/10"}`} />
+                03. Sync (CRM)
               </div>
-              <div className="h-[600px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
-                 <WhatsAppMockup isVisible={currentStep >= 2} message={demo.whatsappMessage} />
+              <div className="h-[520px] sm:h-[560px]">
+                <CRMMockup isVisible={currentStep >= 5} leadName={demo.callerName} data={demo.crmData} />
               </div>
-            </div>
-
-            <StepArrow isActive={currentStep >= 3} />
-
-            {/* 3. CRM */}
-            <div className={`flex-[1.1] transition-all duration-700 ${currentStep < 3 ? "opacity-10 blur-[3px] scale-95" : "opacity-100 scale-100"}`}>
-              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
-                <div className={`w-2 h-2 rounded-full ${currentStep === 3 ? 'bg-emerald-400 animate-pulse' : 'bg-white/10'}`} /> 03. Sync (CRM)
-              </div>
-              <div className="h-[600px]"><CRMMockup isVisible={currentStep >= 3} leadName={demo.callerName} data={demo.crmData} /></div>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-4 text-center">
-           <div className="w-12 h-px bg-white/10" />
-           <p className="max-w-md text-white/20 text-xs font-medium tracking-wide font-sfpro leading-relaxed px-6">
-             Showing actual Guftugu behavior: Dhvani handles the conversation over voice, and Sandesh automatically triggers the relevant follow-up in the recipient&apos;s WhatsApp — in this case, {demo.callerName}.
-           </p>
+        <div className="mt-12 flex flex-col items-center gap-3 text-center">
+          <div className="w-12 h-px bg-white/10" />
+          <p className="max-w-md text-white/20 text-xs font-medium tracking-wide font-sfpro leading-relaxed px-6">
+            Showing actual Guftugu behavior: customer texts WhatsApp → Dhvani calls back → Sandesh sends confirmation → CRM synced. All automatic.
+          </p>
         </div>
       </Container>
     </section>
