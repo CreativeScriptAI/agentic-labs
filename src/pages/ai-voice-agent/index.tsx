@@ -1018,40 +1018,22 @@ type CallSample = {
 
 const CALL_SAMPLES: CallSample[] = [
   {
-    id: "dental",
-    label: "Dental Clinic",
-    scenario: "Patient calls to book an appointment. Dhvani collects details, checks slot availability & confirms.",
-    duration: "1:42",
+    id: "shreya",
+    label: "Bus Ticket Booking",
+    scenario: "Shreya calls A&T Bus Service to book 2 seats from Delhi to Dehradun for her family. Dhvani checks availability, collects passenger details & confirms the booking.",
+    duration: "2:10",
+    tag: "Travel",
+    tagColor: "#FF8800",
+    audioSrc: "/audio/shreya_bus_booking.wav",
+  },
+  {
+    id: "dinanath",
+    label: "Patient Health Follow-up",
+    scenario: "Outbound call to patient Dinanath. Dhvani checks in on his recovery, asks about any new symptoms & logs feedback for the clinic's records.",
+    duration: "1:58",
     tag: "Healthcare",
     tagColor: "#10B981",
-    audioSrc: "", // TODO: add real recording URL
-  },
-  {
-    id: "realestate",
-    label: "Real Estate Enquiry",
-    scenario: "Buyer asks about a 2BHK listing. Dhvani answers questions, captures contact & schedules a site visit.",
-    duration: "2:05",
-    tag: "Real Estate",
-    tagColor: "#3B82F6",
-    audioSrc: "", // TODO: add real recording URL
-  },
-  {
-    id: "ecommerce",
-    label: "Order Status Call",
-    scenario: "Customer calls about a delayed order. Dhvani fetches status, gives ETA & offers a callback option.",
-    duration: "1:18",
-    tag: "E-commerce",
-    tagColor: "#F59E0B",
-    audioSrc: "", // TODO: add real recording URL
-  },
-  {
-    id: "services",
-    label: "Home Services Booking",
-    scenario: "Caller needs AC repair. Dhvani collects address, picks a time slot & sends WhatsApp confirmation.",
-    duration: "1:55",
-    tag: "Home Services",
-    tagColor: "#8B5CF6",
-    audioSrc: "", // TODO: add real recording URL
+    audioSrc: "/audio/dinanath_health_feedback.wav",
   },
 ];
 
