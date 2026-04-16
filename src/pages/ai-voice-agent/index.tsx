@@ -3151,9 +3151,9 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       />
 
       <Hero onCardPlay={handleCardPlay} />
-      <RealCallSamplesSection />
       <HearItYourselfSection activeTab={demoTab} onTabChange={setDemoTab} autoPlayTrigger={autoPlayTrigger} />
       <SocialProofBar />
+      <RealCallSamplesSection />
       <ProblemSection />
       <SolutionSection />
       <HowItWorksSection />
