@@ -1008,31 +1008,40 @@ const SocialProofBar = () => {
 // ─── REAL CALL SAMPLES ───────────────────────────────────────────────────────
 type CallSample = {
   id: string;
+  callerName: string;
+  businessName: string;
   label: string;
   scenario: string;
   duration: string;
   tag: string;
   tagColor: string;
-  audioSrc?: string; // fill in when recordings are ready
+  callType: "inbound" | "outbound";
+  audioSrc?: string;
 };
 
 const CALL_SAMPLES: CallSample[] = [
   {
     id: "shreya",
+    callerName: "Shreya",
+    businessName: "A&T Bus Service",
     label: "Bus Ticket Booking",
-    scenario: "Shreya calls A&T Bus Service to book 2 seats from Delhi to Dehradun for her family. Dhvani checks availability, collects passenger details & confirms the booking.",
+    scenario: "Shreya calls to book 2 seats from Delhi → Dehradun for her family. Dhvani checks availability, collects passenger details & confirms the booking.",
     duration: "2:10",
     tag: "Travel",
     tagColor: "#FF8800",
+    callType: "inbound",
     audioSrc: "/audio/shreya_bus_booking.wav",
   },
   {
     id: "dinanath",
+    callerName: "Dinanath",
+    businessName: "City Health Clinic",
     label: "Patient Health Follow-up",
-    scenario: "Outbound call to patient Dinanath. Dhvani checks in on his recovery, asks about any new symptoms & logs feedback for the clinic's records.",
+    scenario: "Dhvani calls Dinanath to check on his recovery post-visit, asks about new symptoms & logs feedback — fully automated outbound care call.",
     duration: "1:58",
     tag: "Healthcare",
     tagColor: "#10B981",
+    callType: "outbound",
     audioSrc: "/audio/dinanath_health_feedback.wav",
   },
 ];
@@ -1116,10 +1125,23 @@ const RealCallSamplesSection = () => {
     };
   }, []);
 
+  // Derive elapsed seconds from progress pct for time display
+  const getElapsedTime = (sample: CallSample) => {
+    const pct = progress[sample.id] ?? 0;
+    const [min, sec] = sample.duration.split(":").map(Number);
+    const totalSec = min * 60 + sec;
+    const elapsed = Math.round((pct / 100) * totalSec);
+    const em = Math.floor(elapsed / 60);
+    const es = elapsed % 60;
+    return `${em}:${String(es).padStart(2, "0")}`;
+  };
+
   return (
     <section className="py-24 sm:py-32 bg-[#050B1B] relative overflow-hidden">
+      {/* Background glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[#FCCA07]/[0.025] blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-[600px] h-[400px] rounded-full bg-[#FCCA07]/[0.03] blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[300px] rounded-full bg-[#2D22FF]/[0.04] blur-[100px]" />
       </div>
 
       <Container size="lg">
@@ -1130,92 +1152,159 @@ const RealCallSamplesSection = () => {
             Hear Dhvani in action.{" "}
             <span className="text-white/40">With real callers.</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-xl mx-auto">
-            These are actual recordings of Dhvani handling live customer calls — not scripted demos.
+          <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            Actual recordings of Dhvani handling live customer calls — not scripted demos.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {CALL_SAMPLES.map((sample) => {
             const isPlaying = playingId === sample.id;
             const pct = progress[sample.id] ?? 0;
-            const hasAudio = !!sample.audioSrc;
+            const initials = sample.callerName.slice(0, 2).toUpperCase();
 
             return (
               <div
                 key={sample.id}
-                className={`relative rounded-[28px] border p-6 sm:p-7 flex flex-col gap-5 transition-all duration-300 ${
+                className={`relative rounded-[2rem] border flex flex-col overflow-hidden transition-all duration-500 cursor-pointer group ${
                   isPlaying
-                    ? "bg-white/[0.07] border-[#FCCA07]/30 shadow-[0_0_40px_rgba(252,202,7,0.08)]"
-                    : "bg-white/[0.04] border-white/[0.07] hover:bg-white/[0.06] hover:border-white/[0.12]"
+                    ? "border-[#FCCA07]/25 shadow-[0_0_60px_rgba(252,202,7,0.1),0_0_0_1px_rgba(252,202,7,0.08)]"
+                    : "border-white/[0.07] hover:border-white/[0.14]"
                 }`}
+                style={{
+                  background: isPlaying
+                    ? "linear-gradient(145deg, rgba(252,202,7,0.05) 0%, rgba(255,255,255,0.04) 60%, rgba(45,34,255,0.04) 100%)"
+                    : "rgba(255,255,255,0.03)",
+                }}
+                onClick={() => handlePlay(sample)}
               >
-                {/* Top row: tag + duration */}
-                <div className="flex items-center justify-between">
-                  <span
-                    className="text-[10px] font-black tracking-[0.18em] uppercase px-3 py-1 rounded-full"
-                    style={{ color: sample.tagColor, backgroundColor: `${sample.tagColor}18` }}
-                  >
-                    {sample.tag}
-                  </span>
-                  <span className="text-white/30 text-xs font-mono tabular-nums">{sample.duration}</span>
-                </div>
+                {/* Playing glow strip at top */}
+                {isPlaying && (
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FCCA07]/60 to-transparent" />
+                )}
 
-                {/* Title + description */}
-                <div>
-                  <h3 className="text-white font-bold text-lg mb-2 leading-snug">{sample.label}</h3>
-                  <p className="text-white/45 text-sm leading-relaxed">{sample.scenario}</p>
-                </div>
+                {/* ── CARD BODY ── */}
+                <div className="p-6 sm:p-7 flex flex-col gap-6">
 
-                {/* Waveform + progress */}
-                <div className="flex flex-col gap-3">
-                  <AudioWaveformBars playing={isPlaying} />
-                  {/* Progress bar */}
-                  <div className="h-[3px] rounded-full bg-white/[0.08] overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-[#FCCA07] transition-all duration-300"
-                      style={{ width: `${pct}%` }}
-                    />
+                  {/* Row 1: Caller avatar + info + call type badge */}
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      {/* Avatar */}
+                      <div
+                        className={`w-12 h-12 rounded-2xl flex items-center justify-center text-sm font-black shrink-0 transition-all duration-300 ${isPlaying ? "shadow-[0_0_20px_rgba(252,202,7,0.3)]" : ""}`}
+                        style={{ backgroundColor: `${sample.tagColor}22`, color: sample.tagColor }}
+                      >
+                        {initials}
+                      </div>
+                      <div>
+                        <p className="text-white font-bold text-[15px] leading-tight">{sample.callerName}</p>
+                        <p className="text-white/35 text-[12px] mt-0.5 font-medium">{sample.businessName}</p>
+                      </div>
+                    </div>
+                    {/* Call type + tag */}
+                    <div className="flex flex-col items-end gap-1.5 shrink-0">
+                      <span
+                        className={`text-[9px] font-black tracking-[0.2em] uppercase px-2.5 py-1 rounded-full border ${
+                          sample.callType === "inbound"
+                            ? "text-emerald-400 bg-emerald-400/10 border-emerald-400/20"
+                            : "text-[#818cf8] bg-[#818cf8]/10 border-[#818cf8]/20"
+                        }`}
+                      >
+                        {sample.callType === "inbound" ? "↙ Inbound" : "↗ Outbound"}
+                      </span>
+                      <span
+                        className="text-[9px] font-black tracking-[0.18em] uppercase px-2.5 py-1 rounded-full"
+                        style={{ color: sample.tagColor, backgroundColor: `${sample.tagColor}15` }}
+                      >
+                        {sample.tag}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                {/* Play button row */}
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={() => handlePlay(sample)}
-                    className={`flex items-center justify-center w-12 h-12 rounded-full transition-all active:scale-95 flex-shrink-0 ${
-                      isPlaying
-                        ? "bg-[#FCCA07] text-[#0A1128]"
-                        : "bg-white/10 text-white hover:bg-white/20"
+                  {/* Row 2: Call title + scenario */}
+                  <div className="border-t border-white/[0.05] pt-5">
+                    <h3 className="text-white font-bold text-base sm:text-[17px] mb-2 leading-snug">{sample.label}</h3>
+                    <p className="text-white/40 text-[13px] leading-relaxed">{sample.scenario}</p>
+                  </div>
+
+                  {/* Row 3: Waveform visualizer (full width) */}
+                  <div
+                    className={`rounded-xl px-4 py-5 flex flex-col gap-3 transition-all duration-300 ${
+                      isPlaying ? "bg-white/[0.06]" : "bg-white/[0.03]"
                     }`}
-                    aria-label={isPlaying ? "Pause" : "Play"}
                   >
-                    {isPlaying ? (
-                      /* Pause icon */
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <rect x="6" y="4" width="4" height="16" rx="1" />
-                        <rect x="14" y="4" width="4" height="16" rx="1" />
-                      </svg>
-                    ) : (
-                      /* Play icon */
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5.14v14l11-7-11-7z" />
-                      </svg>
-                    )}
-                  </button>
+                    {/* Tall waveform */}
+                    <div className="flex items-center gap-[3px] h-10 w-full">
+                      {[0.3,0.55,0.8,0.45,1,0.6,0.75,0.35,0.9,0.5,0.7,0.4,0.85,0.55,0.65,0.38,0.92,0.48,0.72,0.42,0.88,0.52,0.68,0.36].map((h, i) => (
+                        <div
+                          key={i}
+                          className="flex-1 rounded-full origin-center transition-all"
+                          style={{
+                            height: `${h * 40}px`,
+                            backgroundColor: isPlaying
+                              ? i < Math.round((pct / 100) * 24)
+                                ? "#FCCA07"
+                                : "rgba(252,202,7,0.18)"
+                              : "rgba(255,255,255,0.12)",
+                            animation: isPlaying ? `waveBar 0.9s ease-in-out ${i * 0.06}s infinite alternate` : "none",
+                            transition: "background-color 0.2s, height 0.3s",
+                          }}
+                        />
+                      ))}
+                    </div>
+                    {/* Progress bar */}
+                    <div className="h-[2px] rounded-full bg-white/[0.07] overflow-hidden">
+                      <div
+                        className="h-full rounded-full transition-all duration-300"
+                        style={{
+                          width: `${pct}%`,
+                          background: "linear-gradient(90deg, #FCCA07cc, #FCCA07)",
+                        }}
+                      />
+                    </div>
+                    {/* Time row */}
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono tabular-nums text-white/30">
+                        {isPlaying ? getElapsedTime(sample) : "0:00"}
+                      </span>
+                      <span className="text-[10px] font-mono tabular-nums text-white/20">{sample.duration}</span>
+                    </div>
+                  </div>
 
-                  <div>
-                    {!hasAudio ? (
-                      <p className="text-white/25 text-xs">
-                        {isPlaying ? "Simulated preview — real recording coming soon" : "Tap to preview · Recording uploading soon"}
-                      </p>
-                    ) : (
-                      <p className="text-white/40 text-xs">
-                        {isPlaying ? "Now playing…" : "Tap to listen"}
-                      </p>
+                  {/* Row 4: Play button CTA */}
+                  <div className="flex items-center gap-4">
+                    <button
+                      onClick={(e) => { e.stopPropagation(); handlePlay(sample); }}
+                      className={`flex items-center gap-3 px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 active:scale-95 ${
+                        isPlaying
+                          ? "bg-[#FCCA07] text-[#0A1128]"
+                          : "bg-white/[0.08] text-white hover:bg-white/[0.14] border border-white/[0.07] hover:border-white/[0.15]"
+                      }`}
+                      aria-label={isPlaying ? "Pause" : "Play"}
+                    >
+                      <span className={`flex items-center justify-center w-5 h-5 rounded-full shrink-0 ${isPlaying ? "bg-[#0A1128]/20" : "bg-white/10"}`}>
+                        {isPlaying ? (
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16" rx="1" />
+                            <rect x="14" y="4" width="4" height="16" rx="1" />
+                          </svg>
+                        ) : (
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5.14v14l11-7-11-7z" />
+                          </svg>
+                        )}
+                      </span>
+                      {isPlaying ? "Pause" : "Play recording"}
+                    </button>
+                    {isPlaying && (
+                      <div className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="text-[11px] text-emerald-400 font-bold tracking-wide">Now playing</span>
+                      </div>
                     )}
                   </div>
+
                 </div>
               </div>
             );
@@ -1223,15 +1312,18 @@ const RealCallSamplesSection = () => {
         </div>
 
         {/* Bottom note */}
-        <p className="text-center text-white/20 text-xs mt-10">
-          Recordings shared with customer consent. Names and sensitive details redacted.
-        </p>
+        <div className="flex items-center justify-center gap-2 mt-10">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p className="text-white/20 text-xs">
+            Recordings shared with customer consent. Names and sensitive details redacted.
+          </p>
+        </div>
       </Container>
 
       <style jsx>{`
         @keyframes waveBar {
-          from { transform: scaleY(0.4); }
-          to   { transform: scaleY(1.2); }
+          from { transform: scaleY(0.5); }
+          to   { transform: scaleY(1.15); }
         }
       `}</style>
     </section>
