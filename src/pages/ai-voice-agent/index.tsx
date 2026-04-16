@@ -2624,8 +2624,8 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
       <UseCasesSection />
       <WhyDifferentSection />
       <SocialProofSection />
-      <FounderTeamSection />
       <PricingSection />
+      <FounderTeamSection productName="Guftugu" />
       <FreeAuditSection />
       <FAQSection />
       <FinalCTA />

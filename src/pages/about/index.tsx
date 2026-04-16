@@ -8,6 +8,7 @@ import ReasonExist from "src/components/sections/ReasonExist";
 import ContactSection from "src/components/sections/ContactSection";
 import FooterSection from "src/components/sections/FooterSection";
 import WhatWeDo from "src/components/sections/WhatWeDo";
+import FounderTeamSection from "src/components/sections/AiVoiceAgent/FounderTeamSection";
 
 const AboutPage = () => {
   return (
@@ -27,6 +28,7 @@ const AboutPage = () => {
       <WhyDifferent />
       <ReasonExist />
       <WhatWeDo />
+      <FounderTeamSection variant="light" />
       <ContactSection />
       <FooterSection />
     </RootLayout>

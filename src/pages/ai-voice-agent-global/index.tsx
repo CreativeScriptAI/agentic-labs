@@ -2030,8 +2030,8 @@ const AiVoiceAgentGlobalPage: NextPageWithLayout = () => {
       <UseCasesSection />
       <WhyDifferentSection />
       <SocialProofSection />
-      <FounderTeamSection />
       <PricingSection />
+      <FounderTeamSection productName="Loop" />
       <FreeAuditSection />
       <FAQSection />
       <FinalCTA />
