@@ -107,7 +107,7 @@ const OutlineBtn = ({
 };
 
 // ─── DEMO DATA ────────────────────────────────────────────────────────────────
-const DEMO_TABS = ["dental", "realestate", "hiring"] as const;
+const DEMO_TABS = ["travel", "homeservices", "coaching"] as const;
 type DemoTab = typeof DEMO_TABS[number];
 
 const DEMOS: Record<DemoTab, {
@@ -126,63 +126,63 @@ const DEMOS: Record<DemoTab, {
     source: string;
   };
 }> = {
-  dental: {
-    label: "Dental Clinic",
-    cardLabel: "Dental & Medical",
-    callerName: "Rahul",
-    scenario: "Sunday 9:47pm · New patient inquiry",
-    color: "#FF5500",
-    audioSrc: "/audio/demo-dental.mp3",
-    customerMessage: "Hello, Dr. Mehta ke yahan cleaning appointment chahiye 🦷",
+  travel: {
+    label: "Travel Booking",
+    cardLabel: "Travel & Transport",
+    callerName: "Priya",
+    scenario: "Friday 7:45pm · Bus booking inquiry",
+    color: "#FF8800",
+    audioSrc: "/audio/demo-travel.mp3",
+    customerMessage: "Bhai, Pune to Mumbai kal ki bus available hai? 2 seats chahiye 🚌",
     transcript: [
-      { speaker: "Caller", text: "Dr. Mehta ki clinic mein appointment mil sakta hai cleaning ke liye?" },
-      { speaker: "Dhvani", text: "Haan ji! Thursday 4 baje ya Saturday 11 baje, kaunsa suit karega?" },
-      { speaker: "Caller", text: "Thursday 4 baje perfect rahega." },
+      { speaker: "Caller", text: "Kal subah 7 baje ki Pune Mumbai bus mein 2 seats available hain?" },
+      { speaker: "Dhvani", text: "Ji Priya ji! Kal 7:15 AM sleeper bus mein 2 seats hain. ₹350 per seat. Book karein?" },
+      { speaker: "Caller", text: "Haan book kar do! Seat A4 aur A5 chahiye." },
     ],
-    whatsappMessage: "Hi Rahul! Your appointment with Dr. Mehta for **Cleaning & Checkup** is confirmed for **Thursday at 4:00 PM**. \n\n📍 Location: https://maps.google.com/?q=Mehta+Clinic",
+    whatsappMessage: "Hi Priya! Your **2 seats — Pune → Mumbai** are confirmed for **Tomorrow 7:15 AM**. \n\n🎫 Booking ID: GFT-2847\n💺 Seats: A4 & A5\n📍 Boarding: Swargate Bus Stand",
     crmData: {
-      status: "Appointment Booked",
-      notes: "Cleaning combo - Thursday 4PM. New patient.",
+      status: "Booking Confirmed",
+      notes: "Pune-Mumbai, 2 seats A4-A5, 7:15AM. New customer.",
       source: "Dhvani AI (Voice)"
     }
   },
-  realestate: {
-    label: "Real Estate",
-    cardLabel: "Real Estate",
-    callerName: "Vikram",
-    scenario: "Tuesday 3:12pm · Agent in a site visit",
-    color: "#3300FF",
-    audioSrc: "/audio/demo-realestate.mp3",
-    customerMessage: "Bhai, Bandra West 2BHK flat ke baare mein jaankari chahiye 🏠",
+  homeservices: {
+    label: "Home Services",
+    cardLabel: "AC & Appliance Repair",
+    callerName: "Arjun",
+    scenario: "Saturday 11:30pm · AC not cooling",
+    color: "#00B4D8",
+    audioSrc: "/audio/demo-homeservices.mp3",
+    customerMessage: "Bhai AC bilkul thanda nahi kar raha, urgent help chahiye ❄️",
     transcript: [
-      { speaker: "Caller", text: "Wo 2BHK Bandra West wala flat abhi bhi available hai?" },
-      { speaker: "Dhvani", text: "Ji available hai! Price ₹1.2 Cr. Saturday site visit rakhein?" },
-      { speaker: "Caller", text: "Haan Saturday subah 11 baje perfect rahega." },
+      { speaker: "Caller", text: "Mera 1.5 ton Daikin AC chal raha hai par thanda nahi kar raha." },
+      { speaker: "Dhvani", text: "Samajh gaya Arjun ji! Gas issue lag raha hai. Kal subah 9 baje technician bhejun?" },
+      { speaker: "Caller", text: "Haan kal 9 baje theek rahega. Address bhej deta hoon." },
     ],
-    whatsappMessage: "Hi Vikram! Here are the details for the **2BHK Bandra West** flat. Site visit confirmed for **Saturday 11:00 AM**. \n\nAgent Number: +91 98765 43210",
+    whatsappMessage: "Hi Arjun! Your **AC repair request** is logged. Technician arrives **Tomorrow by 9:00 AM**. \n\n🔧 Issue: No cooling — 1.5T Daikin\n📞 Technician: +91 98100 22234\n💰 Visit charge: ₹299",
     crmData: {
-      status: "Site Visit Scheduled",
-      notes: "Interested in 2BHK Bandra West. Sat 11AM visit.",
+      status: "Job Dispatched",
+      notes: "AC no cooling - Daikin 1.5T. Tomorrow 9AM slot.",
       source: "Dhvani AI (Voice)"
     }
   },
-  hiring: {
-    label: "Hiring Agency",
-    cardLabel: "Hiring & Staffing",
-    callerName: "Suresh",
-    scenario: "Monday 8:30am · 140 applications pending",
-    color: "#FF0055",
-    audioSrc: "/audio/demo-hiring.mp3",
-    customerMessage: "Hello, Warehouse Supervisor ki vacancy ke liye apply karna tha 📋",
+  coaching: {
+    label: "Online Coaching",
+    cardLabel: "Coaching & Mentorship",
+    callerName: "Neha",
+    scenario: "Sunday 3:15pm · Show-up confirmation call",
+    color: "#7C3AED",
+    audioSrc: "/audio/demo-coaching.mp3",
+    customerMessage: "Hi! Maine abhi coaching call book ki hai for tomorrow 🎯",
     transcript: [
-      { speaker: "Caller", text: "Warehouse Supervisor ki vacancy ke baare mein call kiya tha." },
-      { speaker: "Dhvani", text: "Ji Suresh ji! Aapka management mein 3 saal ka experience hai?" },
-      { speaker: "Caller", text: "Haan, 20 logon ki team handle karta tha. 2 hafte mein join kar sakta hoon." },
+      { speaker: "Dhvani", text: "Hi Neha ji! Kal 11 AM ki career coaching call confirm karti hoon. Aa rahe ho na?" },
+      { speaker: "Caller", text: "Haan zaroor aaungi! Thoda nervous hoon, first time hai." },
+      { speaker: "Dhvani", text: "Bilkul tension mat lo! Zoom link aur tips abhi WhatsApp pe bhej rahi hoon." },
     ],
-    whatsappMessage: "Hi Suresh! Thank you for applying for the **Warehouse Supervisor** role. Your profile has been shortlisted. \n\nRecruiter will call within 24 hours. Keep your docs ready!",
+    whatsappMessage: "Hi Neha! Your **Career Coaching Call** is confirmed for **Tomorrow at 11:00 AM**. \n\n🔗 Zoom: https://zoom.us/j/8847362910\n📌 Tip: Keep your CV ready!\n\nSee you tomorrow! 🚀",
     crmData: {
-      status: "Lead Qualified",
-      notes: "Warehouse Supervisor. 3y exp. 2wk joining.",
+      status: "Call Confirmed",
+      notes: "First-time lead. Confirmed for 11AM. Excited.",
       source: "Dhvani AI (Voice)"
     }
   },
@@ -313,8 +313,8 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
                   <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">+4 appointments today</div>
                 </div>
                 <button
-                  onClick={() => { onCardPlay("dental"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#FF5500", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(255,85,0,0.4)" }}
+                  onClick={() => { onCardPlay("travel"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#FF8800", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(255,136,0,0.4)" }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -340,8 +340,8 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
                   <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">12 candidates screened</div>
                 </div>
                 <button
-                  onClick={() => { onCardPlay("hiring"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#FF0055", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(255,0,85,0.4)" }}
+                  onClick={() => { onCardPlay("homeservices"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#00B4D8", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(0,180,216,0.4)" }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -367,8 +367,8 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
                   <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">3 site visits booked</div>
                 </div>
                 <button
-                  onClick={() => { onCardPlay("realestate"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#3300FF", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(51,0,255,0.4)" }}
+                  onClick={() => { onCardPlay("coaching"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#7C3AED", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(124,58,237,0.4)" }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -452,7 +452,7 @@ const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName
                       <p className="text-[10px] text-slate-500 font-medium">Synced via Voice</p>
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[9px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-100 leading-none">Appointment Booked</span>
+                  <span className="px-2.5 py-1 rounded-full text-[9px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-100 leading-none">{data.status}</span>
                 </div>
                 <div className="space-y-3">
                   <div className="flex flex-col gap-1.5 flex-1 min-w-0">
@@ -743,7 +743,7 @@ const HearItYourselfSection = ({
         </div>
 
         {/* Mobile step pills */}
-        <div className="flex xl:hidden justify-center items-center gap-2 mb-8">
+        <div className="flex xl:hidden justify-center items-center gap-2 mb-6">
           {stepPills.map((pill, i) => (
             <div key={i} className="flex items-center gap-2">
               <motion.div
@@ -758,13 +758,42 @@ const HearItYourselfSection = ({
           ))}
         </div>
 
-        <div className="max-w-[1400px] mx-auto relative mt-4">
+        {/* ── Highlighted play CTA ── */}
+        <AnimatePresence>
+          {currentStep === 0 && (
+            <motion.div
+              key="play-cta"
+              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
+              className="flex flex-col items-center gap-3 mb-10"
+            >
+              <button
+                onClick={handlePlay}
+                className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-[#FCCA07] text-[#0A1128] font-bold text-base transition-all hover:bg-[#f0bd00] active:scale-[0.97] shadow-[0_0_40px_rgba(252,202,7,0.25)]"
+              >
+                {/* Pulse ring */}
+                <span className="absolute inset-0 rounded-2xl bg-[#FCCA07] animate-ping opacity-20 pointer-events-none" />
+                <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#0A1128]/10">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+                </span>
+                <span className="relative">Watch the {demo.label} demo</span>
+                <span className="relative text-[#0A1128]/50 text-sm font-medium">~5 sec</span>
+              </button>
+              <p className="text-white/30 text-xs">
+                See how a customer texts WhatsApp → Dhvani calls back → booking confirmed
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="max-w-[1400px] mx-auto relative">
           <div className="flex flex-col xl:flex-row items-stretch gap-8 xl:gap-6">
 
             {/* 01. WHATSAPP */}
-            <div className={`flex-[1.1] transition-all duration-700 xl:opacity-100 xl:blur-0 xl:scale-100
-              ${mobileActivePanel === 0 ? "block" : "hidden xl:block"}
-              ${currentStep < 1 ? "xl:opacity-60 xl:scale-[0.98]" : "xl:opacity-100 xl:scale-100"}`}>
+            <div
+              className={`flex-[1.1] transition-all duration-700
+                ${mobileActivePanel === 0 ? "block" : "hidden xl:block"}
+                ${currentStep < 1 ? "opacity-60 scale-[0.98]" : "opacity-100 scale-100"}`}
+            >
               <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep >= 1 && currentStep <= 1 ? "bg-[#25D366] animate-pulse" : currentStep === 4 ? "bg-[#25D366] animate-pulse" : "bg-white/10"}`} />
                 01. WhatsApp (Customer)
@@ -805,20 +834,21 @@ const HearItYourselfSection = ({
                 <div className="relative flex-1 overflow-hidden bg-[#0A0D14]">
                   <AnimatePresence mode="wait">
                     {currentStep < 2 ? (
-                      <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex flex-col items-center justify-center p-8 text-center">
-                        <button onClick={handlePlay} className="w-20 h-20 rounded-full bg-[#2D22FF] flex items-center justify-center mb-6 shadow-[0_0_40px_#2D22FF88] transition-transform hover:scale-110 active:scale-95">
-                          <svg width="36" height="36" viewBox="0 0 24 24" fill="white" className="ml-1.5"><path d="M5 3l14 9-14 9V3z"/></svg>
-                        </button>
-                        <p className="text-white/20 text-[11px] font-bold tracking-[0.2em] uppercase">
-                          {currentStep === 1 ? "Incoming call…" : "Tap to simulate"}
-                        </p>
-                        {currentStep === 1 && (
-                          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
-                            className="mt-4 flex gap-1.5 items-center">
-                            {[0, 1, 2].map(i => (
-                              <div key={i} className="w-2 h-2 rounded-full bg-[#2D22FF]/50 animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
-                            ))}
-                          </motion.div>
+                      <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full flex flex-col items-center justify-center p-8 text-center gap-4">
+                        <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
+                        </div>
+                        {currentStep === 1 ? (
+                          <div className="flex flex-col items-center gap-2">
+                            <p className="text-[#818cf8] text-[11px] font-bold tracking-[0.2em] uppercase">Incoming call…</p>
+                            <div className="flex gap-1.5 items-center">
+                              {[0, 1, 2].map(i => (
+                                <div key={i} className="w-2 h-2 rounded-full bg-[#2D22FF]/60 animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <p className="text-white/15 text-[11px] font-bold tracking-[0.2em] uppercase">Waiting for call…</p>
                         )}
                       </motion.div>
                     ) : (
@@ -3020,7 +3050,7 @@ const StickyMobileCTA = () => {
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 const AiVoiceAgentPage: NextPageWithLayout = () => {
-  const [demoTab, setDemoTab] = useState<DemoTab>("dental");
+  const [demoTab, setDemoTab] = useState<DemoTab>("travel");
   const [autoPlayTrigger, setAutoPlayTrigger] = useState<number>(0);
 
   const handleCardPlay = useCallback((tab: DemoTab) => {
