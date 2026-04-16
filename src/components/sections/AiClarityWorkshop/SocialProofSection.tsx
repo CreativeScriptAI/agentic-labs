@@ -14,7 +14,17 @@ interface Testimonial {
   orientation?: "portrait" | "landscape";
 }
 
-const SocialProofSection = () => {
+type SocialProofProps = {
+  heading?: React.ReactNode;
+  subheading?: React.ReactNode;
+  variant?: "workshop" | "voice";
+};
+
+const SocialProofSection = ({
+  heading,
+  subheading,
+  variant = "workshop",
+}: SocialProofProps = {}) => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const [fullscreenVideo, setFullscreenVideo] = useState<string | null>(null);
   const [columns, setColumns] = useState(3);
@@ -154,25 +164,54 @@ const SocialProofSection = () => {
     <section id="proof" className="py-10 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2
-            className="font-semibold text-foreground mb-4 text-[28px] sm:text-[36px] md:text-[44px]"
-            style={{ lineHeight: "1.1" }}
-          >
-            We&apos;ve helped teams find clarity across{" "}
-            <span className="relative inline-block">
-              <span className="absolute bg-yellow-200 h-full left-[-4px] top-0 right-[-4px] z-0 rounded"></span>
-              <span className="relative z-10">industries</span>
-            </span>
-            .
-          </h2>
-          <p className="text-gray-600 mt-4 text-[16px] sm:text-[17px] md:text-[18px]">
-            From SaaS and fintech to healthcare and Web3 our audits have
-            uncovered{" "}
-            <span className="font-semibold text-black">
-              $100K+ in hidden ROI
-            </span>
-            .
-          </p>
+          {variant === "voice" ? (
+            <>
+              <h2
+                className="font-eb-garamond italic text-[#0A1128] mb-4 text-[32px] sm:text-[42px] md:text-[52px]"
+                style={{ lineHeight: "1.05" }}
+              >
+                {heading ?? (
+                  <>
+                    Founders who&apos;ve seen it{" "}
+                    <span className="text-gray-400">in action.</span>
+                  </>
+                )}
+              </h2>
+              <p className="text-gray-500 mt-4 text-[15px] sm:text-[16px] md:text-[17px]">
+                {subheading ?? "Real feedback from real business owners — across industries and time zones."}
+              </p>
+            </>
+          ) : (
+            <>
+              <h2
+                className="font-semibold text-foreground mb-4 text-[28px] sm:text-[36px] md:text-[44px]"
+                style={{ lineHeight: "1.1" }}
+              >
+                {heading ?? (
+                  <>
+                    We&apos;ve helped teams find clarity across{" "}
+                    <span className="relative inline-block">
+                      <span className="absolute bg-yellow-200 h-full left-[-4px] top-0 right-[-4px] z-0 rounded"></span>
+                      <span className="relative z-10">industries</span>
+                    </span>
+                    .
+                  </>
+                )}
+              </h2>
+              <p className="text-gray-600 mt-4 text-[16px] sm:text-[17px] md:text-[18px]">
+                {subheading ?? (
+                  <>
+                    From SaaS and fintech to healthcare and Web3 our audits have
+                    uncovered{" "}
+                    <span className="font-semibold text-black">
+                      $100K+ in hidden ROI
+                    </span>
+                    .
+                  </>
+                )}
+              </p>
+            </>
+          )}
         </div>
 
         {/* MASONRY GRID - Portrait spans rows, Landscape spans columns */}
