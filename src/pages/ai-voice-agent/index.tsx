@@ -790,7 +790,7 @@ const HearItYourselfSection = ({
 
             {/* 01. WHATSAPP */}
             <div
-              className={`flex-[1.1] transition-all duration-700
+              className={`flex-1 transition-all duration-700
                 ${mobileActivePanel === 0 ? "block" : "hidden xl:block"}
                 ${currentStep < 1 ? "opacity-60 scale-[0.98]" : "opacity-100 scale-100"}`}
             >
@@ -798,7 +798,7 @@ const HearItYourselfSection = ({
                 <div className={`w-2 h-2 rounded-full ${currentStep >= 1 && currentStep <= 1 ? "bg-[#25D366] animate-pulse" : currentStep === 4 ? "bg-[#25D366] animate-pulse" : "bg-white/10"}`} />
                 01. WhatsApp (Customer)
               </div>
-              <div className="h-[520px] sm:h-[560px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
+              <div className="h-[360px] sm:h-[440px] xl:h-[520px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
                 <WhatsAppMockup
                   step={currentStep}
                   customerMessage={demo.customerMessage}
@@ -810,14 +810,14 @@ const HearItYourselfSection = ({
             <StepArrow isActive={currentStep >= 2} />
 
             {/* 02. VOICE AGENT */}
-            <div className={`flex-[1.4] transition-all duration-700
+            <div className={`flex-1 transition-all duration-700
               ${mobileActivePanel === 1 ? "block" : "hidden xl:block"}
               ${currentStep < 2 ? "xl:opacity-20 xl:blur-[2px]" : "xl:opacity-100"}`}>
               <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep >= 2 && currentStep <= 3 ? "bg-[#2D22FF] animate-pulse" : "bg-white/10"}`} />
                 02. Voice Agent (Dhvani)
               </div>
-              <div className="rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[520px] sm:h-[560px] flex flex-col bg-[#0A0D14] shadow-2xl">
+              <div className="rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[360px] sm:h-[440px] xl:h-[520px] flex flex-col bg-[#0A0D14] shadow-2xl">
                 <div className="px-6 pt-12 pb-5 border-b border-white/5 flex items-center justify-between bg-black/40 backdrop-blur-xl z-20">
                   <div className="flex items-center gap-4 min-w-0 flex-1">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${currentStep >= 2 ? "bg-[#2D22FF] shadow-[0_0_20px_#2D22FF66]" : "bg-white/5"}`}>
@@ -891,14 +891,14 @@ const HearItYourselfSection = ({
             <StepArrow isActive={currentStep >= 5} />
 
             {/* 03. CRM */}
-            <div className={`flex-[1.1] transition-all duration-700
+            <div className={`flex-1 transition-all duration-700
               ${mobileActivePanel === 2 ? "block" : "hidden xl:block"}
               ${currentStep < 5 ? "xl:opacity-10 xl:blur-[3px] xl:scale-95" : "xl:opacity-100 xl:scale-100"}`}>
               <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep === 5 ? "bg-emerald-400 animate-pulse" : "bg-white/10"}`} />
                 03. Sync (CRM)
               </div>
-              <div className="h-[520px] sm:h-[560px]">
+              <div className="h-[360px] sm:h-[440px] xl:h-[520px]">
                 <CRMMockup isVisible={currentStep >= 5} leadName={demo.callerName} data={demo.crmData} />
               </div>
             </div>
