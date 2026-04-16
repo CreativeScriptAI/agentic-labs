@@ -161,7 +161,7 @@ const SocialProofSection = ({
   const gridTestimonials = distributeToColumnsGrid();
 
   return (
-    <section id="proof" className="py-10 md:py-16 px-4 sm:px-6 lg:px-8">
+    <section id="proof" className="py-6 md:py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           {variant === "voice" ? (
@@ -217,13 +217,13 @@ const SocialProofSection = ({
         {/* MASONRY GRID - Portrait spans rows, Landscape spans columns */}
         <div
           ref={gridRef}
-          className="mb-12"
+          className="mb-8"
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
-            gridAutoRows: "minmax(200px, auto)", // Each row unit
-            gap: "1.5rem",
-            gridAutoFlow: "row dense", // Row-wise, fill gaps
+            gridAutoRows: "minmax(140px, auto)",
+            gap: "1rem",
+            gridAutoFlow: "row dense",
           }}
         >
           {gridTestimonials.map((item, idx) => {
@@ -244,7 +244,7 @@ const SocialProofSection = ({
                     <div
                       className={`relative group h-full ${
                         item.orientation === "portrait"
-                          ? "aspect-[9/16]"
+                          ? "aspect-[9/16] max-h-[340px]"
                           : "aspect-video"
                       }`}
                     >
