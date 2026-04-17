@@ -92,6 +92,26 @@ const PAGE_IMAGES: Record<string, PageImages> = {
     solution: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",    // dashboard analytics
     result: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",         // pipeline / charts
   },
+  "done-for-you-ai-voice-agent": {
+    hero: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",           // team at work
+    solution: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&auto=format&fit=crop",    // collaborative team
+    result: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=640&q=80&auto=format&fit=crop",         // business meeting
+  },
+  "ai-vs-human-receptionist": {
+    hero: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=640&q=80&auto=format&fit=crop",           // receptionist at desk
+    solution: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=640&q=80&auto=format&fit=crop",    // professional woman
+    result: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=640&q=80&auto=format&fit=crop",         // happy customer
+  },
+  "ai-for-missed-calls": {
+    hero: "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?w=640&q=80&auto=format&fit=crop",        // phone ringing
+    solution: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=640&q=80&auto=format&fit=crop",    // person on phone
+    result: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=640&q=80&auto=format&fit=crop",      // team celebrating
+  },
+  "gohighlevel-ai-calling-alternative": {
+    hero: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",        // dashboard
+    solution: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=640&q=80&auto=format&fit=crop",       // team at laptops
+    result: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",         // pipeline charts
+  },
 };
 
 const DEFAULT_IMAGES: PageImages = {

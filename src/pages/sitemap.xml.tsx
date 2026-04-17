@@ -54,6 +54,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 
     // Add programmatic SEO routes (root level)
     const pSeoPriority = (type: string) => {
+      if (type === "positioning") return 0.90;
       if (type === "persona" || type === "integration") return 0.85;
       if (type === "comparison" || type === "memory-use-case") return 0.80;
       if (type === "directory") return 0.70;

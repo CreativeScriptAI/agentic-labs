@@ -257,6 +257,17 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Pricing page → hub pricing section
+      {
+        source: "/ai-voice-agent-pricing",
+        destination: "/ai-voice-agent/#pricing",
+        permanent: false,
+      },
+      {
+        source: "/ai-voice-agent-pricing/",
+        destination: "/ai-voice-agent/#pricing",
+        permanent: false,
+      },
       // Localized routes redirects to global
       {
         source: "/en-in/:path*",

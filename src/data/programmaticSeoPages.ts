@@ -1985,7 +1985,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
       { label: "AI Memory System", href: "/ai-memory-system" },
-      { label: "AI Memory for Dental Clinics", href: "/ai-memory-for-dental-clinics" },
+      { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
     ],
     keywords: [
       "best ai tools for dental practices",
@@ -2151,7 +2151,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "AI Memory for Marketing Agents", href: "/ai-memory-for-marketing-agents" },
+      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
     ],
     keywords: [
       "best ai for gohighlevel agencies",
@@ -2233,7 +2233,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
-      { label: "AI Memory for Recruiting Teams", href: "/ai-memory-for-recruiting-teams" },
+      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
       { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
     ],
     keywords: [
@@ -3518,6 +3518,714 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "ghl pipeline automation voice",
       "gohighlevel ai alternative",
       "ai phone agent for ghl",
+    ],
+  },
+
+  // ─── PAGE: done-for-you-ai-voice-agent ────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["done-for-you-ai-voice-agent"],
+    title: "Done-For-You AI Voice Agent — We Build It, Deploy It, Manage It",
+    description:
+      "Every AI voice agent platform expects you to build it yourself. We don't. We build your AI voice agent, deploy it on your number, and manage it — live in 7 days. You just answer the qualified leads. Starts at ₹2,499/mo ($299/mo).",
+    canonicalUrl: makeCanonical(["done-for-you-ai-voice-agent"]),
+    heroLabel: "Done-For-You AI Voice Agents",
+    heroHeadline: "You don't need another platform. You need someone to just handle it.",
+    heroSubheadline:
+      "Every AI voice agent tool expects you to configure prompts, wire telephony, and debug edge cases yourself. We do all of that for you. You get a working voice agent on your business number in 7 days — without touching any tech.",
+    painTitle: "The DIY trap that costs more than hiring us",
+    painPoints: [
+      "You sign up for Vapi, Retell, or Bland. Watch the demo. Start building. Three weeks later, you've spent $2,000+ on a developer and the agent still sounds robotic on real calls.",
+      "The voice layer works in testing. Then it goes live — and the CRM integration breaks, the WhatsApp follow-up doesn't fire, and nobody knows whose job it is to fix it.",
+      "You're a business owner, not a prompt engineer. Every hour you spend debugging AI telephony is an hour you're not spending on the business that pays your bills.",
+    ],
+    costCallout: {
+      items: [
+        { label: "DIY platform cost (Vapi/Retell API + telephony)", amount: "$200–$800 / month" },
+        { label: "Developer to build and maintain the system", amount: "$2,000–$5,000 / month" },
+        { label: "Your time managing, debugging, and firefighting", amount: "10–20 hours / month" },
+      ],
+      total: "DIY total: $3,000–$6,000/month + your time — for a system that still breaks",
+      solvesFor: "Done-for-you: ₹2,499/mo ($299/mo) — we build, deploy, and manage everything",
+      source: "Based on client audits of DIY voice AI implementations, Agentic AI Labs 2026",
+    },
+    practitionerQuote: {
+      text: "I spent three months trying to build a voice agent on Vapi myself. It worked in the demo, broke in production, and I was debugging webhooks at midnight. Then I found a team that just built the whole thing for me in a week. I should have done that first.",
+      attribution: "SaaS founder, Reddit r/SaaS, 2025",
+    },
+    statusQuoTitle: "What business owners try before finding us",
+    statusQuoItems: [
+      "Sign up for a voice AI platform (Vapi, Retell, Bland) — realize it needs a developer to actually build anything production-ready.",
+      "Hire a freelancer on Upwork to build a voice agent — get a demo that works, then watch it fail on real calls with real accents and real background noise.",
+      "Build internally with an engineering team — burn 3 months and $15K+ before realizing voice AI is not their core competency.",
+    ],
+    industrySignal: {
+      headline: "The market is flooded with AI voice platforms. Nobody is offering to just do it for you.",
+      body: "There are now 50+ AI voice agent platforms (Vapi, Retell, Bland, ElevenLabs, Bolna, Smallest, etc.). All of them sell to developers. None of them build, deploy, and manage the system for you. For the 99% of business owners who don't have a developer on staff, the platform explosion has created more confusion, not less. The gap isn't technology — it's service. The businesses winning with voice AI aren't the ones with the best tech stack. They're the ones who found someone to handle it.",
+      source: "Agentic AI Labs market analysis, 2026",
+      date: "2026",
+    },
+    solutionTitle: "We build it. We deploy it. We manage it. You just answer the leads.",
+    solutionItems: [
+      "Your AI voice agent — built on your actual business logic, trained on your services, speaking your language.",
+      "Deployed on your existing phone number in 7 days — no apps, no hardware, no tech changes on your side.",
+      "Managed and monitored for 30 days post-launch. We tune it based on real call data, not guesses.",
+    ],
+    layers: [
+      {
+        title: "We build it on your business logic.",
+        body: "One 45-minute call with us. You walk us through your services, your pricing, your common customer questions, and your team structure. We build the entire voice agent from that — prompts, telephony, language handling, CRM integration. Not a template. Not a demo. A production system built on how your business actually works.",
+      },
+      {
+        title: "We deploy it on your number in 7 days.",
+        body: "Day 1: audit call. Days 2–5: we build. Day 6: you review test calls. Day 7: live on your number. No app installs. No developer needed. No migration. Your customers call the same number they've always called — except now every call gets answered.",
+      },
+      {
+        title: "We manage it so you never touch the tech.",
+        body: "For 30 days after launch, we monitor every call. Weekly tuning based on real conversations — not assumptions. If the agent handles a question badly, we fix it before you even notice. If your services change, we update the agent. You manage your business. We manage the AI.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "TELL US HOW YOUR BUSINESS WORKS",
+        body: "45-minute call. You talk, we listen. Services, pricing, common questions, team structure, languages, hours. We leave with everything we need to build.",
+        youSpend: "45 minutes. One call.",
+      },
+      {
+        week: 2,
+        phase: "WE BUILD THE ENTIRE SYSTEM",
+        body: "Voice agent, WhatsApp follow-up, CRM integration, multilingual handling — all built and tested against your real business scenarios. You don't touch any of it.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "YOU REVIEW, WE REFINE",
+        body: "We send you 5–10 test call recordings. You listen, tell us what sounds right and what doesn't. We refine the agent until it handles your calls the way you would.",
+        youSpend: "20–30 minutes reviewing recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ON YOUR NUMBER",
+        body: "Day 7: Your AI voice agent goes live. We monitor every call for 30 days. You get a daily WhatsApp summary of calls handled, leads captured, and anything flagged for human follow-up.",
+        youSpend: "Zero. Check your WhatsApp for the daily summary.",
+      },
+    ],
+    proofTitle: "50+ voice agents deployed. Here's what we've learned.",
+    proofBullets: [
+      "Average time from first call to live agent: 7 days. Fastest: 2 days (simple inbound FAQ agent).",
+      "Clients who switched from DIY to done-for-you saved an average of $3,000/month in developer and maintenance costs.",
+      "100% of agents deployed in Hindi + English. Regional languages (Marathi, Tamil, Gujarati, Arabic) added in 2–3 days.",
+    ],
+    caseStudy: {
+      client: "Multi-Vertical — 50+ Agents Deployed",
+      problem: "Business owners across travel, home services, coaching, real estate, and healthcare were losing leads to missed calls, after-hours gaps, and slow follow-up. Most had tried DIY platforms and failed — or were paying developers $3K–$5K/month to maintain fragile systems.",
+      system: "Done-for-you AI voice agent built on each business's exact workflow. Voice + WhatsApp + CRM integration. Deployed on existing business numbers. Hindi, English, and regional language support. 30-day monitored launch with weekly tuning.",
+      result: "Zero missed calls from day one. After-hours coverage for the first time. WhatsApp follow-up automated. Clients report the agent pays for itself within the first week — typically from a single captured lead that would have gone to a competitor.",
+    },
+    testimonial: {
+      quote: "I tried building it myself for three months. Failed. Then these guys built the whole thing in a week and it just works. My phone hasn't missed a call since. I should have done this first.",
+      author: "Home Services Business Owner, Mumbai",
+    },
+    proofStats: [
+      { stat: "50+", label: "AI voice agents deployed" },
+      { stat: "7 days", label: "average time to go live" },
+      { stat: "₹2,499", label: "starting monthly cost" },
+    ],
+    fitChecklist: {
+      headline: "Built for business owners who want AI handling their calls — without becoming AI engineers.",
+      forYou: [
+        "You're a business owner, not a developer — you don't want to configure prompts, wire APIs, or debug telephony",
+        "You've tried a DIY platform (Vapi, Retell, Bland) and realized it needs more engineering than you have",
+        "You lose leads to missed calls, after-hours gaps, or slow follow-up — and you want it fixed in days, not months",
+        "You want someone to build, deploy, and manage the AI — not hand you a tool and walk away",
+        "Your budget is ₹2,499–₹25,000/month ($299–$500/month) — not $5K/month for a developer",
+      ],
+      notForYou: [
+        "You have an in-house engineering team that wants to build and maintain the voice AI system themselves",
+        "You're looking for a platform to resell — we build for end businesses, not agencies (yet)",
+        "You receive fewer than 5 calls per day — manual answering is sufficient at that volume",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same service, localized for your market.",
+    },
+    faq: [
+      {
+        question: "How is this different from signing up for Vapi or Retell?",
+        answer:
+          "Vapi and Retell are platforms — they give you the tools, you build the agent yourself. You need a developer, prompt engineering skills, and telephony knowledge. We're a service — we build the agent for you, deploy it on your number, and manage it. The difference is like buying a kitchen vs hiring a chef.",
+      },
+      {
+        question: "What do I need to provide?",
+        answer:
+          "45 minutes of your time on a call. You tell us how your business works — services, pricing, common questions, team structure, languages. We handle everything else. No tech setup on your side.",
+      },
+      {
+        question: "How long does it take to go live?",
+        answer:
+          "7 days from your first call with us. Day 1: audit. Days 2–5: build. Day 6: you review test calls. Day 7: live. Some simple agents (FAQ, appointment booking) launch in 2–3 days.",
+      },
+      {
+        question: "What languages does the AI handle?",
+        answer:
+          "Hindi, English, and Hinglish from day one. Marathi, Gujarati, Tamil, Telugu, Arabic available with 2–3 days additional setup. The agent detects the caller's language and responds in kind.",
+      },
+      {
+        question: "What happens if the AI can't answer something?",
+        answer:
+          "It never guesses. It captures the question, tells the caller your team will follow up, and sends you an immediate WhatsApp alert with the caller's name, question, and number. Every call has a human escalation path.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "Starts at ₹2,499/month ($299/month for international). Build and setup is a one-time fee based on complexity. We scope it on the first call before you commit. No hidden per-minute charges.",
+      },
+      {
+        question: "Do you offer a trial or money-back guarantee?",
+        answer:
+          "If your agent isn't live within the agreed timeline, we refund the setup fee — no questions. Once live, we tune the system at no extra cost for 30 days until it performs to your specification.",
+      },
+      {
+        question: "Can I switch from a DIY setup I already built?",
+        answer:
+          "Yes. We migrate your existing setup — whether it's on Vapi, Retell, Bland, or a custom build. We audit what you have, keep what works, rebuild what doesn't, and take over management. Most migrations complete in 5–7 days.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll build it, deploy it, and manage it. You just answer the qualified leads.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Booking Agent for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
+      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+    ],
+    keywords: [
+      "done for you ai voice agent",
+      "managed ai voice agent",
+      "ai voice agent agency",
+      "ai voice agent setup service",
+      "fully managed ai voice agent",
+      "hire someone to build ai voice agent",
+      "ai voice agent service",
+      "ai receptionist service",
+      "done for you ai calling",
+      "ai voice agent without coding",
+      "ai agent build and deploy",
+      "managed ai receptionist",
+      "ai voice agent for non technical",
+      "outsource ai voice agent",
+    ],
+  },
+
+  // ─── PAGE: ai-vs-human-receptionist ───────────────────────────────────────
+  {
+    type: "comparison",
+    pathSegments: ["ai-vs-human-receptionist"],
+    title: "AI Receptionist vs Human Receptionist — Real Cost Comparison (₹ and $)",
+    description:
+      "A human receptionist costs ₹25,000/month ($300/month), works 8 hours, handles 1 call at a time, and takes sick days. An AI receptionist costs ₹2,499/month ($30/month), works 24/7, handles unlimited concurrent calls, and never misses a day. Here's the full comparison.",
+    canonicalUrl: makeCanonical(["ai-vs-human-receptionist"]),
+    heroLabel: "AI vs Human — The Real Comparison",
+    heroHeadline: "Your receptionist costs ₹25,000/month. Ours costs ₹2,499. Both answer the phone.",
+    heroSubheadline:
+      "One works 24/7, speaks 5 languages, handles 10 calls simultaneously, and never calls in sick. The other takes lunch breaks. This is the honest comparison — with real numbers in ₹ and $.",
+    painTitle: "What a human receptionist actually costs you",
+    painPoints: [
+      "Salary: ₹15,000–₹25,000/month ($200–$300/month). Add training, benefits, sick days, and turnover costs — the real number is 30–40% higher than the salary alone.",
+      "Availability: 8–10 hours per day, 5–6 days per week. Every call outside those hours goes to voicemail. Weekend and holiday inquiries are gone.",
+      "Capacity: One call at a time. When two calls come in simultaneously, one rings out. That caller doesn't leave a voicemail — they call your competitor.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Human receptionist (India)", amount: "₹15,000–₹25,000 / month" },
+        { label: "Human receptionist (US/UK/UAE)", amount: "$2,000–$4,000 / month" },
+        { label: "AI receptionist", amount: "₹2,499 / $299 / month" },
+      ],
+      total: "Human = ₹3,00,000/year ($24,000–$48,000/year). AI = ₹29,988/year ($3,588/year). That's a 10x cost difference.",
+      solvesFor: "₹2,499/month ($299/month) — 24/7, multilingual, unlimited concurrent calls",
+      source: "Salary data: Glassdoor India + BLS (US), 2026. AI pricing: Agentic AI Labs.",
+    },
+    practitionerQuote: {
+      text: "We were paying ₹22,000 a month for a receptionist who worked 9 to 6. After hours, weekends, holidays — nobody answered. The AI costs a tenth of that and hasn't missed a single call in three months.",
+      attribution: "Dental clinic owner, Mumbai — Agentic AI Labs client, 2026",
+    },
+    statusQuoTitle: "The three options you're comparing right now",
+    statusQuoItems: [
+      "Keep the human receptionist — reliable during business hours, but after-hours and overlap calls are permanently lost.",
+      "Hire a second receptionist for evenings — doubles your cost, still can't handle simultaneous calls, still takes weekends off.",
+      "Use a call answering service — generic scripts, no knowledge of your business, callers know they're not talking to your team.",
+    ],
+    industrySignal: {
+      headline: "Small businesses are switching from human receptionists to AI at 3x the rate of 2024.",
+      body: "The AI receptionist market is growing at 34% CAGR. The driver isn't cost — it's coverage. Businesses that switched to AI report the biggest impact from after-hours and concurrent call handling, not from saving on salary. The calls they were missing (evenings, weekends, overlap) are the ones that convert best — because those callers have urgent needs. The human receptionist wasn't the wrong hire — she just can't be everywhere at once.",
+      source: "Grand View Research AI Receptionist Market Report + Agentic AI Labs client data, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Same job. 10x cheaper. Available 24/7. Speaks 5 languages.",
+    solutionItems: [
+      "Answers every call in under 3 rings — including evenings, weekends, and public holidays.",
+      "Speaks Hindi, English, Marathi, Gujarati, Tamil, Arabic — no additional cost per language.",
+      "Handles unlimited concurrent calls — no engaged tone, no missed overlap.",
+    ],
+    layers: [
+      {
+        title: "Available when your receptionist isn't.",
+        body: "The highest-value calls come after hours. A dental patient with a toothache at 9 PM. An AC emergency on a Sunday. A property inquiry from a buyer browsing at midnight. Your human receptionist isn't there for any of them. The AI is. 24/7/365. No overtime, no night shift, no holiday pay.",
+      },
+      {
+        title: "Handles 10 calls at once — without putting anyone on hold.",
+        body: "When your receptionist is on a call and the phone rings again, that second caller gets voicemail or an engaged tone. They call your competitor. The AI handles every call simultaneously — 2, 5, 10 at once. Nobody waits. Nobody leaves. Nobody calls someone else.",
+      },
+      {
+        title: "Gets smarter every week. Never forgets.",
+        body: "Your human receptionist forgets what a returning customer asked last month. The AI remembers every call, every question, every preference. It gets better with every interaction. After 30 days, it handles your calls better than a new hire ever could — because it's trained on your actual business, not a generic script.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT YOUR CURRENT SETUP",
+        body: "We analyze your current call volume, after-hours gap, languages needed, and common customer questions. You leave with a clear picture of what you're losing.",
+        youSpend: "30 minutes on a call.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI RECEPTIONIST",
+        body: "Built on your services, your pricing, your FAQs. Hindi, English, or any language you need. CRM integration mapped.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST SIDE BY SIDE",
+        body: "Run the AI alongside your human receptionist for a week. Compare: calls handled, response time, after-hours coverage, caller satisfaction.",
+        youSpend: "Review the comparison report.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE — 24/7 COVERAGE",
+        body: "The AI takes over primary answering. Your receptionist handles the complex calls that need a human touch. Or you reduce receptionist hours and let the AI cover the rest.",
+        youSpend: "Zero. The AI handles it.",
+      },
+    ],
+    proofTitle: "The numbers don't lie. Here's the real comparison.",
+    proofBullets: [
+      "AI answers in < 3 rings. Human average: 4–6 rings (if available).",
+      "AI available 24/7/365. Human available 8–10 hours, 5–6 days/week.",
+      "AI handles unlimited concurrent calls. Human handles 1 at a time.",
+    ],
+    proofStats: [
+      { stat: "10x", label: "cheaper than a human receptionist" },
+      { stat: "24/7", label: "availability vs 8-hour shifts" },
+      { stat: "0", label: "calls missed since deployment" },
+    ],
+    fitChecklist: {
+      headline: "This comparison is for business owners doing the math on receptionist costs.",
+      forYou: [
+        "You're paying ₹15,000–₹25,000/month ($2,000+/month) for a receptionist and wondering if AI can do the same job",
+        "You lose calls after hours, on weekends, or when your receptionist is already on another call",
+        "You want 24/7 coverage but can't afford a second or third shift hire",
+        "You need multilingual support (Hindi, English, regional) without hiring multiple receptionists",
+      ],
+      notForYou: [
+        "Your receptionist handles complex in-person tasks (greeting walk-ins, managing physical paperwork) that AI can't replace",
+        "You receive fewer than 5 calls per day — the cost savings don't justify the switch at that volume",
+        "You specifically need a human voice for compliance or regulatory reasons in your industry",
+      ],
+      geographicNote: "Comparison valid for India, UAE, UK, Australia, and North America. Pricing shown in both ₹ and $.",
+    },
+    faq: [
+      {
+        question: "Will my callers know they're talking to AI?",
+        answer:
+          "Most don't ask. The AI sounds natural, responds in the caller's language, and handles their request efficiently. In our deployments, callers consistently don't identify the agent as AI. If asked directly, the AI answers honestly.",
+      },
+      {
+        question: "Can the AI completely replace my receptionist?",
+        answer:
+          "For phone answering, yes. For in-person tasks (greeting visitors, managing physical paperwork), no. Most businesses keep their receptionist for in-person work and let the AI handle all phone calls — giving the receptionist more time for higher-value tasks.",
+      },
+      {
+        question: "What about complex calls that need a human?",
+        answer:
+          "The AI escalates to your team with full context — caller name, question, urgency level. Your team picks up where the AI left off, fully briefed. The AI handles the routine. Humans handle the exceptions.",
+      },
+      {
+        question: "How quickly can I switch?",
+        answer:
+          "7 days from your first call with us. The AI runs alongside your receptionist initially — no disruption. You decide when to expand coverage based on results.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "AI receptionist starts at ₹2,499/month (India) or $299/month (international). Compare that to ₹15,000–₹25,000/month for a human receptionist in India, or $2,000–$4,000/month in the US/UK. The math is straightforward.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "See the pricing plans and calculate your savings. We'll show you the exact comparison for your business.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
+      { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+    ],
+    keywords: [
+      "ai vs human receptionist",
+      "ai receptionist vs human receptionist",
+      "replace receptionist with ai",
+      "ai receptionist cost comparison",
+      "ai receptionist cost",
+      "hire receptionist vs ai",
+      "ai answering service vs receptionist",
+      "ai receptionist pricing",
+      "ai receptionist for small business",
+      "should i replace my receptionist with ai",
+      "ai receptionist benefits",
+      "ai phone answering vs receptionist",
+    ],
+  },
+
+  // ─── PAGE: ai-for-missed-calls ────────────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-missed-calls"],
+    title: "AI for Missed Calls — Stop Losing Revenue to an Unanswered Phone",
+    description:
+      "The average service business misses 20–40% of inbound calls. Each missed call is a customer who called your competitor instead. We build an AI voice agent that answers every call, captures the inquiry, and sends your team a WhatsApp summary — 24/7.",
+    canonicalUrl: makeCanonical(["ai-for-missed-calls"]),
+    heroLabel: "The Missed Call Problem",
+    heroHeadline: "Every missed call is a customer who just called your competitor.",
+    heroSubheadline:
+      "Your ads are running. Your website is live. Leads are calling. But 20–40% of those calls ring out, go to voicemail, or hit an engaged tone. Every one of them is revenue you already paid to generate — lost to whoever picked up first.",
+    painTitle: "The invisible revenue leak most businesses don't measure",
+    painPoints: [
+      "The call comes in while your team is on another call. It rings 4 times and drops. The caller doesn't leave a voicemail — they Google the next option. That's ₹1,500–₹50,000 gone in 30 seconds, depending on your industry.",
+      "After-hours calls are the highest-intent calls. A patient with a toothache at 9 PM, a homeowner with a burst pipe on Sunday, a buyer browsing property at midnight. These callers need help NOW. Voicemail isn't help.",
+      "You're spending ₹50,000–₹2,00,000/month ($600–$2,500/month) on Google Ads, Meta Ads, and SEO to generate these calls. Then losing 20–40% of them to an unanswered phone. Your cost per acquisition just doubled.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average missed calls per day (service business)", amount: "5–15 calls" },
+        { label: "Average revenue per converted call", amount: "₹1,500–₹50,000 / $20–$500" },
+        { label: "Monthly ad spend generating those calls", amount: "₹50,000–₹2,00,000 / $600–$2,500" },
+      ],
+      total: "20–40% of your ad-generated calls are going unanswered — money spent on leads you never spoke to",
+      solvesFor: "₹2,499/month ($299/month) — every call answered, every lead captured, 24/7",
+      source: "Industry data: BIA/Kelsey missed call study + Agentic AI Labs client audits, 2026",
+    },
+    practitionerQuote: {
+      text: "We were spending ₹1.5 lakh a month on Google Ads. Turns out we were missing 30% of the calls those ads generated — after hours and during overlap. We were literally paying for our competitor's leads.",
+      attribution: "Home services marketplace founder, Bangalore — Agentic AI Labs client, 2026",
+    },
+    statusQuoTitle: "What businesses try to fix the missed call problem",
+    statusQuoItems: [
+      "Voicemail — 80% of callers don't leave one. They call the next business on Google instead.",
+      "Hire a second person for evenings — ₹15,000–₹20,000/month ($200–$300/month), still can't handle two calls at once, still takes weekends off.",
+      "Call forwarding to personal phone — you answer during dinner, while driving, in meetings. Not sustainable, not professional.",
+    ],
+    industrySignal: {
+      headline: "85% of callers who don't reach a business on the first try will never call back.",
+      body: "Research consistently shows that missed calls are the #1 source of revenue leakage for service businesses. The window between a missed call and a competitor booking is under 3 minutes for urgent services (plumbing, AC repair, medical), under 5 minutes for consideration services (real estate, coaching, dental), and under 10 minutes for comparison services (aesthetic treatments, travel). The businesses that answer first win — regardless of pricing, brand, or reviews.",
+      source: "BIA/Kelsey + Forbes Advisor, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Every call answered. Every lead captured. Your team gets a WhatsApp summary.",
+    solutionItems: [
+      "AI answers every inbound call in under 3 rings — 24/7, including evenings, weekends, and holidays.",
+      "Captures caller intent, contact details, and urgency. Sends structured summary to your team's WhatsApp within 10 seconds.",
+      "Handles concurrent calls — no engaged tone. 2, 5, 10 calls at once — every caller gets answered immediately.",
+    ],
+    layers: [
+      {
+        title: "Answers the calls your team can't.",
+        body: "Your team is on another call. It's after hours. It's Sunday. It's Diwali. The AI doesn't care — it answers in under 3 rings, in the caller's language, every time. Hindi, English, Marathi, Gujarati, Tamil, Arabic. The caller doesn't hit voicemail. They don't hear an engaged tone. They get answered. Immediately.",
+      },
+      {
+        title: "Captures the lead before they call someone else.",
+        body: "Within 10 seconds of the call ending, your team gets a WhatsApp message: caller name, what they need, how urgent it is, their contact number. Structured. Actionable. Not a vague voicemail you have to listen to and transcribe. Your team calls back with full context — not a cold follow-up.",
+      },
+      {
+        title: "Turns missed calls into booked appointments.",
+        body: "The AI doesn't just answer — it qualifies. It asks the right questions, captures the inquiry, and can book directly into your calendar. The 9 PM dental patient gets a morning appointment. The Sunday AC emergency gets dispatched. The midnight property inquiry gets a next-day callback. Every missed call becomes a captured opportunity.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MEASURE YOUR MISSED CALL PROBLEM",
+        body: "We audit your current call volume and missed call rate. Most businesses are shocked — they think they miss 5%, it's usually 20–40%. You leave with a clear revenue number attached to the problem.",
+        youSpend: "30 minutes. We pull the data.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI ANSWERING AGENT",
+        body: "Built on your business: services, pricing, common questions, languages. The AI sounds like your front desk, not a generic bot.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL CALL SCENARIOS",
+        body: "After-hours call. Two simultaneous calls. Language switch mid-conversation. Emergency escalation. We test every scenario that currently causes missed calls.",
+        youSpend: "20 minutes reviewing test recordings.",
+      },
+      {
+        week: 4,
+        phase: "ZERO MISSED CALLS FROM DAY ONE",
+        body: "Live on your number. Every call answered. Every lead captured. We monitor for 30 days and tune based on your real call data.",
+        youSpend: "Zero. Check your WhatsApp for captured leads.",
+      },
+    ],
+    proofTitle: "Businesses stop losing leads the day the AI goes live.",
+    proofBullets: [
+      "Travel operator: 20–30 missed calls/day reduced to zero. Group booking worth months of the service fee captured on the first night.",
+      "Home services: After-hours coverage for the first time. 14 calls captured in week one that would have gone to competitors.",
+      "Coaching business: Show-up rate improved from 50% to 70%+ with AI confirmation calls — 15 extra live conversations per week.",
+    ],
+    proofStats: [
+      { stat: "0", label: "calls missed after go-live" },
+      { stat: "< 10s", label: "lead details on your WhatsApp" },
+      { stat: "24/7", label: "coverage including holidays" },
+    ],
+    fitChecklist: {
+      headline: "Built for businesses losing leads to an unanswered phone.",
+      forYou: [
+        "You run a service business (dental, real estate, home services, coaching, salon, clinic, travel) and get 10+ calls per day",
+        "You miss calls during busy periods, after hours, or on weekends — and you know those callers go to your competitors",
+        "You're spending money on ads that generate calls — but not capturing all of them",
+        "You want every call answered and every lead captured without hiring more staff",
+      ],
+      notForYou: [
+        "You already have 24/7 call center coverage with zero missed calls",
+        "You receive fewer than 5 calls per day — manual answering covers it",
+        "Your calls require complex live consultations that can't be initially handled by AI",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same problem, same solution, localized pricing.",
+    },
+    faq: [
+      {
+        question: "How many calls am I actually missing?",
+        answer:
+          "Most businesses think they miss 5–10% of calls. The actual number is usually 20–40%. We measure it on our audit call — it takes 30 minutes and you'll have the exact number.",
+      },
+      {
+        question: "What happens when the AI answers a call my team could have handled?",
+        answer:
+          "Nothing bad. If your team is available, the AI routes the call to them. The AI only takes over when your team is busy, offline, or unavailable. It supplements — it doesn't replace your team.",
+      },
+      {
+        question: "Does it work with my existing phone number?",
+        answer:
+          "Yes. We forward calls from your existing number. Your callers see your number, not ours. No change to your marketing, your website, or your business cards.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi, English, Hinglish, Marathi, Gujarati, Tamil, Telugu, Arabic. The agent detects the caller's language automatically.",
+      },
+      {
+        question: "How fast can I go live?",
+        answer:
+          "7 days from your first call with us. Simple inbound FAQ agents can launch in 2–3 days.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "Starts at ₹2,499/month (India) or $299/month (international). Typically pays for itself from a single captured lead in the first week.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll audit your missed call rate for free. 30 minutes. You'll know exactly how much revenue you're losing.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+    ],
+    keywords: [
+      "ai for missed calls",
+      "missed call recovery ai",
+      "never miss a call ai",
+      "ai answering service",
+      "missed call solution for business",
+      "ai phone answering",
+      "stop missing calls ai",
+      "ai for after hours calls",
+      "missed call revenue loss",
+      "ai call answering 24/7",
+      "ai for missed business calls",
+      "reduce missed calls ai",
+      "ai callback service",
+      "missed call follow up ai",
+    ],
+  },
+
+  // ─── PAGE: gohighlevel-ai-calling-alternative ─────────────────────────────
+  {
+    type: "comparison",
+    pathSegments: ["gohighlevel-ai-calling-alternative"],
+    title: "GoHighLevel AI Calling Alternative — Production Voice AI for GHL Agencies",
+    description:
+      "GHL's built-in AI calling is limited — no Indian number support, basic scripting, no persistent memory. We build production AI callers that plug into your GHL pipeline: outbound qualification, appointment confirmation, and lead follow-up with full CRM sync.",
+    canonicalUrl: makeCanonical(["gohighlevel-ai-calling-alternative"]),
+    heroLabel: "GHL AI Calling — What's Missing",
+    heroHeadline: "GHL's AI caller is basic. Your pipeline needs production-grade.",
+    heroSubheadline:
+      "GoHighLevel's voice AI features don't support Indian numbers, can't handle complex scripts, and have no memory between calls. We build production AI callers that plug directly into your GHL pipeline — outbound qualification, appointment confirmation, and multi-day follow-up.",
+    painTitle: "Where GHL's built-in calling features hit the wall",
+    painPoints: [
+      "GHL's AI calling doesn't support Indian phone numbers. If you serve Indian clients or run an Indian agency, GHL's voice AI is a dead end. No Indian telephony provider integration, no Hindi language support.",
+      "The scripting is basic — trigger-based, stateless, no ability to handle objections or follow-up probes. Real sales calls require adaptive conversation, not preset sequences.",
+      "No persistent memory between calls. When a lead calls back, the AI starts from scratch — no context about what they said last time, what they objected to, or where they are in your pipeline.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Leads lost to GHL calling limitations (Indian agencies)", amount: "100% of voice leads (no Indian number support)" },
+        { label: "Manual calling by GHL agency team", amount: "₹50,000–₹1,00,000 / $600–$1,200 / month" },
+        { label: "Pipeline accuracy with manual CRM updates", amount: "Inconsistent — hours or days late" },
+      ],
+      total: "GHL agencies running voice campaigns manually are spending 3–5x what AI calling costs — with worse results",
+      solvesFor: "₹9,999/month ($499/month) — production AI caller plugged into your GHL pipeline",
+      source: "GoHighLevel community feedback + Agentic AI Labs GHL agency audits, 2026",
+    },
+    practitionerQuote: {
+      text: "I run a GHL agency with 15 sub-accounts. Voice AI was the #1 feature request from my clients. GHL's built-in calling didn't support Indian numbers and the scripting was too basic for real qualification calls. I needed something that actually worked with GHL — not replaced it.",
+      attribution: "GHL agency owner — Agentic AI Labs sales call, 2026",
+    },
+    statusQuoTitle: "What GHL agencies try before finding production AI calling",
+    statusQuoItems: [
+      "GHL's built-in conversational AI — text-only, no voice calling for Indian numbers, basic stateless scripts.",
+      "Third-party calling tools bolted onto GHL with Zapier or Make — works until webhooks fail silently and leads drop.",
+      "Manual outbound calling by the agency team or client staff — expensive, inconsistent, doesn't scale across sub-accounts.",
+    ],
+    industrySignal: {
+      headline: "GHL agencies need voice AI that works — not another tool that almost works.",
+      body: "GoHighLevel's marketplace has 200+ AI workflow templates, but the community consistently reports the same gap: voice calling that actually handles production scenarios. Indian agencies face an additional barrier — GHL's voice features don't support Indian telephony providers. The agencies reporting the best results aren't using GHL's built-in AI for calling. They're plugging production voice AI into GHL's pipeline — keeping GHL as the CRM while using a purpose-built calling system.",
+      source: "GoHighLevel Community Forum + Ideas Board, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Production AI calling that plugs into GHL. Not replaces it.",
+    solutionItems: [
+      "AI outbound caller for qualification, confirmation, and follow-up — connected to your GHL pipeline.",
+      "Works with Indian numbers, Hindi, English, and regional languages — the gap GHL's native AI can't fill.",
+      "Persistent memory: when a lead calls back or gets called again, the AI knows the full conversation history.",
+    ],
+    layers: [
+      {
+        title: "Calls your GHL leads — automatically, intelligently.",
+        body: "New lead enters your GHL pipeline → AI calls them within 60 seconds. Qualification call, appointment confirmation, or follow-up — configured per pipeline stage. The AI doesn't read a script — it handles objections, captures responses, and makes decisions. Hindi, English, or any language your leads speak. Indian numbers fully supported.",
+      },
+      {
+        title: "Remembers every conversation. Updates GHL in real time.",
+        body: "GHL's native AI is stateless — every interaction starts fresh. Our AI has Mem0-based persistent memory mapped to your GHL contacts. When a lead is called the second time, the AI knows: their name, what they asked, what they objected to, and their pipeline stage. GHL opportunity stages update automatically after every call. No manual CRM entry. No delayed pipeline updates.",
+      },
+      {
+        title: "Scales across all your sub-accounts.",
+        body: "One system, deployed across 5, 15, or 50 GHL sub-accounts. Each sub-account gets its own AI configuration — custom qualification criteria, custom voice, custom pipeline mapping. Your agency manages everything from one dashboard. Clients see their leads getting called instantly and their pipeline updating in real time.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR GHL PIPELINE",
+        body: "We connect to your GoHighLevel account, review your pipeline stages, existing workflows, and identify where AI calling adds the most value. 45 minutes.",
+        youSpend: "45 minutes — share GHL access and walk us through your pipeline.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE AI CALLER",
+        body: "Outbound qualification, appointment confirmation, or follow-up — built on your exact pipeline logic. Connected to GHL with Mem0 memory and real-time CRM sync.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST ON REAL PIPELINE DATA",
+        body: "We run the AI against real leads in your GHL pipeline — qualification calls, objection handling, reschedules, no-answers. You review recordings and GHL pipeline accuracy.",
+        youSpend: "30 minutes reviewing test calls and GHL sync.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ACROSS YOUR SUB-ACCOUNTS",
+        body: "AI calling goes live. Every new lead gets called. Every pipeline stage updates. We monitor for 30 days and tune based on real call data and conversion rates.",
+        youSpend: "Zero. Watch your GHL pipeline update itself.",
+      },
+    ],
+    proofTitle: "GHL agencies are filling the calling gap with production AI. Here's how.",
+    proofBullets: [
+      "Zero missed leads across 12+ GHL sub-accounts — every inbound and outbound call handled.",
+      "Pipeline stages update within 60 seconds of every call — not hours or days later.",
+      "Indian number support live from day one — the #1 gap GHL agencies in India face.",
+    ],
+    proofStats: [
+      { stat: "< 60s", label: "pipeline update after every call" },
+      { stat: "12+", label: "sub-accounts supported in one deployment" },
+      { stat: "0", label: "leads dropped to webhook failures" },
+    ],
+    fitChecklist: {
+      headline: "Built for GHL agencies that need voice AI that actually works in production.",
+      forYou: [
+        "You run a GHL agency and your clients need AI calling — not just chatbot and SMS",
+        "You serve Indian clients or run an Indian agency — GHL's voice AI doesn't support Indian numbers",
+        "You've tried GHL's built-in AI and found it too basic for real qualification or follow-up calls",
+        "You want AI calling that syncs with GHL pipeline stages in real time — not manual CRM updates",
+        "You manage multiple sub-accounts and need AI calling that scales across all of them",
+      ],
+      notForYou: [
+        "Your clients only interact via text/SMS — you genuinely don't have a voice calling need",
+        "You want a GHL snapshot or template — we build custom production systems, not plug-and-play configs",
+        "You're looking for free or sub-$100/month AI calling — production systems require production pricing",
+      ],
+      geographicNote: "Active for GHL agencies in India, UAE, UK, Australia, and North America. Indian number support is live — the gap GHL doesn't fill.",
+    },
+    faq: [
+      {
+        question: "How is this different from the existing ghl-ai-chatbot-alternative page?",
+        answer:
+          "The chatbot alternative page focuses on replacing GHL's text-based AI chatbot with voice capabilities. This page focuses specifically on AI calling — outbound qualification, appointment confirmation, and multi-day follow-up via voice. Different use case, different search intent.",
+      },
+      {
+        question: "Does this replace GoHighLevel?",
+        answer:
+          "No. GHL stays as your CRM and pipeline. We add production AI calling on top — the capability GHL's native features can't deliver. Your pipeline, your workflows, your sub-accounts — all stay in GHL.",
+      },
+      {
+        question: "Can the AI make outbound calls, not just receive?",
+        answer:
+          "Yes. That's the primary use case. New lead enters GHL → AI calls them within 60 seconds. Booked appointment → AI calls to confirm 2 hours before. Cold lead → AI follows up on day 3, 7, and 14. All outbound, all automated.",
+      },
+      {
+        question: "Does it work with Indian phone numbers?",
+        answer:
+          "Yes. This is the #1 reason GHL agencies in India come to us. GHL's native voice AI doesn't support Indian telephony providers. We integrate with Exotel, Plivo, and Twilio India — full Indian number support from day one.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "GHL AI calling starts at ₹9,999/month ($499/month) per agency. Multi-sub-account deployments are priced per account. We scope it on a call before you commit.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll review your GHL pipeline and show you exactly where AI calling fills the gap.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+    ],
+    keywords: [
+      "gohighlevel ai calling alternative",
+      "ghl ai calling",
+      "gohighlevel voice ai alternative",
+      "ai calling for ghl agencies",
+      "ghl outbound ai caller",
+      "gohighlevel ai calling india",
+      "ghl ai voice agent",
+      "ai appointment confirmation ghl",
+      "gohighlevel ai lead follow up",
+      "ghl ai qualification caller",
+      "ai calling for gohighlevel india",
+      "production ai calling ghl",
     ],
   },
 ];
