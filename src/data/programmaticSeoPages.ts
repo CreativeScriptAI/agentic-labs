@@ -2248,7 +2248,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-booking-agent-for-travel-agencies"],
-    title: "AI Booking Agent for Travel Agencies — Stop Losing ₹1.6L/Day in Missed Bookings",
+    title: "AI Booking Agent for Travel Agencies — Stop Losing Revenue to Missed Bookings",
     description:
       "A bus operator in Delhi NCR was losing 20–30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ₹2,499/mo.",
     canonicalUrl: makeCanonical(["ai-booking-agent-for-travel-agencies"]),
@@ -2268,8 +2268,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Booking calls missed per day (single-person operation)", amount: "20 – 30 calls" },
         { label: "Group bookings lost per week (after-hours, rush overlap)", amount: "3 – 5 groups" },
       ],
-      total: "₹16,000 – ₹1,60,000/day walking to whichever operator picked up first",
-      solvesFor: "₹2,499/month — every call answered, every inquiry captured, 24/7",
+      total: "₹16,000–₹1,60,000/day ($200–$2,000/day) walking to whichever operator picked up first",
+      solvesFor: "₹2,499/month ($299/month) — every call answered, every inquiry captured, 24/7",
       source: "ANT Bus Services pilot data + live travel operator deployments, Agentic AI Labs 2026",
     },
     practitionerQuote: {
@@ -2369,7 +2369,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "Your booking requires real-time inventory checks against a GDS or complex dynamic pricing system on day one (we can add this later, but V1 captures and routes)",
         "You get fewer than 5 inquiries per day — at that volume, you can handle it yourself",
       ],
-      geographicNote: "Currently live in India (Delhi NCR). Deployments open for Gulf (UAE, Oman), UK, and Australia — same setup, localized for your market.",
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
     },
     faq: [
       {
@@ -2450,7 +2450,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-dispatch-agent-for-home-services"],
-    title: "AI Dispatch Agent for Home Services — Stop Losing ₹75,000/Day in Missed Repair Calls",
+    title: "AI Dispatch Agent for Home Services — Stop Losing Jobs to Missed Repair Calls",
     description:
       "Home services businesses lose ₹1,500–₹3,000 every time a call goes unanswered. We build an AI voice dispatcher that answers 24/7, captures the fault and location, and routes the job to your team's WhatsApp — so no job walks to a competitor.",
     canonicalUrl: makeCanonical(["ai-dispatch-agent-for-home-services"]),
@@ -2469,8 +2469,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Average home services job value (AC, plumbing, pest)", amount: "₹1,500 – ₹5,000" },
         { label: "Missed calls per day (busy operator)", amount: "5 – 15 calls" },
       ],
-      total: "₹7,500 – ₹75,000 walking out every day",
-      solvesFor: "₹2,499 / month — the agent answers every single one",
+      total: "₹7,500–₹75,000/day ($100–$1,000/day) walking out every day",
+      solvesFor: "₹2,499/month ($299/month) — the agent answers every single one",
       source: "Pilot data — Book My Garage, home services operators, India 2026",
     },
     practitionerQuote: {
@@ -2570,7 +2570,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "Your jobs require complex real-time inventory or part availability checks before dispatch",
         "You receive fewer than 5 inbound calls per day — volume is too low for clear ROI",
       ],
-      geographicNote: "Currently active in India (Mumbai, Delhi, Bangalore, Ahmedabad). Gulf deployments available.",
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
     },
     faq: [
       {
@@ -2628,7 +2628,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-interviewer-for-blue-collar-hiring"],
-    title: "AI Interviewer for Blue-Collar Hiring — Screen 500 Candidates/Day for ₹9,999/Month",
+    title: "AI Interviewer for Blue-Collar Hiring — Screen 500 Candidates/Day Automatically",
     description:
       "150 applications come in. Your team can call 50. The other 100 age out overnight — and your competitor screens them first. We build an AI first-round interviewer that calls every applicant within minutes, qualifies them in their own language, and hands you only the candidates worth your time.",
     canonicalUrl: makeCanonical(["ai-interviewer-for-blue-collar-hiring"]),
@@ -2648,8 +2648,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Candidates screened per human caller per day", amount: "40 – 60 max" },
         { label: "Candidates screened by AI per day", amount: "500 – 1,000+" },
       ],
-      total: "3 callers × ₹18,000 = ₹54,000/month to screen what AI does for ₹9,999/month",
-      solvesFor: "₹9,999 / month — unlimited concurrent screening in any language",
+      total: "3 callers × ₹18,000/month ($700/month) = ₹54,000/month ($2,100/month) to screen what AI does for a fraction",
+      solvesFor: "₹9,999/month ($499/month) — unlimited concurrent screening in any language",
       source: "Pipeline data — Digital Labour Chowk, Gulf Jobs, Agentic AI Labs, 2026",
     },
     practitionerQuote: {
@@ -2928,7 +2928,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "You do not use GoHighLevel and have a complex custom CRM that would require significant integration work",
         "Your audience is not reachable by voice (international leads on WhatsApp-only, or silent leads who won't pick up)",
       ],
-      geographicNote: "Deployments active in North America (USA, Canada), UK, and Australia. India coaching businesses available with INR pricing.",
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
     },
     faq: [
       {
@@ -2988,7 +2988,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-showing-coordinator-for-real-estate"],
-    title: "AI Showing Coordinator for Real Estate — Never Miss a ₹2L Commission Again",
+    title: "AI Showing Coordinator for Real Estate — Never Miss a Commission to an Unanswered Call",
     description:
       "You're showing a flat. Your phone rings — a hot inquiry on another listing. You can't answer. They move to the next agent on Google in under 3 minutes. We build an AI first-layer receptionist that captures every property inquiry, qualifies the lead, and logs it so you follow up when you're free — and commission doesn't walk out the door.",
     canonicalUrl: makeCanonical(["ai-showing-coordinator-for-real-estate"]),
@@ -3008,8 +3008,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Inbound inquiries per day (active agent / brokerage)", amount: "20 – 50 calls" },
         { label: "Window before a hot lead goes to a competitor", amount: "3 minutes" },
       ],
-      total: "1 missed inquiry per day × 5% close rate × ₹2L avg commission = ₹3,65,000/year leaving through the door",
-      solvesFor: "₹2,499 / month — every inquiry answered and logged while you're in a showing",
+      total: "1 missed inquiry/day × 5% close rate × ₹2L ($2,500) avg commission = ₹3,65,000/year ($4,500/year) leaving through the door",
+      solvesFor: "₹2,499/month ($299/month) — every inquiry answered and logged while you're in a showing",
       source: "Real estate agent pipeline data — Agentic AI Labs, 2026",
     },
     practitionerQuote: {
@@ -3109,7 +3109,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "You already have a dedicated front-desk receptionist who answers every call",
         "Your market requires complex real-time inventory queries before qualification (large commercial brokerages with proprietary systems)",
       ],
-      geographicNote: "Currently active: India (Mumbai, Delhi, Bangalore, Hyderabad). Gulf deployments available when markets reopen.",
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
     },
     faq: [
       {
@@ -3167,7 +3167,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-receptionist-for-med-spa"],
-    title: "AI Receptionist for Med Spas — Capture ₹20,000/Week in After-Hours Treatment Inquiries",
+    title: "AI Receptionist for Med Spas — Capture Every After-Hours Treatment Inquiry",
     description:
       "A caller rings at 7 PM about a Botox consultation or laser treatment. Your front desk is gone. That lead — worth ₹15,000–₹80,000 in treatment revenue — just called the next clinic on Google. We build an AI receptionist that answers after hours, captures treatment interest and contact details, and logs everything so your team follows up before the lead goes cold.",
     canonicalUrl: makeCanonical(["ai-receptionist-for-med-spa"]),
@@ -3187,8 +3187,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "After-hours inquiries missed (active clinic)", amount: "5 – 15 per week" },
         { label: "Comparison window (how long before they call next clinic)", amount: "Under 10 minutes" },
       ],
-      total: "5 missed inquiries/week × 20% close × ₹40,000 avg = ₹20,000/week walking out the door",
-      solvesFor: "₹2,499 / month — every inquiry answered including evenings and weekends",
+      total: "5 missed inquiries/week × 20% close × ₹40,000 ($500) avg = ₹20,000/week ($250/week) walking out the door",
+      solvesFor: "₹2,499/month ($299/month) — every inquiry answered including evenings and weekends",
       source: "Dental/medical clinic pilot data — Agentic AI Labs, 2026 (analogous treatment inquiry pattern)",
     },
     practitionerQuote: {
@@ -3288,7 +3288,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "Your treatments require detailed clinical consultation over the phone before intake — complex screening that AI cannot perform",
         "You receive fewer than 5 inquiries per week — not enough volume for clear ROI at this stage",
       ],
-      geographicNote: "Currently active in India (Mumbai, Delhi, Bangalore, Hyderabad, Pune). Gulf clinic deployments available.",
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
     },
     faq: [
       {
