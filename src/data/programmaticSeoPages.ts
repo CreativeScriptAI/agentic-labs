@@ -266,8 +266,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "GHL agency AI SDR systems start at $3,000–$6,000 for the initial build, with $1,200–$2,500/month for ongoing monitoring and optimization. Every project is scoped based on your lead volume, tools, and workflows. We give you a clear number before you commit.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We'll map your current SDR flow and show exactly where revenue leaks.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -424,8 +424,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "We use role-specific guardrails, disqualifier logic, and human review checkpoints during rollout before enabling full routing automation.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will map your current screening funnel and estimate time reclaimed per recruiter.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -582,13 +582,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Yes. We can support timezone-aware routing and multilingual response flows based on your operating regions.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will map your top ticket intents and identify which ones should be automated first.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Workflow Automation n8n", href: "/ai-workflow-automation-n8n" },
-      { label: "Zapier AI Alternative", href: "/zapier-ai-alternative" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
       { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
     ],
     keywords: [
@@ -730,8 +730,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Most GHL-first implementations launch in 2 to 3 weeks when baseline data quality is solid.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will review your GHL automations and show where production failures are most likely.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -878,8 +878,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Yes. We provide transcript and event-level visibility so teams can review quality and coach outcomes.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will audit your HubSpot funnel and outline an AI system rollout plan.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -1026,8 +1026,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Yes. We align integration setup to your authentication model, access scopes, and compliance requirements.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will map your Salesforce process and identify where AI can remove manual drag.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -1040,302 +1040,6 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "salesforce ai automation",
       "ai system for salesforce",
       "salesforce voice ai",
-    ],
-  },
-  {
-    type: "integration",
-    pathSegments: ["ai-workflow-automation-n8n"],
-    title: "AI Workflow Automation n8n | Agentic AI Labs",
-    description:
-      "We build production AI systems on n8n with fault-tolerant workflows, memory-aware decisions, and clear escalation paths.",
-    canonicalUrl: makeCanonical(["ai-workflow-automation-n8n"]),
-    heroLabel: "Production AI Automation with n8n",
-    heroHeadline: "AI Workflow Automation with n8n",
-    heroSubheadline:
-      "We build AI systems on n8n that keep running when real-world edge cases hit your flows.",
-    painTitle: "Where n8n setups usually break",
-    painPoints: [
-      "Workflows pass in test mode and fail under production load.",
-      "Retry logic is missing or inconsistent.",
-      "No one sees silent failures until customers report them.",
-    ],
-    practitionerQuote: {
-      text: "We had 40+ n8n workflows running for clients. Nobody owned the architecture. When one broke, we'd find out from a client 3 days later. We were spending more time maintaining automations than building new things.",
-      attribution: "Agency operator, r/n8n, December 2025",
-    },
-    statusQuoTitle: "What teams try first",
-    statusQuoItems: [
-      "Complex node chains with no observability.",
-      "One giant workflow handling every case.",
-      "Manual patching for edge-case failures.",
-    ],
-    industrySignal: {
-      headline: "n8n usage has grown 300%+ since 2023 — but most deployments lack production controls.",
-      body: "n8n's self-hosted and cloud user base has exploded as teams look for Zapier alternatives with more flexibility. The problem: flexibility without architecture creates fragile systems. The most common failure pattern we see on audits is a monolithic workflow with no dead-letter handling and no one watching for silent failures. The teams that scale reliably treat n8n as infrastructure, not a drag-and-drop tool.",
-      source: "n8n community growth data + internal client audit data, Q1 2026",
-      date: "Q1 2026",
-    },
-    solutionTitle: "Production architecture",
-    solutionItems: [
-      "Modular workflows with clear boundaries per job.",
-      "Memory-aware decision nodes for conversation context.",
-      "Monitoring, retries, dead-letter paths, and alerts.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "n8n workflows connected to voice and chat AI agents — handling qualification, support, or dispatch conversations and routing decisions back into your automation stack. Every conversation outcome triggers the right downstream action automatically.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Mem0 memory integrated into n8n decision nodes so workflows make context-aware decisions — not just trigger-based ones. Prior customer interactions, lead status, and preference history inform every automation run.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Modular workflow architecture with clear job boundaries, retry logic, dead-letter queues, and monitoring hooks. When a node fails, the system recovers or escalates — it doesn't just drop the request and wait for a customer complaint.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We map your n8n topology: every workflow, every dependency, every integration point. We identify the 3–5 nodes most likely to fail in production and leave with a hardening plan.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We refactor brittle workflows, add dead-letter handling, build monitoring hooks, and where needed, integrate AI decision nodes with memory context.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Load testing, API failure simulations, concurrent execution testing. We stress the system before it meets real volume.",
-        youSpend: "30 minutes reviewing test results and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Hardened system goes live. You get a monitoring dashboard with failure rate, retry success rate, execution time, and alerts. We watch it for 30 days.",
-        youSpend: "Zero. It runs without you.",
-      },
-    ],
-    proofTitle: "What gets better",
-    proofBullets: [
-      "Higher workflow reliability at volume.",
-      "Faster issue detection and recovery.",
-      "Less engineering time spent firefighting automations.",
-    ],
-    caseStudy: {
-      client: "Digital agency — running 35 client n8n workflows",
-      problem: "Silent failures were dropping data 8–10 times per week across client workflows. No observability meant clients were the first to report problems. Team was spending 12 hours per week on workflow firefighting instead of delivery.",
-      system: "Full n8n architecture audit and rebuild: modular workflows per client, dead-letter queues, retry policies, error alerting via Slack, and memory-aware routing for AI-assisted workflows.",
-      result: "Failure-related support incidents dropped 91%. Firefighting time fell from 12 hours/week to under 1. One client escalation in the 90 days following launch.",
-    },
-    testimonial: {
-      quote: "They turned our n8n setup from a liability into something we're proud to show clients. We went from weekly fires to running clean for 3 months straight.",
-      author: "Sam, Technical Operations Lead",
-    },
-    proofStats: [
-      { stat: "91%", label: "reduction in workflow failure incidents" },
-      { stat: "< 1 hr", label: "weekly firefighting time (was 12+)" },
-      { stat: "1", label: "client escalation in 90 days post-launch" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams running n8n in production with real clients or customers depending on it.",
-      forYou: [
-        "You run 10+ active n8n workflows and reliability is becoming a problem",
-        "Silent failures are reaching customers before your team catches them",
-        "You have no monitoring or dead-letter handling in your current setup",
-        "Your team is spending significant time on workflow maintenance instead of new work",
-        "Your budget is $4K+ and you need a properly engineered production system",
-      ],
-      notForYou: [
-        "You have fewer than 5 workflows — not enough complexity to need an architecture overhaul",
-        "You want to configure and maintain the n8n architecture yourself",
-        "You need a basic n8n template, not a production hardening engagement",
-      ],
-    },
-    faq: [
-      {
-        question: "Do you work with self-hosted n8n?",
-        answer:
-          "Yes. We can support both cloud and self-hosted n8n environments and align deployment to your infrastructure model.",
-      },
-      {
-        question: "Can you keep our existing automations?",
-        answer:
-          "Yes. We audit current workflows, keep what is stable, and refactor brittle sections to improve resilience.",
-      },
-      {
-        question: "How do we monitor failures?",
-        answer:
-          "We add event logging, alerting thresholds, and failure channels so your team can react before users feel the impact.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will review your n8n topology and identify critical failure points.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "n8n Alternative", href: "/n8n-alternative" },
-      { label: "AI Memory with Mem0", href: "/ai-memory-with-mem0" },
-      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
-    ],
-    keywords: [
-      "ai workflow automation n8n",
-      "n8n ai workflows",
-      "production n8n automation",
-      "agentic workflow system",
-    ],
-  },
-  {
-    type: "integration",
-    pathSegments: ["ai-memory-with-mem0"],
-    title: "AI Memory with Mem0 | Agentic AI Labs",
-    description:
-      "We build AI systems with Mem0 as the memory layer so voice and automation workflows retain context across customer interactions.",
-    canonicalUrl: makeCanonical(["ai-memory-with-mem0"]),
-    heroLabel: "AI Memory Infrastructure with Mem0",
-    heroHeadline: "AI Memory with Mem0",
-    heroSubheadline:
-      "We use Mem0 as part of a full AI system, so memory is not just stored data but usable business context.",
-    painTitle: "The memory gap teams run into",
-    painPoints: [
-      "Data is stored but not used in live conversations.",
-      "Memory quality decays without retrieval strategy.",
-      "Costs climb because retention is not tiered.",
-    ],
-    practitionerQuote: {
-      text: "We added Mem0 to our voice agent and the agent still asked customers the same questions. Turns out storing memory and actually retrieving the right context at the right moment are completely different problems.",
-      attribution: "AI systems builder, r/LangChain, November 2025",
-    },
-    statusQuoTitle: "What usually happens",
-    statusQuoItems: [
-      "A memory tool gets bolted on without orchestration.",
-      "The agent repeats questions despite stored context.",
-      "No clear policy for what to keep and what to archive.",
-    ],
-    industrySignal: {
-      headline: "Mem0 reached 50M+ memory operations in 2025 — but most deployments don't reach their potential without proper retrieval design.",
-      body: "Mem0 has become the leading open-source memory layer for AI agents, with rapid adoption across voice, support, and sales AI systems. The gap isn't in the tool — it's in the retrieval architecture. Teams that treat memory as a database get poor results. Teams that design role-specific schemas and relevance-tuned retrieval see 3–5× better context utilization in live conversations.",
-      source: "Mem0 community usage data + internal implementation audits, 2025",
-      date: "2025",
-    },
-    solutionTitle: "How we implement it",
-    solutionItems: [
-      "Role-specific memory schemas aligned to workflows.",
-      "Retrieval logic tuned for relevance and response speed.",
-      "Automation that writes, updates, and prunes memory safely.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "Voice and chat interactions that use Mem0 memory in real time — retrieving the right context before each turn, not just at conversation start. Callers get continuity. Agents get the context they need to make smart decisions without starting from scratch.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Role-specific memory schemas designed for your use case — not generic key-value storage. Retrieval logic tuned for recency, relevance, and response speed. Tiered storage keeps costs predictable as memory scales. Write policies control what gets stored, updated, and safely pruned.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Memory-informed decisions trigger the right downstream actions: routing, follow-up, CRM updates, and escalations. The system doesn't just remember — it uses what it remembers to do something useful in your tools, automatically.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We map your existing memory approach (or lack of one), your agent workflows, and the context your system currently loses between interactions.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We design role-specific memory schemas, build retrieval logic, connect Mem0 to your voice or automation layer, and set write/prune policies.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Repeat-caller simulations, multi-session continuity tests, and retrieval quality checks. We measure how much context the agent correctly uses before going live.",
-        youSpend: "30 minutes reviewing outputs and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Memory layer goes live. We monitor retrieval quality and memory growth for 30 days. You get a dashboard: context utilization rate, repeat-question rate, and memory cost per interaction.",
-        youSpend: "Zero. It runs without you.",
-      },
-    ],
-    proofTitle: "Outcomes teams care about",
-    proofBullets: [
-      "Fewer repeated questions in customer calls.",
-      "Better continuity across channels and sessions.",
-      "Lower cost per interaction with tiered retention.",
-    ],
-    caseStudy: {
-      client: "AI SDR system — B2B SaaS outreach",
-      problem: "Team had Mem0 integrated but the agent was still asking leads about their role and company size on follow-up calls. Memory was being stored but retrieval wasn't matching the right context at conversation time. Leads were frustrated and call quality scores were low.",
-      system: "Rebuilt memory schema for lead context: role, company, objections, timeline, and prior conversation stage. Tuned retrieval to inject context at conversation start and mid-turn. Set write policies to update objection records after every call.",
-      result: "Repeat-question rate fell from 68% to under 8%. Average call quality score improved from 3.1 to 4.6. Lead re-engagement rate increased 34% when context was correctly recalled.",
-    },
-    testimonial: {
-      quote: "We had memory — it just wasn't working. They redesigned the whole retrieval layer and it was like night and day. The agent actually knows who it's talking to now.",
-      author: "Felix, Founder, AI Sales Automation Agency",
-    },
-    proofStats: [
-      { stat: "8%", label: "repeat-question rate (was 68%)" },
-      { stat: "4.6", label: "avg call quality score (was 3.1)" },
-      { stat: "34%", label: "increase in lead re-engagement rate" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams that have an AI agent but are losing context between interactions.",
-      forYou: [
-        "You have a voice agent or chatbot but it keeps asking customers the same questions",
-        "You've tried adding memory but retrieval quality is inconsistent or wrong",
-        "Your agent workflows need context from prior sessions to work correctly",
-        "Memory costs are growing without clear ROI from better context utilization",
-        "Your budget is $4K+ and you want a properly designed memory architecture",
-      ],
-      notForYou: [
-        "You don't have an AI agent yet — memory architecture comes after you have something to connect it to",
-        "You want to configure the Mem0 integration yourself",
-        "You need a simple tutorial, not a production memory system design",
-      ],
-    },
-    faq: [
-      {
-        question: "Is Mem0 enough by itself?",
-        answer:
-          "No. Mem0 is a strong memory layer, but it needs orchestration with voice and automation to produce reliable business outcomes.",
-      },
-      {
-        question: "Can we keep private data out of memory?",
-        answer:
-          "Yes. We configure filtering and retention rules so sensitive fields are excluded or redacted before storage.",
-      },
-      {
-        question: "How do you keep retrieval fast?",
-        answer:
-          "We combine schema design, retrieval constraints, and tiered storage to keep responses fast while preserving context quality.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will map your memory requirements and outline a practical architecture.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI Memory System", href: "/ai-memory-system" },
-      { label: "What Is AI Memory?", href: "/glossary/what-is-ai-memory" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-    ],
-    keywords: [
-      "ai memory with mem0",
-      "mem0 ai system",
-      "persistent memory for ai agents",
-      "ai memory architecture",
     ],
   },
   {
@@ -1490,8 +1194,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Projects start at $4,000–$8,000 for the initial build, with $1,500–$3,000/month for ongoing monitoring and optimization. Every project is scoped to your actual architecture — we give you a clear number before you commit.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We'll evaluate your current architecture and show a clear production migration path.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -1648,13 +1352,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "We begin with one high-impact workflow, validate outcomes, then expand to adjacent workflows.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will review your current Retell flow and identify production risks.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "Relevance AI Alternative", href: "/relevance-ai-alternative" },
+      { label: "Bland AI Alternative", href: "/bland-ai-alternative" },
       { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
     ],
     keywords: [
@@ -1806,13 +1510,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Yes. We align prompts, disclosures, and routing behavior to your policy and legal requirements.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We will review your outbound flow and show where system-level upgrades matter most.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "Botpress Alternative", href: "/botpress-alternative" },
+      { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
     ],
     keywords: [
@@ -1820,638 +1524,6 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "bland ai production alternative",
       "outbound ai system",
       "voice ai with crm automation",
-    ],
-  },
-  {
-    type: "comparison",
-    pathSegments: ["n8n-alternative"],
-    title: "n8n Alternative for AI Automation Systems | Agentic AI Labs",
-    description:
-      "n8n is great for flexible workflow building. We build production AI systems with reliability controls, memory context, and end-to-end ownership.",
-    canonicalUrl: makeCanonical(["n8n-alternative"]),
-    heroLabel: "n8n vs. Production AI Architecture",
-    heroHeadline: "Looking for an n8n Alternative?",
-    heroSubheadline:
-      "n8n is powerful for builders. We help teams who now need production-grade AI operations, monitoring, and accountable outcomes.",
-    painTitle: "When DIY automation starts hurting",
-    painPoints: [
-      "Workflow complexity grows faster than team capacity.",
-      "Failures are discovered too late.",
-      "Business logic is spread across disconnected nodes.",
-    ],
-    costCallout: {
-      items: [
-        { label: "n8n cloud costs at production volume", amount: "$50–$500 / month" },
-        { label: "Internal engineering time on workflow maintenance (est.)", amount: "$3,000–$8,000 / month" },
-        { label: "Business impact from silent failures (est.)", amount: "$5,000+ / month" },
-      ],
-      total: "$8,050–$13,500+/month in hidden automation costs",
-      solvesFor: "$3,500–$6,000 setup + $1,000–$2,000 / month",
-      source: "Internal estimates based on client automation audits, 2025–2026",
-    },
-    practitionerQuote: {
-      text: "n8n is genuinely great for building. We had 50 workflows in production and zero observability. We found out about failures when clients told us. That's not sustainable.",
-      attribution: "Agency operator, r/n8n, November 2025",
-    },
-    statusQuoTitle: "What teams do before upgrading",
-    statusQuoItems: [
-      "Add more nodes and retries to unstable flows.",
-      "Create one-off fixes per edge case.",
-      "Assign a team member to constant maintenance.",
-    ],
-    industrySignal: {
-      headline: "n8n's growth is accelerating — but most production deployments lack the architecture to sustain it.",
-      body: "n8n is one of the fastest-growing automation platforms, with teams moving from Zapier seeking more control and flexibility. The challenge: more control also means more responsibility for reliability. Teams that treat n8n like infrastructure — with architecture governance, monitoring, and dead-letter handling — see dramatically fewer failures than teams that add nodes ad-hoc until something breaks.",
-      source: "n8n usage data + internal client automation audit data, 2025",
-      date: "2025",
-    },
-    solutionTitle: "What we build",
-    solutionItems: [
-      "Workflow architecture with clear boundaries.",
-      "Memory-aware logic for context continuity.",
-      "Monitoring, alerting, and fallback handling.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "n8n workflows connected to AI voice and chat agents that handle real customer interactions. Conversation outcomes trigger the right automation paths — qualification results, support resolutions, dispatch actions — without manual routing.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Memory-aware n8n decision nodes that retrieve prior context before executing. Customer history, lead status, and interaction records inform every workflow run. Decisions based on context, not just triggers.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Modular workflow architecture with dead-letter queues, retry policies, and monitoring hooks. Every critical path has a fallback. Every failure generates an alert. Nothing drops silently.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We map your n8n topology, critical workflows, current failure patterns, and business impact. We leave with a prioritized hardening plan.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We restructure brittle workflows, add dead-letter handling, build monitoring, and wire in memory-aware decision logic where needed.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Concurrent load testing, API failure simulations, and edge-case scenario runs. We validate production behavior before cutover.",
-        youSpend: "30 minutes reviewing test results and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Hardened system goes live. We monitor failure rates and execution quality for 30 days. You get a reliability dashboard and Slack alerts for anything that needs attention.",
-        youSpend: "Zero. It runs.",
-      },
-    ],
-    proofTitle: "Result",
-    proofBullets: [
-      "Lower operational risk from automation failures.",
-      "Higher reliability during business peaks.",
-      "Less internal maintenance overhead.",
-    ],
-    caseStudy: {
-      client: "Marketing automation agency — 40 active n8n workflows",
-      problem: "Zero monitoring across 40 client-facing workflows. Failure rate was unknown. Client complaints were the discovery mechanism. One team member was spending 10+ hours per week responding to broken flows.",
-      system: "Full architecture audit and rebuild: workflow modularization, dead-letter queues, Slack alerting for failures, and retry policies on all external API calls. Memory-aware routing added for AI-assisted workflows.",
-      result: "Failure discovery time dropped from days to minutes. Client complaints about automation failures dropped to zero in 60 days. Weekly maintenance time fell from 10 hours to under 90 minutes.",
-    },
-    testimonial: {
-      quote: "We went from finding out about broken workflows from angry clients to never having a client know something went wrong. That alone justified the investment.",
-      author: "Kenji, Agency Technical Lead",
-    },
-    proofStats: [
-      { stat: "0", label: "client automation complaints in 60 days post-launch" },
-      { stat: "90 min", label: "weekly maintenance time (was 10+ hours)" },
-      { stat: "< 5 min", label: "average failure detection time (was days)" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams running n8n for clients or critical business operations.",
-      forYou: [
-        "You run 10+ n8n workflows in production and reliability is becoming a real problem",
-        "Workflow failures are discovered by customers before your team",
-        "You have no monitoring, dead-letter handling, or formal retry logic",
-        "Your team spends significant time maintaining automations instead of building new work",
-        "Your budget is $4K+ and you need a proper production architecture, not more templates",
-      ],
-      notForYou: [
-        "You're still prototyping and haven't had production failures yet",
-        "You want to configure and maintain the architecture yourself",
-        "You need a basic n8n workflow starter pack, not a production hardening engagement",
-      ],
-    },
-    faq: [
-      {
-        question: "Do you still use n8n in some projects?",
-        answer:
-          "Yes, when it fits. The difference is that we architect and maintain the full system so reliability does not depend on ad hoc fixes.",
-      },
-      {
-        question: "Can we keep existing workflows?",
-        answer:
-          "Yes. We evaluate each flow, preserve stable parts, and redesign brittle paths.",
-      },
-      {
-        question: "Is this only for large companies?",
-        answer:
-          "No. Most engagements are founder-led teams that need dependable automation without hiring a full internal platform team.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will map your n8n architecture and identify where reliability can improve quickly.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI Workflow Automation n8n", href: "/ai-workflow-automation-n8n" },
-      { label: "Zapier AI Alternative", href: "/zapier-ai-alternative" },
-      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
-    ],
-    keywords: [
-      "n8n alternative",
-      "n8n alternative for production",
-      "ai automation alternative",
-      "workflow reliability system",
-    ],
-  },
-  {
-    type: "comparison",
-    pathSegments: ["zapier-ai-alternative"],
-    title: "Zapier AI Alternative for Production Systems | Agentic AI Labs",
-    description:
-      "Zapier is great for early automation. We build production AI systems that can handle complex, context-rich operations at scale.",
-    canonicalUrl: makeCanonical(["zapier-ai-alternative"]),
-    heroLabel: "Zapier vs. Production AI Automation",
-    heroHeadline: "Need a Zapier AI Alternative?",
-    heroSubheadline:
-      "Zapier works for simple automations. We build the production AI system when your workflows need deeper logic and reliability.",
-    painTitle: "Where teams outgrow Zapier",
-    painPoints: [
-      "Multi-step AI logic becomes hard to maintain.",
-      "Workflow failures create downstream business issues.",
-      "No single owner for system reliability.",
-    ],
-    costCallout: {
-      items: [
-        { label: "Zapier plan costs at production usage", amount: "$299–$799 / month" },
-        { label: "Engineering time patching failed Zaps (est.)", amount: "$2,000–$5,000 / month" },
-        { label: "Revenue impact from broken revenue-critical automations", amount: "$7,000+ / month" },
-      ],
-      total: "$9,299–$12,799+/month in patchwork automation costs",
-      solvesFor: "$3,000–$5,500 setup + $1,000–$2,000 / month",
-      source: "Internal estimates based on client migration audits, 2025–2026",
-    },
-    practitionerQuote: {
-      text: "We had 200+ Zaps running across the business. Nobody knew which ones were critical and which were optional. We found out the hard way when a billing automation silently failed for 3 weeks.",
-      attribution: "Operations Manager, r/zapier, September 2025",
-    },
-    statusQuoTitle: "Typical patchwork",
-    statusQuoItems: [
-      "Layering more zaps across teams.",
-      "Manual checks for critical paths.",
-      "Frequent break-fix cycles during growth.",
-    ],
-    industrySignal: {
-      headline: "Teams migrating from Zapier to production-grade automation are up sharply as AI workflow complexity grows.",
-      body: "Zapier is the starting point for most automation journeys — and the right one. The inflection point comes when AI is involved: multi-step reasoning, memory, and LLM API calls don't fit cleanly into Zapier's trigger-action model. Teams running AI-first workflows in Zapier typically hit reliability problems at the 20-30 Zap threshold, when complexity outpaces the platform's error handling capabilities.",
-      source: "Automation platform migration data + internal client audit data, 2025",
-      date: "2025",
-    },
-    solutionTitle: "System architecture",
-    solutionItems: [
-      "Orchestrated AI workflows with clear control points.",
-      "Memory integration for context-aware execution.",
-      "Monitoring and escalation paths for critical actions.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "AI conversations and voice interactions that trigger the right downstream workflows — not static Zap triggers. Conversation outcomes, intent classifications, and user context drive workflow routing dynamically.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Memory integration that Zapier can't provide: prior conversation context, customer history, and lead status available at workflow execution time. Automations make smarter decisions because they know what happened before.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Orchestrated workflow architecture with proper error handling, dead-letter queues, and monitoring. Revenue-critical paths have fallback behavior. Failures alert your team in minutes — not after customers report problems.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We map your critical Zaps, identify the highest-risk automations, and assess what's actually revenue-critical vs. nice-to-have.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We migrate or rebuild revenue-critical workflows with proper error handling, memory integration, and monitoring. Low-risk Zaps stay in Zapier.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Failure scenario testing, concurrent load testing, and business logic validation. We confirm the new system handles what Zapier missed.",
-        youSpend: "30 minutes reviewing outputs and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Migrated system goes live in parallel with Zapier where safe. We monitor for 30 days and cut over critical flows after validating stability.",
-        youSpend: "Zero. It runs.",
-      },
-    ],
-    proofTitle: "Operational improvements",
-    proofBullets: [
-      "Reduced downtime from automation issues.",
-      "Higher consistency in process execution.",
-      "More confidence in scaling workflow volume.",
-    ],
-    caseStudy: {
-      client: "SaaS company — 150+ Zaps across sales and onboarding",
-      problem: "Revenue operations team had no visibility into which automations were failing. A Zap that should have triggered account provisioning silently failed 12 times over 3 weeks before they noticed. New customers were waiting 48+ hours for access.",
-      system: "Migration of 8 revenue-critical Zapier workflows to a monitored, fault-tolerant system with dead-letter queues, Slack failure alerts, and retry logic. Memory layer added for AI-driven onboarding personalization.",
-      result: "Provisioning delays dropped from 48+ hours to under 8 minutes. Failure detection time went from weeks to under 5 minutes. Zero silent failures in 90 days post-migration.",
-    },
-    testimonial: {
-      quote: "A Zap had been failing silently for weeks and we had no idea. They migrated our critical flows and we've had zero silent failures in 3 months. I sleep better.",
-      author: "Marcus, VP Operations",
-    },
-    proofStats: [
-      { stat: "8 min", label: "onboarding provisioning time (was 48+ hours)" },
-      { stat: "< 5 min", label: "failure detection time (was weeks)" },
-      { stat: "0", label: "silent failures in 90 days post-migration" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams where Zapier is running critical revenue operations and failing.",
-      forYou: [
-        "You have 30+ Zaps and don't have full visibility into which ones are failing",
-        "A critical automation failure has already impacted customers or revenue",
-        "You have AI logic (LLMs, voice agents) running through Zapier and it's not reliable",
-        "Your team spends time debugging Zaps instead of building new things",
-        "Your budget is $4K+ and you need production-grade automation, not more Zap templates",
-      ],
-      notForYou: [
-        "You have fewer than 20 Zaps — Zapier is probably still the right tool for your scale",
-        "You want to migrate everything yourself with guidance",
-        "You need a Zapier consultant to fix existing Zaps, not a system architecture upgrade",
-      ],
-    },
-    faq: [
-      {
-        question: "Should we stop using Zapier entirely?",
-        answer:
-          "Not always. Some teams keep Zapier for lightweight tasks while moving core revenue workflows to a more robust system.",
-      },
-      {
-        question: "Can you migrate gradually?",
-        answer:
-          "Yes. We migrate the highest-impact workflows first and keep low-risk automations unchanged until needed.",
-      },
-      {
-        question: "How quickly can we see value?",
-        answer:
-          "Most teams see immediate value once fragile revenue-critical flows are stabilized and monitored.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will review your current Zapier stack and outline an incremental migration plan.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "n8n Alternative", href: "/n8n-alternative" },
-      { label: "Relevance AI Alternative", href: "/relevance-ai-alternative" },
-      { label: "AI Agent HubSpot Integration", href: "/ai-agent-hubspot-integration" },
-    ],
-    keywords: [
-      "zapier ai alternative",
-      "zapier alternative for ai automation",
-      "production ai workflow",
-      "custom ai systems",
-    ],
-  },
-  {
-    type: "comparison",
-    pathSegments: ["relevance-ai-alternative"],
-    title: "Relevance AI Alternative for Production Systems | Agentic AI Labs",
-    description:
-      "Relevance AI helps teams move fast. We build production AI systems with stronger operational architecture and integration depth.",
-    canonicalUrl: makeCanonical(["relevance-ai-alternative"]),
-    heroLabel: "Relevance AI vs. Custom Production System",
-    heroHeadline: "Need a Relevance AI Alternative?",
-    heroSubheadline:
-      "Relevance AI is useful for experimentation. We build full AI systems for teams that need durable production outcomes.",
-    painTitle: "Where teams get stuck",
-    painPoints: [
-      "Great demos but weak operational handoff.",
-      "Context continuity falls apart across workflows.",
-      "Internal teams carry long-term maintenance burden.",
-    ],
-    costCallout: {
-      items: [
-        { label: "Relevance AI subscription at production tier", amount: "$500–$2,000 / month" },
-        { label: "Internal ops time patching context and integration gaps", amount: "$3,000–$7,000 / month" },
-        { label: "Revenue impact from agents that fail on edge cases", amount: "$5,000+ / month" },
-      ],
-      total: "$8,500–$14,000+/month in AI platform friction",
-      solvesFor: "$4,000–$7,000 setup + $1,500–$2,500 / month",
-      source: "Internal estimates based on client AI platform audits, 2025–2026",
-    },
-    practitionerQuote: {
-      text: "Relevance AI was great for rapid prototyping. Moving those prototypes into production without someone owning the full system architecture was where we started losing time and money.",
-      attribution: "Head of AI Operations, r/AIAssistants, October 2025",
-    },
-    statusQuoTitle: "What teams usually attempt",
-    statusQuoItems: [
-      "Add extra tools for missing system pieces.",
-      "Manual data reconciliation after runs.",
-      "Frequent prompt and flow tuning without governance.",
-    ],
-    industrySignal: {
-      headline: "Low-code AI platforms are accelerating experimentation — but production ownership remains the gap.",
-      body: "Relevance AI and similar platforms have dramatically lowered the barrier to building AI agents. Teams can spin up functional prototypes in hours. The challenge the market hasn't solved: who owns the production system when real customers depend on it? The best deployments pair platform speed with a design/architecture layer that governs reliability, memory, and integration depth.",
-      source: "AI platform market analysis + internal deployment audit data, 2025",
-      date: "2025",
-    },
-    solutionTitle: "What we do",
-    solutionItems: [
-      "Design role-specific workflows around business outcomes.",
-      "Implement memory and routing with governance controls.",
-      "Connect automations to core tools and reporting.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "Role-specific AI conversations designed around your exact ICP, workflow, and edge cases — not generic agent templates. Whether we build on Relevance or custom tooling, the interaction design is purpose-built for your business.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Production memory architecture using Mem0 — not session-level context that disappears between runs. Customer history, agent decisions, and interaction outcomes stored and retrievable across every touchpoint. Governance controls define what's retained and for how long.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Automations that write clean data to your CRM, trigger follow-up, and route decisions to the right person — with monitoring and fallback behavior for when things go wrong. Clear ownership model for ongoing reliability.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We assess your current Relevance AI setup, identify what's working, map the production gaps, and determine what needs to be built or rebuilt.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We design and build the production layer: memory architecture, CRM integration, monitoring, and governance controls around your existing agent logic.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Real workflow scenarios: edge cases, memory recall tests, integration failure simulations, and business logic validation.",
-        youSpend: "30 minutes reviewing outputs and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Production system goes live. We monitor for 30 days. You get a dashboard: workflow reliability, business KPIs, and context utilization rate.",
-        youSpend: "Zero. It runs.",
-      },
-    ],
-    proofTitle: "Why teams choose this path",
-    proofBullets: [
-      "More predictable delivery for revenue operations.",
-      "Reduced risk from tool sprawl.",
-      "Clear ownership and support model.",
-    ],
-    caseStudy: {
-      client: "Sales automation agency — AI-powered SDR workflows",
-      problem: "Agency had built SDR agents on Relevance AI that worked in demos but broke in production. Context didn't carry between sessions, CRM updates were manual, and agents failed on edge cases that weren't in the original flow design.",
-      system: "Production architecture built alongside Relevance AI: Mem0 session memory, custom CRM integration with write controls, monitoring dashboard, and escalation paths for edge cases the agent couldn't handle.",
-      result: "Agent edge-case failure rate dropped from 34% to under 4%. CRM accuracy improved from 62% to 95%. Agency closed 2 new SDR clients specifically citing 'production reliability' as the differentiator.",
-    },
-    testimonial: {
-      quote: "We had the AI — we just couldn't ship it reliably. They added the production layer that Relevance AI doesn't provide, and now we're actually selling it to clients.",
-      author: "Lisa, AI Agency Founder",
-    },
-    proofStats: [
-      { stat: "4%", label: "agent edge-case failure rate (was 34%)" },
-      { stat: "95%", label: "CRM data accuracy post-launch (was 62%)" },
-      { stat: "2", label: "new clients closed citing production reliability" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams that have built AI agents but can't reliably ship them to clients.",
-      forYou: [
-        "You've built agents on Relevance AI or similar platforms but production reliability is a problem",
-        "Context doesn't carry correctly between agent sessions",
-        "CRM and tool integration after agent runs is still manual",
-        "You can build agents but you don't own the production architecture layer",
-        "Your budget is $5K+ and you need a production partner, not more platform credits",
-      ],
-      notForYou: [
-        "You're still in prototype/experiment phase and haven't reached production yet",
-        "You want help configuring Relevance AI itself, not building the production layer around it",
-        "You need a cheap platform subscription, not a custom architecture engagement",
-      ],
-    },
-    faq: [
-      {
-        question: "Is this anti-platform?",
-        answer:
-          "No. We are pro-outcome. We use the tools that fit your architecture and make sure the full system is stable in production.",
-      },
-      {
-        question: "Can we keep part of our existing setup?",
-        answer:
-          "Yes. We often preserve useful components and replace only brittle or high-risk paths.",
-      },
-      {
-        question: "How do you measure success?",
-        answer:
-          "We track workflow reliability, response quality, and business KPIs tied to the process being automated.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will assess your current AI setup and identify what should be hardened first.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "Botpress Alternative", href: "/botpress-alternative" },
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
-    ],
-    keywords: [
-      "relevance ai alternative",
-      "relevance ai production alternative",
-      "custom ai operations system",
-      "ai systems agency",
-    ],
-  },
-  {
-    type: "comparison",
-    pathSegments: ["botpress-alternative"],
-    title: "Botpress Alternative for Production Systems | Agentic AI Labs",
-    description:
-      "Botpress can launch conversational flows quickly. We build production AI systems with memory and operational automation for real business environments.",
-    canonicalUrl: makeCanonical(["botpress-alternative"]),
-    heroLabel: "Botpress vs. Full Production AI System",
-    heroHeadline: "Need a Botpress Alternative?",
-    heroSubheadline:
-      "Botpress is useful for conversational prototypes. We build production AI systems that connect conversations to business execution.",
-    painTitle: "Where teams run into limits",
-    painPoints: [
-      "Conversation quality drops on edge cases.",
-      "Context does not persist cleanly between sessions.",
-      "Business systems are weakly connected to bot outputs.",
-    ],
-    costCallout: {
-      items: [
-        { label: "Botpress plan costs at production scale", amount: "$495–$1,495 / month" },
-        { label: "Engineering time writing custom scripts for edge cases", amount: "$2,500–$5,500 / month" },
-        { label: "Missed conversions from bot interactions that fail to execute", amount: "$6,000+ / month" },
-      ],
-      total: "$9,000–$13,000+/month in bot-to-business execution gaps",
-      solvesFor: "$3,500–$6,000 setup + $1,200–$2,500 / month",
-      source: "Internal estimates based on conversational AI client audits, 2025–2026",
-    },
-    practitionerQuote: {
-      text: "Botpress gets you a working conversation in days. What it doesn't give you is a system that updates your CRM, triggers follow-ups, and actually closes the loop with your business operations.",
-      attribution: "Agency operator, r/chatbots, July 2025",
-    },
-    statusQuoTitle: "Typical workarounds",
-    statusQuoItems: [
-      "Layer custom scripts for every exception.",
-      "Manual handoff after bot interactions.",
-      "Patch integrations one by one over time.",
-    ],
-    industrySignal: {
-      headline: "Conversational AI is maturing — buyers now expect execution, not just answers.",
-      body: "The conversational AI platform market saw significant consolidation in 2025 as teams realized that chat quality was no longer the differentiator. What separates a useful deployment from a failed one is whether the conversation actually triggers something useful in your business tools. Teams buying Botpress in 2026 are increasingly looking for it to be the front end of a full operational system — not the whole system.",
-      source: "Conversational AI market analysis + client deployment data, Q4 2025",
-      date: "Q4 2025",
-    },
-    solutionTitle: "Production approach",
-    solutionItems: [
-      "Conversation design tied to your business process.",
-      "Memory for contextual continuity across interactions.",
-      "Automation that executes downstream actions reliably.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "Conversation design built around your actual business process — support flows, qualification paths, or service interactions — not generic intents. Edge cases handled by design, not by custom exception scripts piled on after launch.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Persistent memory using Mem0 so returning users get continuity across sessions. Prior conversation context, preferences, and interaction history available every time — not just for the duration of one chat window.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Every conversation outcome triggers the right downstream action: CRM update, ticket creation, booking, escalation routing. Business tools update automatically. Manual handoff after bot conversations becomes the exception, not the rule.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning — We review your current Botpress flows, integration gaps, and where conversations fail to complete the business cycle. We leave with a production gap assessment.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the production layer: refined conversation flows, Mem0 persistent memory, CRM and tool integration, and downstream action triggers.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3 — Edge-case conversation scenarios, return-user memory validation, integration tests with downstream tools. We validate the full loop before going live.",
-        youSpend: "30 minutes reviewing outputs and giving feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4–5 — Production system goes live. We monitor for 30 days: conversation completion rate, downstream action success rate, and any edge cases that need tuning.",
-        youSpend: "Zero. It runs.",
-      },
-    ],
-    proofTitle: "Business impact",
-    proofBullets: [
-      "Higher consistency in customer interactions.",
-      "Faster handoffs to internal teams.",
-      "Stronger reliability for critical workflows.",
-    ],
-    caseStudy: {
-      client: "Home services company — booking and dispatch",
-      problem: "Botpress chat handled inquiries but every booking still required a human to manually process in the CRM and dispatch system. Bot conversations were creating work, not reducing it. Staff spent 4+ hours daily on post-chat admin.",
-      system: "Production AI system with Botpress front end, Mem0 customer memory, automated CRM booking writes, and dispatch trigger integration. Return customers greeted with service history. Bookings confirmed without staff intervention.",
-      result: "Post-chat admin time reduced from 4 hours/day to under 30 minutes. 81% of bookings confirmed automatically. Customer satisfaction scores improved 18% from faster confirmation and context continuity.",
-    },
-    testimonial: {
-      quote: "The bot used to create work for our team. Now it actually completes the work. Bookings confirm themselves and our staff only touch the edge cases.",
-      author: "Sandra, Operations Director",
-    },
-    proofStats: [
-      { stat: "81%", label: "of bookings confirmed automatically" },
-      { stat: "30 min", label: "daily post-chat admin (was 4 hours)" },
-      { stat: "18%", label: "improvement in customer satisfaction scores" },
-    ],
-    fitChecklist: {
-      headline: "Built for teams where chatbot conversations aren't completing the business loop.",
-      forYou: [
-        "You have Botpress or a similar chatbot but post-conversation manual work is still high",
-        "Bot conversations end without updating CRM, creating tickets, or triggering follow-up",
-        "Return customers don't get continuity — every session starts from scratch",
-        "You've added custom scripts to handle exceptions and it's becoming a maintenance burden",
-        "Your budget is $4K+ and you need the full system, not just a better chatbot",
-      ],
-      notForYou: [
-        "You're still evaluating chatbot platforms and haven't deployed anything yet",
-        "You want help configuring Botpress flows yourself",
-        "You need a simple FAQ chatbot, not a production business execution system",
-      ],
-    },
-    faq: [
-      {
-        question: "Can this include voice as well as chat?",
-        answer:
-          "Yes. We support voice and chat channels where your customer journey requires both.",
-      },
-      {
-        question: "Do we need to rebuild everything?",
-        answer:
-          "No. We focus on highest-impact flows first and reuse assets where they still add value.",
-      },
-      {
-        question: "What industries is this best for?",
-        answer:
-          "Founder-led service businesses, agencies, and teams with high interaction volume and repeated workflows.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We will map your current conversational flows and identify production gaps.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "Relevance AI Alternative", href: "/relevance-ai-alternative" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Support Rep for Ecommerce", href: "/ai-support-rep-for-ecommerce" },
-    ],
-    keywords: [
-      "botpress alternative",
-      "botpress production alternative",
-      "conversational ai system",
-      "custom ai automation",
     ],
   },
   {
@@ -2516,8 +1588,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "It typically connects with calendars, CRM systems, help desk software, and messaging tools.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can assess whether an AI receptionist model fits your workflow.",
     relatedLinks: [
       { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
@@ -2593,8 +1665,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "For natural phone interaction, response latency should generally feel near real-time and stable under load.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can audit your current voice setup and show where production gaps are.",
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
@@ -2606,83 +1678,6 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "ai voice agent explained",
       "voice ai definition",
       "production voice ai",
-    ],
-  },
-  {
-    type: "glossary",
-    pathSegments: ["glossary", "what-is-ai-memory"],
-    title: "What Is AI Memory? | Agentic AI Labs Glossary",
-    description:
-      "AI memory is the context layer that helps systems remember previous interactions and preferences. Learn how it works in production.",
-    canonicalUrl: makeCanonical(["glossary", "what-is-ai-memory"]),
-    heroLabel: "Glossary",
-    heroHeadline: "What Is AI Memory?",
-    heroSubheadline:
-      "AI memory is how an AI system retains customer context across conversations so each interaction starts informed.",
-    painTitle: "Why teams care",
-    painPoints: [
-      "Without memory, users repeat details every time.",
-      "Context loss lowers trust and conversion.",
-      "Storage costs rise when retention has no policy.",
-    ],
-    practitionerQuote: {
-      text: "We stored everything. Transcripts, call summaries, form submissions. The agent still asked the same questions. Storing data and having usable memory for AI are completely different problems.",
-      attribution: "AI product builder, r/LangChain, December 2025",
-    },
-    statusQuoTitle: "What gets misunderstood",
-    statusQuoItems: [
-      "A database is not the same as memory behavior.",
-      "Storing transcripts is not enough for context retrieval.",
-      "Memory without workflow action has low business value.",
-    ],
-    industrySignal: {
-      headline: "Mem0 reached 50M+ memory operations in 2025 — making it the de facto standard for persistent AI memory.",
-      body: "AI memory has moved from an advanced research topic to a production requirement in less than 18 months. Mem0's rapid adoption across voice, support, and sales AI systems signals that teams have realized context-free agents aren't viable in production. The critical design challenge isn't storage — it's retrieval: getting the right context to the agent at the right moment in a conversation, without latency or noise.",
-      source: "Mem0 community usage data, 2025",
-      date: "2025",
-    },
-    solutionTitle: "Production memory model",
-    solutionItems: [
-      "Structured memory schema per role and workflow.",
-      "Retrieval logic based on recency and relevance.",
-      "Automation policies for write, update, and archival.",
-    ],
-    proofTitle: "What to evaluate",
-    proofBullets: [
-      "Can the AI recall useful context accurately?",
-      "Can memory be controlled for privacy and retention?",
-      "Does memory improve completion and conversion rates?",
-    ],
-    faq: [
-      {
-        question: "Is AI memory required for every use case?",
-        answer:
-          "No. It is most important where repeat interactions and personalization influence outcomes.",
-      },
-      {
-        question: "Can memory increase risk?",
-        answer:
-          "Yes, if unmanaged. Production systems need redaction, retention limits, and access controls.",
-      },
-      {
-        question: "How is this different from chat history?",
-        answer:
-          "Chat history is raw records. AI memory is curated context designed for future decision quality.",
-      },
-    ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText: "We can help design a memory model that fits your workflows.",
-    relatedLinks: [
-      { label: "AI Memory System", href: "/ai-memory-system" },
-      { label: "AI Memory with Mem0", href: "/ai-memory-with-mem0" },
-      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
-    ],
-    keywords: [
-      "what is ai memory",
-      "ai memory explained",
-      "ai memory system",
-      "persistent ai memory",
     ],
   },
   {
@@ -2747,13 +1742,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Deploying autonomy without guardrails, observability, and clear escalation paths.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can map where agentic AI fits your operations without unnecessary risk.",
     relatedLinks: [
       { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Workflow Automation n8n", href: "/ai-workflow-automation-n8n" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
     ],
     keywords: [
       "what is agentic ai",
@@ -2824,8 +1819,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Start with one high-impact workflow, define success metrics, then expand after proving reliable performance.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can help scope your first system-level workflow.",
     relatedLinks: [
       { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
@@ -2901,12 +1896,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Treating a prototype as a finished system and skipping operational design.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can assess your current setup against production-grade criteria.",
     relatedLinks: [
       { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
-      { label: "n8n Alternative", href: "/n8n-alternative" },
+      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
     ],
     keywords: [
@@ -2983,8 +1978,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Start with missed-call recovery and booking workflows, then expand to follow-up and reactivation.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can audit your current stack and recommend what to keep, replace, or integrate.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -3066,8 +2061,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Run pilots long enough to test edge cases and repeat-caller behavior, not just first-call success.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can map your selection criteria to production requirements.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -3149,8 +2144,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "Yes. Build a core architecture and adapt prompts, memory schemas, and routing by niche.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can help design a repeatable AI operating model for your agency.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -3232,8 +2227,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "First-round qualification and scheduling are usually the highest-leverage starting points.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can assess your recruiting workflow and recommend a production-first rollout plan.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
@@ -3248,156 +2243,1289 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "candidate screening ai",
     ],
   },
-];
 
-type MemoryVariableCategory = "role" | "industry" | "workflow" | "agent_type";
-
-type MemoryVariableSeed = {
-  category: MemoryVariableCategory;
-  value: string;
-  slug: string;
-  customPainPoints?: string[];
-  customStatusQuo?: string[];
-  customProofBullets?: string[];
-};
-
-const MEMORY_VARIABLE_SEEDS: MemoryVariableSeed[] = [
-  { category: "role", value: "marketing agents", slug: "marketing-agents" },
-  { 
-    category: "role", 
-    value: "recruiting teams", 
-    slug: "recruiting-teams",
-    customPainPoints: [
-      "File names like 'resume_final_v3' with no helpful candidate metadata slow down manual screening (r/recruiting).",
-      "Hiring managers deal with candidates who sound good in interviews but lack practical skills on the job.",
-      "Success requires building real relationships with hiring managers, not just fast sourcing without context."
-    ],
-    customStatusQuo: [
-      "Relying on entirely manual reading of resumes with no automated filtering or ATS context constraints.",
-      "The 'find resume, submit resume, repeat' cycle with zero continuity.",
-      "Scattered candidate notes that force recruiters to start from scratch on every follow-up."
-    ],
-    customProofBullets: [
-      "Searches for 'AI recruiter memory' have surged to peak interest this year, especially in tech hubs like California (Google Trends).",
-      "Fewer repeated questions and zero time wasted on manual file renaming and organization.",
-      "Consistent candidate history tracking that actually supports long-term hiring manager relationships."
-    ]
-  },
-  { category: "industry", value: "fintech startups", slug: "fintech-startups" },
-  { category: "industry", value: "dental clinics", slug: "dental-clinics" },
-  { category: "workflow", value: "legal workflows", slug: "legal-workflows" },
-  { category: "workflow", value: "hr automation", slug: "hr-automation" },
-  { category: "agent_type", value: "AI receptionists", slug: "ai-receptionists" },
-  { category: "agent_type", value: "AI SDR agents", slug: "ai-sdr-agents" },
-];
-
-const categoryLabel: Record<MemoryVariableCategory, string> = {
-  role: "Role Use Case",
-  industry: "Industry Use Case",
-  workflow: "Workflow Use Case",
-  agent_type: "Agent Type Use Case",
-};
-
-const toTitleCase = (input: string) =>
-  input
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-
-const buildMemoryVariablePage = (seed: MemoryVariableSeed): ProgrammaticPageData => {
-  const titleValue = toTitleCase(seed.value);
-  const pathSegments = [`ai-memory-for-${seed.slug}`];
-
-  return {
-    type: "memory-use-case",
-    pathSegments,
-    title: `AI Memory for ${titleValue} | Agentic AI Labs`,
+  // ─── PAGE: ai-booking-agent-for-travel-agencies ────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-booking-agent-for-travel-agencies"],
+    title: "AI Booking Agent for Travel Agencies — Stop Losing ₹1.6L/Day in Missed Bookings",
     description:
-      `We build AI memory systems for ${seed.value} so voice and automation workflows retain context, reduce repetition, and improve execution quality.`,
-    canonicalUrl: makeCanonical(pathSegments),
-    heroLabel: categoryLabel[seed.category],
-    heroHeadline: `AI Memory for ${titleValue}`,
+      "A bus operator in Delhi NCR was losing 20–30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ₹2,499/mo.",
+    canonicalUrl: makeCanonical(["ai-booking-agent-for-travel-agencies"]),
+    heroLabel: "Bus · Tour · Cab · Transport Operators",
+    heroHeadline: "20 booking calls missed yesterday. Your competitor answered all of them.",
     heroSubheadline:
-      `We build persistent AI memory infrastructure for ${seed.value} so every interaction starts with context, not guesswork.`,
-    painTitle: `What breaks without memory in ${titleValue}`,
-    painPoints: seed.customPainPoints || [
-      `Teams in ${seed.value} repeat the same context every interaction.`,
-      "Agents lose continuity after handoffs across channels.",
-      "Operational quality drops because decisions are made without historical context.",
+      "A passenger calls about a Saturday route at 8 PM. Nobody picks up. In transport, the window before they book with someone else is about 3 minutes. We build the AI agent that makes sure you never lose that window again.",
+    painTitle: "The 3-minute window that's bleeding your revenue",
+    painPoints: [
+      "A passenger calls at 8 PM about tomorrow's route. Your office closed at 7. They call the next operator on Google — booked within 3 minutes. You wake up to nothing.",
+      "Your technician is handling a group booking on call. Two more inquiries come in simultaneously. Both ring out. Both call someone else. That's ₹3,000–₹8,000 gone in 60 seconds.",
+      "WhatsApp messages pile up during rush hours — 15 unread by evening. By the time you reply, half have already booked elsewhere. The other half don't respond anymore.",
     ],
-    statusQuoTitle: "What most teams try first",
-    statusQuoItems: seed.customStatusQuo || [
-      "Chat history exports without retrieval logic.",
-      "Prompt patching with no persistent memory layer.",
-      "Disconnected tools that cannot share memory between agents.",
+    costCallout: {
+      items: [
+        { label: "Average booking value per seat (bus, tour, cab)", amount: "₹800 – ₹4,000" },
+        { label: "Booking calls missed per day (single-person operation)", amount: "20 – 30 calls" },
+        { label: "Group bookings lost per week (after-hours, rush overlap)", amount: "3 – 5 groups" },
+      ],
+      total: "₹16,000 – ₹1,60,000/day walking to whichever operator picked up first",
+      solvesFor: "₹2,499/month — every call answered, every inquiry captured, 24/7",
+      source: "ANT Bus Services pilot data + live travel operator deployments, Agentic AI Labs 2026",
+    },
+    practitionerQuote: {
+      text: "We were losing 20 to 30 booking calls a day. Not because our routes were bad — because nobody was picking up during rush hour and after 8 PM. Every missed call was going straight to our competitor down the road.",
+      attribution: "Bus travel agency operator, Delhi NCR — Agentic AI Labs live pilot, March 2026",
+    },
+    statusQuoTitle: "What you've already tried (and why it didn't work)",
+    statusQuoItems: [
+      "One person managing calls, WhatsApp, walk-ins, and dispatch simultaneously — the moment two calls overlap, one is lost forever.",
+      "WhatsApp Business auto-reply: sends a template, but nobody follows up for hours. The customer already booked by then.",
+      "Hiring a second person for evenings at ₹15,000–₹20,000/month — still can't handle two calls at once, still takes weekends off, still misses the 10 PM group inquiry.",
     ],
-    solutionTitle: "Production memory architecture",
+    industrySignal: {
+      headline: "In transport, the first operator who picks up wins. Speed of response is the only differentiator.",
+      body: "A bus travel agency running a live AI pilot saw that intent-triggered callbacks — where the AI calls back every lead who showed interest within 60 seconds — converted inquiries that previously went cold. The peak window between inquiry and booking is under 3 minutes for transport customers. Price, fleet size, and brand don't matter if you don't answer the phone. The operator who responds first captures the seat.",
+      source: "Agentic AI Labs — ANT Bus Services live pilot data, March 2026",
+      date: "2026",
+    },
+    solutionTitle: "Every call answered. Every inquiry captured. Your team gets a WhatsApp summary — not a ringing phone.",
     solutionItems: [
-      "Persistent AI memory with role-specific schemas.",
-      "Shared memory for AI agents across channels and workflows.",
-      "Long-term memory + short-term context routing with policy controls.",
+      "Answers every inbound call and WhatsApp inquiry instantly — even at midnight, even during the festival booking rush.",
+      "Captures route, date, passenger count, and contact number — structured and on your team's WhatsApp within seconds.",
+      "Calls back every online lead within 60 seconds — before they've finished comparing the next operator.",
     ],
-    proofTitle: "Expected outcomes",
-    proofBullets: seed.customProofBullets || [
-      "Fewer repeated questions and smoother user experience.",
-      "Higher task completion rates in multi-step workflows.",
-      "More reliable automation decisions with context memory.",
+    layers: [
+      {
+        title: "Answers the phone before the customer hangs up.",
+        body: "Every inbound call picked up in under 3 rings — 24 hours a day, 7 days a week, including Diwali, Holi, and the summer rush. The agent greets the caller in whatever language they speak — Hindi, English, Marathi, Gujarati, Tamil. It asks exactly what your front desk would ask: where are you going? Which date? How many seats? What's your number? The caller doesn't know it's AI. They just know someone picked up — fast.",
+      },
+      {
+        title: "Sends your team a job-ready WhatsApp brief.",
+        body: "Within 10 seconds of every call, your team gets a structured WhatsApp message: route, date, passenger count, contact number, special requests. No handwritten notes. No post-call data entry. No 'what did that caller want again?' Your morning starts with a clean list of every overnight inquiry, ready to confirm and dispatch. The data is structured — push it to your CRM, spreadsheet, or booking system automatically.",
+      },
+      {
+        title: "Calls back online leads before they book elsewhere.",
+        body: "Someone fills a form on your website. Someone clicks 'enquire' on Justdial. Someone messages your Facebook page. The AI calls them back within 60 seconds — while they're still on the page, still thinking about your route. Not 20 minutes later when they've already spoken to two competitors. This intent-triggered callback is what our Delhi NCR pilot validated: the leads who got a 60-second callback booked. The ones who waited didn't.",
+      },
     ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR ROUTES",
+        body: "We get on a 45-minute call with you. You walk us through your routes, pricing, availability logic, peak seasons, and how your team currently handles inquiries. We map every question a caller could ask — and every answer they should get. You leave the call knowing exactly what the AI will handle.",
+        youSpend: "45 minutes. One call.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE AGENT",
+        body: "We build your AI booking agent — trained on your actual routes, your pricing tiers, your availability patterns. Voice calls and WhatsApp both covered. Hindi, English, and regional languages configured. The agent sounds like your front desk, not a robot reading a script.",
+        youSpend: "Nothing. We build it for you.",
+      },
+      {
+        week: 3,
+        phase: "BREAK IT BEFORE CUSTOMERS DO",
+        body: "Day 6 — We throw every edge case at it: group booking for 25 people, last-minute route change, caller switching from Hindi to English mid-sentence, two calls coming in simultaneously, an after-hours inquiry on a public holiday. If it breaks, we fix it. You review the call recordings and tell us what sounds right.",
+        youSpend: "30 minutes reviewing test recordings.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE ON YOUR NUMBER",
+        body: "Day 7 — Your AI booking agent goes live on your actual business number. We monitor every interaction for 30 days. You get a daily WhatsApp summary: inquiries captured, routes asked about, peak call times, and anything the AI escalated to your team. We tune it weekly based on real call data.",
+        youSpend: "Zero. Check your WhatsApp for the daily summary.",
+      },
+    ],
+    proofTitle: "We didn't build this in a lab. We built it on a live bus route in Delhi NCR.",
+    proofBullets: [
+      "20–30 calls/day that previously went unanswered — now every single one is captured and sent to the operator's WhatsApp.",
+      "Intent-triggered callbacks on online leads converted inquiries that had always gone cold before.",
+      "Setup was live in 7 days. No app installs, no hardware, no changes to the operator's existing workflow.",
+    ],
+    caseStudy: {
+      client: "ANT Bus Services — Bus Travel Agency, Delhi NCR",
+      problem: "Single operator managing all booking inquiries by phone and WhatsApp manually. During group booking rushes and after 8 PM, 20–30 calls per day were going unanswered. Competitor operators with faster response were capturing the overflow. After-hours inquiries — including group bookings worth ₹15,000–₹40,000 — were lost entirely.",
+      system: "AI booking agent deployed on the operator's existing phone number. Answers every inbound call in Hindi and English, captures route, date, passenger count, and contact details, and sends a structured WhatsApp summary to the operator's team within 10 seconds. Intent-triggered callback activated: when a lead fills a form or shows interest online, the AI calls them back within 60 seconds.",
+      result: "Zero missed booking inquiries — day or night. After-hours calls fully covered for the first time. A 10 PM group booking for 18 passengers was captured, detailed, and confirmed the next morning — worth more than several months of the service cost. Live in 7 days with no changes to the operator's existing setup.",
+    },
+    testimonial: {
+      quote: "A customer called at 10 PM about a group booking for 18 people — Delhi to Dehradun. The AI handled the full inquiry, captured every detail, and sent it to my WhatsApp before I even knew the call happened. I confirmed the seats the next morning. That one booking paid for months of the service.",
+      author: "Bus Travel Operator, Delhi NCR — Live Pilot, March 2026",
+    },
+    proofStats: [
+      { stat: "0", label: "booking calls missed since go-live" },
+      { stat: "7 days", label: "from first call to live on your number" },
+      { stat: "< 60s", label: "callback speed on online leads" },
+    ],
+    fitChecklist: {
+      headline: "Built for travel and transport operators who lose bookings because nobody picks up.",
+      forYou: [
+        "You run a bus, tour, cab, or transport business and get 10+ booking inquiries per day by phone or WhatsApp",
+        "You're a 1–3 person operation and can't answer every call — especially during rush hours, evenings, and weekends",
+        "You've lost group bookings because the inquiry came in after hours and nobody responded until morning",
+        "Your booking logic is straightforward: routes, dates, seats, pricing — the kind of questions a trained front desk person handles",
+        "You want this live and handling real calls within 7 days — not a 3-month 'implementation project'",
+      ],
+      notForYou: [
+        "You already have a 24/7 call center with multiple agents — you don't have a missed-call problem",
+        "Your booking requires real-time inventory checks against a GDS or complex dynamic pricing system on day one (we can add this later, but V1 captures and routes)",
+        "You get fewer than 5 inquiries per day — at that volume, you can handle it yourself",
+      ],
+      geographicNote: "Currently live in India (Delhi NCR). Deployments open for Gulf (UAE, Oman), UK, and Australia — same setup, localized for your market.",
+    },
     faq: [
       {
-        question: `Is this only useful for ${seed.value}?`,
+        question: "What languages does the AI booking agent speak?",
         answer:
-          "No. The memory framework is reusable across roles and industries, but we tailor schema and retrieval logic to each use case.",
+          "Hindi, English, Marathi, Gujarati, and Tamil are confirmed and tested. Bhojpuri, Bengali, and Kannada are available on request. The agent detects the caller's language automatically and responds in kind — no pressing 1 for Hindi, 2 for English. If a caller switches from Hindi to English mid-sentence, the agent follows.",
       },
       {
-        question: "Can multiple agents share one memory system?",
+        question: "Does it actually sound natural — or like a robot?",
         answer:
-          "Yes. We design a multi-agent memory system where specialized agents read and write to a shared context layer with guardrails.",
+          "It sounds like a trained front desk person — brief, warm, and efficient. In our pilot, callers did not identify it as AI. The tone and pacing are tuned to sound like your business, not a generic customer support bot. We share test recordings with you before go-live so you can approve how it sounds.",
       },
       {
-        question: "How do you control memory growth and cost?",
+        question: "Can it handle WhatsApp inquiries as well as phone calls?",
         answer:
-          "We implement memory tiers, retention policies, and relevance-based retrieval so long-term memory remains useful and cost-effective.",
+          "Yes — voice calls and WhatsApp messages are both handled by the same agent. It greets, qualifies the inquiry, captures structured details (route, date, passengers, contact), and sends everything to your team. Customers who prefer texting get the same response speed as callers.",
+      },
+      {
+        question: "What happens when the AI gets a question it can't answer?",
+        answer:
+          "It never guesses. For anything outside its training — unusual group requests, real-time seat availability, custom pricing — it captures the full inquiry and tells the caller your team will follow up. Your team gets an immediate WhatsApp alert with the caller's name, question, and contact number. Nothing falls through the cracks.",
+      },
+      {
+        question: "Does it integrate with my booking system or CRM?",
+        answer:
+          "By default, the AI sends a structured WhatsApp message to your team for every inquiry — ready to act on immediately. For operators using a booking CRM, spreadsheet, or custom system, we push data via API or webhook. We map your specific workflow on the audit call before we build anything.",
+      },
+      {
+        question: "How long does it take to set up?",
+        answer:
+          "7 days from your first call with us to live on your number. Day 1: we map your routes and logic. Days 2–5: we build and train the agent. Day 6: you review test calls. Day 7: you're live. No app installs, no hardware, no changes to how your team currently works.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "Starts at ₹2,499/month — less than the revenue from a single missed group booking. Build and configuration is a one-time fee based on the complexity of your route logic and integrations. We scope it on the first call before you commit to anything. No hidden per-minute charges.",
+      },
+      {
+        question: "Can it handle two calls at the same time?",
+        answer:
+          "Yes. Unlike a human front desk, the AI handles concurrent calls without putting anyone on hold. During peak booking hours when 3 inquiries come in simultaneously, all 3 get answered, all 3 get captured. That's the exact scenario where human operators lose the most bookings.",
       },
     ],
-    ctaLabel: "Book a Free Call",
-    ctaHref: "/book-a-call",
-    ctaSupportText:
-      "We will map your current workflow and show where persistent memory creates the biggest operational gain.",
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll call your business number as a mystery customer, time the response, and show you exactly how many inquiries you're missing. 30 minutes. Free. No commitment.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Memory System", href: "/ai-memory-system" },
-      { label: "What Is AI Memory?", href: "/glossary/what-is-ai-memory" },
-      { label: "AI Memory with Mem0", href: "/ai-memory-with-mem0" },
+      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI Receptionist for Med Spa & Clinics", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
     ],
     keywords: [
-      `ai memory for ${seed.value}`,
-      "memory as a service",
-      "persistent ai memory",
-      "ai agent memory",
-      "shared memory for ai agents",
-      "long term memory for ai",
-      "ai context memory",
-      "multi agent memory system",
-      "ai memory layer",
-      "ai agents with memory",
-      "memory infrastructure for ai",
-      "agentic memory",
-      "long term memory for ai agents",
+      "ai booking agent for travel agencies",
+      "ai voice agent for travel agency",
+      "automated booking for transport companies",
+      "ai receptionist for travel agency",
+      "voice ai for bus operators",
+      "ai for travel inquiries",
+      "automated travel booking agent",
+      "voice agent for tour operators",
+      "ai for transport companies india",
+      "ai booking agent india",
+      "travel agency ai receptionist",
+      "missed call solution travel agency",
+      "ai for bus travel",
+      "whatsapp ai for travel operators",
+      "ai phone agent for bus company",
+      "travel booking automation india",
+      "ai for tour operators india",
+      "bus operator missed calls solution",
+      "24/7 booking agent travel",
+      "ai receptionist bus travel",
     ],
-  };
-};
+  },
 
-const AI_MEMORY_VARIABLE_PAGES = MEMORY_VARIABLE_SEEDS.map(buildMemoryVariablePage);
+  // ─── PAGE: ai-dispatch-agent-for-home-services ─────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-dispatch-agent-for-home-services"],
+    title: "AI Dispatch Agent for Home Services — Stop Losing ₹75,000/Day in Missed Repair Calls",
+    description:
+      "Home services businesses lose ₹1,500–₹3,000 every time a call goes unanswered. We build an AI voice dispatcher that answers 24/7, captures the fault and location, and routes the job to your team's WhatsApp — so no job walks to a competitor.",
+    canonicalUrl: makeCanonical(["ai-dispatch-agent-for-home-services"]),
+    heroLabel: "Built for AC, Plumbing, Pest & Home Repair Companies",
+    heroHeadline: "Your technician is on a job. 3 calls just came in. All 3 went to your competitor.",
+    heroSubheadline:
+      "Your technician is on a job. Your phone rings. Nobody picks up. The customer waits 30 seconds — then Googles the next number. That was your job. This stops it from happening.",
+    painTitle: "Every missed call is a job you handed to a competitor",
+    painPoints: [
+      "Calls come in at all hours — AC breaks at 11 PM, pipe bursts on a Sunday. Your team isn't available. The job goes elsewhere.",
+      "When two calls come in at once, one always drops. That caller doesn't leave a voicemail — they call someone else.",
+      "Google and Meta ads run 24/7 generating inbound leads. Your team works 9:30–6:30. The gap is where revenue leaks.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average home services job value (AC, plumbing, pest)", amount: "₹1,500 – ₹5,000" },
+        { label: "Missed calls per day (busy operator)", amount: "5 – 15 calls" },
+      ],
+      total: "₹7,500 – ₹75,000 walking out every day",
+      solvesFor: "₹2,499 / month — the agent answers every single one",
+      source: "Pilot data — Book My Garage, home services operators, India 2026",
+    },
+    practitionerQuote: {
+      text: "Our ads run 24/7 on Google and Meta. But our team works 9:30 to 6:30. Every lead that came in after hours just sat there until morning — by which time they'd already called 3 other companies.",
+      attribution: "Home services marketplace founder, Bangalore — Agentic AI Labs sales call, 2026",
+    },
+    statusQuoTitle: "What most home services businesses try first",
+    statusQuoItems: [
+      "A dedicated dispatcher who still misses overlap calls and goes offline at night.",
+      "WhatsApp Business auto-reply that sends a generic message — but still needs a human to actually respond.",
+      "Hiring a night-shift receptionist for ₹15,000–₹20,000/month who still can't handle two simultaneous calls.",
+    ],
+    industrySignal: {
+      headline: "24/7 availability is now the baseline expectation — not a differentiator.",
+      body: "Home services customers search and call at any hour. Google data shows 40% of home repair searches happen outside standard business hours. Businesses that answer those calls convert at 3× the rate of those who don't — because the customer is in active distress and the first responder wins the job every time. The window from missed call to competitor booking is under 4 minutes.",
+      source: "Google Consumer Insights, Home Services Vertical, 2025",
+      date: "2025",
+    },
+    solutionTitle: "One AI dispatcher. Every call answered. Every job routed.",
+    solutionItems: [
+      "Answers every inbound call 24/7 — English, Hindi, and regional languages.",
+      "Collects fault type, location, and contact details in a structured format.",
+      "Sends job details to your team WhatsApp instantly so they can dispatch and show up.",
+    ],
+    layers: [
+      {
+        title: "Picks up every call — even the 11 PM AC emergency.",
+        body: "Every inbound call answered in under 3 rings — day, night, Sunday, public holiday. The agent greets the caller, identifies itself as your business, and starts the intake immediately. No hold music, no voicemail, no 'we'll call you back.' The caller feels like they reached someone — because functionally, they did.",
+      },
+      {
+        title: "Sends your team a job-ready WhatsApp brief in 10 seconds.",
+        body: "What's broken, where they are, what their number is — all collected in one structured call and sent directly to your team's WhatsApp as a job card. Your technician gets: fault type, location, contact number, urgency level. Everything they need to show up and do the work. No follow-up call needed from your side.",
+      },
+      {
+        title: "Routes hot jobs to the right technician instantly.",
+        body: "Hot jobs — AC down in summer, burst pipe, electrical fault — get routed to the right technician or team lead immediately with a WhatsApp ping. Standard inquiries are batched for morning review. Pricing queries are handled from your standard rate card. Escalations go to a human with full context. Your dispatcher doesn't need to be awake at 2 AM for any of this.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR SERVICES",
+        body: "Day 1 — We map your service catalog, coverage area, standard pricing, and team WhatsApp structure on a single call. Takes 45 minutes. We leave with everything we need.",
+        youSpend: "45 minutes on a setup call.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE DISPATCHER",
+        body: "Days 2–6 — We build the dispatch agent. Trained on your services, your pricing, your geography. Hindi, English, or regional language from day one.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "BREAK IT BEFORE CUSTOMERS DO",
+        body: "Day 7 — Real fault scenarios: AC breakdown, pipe leak, pest emergency, overlap calls. We test edge cases and train the agent on exceptions before it touches real customers.",
+        youSpend: "30 minutes listening to test calls with us.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE ON YOUR NUMBER",
+        body: "Day 8 — Live on your number. We monitor every call for 30 days. You get a weekly report: calls handled, jobs dispatched, any exceptions flagged.",
+        youSpend: "Zero. It dispatches without you.",
+      },
+    ],
+    proofTitle: "10 days to live. 14 missed calls captured in week one.",
+    proofBullets: [
+      "Home services operators running the agent report no missed calls during off-hours — zero calls going to voicemail after setup.",
+      "Job cards delivered to team WhatsApp within 60 seconds of every call ending.",
+      "Multilingual handling: Hindi, English, Marathi, Gujarati — no caller turned away for language.",
+    ],
+    caseStudy: {
+      client: "Home Services Marketplace — Bangalore",
+      problem: "Google and Meta ads running 24/7 generating 30–40 inbound calls per day. Team available 9:30 AM–6:30 PM. Every lead arriving outside those hours sat cold until morning — by which time they'd already called three other providers.",
+      system: "AI dispatch agent deployed on the business number. Handles all inbound calls 24/7. Captures fault type, location, and contact info. Routes hot jobs to the team lead's WhatsApp in real time. Standard inquiries queued for morning review.",
+      result: "After-hours leads no longer go cold. Job dispatch time from call to WhatsApp ping dropped to under 60 seconds. Team starts each morning with a structured list of overnight inquiries — not a pile of missed calls.",
+    },
+    testimonial: {
+      quote: "It took 10 days to set up. The first week it was live, it handled 14 calls I would have missed — three of them turned into jobs. That's more than a year of the monthly fee in the first week.",
+      author: "AC Repair Company Owner, Mumbai",
+    },
+    proofStats: [
+      { stat: "< 60s", label: "call to WhatsApp job card" },
+      { stat: "24/7", label: "fault intake coverage" },
+      { stat: "10 days", label: "to go live" },
+    ],
+    fitChecklist: {
+      headline: "Built for home services businesses losing jobs to missed calls.",
+      forYou: [
+        "You run an AC, plumbing, pest control, cleaning, or repair business",
+        "You miss calls when your team is on a job or after your working hours",
+        "Your service catalog and pricing are clear enough to explain in 45 minutes",
+        "You want jobs dispatched to your team WhatsApp automatically — no extra admin",
+        "You want the agent live and tested within 10 days",
+      ],
+      notForYou: [
+        "You already have a 24/7 staffed call center — this solves a problem you don't have",
+        "Your jobs require complex real-time inventory or part availability checks before dispatch",
+        "You receive fewer than 5 inbound calls per day — volume is too low for clear ROI",
+      ],
+      geographicNote: "Currently active in India (Mumbai, Delhi, Bangalore, Ahmedabad). Gulf deployments available.",
+    },
+    faq: [
+      {
+        question: "What happens when the AI doesn't know the answer?",
+        answer:
+          "We train the agent on your full service catalog, pricing, and coverage area before going live. For anything outside its knowledge — unusual fault types, custom jobs, pricing exceptions — it captures the inquiry and flags your team to call back. Nothing falls through.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi and English confirmed on day one. Marathi, Gujarati, Tamil available with 2–3 days additional training. Regional variants (Bhojpuri, Haryanvi) available on request. The agent detects the caller's language and responds accordingly.",
+      },
+      {
+        question: "Does it integrate with my existing system?",
+        answer:
+          "The default output is a structured WhatsApp message to your team. If you use a CRM or field service management tool, we can push job data via API or webhook. We map your setup before we build so there are no surprises.",
+      },
+      {
+        question: "Can it handle multiple calls at the same time?",
+        answer:
+          "Yes. Unlike a human dispatcher, the AI handles unlimited concurrent calls. Two customers calling simultaneously both get answered immediately — no engaged tone, no missed call.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Home services dispatch agent starts at ₹2,499/month. Build and setup is a one-time fee. We scope it on a call before you commit to anything.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll map your call flow and show exactly what the agent would handle — before you commit to anything.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Booking Agent for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    ],
+    keywords: [
+      "ai dispatch agent for home services",
+      "voice ai for ac repair companies",
+      "ai receptionist for plumbers",
+      "automated dispatch for home services",
+      "ai voice agent for hvac",
+      "missed call solution for home services",
+      "ai for pest control companies",
+      "voice agent for cleaning services",
+      "ai dispatcher for home repair india",
+      "24/7 ai call answering home services",
+      "ai for home services business india",
+      "automated job dispatch ai",
+    ],
+  },
 
-export const AI_MEMORY_VARIABLE_LINKS = AI_MEMORY_VARIABLE_PAGES.map((page) => ({
-  label: page.heroHeadline,
-  href: `/${page.pathSegments.join("/")}`,
-}));
+  // ─── PAGE: ai-interviewer-for-blue-collar-hiring ───────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-interviewer-for-blue-collar-hiring"],
+    title: "AI Interviewer for Blue-Collar Hiring — Screen 500 Candidates/Day for ₹9,999/Month",
+    description:
+      "150 applications come in. Your team can call 50. The other 100 age out overnight — and your competitor screens them first. We build an AI first-round interviewer that calls every applicant within minutes, qualifies them in their own language, and hands you only the candidates worth your time.",
+    canonicalUrl: makeCanonical(["ai-interviewer-for-blue-collar-hiring"]),
+    heroLabel: "Built for Blue-Collar Staffing & High-Volume Hiring",
+    heroHeadline: "150 applications came in today. Your team screened 50. The other 100 joined your competitor.",
+    heroSubheadline:
+      "150 applicants today. Your team calls 50. The rest go cold by morning. The AI calls all 150 — in Hindi, Bhojpuri, or Marathi — and hands you only the ones who qualify.",
+    painTitle: "The screening bottleneck that costs you placements every week",
+    painPoints: [
+      "Applications arrive faster than your team can call them back. The ones you don't reach first go to your competitor's pipeline.",
+      "First-round screening is the same 5 questions every time — but it takes a human caller 8–12 minutes per candidate, all day, every day.",
+      "Language is a hard barrier. A team that only speaks standard Hindi loses Bihar and UP workers who speak Bhojpuri or Maithili.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Human first-round caller cost (India)", amount: "₹15,000 – ₹20,000 / month" },
+        { label: "Candidates screened per human caller per day", amount: "40 – 60 max" },
+        { label: "Candidates screened by AI per day", amount: "500 – 1,000+" },
+      ],
+      total: "3 callers × ₹18,000 = ₹54,000/month to screen what AI does for ₹9,999/month",
+      solvesFor: "₹9,999 / month — unlimited concurrent screening in any language",
+      source: "Pipeline data — Digital Labour Chowk, Gulf Jobs, Agentic AI Labs, 2026",
+    },
+    practitionerQuote: {
+      text: "We got 150–200 calls a day after the TV feature. We had 8 people. It was humanly impossible to keep up. Half the candidates were gone by the time we called them back.",
+      attribution: "Blue-collar hiring platform founder, Delhi NCR — Agentic AI Labs sales call, 2026",
+    },
+    statusQuoTitle: "What most hiring agencies try first",
+    statusQuoItems: [
+      "A team of callers doing first-round screening manually — expensive, inconsistent, and still can't keep up with volume spikes.",
+      "ATS-based filtering that screens resumes but misses the candidates who apply by phone or WhatsApp.",
+      "Outsourced calling teams with high attrition — training costs repeat every 3 months.",
+    ],
+    industrySignal: {
+      headline: "Blue-collar hiring platforms are seeing application volume they can't manually process.",
+      body: "Staffing platforms in logistics, construction, and manufacturing report 3–5× growth in inbound applications since 2024 — driven by job portal integrations and social media outreach. The bottleneck has shifted from sourcing to screening. Platforms that automate first-round qualification fill roles 4× faster than those still using manual calling teams. Language handling is the differentiator — platforms that screen in regional languages (Bhojpuri, Maithili, Tamil) access candidate pools their competitors can't reach.",
+      source: "IndiaHires Industry Report + Agentic AI Labs pipeline data, Q1 2026",
+      date: "Q1 2026",
+    },
+    solutionTitle: "First-round screening at scale. Every candidate. Any language.",
+    solutionItems: [
+      "AI calls every applicant within minutes of their application arriving — not hours later when they've moved on.",
+      "Runs your exact qualification questions: skill, experience, availability, wage expectations, location.",
+      "Saves structured candidate record plus call recording to your system. Hands you only qualified candidates.",
+    ],
+    layers: [
+      {
+        title: "Calls every applicant within minutes — not hours.",
+        body: "The moment an application comes in — from a job portal, WhatsApp, or inbound call — the AI calls the candidate within minutes. Greets them in their language (Hindi, Bhojpuri, Marathi, Tamil, or English). Runs your first-round qualification questions naturally, not like a form being read aloud. Candidates who've applied to 5 other jobs answer this one because it doesn't sound like a robocall.",
+      },
+      {
+        title: "Runs your exact screening questions in their language.",
+        body: "Skill verification, work experience, wage expectation, location, availability, documentation status — whatever your standard screen requires. The AI handles objections and follow-up probes the same way your best caller would. Responses are captured in structured format. The recording is saved for compliance. Your team never needs to re-do a call they've already done.",
+      },
+      {
+        title: "Hands your team only the candidates worth talking to.",
+        body: "Qualified candidates are flagged and sent to your team with a full summary: name, contact, qualification result, recording link. Unqualified candidates receive a polite closure. Your callers open their CRM every morning to a sorted pipeline — not a list of 200 names to work through. They start from 'qualified' — not from scratch.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR SCREENING FLOW",
+        body: "Day 1 — We run through your current screening questions, disqualification criteria, language requirements, and CRM structure. 45 minutes. We build the qualification script from your exact process.",
+        youSpend: "45 minutes walking us through your screening flow.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE INTERVIEWER",
+        body: "Days 2–7 — AI interviewer built and trained on your questions, your qualification thresholds, and your languages. CRM integration mapped. Call recording configured.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL CANDIDATE SCENARIOS",
+        body: "Day 8 — We run mock candidate calls: qualified profiles, unqualified profiles, edge cases, language switches, and drop-off scenarios. You review recordings and give feedback.",
+        youSpend: "30 minutes reviewing test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE — EVERY APPLICATION SCREENED",
+        body: "Day 10 — Live. Every new application triggers an AI screening call within minutes. You receive qualified candidates only. We monitor for the first 30 days and tune based on real call data.",
+        youSpend: "Zero. Your team only speaks to candidates who've already passed round one.",
+      },
+    ],
+    proofTitle: "8 callers couldn't keep up. The AI handles all 200 — same day.",
+    proofBullets: [
+      "AI screening handles 500+ candidates per day — the equivalent of 10 full-time callers.",
+      "First call initiated within minutes of application — not hours later when candidates have moved on.",
+      "Multilingual: Hindi, Bhojpuri, Marathi, Tamil, English — no candidate pool left unreachable.",
+    ],
+    caseStudy: {
+      client: "Blue-Collar Hiring Platform — Delhi NCR",
+      problem: "Platform received 150–200 application calls per day following a TV feature. 8 team members trying to run first-round screening manually — 3-hour backlogs building by 10 AM daily. Candidates were applying to 5–10 platforms simultaneously; whoever called first got them.",
+      system: "AI first-round interviewer deployed on the inbound application number. Every call triggers an immediate screening call in the applicant's language. Qualification responses stored in Tele CRM. Recordings saved. Qualified candidates flagged for human follow-up. Unqualified candidates receive automated closure.",
+      result: "Application backlog eliminated. 100% of inbound applications screened on same-day basis. Human callers shifted from first-round screening to offer and onboarding calls only — higher-value work, no more repetitive qualification.",
+    },
+    testimonial: {
+      quote: "We had 8 people drowning in first-round calls. Now the AI handles all of them and our team only talks to candidates who've already qualified. Our fill rate went up and our caller headcount stopped growing even as application volume doubled.",
+      author: "Hiring Platform Founder, Delhi NCR",
+    },
+    proofStats: [
+      { stat: "500+", label: "candidates screened per day" },
+      { stat: "< 5 min", label: "from application to first AI call" },
+      { stat: "4 languages", label: "Hindi, Bhojpuri, Marathi, Tamil" },
+    ],
+    fitChecklist: {
+      headline: "Built for staffing agencies and hiring businesses drowning in first-round volume.",
+      forYou: [
+        "You run a blue-collar, construction, logistics, or manufacturing hiring platform or agency",
+        "You receive 50+ applications per day and can't call all of them back in time",
+        "Your first-round screen is 5–10 standard questions that are the same for every candidate",
+        "Language diversity in your candidate pool (Hindi, regional languages) is a real operational challenge",
+        "You want qualified candidates only — not a full list of every applicant",
+      ],
+      notForYou: [
+        "You hire fewer than 20 candidates per month — manual calling is sufficient at that volume",
+        "Your screening requires complex technical assessment or portfolio review that AI cannot evaluate",
+        "You need white-glove candidate experience where every interaction must be with a named human recruiter",
+      ],
+    },
+    faq: [
+      {
+        question: "Which languages does the AI screen in?",
+        answer:
+          "Hindi and English are live from day one. Bhojpuri, Maithili, Marathi, Tamil, and Gujarati are available with additional training. We confirm the language set before building so you're not limited by geography.",
+      },
+      {
+        question: "Can I use my own qualification questions?",
+        answer:
+          "Yes — the AI runs your exact questions, in your sequence, with your disqualification thresholds. You define what 'qualified' means. The AI executes it consistently across every candidate, every time.",
+      },
+      {
+        question: "How does the candidate data get into my system?",
+        answer:
+          "We integrate with your existing CRM (Tele CRM, Zoho, custom API) or push structured data to your preferred format. Recordings are stored and linked. Your team sees qualified candidates with full context — name, contact, screening responses, recording — ready for the next step.",
+      },
+      {
+        question: "Does the AI sound robotic? Will candidates hang up?",
+        answer:
+          "We train on natural conversation flows, not form-reading. Candidates in our pilots did not identify the caller as AI in routine screening calls. The voice is natural, the pacing is human. For compliant jurisdictions, we add disclosure at the start of the call as required.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Blue-collar screening setups start at ₹9,999/month for up to 500 calls per day. Higher volume tiers available. Build and setup is a one-time fee scoped before you commit.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll walk through your screening questions and show you the exact qualification flow the AI would run.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "Best AI Tools for Recruiting Agencies", href: "/best-ai-tools-for-recruiting-agencies" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    ],
+    keywords: [
+      "ai interviewer for blue collar hiring",
+      "ai candidate screening agent",
+      "automated first round interviews",
+      "ai hiring agent for staffing agencies",
+      "voice ai for recruitment india",
+      "ai for blue collar staffing",
+      "automated candidate qualification",
+      "ai screening for blue collar jobs",
+      "hiring ai agent india",
+      "ai for construction hiring",
+      "ai for logistics staffing",
+      "multilingual ai hiring agent",
+      "bhojpuri hindi ai interviewer",
+    ],
+  },
 
-export const PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
-  ...BASE_PROGRAMMATIC_SEO_PAGES,
-  ...AI_MEMORY_VARIABLE_PAGES,
+  // ─── PAGE: ai-show-up-agent-for-online-coaching ────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-show-up-agent-for-online-coaching"],
+    title: "AI Show-Up Agent for Coaching — Go from 50% to 70%+ Show-Up Rate in 2 Weeks",
+    description:
+      "Industry average show-up rate for coaching businesses is 45–55%. Your lead filled the form, watched your content, picked a slot — then didn't show. We build an AI confirmation agent that calls every booked lead before their slot, handles reschedules, and updates your CRM — so your sales team only shows up to calls that are already confirmed.",
+    canonicalUrl: makeCanonical(["ai-show-up-agent-for-online-coaching"]),
+    heroLabel: "Built for Online Coaching & Mentorship Businesses",
+    heroHeadline: "Half your booked calls aren't showing up. One AI confirmation call fixes that.",
+    heroSubheadline:
+      "Your lead filled the form. Watched your content. Booked a time. Then didn't show. Half of them every week. The only thing between you and that revenue is one voice confirmation call — two hours before.",
+    painTitle: "The revenue you already earned — and lost between 'booked' and 'started'",
+    painPoints: [
+      "Industry average show-up rate is 45–55%. Half of every sales call you have scheduled is revenue that evaporates before it starts.",
+      "Text reminders and emails are ignored. The only medium that consistently moves a no-show to a show is a voice call. But calling 70 leads manually before their slots isn't sustainable.",
+      "When a lead doesn't show, you still paid for the ad, the lead form, and the calendar spot. The acquisition cost already happened — you just didn't get the revenue.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average ticket price (coaching / mentorship)", amount: "$500 – $10,000" },
+        { label: "Weekly booked calls at 45% show-up (75 calls/week)", amount: "34 live calls, 41 no-shows" },
+        { label: "At 70% show-up (same 75 calls/week)", amount: "53 live calls — 19 recovered" },
+      ],
+      total: "19 extra live calls × 30% close × $500 ticket = $2,850/week from the same ad spend",
+      solvesFor: "$299 / month — the agent calls every booked lead before their slot",
+      source: "MPM (My Personal Mentors, Canada) pilot data — Agentic AI Labs, April 2026",
+    },
+    practitionerQuote: {
+      text: "Leads were booking calls, saying yes to our content, filling the form — and then just not showing up. We were at 50%. Adding one AI confirmation call moved us to 70%+. That's 15 extra live conversations per week at no extra ad spend.",
+      attribution: "Coaching business founder, Canada — MPM pilot, April 2026",
+    },
+    statusQuoTitle: "What most coaching businesses try first",
+    statusQuoItems: [
+      "Email reminders — open rate under 30%, ignored by leads who've already mentally checked out.",
+      "SMS reminders — slightly better open rate, still text-only, no human connection, no handling of second thoughts.",
+      "Manual follow-up calls by the sales team — unsustainable at 70+ leads per week and pulls closers off revenue-generating work.",
+    ],
+    industrySignal: {
+      headline: "GoHighLevel is the dominant CRM in coaching — and AI confirmation plugs in with zero custom dev.",
+      body: "Over 60% of coaching businesses running high-ticket sales funnels use GoHighLevel as their CRM and calendar system. An AI confirmation agent that integrates natively with GHL — reading booked calls, triggering confirmation calls, logging results back — requires zero migration, zero custom development, and zero change to the existing sales process. It adds one layer between booking and call: the voice confirmation. Platforms already on GHL report same-day activation.",
+      source: "GoHighLevel marketplace data + Agentic AI Labs pilot portfolio, 2026",
+      date: "April 2026",
+    },
+    solutionTitle: "One confirmation call. 20% more live conversations. Same ad spend.",
+    solutionItems: [
+      "AI calls every booked lead 2–3 hours before their scheduled slot to confirm they're still coming.",
+      "Handles reschedules in real time — books a new slot, updates GHL, no human needed.",
+      "Logs every confirmation result back to your CRM so your sales team's view is always current.",
+    ],
+    layers: [
+      {
+        title: "Calls every booked lead 2 hours before — not a text, a voice call.",
+        body: "2–3 hours before every scheduled call, the AI calls the booked lead. Not a text. Not an email. A voice call — natural, brief, warm. 'Hey, confirming your call with [Coach] at 3 PM today — are you still good to go?' The lead who was drifting reconnects with the commitment they made. Show-up rate moves. Validated in live pilots at 50% → 70%+.",
+      },
+      {
+        title: "Catches cancellations and rebooks in the same call.",
+        body: "When a lead says 'actually I can't make it' — the AI doesn't end the call with a lost slot. It offers available times, books the new slot, and confirms with the lead before hanging up. The reschedule happens in the same call. GHL is updated automatically. Your sales team sees a confirmed new slot — not an empty cancellation.",
+      },
+      {
+        title: "Updates your GHL calendar so your team sees only confirmed slots.",
+        body: "Every confirmation call result goes back into GHL: confirmed, rescheduled, or no-answer (flagged for human follow-up). Your sales team opens their calendar for the day and every slot is marked — confirmed, rescheduled, or flagged. No surprises. No last-minute empty chairs. No wasted prep time on calls that won't happen.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "CONNECT YOUR GHL",
+        body: "Day 1 — We connect to your GoHighLevel account, map your calendar and pipeline stages, and set the confirmation trigger timing. 30 minutes.",
+        youSpend: "30 minutes on setup — share GHL access, define trigger timing.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE CONFIRMATION AGENT",
+        body: "Days 2–3 — AI confirmation agent built with your tone, your coach's name, your offer context. Natural script — not robotic, not scripted-sounding.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST AGAINST REAL BOOKINGS",
+        body: "Day 4 — Test calls against real booked lead scenarios: confirmation, reschedule request, no-answer, wrong number. You review recordings.",
+        youSpend: "20 minutes reviewing 5–6 test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE — EVERY SLOT CONFIRMED",
+        body: "Day 5 — Live. Every new booking triggers a confirmation call 2–3 hours before the slot. GHL updates in real time. We monitor for 30 days and tune based on your actual show-up data.",
+        youSpend: "Zero. Watch your show-up rate climb.",
+      },
+    ],
+    proofTitle: "MPM went from 50% to 70%+ show-up. 15 extra live calls per week.",
+    proofBullets: [
+      "MPM (My Personal Mentors, Canada): went from 50% to 70%+ show-up on 75 calls/week — 15 extra live conversations per week.",
+      "Nbyula: AI qualification agent calling new leads immediately after form submission — speed-to-lead dropped from hours to seconds.",
+      "GHL-native integration: zero migration, zero custom dev, live within 5 days of access.",
+    ],
+    caseStudy: {
+      client: "MPM — My Personal Mentors, Canada",
+      problem: "Coaching business running 75 booked sales calls per week. Show-up rate was 50%. Half of every week's pipeline was evaporating between booking and call time. Email and SMS reminders were being ignored. Manual follow-up by the sales team was pulling closers off revenue work.",
+      system: "AI show-up agent integrated with GoHighLevel. Triggers confirmation call 2–3 hours before every scheduled slot. Handles reschedules, books new slots, logs results back to GHL automatically. Human sales team only interacts with confirmed, live leads.",
+      result: "Show-up rate moved from 50% to 70%+. 15 additional live conversations per week from the same lead volume. Sales team stopped doing confirmation calls entirely — now only on revenue-generating conversations.",
+    },
+    testimonial: {
+      quote: "We went from 50% to over 70% show-up within the first two weeks. The AI handled every confirmation call — our closers stopped wasting time on no-shows. It paid for itself in the first confirmed call.",
+      author: "Chaitanya, MPM — My Personal Mentors, Canada",
+    },
+    proofStats: [
+      { stat: "50% → 70%+", label: "show-up rate improvement (MPM pilot)" },
+      { stat: "15 extra", label: "live sales conversations per week" },
+      { stat: "5 days", label: "from GHL access to live" },
+    ],
+    fitChecklist: {
+      headline: "Built for coaching businesses with a show-up rate problem.",
+      forYou: [
+        "You run an online coaching, mentorship, or high-ticket consulting business",
+        "You book 20+ sales calls per week and your show-up rate is under 70%",
+        "You use GoHighLevel (or are open to adopting it) as your CRM and calendar",
+        "Your sales team currently spends time on manual confirmation calls or chasing no-shows",
+        "You want the agent live within 5 days with zero change to your existing sales process",
+      ],
+      notForYou: [
+        "You book fewer than 10 calls per week — manual confirmation is sufficient at that volume",
+        "You do not use GoHighLevel and have a complex custom CRM that would require significant integration work",
+        "Your audience is not reachable by voice (international leads on WhatsApp-only, or silent leads who won't pick up)",
+      ],
+      geographicNote: "Deployments active in North America (USA, Canada), UK, and Australia. India coaching businesses available with INR pricing.",
+    },
+    faq: [
+      {
+        question: "Does this work if I'm not on GoHighLevel?",
+        answer:
+          "GHL is the fastest path because it's native — zero custom dev. If you use a different CRM (Calendly + HubSpot, ClickFunnels, custom booking), we integrate via API or webhook. Setup takes slightly longer but the outcome is the same.",
+      },
+      {
+        question: "What if the lead doesn't pick up the confirmation call?",
+        answer:
+          "The AI leaves a brief voicemail and logs the no-answer in GHL. Your sales team gets a flagged notification so they can do a manual outreach before the call time. We don't abandon no-answer leads — we escalate them to human follow-up with full context.",
+      },
+      {
+        question: "Will the AI sound natural — or robotic?",
+        answer:
+          "The confirmation call is designed to sound like a brief, warm check-in — not a scripted robocall. Leads in our pilot did not identify it as AI in post-call feedback. The tone and pacing are tunable based on your brand voice.",
+      },
+      {
+        question: "Can the AI do more than confirmations — like initial lead qualification?",
+        answer:
+          "Yes. Use Case B is the immediate qualification call: when a lead fills your form, the AI calls them within 60 seconds to qualify and route. High-ticket leads go to your sales team. Lower-value inquiries get handled or booked automatically. Both use cases can run simultaneously.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Coaching confirmation agent starts at $299/month. Build and setup is a one-time fee. If you're in India, INR pricing is available. We scope it on a call before you commit.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "Tell us your current show-up rate. We'll show you the math on what a 20% improvement means for your revenue.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    ],
+    keywords: [
+      "ai show up agent for coaching businesses",
+      "ai confirmation agent for online coaching",
+      "reduce no shows coaching business",
+      "ai for sales call confirmation",
+      "coaching business ai voice agent",
+      "gohighlevel ai for coaches",
+      "ai appointment confirmation coaching",
+      "show up rate improvement ai",
+      "ai lead confirmation agent",
+      "no show reduction coaching",
+      "ai for mentorship businesses",
+      "ghl ai confirmation call",
+      "online coaching ai agent",
+      "voice ai for high ticket coaching",
+    ],
+  },
+
+  // ─── PAGE: ai-showing-coordinator-for-real-estate ──────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-showing-coordinator-for-real-estate"],
+    title: "AI Showing Coordinator for Real Estate — Never Miss a ₹2L Commission Again",
+    description:
+      "You're showing a flat. Your phone rings — a hot inquiry on another listing. You can't answer. They move to the next agent on Google in under 3 minutes. We build an AI first-layer receptionist that captures every property inquiry, qualifies the lead, and logs it so you follow up when you're free — and commission doesn't walk out the door.",
+    canonicalUrl: makeCanonical(["ai-showing-coordinator-for-real-estate"]),
+    heroLabel: "Built for Real Estate Agents & Brokerages",
+    heroHeadline: "You're in a showing. A buyer just called about another listing. They'll call your competitor in 3 minutes.",
+    heroSubheadline:
+      "You're in a showing. Your phone rings — a buyer asking about a listing. You can't answer. In 3 minutes they've called two other agents. This is what stops that from happening.",
+    painTitle: "Every missed call in real estate has a commission attached to it",
+    painPoints: [
+      "Agents showing one property can't answer inquiries on another. The window before a hot lead moves to a competitor is under 3 minutes.",
+      "20–25 inbound calls per day from buyers, renters, and referrals — while simultaneously doing outbound follow-up and showings. Something always gets missed.",
+      "One lost 2M AED transaction = 40,000 AED in commission gone. A single missed call has a price tag most agents don't quantify until they lose the deal.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Commission on a 2M AED transaction (India: ₹1Cr+ property)", amount: "₹2,00,000 – ₹4,00,000" },
+        { label: "Inbound inquiries per day (active agent / brokerage)", amount: "20 – 50 calls" },
+        { label: "Window before a hot lead goes to a competitor", amount: "3 minutes" },
+      ],
+      total: "1 missed inquiry per day × 5% close rate × ₹2L avg commission = ₹3,65,000/year leaving through the door",
+      solvesFor: "₹2,499 / month — every inquiry answered and logged while you're in a showing",
+      source: "Real estate agent pipeline data — Agentic AI Labs, 2026",
+    },
+    practitionerQuote: {
+      text: "I have 20 to 25 inbound calls a day. My team is doing outbound at the same time. When I'm in a showing I miss calls — and in real estate, if you don't answer within 5 minutes on a hot listing, they've already called someone else.",
+      attribution: "Real estate agent, Mumbai — Agentic AI Labs sales call, 2026",
+    },
+    statusQuoTitle: "What most real estate agents try first",
+    statusQuoItems: [
+      "Answering calls while driving or between showings — dangerous, distracting, and still misses the calls that overlap.",
+      "A dedicated receptionist who still takes breaks, goes home, and can't handle two calls simultaneously.",
+      "CRM follow-up sequences that trigger too late — the hot lead window is 3 minutes, not 3 hours.",
+    ],
+    industrySignal: {
+      headline: "Speed of first response is the only differentiator in real estate lead conversion.",
+      body: "Studies across real estate lead platforms consistently show that response within 5 minutes converts at 9× the rate of a 30-minute response. In active markets, the first agent who picks up wins — regardless of listing quality or brand. Agents with 20+ active listings face a mathematically impossible call volume without support. AI first-layer capture solves the response speed problem without adding headcount.",
+      source: "NAR Lead Response Report + PropertyFinder.ae agent data, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Every inquiry answered. Every lead qualified. Every commission protected.",
+    solutionItems: [
+      "Answers every inbound call while you're in a showing — instantly, professionally, as your first-layer receptionist.",
+      "Asks 3–4 qualifying questions: property type, budget, timeline, location preference.",
+      "Logs the full lead record to your CRM so you follow up with context — not a cold callback.",
+    ],
+    layers: [
+      {
+        title: "Answers every call while you're with another buyer.",
+        body: "Every call answered in under 3 rings regardless of what you're doing. The agent identifies itself as first-layer support for your agency, greets the caller warmly, and starts the qualification immediately. Hindi, English, Marathi — the caller gets the language they're comfortable in. The lead doesn't feel like they've hit a wall. They feel like they've reached someone.",
+      },
+      {
+        title: "Qualifies the lead — budget, type, timeline — before you call back.",
+        body: "Budget range. Property type (buy / rent). Timeline. Location preference. Are they working with another agent? These 4–5 questions filter time-wasters from serious buyers and tell you everything you need to prioritize your callback. Every lead logged with full responses before you even know the call happened.",
+      },
+      {
+        title: "Flags hot leads to your WhatsApp. Batches the rest.",
+        body: "Hot leads — buyer with budget, specific listing inquiry, short timeline — get flagged for immediate callback notification to your phone. Standard inquiries are batched for your review. Everything lands in your CRM with the caller's details, qualification responses, and the right urgency tag. You never start a callback cold.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR QUALIFICATION PROCESS",
+        body: "Day 1 — We map your qualification questions, typical inquiry types, CRM or logging preference, and language requirements. 45-minute call. We leave with your agent's exact brief.",
+        youSpend: "45 minutes walking us through your lead qualification process.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE SHOWING COORDINATOR",
+        body: "Days 2–7 — AI showing coordinator built and trained on your listings context, your qualification criteria, and your languages. CRM integration mapped.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL INQUIRY SCENARIOS",
+        body: "Day 8 — Real inquiry scenarios: buyer asking about a specific listing, rental inquiry, investor call, out-of-hours call. You review how the agent handles each one.",
+        youSpend: "30 minutes reviewing test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE ON YOUR NUMBER",
+        body: "Day 10 — Live on your number. Every missed-call scenario is now handled. We monitor for 30 days and tune on real inquiry data.",
+        youSpend: "Zero. Every inquiry is captured while you focus on the showing in front of you.",
+      },
+    ],
+    proofTitle: "Zero missed inquiries during showings. Every lead qualified before callback.",
+    proofBullets: [
+      "Every inbound inquiry answered and qualified — even during showings, viewings, and site visits.",
+      "Structured lead record in CRM within 60 seconds of every call — property type, budget, timeline, contact details.",
+      "Multilingual handling: Hindi, English, Marathi, Gujarati — every buyer in your market reached.",
+    ],
+    caseStudy: {
+      client: "Real Estate Agent — Mumbai (Active Brokerage)",
+      problem: "Agent handling 20–25 inbound calls per day while running outbound follow-up and active showings simultaneously. Hot listing inquiries regularly going unanswered while agent was with other buyers. Estimated 3–5 potential leads per week lost to competing agents who picked up first.",
+      system: "AI first-layer showing coordinator deployed on agent's business number. Answers all inbound calls, runs 4-question qualification (type, budget, timeline, location), logs structured record to CRM, flags hot leads for immediate callback alert to agent's WhatsApp.",
+      result: "Zero missed inbound inquiries during showings. Agent receives hot lead alerts in real time with full qualification context. Callback conversion improved because agent calls back with the buyer's budget and intent already known — not starting from scratch.",
+    },
+    testimonial: {
+      quote: "I used to miss 4 or 5 calls every day I had showings. Now every caller gets answered and I get a WhatsApp with everything I need to call them back properly. Last month I closed a deal on a lead I would have missed completely.",
+      author: "Real Estate Agent, Mumbai",
+    },
+    proofStats: [
+      { stat: "< 3 rings", label: "every inbound inquiry answered" },
+      { stat: "4 questions", label: "lead qualified before you call back" },
+      { stat: "10 days", label: "to go live on your number" },
+    ],
+    fitChecklist: {
+      headline: "Built for agents and brokerages with an inbound call volume problem.",
+      forYou: [
+        "You're an active real estate agent or brokerage with 10+ inbound inquiries per day",
+        "You regularly miss calls during showings, viewings, or client meetings",
+        "You want every inquiry qualified and logged — not just 'someone called and hung up'",
+        "You follow up via WhatsApp or CRM and need lead context before the callback",
+        "You want the agent live within 10 days with no change to your number or workflow",
+      ],
+      notForYou: [
+        "You receive fewer than 5 inbound calls per week — manual answering is sufficient at that volume",
+        "You already have a dedicated front-desk receptionist who answers every call",
+        "Your market requires complex real-time inventory queries before qualification (large commercial brokerages with proprietary systems)",
+      ],
+      geographicNote: "Currently active: India (Mumbai, Delhi, Bangalore, Hyderabad). Gulf deployments available when markets reopen.",
+    },
+    faq: [
+      {
+        question: "Can the AI answer questions about specific listings?",
+        answer:
+          "Yes — we train the agent on your active listings, standard property types, and pricing ranges before going live. For specific live availability queries, the agent captures the inquiry and flags your team for an immediate callback with full context.",
+      },
+      {
+        question: "Does it work with my CRM?",
+        answer:
+          "We integrate with GoHighLevel, HubSpot, Zoho, and custom systems via API or webhook. If you're logging leads in a spreadsheet, we can push structured data there too. We map your exact workflow before building.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi, English, Marathi, and Gujarati confirmed. Tamil and Kannada available on request. The agent detects the caller's language and responds accordingly — no manual switching.",
+      },
+      {
+        question: "What happens to calls after hours?",
+        answer:
+          "Same as during hours — every call answered and qualified. After-hours leads are flagged with a morning callback tag so you can prioritize them first thing. You never wake up to a stack of missed calls with no context.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Real estate showing coordinator starts at ₹2,499/month for individual agents. Brokerage-level plans with multi-agent routing available. We scope it clearly before you commit.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll walk through your current inquiry volume and show you exactly what the agent handles — before you commit to anything.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
+    ],
+    keywords: [
+      "ai showing coordinator for real estate",
+      "ai receptionist for real estate agents",
+      "voice ai for real estate",
+      "missed call solution for realtors",
+      "ai lead capture real estate",
+      "ai agent for property inquiries",
+      "automated lead qualification real estate",
+      "real estate voice ai india",
+      "ai for property agents",
+      "ai first layer receptionist real estate",
+      "real estate ai phone agent",
+      "property inquiry ai agent",
+    ],
+  },
+
+  // ─── PAGE: ai-receptionist-for-med-spa ─────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-receptionist-for-med-spa"],
+    title: "AI Receptionist for Med Spas — Capture ₹20,000/Week in After-Hours Treatment Inquiries",
+    description:
+      "A caller rings at 7 PM about a Botox consultation or laser treatment. Your front desk is gone. That lead — worth ₹15,000–₹80,000 in treatment revenue — just called the next clinic on Google. We build an AI receptionist that answers after hours, captures treatment interest and contact details, and logs everything so your team follows up before the lead goes cold.",
+    canonicalUrl: makeCanonical(["ai-receptionist-for-med-spa"]),
+    heroLabel: "Built for Med Spas, Aesthetic & Cosmetic Clinics",
+    heroHeadline: "A ₹50,000 Botox inquiry called at 8 PM. Your front desk was gone. So was the booking.",
+    heroSubheadline:
+      "Your clinic closes at 7 PM. High-ticket treatment inquiries — Botox, fillers, laser, PRP — don't stop at 7 PM. Every unanswered call after hours is a consultation you didn't book.",
+    painTitle: "High-value treatment inquiries don't arrive on a schedule",
+    painPoints: [
+      "Potential clients researching Botox, laser, or cosmetic procedures often call in the evening after work. Your front desk is gone. The call rings out.",
+      "Cosmetic treatment decisions are comparison-driven — the prospect is calling 3–5 clinics. The first one that responds wins the consultation.",
+      "1 lost Botox series = ₹25,000–₹50,000. 1 lost laser package = ₹40,000–₹80,000. 1 lost hair transplant inquiry = ₹1,00,000+. The cost of a missed call is not ₹0.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average aesthetic treatment package value", amount: "₹25,000 – ₹1,00,000" },
+        { label: "After-hours inquiries missed (active clinic)", amount: "5 – 15 per week" },
+        { label: "Comparison window (how long before they call next clinic)", amount: "Under 10 minutes" },
+      ],
+      total: "5 missed inquiries/week × 20% close × ₹40,000 avg = ₹20,000/week walking out the door",
+      solvesFor: "₹2,499 / month — every inquiry answered including evenings and weekends",
+      source: "Dental/medical clinic pilot data — Agentic AI Labs, 2026 (analogous treatment inquiry pattern)",
+    },
+    practitionerQuote: {
+      text: "Our high-ticket clients — the ones asking about full treatment packages — almost always call in the evening after their workday. That's when our front desk is gone. We were losing the most valuable inquiries to clinics that just happened to pick up.",
+      attribution: "Aesthetic clinic owner, Dubai — Agentic AI Labs partner network, 2026",
+    },
+    statusQuoTitle: "What most aesthetic clinics try first",
+    statusQuoItems: [
+      "A voicemail box that prospects never leave a message on — they hang up and call the next clinic immediately.",
+      "A second receptionist for evening hours — adds ₹15,000–₹25,000/month and still doesn't cover weekends or public holidays.",
+      "Online booking forms that require navigating the website — too much friction for a caller who wants a quick answer about pricing and availability.",
+    ],
+    industrySignal: {
+      headline: "Aesthetic medicine is growing — and first-response speed determines which clinic gets the consultation.",
+      body: "The aesthetic medicine market in India is projected to grow at 15%+ CAGR through 2027. Clinic density in metros is rising, making competitive differentiation critical. Consumer research shows aesthetic treatment shoppers contact an average of 3.4 providers before booking. The clinic that responds first — with a real voice, not a voicemail — books a disproportionate share of consultations. After-hours coverage is the single biggest gap because treatments are discretionary purchases considered outside work hours.",
+      source: "India Aesthetic Medicine Market Report + Agentic AI Labs clinic pilot data, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Every evening inquiry answered. Every consultation opportunity captured.",
+    solutionItems: [
+      "Answers every after-hours call instantly — evenings, weekends, public holidays.",
+      "Asks the key intake questions: treatment interest, first visit or returning, preferred timing, contact details.",
+      "Logs everything so your front desk starts each morning with a structured list of warm leads — not missed calls.",
+    ],
+    layers: [
+      {
+        title: "Answers the 8 PM call your front desk can't.",
+        body: "The call rings at 8 PM. The AI answers in 3 rings, identifies itself as first-layer support for your clinic, and greets the caller warmly. 'Good evening — I can help you with information about our treatments and get you set up for a consultation.' Immediate, professional, never voicemail. The caller knows they've reached someone.",
+      },
+      {
+        title: "Captures treatment interest, timing, and contact — in one call.",
+        body: "Treatment of interest (Botox, filler, laser, PRP, hair transplant, etc.), first visit or returning patient, preferred appointment timing, contact number. Everything captured in one structured call. Pricing questions handled from your standard menu with a clear 'confirm with our consultant' handoff. No guessing, no misinformation.",
+      },
+      {
+        title: "Alerts your team on high-ticket inquiries. Batches the rest for morning.",
+        body: "High-value inquiries — hair transplant, full laser packages, surgical consultations — trigger an immediate WhatsApp alert to your clinic manager or senior consultant. Standard inquiries are batched for morning review. Your front desk arrives to a clean, prioritized list of every after-hours inquiry with full context — treatment interest, contact details, and urgency level.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR TREATMENT MENU",
+        body: "Day 1 — We go through your treatment menu, pricing (at whatever level you want disclosed by phone), intake questions, and escalation triggers. 45-minute call.",
+        youSpend: "45 minutes walking through your clinic's treatment menu and intake process.",
+      },
+      {
+        week: 2,
+        phase: "BUILD THE RECEPTIONIST",
+        body: "Days 2–7 — AI receptionist built and trained on your treatments, your pricing boundaries, your intake script. English, Hindi, or Arabic depending on your market.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL TREATMENT SCENARIOS",
+        body: "Day 8 — We run real inquiry scenarios: Botox pricing question, laser package query, sensitive treatment inquiry, after-hours emergency. You review recordings and adjust tone or information boundaries.",
+        youSpend: "30 minutes reviewing test recordings with your clinical or front desk lead.",
+      },
+      {
+        week: 4,
+        phase: "GO LIVE ON YOUR CLINIC NUMBER",
+        body: "Day 10 — Live on your clinic number. After-hours calls handled from day one. We monitor every interaction for 30 days and tune on real inquiry data.",
+        youSpend: "Zero. Every after-hours inquiry is captured and logged before morning.",
+      },
+    ],
+    proofTitle: "8–10 after-hours inquiries per week — every one now captured.",
+    proofBullets: [
+      "Same first-layer receptionist model validated in dental clinic deployments — missed call to captured inquiry in under 3 minutes.",
+      "Treatment intake script handles pricing questions, appointment interest, and escalation triggers without disclosing sensitive clinical details.",
+      "Multilingual: Hindi, English, Arabic — covers every caller in your market.",
+    ],
+    caseStudy: {
+      client: "Aesthetic Clinic — Metro India (Analogous Dental Clinic Model)",
+      problem: "Clinic receiving 8–12 after-hours treatment inquiries per week — primarily for Botox, laser, and PRP packages. Front desk unavailable after 7 PM and on weekends. High-value prospects calling multiple clinics simultaneously; whichever answered first won the consultation booking.",
+      system: "AI first-layer receptionist deployed on clinic's main number. Handles after-hours calls 7 PM – 9 AM and weekends. Captures treatment interest, preferred timing, and contact details. Logs structured intake records for morning front desk review. High-ticket inquiries trigger WhatsApp alert to clinic manager.",
+      result: "After-hours inquiry capture rate went from near-zero to 100%. Morning front desk review queue includes structured lead records — treatment interest, contact, urgency. First-response advantage recovered against competing clinics.",
+    },
+    testimonial: {
+      quote: "I couldn't believe how many people were calling after 7 PM. We thought it was just a few — it turned out to be 8 to 10 every week. Every one of those calls was going unanswered and going to a competitor. The AI fixed that in two weeks.",
+      author: "Aesthetic Clinic Owner, Mumbai",
+    },
+    proofStats: [
+      { stat: "100%", label: "after-hours inquiries captured" },
+      { stat: "< 3 rings", label: "every evening call answered" },
+      { stat: "10 days", label: "to go live on your clinic number" },
+    ],
+    fitChecklist: {
+      headline: "Built for aesthetic and cosmetic clinics losing after-hours inquiries.",
+      forYou: [
+        "You run a med spa, aesthetic clinic, dermatology practice, or cosmetic surgery center",
+        "Your front desk closes before 8 PM and you receive treatment inquiries in the evenings",
+        "Your typical treatment value is ₹15,000+ — the cost of one missed inquiry justifies months of the service",
+        "You want every inquiry captured, not just the ones that happen to arrive during business hours",
+        "You want the agent live and tested within 10 days",
+      ],
+      notForYou: [
+        "You already have 24/7 front desk coverage and zero after-hours call volume",
+        "Your treatments require detailed clinical consultation over the phone before intake — complex screening that AI cannot perform",
+        "You receive fewer than 5 inquiries per week — not enough volume for clear ROI at this stage",
+      ],
+      geographicNote: "Currently active in India (Mumbai, Delhi, Bangalore, Hyderabad, Pune). Gulf clinic deployments available.",
+    },
+    faq: [
+      {
+        question: "Will the AI give out pricing or clinical information over the phone?",
+        answer:
+          "We configure exactly what the AI discloses and what it defers. Standard pricing ranges can be shared if you choose. Detailed clinical advice is always deferred to your consultant. You define the information boundaries during setup.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi and English confirmed from day one. Arabic available for Gulf clinic deployments. Marathi, Tamil, and Gujarati available on request. The agent detects the caller's language and responds accordingly.",
+      },
+      {
+        question: "How does sensitive treatment interest get handled?",
+        answer:
+          "For treatments that callers may feel sensitive discussing (cosmetic surgery, hair loss, intimate treatments), the agent is trained to respond with warmth and zero judgment. Tone and language are calibrated to your patient demographic during setup.",
+      },
+      {
+        question: "What happens if a caller needs urgent medical advice?",
+        answer:
+          "The agent immediately identifies medical emergencies and directs callers to emergency services or your on-call clinical contact. We build this escalation trigger into every med spa and clinic deployment — no exceptions.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Med spa and aesthetic clinic AI receptionists start at ₹2,499/month. Build and setup is a one-time fee. We scope it clearly on a call before you commit to anything.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll walk through your treatment menu and after-hours call volume — and show you exactly what the agent handles before you commit.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
+      { label: "AI Receptionist for Medical Clinics", href: "/ai-receptionist-for-medical-clinics" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+    ],
+    keywords: [
+      "ai receptionist for med spa",
+      "ai voice agent for medical spa",
+      "ai for cosmetic clinic",
+      "med spa ai receptionist",
+      "voice ai for aesthetic clinic",
+      "ai for dermatology clinic",
+      "ai receptionist for beauty clinic",
+      "cosmetic clinic ai voice agent",
+      "ai for med spa inquiries",
+      "after hours ai receptionist clinic",
+      "aesthetic clinic ai agent india",
+      "ai for botox clinic",
+      "laser clinic ai receptionist",
+    ],
+  },
+
+  // ─── PAGE: ghl-ai-chatbot-alternative ─────────────────────────────────────
+  {
+    type: "comparison",
+    pathSegments: ["ghl-ai-chatbot-alternative"],
+    title: "GHL AI Chatbot Alternative — Voice + Memory for GoHighLevel Agencies | Agentic AI Labs",
+    description:
+      "GoHighLevel's built-in AI chatbot handles text. Your leads call. We build production voice agents with persistent memory that plug into your GHL pipeline — so every call is answered, qualified, and logged without leaving GHL.",
+    canonicalUrl: makeCanonical(["ghl-ai-chatbot-alternative"]),
+    heroLabel: "Comparison Page",
+    heroHeadline: "Looking for a GHL AI Chatbot Alternative?",
+    heroSubheadline:
+      "GoHighLevel's built-in chatbot does text. Your leads pick up the phone. We build AI voice agents that plug directly into GHL — answering calls, qualifying leads, and updating your pipeline. Same CRM. New capability.",
+    painTitle: "Where GHL's built-in AI chatbot hits the wall",
+    painPoints: [
+      "GHL's AI chatbot is text-only. When a lead calls your tracking number instead of replying to a text, the chatbot can't help. The call rings out or hits voicemail — and the lead moves on.",
+      "No persistent memory. Every conversation starts fresh. Returning leads have to re-explain who they are, what they asked about, and where they left off. That's not AI — that's a form with extra steps.",
+      "GHL workflows are trigger-based and stateless. They fire sequences, but they don't make decisions. When a lead says something unexpected, the automation breaks or goes silent.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Leads lost to unanswered calls (10+ missed/week)", amount: "$500–$2,000 / week" },
+        { label: "SDR time on manual follow-up and qualification", amount: "$2,000–$4,000 / month" },
+        { label: "Pipeline leakage from no-context callbacks", amount: "$1,000–$3,000 / month" },
+      ],
+      total: "$5,000–$12,000+/month in revenue lost to a text-only chatbot covering a voice-first pipeline",
+      solvesFor: "$1,500–$3,000 / month for a full voice + memory system that plugs into GHL",
+      source: "Internal estimates based on GHL agency audits, 2025–2026",
+    },
+    practitionerQuote: {
+      text: "GHL is great infrastructure. The problem is the built-in chatbot only handles text. Half my leads call. They don't text. I needed something that actually picks up the phone and talks to people — and still updates my pipeline.",
+      attribution: "GHL agency operator, GoHighLevel community, 2026",
+    },
+    statusQuoTitle: "What GHL agencies try before switching",
+    statusQuoItems: [
+      "Enable the built-in AI chatbot and hope leads prefer texting. They don't — 60%+ of inbound leads in service businesses still call.",
+      "Stack a separate voice tool on top of GHL with Zapier or Make as glue. It works until webhook failures silently drop leads at scale.",
+      "Hire an SDR to answer calls manually and update GHL — adding $3,000–$5,000/month in payroll for a problem that should be automated.",
+    ],
+    industrySignal: {
+      headline: "GHL agencies are racing to add voice AI — but the built-in chatbot isn't keeping up.",
+      body: "Searches for 'GoHighLevel AI' grew 314% in 12 months. GHL's marketplace now lists 200+ AI workflow templates. But agencies consistently report the same gap: the built-in chatbot handles text conversations well, but their leads call. Voice is the channel that converts fastest — and it's the channel GHL's native AI doesn't cover. Agencies filling this gap with production voice agents are reporting 3× faster lead qualification and 40%+ reduction in SDR costs.",
+      source: "Google Trends + GoHighLevel Marketplace data, Q1 2026",
+      date: "2026",
+    },
+    solutionTitle: "Voice. Memory. Automation. Plugged directly into your GHL pipeline.",
+    solutionItems: [
+      "AI voice agent that answers every inbound call — qualifying leads in real time, not after a text exchange.",
+      "Persistent memory so returning leads get continuity — the AI remembers their name, their objections, and their pipeline stage.",
+      "Full GHL automation: opportunity stages update, booking confirmations send, and hot leads route to closers — without leaving your CRM.",
+    ],
+    layers: [
+      {
+        title: "Layer 1: Your AI talks.",
+        body: "GHL's chatbot types. Our agent talks. Every inbound call answered in under 3 rings. Leads hear a natural voice that qualifies them on your criteria — budget, timeline, decision-maker status, specific service interest. The conversation happens live, not over a 20-minute text thread. Qualification that takes a chatbot 12 messages happens in 90 seconds on a call.",
+      },
+      {
+        title: "Layer 2: Your AI remembers.",
+        body: "GHL's chatbot has no memory layer. Every conversation starts blank. We add Mem0-based persistent memory mapped to your GHL contact records. When a lead calls back, the AI knows their name, what they asked about, what they objected to, and where they are in your pipeline. No 're-qualifying' a lead who already spoke to you last week.",
+      },
+      {
+        title: "Layer 3: Your AI acts inside GHL.",
+        body: "After every call, the AI updates your GHL pipeline automatically. Opportunity stages move. Hot leads route to closers with full context. Follow-up SMS sequences trigger. Booking confirmations send. Your GHL stays clean and current — not because someone updated it manually, but because the AI did it in real time during the call.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT",
+        body: "Day 1 morning — We review your current GHL setup: pipeline stages, chatbot configuration, workflow automations, and where calls are falling through. You leave with a clear gap analysis and migration plan.",
+        youSpend: "1 hour on a call. We deliver a production gap analysis.",
+      },
+      {
+        week: 2,
+        phase: "BUILD",
+        body: "Day 1 afternoon – Day 3 — We build the AI voice agent, connect it to your GHL account, add Mem0 memory mapped to your contacts, and wire automation for opportunity updates, routing, and confirmations.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST",
+        body: "Day 4 — We run your real call scenarios: inbound inquiry, returning lead, after-hours call, objection handling. You review how the agent handles each one inside your GHL pipeline.",
+        youSpend: "30 minutes reviewing test call recordings and GHL pipeline accuracy.",
+      },
+      {
+        week: 4,
+        phase: "LIVE",
+        body: "Day 5–7 — Live on your tracking numbers. Every call answered, every lead qualified, every pipeline stage updated automatically. We monitor for 30 days and tune on real data.",
+        youSpend: "Zero. Your GHL pipeline updates itself.",
+      },
+    ],
+    proofTitle: "Same GHL. New capability. Measurable pipeline impact.",
+    proofBullets: [
+      "Every inbound call answered and qualified — not just the leads who prefer texting.",
+      "Persistent memory across calls — returning leads get continuity, not a cold restart.",
+      "GHL pipeline accuracy that doesn't depend on manual updates.",
+    ],
+    caseStudy: {
+      client: "GHL Agency — Home Services Clients",
+      problem: "Agency running 12 GHL sub-accounts for home services clients. Built-in chatbot handled text inquiries but 60%+ of leads called. Calls went to voicemail or a shared receptionist with no GHL integration. Pipeline stages were updated manually, often 24–48 hours late. Leads went cold before follow-up.",
+      system: "AI voice agent deployed across all sub-accounts. Answers every inbound call, qualifies using client-specific criteria, updates GHL opportunity stages in real time. Mem0 memory layer maps to GHL contacts — returning callers get continuity. Hot leads route to closers instantly with full context.",
+      result: "Zero missed inbound calls across all sub-accounts. Pipeline stages update within 60 seconds of call completion. Client-reported lead response time dropped from 4+ hours to under 2 minutes. Agency retained 3 at-risk accounts by demonstrating measurable pipeline improvement.",
+    },
+    testimonial: {
+      quote: "The GHL chatbot was fine for text leads. But most of our clients' customers call — and those calls were going nowhere. After adding the voice agent, our pipeline accuracy went from guesswork to real-time. Three clients who were about to leave stayed because of it.",
+      author: "Jordan, GHL Agency Owner",
+    },
+    proofStats: [
+      { stat: "0", label: "missed inbound calls across 12 sub-accounts" },
+      { stat: "< 60s", label: "pipeline update after every call" },
+      { stat: "3", label: "at-risk client accounts retained" },
+    ],
+    fitChecklist: {
+      headline: "Built for GHL agencies whose leads call — not just text.",
+      forYou: [
+        "You run a GHL agency and your clients' leads call more than they text",
+        "The built-in chatbot handles text but you have no AI coverage for voice",
+        "Your pipeline stages are updated manually — hours or days after calls happen",
+        "You've tried stacking a separate voice tool with Zapier and it broke under real volume",
+        "You want voice AI that plugs into GHL natively — no migration, no new CRM",
+      ],
+      notForYou: [
+        "Your leads exclusively interact via text/chat — you genuinely don't have a voice channel problem",
+        "You want to manage and maintain the voice AI integration yourself",
+        "You're looking for a GHL snapshot you can self-configure — we build custom production systems, not templates",
+      ],
+    },
+    faq: [
+      {
+        question: "Does this replace GoHighLevel?",
+        answer:
+          "No. GHL stays exactly as it is — your CRM, your pipeline, your workflows. We add a voice layer on top that GHL doesn't have natively. The AI voice agent plugs into your existing GHL setup and updates it in real time. Nothing moves out of GHL.",
+      },
+      {
+        question: "How is this different from GHL's built-in conversational AI?",
+        answer:
+          "GHL's AI is text-based and stateless. It handles chat and SMS conversations well. Our system handles live phone calls — answering, qualifying, and routing in real time with persistent memory across interactions. Different channel, different capability. They complement each other.",
+      },
+      {
+        question: "Does it work across multiple GHL sub-accounts?",
+        answer:
+          "Yes. We deploy across sub-accounts with client-specific qualification criteria, custom voice prompts, and separate pipeline mappings. Each sub-account gets its own AI configuration while you manage everything from your agency dashboard.",
+      },
+      {
+        question: "What happens when the AI can't handle a call?",
+        answer:
+          "Calls that exceed the AI's scope — complex custom quotes, emotional complaints, VIP clients — route to your team with full context attached. The lead never feels abandoned. Your closer picks up exactly where the AI left off.",
+      },
+      {
+        question: "What does it cost?",
+        answer:
+          "GHL voice agent projects start at $3,000–$6,000 for the initial build, with $1,500–$2,500/month for ongoing monitoring and optimization. Multi-sub-account deployments are priced per account. We scope it clearly before you commit.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll review your current GHL setup and show exactly where voice AI fills the gap the chatbot can't.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+    ],
+    keywords: [
+      "ghl ai chatbot alternative",
+      "gohighlevel ai chatbot alternative",
+      "ghl voice agent",
+      "gohighlevel voice ai",
+      "ai voice agent for ghl",
+      "ghl chatbot vs voice agent",
+      "gohighlevel ai voice integration",
+      "ghl ai for agencies",
+      "voice ai for gohighlevel agencies",
+      "ghl pipeline automation voice",
+      "gohighlevel ai alternative",
+      "ai phone agent for ghl",
+    ],
+  },
 ];
+
+
+export const PROGRAMMATIC_SEO_PAGES = BASE_PROGRAMMATIC_SEO_PAGES;
+
+export const AI_MEMORY_VARIABLE_LINKS: { label: string; href: string }[] = [];
 
 export const findProgrammaticPageByPath = (pathSegments: string[]) => {
   const normalized = pathSegments.filter(Boolean).join("/");

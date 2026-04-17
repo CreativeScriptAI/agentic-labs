@@ -2018,6 +2018,7 @@ const AllUseCasesGrid = () => {
       accent: "#F97316",
       avatar: "Priya",
       metric: "₹15k leakage/missed call",
+      href: "/ai-receptionist-for-med-spa",
     },
     {
       industry: "Real Estate Agencies",
@@ -2026,6 +2027,7 @@ const AllUseCasesGrid = () => {
       accent: "#3B82F6",
       avatar: "Arjun",
       metric: "40 min callback delay cut to <2s",
+      href: "/ai-showing-coordinator-for-real-estate",
     },
     {
       industry: "Hiring & Staffing Agencies",
@@ -2034,6 +2036,7 @@ const AllUseCasesGrid = () => {
       accent: "#8B5CF6",
       avatar: "Kavita",
       metric: "36 hours manual work automated",
+      href: "/ai-interviewer-for-blue-collar-hiring",
     },
     {
       industry: "Home Services",
@@ -2042,30 +2045,34 @@ const AllUseCasesGrid = () => {
       accent: "#10B981",
       avatar: "Rajesh",
       metric: "Zero missed emergency leads",
+      href: "/ai-dispatch-agent-for-home-services",
     },
     {
-      industry: "Hotels & Hospitality",
-      role: "Guftugu Concierge",
-      outcome: "Guest queries answered 24/7. Follow-up handled automatically.",
-      accent: "#F59E0B",
-      avatar: "Meera",
-      metric: "24/7 night coverage at 1/10th cost",
+      industry: "Travel & Transport",
+      role: "Guftugu Booking Agent",
+      outcome: "Every booking inquiry answered. Route, date, seats captured.",
+      accent: "#FF8800",
+      avatar: "Priya",
+      metric: "Zero missed booking calls 24/7",
+      href: "/ai-booking-agent-for-travel-agencies",
+    },
+    {
+      industry: "Online Coaching",
+      role: "Guftugu Show-Up Agent",
+      outcome: "Show-up rates from 50% to 70%+. Every slot confirmed by AI.",
+      accent: "#7C3AED",
+      avatar: "Neha",
+      metric: "15 extra live calls/week",
+      href: "/ai-show-up-agent-for-online-coaching",
     },
     {
       industry: "Marketing Agencies",
-      role: "Guftugu for Agencies",
-      outcome: "Run it for your clients. White-labelled under your brand.",
+      role: "Guftugu for GHL Agencies",
+      outcome: "Voice AI that plugs into GHL. Pipeline updated in real time.",
       accent: "#EC4899",
-      avatar: "Neha",
-      metric: "Add ₹50k+ MRR to your agency",
-    },
-    {
-      industry: "Technical Support",
-      role: "Guftugu Support Line",
-      outcome: "Fault triage handled by voice. Updates sent via WhatsApp.",
-      accent: "#6366F1",
-      avatar: "Vikram",
-      metric: "70% first-ring resolution rate",
+      avatar: "Meera",
+      metric: "Zero missed calls across sub-accounts",
+      href: "/ghl-ai-chatbot-alternative",
     },
   ];
 
@@ -2080,9 +2087,10 @@ const AllUseCasesGrid = () => {
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         {cases.map((c, i) => (
-          <div
+          <Link
             key={i}
-            className="group relative bg-white rounded-2xl p-6 border border-gray-100 flex flex-col gap-4 transition-all hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1"
+            href={c.href}
+            className="group relative bg-white rounded-2xl p-6 border border-gray-100 flex flex-col gap-4 transition-all hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 no-underline"
             style={{ borderTop: `2px solid ${c.accent}` }}
           >
             {/* Header: Persona + Industry */}
@@ -2119,7 +2127,7 @@ const AllUseCasesGrid = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -3038,7 +3046,7 @@ const PageFooter = () => (
   <footer className="bg-[#060D1F] pt-14 pb-8">
     <Container size="lg">
       {/* Main footer grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/[0.08]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-white/[0.08]">
 
         {/* Brand block */}
         <div className="lg:col-span-2">
@@ -3077,6 +3085,19 @@ const PageFooter = () => (
             <button onClick={() => smoothScrollTo("pricing")} className="text-sm text-white/50 hover:text-white text-left transition-colors">Pricing</button>
             <button onClick={() => smoothScrollTo("faq")} className="text-sm text-white/50 hover:text-white text-left transition-colors">FAQ</button>
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Book a Call</a>
+          </nav>
+        </div>
+
+        {/* Industry pages (SEO internal links) */}
+        <div>
+          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">By Industry</p>
+          <nav className="flex flex-col gap-2.5">
+            <Link href="/ai-booking-agent-for-travel-agencies" className="text-sm text-white/50 hover:text-white transition-colors">Travel & Transport</Link>
+            <Link href="/ai-dispatch-agent-for-home-services" className="text-sm text-white/50 hover:text-white transition-colors">Home Services</Link>
+            <Link href="/ai-interviewer-for-blue-collar-hiring" className="text-sm text-white/50 hover:text-white transition-colors">Blue-Collar Hiring</Link>
+            <Link href="/ai-show-up-agent-for-online-coaching" className="text-sm text-white/50 hover:text-white transition-colors">Online Coaching</Link>
+            <Link href="/ai-showing-coordinator-for-real-estate" className="text-sm text-white/50 hover:text-white transition-colors">Real Estate</Link>
+            <Link href="/ai-receptionist-for-med-spa" className="text-sm text-white/50 hover:text-white transition-colors">Med Spa & Clinics</Link>
           </nav>
         </div>
 

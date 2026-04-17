@@ -23,6 +23,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       { path: "/audit/", priority: 0.9 },
       { path: "/ai-clarity-workshop/", priority: 0.9 },
       { path: "/ai-memory-system/", priority: 0.9 },
+      { path: "/ai-voice-agent/", priority: 0.95 },
     ];
 
     // Get blog posts
