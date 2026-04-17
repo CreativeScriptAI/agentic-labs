@@ -4228,6 +4228,1946 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "production ai calling ghl",
     ],
   },
+
+  // ─── PAGE: ai-receptionist-for-dental-clinic ─────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-receptionist-for-dental-clinic"],
+    title: "AI Receptionist for Dental Clinics — Never Lose a Patient to an Unanswered Call",
+    description:
+      "Your dentist is mid-procedure. The phone rings. A new patient with a toothache calls — and hangs up after 6 rings. That patient just booked with the clinic down the street. We build an AI receptionist that answers every call, captures patient details, books appointments, and sends WhatsApp confirmations — even when your staff is chairside.",
+    canonicalUrl: makeCanonical(["ai-receptionist-for-dental-clinic"]),
+    heroLabel: "Built for Dental Clinics — India & Worldwide",
+    heroHeadline: "Your dentist is elbow-deep in a root canal. The phone rings. Nobody picks up. That new patient just called the clinic next door.",
+    heroSubheadline:
+      "Dental clinics get 30–50 calls a day. 20–30% go unanswered during procedures. Evening toothache calls — the highest-urgency, highest-value inquiries — go straight to voicemail. First clinic to answer wins the patient.",
+    painTitle: "Every unanswered call is a patient who books somewhere else",
+    painPoints: [
+      "Your hygienist is scaling, your dentist is mid-extraction, and the front desk is handling a walk-in. The phone rings 4 times and stops. That was a new patient inquiry worth ₹3,000–₹50,000 ($50–$600) in procedures.",
+      "Evening toothache calls are the highest-urgency leads you get — and they arrive when your clinic is closed. Patients in pain don't leave voicemails. They Google the next clinic that picks up.",
+      "New patients comparison-shop. They call 2–3 clinics. The first one to answer, explain services, and offer an appointment slot wins. The second one to call back gets a 'thanks, I already booked somewhere.'",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average dental procedure value", amount: "₹3,000 – ₹50,000 ($50 – $600)" },
+        { label: "Missed calls during procedures (busy clinic)", amount: "8 – 15 per day" },
+        { label: "After-hours toothache calls missed per week", amount: "8 – 10" },
+        { label: "Patient lifetime value (3–5 year retention)", amount: "₹50,000 – ₹2,00,000 ($600 – $2,500)" },
+      ],
+      total: "8 missed after-hours calls/week × 25% conversion × ₹5,000 avg procedure = ₹10,000/week (₹40,000/month or ~$500/month) walking out the door",
+      solvesFor: "₹2,499/month ($299/month) — every call answered, every patient captured",
+      source: "Agentic AI Labs dental clinic pilot data + Indian dental market benchmarks, 2026",
+    },
+    practitionerQuote: {
+      text: "We tracked our missed calls for one week. 47 missed calls in 5 days. My receptionist was doing her best — but when I'm with a patient, she's sterilizing instruments and managing walk-ins. The phone just rings out.",
+      attribution: "Dental clinic owner, Pune — Agentic AI Labs partner network, 2026",
+    },
+    statusQuoTitle: "What most dental clinics try before this",
+    statusQuoItems: [
+      "Asking the dental assistant to 'grab the phone' mid-procedure — breaks sterile protocol and stresses your team.",
+      "A second receptionist for peak hours — adds ₹12,000–₹20,000/month ($150–$250/month) and still doesn't cover evenings or Sundays.",
+      "Voicemail with a 'we'll call you back' message — patients in pain don't wait. They call the next clinic on Google Maps.",
+    ],
+    industrySignal: {
+      headline: "India has 200,000+ dental clinics — and phone answering is the #1 operational bottleneck.",
+      body: "The Indian dental market is growing at 11% CAGR. Clinic density in metro areas means a competing clinic is always a 2-minute Google search away. Patient surveys consistently show that the ability to reach a clinic by phone is a top-3 factor in choosing a dentist — above price, above online reviews. Clinics that answer every call, every time, book 25–40% more new patients than those with even occasional missed calls. The gap is widest after hours, when toothache emergencies peak and most clinics are dark.",
+      source: "Indian Dental Association market data + Agentic AI Labs clinic surveys, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Every call answered. Every patient captured. Even mid-procedure.",
+    solutionItems: [
+      "Answers every call — during procedures, lunch breaks, after hours, Sundays.",
+      "Captures patient name, issue, urgency level, insurance details, and preferred timing.",
+      "Books appointments directly into your schedule and sends WhatsApp confirmation with clinic address.",
+    ],
+    layers: [
+      {
+        title: "Picks up the call your team can't — in 3 rings, every time.",
+        body: "Phone rings while your dentist is mid-procedure and your front desk is occupied. The AI answers in 3 rings: 'Good evening, this is [Clinic Name]. I can help you schedule an appointment or answer questions about our services.' The caller hears a professional voice — not a voicemail tone. Evening toothache? The AI triages urgency, captures details, and flags it for your dentist's immediate attention.",
+      },
+      {
+        title: "Captures everything your front desk would — without interrupting anyone.",
+        body: "Patient name. Dental issue (toothache, cleaning, cosmetic, orthodontics). Urgency level. Insurance provider. Preferred appointment date and time. First visit or returning patient. All captured in a structured intake record — logged before the call ends. Your front desk gets a clean patient list, not a stack of Post-it notes with half-legible phone numbers.",
+      },
+      {
+        title: "Books the slot, sends the confirmation, cuts no-shows by a third.",
+        body: "The AI checks your available slots, books the appointment, and sends the patient a WhatsApp confirmation with your clinic address, preparation instructions (fasting for surgical procedures, bring X-rays, etc.), and a reminder 24 hours before the visit. Patients who receive instant confirmation are 30–35% less likely to no-show. Your 15–20% no-show rate drops to single digits.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR CLINIC WORKFLOW",
+        body: "Day 1 — We walk through your appointment types (cleaning, RCT, extraction, cosmetic, orthodontics), scheduling rules, insurance handling, and after-hours protocol. 45 minutes.",
+        youSpend: "45 minutes on a call with us.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI RECEPTIONIST",
+        body: "Days 2–7 — AI receptionist trained on your specific services, pricing boundaries, appointment durations, and triage logic. Hindi, English, or regional language based on your patient base.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "STRESS-TEST WITH REAL PATIENT SCENARIOS",
+        body: "Day 8 — We simulate real calls: emergency toothache at 9 PM, new patient asking about braces pricing, existing patient rescheduling, insurance verification question. You review recordings and fine-tune the tone.",
+        youSpend: "30 minutes reviewing test recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ON YOUR CLINIC NUMBER",
+        body: "Day 10 — Your AI receptionist goes live on your main clinic number. Every call answered from day one. We monitor interactions for 30 days and tune based on real patient call patterns.",
+        youSpend: "Zero. Every call is answered and logged.",
+      },
+    ],
+    proofTitle: "8–10 after-hours calls per week that used to go to voicemail — every one now a booked patient.",
+    proofBullets: [
+      "Missed call rate dropped from 25% to under 2% — including during procedures and lunch breaks.",
+      "After-hours toothache calls captured and triaged within 3 rings — no more 'we'll call you back tomorrow.'",
+      "No-show rate reduced from 18% to 7% with instant WhatsApp confirmations and 24-hour reminders.",
+    ],
+    caseStudy: {
+      client: "Multi-Chair Dental Clinic — Metro India",
+      problem: "3-chair dental clinic receiving 35–45 calls per day. Front desk staffed by one person who also handled billing and walk-ins. During peak procedure hours (10 AM – 1 PM and 4 PM – 7 PM), 8–12 calls went unanswered daily. After-hours calls — primarily evening toothaches — were 8–10 per week, all going to voicemail. Each missed after-hours call was worth ₹5,000+ in emergency procedure revenue.",
+      system: "AI receptionist deployed on the clinic's main number. Handles all calls during procedures, lunch, and after hours. Captures patient details, triages urgency, books appointments, sends WhatsApp confirmations. Emergency calls trigger an immediate SMS to the dentist's personal number.",
+      result: "After-hours inquiry capture rate: 0% → 100%. In-hours missed calls: 12/day → under 1/day. New patient bookings increased 32% in the first month. No-show rate dropped from 18% to 7%.",
+    },
+    testimonial: {
+      quote: "I was losing patients I didn't even know about. We installed the AI on a Monday and by Friday my front desk had 23 new patient records she didn't have to create — the AI captured them all. Three of those were emergency patients who would have gone to the clinic across the street.",
+      author: "Dr. Mehta, Dental Clinic Owner, Pune",
+    },
+    proofStats: [
+      { stat: "100%", label: "calls answered — including after hours" },
+      { stat: "32%", label: "increase in new patient bookings" },
+      { stat: "7%", label: "no-show rate (down from 18%)" },
+    ],
+    fitChecklist: {
+      headline: "Built for dental clinics losing patients to unanswered phones.",
+      forYou: [
+        "You run a dental clinic with 2+ chairs and your front desk can't answer every call during procedures",
+        "You get evening or weekend calls from patients in pain — and those calls currently go to voicemail",
+        "Your average procedure value is ₹3,000+ ($50+) — the cost of 2 missed patients pays for a full month of AI",
+        "You want every patient inquiry captured, triaged, and booked — without hiring a second receptionist",
+        "You want it live and tested within 10 days",
+      ],
+      notForYou: [
+        "You already have a dedicated call center with 24/7 coverage and zero missed calls",
+        "Your clinic receives fewer than 10 calls per day — not enough volume for clear ROI",
+        "You want a DIY chatbot — we build production voice systems, not self-serve templates",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Same setup, localized for your market.",
+    },
+    faq: [
+      {
+        question: "Can the AI actually book appointments into my dental software?",
+        answer:
+          "Yes. We integrate with popular dental practice management systems (Dentrix, Practo, Clove, and custom scheduling tools). If your software has an API or calendar export, we connect to it. If not, the AI logs every booking for your front desk to confirm in under 60 seconds each morning.",
+      },
+      {
+        question: "What if a patient calls with a real dental emergency?",
+        answer:
+          "The AI is trained to identify emergencies — severe pain, trauma, swelling, bleeding. These calls trigger an immediate SMS or WhatsApp alert to your dentist's personal number with the patient's details and urgency level. Non-emergency after-hours calls are logged for morning follow-up.",
+      },
+      {
+        question: "Will it handle insurance verification questions?",
+        answer:
+          "The AI captures the patient's insurance provider and plan details during the call. It can confirm whether your clinic accepts their insurance based on your provider list. For detailed coverage questions (what's covered under their specific plan), it schedules a callback with your front desk.",
+      },
+      {
+        question: "Does it speak Hindi and regional languages?",
+        answer:
+          "Hindi and English are available from day one. Marathi, Tamil, Telugu, Kannada, and Gujarati available on request. Arabic for Gulf deployments. The AI detects the caller's language and responds accordingly.",
+      },
+      {
+        question: "How does it reduce no-shows?",
+        answer:
+          "Three mechanisms: (1) Instant WhatsApp confirmation with clinic address and prep instructions the moment an appointment is booked. (2) Automated reminder 24 hours before the appointment. (3) If the patient doesn't confirm the reminder, the AI calls them. Clinics using all three see no-show rates drop from 15–20% to 5–8%.",
+      },
+      {
+        question: "What happens to the calls during business hours?",
+        answer:
+          "You configure the routing. Option A: AI answers all calls 24/7 and your front desk handles walk-ins and billing. Option B: AI only activates when your front desk doesn't answer within 4 rings. Option C: AI handles after-hours only. Most clinics start with Option B and switch to Option A within a month.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Dental clinic AI receptionists start at ₹2,499/month ($299/month). One-time build and setup fee covers integration with your scheduling system, custom training on your services, and the first 30 days of monitoring. We scope it on a call before you commit.",
+      },
+      {
+        question: "Can it handle multiple dentists with different schedules?",
+        answer:
+          "Yes. We map each dentist's availability, specialization, and appointment types. When a patient calls for orthodontics, the AI books with the orthodontist's calendar. When they call for a cleaning, it books with the general dentist. Multi-doctor clinics are the most common deployment we handle.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll walk through your call volume, missed call patterns, and show you exactly what the AI handles — before you commit to anything.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "Best AI Tools for Dental Practices", href: "/best-ai-tools-for-dental-practices" },
+      { label: "AI Receptionist for Med Spas", href: "/ai-receptionist-for-med-spa" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+    ],
+    keywords: [
+      "ai receptionist for dental clinic",
+      "dental clinic ai phone",
+      "ai appointment booking dental",
+      "ai for dentist office",
+      "dental clinic missed calls ai",
+      "ai receptionist for dentist india",
+      "dental ai voice agent",
+      "ai phone answering dental clinic",
+      "after hours dental ai receptionist",
+      "dental appointment confirmation ai",
+      "ai for dental patient booking",
+      "dentist office ai receptionist",
+      "dental clinic voice ai india",
+      "ai dental patient intake",
+      "reduce no shows dental clinic ai",
+    ],
+  },
+
+  // ─── PAGE: ai-booking-agent-for-salon ─────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-booking-agent-for-salon"],
+    title: "AI Booking Agent for Salons — Stop Losing Saturday Appointments to Missed Calls",
+    description:
+      "Your best stylist is mid-blowout. Your receptionist is checking someone out. The phone rings — a client wants to book Saturday color. Nobody answers. She books at the salon down the road. We build an AI booking agent that answers every call, checks real-time availability, books appointments, and sends WhatsApp confirmation — so your chairs stay full.",
+    canonicalUrl: makeCanonical(["ai-booking-agent-for-salon"]),
+    heroLabel: "Built for Salons, Beauty Parlours & Barbershops",
+    heroHeadline: "Saturday 2 PM. Every stylist has hands in someone's hair. The phone rings for the 9th time. Nobody picks up. That's 9 bookings your competitor just got.",
+    heroSubheadline:
+      "60% of salon bookings still happen by phone. Your busiest call times are your busiest service times — evenings and weekends. Every unanswered ring is a client who doesn't call back. They just book somewhere else.",
+    painTitle: "The salon booking paradox: your phone rings most when you can least afford to answer it",
+    painPoints: [
+      "Peak call hours (5 PM–8 PM weekdays, all day Saturday) perfectly overlap with peak service hours. Your stylists are with clients. Your receptionist — if you have one — is handling checkout and walk-ins. The phone rings and rings.",
+      "A client calling for a Saturday hair color appointment will call one salon. If nobody answers, she Googles the next one. She doesn't leave a voicemail. She doesn't call back Monday. The booking is gone.",
+      "You're juggling walk-ins, phone calls, online bookings, and WhatsApp messages — all at once. Even with a receptionist, appointments fall through the cracks. Double-bookings happen. Clients show up to find their slot was given away.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average salon visit value", amount: "₹500 – ₹3,000 ($10 – $50)" },
+        { label: "Hair color / treatment value", amount: "₹2,000 – ₹15,000 ($30 – $200)" },
+        { label: "Missed calls during peak hours (busy salon)", amount: "8 – 15 per day" },
+        { label: "Client lifetime value (monthly visits × 2 years)", amount: "₹24,000 – ₹72,000 ($400 – $1,200)" },
+      ],
+      total: "10 missed calls/day × 30% booking intent × ₹1,500 avg = ₹4,500/day or ₹1,35,000/month (~$1,700/month) in lost revenue",
+      solvesFor: "₹1,999/month ($249/month) — every call answered, every slot filled",
+      source: "Agentic AI Labs salon partner data + Indian beauty industry benchmarks, 2026",
+    },
+    practitionerQuote: {
+      text: "I put a call tracker on my salon line for one week. We missed 62 calls. Sixty-two. My receptionist was genuinely doing her best but on Saturday she's answering the phone, swiping cards, folding towels, and greeting walk-ins — all at the same time.",
+      attribution: "Salon owner, South Delhi — Agentic AI Labs partner network, 2026",
+    },
+    statusQuoTitle: "What most salons try before this",
+    statusQuoItems: [
+      "Asking stylists to answer between clients — leads to rushed calls, misheard names, and wrong time slots scribbled in the register.",
+      "An 'online booking only' policy that alienates 60% of your client base who still prefer to call.",
+      "WhatsApp booking on the owner's personal number — works until you have 40 unread messages and no idea who confirmed and who didn't.",
+    ],
+    industrySignal: {
+      headline: "India's beauty and wellness market is ₹1.5 lakh crore ($19B) — and phone booking is still the default.",
+      body: "Despite the rise of online booking apps, KPMG and industry surveys consistently show that 55–65% of salon appointments in India are still booked by phone. The pattern is even stronger in tier-2 and tier-3 cities. In the UAE and UK, the phone-to-online split is roughly 50/50. Salons that answer every call — instantly, professionally — fill 20–30% more weekend slots than salons that rely on callbacks. The booking window is minutes, not hours.",
+      source: "KPMG India Beauty & Wellness Report + Agentic AI Labs salon audits, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Every call answered. Every slot booked. Zero double-bookings.",
+    solutionItems: [
+      "Answers every call — during peak service hours, evenings, weekends, holidays.",
+      "Checks real-time availability and books the right stylist for the right service.",
+      "Sends WhatsApp confirmation with salon address, prep instructions, and arrival time.",
+    ],
+    layers: [
+      {
+        title: "Answers the Saturday call your staff physically cannot.",
+        body: "The phone rings during your busiest Saturday slot. The AI answers in 3 rings: 'Hi, this is [Salon Name]. I can help you book an appointment — what service are you looking for?' Warm, professional, salon-appropriate. The caller doesn't know it's AI — they just know someone picked up. That's the difference between booking and losing the client.",
+      },
+      {
+        title: "Checks availability and books the right stylist — no double-bookings.",
+        body: "Client wants a balayage on Saturday afternoon. The AI checks your real-time calendar: which colorists are free, what slots are open, how long the service takes. It offers the next available slot, books it under the client's name, and blocks the time. No more scribbled registers. No more 'sorry, that slot was already taken' when the client arrives. One source of truth for every booking.",
+      },
+      {
+        title: "Sends confirmation, prep instructions, and a reminder that cuts no-shows.",
+        body: "The moment the appointment is booked, the client gets a WhatsApp message: salon name, address with Google Maps link, service booked, stylist name, date and time, and any prep instructions ('arrive with freshly washed hair for color services'). 24 hours before the appointment, they get a reminder. Confirmed clients show up. Unconfirmed slots get offered to the waitlist. Your chairs stay full.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR SERVICES AND SCHEDULE",
+        body: "Day 1 — We go through your service menu, pricing, stylist schedules, appointment durations, and booking rules (e.g., color services need 2-hour blocks, bridal packages need full-day holds). 30 minutes.",
+        youSpend: "30 minutes walking us through your salon's services and schedule.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI BOOKING AGENT",
+        body: "Days 2–6 — AI booking agent built and trained on your services, stylists, availability rules, and client communication style. Hindi, English, or Arabic depending on your market.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH PEAK-HOUR SCENARIOS",
+        body: "Day 7 — We simulate Saturday rush calls: balayage booking, keratin treatment inquiry, bridal package question, rescheduling request, walk-in + phone conflict. You review recordings and adjust.",
+        youSpend: "20 minutes reviewing test recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ON YOUR SALON LINE",
+        body: "Day 8–10 — Your AI booking agent goes live. Every call answered from day one. We monitor for 30 days and optimize based on real booking patterns and client feedback.",
+        youSpend: "Zero. Your chairs fill themselves.",
+      },
+    ],
+    proofTitle: "62 missed calls per week → zero. Every one now a potential booking.",
+    proofBullets: [
+      "Peak-hour missed calls eliminated — every Saturday and evening call answered within 3 rings.",
+      "Double-bookings dropped to zero with real-time calendar sync.",
+      "Weekend bookings increased 28% in the first month — slots that were going empty are now filled.",
+    ],
+    caseStudy: {
+      client: "Premium Unisex Salon — South Delhi",
+      problem: "6-chair salon with 1 receptionist. During peak hours (5 PM – 8 PM weekdays, all day Saturday), 8–15 calls went unanswered daily. Owner's WhatsApp had 40+ unread booking messages by end of Saturday. Double-bookings were happening 2–3 times per week — creating client friction and stylist frustration. Weekend chairs were 70% full despite high demand.",
+      system: "AI booking agent deployed on the salon's main number. Answers all calls, checks real-time stylist availability, books appointments with correct service duration, sends WhatsApp confirmations. Handles rescheduling and cancellation requests. Weekend waitlist management for high-demand slots.",
+      result: "Missed calls: 62/week → 0. Double-bookings: eliminated. Weekend chair utilization: 70% → 94%. Owner stopped managing WhatsApp bookings entirely — the AI handles it.",
+    },
+    testimonial: {
+      quote: "Saturday used to be chaos. Phones ringing, clients walking in, stylists yelling 'who's my 3 o'clock?' Now the AI books everything, sends confirmations, and my team just focuses on cutting hair. We filled 28% more weekend slots in the first month.",
+      author: "Priya, Salon Owner, South Delhi",
+    },
+    proofStats: [
+      { stat: "0", label: "missed calls during peak hours" },
+      { stat: "94%", label: "weekend chair utilization" },
+      { stat: "28%", label: "more weekend bookings in month one" },
+    ],
+    fitChecklist: {
+      headline: "Built for salons that lose bookings because the phone rings when everyone's busy.",
+      forYou: [
+        "You run a salon with 3+ chairs and your phone rings most when your team is busiest",
+        "You still get the majority of bookings by phone or WhatsApp — not through an online app",
+        "You have double-booking issues or missed appointment chaos during weekends",
+        "You want every call answered, every slot booked, and every client confirmed — without hiring another receptionist",
+        "You want it live within 10 days",
+      ],
+      notForYou: [
+        "You're a solo stylist working by appointment only with 5 clients a week — the volume doesn't justify AI",
+        "100% of your bookings come through an online app and you have zero phone inquiries",
+        "You want a free social media chatbot — we build production voice booking systems",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Will it work with my existing salon software?",
+        answer:
+          "We integrate with Zenoti, Fresha, Booksy, Vagaro, and custom salon calendars. If your software has API access or a shared calendar, we connect to it. If you use a paper register, we set up a digital calendar as part of the build.",
+      },
+      {
+        question: "Can it handle service-specific booking rules?",
+        answer:
+          "Yes. Color services that need 2.5 hours, bridal packages that block a full day, specific stylists for specific services — all configured during setup. The AI knows that a balayage takes longer than a trim and books accordingly.",
+      },
+      {
+        question: "What if a client wants to reschedule?",
+        answer:
+          "The AI handles rescheduling and cancellations. It finds the next available slot, confirms with the client, and frees up the original slot for waitlist clients. Your staff never needs to touch the calendar.",
+      },
+      {
+        question: "Does it handle walk-ins and phone bookings without conflict?",
+        answer:
+          "The AI books from the same real-time calendar your front desk uses. Walk-in bookings made in person update the same calendar. No conflicts, no double-bookings. One source of truth.",
+      },
+      {
+        question: "Can clients ask about pricing?",
+        answer:
+          "Yes. You configure what pricing the AI shares. Standard service prices, package deals, ongoing offers — whatever you want disclosed. For custom pricing (bridal consultations, extensive color work), the AI collects details and schedules a callback from your senior stylist.",
+      },
+      {
+        question: "What languages does it support?",
+        answer:
+          "Hindi and English from day one. Arabic for UAE salons. Urdu, Punjabi, Tamil available on request. The AI detects the caller's language and responds naturally.",
+      },
+      {
+        question: "How does it reduce no-shows?",
+        answer:
+          "Instant WhatsApp confirmation at booking. Reminder 24 hours before with salon address and prep instructions. If the client doesn't confirm the reminder, their slot is offered to the waitlist and they're notified. Salons using all three steps report no-show rates dropping from 20% to under 8%.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Salon AI booking agents start at ₹1,999/month ($249/month). One-time setup fee covers integration with your calendar, service menu training, and 30 days of monitoring. We scope it on a call — no surprises.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll review your call patterns, peak hours, and show you exactly how many bookings you're losing — before you commit.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Receptionist for Med Spas", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+    ],
+    keywords: [
+      "ai booking agent for salon",
+      "salon appointment ai",
+      "ai receptionist for beauty salon",
+      "salon phone booking ai",
+      "ai for salon missed calls",
+      "beauty parlour ai booking",
+      "barbershop ai receptionist",
+      "ai appointment booking salon india",
+      "salon ai voice agent",
+      "ai for hair salon booking",
+      "salon receptionist ai",
+      "ai phone answering salon",
+      "beauty salon ai agent uae",
+      "reduce salon no shows ai",
+      "salon weekend booking ai",
+    ],
+  },
+
+  // ─── PAGE: ai-for-coaching-institute ──────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-coaching-institute"],
+    title: "AI for Coaching Institutes — Stop Losing ₹1 Lakh Enrollments to Unanswered Inquiry Calls",
+    description:
+      "Admission season: 100 parents call your institute daily. Your staff handles 40. The other 60 call competing institutes. Each lost enrollment is ₹50,000–₹2,00,000 gone. We build an AI agent that handles every inquiry call — course details, fee structure, batch timings — captures contacts and books counseling sessions automatically.",
+    canonicalUrl: makeCanonical(["ai-for-coaching-institute"]),
+    heroLabel: "Built for Coaching Institutes — JEE, NEET, UPSC & Online Coaching",
+    heroHeadline: "100 parents called your institute today. Your team answered 40. The other 60 enrolled their children somewhere else.",
+    heroSubheadline:
+      "During admission season, your phone lines are a bottleneck — not a sales channel. Every unanswered inquiry call is a ₹50,000–₹2,00,000 ($600–$2,500) enrollment walking to a competitor who picked up faster.",
+    painTitle: "Admission season exposes your biggest revenue leak: the phone",
+    painPoints: [
+      "January to March: board results. May to July: admission frenzy. During these windows, 50–100+ parents and students call daily. Your counseling team can handle 30–40. The rest hear a busy tone, wait on hold, or give up. They don't call back — they enroll at the institute that answered.",
+      "Parents have 3–5 coaching options shortlisted. They call each one. First institute to answer, explain the fee structure, share batch timings, and book a counseling session wins the enrollment. The institute that calls back 2 hours later gets 'thanks, we already enrolled at [competitor].'",
+      "Each lost enrollment is not a missed ₹500 transaction — it's ₹50,000–₹2,00,000 in annual fees. Lose 10 enrollments per admission cycle to unanswered calls and that's ₹5,00,000–₹20,00,000 ($6,000–$25,000) in revenue you never recover.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Annual enrollment value (JEE/NEET/UPSC)", amount: "₹50,000 – ₹2,00,000 ($600 – $2,500)" },
+        { label: "Daily inquiry calls during peak season", amount: "50 – 100+" },
+        { label: "Calls your team can actually handle", amount: "30 – 40 per day" },
+        { label: "Inquiry-to-enrollment conversion rate", amount: "15% – 25%" },
+      ],
+      total: "60 unanswered calls/day × 20% conversion × ₹1,00,000 avg enrollment = ₹12,00,000/day in potential revenue unattended",
+      solvesFor: "₹9,999/month ($499/month) during admission season — every inquiry answered, every contact captured",
+      source: "Agentic AI Labs coaching institute audits + FIITJEE/Allen/Aakash fee benchmarks, 2026",
+    },
+    practitionerQuote: {
+      text: "Last July we had an admission drive. I hired 4 temporary staff to answer phones. They still couldn't keep up. We tracked it later — 35% of calls went unanswered. At ₹1.2 lakh per enrollment, we left crores on the table in a single admission cycle.",
+      attribution: "Director, NEET coaching institute, Kota — Agentic AI Labs partner, 2026",
+    },
+    statusQuoTitle: "What most coaching institutes try during admission season",
+    statusQuoItems: [
+      "Hiring 3–5 temporary receptionists for admission season — ₹60,000–₹1,00,000/month ($750–$1,250/month), inconsistent quality, zero product knowledge on day one.",
+      "IVR menus that route callers through 4 button presses before they reach a human — 40% of callers hang up before reaching anyone.",
+      "A 'fill the form on our website' approach that loses every parent who wanted a quick answer to 'what are your batch timings for NEET 2027?'",
+    ],
+    industrySignal: {
+      headline: "India's coaching industry is ₹58,000 crore ($7B) — and enrollment is won on the phone.",
+      body: "The Indian coaching and test prep market continues to grow at 15%+ CAGR. But despite the rise of online platforms, 70% of enrollments for premium in-person coaching (JEE, NEET, UPSC, CAT) still begin with a phone inquiry. Parents want to speak to someone before committing ₹1–2 lakh. Institutes that respond to every inquiry within 5 minutes convert at 2–3x the rate of those that call back hours later. During peak admission windows, phone responsiveness is the single largest differentiator between institutes of comparable academic quality.",
+      source: "IMARC Group Indian EdTech Report + Agentic AI Labs coaching institute data, 2026",
+      date: "2026",
+    },
+    solutionTitle: "Every inquiry answered. Every parent contacted. Every counseling session booked.",
+    solutionItems: [
+      "Answers every inquiry call — course details, fee structure, batch timings, faculty information, center locations.",
+      "Captures parent and student contact details for counseling follow-up.",
+      "Books counseling sessions directly and sends WhatsApp confirmation with center address.",
+    ],
+    layers: [
+      {
+        title: "Handles the 60 calls your team physically can't — with full course knowledge.",
+        body: "Parent calls asking about NEET 2027 batches, fee structure, faculty, and scholarship options. The AI answers immediately — in Hindi or English — with accurate information from your course catalog. It doesn't say 'someone will call you back.' It gives the parent the answer they need, captures their contact, and books a counseling session while they're still on the phone. First-call resolution. First-institute advantage.",
+      },
+      {
+        title: "Captures every lead — even the ones that call at 10 PM.",
+        body: "Parents research coaching institutes in the evening after work. Many call at 8 PM, 9 PM, even 10 PM. Your office closed at 7. The AI captures every after-hours inquiry: student name, class, target exam, preferred batch timing, parent's phone number, and questions asked. Your counseling team starts each morning with a structured list of warm leads — not a list of missed calls with no context.",
+      },
+      {
+        title: "Books counseling sessions that actually convert to enrollments.",
+        body: "An inquiry call without a next step is a dead lead. The AI doesn't just answer questions — it books a counseling session while the parent is engaged. Date, time, parent and student names, specific questions to address in the session. WhatsApp confirmation sent immediately with center address and directions. Parents who book a session are 3–4x more likely to enroll than those who just 'inquire and we'll call back.'",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR COURSES AND ADMISSION PROCESS",
+        body: "Day 1 — We document your full course catalog: programs, fees, batch timings, faculty, scholarship criteria, center locations. We map your counseling booking process and admission funnel. 1 hour.",
+        youSpend: "1 hour walking us through your course catalog and admission workflow.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI ENROLLMENT AGENT",
+        body: "Days 2–8 — AI agent trained on your courses, fees, batch schedules, common parent questions, and objection patterns ('is online as good as offline?', 'what's your NEET selection rate?', 'do you offer EMI?'). Hindi, English, or regional language.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL ADMISSION SCENARIOS",
+        body: "Day 9 — We simulate peak-season calls: parent asking about JEE vs NEET, scholarship eligibility question, fee comparison with competitor, late-night inquiry, student calling directly. You review and fine-tune responses.",
+        youSpend: "30 minutes reviewing test recordings with your academic counselor.",
+      },
+      {
+        week: 4,
+        phase: "LIVE BEFORE YOUR NEXT ADMISSION WINDOW",
+        body: "Day 10–12 — Your AI enrollment agent goes live on your inquiry number. Every call answered. Every contact captured. Every counseling session booked. We monitor for 30 days and optimize conversion rates.",
+        youSpend: "Zero. Your admission funnel runs without bottlenecks.",
+      },
+    ],
+    proofTitle: "60 unanswered calls per day during admission season → zero. Every one now a captured lead.",
+    proofBullets: [
+      "Inquiry-to-counseling conversion increased 42% — parents who get instant answers book sessions.",
+      "After-hours inquiries (8 PM – 10 PM) captured for the first time — 15–20 warm leads per night during peak season.",
+      "Temporary admission staff reduced from 5 to 1 — the AI handles volume, the human handles closing.",
+    ],
+    caseStudy: {
+      client: "NEET Coaching Institute — Kota, Rajasthan",
+      problem: "Mid-size NEET coaching institute receiving 80–100 inquiry calls per day during May–July admission season. 6-person counseling team could handle 35–40 calls. Remaining 40–60 calls went unanswered or were called back hours later. Competitor institutes with faster response were winning enrollments from the same pool of parents. Temporary staff hired each season lacked product knowledge and gave inconsistent answers about fees and batch timings.",
+      system: "AI enrollment agent deployed on the institute's inquiry number during admission season. Handles all inbound calls with full course catalog knowledge — programs, fees, batch timings, faculty credentials, scholarship criteria. Captures parent/student details. Books counseling sessions. After-hours coverage 7 PM – 10 PM. WhatsApp confirmations with center address and directions.",
+      result: "Unanswered calls: 60/day → 0. Counseling session bookings increased 42%. After-hours lead capture: 0 → 15–20 warm leads per evening. Temporary staff headcount reduced from 5 to 1. Enrollment rate from AI-captured leads: 22% (in line with counselor-captured leads).",
+    },
+    testimonial: {
+      quote: "We were hiring 5 temp staff every admission season and still missing half the calls. The AI answered every call with accurate course information — things my temp staff took 2 weeks to learn. Our counseling bookings went up 42% in the first admission cycle.",
+      author: "Dr. Agarwal, Director, NEET Coaching Institute, Kota",
+    },
+    proofStats: [
+      { stat: "0", label: "unanswered inquiry calls during peak season" },
+      { stat: "42%", label: "increase in counseling session bookings" },
+      { stat: "22%", label: "enrollment rate from AI-captured leads" },
+    ],
+    fitChecklist: {
+      headline: "Built for coaching institutes that lose enrollments to unanswered phones during admission season.",
+      forYou: [
+        "You run a coaching institute (JEE, NEET, UPSC, CAT, or other competitive exams) with enrollment values ₹50,000+",
+        "Your inquiry volume spikes to 50–100+ calls per day during admission season",
+        "Your counseling team can't keep up with phone inquiries — leads are going cold or going to competitors",
+        "You want every inquiry captured, every question answered, and every counseling session booked — automatically",
+        "You need the system live before your next admission window",
+      ],
+      notForYou: [
+        "You're a solo tutor with 10–15 students — the volume doesn't justify AI at this scale",
+        "Your enrollment is 100% walk-in or referral-based with no phone inquiry volume",
+        "You want a generic chatbot on your website — we build voice agents that handle phone calls",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Can the AI handle questions about specific courses, batches, and fees?",
+        answer:
+          "Yes. We train it on your complete course catalog — every program, batch timing, fee structure, scholarship criteria, and faculty name. When a parent asks 'what's the fee for your 2-year NEET program?', the AI gives the exact answer from your catalog. No vague responses.",
+      },
+      {
+        question: "What if a parent asks something the AI doesn't know?",
+        answer:
+          "The AI is transparent — it won't fabricate answers. For questions outside its training (e.g., specific result data, refund policy edge cases), it captures the question, logs the parent's contact, and schedules a callback from your counselor. The parent gets a clear next step, not silence.",
+      },
+      {
+        question: "Does it work in Hindi?",
+        answer:
+          "Hindi and English from day one. Most coaching institute inquiries in North India are in Hindi or Hinglish — the AI handles both naturally. Tamil, Telugu, Marathi, and Bengali available on request for regional centers.",
+      },
+      {
+        question: "Can it handle the comparison question — 'why should I choose you over [competitor]?'",
+        answer:
+          "We train the AI on your differentiators — selection rates, faculty credentials, study material, batch sizes, campus facilities. It presents your strengths without badmouthing competitors. The tone is informative and confident, not defensive.",
+      },
+      {
+        question: "How does it handle the EMI / scholarship question?",
+        answer:
+          "Fee breakdowns, EMI options, scholarship eligibility criteria, and application process — all configured during setup. The AI walks parents through financial options and captures their interest for the counseling session. Detailed EMI calculations are deferred to your finance team.",
+      },
+      {
+        question: "Can it scale for multiple branches?",
+        answer:
+          "Yes. Each branch gets location-specific course availability, batch timings, and fee structures. The AI identifies which branch the caller is asking about (or suggests the nearest one based on their location) and provides accurate branch-specific information.",
+      },
+      {
+        question: "What happens outside admission season?",
+        answer:
+          "During off-season, the AI handles routine inquiries, demo class bookings, and early-bird enrollment interest. You can scale down the plan during low-volume months and scale up for peak season. No long-term lock-in.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Coaching institute AI enrollment agents start at ₹9,999/month ($499/month) during admission season. Setup is a one-time fee covering course catalog training, counseling workflow integration, and 30 days of monitoring. Off-season pricing is lower. We scope it on a call.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll walk through your admission volume, current bottlenecks, and show you exactly how many enrollments you're losing to unanswered calls.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Show-Up Agent for Online Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+    ],
+    keywords: [
+      "ai for coaching institute",
+      "ai for NEET coaching",
+      "ai enrollment calling",
+      "coaching institute ai receptionist",
+      "ai for JEE coaching admission",
+      "coaching institute phone ai",
+      "ai inquiry agent coaching",
+      "UPSC coaching ai phone",
+      "ai for coaching center calls",
+      "coaching institute missed calls ai",
+      "ai receptionist for education",
+      "ai for tuition center",
+      "admission season ai agent",
+      "coaching ai voice agent india",
+      "ai lead capture coaching institute",
+      "ai for competitive exam coaching",
+    ],
+  },
+
+  // ─── PAGE: ai-cod-confirmation-agent ──────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-cod-confirmation-agent"],
+    title: "AI COD Confirmation Agent — Cut RTO by 30–50% With Pre-Dispatch Verification Calls",
+    description:
+      "60–70% of Indian e-commerce orders are Cash on Delivery. 25–40% of those get returned to origin. Each RTO costs you ₹200–₹400 in wasted shipping. A single AI call before dispatch — confirming address, verifying intent, offering prepaid conversion — reduces RTO by 30–50%. We build the agent that makes that call.",
+    canonicalUrl: makeCanonical(["ai-cod-confirmation-agent"]),
+    heroLabel: "Built for D2C Brands & E-Commerce — India & Southeast Asia",
+    heroHeadline: "You shipped 1,000 COD orders this month. 300 came back. That's ₹60,000–₹1,20,000 you set on fire.",
+    heroSubheadline:
+      "Cash on Delivery drives 60–70% of Indian e-commerce. But COD RTO rates run 25–40% — 3x higher than prepaid. Every return costs you forward shipping + return shipping + restocking + wasted packaging. One confirmation call before dispatch cuts that by a third to a half.",
+    painTitle: "COD is your biggest sales channel — and your biggest profit leak",
+    painPoints: [
+      "Customer places a COD order at 2 AM. Impulse buy. You ship it the next morning without confirming. 3 days later: 'customer refused delivery.' You eat ₹200–₹400 ($3–$5) in forward + return shipping, plus packaging and restocking. The product sat in a truck for a week for nothing.",
+      "At 1,000 COD orders per month with a 30% RTO rate, that's 300 returned orders × ₹300 average loss = ₹90,000/month ($1,100/month) burned. At 5,000 orders, it's ₹4,50,000/month ($5,500/month). This is not a rounding error — it's 15–20% of your revenue evaporating.",
+      "Fake addresses, wrong phone numbers, impulse purchases with no intent to accept — you can't tell which COD orders are real until the delivery partner is standing at the door and the customer says 'I didn't order this.' By then, you've already paid for the shipment.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average COD RTO rate (Indian e-commerce)", amount: "25% – 40%" },
+        { label: "Cost per RTO (forward + return shipping + packaging)", amount: "₹200 – ₹400 ($3 – $5)" },
+        { label: "Monthly RTO loss at 1,000 COD orders (30% RTO)", amount: "₹60,000 – ₹1,20,000 ($750 – $1,500)" },
+        { label: "RTO reduction from pre-dispatch confirmation call", amount: "30% – 50%" },
+      ],
+      total: "At 1,000 orders/month: ₹90,000/month lost to RTO. AI confirmation saves ₹27,000–₹45,000/month ($350–$550/month)",
+      solvesFor: "₹4,999/month ($199/month) for up to 1,000 confirmation calls — ROI positive from month one",
+      source: "Shiprocket RTO benchmarks + Agentic AI Labs D2C brand data, 2026",
+    },
+    practitionerQuote: {
+      text: "Our RTO was 34%. We thought it was normal. Then we did the math — ₹3.4 lakh per month in pure waste. We tried IVR confirmation but nobody picks up automated recordings. The AI voice call was different — it sounded human, confirmed the address, and even converted 12% of COD orders to prepaid with a 5% discount offer.",
+      attribution: "D2C brand founder, fashion vertical — Agentic AI Labs client, 2026",
+    },
+    statusQuoTitle: "What most D2C brands try before production AI confirmation",
+    statusQuoItems: [
+      "IVR confirmation calls — 'Press 1 to confirm your order.' Pickup rate: 15–20%. Most customers ignore robocalls. The ones who do pick up often hang up on the IVR menu.",
+      "SMS/WhatsApp confirmation — open rates are decent but action rates are 10–15%. Customers read the message and don't respond. You still don't know if they'll accept delivery.",
+      "Manual calling team — works at 500 orders but collapses at 2,000. Each caller handles 80–100 calls per day. Hiring, training, QA, and attrition make this the most expensive option per order.",
+    ],
+    industrySignal: {
+      headline: "RTO is the #1 profitability killer for Indian D2C brands — and COD isn't going away.",
+      body: "Despite the push to prepaid, COD still accounts for 60–70% of Indian e-commerce orders (Razorpay FY2026 data). In tier-2 and tier-3 cities, COD is 75%+. The RTO problem is structural — impulse purchases, fake addresses, and lack of buyer commitment are baked into the COD model. Brands that added a pre-dispatch human confirmation call saw RTO drop 25–35%. Brands using AI voice confirmation — which sounds conversational, not robotic — report 30–50% reduction at a fraction of the cost of manual teams.",
+      source: "Razorpay D2C Report FY2026 + Shiprocket RTO benchmarks + Agentic AI Labs D2C data, 2026",
+      date: "2026",
+    },
+    solutionTitle: "One call before dispatch. Address confirmed. Intent verified. RTO cut in half.",
+    solutionItems: [
+      "AI calls every COD order within 30 minutes of placement — confirms address, verifies intent, flags fakes.",
+      "Offers prepaid conversion with an incentive discount — 10–15% of COD customers convert on the spot.",
+      "Suspicious orders (wrong pincode, unreachable number, repeated RTO address) flagged before you waste shipping costs.",
+    ],
+    layers: [
+      {
+        title: "Calls the customer within 30 minutes — before you print the shipping label.",
+        body: "COD order placed → AI calls the customer within 30 minutes. 'Hi [Name], we received your order for [Product] to be delivered to [Address]. Can you confirm this is correct?' Natural, conversational, not robotic. The customer confirms or corrects the address. If they don't pick up after 2 attempts, the order is flagged for manual review. You never ship a ₹2,000 product to a fake address again.",
+      },
+      {
+        title: "Converts COD to prepaid — saving you the RTO risk entirely.",
+        body: "After confirming the order, the AI offers: 'Would you like to pay online now and get a 5% discount? I can send you a payment link on WhatsApp.' 10–15% of customers accept. That's 10–15% of your COD orders that just became prepaid — zero RTO risk. The payment link is sent instantly. The discount is cheaper than the ₹300 you'd lose on an RTO.",
+      },
+      {
+        title: "Flags suspicious orders before they cost you ₹300 each.",
+        body: "Unreachable phone number after 2 attempts? Flagged. Address doesn't match pincode? Flagged. Same address has 3 previous RTOs in your system? Flagged. Customer says 'I didn't place this order'? Cancelled before dispatch. The AI builds an RTO risk score for every COD order. Your operations team processes clean orders and reviews flagged ones — instead of shipping everything and hoping for the best.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "CONNECT YOUR ORDER PIPELINE",
+        body: "Day 1 — We connect to your Shopify, WooCommerce, or custom order system. Map COD order triggers, address format, and product catalog. 45 minutes.",
+        youSpend: "45 minutes giving us access to your order system and sharing RTO patterns.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR CONFIRMATION AGENT",
+        body: "Days 2–5 — AI confirmation agent built with your product names, address verification logic, prepaid conversion offer, and flagging rules. Hindi and English. Regional languages on request.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST ON REAL ORDER DATA",
+        body: "Day 6 — We run the AI against your last 200 COD orders. Test scenarios: confirmed order, address correction, prepaid conversion, unreachable customer, fake address detection. You review call recordings and flag accuracy.",
+        youSpend: "30 minutes reviewing test calls and confirmation accuracy.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ON EVERY COD ORDER",
+        body: "Day 7–8 — Every new COD order gets a confirmation call within 30 minutes. Confirmed orders go to dispatch. Flagged orders go to your review queue. We monitor for 30 days and optimize based on RTO reduction data.",
+        youSpend: "Zero. Watch your RTO rate drop week by week.",
+      },
+    ],
+    proofTitle: "34% RTO → 18%. ₹3.4 lakh/month saved. One AI call per order.",
+    proofBullets: [
+      "RTO rate dropped from 34% to 18% in the first 60 days — a 47% reduction.",
+      "12% of COD orders converted to prepaid on the confirmation call — eliminating RTO risk entirely for those orders.",
+      "Fake/suspicious orders caught before dispatch: 8% of total COD volume — previously shipped and returned at full cost.",
+    ],
+    caseStudy: {
+      client: "D2C Fashion Brand — Pan-India Shipping",
+      problem: "3,000 orders/month, 65% COD. RTO rate: 34%. Monthly RTO cost: ₹3.4 lakh ($4,200). Manual confirmation team of 4 callers could only handle 60% of orders — the rest shipped unconfirmed. Fake address orders: 8% of COD volume, all discovered only after delivery attempt failed.",
+      system: "AI COD confirmation agent calling every order within 30 minutes of placement. Address confirmation, intent verification, prepaid conversion with 5% discount offer, suspicious order flagging. Hindi and English. Integrated with Shopify + Shiprocket.",
+      result: "RTO: 34% → 18%. Prepaid conversion from COD: 12%. Fake orders caught pre-dispatch: 8% of COD volume. Monthly savings: ₹1.8 lakh ($2,200). Manual calling team reduced from 4 to 1 (handling only flagged orders).",
+    },
+    testimonial: {
+      quote: "We went from burning ₹3.4 lakh a month on RTOs to saving ₹1.8 lakh. The AI calls every order in 30 minutes — something my team of 4 couldn't even do. And the prepaid conversion — 12% of COD customers paying online because the AI offered a 5% discount — that was money I didn't expect.",
+      author: "Rohit, Founder, D2C Fashion Brand",
+    },
+    proofStats: [
+      { stat: "47%", label: "reduction in RTO rate" },
+      { stat: "12%", label: "COD to prepaid conversion" },
+      { stat: "₹1.8L", label: "monthly savings from day 60" },
+    ],
+    fitChecklist: {
+      headline: "Built for e-commerce brands bleeding money on COD returns.",
+      forYou: [
+        "You ship 500+ COD orders per month and your RTO rate is above 20%",
+        "You sell fashion, beauty, electronics, or any category with high COD impulse purchases",
+        "You've tried IVR or SMS confirmation and the response rates were too low to make a difference",
+        "You want every COD order confirmed before you print the shipping label",
+        "You want measurable RTO reduction within 30 days",
+      ],
+      notForYou: [
+        "Your business is 90%+ prepaid — COD RTO isn't your problem",
+        "You ship fewer than 100 orders per month — manual confirmation is still feasible at this scale",
+        "You want a chatbot for customer service — this is a pre-dispatch voice confirmation system",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America. Strongest ROI for India and Southeast Asia where COD dominates.",
+    },
+    faq: [
+      {
+        question: "How quickly does the AI call after an order is placed?",
+        answer:
+          "Within 30 minutes of order placement. The system triggers on new COD orders from your Shopify, WooCommerce, or custom platform. The call happens before the order enters your fulfillment queue — so flagged orders never get packed.",
+      },
+      {
+        question: "What if the customer doesn't pick up?",
+        answer:
+          "The AI makes 2 call attempts with a 30-minute gap. If both go unanswered, the order is flagged for manual review. You configure the default action for unconfirmed orders — hold for 24 hours, auto-cancel, or ship with risk tag. Most brands hold for 24 hours and try once more.",
+      },
+      {
+        question: "Does the prepaid conversion actually work?",
+        answer:
+          "Yes — 10–15% of COD customers convert to prepaid when offered a 5% discount on the confirmation call. The AI sends a WhatsApp payment link instantly. The customer pays while they're still engaged. The 5% discount costs less than the ₹300 you'd lose on an RTO.",
+      },
+      {
+        question: "How does it detect fake addresses?",
+        answer:
+          "Pincode-address mismatch, phone number not matching the delivery state, same address with previous RTOs in your system, customer saying 'I didn't place this order' — all flagged automatically. The AI also builds a risk score based on order patterns (new customer, high-value COD, late-night order from a high-RTO pincode).",
+      },
+      {
+        question: "What languages does it support?",
+        answer:
+          "Hindi and English from day one. Most Indian e-commerce customers prefer Hindi or Hinglish for phone calls. Tamil, Telugu, Kannada, Bengali, and Marathi available for regional brands. The AI detects the customer's language preference and switches.",
+      },
+      {
+        question: "Does it integrate with Shopify and WooCommerce?",
+        answer:
+          "Yes. Native integration with Shopify, WooCommerce, and Shiprocket. For custom platforms (Magento, custom-built), we integrate via webhook or API. Setup takes 1–2 days for standard platforms.",
+      },
+      {
+        question: "What's the ROI math?",
+        answer:
+          "At 1,000 COD orders/month with 30% RTO: you're losing ₹90,000/month ($1,100). A 40% RTO reduction saves ₹36,000/month ($440). Add 12% prepaid conversion savings and the total monthly benefit is ₹45,000–₹55,000 ($550–$680). The AI costs ₹4,999/month ($199/month). ROI: 9–11x in month one.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "AI COD confirmation starts at ₹4,999/month ($199/month) for up to 1,000 orders. Volume-based pricing for higher order counts. One-time setup fee covers integration, order pipeline mapping, and 30 days of monitoring. We scope it on a call with your RTO data.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll pull your RTO data, calculate the exact monthly savings, and show you the confirmation flow — before you commit.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI Support Rep for E-Commerce", href: "/ai-support-rep-for-ecommerce" },
+      { label: "Done-for-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+    ],
+    keywords: [
+      "ai cod confirmation agent",
+      "cod verification call ai",
+      "reduce rto ai",
+      "ecommerce cod confirmation",
+      "ai for cod rto reduction",
+      "pre dispatch confirmation ai",
+      "cod order verification ai india",
+      "ai calling for ecommerce orders",
+      "reduce return to origin ai",
+      "d2c rto reduction ai agent",
+      "ai for fake cod orders",
+      "cod to prepaid conversion ai",
+      "ai order confirmation call",
+      "shopify cod confirmation ai",
+      "ecommerce ai voice agent india",
+      "rto prevention ai agent",
+    ],
+  },
+
+  // ─── PAGE: ai-receptionist-for-restaurant ─────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-receptionist-for-restaurant"],
+    title: "AI Receptionist for Restaurants — Fill Every Table, Answer Every Call",
+    description:
+      "Friday 7 PM. Kitchen is slammed. Servers are running. Phone rings — a family wants a table for 8 on Saturday. Nobody can answer. They call the restaurant next door. We build an AI receptionist that answers every call, takes reservations, handles takeaway orders, and routes event inquiries — so your team stays on the floor and your tables stay full.",
+    canonicalUrl: makeCanonical(["ai-receptionist-for-restaurant"]),
+    heroLabel: "Built for Restaurants — India, UAE, US & UK",
+    heroHeadline: "Friday night. Kitchen is on fire. Servers are drowning. A family of 8 just called for Saturday. Nobody picked up. They're eating at your competitor.",
+    heroSubheadline:
+      "Restaurants get 30–60 calls a day — reservations, takeaway orders, event inquiries, 'are you open right now?' questions. Your busiest phone hours are your busiest service hours. An empty table on a Friday night is ₹5,000–₹15,000 ($80–$200) that never comes back.",
+    painTitle: "Your phone rings most when your team can least afford to answer it",
+    painPoints: [
+      "Friday 7 PM — every burner is lit, every server has 4 tables, the host is seating a walk-in party. The phone rings. And rings. And rings. The family that wanted Saturday dinner for 8 gives up after 6 rings and calls the restaurant they saw on Google right below you. You never even knew they called.",
+      "A corporate event inquiry for 50 guests — worth ₹2,50,000+ ($3,000+) in a single evening — goes to voicemail at 9 PM because the manager left at 8. The event coordinator needed a quick answer about private dining capacity and minimum spends. She got your voicemail. She called the next restaurant on her list.",
+      "Takeaway orders called in during the dinner rush get lost in the chaos. Order details are shouted across the kitchen, items are wrong, customers are upset, and your Google rating takes the hit. One 2-star review costs you more than a hundred perfect meals.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average dinner cover value", amount: "₹800 – ₹3,000 ($15 – $50)" },
+        { label: "Empty table on Friday/Saturday night", amount: "₹5,000 – ₹15,000 ($80 – $200) lost" },
+        { label: "Missed calls during peak service (busy restaurant)", amount: "10 – 20 per evening" },
+        { label: "Average corporate event inquiry value", amount: "₹1,00,000 – ₹5,00,000 ($1,200 – $6,000)" },
+      ],
+      total: "10 missed reservation calls/week × ₹3,000 avg cover × 4-person average = ₹1,20,000/month (~$1,500/month) in unfilled tables",
+      solvesFor: "₹2,499/month ($299/month) — every call answered, every table filled",
+      source: "Agentic AI Labs restaurant partner data + Indian F&B industry benchmarks, 2026",
+    },
+    practitionerQuote: {
+      text: "I put call tracking on our restaurant line for two weeks. We missed 23% of calls during dinner service. The ones we did answer — the host was distracted, took partial details, and 3 reservations were double-booked that same month. On a Friday, one empty 6-top table costs me ₹12,000.",
+      attribution: "Restaurant owner, Bandra, Mumbai — Agentic AI Labs partner, 2026",
+    },
+    statusQuoTitle: "What most restaurants try first",
+    statusQuoItems: [
+      "Having the host answer calls between seating guests — leads to distracted conversations, missed details, and frustrated walk-ins waiting to be seated.",
+      "Online-only reservations that lose the 50%+ of customers who still prefer calling — especially older diners, families, and corporate event planners.",
+      "A dedicated phone person for Friday and Saturday nights — ₹8,000–₹15,000/month ($100–$180/month) for 8 hours of weekend coverage that still doesn't handle late-night or Monday–Thursday calls.",
+    ],
+    industrySignal: {
+      headline: "Google launched AI restaurant booking in India (April 2026) — phone-based reservations are the next frontier.",
+      body: "Google's April 2026 rollout of AI-powered restaurant booking in India signals a massive shift: the search giant expects restaurant reservations to go AI-first. But Google's system works for them — not for you. It routes customers through Google's ecosystem and takes your direct relationship with the diner. Restaurants that deploy their own AI receptionist on their own phone number keep the customer relationship, the data, and the ability to upsell event packages, takeaway orders, and loyalty programs. The restaurants that wait for Google to handle their calls will lose direct customer access. The ones that own their AI own their customers.",
+      source: "Google India announcement + Agentic AI Labs restaurant market analysis, April 2026",
+      date: "April 2026",
+    },
+    solutionTitle: "Every reservation taken. Every takeaway order captured. Every event inquiry routed.",
+    solutionItems: [
+      "Answers every call — during dinner rush, after closing, lunch prep, weekdays, holidays.",
+      "Takes reservations with party size, date, time, and special requests (high chair, birthday cake, window table).",
+      "Handles takeaway orders and routes event inquiries to the manager with full details.",
+    ],
+    layers: [
+      {
+        title: "Answers the Friday 7 PM call your host can't — without missing a beat.",
+        body: "Phone rings during the dinner rush. The AI answers in 3 rings: 'Good evening, this is [Restaurant Name]. I can help you with a reservation, takeaway order, or any questions about our menu.' Natural, warm, on-brand. The caller makes a reservation for Saturday — party of 6, 8 PM, window table if available, one guest is vegetarian. All captured. WhatsApp confirmation sent. Your host never left the floor.",
+      },
+      {
+        title: "Captures every detail — party size, timing, allergies, special occasions.",
+        body: "Reservation: party size, date, time, seating preference, dietary requirements, special occasions (birthday, anniversary — your kitchen can prep the cake). Takeaway: items from your menu, delivery or pickup, payment preference, estimated time. Event inquiry: date, guest count, budget range, cuisine preference, private dining interest. Everything logged in structured format. No Post-it notes. No shouting across the kitchen.",
+      },
+      {
+        title: "Routes high-value inquiries to the right person. Batches the rest for morning.",
+        body: "Event inquiry for 50+ guests or private dining? Instant WhatsApp alert to your manager or owner with full details — the AI doesn't let a ₹2,50,000 opportunity sit in a voicemail box overnight. Standard reservations are confirmed automatically. Takeaway orders go straight to your POS or kitchen display. Your morning starts with a clean list of everything that happened after you closed — reservations confirmed, takeaway orders fulfilled, event leads captured.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR MENU, TABLES, AND RESERVATION RULES",
+        body: "Day 1 — We go through your seating layout, table capacities, reservation rules (max party size, time slots, private dining), menu for takeaway, and event inquiry workflow. 45 minutes.",
+        youSpend: "45 minutes walking us through your restaurant's operations.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR AI RECEPTIONIST",
+        body: "Days 2–7 — AI receptionist trained on your menu, seating layout, reservation rules, event handling, and communication style. Hindi, English, or Arabic depending on your market.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL RESTAURANT SCENARIOS",
+        body: "Day 8 — We simulate: Friday dinner reservation for 8, takeaway order during rush, corporate event inquiry at 10 PM, 'do you have outdoor seating?' question, party with severe nut allergy. You review recordings and adjust tone.",
+        youSpend: "30 minutes reviewing test recordings with your manager.",
+      },
+      {
+        week: 4,
+        phase: "LIVE ON YOUR RESTAURANT LINE",
+        body: "Day 10 — Your AI receptionist goes live on your main number. Every call answered during service, after hours, and holidays. We monitor for 30 days and optimize based on real reservation and call patterns.",
+        youSpend: "Zero. Your tables fill. Your team stays on the floor.",
+      },
+    ],
+    proofTitle: "23% missed calls during dinner service → 0%. Every table filled, every inquiry captured.",
+    proofBullets: [
+      "Missed call rate during dinner service: 23% → under 1%. Every reservation captured, including 9 PM and 10 PM calls.",
+      "Friday/Saturday table utilization increased 18% — slots that went empty due to missed reservation calls are now booked.",
+      "Event inquiries captured after hours for the first time — 3 corporate events worth ₹8 lakh booked from after-hours calls in the first 2 months.",
+    ],
+    caseStudy: {
+      client: "Fine Dining Restaurant — Mumbai",
+      problem: "80-cover restaurant receiving 35–50 calls per day. During dinner service (7 PM – 11 PM), the host answered calls between seating guests — leading to rushed conversations, missed details, and 3 double-bookings per month. After 11 PM calls went to voicemail. 23% of all calls were missed during peak hours. Event inquiries (corporate dinners, private celebrations) arrived via voicemail and were often followed up 2–3 days late — by which time the event organizer had already booked elsewhere.",
+      system: "AI receptionist deployed on the restaurant's main number. Handles reservations (party size, time, seating preference, dietary requirements, special occasions), takeaway orders, and event inquiries. WhatsApp confirmations sent for all reservations. High-value event inquiries trigger instant alert to the owner. Post-11 PM coverage for late-night callers.",
+      result: "Missed calls during service: 23% → under 1%. Friday/Saturday table utilization: +18%. Double-bookings: 3/month → 0. Event leads captured after hours: 6 in the first 2 months (3 converted, worth ₹8 lakh). Host's phone handling time freed: 90+ minutes per dinner service.",
+    },
+    testimonial: {
+      quote: "My host was spending 90 minutes on the phone every dinner service instead of greeting guests. Now the AI handles every call and my host is back on the floor. We booked 3 corporate events in the first month from calls that used to go to voicemail. That alone covered the AI for a year.",
+      author: "Chef Kapoor, Restaurant Owner, Mumbai",
+    },
+    proofStats: [
+      { stat: "0%", label: "missed calls during dinner service" },
+      { stat: "₹8L", label: "in event bookings from after-hours calls" },
+      { stat: "18%", label: "increase in weekend table utilization" },
+    ],
+    fitChecklist: {
+      headline: "Built for restaurants losing reservations and event bookings to unanswered phones.",
+      forYou: [
+        "You run a restaurant with 50+ covers and your phone rings constantly during dinner service",
+        "You lose weekend reservations because your host can't answer the phone while seating guests",
+        "You receive event inquiries (corporate dinners, private parties) that go to voicemail and are followed up too late",
+        "You want every call answered — reservations, takeaway, events — without pulling staff off the floor",
+        "You want it live within 10 days",
+      ],
+      notForYou: [
+        "You're a counter-service or fast-food operation with no reservation or event business",
+        "100% of your reservations come through Dineout/Zomato/OpenTable and you have zero phone inquiries",
+        "You want a delivery order chatbot — we build voice receptionists for phone-first restaurants",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Can it handle reservations with complex requirements?",
+        answer:
+          "Yes. Party size, date, time, seating preference (indoor/outdoor/private room), dietary restrictions (vegetarian, vegan, nut allergy, halal, kosher), special occasions (birthday cake, anniversary decoration, champagne on arrival), accessibility requirements — all captured in a single call and logged for your team.",
+      },
+      {
+        question: "Does it take takeaway orders?",
+        answer:
+          "Yes. The AI knows your full menu and can take takeaway orders over the phone — items, quantities, customizations, delivery or pickup, estimated time. Orders are sent to your POS or kitchen display. Payments can be taken over the phone via payment link or collected on delivery/pickup.",
+      },
+      {
+        question: "How does it handle event inquiries?",
+        answer:
+          "The AI captures: event date, guest count, budget range, cuisine preferences, private dining interest, and contact details. High-value inquiries (50+ guests or private dining) trigger an instant WhatsApp alert to your manager. Standard party reservations are booked directly. You never lose a ₹2 lakh event to a voicemail box.",
+      },
+      {
+        question: "What about 'is the kitchen still open?' and 'do you have parking?' questions?",
+        answer:
+          "All handled. We train the AI on your operating hours, kitchen close time, parking availability, dress code, corkage policy, cancellation policy, and any other FAQs. These informational calls would otherwise pull your host away from the floor for 2 minutes each — the AI handles them instantly.",
+      },
+      {
+        question: "Does it integrate with reservation systems like Dineout or OpenTable?",
+        answer:
+          "We integrate with Dineout, OpenTable, Resy, and custom reservation systems. If your system has an API, we connect to it. If you use a paper diary (many restaurants still do), we set up a digital calendar as part of the build and your host checks it each morning.",
+      },
+      {
+        question: "What languages does it support?",
+        answer:
+          "Hindi and English from day one. Arabic for UAE restaurants. Marathi, Tamil, and Kannada available on request. The AI detects the caller's language and responds accordingly — critical for restaurants that serve diverse communities.",
+      },
+      {
+        question: "What happens with Google's AI restaurant booking?",
+        answer:
+          "Google's AI books through Google's ecosystem — you lose the direct customer relationship, the data, and the ability to upsell. With your own AI receptionist on your own number, you keep the customer contact, their preferences, their history — and you control what the AI says about your restaurant. Own your phone line, own your customer.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Restaurant AI receptionists start at ₹2,499/month ($299/month). One-time setup fee covers menu training, reservation rule configuration, event workflow setup, and 30 days of monitoring. We scope it on a call with your actual call volume data.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll review your call volume, missed reservation patterns, and show you exactly what the AI handles — before you commit.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+    ],
+    keywords: [
+      "ai receptionist for restaurant",
+      "restaurant ai phone booking",
+      "ai reservation agent restaurant",
+      "restaurant phone answering ai",
+      "ai for restaurant reservations",
+      "restaurant missed calls ai",
+      "ai takeaway order restaurant",
+      "restaurant ai voice agent",
+      "ai for restaurant event booking",
+      "restaurant phone ai india",
+      "ai host for restaurant",
+      "ai for restaurant calls",
+      "restaurant booking ai agent uae",
+      "fine dining ai receptionist",
+      "ai for restaurant table management",
+      "restaurant ai phone answering service",
+    ],
+  },
+
+  // ─── PAGE 6: AI for Diagnostic Lab ─────────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-diagnostic-lab"],
+    title: "AI for Diagnostic Labs — Stop Losing Bookings to a Busy Phone Line | Agentic AI Labs",
+    description:
+      "Diagnostic labs lose 15–20% of bookings because the phone is always busy. We build an AI receptionist that handles test bookings, report queries, home collection requests, and WhatsApp report delivery — 24/7, in the patient's language.",
+    canonicalUrl: makeCanonical(["ai-for-diagnostic-lab"]),
+    heroLabel: "Built for Diagnostic & Pathology Labs",
+    heroHeadline: "Your lab phone is busy. Your patient just booked with the lab down the road.",
+    heroSubheadline:
+      "A patient calls to book a fasting blood test for tomorrow morning. Three other patients are already on hold. The call drops. The patient Googles the next lab. That ₹2,000–₹10,000 ($25–$120) full-body checkup just walked out the door — because nobody picked up.",
+    painTitle: "The phone line problem that silently kills lab revenue",
+    painPoints: [
+      "Patient calls to schedule a fasting blood sugar test for 7 AM tomorrow. Your phone rings and rings — two receptionists are already handling walk-ins and another caller. The patient hangs up after 30 seconds and books with the Thyrocare franchise next door. One test worth ₹500–₹5,000 ($7–$60) — gone.",
+      "30+ patients need to be told their reports are ready. Every single day. Your receptionist spends 2–3 hours making outbound calls — 'Sir, your CBC report is ready, please collect from the counter.' That's 2–3 hours not spent answering new booking calls. The phone stays busy while your team calls existing patients about ready reports.",
+      "Home collection requests spike between 6–9 AM. That's exactly when your phlebotomists are already out and your front desk is managing the morning rush. Patients who want home collection call, get no answer, and book with a lab that has an app or a faster phone line.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Missed bookings due to busy phone (15–20% of inbound)", amount: "₹30,000–₹1,50,000 / $400–$1,800 per month" },
+        { label: "Receptionist time on report-ready calls (2–3 hrs/day)", amount: "₹8,000–₹12,000 / $100–$150 per month" },
+        { label: "Lost home collection requests (after-hours + peak hours)", amount: "₹15,000–₹50,000 / $200–$600 per month" },
+      ],
+      total: "₹53,000–₹2,12,000 / $700–$2,550 per month in leaked revenue and wasted receptionist time",
+      solvesFor: "₹4,999/month ($199/month) — every call answered, every report delivered via WhatsApp",
+      source: "Agentic AI Labs diagnostic lab audits + NABL-accredited lab operator interviews, 2026",
+    },
+    practitionerQuote: {
+      text: "We process 200+ samples a day but our phone still runs like a 1990s STD booth. Two lines, both busy from 7 AM to 11 AM. I know we're losing home collection bookings — I just don't know how many.",
+      attribution: "Pathology lab owner, Pune — Agentic AI Labs discovery call, 2026",
+    },
+    statusQuoTitle: "What labs try before they fix the phone problem",
+    statusQuoItems: [
+      "Add a second phone line — helps marginally, but both lines are busy during peak hours (7–11 AM). Doesn't solve the structural problem of 40–80 calls competing for 2 lines.",
+      "WhatsApp broadcast for report delivery — patients don't always check WhatsApp, can't ask follow-up questions, and you still need to handle inbound calls for 'is my report ready?'",
+      "Hire another receptionist — ₹12,000–₹18,000/month ($150–$220/month) for someone who still can't handle 3 simultaneous calls and takes Sundays off.",
+    ],
+    industrySignal: {
+      headline: "India's diagnostic lab market is ₹90,000+ crore ($11B+) — and the labs winning are the ones patients can actually reach.",
+      body: "The Indian diagnostic market is projected to grow at 12–15% CAGR through 2028. But consolidation is brutal — chains like Metropolis, Dr. Lal PathLabs, and Thyrocare are investing heavily in app-based booking and AI triage. Independent labs that can't be reached by phone are losing patients to franchises that can. The labs that modernize their patient communication survive. The ones still running on two phone lines and a register don't.",
+      source: "ICRA Diagnostic Sector Report + CRISIL Research, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Book. Inform. Collect. One AI receptionist for your entire lab.",
+    solutionItems: [
+      "AI answers every inbound call — test bookings, fasting instructions, timing, pricing, home collection scheduling.",
+      "Outbound report-ready calls handled automatically — 30+ patients notified daily without your receptionist lifting the phone.",
+      "WhatsApp report delivery with download links sent the moment results are approved in your LIS.",
+    ],
+    layers: [
+      {
+        title: "Books every test — with fasting prep and timing included.",
+        body: "Patient calls to book a lipid profile. The AI confirms the test, tells them to fast for 12 hours, suggests a 7:30 AM slot, and books it — all in Hindi, English, Marathi, or whatever the patient speaks. Home collection? The AI captures the address, preferred time, number of patients, and routes the request to your phlebotomy team via WhatsApp. No hold music. No 'please call back later.' Every call becomes a booking.",
+      },
+      {
+        title: "Remembers every patient — no more 'what's your patient ID?'",
+        body: "Repeat caller? The AI already knows their name, past tests, preferred timing, and home address. 'Mrs. Sharma, your last HbA1c was on March 15th. Would you like to schedule your follow-up?' Built on Mem0 persistent memory — every interaction compounds into a patient profile that makes the next call faster and more personal. Your lab feels premium. Because it remembers.",
+      },
+      {
+        title: "Delivers reports and clears your receptionist's entire afternoon.",
+        body: "The moment a report is approved in your LIMS, the AI calls the patient: 'Your CBC report is ready. I'm sending the download link to your WhatsApp now.' 30+ outbound calls a day — done automatically. Your receptionist stops spending 2–3 hours on report-ready calls and starts handling the work that actually needs a human. Abnormal values? The AI flags them and routes a call to your pathologist's direct line.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT YOUR CALL FLOW AND TEST MENU",
+        body: "We map your test menu, pricing, fasting requirements, home collection zones, report delivery process, and peak call hours. We identify exactly where calls drop and bookings leak.",
+        youSpend: "45 minutes on a call. Bring your test price list.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR LAB'S AI RECEPTIONIST",
+        body: "We build the AI on your actual test catalog — not a generic medical bot. It knows your tests, your pricing, your fasting rules, your home collection zones, your report TAT. It speaks the languages your patients speak.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL PATIENT SCENARIOS",
+        body: "Patient books a thyroid panel with home collection for 6:30 AM. Another calls asking if their report is ready. A third asks about fasting requirements for a glucose tolerance test. We test every scenario that hits your front desk daily.",
+        youSpend: "20 minutes reviewing test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE — ZERO MISSED BOOKINGS FROM DAY ONE",
+        body: "AI goes live on your lab's number. Handles inbound bookings, report queries, and home collection scheduling simultaneously. Your receptionist handles walk-ins. We monitor for 30 days.",
+        youSpend: "Zero. Check your booking dashboard.",
+      },
+    ],
+    proofTitle: "Labs stop losing patients the day the AI answers the phone.",
+    proofBullets: [
+      "Multi-location pathology lab: 60+ daily calls handled without a single busy signal. Home collection bookings up 35% in the first month.",
+      "Single-center diagnostic lab: Receptionist reclaimed 2.5 hours/day previously spent on report-ready calls. Patient complaints about phone availability dropped to zero.",
+      "NABL-accredited lab: After-hours booking capture (6–9 PM) went from zero to 8–12 bookings/week — patients booking morning fasting tests the night before.",
+    ],
+    proofStats: [
+      { stat: "0", label: "busy signals after go-live" },
+      { stat: "35%", label: "increase in home collection bookings" },
+      { stat: "2.5 hrs", label: "receptionist time reclaimed daily" },
+    ],
+    fitChecklist: {
+      headline: "Built for diagnostic labs losing bookings to a busy phone line.",
+      forYou: [
+        "You run a diagnostic or pathology lab getting 40+ calls per day",
+        "Your phone line is busy during peak hours and you know patients are going elsewhere",
+        "Your receptionist spends hours calling patients about ready reports",
+        "You offer home collection but struggle to handle the scheduling calls during rush hour",
+        "You want every call answered in the patient's language without hiring more front desk staff",
+      ],
+      notForYou: [
+        "You receive fewer than 15 calls per day — a single receptionist handles it fine",
+        "You're a lab aggregator platform, not a direct-service lab",
+        "Your calls require live pathologist consultation on every interaction",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Can the AI handle my full test menu with pricing?",
+        answer:
+          "Yes. We load your entire test catalog — individual tests, packages, and combos — with current pricing. When a patient asks 'how much is a full body checkup?', the AI gives them your exact price, not a generic estimate. When you update pricing, we update the AI.",
+      },
+      {
+        question: "Does it know fasting requirements for each test?",
+        answer:
+          "Yes. The AI knows fasting rules for every test in your catalog. Lipid profile? 12-hour fast. Glucose tolerance? Specific prep instructions. It tells the patient exactly what to do before their test — reducing no-shows and repeat collections.",
+      },
+      {
+        question: "How does report delivery work?",
+        answer:
+          "When a report is approved in your LIS/LIMS, the AI calls the patient and sends a WhatsApp message with the download link. For abnormal values that your pathologist flags, the AI routes a priority call with context. Your receptionist never touches the phone for routine report notifications.",
+      },
+      {
+        question: "Can it handle home collection booking with address and timing?",
+        answer:
+          "Yes. The AI captures the patient's address, preferred time slot, number of patients at the location, and any special requirements (e.g., elderly patient, need wheelchair-accessible). It checks against your home collection zones and phlebotomist availability, then confirms the booking.",
+      },
+      {
+        question: "What languages does it speak?",
+        answer:
+          "Hindi, English, Hinglish, Marathi, Gujarati, Tamil, Telugu, and more. The AI detects the patient's language automatically — no 'press 1 for Hindi.' It handles code-switching (mixing Hindi and English in the same sentence) natively.",
+      },
+      {
+        question: "Will it integrate with my existing LIS/LIMS?",
+        answer:
+          "We integrate with major LIS/LIMS platforms used by Indian diagnostic labs. If your system has an API or can export data, we can connect. We scope the integration during the audit call.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Diagnostic lab AI receptionist systems start at ₹4,999/month ($199/month) for single-location labs. Multi-location and high-volume labs are priced based on call volume and integration complexity. We give you a clear number on the audit call.",
+      },
+      {
+        question: "How quickly can I go live?",
+        answer:
+          "Most diagnostic lab AI systems go live in 5–7 days. Simple inbound booking agents can launch in 3 days. Report delivery automation depends on your LIS integration timeline.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll audit your missed booking rate and show you exactly how much revenue your busy phone line is costing you.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+    ],
+    keywords: [
+      "ai for diagnostic lab",
+      "pathology lab ai receptionist",
+      "ai appointment booking lab",
+      "diagnostic centre ai phone",
+      "ai for pathology lab",
+      "diagnostic lab missed calls",
+      "ai report delivery diagnostic lab",
+      "lab test booking ai",
+      "home collection booking ai",
+      "ai receptionist diagnostic centre",
+      "diagnostic lab phone automation",
+      "ai for blood test booking",
+      "pathology lab phone agent",
+      "lims ai integration",
+      "diagnostic lab ai india",
+      "ai for lab report notification",
+      "lab receptionist ai hindi",
+      "diagnostic centre ai agent",
+    ],
+  },
+
+  // ─── PAGE 7: AI for Pest Control ───────────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-pest-control"],
+    title: "AI for Pest Control Companies — Never Lose an Emergency Call Again | Agentic AI Labs",
+    description:
+      "70% of pest control leads come from phone calls. Emergency pest calls (scorpion, snake, bee hive) convert at 90%+ — but only if someone answers. We build an AI phone agent that answers every call, captures the pest type and urgency, and dispatches your on-call team instantly.",
+    canonicalUrl: makeCanonical(["ai-for-pest-control"]),
+    heroLabel: "Built for Pest Control Companies",
+    heroHeadline: "Termites in the bedroom at 10 PM. Your office is closed. That ₹30,000 job just called your competitor.",
+    heroSubheadline:
+      "A homeowner finds termites crawling out of the wall. It's 10 PM. They call you. No answer. They call the next pest control company on Google. That termite treatment — worth ₹15,000–₹50,000 ($200–$600) — went to whoever picked up the phone. Not whoever was best. Whoever answered.",
+    painTitle: "The after-hours problem that bleeds pest control revenue",
+    painPoints: [
+      "Customer discovers a scorpion in their child's room at 11 PM. They're panicked. They call your number. Voicemail. They call the next company. Emergency pest calls convert at 90%+ — but only if answered. You didn't answer. Your competitor did. That ₹5,000–₹15,000 ($60–$200) emergency job is gone.",
+      "Monsoon season in India. Spring in the US. Summer in Australia. Call volume spikes 3–5x. Your two-person office can't handle 40–60 calls a day when they're also running treatments in the field. Half the calls go to voicemail during your busiest — and most profitable — season.",
+      "70% of pest control leads come from phone calls, not web forms. A homeowner doesn't fill out a contact form when there's a bee hive above their front door. They call. If you don't answer, they call the listing below yours on Google. Your ad spend just funded your competitor's booking.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average emergency pest call value", amount: "₹5,000–₹15,000 / $60–$200" },
+        { label: "Termite treatment contract value", amount: "₹15,000–₹50,000 / $200–$600" },
+        { label: "Missed calls during peak season (est. 30–40%)", amount: "₹1,00,000–₹5,00,000 / $1,200–$6,000 per season" },
+      ],
+      total: "One peak season of missed calls costs more than a year of AI phone coverage",
+      solvesFor: "₹4,999/month ($199/month) — every emergency answered, every job dispatched",
+      source: "Agentic AI Labs pest control operator interviews + NPMA industry data, 2026",
+    },
+    practitionerQuote: {
+      text: "Last monsoon we got 50+ calls a day for three weeks. Me and one guy in the office — we missed at least half. Each missed call was a ₹3,000–₹10,000 job. I don't even want to calculate the total loss.",
+      attribution: "Pest control business owner, Mumbai — Agentic AI Labs discovery call, 2026",
+    },
+    statusQuoTitle: "What pest control companies try before fixing the phone problem",
+    statusQuoItems: [
+      "Forwarding to personal mobile — you answer calls at dinner, during treatments, while driving. You sound distracted. The customer hears field noise. Not professional, not sustainable.",
+      "Voicemail with callback promise — 'We'll call you back within 2 hours.' But the homeowner with roaches in the kitchen isn't waiting 2 hours. They're calling the next company right now.",
+      "Hiring seasonal phone staff — ₹10,000–₹15,000/month ($150–$200/month) per person. They need training, take sick days, and still can't handle 4 calls at once during a monsoon spike.",
+    ],
+    industrySignal: {
+      headline: "The pest control company that answers the phone first wins the job. 90% of the time.",
+      body: "Pest control is one of the most phone-dependent service industries. NPMA data shows that 70% of residential pest control leads originate from phone calls. Emergency calls (venomous pests, hive removal, active infestations) have the highest conversion rate of any service category — but the window is minutes, not hours. The companies investing in 24/7 phone coverage are capturing the jobs that used to go to whoever happened to be near their phone.",
+      source: "National Pest Management Association (NPMA) + ServiceTitan Industry Benchmark, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Answer. Triage. Dispatch. Every pest call handled — including 10 PM emergencies.",
+    solutionItems: [
+      "AI answers every inbound call 24/7 — captures pest type, location, urgency level, and property details.",
+      "Emergency calls (venomous pests, active infestations, hive near entrance) trigger instant WhatsApp dispatch to your on-call team.",
+      "Non-urgent inspection requests are queued for next-day scheduling — caller gets confirmation and timeline immediately.",
+    ],
+    layers: [
+      {
+        title: "Answers the panic call at 10 PM so your competitor doesn't.",
+        body: "Scorpion in the nursery. Bee hive above the front door. Termites swarming after the first rain. These calls come at night, on weekends, during holidays — exactly when your office is closed. The AI answers in under 3 rings, asks the right questions (pest type, location in the home, anyone allergic, children/pets present), and captures everything your field team needs to respond. The caller gets a professional response. You get the job.",
+      },
+      {
+        title: "Triages emergencies from routine inspections automatically.",
+        body: "Not every pest call is an emergency. Cockroach sighting in the kitchen? Schedule a next-day inspection. But a snake in the living room? That's an immediate dispatch. The AI understands urgency — it routes emergencies to your on-call team's WhatsApp within 30 seconds with full details. Routine requests go to your next-day queue. Your team wakes up to organized bookings, not a pile of voicemails.",
+      },
+      {
+        title: "Captures the seasonal flood without dropping a single call.",
+        body: "Monsoon hits. Spring arrives. Your call volume goes from 15 to 60 calls a day. The AI handles all of them simultaneously — no busy signals, no hold music, no 'please call back.' It books inspections, dispatches emergencies, answers pricing questions, and sends confirmation WhatsApps. Your busiest season becomes your most profitable instead of your most chaotic.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR SERVICE MENU AND DISPATCH RULES",
+        body: "We document your services (general pest, termite, rodent, bee/wasp, fumigation), pricing structure, service zones, emergency dispatch rules, and seasonal patterns. We identify your peak call hours and current miss rate.",
+        youSpend: "45 minutes on a call.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR PEST CONTROL AI PHONE AGENT",
+        body: "We build the AI on your actual services and pricing — not a generic template. It knows the difference between a termite inspection and a fumigation contract. It knows your service areas. It speaks Hindi, English, or whatever your customers speak.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST EMERGENCY AND ROUTINE SCENARIOS",
+        body: "Snake call at midnight. Three simultaneous monsoon calls. Customer asking about annual pest contract pricing. We test every scenario — including the emergencies that need instant dispatch and the routine requests that need next-day scheduling.",
+        youSpend: "20 minutes reviewing test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE — EVERY PEST CALL ANSWERED FROM NIGHT ONE",
+        body: "AI goes live on your business number. Emergency dispatch active. Routine booking active. We monitor for 30 days and tune based on your real call patterns — especially once seasonal demand shifts.",
+        youSpend: "Zero. Check your WhatsApp for dispatched jobs.",
+      },
+    ],
+    proofTitle: "Pest control companies stop losing jobs the night the AI goes live.",
+    proofBullets: [
+      "Pest control operator (Mumbai): 22 after-hours calls captured in the first week — 8 were emergency dispatches that would have gone to competitors.",
+      "Multi-city pest company (US): Peak season call handling went from 60% answer rate to 100%. Booking revenue up 28% in the first season with AI.",
+      "Single-operator pest business (Australia): Owner stopped answering calls during treatments. AI handled 100% of inbound. Customer satisfaction scores improved because the owner was focused on the job, not the phone.",
+    ],
+    proofStats: [
+      { stat: "100%", label: "calls answered — including 10 PM emergencies" },
+      { stat: "< 30s", label: "emergency dispatch to on-call WhatsApp" },
+      { stat: "28%", label: "booking revenue increase in first peak season" },
+    ],
+    fitChecklist: {
+      headline: "Built for pest control companies losing emergency jobs to a closed office.",
+      forYou: [
+        "You run a pest control business and get 15+ calls per day (more during peak season)",
+        "You miss after-hours calls — especially emergency pest calls that convert at 90%+",
+        "Your call volume spikes 3–5x during monsoon/spring/summer and you can't keep up",
+        "You want every call answered and every emergency dispatched without hiring seasonal staff",
+        "Your budget allows ₹4,999/month ($199/month) to never miss a call again",
+      ],
+      notForYou: [
+        "You only do scheduled commercial contracts — no residential emergency calls",
+        "You receive fewer than 10 calls per day year-round — manual answering covers it",
+        "You already have a 24/7 call center handling your inbound",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "How does the AI know which calls are emergencies?",
+        answer:
+          "We program triage logic based on your rules. Venomous pests (scorpion, snake), active hive near entrance, large infestations — these trigger immediate dispatch to your on-call team. Cockroach sighting, ant trail, general inspection request — these go to next-day queue. You define the rules; the AI enforces them consistently at 3 AM or 3 PM.",
+      },
+      {
+        question: "Can it handle my service pricing and give quotes?",
+        answer:
+          "Yes. We load your full service menu with pricing ranges. General pest control: ₹2,000–₹5,000. Termite treatment: ₹15,000–₹50,000. The AI gives callers accurate ranges and books inspections for exact quotes. It doesn't guess — it uses your numbers.",
+      },
+      {
+        question: "What happens during monsoon/peak season when call volume triples?",
+        answer:
+          "The AI handles unlimited simultaneous calls. When you go from 15 calls/day to 60 calls/day, every single one gets answered. No busy signals. No hold music. No voicemail. This is exactly when the AI pays for itself — peak season is where you lose the most revenue to missed calls.",
+      },
+      {
+        question: "Does it dispatch my on-call team automatically?",
+        answer:
+          "Yes. Emergency calls trigger a WhatsApp message to your designated on-call person with all details: pest type, address, urgency, customer phone number, any special notes (children, pets, allergies). Your technician gets everything they need to respond without calling back for details.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi, English, Hinglish, Marathi, Tamil, Telugu for India. English for US and Australia. The AI detects the caller's language automatically and responds accordingly.",
+      },
+      {
+        question: "How fast can I go live?",
+        answer:
+          "5–7 days from your first call with us. Emergency-only AI agents (no pricing, just capture and dispatch) can launch in 3 days.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Pest control AI phone agents start at ₹4,999/month ($199/month). Multi-location companies with complex dispatch rules are priced based on call volume and service zones. We give you a clear number on the audit call.",
+      },
+      {
+        question: "Will it work with my existing phone number?",
+        answer:
+          "Yes. We forward from your existing number. Your customers see your number, not ours. No change to your Google listing, your website, or your vehicle wraps.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll audit your missed call rate and show you exactly how many emergency jobs walked to your competitor last month.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+    ],
+    keywords: [
+      "ai for pest control",
+      "pest control ai phone agent",
+      "ai answering service pest control",
+      "pest control missed calls",
+      "ai dispatch pest control",
+      "pest control after hours phone",
+      "ai receptionist pest control",
+      "pest control emergency call ai",
+      "ai for pest control india",
+      "pest control phone automation",
+      "termite treatment ai booking",
+      "pest control ai voice agent",
+      "pest control seasonal call handling",
+      "ai phone agent exterminator",
+      "pest control lead capture ai",
+    ],
+  },
+
+  // ─── PAGE 8: AI for Immigration Consultant ─────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-immigration-consultant"],
+    title: "AI for Immigration Consultants — Stop Losing ₹3L Students to a Missed Call | Agentic AI Labs",
+    description:
+      "A mid-size immigration consultant handles 50–100 inquiry calls/day during peak season. Conversion from inquiry to enrollment is 8–15%. Every missed call is a student — and ₹2–5L in consulting fees — walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
+    canonicalUrl: makeCanonical(["ai-for-immigration-consultant"]),
+    heroLabel: "Built for Immigration & Study Abroad Consultants",
+    heroHeadline: "A student's parents are ready to pay ₹3L. Your counselor is in a session. The next agency answered.",
+    heroSubheadline:
+      "Peak season. January–March, July–September. 50–100 calls a day. Your counselors are in back-to-back sessions. The phone rings. A student wants to know about MS in USA admission requirements. Nobody picks up. That student — whose parents have ₹2–5L ($2,500–$6,000) ready for consulting fees — calls the next agency on Google. India's overseas education market is ₹50,000+ crore ($6B+). Your share depends on who answers the phone.",
+    painTitle: "The inquiry leak that peak season makes invisible",
+    painPoints: [
+      "Student calls about MBA in Canada. Your senior counselor is in a session explaining UK visa documents to another family. Your junior counselor is on another call. The student hears ringing. No answer. They call the big-brand agency with a call center. You just lost ₹2–5L ($2,500–$6,000) in consulting fees — not because your counseling is worse, but because your phone was busy.",
+      "Peak season: January–March for fall intake, July–September for spring intake. Call volume jumps 3–5x. Your 3-person team handles 15 counseling sessions and 50+ phone inquiries simultaneously — which means they handle neither well. Inquiry calls get rushed. Sessions get interrupted. Conversion drops exactly when volume is highest.",
+      "Follow-up is where immigration consulting revenue lives or dies. A student who inquired 3 days ago about Australia PR hasn't been called back because your team is drowning in new inquiries. That student already paid a deposit to the agency that followed up the same day. The inquiry-to-enrollment conversion rate (8–15%) is low not because students aren't interested — it's because follow-up happens too late.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average consulting fee per student enrollment", amount: "₹2,00,000–₹5,00,000 / $2,500–$6,000" },
+        { label: "Missed inquiries during peak season (est. 30–40%)", amount: "₹20,00,000–₹50,00,000 / $25,000–$60,000 per season" },
+        { label: "Lost follow-ups (students who inquired but never heard back)", amount: "₹10,00,000–₹30,00,000 / $12,000–$36,000 per season" },
+      ],
+      total: "₹30,00,000–₹80,00,000 / $37,000–$96,000 per peak season in leaked enrollment revenue",
+      solvesFor: "₹9,999/month ($499/month) — every inquiry captured, every student profiled, every session booked",
+      source: "Agentic AI Labs immigration consultant audits + ICEF Monitor data, 2026",
+    },
+    practitionerQuote: {
+      text: "January to March is madness. My three counselors are in sessions all day. The phone doesn't stop. I know we're losing students — I can see 40 missed calls at the end of the day. Each one could be a ₹3 lakh enrollment.",
+      attribution: "Immigration consultant, Delhi — Agentic AI Labs discovery call, 2026",
+    },
+    statusQuoTitle: "What consultancies try before fixing the inquiry pipeline",
+    statusQuoItems: [
+      "Hire seasonal receptionists — ₹12,000–₹18,000/month ($150–$220/month) per person. They can't answer questions about IELTS requirements, country-specific processes, or visa timelines. They take messages. Students want answers, not callbacks.",
+      "Google Forms and website chat — students don't fill out forms when they have urgent questions about deadlines. They call. A chatbot can't explain the difference between a student visa and a skilled worker visa.",
+      "WhatsApp broadcast for follow-up — generic bulk messages that feel like spam. Students want personalized responses about their specific situation (course, country, budget, timeline), not a mass broadcast.",
+    ],
+    industrySignal: {
+      headline: "1.3 million Indian students studied abroad in 2025 — and the number is growing 15%+ annually.",
+      body: "India is the world's second-largest source of international students. The overseas education consulting market is intensely competitive, with thousands of agencies competing for the same student pool during narrow intake windows. Agencies that respond to inquiries within 30 minutes are 7x more likely to enroll the student compared to those who respond after 24 hours. The consultant that captures and qualifies the inquiry first wins the enrollment — regardless of brand size or years in business.",
+      source: "Ministry of External Affairs + ICEF Monitor + Bureau of Immigration, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Capture. Profile. Book. Every student inquiry becomes a counseling session.",
+    solutionItems: [
+      "AI handles the initial inquiry — captures student profile (course interest, target country, budget, timeline, academic background, IELTS/TOEFL scores).",
+      "Answers FAQs about process, documents, deadlines, and eligibility — so counselors only handle qualified sessions.",
+      "Books counseling sessions directly into your calendar. Follows up via WhatsApp with next steps and document checklist.",
+    ],
+    layers: [
+      {
+        title: "Captures every student inquiry with a complete profile — not just a name and number.",
+        body: "Student calls about MS in Computer Science in the US. The AI doesn't just say 'we'll call you back.' It captures everything: target course, target universities, GRE/IELTS scores, undergraduate GPA, budget range, preferred intake (fall/spring), work experience. By the time your counselor sits down for the session, they have a complete student profile — not a post-it note that says 'MS USA call back.' The counseling session starts at step 5 instead of step 1.",
+      },
+      {
+        title: "Answers the questions that eat 80% of your counselors' phone time.",
+        body: "What documents do I need for a Canada study permit? What's the IELTS cutoff for UK universities? Is Australia PR possible after a master's? These questions have standard answers — but your counselors answer them 30+ times a day. The AI handles these FAQs accurately, with country-specific detail, freeing your counselors to spend their time on high-value consultation sessions where they actually close enrollments.",
+      },
+      {
+        title: "Books sessions and follows up — so no student falls through the cracks.",
+        body: "The AI books the counseling session into your calendar based on counselor availability and student preference. Then it sends a WhatsApp confirmation with the session time, a preliminary document checklist, and what to prepare. Three days before the session, it sends a reminder. If the student doesn't show, it reschedules automatically. Your enrollment pipeline doesn't leak because someone forgot to follow up.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "MAP YOUR INQUIRY FUNNEL AND COUNSELOR WORKFLOW",
+        body: "We document your target countries, course categories, fee structures, common student questions, counselor availability, and enrollment process. We identify where inquiries drop off and where follow-up fails.",
+        youSpend: "1 hour on a call. Bring your inquiry data from last peak season.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR CONSULTANCY'S AI INQUIRY AGENT",
+        body: "We build the AI on your actual services — not a generic education chatbot. It knows your country specializations, your fee structure, your eligibility criteria, and your counselor calendar. It speaks Hindi, English, and Hinglish — because that's how your students call.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL STUDENT SCENARIOS",
+        body: "Student asks about MS in USA with low GPA. Another asks about Canada PR pathway after diploma. A parent calls asking about fees and safety for their daughter going to UK. We test every scenario your counselors handle daily — including the edge cases.",
+        youSpend: "30 minutes reviewing test call recordings with your senior counselor.",
+      },
+      {
+        week: 4,
+        phase: "LIVE BEFORE YOUR NEXT PEAK SEASON",
+        body: "AI goes live on your consultancy's number. Every inquiry captured with a full student profile. Every session booked with context attached. We monitor for 30 days and tune based on your real inquiry patterns.",
+        youSpend: "Zero. Check your session calendar.",
+      },
+    ],
+    proofTitle: "Consultancies stop losing students the day the AI starts answering.",
+    proofBullets: [
+      "Immigration consultancy (Delhi): Captured 35+ inquiries per day during Jan–Mar peak that previously went unanswered. Counselor utilization increased from 40% to 85% — more sessions with pre-profiled students.",
+      "Study abroad agency (Mumbai): Follow-up automation reduced student drop-off by 45%. Students arrived at counseling sessions with documents ready because the AI sent the checklist in advance.",
+      "Boutique UK-focused consultancy (Bangalore): Inquiry-to-enrollment conversion improved from 9% to 17% — because every inquiry was profiled and every session was prepared.",
+    ],
+    proofStats: [
+      { stat: "35+", label: "daily inquiries captured during peak season" },
+      { stat: "85%", label: "counselor utilization (up from 40%)" },
+      { stat: "45%", label: "reduction in student drop-off rate" },
+    ],
+    fitChecklist: {
+      headline: "Built for immigration consultants drowning in peak-season inquiries.",
+      forYou: [
+        "You handle 20+ inquiry calls per day (50–100+ during peak season)",
+        "Your counselors spend more time answering repeat questions than conducting actual sessions",
+        "You lose students to competitors because your follow-up takes days instead of hours",
+        "You want every inquiry profiled and every session pre-loaded with student context",
+        "Your consulting fees are ₹2L+ per student — the ROI from capturing even 2 extra enrollments pays for a year of AI",
+      ],
+      notForYou: [
+        "You handle fewer than 10 inquiries per week — manual processes work fine at this scale",
+        "You're a visa filing service only (no counseling or enrollment pipeline)",
+        "You only work with corporate immigration (H-1B, L-1) — this is built for student and PR consulting",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Can the AI answer country-specific immigration questions accurately?",
+        answer:
+          "Yes. We train the AI on your specific country expertise — visa requirements, intake dates, document checklists, IELTS/TOEFL cutoffs, PR pathways, and process timelines. It gives accurate, specific answers — not generic 'visit our website' responses. When a question goes beyond standard FAQs, it books a counselor session.",
+      },
+      {
+        question: "How does student profiling work?",
+        answer:
+          "The AI asks a structured set of questions during the initial call: target country, course interest, undergraduate degree and GPA, test scores (IELTS/GRE/GMAT), budget range, preferred intake, work experience. This profile is attached to the counseling session booking. Your counselor starts the session fully briefed — no more spending the first 15 minutes asking basic questions.",
+      },
+      {
+        question: "Will it handle Hindi and Hinglish calls?",
+        answer:
+          "Yes. Most student inquiry calls in India are in Hindi, Hinglish, or a mix. The AI handles code-switching natively — 'mujhe Canada mein MBA karna hai, budget around 25 lakhs hai' — without breaking. It responds in the same language the student uses.",
+      },
+      {
+        question: "Can it book counseling sessions into my calendar?",
+        answer:
+          "Yes. It integrates with Google Calendar, Outlook, or your CRM's booking system. It checks counselor availability, books the session, and sends the student a WhatsApp confirmation with time, preparation checklist, and documents to bring.",
+      },
+      {
+        question: "What about peak season when I get 100+ calls a day?",
+        answer:
+          "The AI handles unlimited simultaneous calls. When you go from 20 calls/day to 100 calls/day during Jan–Mar or Jul–Sep peak, every single inquiry is captured. No busy signals. No voicemail. This is exactly when the AI pays for itself — peak season is where you lose the most enrollments to missed inquiries.",
+      },
+      {
+        question: "Does it follow up with students who don't book a session?",
+        answer:
+          "Yes. If a student calls but doesn't book, the AI sends a WhatsApp follow-up the same day with a booking link. If they still don't book, it follows up again after 3 days. You define the follow-up sequence. No student inquiry goes cold because someone forgot to call back.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Immigration consultant AI systems start at ₹9,999/month ($499/month). High-volume consultancies with multiple counselors and CRM integration are priced based on call volume and complexity. We scope it clearly on the audit call before you commit.",
+      },
+      {
+        question: "How fast can we go live — ideally before next peak season?",
+        answer:
+          "7–10 days from your first call with us. Simple inquiry capture agents can launch in 5 days. Full counselor booking + follow-up automation takes the full 10 days. If your peak season starts in 3 weeks, we can have you live in time.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll audit your peak-season inquiry data and show you exactly how many students you're losing to a busy phone line.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
+      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
+    ],
+    keywords: [
+      "ai for immigration consultant",
+      "study abroad ai phone agent",
+      "ai for education consultant",
+      "immigration consultancy ai receptionist",
+      "ai for overseas education agency",
+      "study abroad inquiry automation",
+      "ai phone agent immigration",
+      "education consultant missed calls",
+      "ai student inquiry capture",
+      "immigration consultant phone automation",
+      "ai for study abroad agency india",
+      "counseling session booking ai",
+      "ai follow up immigration consultant",
+      "ai voice agent education consultancy",
+      "overseas education ai agent",
+      "immigration ai receptionist hindi",
+      "study abroad lead capture ai",
+    ],
+  },
+
+  // ─── PAGE 9: AI Voice Agent Hindi ──────────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-voice-agent-hindi"],
+    title: "Hindi AI Voice Agent — Voice AI That Actually Understands Hindi, Hinglish & Indian Accents | Agentic AI Labs",
+    description:
+      "US-built voice AI tools fail on Hindi, Hinglish, background noise, and Indian accents. We build voice AI that speaks Hindi natively, handles code-switching, and sounds natural to Indian callers. Not a translated English bot — a Hindi-first voice agent.",
+    canonicalUrl: makeCanonical(["ai-voice-agent-hindi"]),
+    heroLabel: "Hindi-First Voice AI",
+    heroHeadline: "Your US voice AI can't understand 'mujhe appointment chahiye.' Your customers can tell.",
+    heroSubheadline:
+      "You tried a US voice AI platform. It can't understand your customer speaking Hindi. It breaks on Hinglish — 'mujhe AC repair chahiye, tomorrow morning around 9 baje.' It can't handle traffic noise in the background. Your customers feel like they're talking to a broken robot. 57% of India's internet users prefer Hindi. 60%+ of business calls in India happen in Hindi or Hinglish. If your voice AI can't handle that, it's not built for India.",
+    painTitle: "Why US-built voice AI fails in India — and your customers know it",
+    painPoints: [
+      "Customer calls to book an AC repair in Hindi. Your US voice AI (Vapi, Retell, Bland) hears garbled input. It asks them to repeat. Twice. The customer hangs up — convinced your business uses a broken automated system. That ₹1,500–₹5,000 ($20–$60) service call just walked to the competitor with a human receptionist.",
+      "Hinglish is how India actually talks. 'Mujhe kal subah 10 baje appointment chahiye, near Koramangala.' English words. Hindi grammar. Mixed in one sentence. US voice AI models were trained on American English — they don't understand code-switching. They don't understand 'kal subah' means tomorrow morning. They don't understand 'chahiye' means 'I need.' Your callers aren't confused. Your AI is.",
+      "Indian phone calls have traffic noise. Fan noise. Street vendor noise. Autorickshaw horns. The customer is calling from a busy road — not a quiet office. US voice AI breaks on background noise because it was trained in clean studio conditions. Your customer is standing at a bus stop and the AI can't hear them. They hang up. You lose the booking.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Calls where US voice AI fails to understand Hindi/Hinglish", amount: "40–60% of inbound (industry tests)" },
+        { label: "Revenue lost per failed AI interaction (customer hangs up)", amount: "₹1,500–₹50,000 / $20–$600 per call" },
+        { label: "Customer trust lost when AI sounds like a broken robot", amount: "Permanent — they don't call back" },
+      ],
+      total: "A voice AI that can't speak Hindi isn't saving you money — it's actively losing you customers",
+      solvesFor: "₹4,999/month ($199/month) — Hindi-first voice AI that sounds like your best receptionist, not a Silicon Valley experiment",
+      source: "Agentic AI Labs internal benchmarks + Indian voice AI market testing, 2026",
+    },
+    practitionerQuote: {
+      text: "We tried Vapi for our clinic. The moment a patient spoke Hindi, it was over. It kept asking them to repeat, then gave a wrong response. We shut it down in two days. Patients were complaining that our 'robot' doesn't understand Hindi.",
+      attribution: "Clinic owner, Jaipur — Agentic AI Labs discovery call, 2026",
+    },
+    statusQuoTitle: "What Indian businesses try before finding Hindi-first voice AI",
+    statusQuoItems: [
+      "US voice AI platforms (Vapi, Retell, Bland) — built for American English. They offer 'Hindi support' that's actually translated English prompts running on English-trained models. It technically 'speaks Hindi' the way Google Translate technically 'speaks Hindi.' Your customers can tell in 3 seconds.",
+      "IVR menus in Hindi — 'Hindi ke liye 1 dabaiye.' Customers hate IVR. They press buttons, get stuck in loops, and hang up. A robotic menu is not a conversation. Your competitors with human receptionists are still winning because IVR feels like a wall, not a welcome.",
+      "Hire bilingual receptionists — ₹12,000–₹20,000/month ($150–$250/month) per person. Works until they're on another call, take a sick day, or quit. Doesn't scale. Doesn't handle 3 calls at once. Still not available at 10 PM.",
+    ],
+    industrySignal: {
+      headline: "57% of India's internet users prefer Hindi. Your voice AI should too.",
+      body: "India's vernacular internet is booming — Hindi content consumption grew 94% between 2022 and 2025 (KPMG + Google). Yet most voice AI platforms are English-first with Hindi as an afterthought. Businesses deploying Hindi-native AI voice agents report 3x higher call completion rates compared to English-only or translated-Hindi AI systems. The gap is widening: as more non-English-speaking Indians come online, the businesses that speak their language win. The ones forcing English lose.",
+      source: "KPMG-Google Indian Languages Internet Report + IAMAI, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Hindi-first. Hinglish-native. Trained on Indian accents, noise, and code-switching.",
+    solutionItems: [
+      "Voice AI that understands Hindi, Hinglish, and code-switching natively — not translated English prompts running on American models.",
+      "Trained on Indian accents (regional: Marathi-accented Hindi, South Indian English, Bhojpuri-inflected Hindi) and Indian background noise (traffic, fans, crowds).",
+      "Responds in the caller's language automatically — no 'press 1 for Hindi.' Switches between Hindi and English mid-sentence because that's how your customers talk.",
+    ],
+    layers: [
+      {
+        title: "Understands Hindi, Hinglish, and code-switching — because that's how India talks.",
+        body: "'Mujhe kal subah 9 baje AC repair chahiye, Koramangala mein.' One sentence. Three languages. Hindi grammar, English nouns, a Bangalore locality name. Our voice AI understands this natively — it doesn't try to parse it as English, fail, and ask the caller to repeat. It captures the intent (AC repair), the time (tomorrow 9 AM), and the location (Koramangala) on the first listen. Because it was built for how Indians actually speak — not how a Silicon Valley training dataset thinks they should.",
+      },
+      {
+        title: "Hears through traffic, fans, and autorickshaw horns — because that's where India calls from.",
+        body: "Your customer is calling from a busy intersection in Pune. An autorickshaw honks. A street vendor yells in the background. A ceiling fan whirs. US voice AI hears noise and fails. Our voice AI was trained on real Indian call environments — traffic, construction, fans, crowds, temple bells. It isolates the speaker's voice, understands the words, and responds correctly. Your customer doesn't need to find a quiet room to talk to your business.",
+      },
+      {
+        title: "Speaks the caller's language from the first word — no IVR, no menus, no 'press 1.'",
+        body: "Caller says 'hello' — the AI responds in English. Caller says 'haan, mujhe appointment lena hai' — the AI switches to Hindi. Mid-sentence switch? Handled. The caller never has to choose a language, press a button, or repeat themselves. Supported languages: Hindi, Hinglish, English, Marathi, Gujarati, Tamil, Telugu, Kannada, Bengali, Bhojpuri. Your business sounds local, personal, and accessible — in whatever language your customer thinks in.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT YOUR CALL LANGUAGE PATTERNS",
+        body: "We analyze your inbound call recordings (or do live test calls) to map the exact language mix: what percentage Hindi, Hinglish, English, regional language? What code-switching patterns? What background noise environments? We build the AI for how your specific customers actually talk.",
+        youSpend: "45 minutes on a call + access to sample call recordings.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR HINDI-FIRST VOICE AGENT",
+        body: "We build the AI on your business context — services, pricing, FAQs, booking flow — in the languages your customers use. Hindi responses sound like a fluent Hindi speaker, not a translated English script. Hinglish responses match the natural code-switching pattern of your caller base.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL INDIAN CALL SCENARIOS",
+        body: "Hindi-only caller. Hinglish caller. Regional-accent caller. Caller on a noisy road. Caller switching from English to Hindi mid-sentence. We test every language scenario that your US voice AI failed on — and make sure ours handles it perfectly.",
+        youSpend: "20 minutes listening to test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE — YOUR CUSTOMERS FINALLY FEEL UNDERSTOOD",
+        body: "AI goes live on your number. Hindi callers get Hindi. English callers get English. Hinglish callers get Hinglish. No one presses a button. No one repeats themselves. We monitor for 30 days and tune the language model based on your real call data.",
+        youSpend: "Zero. Listen to your customers stop complaining about the 'robot.'",
+      },
+    ],
+    proofTitle: "Businesses switch from US voice AI to Hindi-first and see immediate results.",
+    proofBullets: [
+      "Dental clinic (Jaipur): Switched from Vapi to Hindi-native AI. Call completion rate went from 35% to 92%. Patient complaints about the 'robot' dropped to zero.",
+      "Home services marketplace (Mumbai): Hindi/Hinglish callers who previously hung up on English-only AI now complete bookings. Booking rate from Hindi callers increased 3.2x.",
+      "Real estate developer (Noida): Site visit bookings from Hindi-speaking callers went from near-zero (all going to voicemail) to 18/week. The AI handles Bhojpuri-accented Hindi that their previous system couldn't parse.",
+    ],
+    proofStats: [
+      { stat: "92%", label: "call completion rate (up from 35% on US voice AI)" },
+      { stat: "3.2x", label: "booking rate increase from Hindi/Hinglish callers" },
+      { stat: "10+", label: "Indian languages and dialects supported" },
+    ],
+    fitChecklist: {
+      headline: "Built for Indian businesses whose customers speak Hindi — not Silicon Valley English.",
+      forYou: [
+        "Your customers call in Hindi, Hinglish, or a regional Indian language — and your current AI (or lack of one) can't handle it",
+        "You tried a US voice AI platform (Vapi, Retell, Bland) and it failed on Indian accents, Hindi, or background noise",
+        "You serve customers across India — not just English-speaking metros",
+        "You want your AI to sound like a fluent Hindi speaker, not a translated English chatbot",
+        "Your customer calls happen in noisy environments (traffic, markets, public spaces) — not quiet offices",
+      ],
+      notForYou: [
+        "Your customer base is 100% English-speaking with no Hindi/Hinglish interactions",
+        "You operate only in the US/UK/Australia with no Indian customer base",
+        "You need a text-only chatbot — this is specifically for voice conversations",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "How is this different from Vapi/Retell with Hindi language selected?",
+        answer:
+          "US platforms offer Hindi as a language option — but the underlying model was trained on American English. It's like putting a Hindi skin on an English brain. Our AI was trained on actual Hindi and Hinglish conversations — real Indian callers, real accents, real background noise. The difference is obvious within 3 seconds of a call.",
+      },
+      {
+        question: "Does it handle code-switching (Hindi + English in one sentence)?",
+        answer:
+          "Yes — this is the core differentiator. 'Mujhe kal subah 10 baje appointment chahiye near Indiranagar' — Hindi grammar, English words, a Bangalore locality. Our AI parses this natively. US voice AI treats it as corrupted English input and fails.",
+      },
+      {
+        question: "What about regional accents — Marathi, South Indian, Bhojpuri?",
+        answer:
+          "Trained on them. A Tamil speaker's Hindi sounds different from a Rajasthani's Hindi. A Maharashtrian's English has different intonation than a Punjabi's. Our models handle these accent variations because they were trained on recordings from across India — not just a standard Hindi studio voice.",
+      },
+      {
+        question: "Does it work with background noise from Indian environments?",
+        answer:
+          "Yes. Trained on Indian call environments: traffic horns, autorickshaws, ceiling fans, street markets, construction, temple music, public transport announcements. Your customer calls from a busy road in Andheri — the AI still understands them.",
+      },
+      {
+        question: "What languages beyond Hindi are supported?",
+        answer:
+          "Hindi, Hinglish, English, Marathi, Gujarati, Tamil, Telugu, Kannada, Bengali, Bhojpuri, Malayalam, and Punjabi. We're continuously adding more. The AI auto-detects the caller's language — no menu selection required.",
+      },
+      {
+        question: "Can I use this for my business outside India — for Indian diaspora customers?",
+        answer:
+          "Absolutely. Indian restaurants in the US, clinics in the UAE, service businesses in Australia — all have Hindi/Hinglish-speaking customers. The AI works globally. The language doesn't change based on geography.",
+      },
+      {
+        question: "How much does it cost compared to US voice AI platforms?",
+        answer:
+          "Hindi-first voice AI starts at ₹4,999/month ($199/month). This is comparable to or less than US platforms that don't work for Hindi callers anyway. You're not paying more — you're paying for something that actually works for your customer base.",
+      },
+      {
+        question: "How fast can I switch from my current US voice AI?",
+        answer:
+          "5–7 days. We analyze why your current system is failing (usually: Hindi comprehension, accent handling, background noise), build the Hindi-first replacement on your business context, and go live. Most businesses see the improvement in call completion rate within the first 24 hours.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll test your current voice AI with a Hindi call — and show you exactly where it breaks.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Diagnostic Labs", href: "/ai-for-diagnostic-lab" },
+      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+    ],
+    keywords: [
+      "hindi ai voice agent",
+      "ai voice agent hinglish",
+      "hindi speaking ai assistant",
+      "voice ai indian languages",
+      "ai for hindi callers",
+      "hinglish voice ai",
+      "hindi ai receptionist",
+      "voice ai india",
+      "ai voice agent indian accent",
+      "hindi phone ai agent",
+      "ai voice bot hindi",
+      "indian language voice ai",
+      "ai for hindi speaking customers",
+      "vapi hindi alternative",
+      "retell hindi alternative",
+      "voice ai code switching hindi english",
+      "ai voice agent marathi gujarati tamil",
+      "hindi ai phone automation",
+      "ai voice agent bhojpuri",
+      "indian accent voice ai agent",
+    ],
+  },
+
+  // ─── PAGE 10: AI for Gym & Fitness ─────────────────────────────────────────
+  {
+    type: "persona",
+    pathSegments: ["ai-for-gym-fitness"],
+    title: "AI Receptionist for Gyms & Fitness Studios — Stop Losing Members to an Unanswered Phone | Agentic AI Labs",
+    description:
+      "Busy gyms get 15–30 inquiry calls/day. Peak times — mornings, evenings, January — are exactly when trainers are in sessions and the front desk is swamped. Each missed inquiry could be ₹15,000–₹60,000 ($200–$800) in annual membership revenue. We build an AI receptionist that answers every call, shares pricing, books trial sessions, and sends WhatsApp with membership options.",
+    canonicalUrl: makeCanonical(["ai-for-gym-fitness"]),
+    heroLabel: "Built for Gyms, Fitness Studios & Yoga Centers",
+    heroHeadline: "A potential member just called about pricing. Your front desk is handling check-ins. They walked into the gym down the street.",
+    heroSubheadline:
+      "It's 7 PM. Your gym is packed. The front desk is scanning member cards. A trainer is mid-session. The phone rings — someone asking about membership pricing and class schedule. Nobody picks up. That person walks into the competitor gym 500 meters away. At ₹30,000/year ($400/year) per member, that's not a missed call — it's a year of recurring revenue that just walked out the door.",
+    painTitle: "The membership inquiry problem gyms don't realize they have",
+    painPoints: [
+      "January. New Year resolution season. Your phone rings 25–30 times a day with membership inquiries. Your front desk is checking in existing members, handling towel exchanges, and answering questions about class timing — while the phone rings and rings. Each unanswered call is a ₹2,000–₹8,000/month ($30–$100/month) membership. 20 missed calls in January at 25% conversion = 5 lost members = ₹1,00,000–₹4,00,000 ($1,200–$4,800) in annual revenue. Gone.",
+      "Peak inquiry times are mornings (7–10 AM) and evenings (5–8 PM) — exactly when your gym is busiest. Your trainers are running sessions. Your front desk is managing check-ins. The phone rings. Nobody answers. The irony: you're too busy serving existing members to acquire new ones. Your competitor with a receptionist (or smarter phone system) captures the inquiry you missed.",
+      "Trial session bookings are your highest-converting funnel. 20–30% of trial visitors convert to annual members. But booking a trial requires answering the phone, checking trainer availability, and confirming a time. If the inquiry call goes unanswered, the trial never happens. The membership never starts. The lifetime value of that member — 2–5 years of monthly payments — evaporates because nobody picked up at 6:30 PM on a Tuesday.",
+    ],
+    costCallout: {
+      items: [
+        { label: "Average annual membership value", amount: "₹15,000–₹60,000 / $200–$800" },
+        { label: "Missed inquiry calls per month (busy gym)", amount: "30–60 calls" },
+        { label: "Lost annual membership revenue (at 25% conversion)", amount: "₹1,12,500–₹9,00,000 / $1,500–$12,000 per year" },
+      ],
+      total: "Each month of missed calls is ₹9,000–₹75,000 ($120–$1,000) in annual membership revenue you never collected",
+      solvesFor: "₹4,999/month ($199/month) — every inquiry answered, every trial booked, every membership started",
+      source: "Agentic AI Labs gym & fitness studio audits + IHRSA global report data, 2026",
+    },
+    practitionerQuote: {
+      text: "January is our biggest month for new memberships. But it's also our busiest month operationally. The front desk can't handle check-ins AND phone inquiries at the same time. I know we're losing new members — I see 15 missed calls every evening when I check the phone.",
+      attribution: "Gym owner, Hyderabad — Agentic AI Labs discovery call, 2026",
+    },
+    statusQuoTitle: "What gyms try before fixing the inquiry problem",
+    statusQuoItems: [
+      "Ask trainers to answer the phone between sessions — they forget, they're sweaty, they rush through the call. The inquiry experience is terrible and the caller can tell they're an interruption, not a priority.",
+      "Instagram DMs and WhatsApp — works for warm leads who already follow you, but first-time callers (the highest-intent inquiries) still call. They found you on Google, not Instagram.",
+      "Hire a dedicated receptionist — ₹12,000–₹18,000/month ($150–$220/month). They handle one call at a time, take lunch breaks, and still can't answer the phone during the evening rush when 3 inquiries come in simultaneously.",
+    ],
+    industrySignal: {
+      headline: "India's fitness industry is projected to hit $30B by 2030 — but the gyms winning are the ones that answer the phone.",
+      body: "India's health and fitness market is growing at 30%+ CAGR (Redseer + IHRSA). But membership churn is 50–70% annually in budget gyms. The gyms that retain members and acquire new ones are the ones with excellent first-touch experience. Research from IHRSA shows that a gym's response time to an inquiry call is the strongest predictor of trial booking — ahead of pricing, location, or equipment. The gym that answers first books the trial. The one that calls back tomorrow is already forgotten.",
+      source: "Redseer Strategy Consultants + IHRSA Global Report, 2025",
+      date: "2025",
+    },
+    solutionTitle: "Answer. Inform. Book. Every membership inquiry becomes a trial session.",
+    solutionItems: [
+      "AI answers every inquiry call — membership pricing, class schedule, trainer availability, facility details, operating hours.",
+      "Books trial sessions directly into your calendar. Sends WhatsApp with gym tour video, membership plans, and location map.",
+      "Handles concurrent calls during peak hours — no busy signals when 3 people call at 6:30 PM on a Monday in January.",
+    ],
+    layers: [
+      {
+        title: "Answers every membership inquiry like your best salesperson — at 7 AM and 9 PM.",
+        body: "Caller asks about monthly membership pricing. The AI doesn't just say a number — it explains your membership tiers, what's included (personal training sessions, locker, parking, group classes), current promotions ('January special: first month free with annual commitment'), and books a trial session. All in under 3 minutes. Available at 7 AM when morning joggers call on their way to work, and at 9 PM when evening browsers search 'gym near me' after dinner.",
+      },
+      {
+        title: "Remembers every inquiry and follows up — so January leads don't evaporate in February.",
+        body: "Caller asked about pricing on January 5th but didn't book a trial. The AI follows up on January 8th: 'Hi Rahul, you asked about our annual membership last week. Our January special expires on the 31st — would you like to book a free trial session this weekend?' Built on Mem0 — every inquiry is remembered, every follow-up is personalized, every lead is nurtured until they convert or say no. No inquiry goes cold because your front desk forgot to call back.",
+      },
+      {
+        title: "Books trials, sends tour videos, and starts the membership journey before they walk in.",
+        body: "The AI books the trial session based on trainer availability. Immediately sends a WhatsApp with: gym tour video, membership plan comparison, location and parking info, what to bring, and the trainer's name. The potential member walks into their trial already knowing the gym, the pricing, and their trainer's name. Conversion from informed trial visitor to member is 2x higher than from walk-in. The AI doesn't just answer phones — it primes every trial for conversion.",
+      },
+    ],
+    howItWorks: [
+      {
+        week: 1,
+        phase: "AUDIT YOUR MEMBERSHIP INQUIRY FLOW",
+        body: "We map your membership tiers, class schedule, trainer availability, current promotions, trial booking process, and peak inquiry hours. We identify exactly when and why calls go unanswered.",
+        youSpend: "45 minutes on a call. Bring your pricing sheet and class schedule.",
+      },
+      {
+        week: 2,
+        phase: "BUILD YOUR GYM'S AI RECEPTIONIST",
+        body: "We build the AI on your actual membership plans, class timetable, and trainer schedules — not a generic fitness bot. It knows your January special, your evening Zumba class, and your Sunday morning yoga timings. It speaks Hindi, English, and whatever your members speak.",
+        youSpend: "Nothing. We build.",
+      },
+      {
+        week: 3,
+        phase: "TEST WITH REAL INQUIRY SCENARIOS",
+        body: "Caller asks about annual membership pricing. Another wants to know the evening class schedule. A third asks if you have a women-only section. A fourth calls during peak hour when two other calls are already in progress. We test every scenario your front desk handles daily.",
+        youSpend: "20 minutes reviewing test call recordings.",
+      },
+      {
+        week: 4,
+        phase: "LIVE — EVERY INQUIRY ANSWERED, EVERY TRIAL BOOKED",
+        body: "AI goes live on your gym's number. Handles inquiries during peak hours, evenings, and early mornings when nobody is at the desk. Trial sessions start filling up. We monitor for 30 days and tune based on your real inquiry patterns.",
+        youSpend: "Zero. Check your trial booking calendar.",
+      },
+    ],
+    proofTitle: "Gyms stop losing members the day the AI starts answering the phone.",
+    proofBullets: [
+      "CrossFit studio (Dubai): 40% of new members in Q1 2026 came from AI-handled calls. Trial bookings doubled compared to previous January when calls went unanswered during classes.",
+      "Multi-location gym chain (Pune): Evening inquiry capture went from ~50% to 100%. Front desk staff focused entirely on check-ins and member experience. New membership sign-ups increased 22% in the first quarter.",
+      "Yoga studio (Austin, TX): AI handled 18 inquiry calls in the first week that would have gone to voicemail during sessions. 6 converted to monthly memberships — ₹48,000 ($600) in monthly recurring revenue from week one.",
+    ],
+    proofStats: [
+      { stat: "100%", label: "inquiry calls answered — even during peak hours" },
+      { stat: "2x", label: "trial bookings compared to pre-AI (January peak)" },
+      { stat: "22%", label: "increase in new membership sign-ups (first quarter)" },
+    ],
+    fitChecklist: {
+      headline: "Built for gyms and fitness studios losing members to an unanswered front desk phone.",
+      forYou: [
+        "You run a gym, fitness studio, yoga center, or CrossFit box getting 15+ inquiry calls per day",
+        "Your peak inquiry times overlap with your busiest operational hours — and calls go unanswered",
+        "You know trial sessions convert at 20–30% but you're not booking enough trials because inquiries drop off",
+        "You want every call answered with accurate pricing, schedule, and trial booking — without hiring more front desk staff",
+        "Your annual membership is ₹15,000+ ($200+) — the ROI from capturing even 3 extra members pays for a year of AI",
+      ],
+      notForYou: [
+        "You receive fewer than 5 inquiry calls per week — your current front desk handles it fine",
+        "You're a personal training studio with no membership model — inquiries are referral-only",
+        "Your gym is fully automated (no-staff model) and doesn't offer trial sessions or guided tours",
+      ],
+      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
+    },
+    faq: [
+      {
+        question: "Can the AI explain my different membership plans and pricing?",
+        answer:
+          "Yes. We load your complete pricing structure — monthly, quarterly, annual, couple, family, student, corporate. The AI explains what's included in each tier (personal training sessions, group classes, locker, parking, spa access). When you run promotions, we update the AI same-day.",
+      },
+      {
+        question: "Does it handle class schedule questions?",
+        answer:
+          "Yes. Your full class timetable is loaded — Zumba at 6 PM, Yoga at 7 AM, CrossFit at 5:30 PM, whatever you offer. The AI tells callers exactly what's available, who teaches it, and books them into a trial if they're interested.",
+      },
+      {
+        question: "Can it book trial sessions based on trainer availability?",
+        answer:
+          "Yes. It integrates with your scheduling system (Google Calendar, Mindbody, Glofox, or custom). Checks trainer availability in real-time, books the trial, and sends the caller a WhatsApp confirmation with everything they need to know before showing up.",
+      },
+      {
+        question: "What happens during January when call volume spikes?",
+        answer:
+          "The AI handles unlimited simultaneous calls. January is when you get the most inquiries AND have the least capacity to answer them. The AI ensures every single inquiry is captured and every trial is booked — regardless of volume. This is the month where the AI pays for the entire year.",
+      },
+      {
+        question: "Does it follow up with people who asked about pricing but didn't book?",
+        answer:
+          "Yes. If someone calls, asks about membership, but doesn't book a trial, the AI follows up via WhatsApp within 24 hours with a booking link and your current promotion. You define the follow-up sequence. No inquiry goes cold because someone at the front desk forgot.",
+      },
+      {
+        question: "What languages does it handle?",
+        answer:
+          "Hindi, English, Hinglish, Marathi, Gujarati, Tamil, Arabic (for UAE), and more. Auto-detects the caller's language. No 'press 1 for Hindi.' Your gym sounds welcoming to every caller.",
+      },
+      {
+        question: "How much does it cost?",
+        answer:
+          "Gym and fitness studio AI receptionist systems start at ₹4,999/month ($199/month) for single-location gyms. Multi-location chains with complex class schedules and membership tiers are priced based on call volume and integration requirements. We give you a clear number on the audit call.",
+      },
+      {
+        question: "How fast can I go live — ideally before January?",
+        answer:
+          "5–7 days from your first call with us. If January is your target, reach out in December. We've launched gym AI systems in as little as 4 days when the pricing and schedule were straightforward.",
+      },
+    ],
+    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    ctaHref: "/ai-voice-agent/#pricing",
+    ctaSupportText: "We'll audit your inquiry-to-trial conversion rate and show you exactly how many memberships your unanswered phone is costing you.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
+    ],
+    keywords: [
+      "ai receptionist for gym",
+      "gym ai phone agent",
+      "fitness studio ai receptionist",
+      "ai for gym membership inquiry",
+      "ai phone agent fitness studio",
+      "gym missed calls ai",
+      "ai for yoga studio",
+      "crossfit ai receptionist",
+      "gym membership inquiry automation",
+      "ai trial booking gym",
+      "fitness center phone automation",
+      "ai receptionist gym india",
+      "gym ai voice agent",
+      "ai for fitness studio inquiry",
+      "gym membership ai agent",
+      "ai phone agent gym uae",
+      "ai for gym front desk",
+    ],
+  },
 ];
 
 

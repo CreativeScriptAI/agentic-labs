@@ -108,9 +108,59 @@ const PAGE_IMAGES: Record<string, PageImages> = {
     result: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=640&q=80&auto=format&fit=crop",      // team celebrating
   },
   "gohighlevel-ai-calling-alternative": {
-    hero: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",        // dashboard
-    solution: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=640&q=80&auto=format&fit=crop",       // team at laptops
-    result: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",         // pipeline charts
+    hero: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",
+    solution: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=640&q=80&auto=format&fit=crop",
+    result: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",
+  },
+  "ai-receptionist-for-dental-clinic": {
+    hero: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=640&q=80&auto=format&fit=crop",        // dental clinic
+    solution: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=640&q=80&auto=format&fit=crop",    // dental procedure
+    result: "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=640&q=80&auto=format&fit=crop",      // dental patient smiling
+  },
+  "ai-booking-agent-for-salon": {
+    hero: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=640&q=80&auto=format&fit=crop",           // salon interior
+    solution: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=640&q=80&auto=format&fit=crop",    // hair styling
+    result: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=640&q=80&auto=format&fit=crop",      // satisfied salon client
+  },
+  "ai-for-coaching-institute": {
+    hero: "https://images.unsplash.com/photo-1523050854058-8df90110c476?w=640&q=80&auto=format&fit=crop",        // classroom
+    solution: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=640&q=80&auto=format&fit=crop",    // teacher with students
+    result: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=640&q=80&auto=format&fit=crop",      // graduation
+  },
+  "ai-cod-confirmation-agent": {
+    hero: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=640&q=80&auto=format&fit=crop",           // ecommerce packages
+    solution: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=640&q=80&auto=format&fit=crop",    // delivery
+    result: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=640&q=80&auto=format&fit=crop",         // happy customer
+  },
+  "ai-receptionist-for-restaurant": {
+    hero: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=640&q=80&auto=format&fit=crop",        // restaurant interior
+    solution: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=640&q=80&auto=format&fit=crop",    // fine dining
+    result: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=640&q=80&auto=format&fit=crop",         // busy restaurant
+  },
+  "ai-for-diagnostic-lab": {
+    hero: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=640&q=80&auto=format&fit=crop",        // lab equipment
+    solution: "https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?w=640&q=80&auto=format&fit=crop",    // lab technician
+    result: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=640&q=80&auto=format&fit=crop",      // healthcare
+  },
+  "ai-for-pest-control": {
+    hero: "https://images.unsplash.com/photo-1632935190508-30fa00d3cadf?w=640&q=80&auto=format&fit=crop",        // pest control worker
+    solution: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=640&q=80&auto=format&fit=crop",    // service worker
+    result: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=640&q=80&auto=format&fit=crop",         // satisfied customer
+  },
+  "ai-for-immigration-consultant": {
+    hero: "https://images.unsplash.com/photo-1523050854058-8df90110c476?w=640&q=80&auto=format&fit=crop",        // education
+    solution: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=640&q=80&auto=format&fit=crop",    // studying documents
+    result: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=640&q=80&auto=format&fit=crop",      // graduation abroad
+  },
+  "ai-voice-agent-hindi": {
+    hero: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=640&q=80&auto=format&fit=crop",        // person on phone
+    solution: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=640&q=80&auto=format&fit=crop",    // diverse team
+    result: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=640&q=80&auto=format&fit=crop",      // team success
+  },
+  "ai-for-gym-fitness": {
+    hero: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80&auto=format&fit=crop",        // gym interior
+    solution: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=640&q=80&auto=format&fit=crop",    // personal training
+    result: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=640&q=80&auto=format&fit=crop",      // group fitness
   },
 };
 
