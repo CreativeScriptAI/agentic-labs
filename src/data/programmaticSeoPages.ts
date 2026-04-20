@@ -105,6 +105,8 @@ export type ProgrammaticPageData = {
   keywords: string[];
 };
 
+import { PRICING, P } from "src/config/pricing";
+
 const BASE_URL = "https://www.tryagentikai.com";
 
 const makeCanonical = (pathSegments: string[]) => `${BASE_URL}/${pathSegments.join("/")}/`;
@@ -2250,7 +2252,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-booking-agent-for-travel-agencies"],
     title: "AI Booking Agent for Travel Agencies — Stop Losing Revenue to Missed Bookings",
     description:
-      "A bus operator in Delhi NCR was losing 20–30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ₹2,499/mo.",
+      `A bus operator in Delhi NCR was losing 20–30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ${P.starterINR}/mo.`,
     canonicalUrl: makeCanonical(["ai-booking-agent-for-travel-agencies"]),
     heroLabel: "Bus · Tour · Cab · Transport Operators",
     heroHeadline: "20 booking calls missed yesterday. Your competitor answered all of them.",
@@ -2269,7 +2271,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Group bookings lost per week (after-hours, rush overlap)", amount: "3 – 5 groups" },
       ],
       total: "₹16,000–₹1,60,000/day ($200–$2,000/day) walking to whichever operator picked up first",
-      solvesFor: "₹2,499/month ($299/month) — every call answered, every inquiry captured, 24/7",
+      solvesFor: `${P.starterDual} — every call answered, every inquiry captured, 24/7`,
       source: "ANT Bus Services pilot data + live travel operator deployments, Agentic AI Labs 2026",
     },
     practitionerQuote: {
@@ -2405,7 +2407,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "Starts at ₹2,499/month — less than the revenue from a single missed group booking. Build and configuration is a one-time fee based on the complexity of your route logic and integrations. We scope it on the first call before you commit to anything. No hidden per-minute charges.",
+          `Starts at ${P.starterINR}/month — less than the revenue from a single missed group booking. Build and configuration is a one-time fee based on the complexity of your route logic and integrations. We scope it on the first call before you commit to anything. No hidden per-minute charges.`,
       },
       {
         question: "Can it handle two calls at the same time?",
@@ -2470,7 +2472,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Missed calls per day (busy operator)", amount: "5 – 15 calls" },
       ],
       total: "₹7,500–₹75,000/day ($100–$1,000/day) walking out every day",
-      solvesFor: "₹2,499/month ($299/month) — the agent answers every single one",
+      solvesFor: `${P.starterDual} — the agent answers every single one`,
       source: "Pilot data — Book My Garage, home services operators, India 2026",
     },
     practitionerQuote: {
@@ -2596,7 +2598,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Home services dispatch agent starts at ₹2,499/month. Build and setup is a one-time fee. We scope it on a call before you commit to anything.",
+          `Home services dispatch agent starts at ${P.starterINR}/month. Build and setup is a one-time fee. We scope it on a call before you commit to anything.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -2649,7 +2651,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Candidates screened by AI per day", amount: "500 – 1,000+" },
       ],
       total: "3 callers × ₹18,000/month ($700/month) = ₹54,000/month ($2,100/month) to screen what AI does for a fraction",
-      solvesFor: "₹9,999/month ($499/month) — unlimited concurrent screening in any language",
+      solvesFor: `${P.proDual} — unlimited concurrent screening in any language`,
       source: "Pipeline data — Digital Labour Chowk, Gulf Jobs, Agentic AI Labs, 2026",
     },
     practitionerQuote: {
@@ -2774,7 +2776,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Blue-collar screening setups start at ₹9,999/month for up to 500 calls per day. Higher volume tiers available. Build and setup is a one-time fee scoped before you commit.",
+          `Blue-collar screening setups start at ${P.proINR}/month for up to 500 calls per day. Higher volume tiers available. Build and setup is a one-time fee scoped before you commit.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -2828,7 +2830,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "At 70% show-up (same 75 calls/week)", amount: "53 live calls — 19 recovered" },
       ],
       total: "19 extra live calls × 30% close × $500 ticket = $2,850/week from the same ad spend",
-      solvesFor: "$299 / month — the agent calls every booked lead before their slot",
+      solvesFor: `${P.starterUSD} / month — the agent calls every booked lead before their slot`,
       source: "MPM (My Personal Mentors, Canada) pilot data — Agentic AI Labs, April 2026",
     },
     practitionerQuote: {
@@ -2954,7 +2956,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Coaching confirmation agent starts at $299/month. Build and setup is a one-time fee. If you're in India, INR pricing is available. We scope it on a call before you commit.",
+          `Coaching confirmation agent starts at ${P.starterUSD}/month. Build and setup is a one-time fee. If you're in India, INR pricing is available. We scope it on a call before you commit.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3009,7 +3011,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Window before a hot lead goes to a competitor", amount: "3 minutes" },
       ],
       total: "1 missed inquiry/day × 5% close rate × ₹2L ($2,500) avg commission = ₹3,65,000/year ($4,500/year) leaving through the door",
-      solvesFor: "₹2,499/month ($299/month) — every inquiry answered and logged while you're in a showing",
+      solvesFor: `${P.starterDual} — every inquiry answered and logged while you're in a showing`,
       source: "Real estate agent pipeline data — Agentic AI Labs, 2026",
     },
     practitionerQuote: {
@@ -3135,7 +3137,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Real estate showing coordinator starts at ₹2,499/month for individual agents. Brokerage-level plans with multi-agent routing available. We scope it clearly before you commit.",
+          `Real estate showing coordinator starts at ${P.starterINR}/month for individual agents. Brokerage-level plans with multi-agent routing available. We scope it clearly before you commit.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3188,7 +3190,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Comparison window (how long before they call next clinic)", amount: "Under 10 minutes" },
       ],
       total: "5 missed inquiries/week × 20% close × ₹40,000 ($500) avg = ₹20,000/week ($250/week) walking out the door",
-      solvesFor: "₹2,499/month ($299/month) — every inquiry answered including evenings and weekends",
+      solvesFor: `${P.starterDual} — every inquiry answered including evenings and weekends`,
       source: "Dental/medical clinic pilot data — Agentic AI Labs, 2026 (analogous treatment inquiry pattern)",
     },
     practitionerQuote: {
@@ -3314,7 +3316,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Med spa and aesthetic clinic AI receptionists start at ₹2,499/month. Build and setup is a one-time fee. We scope it clearly on a call before you commit to anything.",
+          `Med spa and aesthetic clinic AI receptionists start at ${P.starterINR}/month. Build and setup is a one-time fee. We scope it clearly on a call before you commit to anything.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3527,7 +3529,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["done-for-you-ai-voice-agent"],
     title: "Done-For-You AI Voice Agent — We Build It, Deploy It, Manage It",
     description:
-      "Every AI voice agent platform expects you to build it yourself. We don't. We build your AI voice agent, deploy it on your number, and manage it — live in 7 days. You just answer the qualified leads. Starts at ₹2,499/mo ($299/mo).",
+      `Every AI voice agent platform expects you to build it yourself. We don't. We build your AI voice agent, deploy it on your number, and manage it — live in 7 days. You just answer the qualified leads. Starts at ${P.starterINR}/mo (${P.starterUSD}/mo).`,
     canonicalUrl: makeCanonical(["done-for-you-ai-voice-agent"]),
     heroLabel: "Done-For-You AI Voice Agents",
     heroHeadline: "You don't need another platform. You need someone to just handle it.",
@@ -3546,7 +3548,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Your time managing, debugging, and firefighting", amount: "10–20 hours / month" },
       ],
       total: "DIY total: $3,000–$6,000/month + your time — for a system that still breaks",
-      solvesFor: "Done-for-you: ₹2,499/mo ($299/mo) — we build, deploy, and manage everything",
+      solvesFor: `Done-for-you: ${P.starterINR}/mo (${P.starterUSD}/mo) — we build, deploy, and manage everything`,
       source: "Based on client audits of DIY voice AI implementations, Agentic AI Labs 2026",
     },
     practitionerQuote: {
@@ -3630,7 +3632,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     proofStats: [
       { stat: "50+", label: "AI voice agents deployed" },
       { stat: "7 days", label: "average time to go live" },
-      { stat: "₹2,499", label: "starting monthly cost" },
+      { stat: P.starterINR, label: "starting monthly cost" },
     ],
     fitChecklist: {
       headline: "Built for business owners who want AI handling their calls — without becoming AI engineers.",
@@ -3639,7 +3641,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "You've tried a DIY platform (Vapi, Retell, Bland) and realized it needs more engineering than you have",
         "You lose leads to missed calls, after-hours gaps, or slow follow-up — and you want it fixed in days, not months",
         "You want someone to build, deploy, and manage the AI — not hand you a tool and walk away",
-        "Your budget is ₹2,499–₹25,000/month ($299–$500/month) — not $5K/month for a developer",
+        `Your budget is ${P.starterINR}–${P.entINR}/month (${P.starterUSD}–${P.proUSD}/month) — not $5K/month for a developer`,
       ],
       notForYou: [
         "You have an in-house engineering team that wants to build and maintain the voice AI system themselves",
@@ -3677,7 +3679,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "Starts at ₹2,499/month ($299/month for international). Build and setup is a one-time fee based on complexity. We scope it on the first call before you commit. No hidden per-minute charges.",
+          `Starts at ${P.starterDual}. Build and setup is a one-time fee based on complexity. We scope it on the first call before you commit. No hidden per-minute charges.`,
       },
       {
         question: "Do you offer a trial or money-back guarantee?",
@@ -3723,26 +3725,26 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-vs-human-receptionist"],
     title: "AI Receptionist vs Human Receptionist — Real Cost Comparison (₹ and $)",
     description:
-      "A human receptionist costs ₹25,000/month ($300/month), works 8 hours, handles 1 call at a time, and takes sick days. An AI receptionist costs ₹2,499/month ($30/month), works 24/7, handles unlimited concurrent calls, and never misses a day. Here's the full comparison.",
+      `A human receptionist costs ${P.entINR}/month ($300/month), works 8 hours, handles 1 call at a time, and takes sick days. An AI receptionist costs ${P.starterINR}/month ($30/month), works 24/7, handles unlimited concurrent calls, and never misses a day. Here's the full comparison.`,
     canonicalUrl: makeCanonical(["ai-vs-human-receptionist"]),
     heroLabel: "AI vs Human — The Real Comparison",
-    heroHeadline: "Your receptionist costs ₹25,000/month. Ours costs ₹2,499. Both answer the phone.",
+    heroHeadline: `Your receptionist costs ${P.entINR}/month. Ours costs ${P.starterINR}. Both answer the phone.`,
     heroSubheadline:
       "One works 24/7, speaks 5 languages, handles 10 calls simultaneously, and never calls in sick. The other takes lunch breaks. This is the honest comparison — with real numbers in ₹ and $.",
     painTitle: "What a human receptionist actually costs you",
     painPoints: [
-      "Salary: ₹15,000–₹25,000/month ($200–$300/month). Add training, benefits, sick days, and turnover costs — the real number is 30–40% higher than the salary alone.",
+      `Salary: ${P.humanINR} ($200–$300/month). Add training, benefits, sick days, and turnover costs — the real number is 30–40% higher than the salary alone.`,
       "Availability: 8–10 hours per day, 5–6 days per week. Every call outside those hours goes to voicemail. Weekend and holiday inquiries are gone.",
       "Capacity: One call at a time. When two calls come in simultaneously, one rings out. That caller doesn't leave a voicemail — they call your competitor.",
     ],
     costCallout: {
       items: [
-        { label: "Human receptionist (India)", amount: "₹15,000–₹25,000 / month" },
-        { label: "Human receptionist (US/UK/UAE)", amount: "$2,000–$4,000 / month" },
-        { label: "AI receptionist", amount: "₹2,499 / $299 / month" },
+        { label: "Human receptionist (India)", amount: `${P.humanINR}` },
+        { label: "Human receptionist (US/UK/UAE)", amount: `${P.humanUSD}` },
+        { label: "AI receptionist", amount: `${P.starterINR} / ${P.starterUSD} / month` },
       ],
       total: "Human = ₹3,00,000/year ($24,000–$48,000/year). AI = ₹29,988/year ($3,588/year). That's a 10x cost difference.",
-      solvesFor: "₹2,499/month ($299/month) — 24/7, multilingual, unlimited concurrent calls",
+      solvesFor: `${P.starterDual} — 24/7, multilingual, unlimited concurrent calls`,
       source: "Salary data: Glassdoor India + BLS (US), 2026. AI pricing: Agentic AI Labs.",
     },
     practitionerQuote: {
@@ -3821,7 +3823,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     fitChecklist: {
       headline: "This comparison is for business owners doing the math on receptionist costs.",
       forYou: [
-        "You're paying ₹15,000–₹25,000/month ($2,000+/month) for a receptionist and wondering if AI can do the same job",
+        `You're paying ${P.humanINR} ($2,000+/month) for a receptionist and wondering if AI can do the same job`,
         "You lose calls after hours, on weekends, or when your receptionist is already on another call",
         "You want 24/7 coverage but can't afford a second or third shift hire",
         "You need multilingual support (Hindi, English, regional) without hiring multiple receptionists",
@@ -3857,7 +3859,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "AI receptionist starts at ₹2,499/month (India) or $299/month (international). Compare that to ₹15,000–₹25,000/month for a human receptionist in India, or $2,000–$4,000/month in the US/UK. The math is straightforward.",
+          `AI receptionist starts at ${P.starterDual}. Compare that to ${P.humanINR} for a human receptionist in India, or ${P.humanUSD} in the US/UK. The math is straightforward.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3910,7 +3912,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Monthly ad spend generating those calls", amount: "₹50,000–₹2,00,000 / $600–$2,500" },
       ],
       total: "20–40% of your ad-generated calls are going unanswered — money spent on leads you never spoke to",
-      solvesFor: "₹2,499/month ($299/month) — every call answered, every lead captured, 24/7",
+      solvesFor: `${P.starterDual} — every call answered, every lead captured, 24/7`,
       source: "Industry data: BIA/Kelsey missed call study + Agentic AI Labs client audits, 2026",
     },
     practitionerQuote: {
@@ -4030,7 +4032,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "Starts at ₹2,499/month (India) or $299/month (international). Typically pays for itself from a single captured lead in the first week.",
+          `${P.startsAt}. Typically pays for itself from a single captured lead in the first week.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -4085,7 +4087,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Pipeline accuracy with manual CRM updates", amount: "Inconsistent — hours or days late" },
       ],
       total: "GHL agencies running voice campaigns manually are spending 3–5x what AI calling costs — with worse results",
-      solvesFor: "₹9,999/month ($499/month) — production AI caller plugged into your GHL pipeline",
+      solvesFor: `${P.proDual} — production AI caller plugged into your GHL pipeline`,
       source: "GoHighLevel community feedback + Agentic AI Labs GHL agency audits, 2026",
     },
     practitionerQuote: {
@@ -4201,7 +4203,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "GHL AI calling starts at ₹9,999/month ($499/month) per agency. Multi-sub-account deployments are priced per account. We scope it on a call before you commit.",
+          `GHL AI calling starts at ${P.proDual} per agency. Multi-sub-account deployments are priced per account. We scope it on a call before you commit.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -4255,7 +4257,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Patient lifetime value (3–5 year retention)", amount: "₹50,000 – ₹2,00,000 ($600 – $2,500)" },
       ],
       total: "8 missed after-hours calls/week × 25% conversion × ₹5,000 avg procedure = ₹10,000/week (₹40,000/month or ~$500/month) walking out the door",
-      solvesFor: "₹2,499/month ($299/month) — every call answered, every patient captured",
+      solvesFor: `${P.starterDual} — every call answered, every patient captured`,
       source: "Agentic AI Labs dental clinic pilot data + Indian dental market benchmarks, 2026",
     },
     practitionerQuote: {
@@ -4391,7 +4393,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Dental clinic AI receptionists start at ₹2,499/month ($299/month). One-time build and setup fee covers integration with your scheduling system, custom training on your services, and the first 30 days of monitoring. We scope it on a call before you commit.",
+          `Dental clinic AI receptionists start at ${P.starterDual}. One-time build and setup fee covers integration with your scheduling system, custom training on your services, and the first 30 days of monitoring. We scope it on a call before you commit.`,
       },
       {
         question: "Can it handle multiple dentists with different schedules?",
@@ -4651,7 +4653,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Inquiry-to-enrollment conversion rate", amount: "15% – 25%" },
       ],
       total: "60 unanswered calls/day × 20% conversion × ₹1,00,000 avg enrollment = ₹12,00,000/day in potential revenue unattended",
-      solvesFor: "₹9,999/month ($499/month) during admission season — every inquiry answered, every contact captured",
+      solvesFor: `${P.proDual} during admission season — every inquiry answered, every contact captured`,
       source: "Agentic AI Labs coaching institute audits + FIITJEE/Allen/Aakash fee benchmarks, 2026",
     },
     practitionerQuote: {
@@ -4792,7 +4794,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Coaching institute AI enrollment agents start at ₹9,999/month ($499/month) during admission season. Setup is a one-time fee covering course catalog training, counseling workflow integration, and 30 days of monitoring. Off-season pricing is lower. We scope it on a call.",
+          `Coaching institute AI enrollment agents start at ${P.proDual} during admission season. Setup is a one-time fee covering course catalog training, counseling workflow integration, and 30 days of monitoring. Off-season pricing is lower. We scope it on a call.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -5049,7 +5051,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Average corporate event inquiry value", amount: "₹1,00,000 – ₹5,00,000 ($1,200 – $6,000)" },
       ],
       total: "10 missed reservation calls/week × ₹3,000 avg cover × 4-person average = ₹1,20,000/month (~$1,500/month) in unfilled tables",
-      solvesFor: "₹2,499/month ($299/month) — every call answered, every table filled",
+      solvesFor: `${P.starterDual} — every call answered, every table filled`,
       source: "Agentic AI Labs restaurant partner data + Indian F&B industry benchmarks, 2026",
     },
     practitionerQuote: {
@@ -5190,7 +5192,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Restaurant AI receptionists start at ₹2,499/month ($299/month). One-time setup fee covers menu training, reservation rule configuration, event workflow setup, and 30 days of monitoring. We scope it on a call with your actual call volume data.",
+          `Restaurant AI receptionists start at ${P.starterDual}. One-time setup fee covers menu training, reservation rule configuration, event workflow setup, and 30 days of monitoring. We scope it on a call with your actual call volume data.`,
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -5624,7 +5626,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Lost follow-ups (students who inquired but never heard back)", amount: "₹10,00,000–₹30,00,000 / $12,000–$36,000 per season" },
       ],
       total: "₹30,00,000–₹80,00,000 / $37,000–$96,000 per peak season in leaked enrollment revenue",
-      solvesFor: "₹9,999/month ($499/month) — every inquiry captured, every student profiled, every session booked",
+      solvesFor: `${P.proDual} — every inquiry captured, every student profiled, every session booked`,
       source: "Agentic AI Labs immigration consultant audits + ICEF Monitor data, 2026",
     },
     practitionerQuote: {
@@ -5750,7 +5752,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How much does it cost?",
         answer:
-          "Immigration consultant AI systems start at ₹9,999/month ($499/month). High-volume consultancies with multiple counselors and CRM integration are priced based on call volume and complexity. We scope it clearly on the audit call before you commit.",
+          `Immigration consultant AI systems start at ${P.proDual}. High-volume consultancies with multiple counselors and CRM integration are priced based on call volume and complexity. We scope it clearly on the audit call before you commit.`,
       },
       {
         question: "How fast can we go live — ideally before next peak season?",
