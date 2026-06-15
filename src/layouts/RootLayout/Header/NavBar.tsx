@@ -140,7 +140,6 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const { countryPrefix } = useCountry();
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [openMobileGroup, setOpenMobileGroup] = useState<number | null>(null);
-  const [openMobileSub, setOpenMobileSub] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   // The Solutions mega-panel is portal'd to <body> (see below), so it lives outside
@@ -151,6 +150,10 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const isActive = (to: string) =>
     currentPath === to.replace(/\/$/, "") || currentPath === to;
   const anyActive = (links: NavLink[]) => links.some((l) => isActive(l.to));
+
+  // Flat industry list — the redesigned panel drops per-sector micro-headers for a
+  // cleaner, ManyChat/Notion-style list. Shared by mobile + desktop.
+  const allIndustries = BY_INDUSTRY.flatMap((g) => g.links);
 
   // Portals need the DOM — only render them after mount (avoids SSR mismatch).
   useEffect(() => setMounted(true), []);
@@ -183,8 +186,6 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   if (isMobile) {
     const toggleGroup = (id: number) =>
       setOpenMobileGroup(openMobileGroup === id ? null : id);
-    const toggleSub = (id: string) =>
-      setOpenMobileSub(openMobileSub === id ? null : id);
 
     return (
       <nav className="w-full">
@@ -199,55 +200,42 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               <ChevronDown open={openMobileGroup === NAV.SOLUTIONS} />
             </button>
             {openMobileGroup === NAV.SOLUTIONS && (
-              <div className="pl-2 pb-3 space-y-3">
+              <div className="pl-2 pb-3 space-y-5">
                 {/* Featured hero */}
                 <Link
                   href={HERO.to}
                   onClick={onLinkClick}
-                  className="block rounded-xl bg-[#0A1128] text-white px-3 py-3"
+                  className="block rounded-2xl bg-[#0A1128] text-white px-4 py-4"
                 >
-                  <span className="flex items-center gap-2 text-sm font-semibold">
+                  <span className="flex items-center gap-2 text-base font-semibold">
                     {HERO.name}
                     <span className="text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full">Flagship</span>
                   </span>
-                  <span className="block text-xs text-gray-300 mt-1 leading-snug">{HERO.tagline}</span>
+                  <span className="block text-sm text-gray-300/90 mt-1.5 leading-relaxed">{HERO.tagline}</span>
                 </Link>
 
                 {/* By Outcome */}
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">By Outcome</p>
+                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-2 px-2">By Outcome</p>
                   <ul className="space-y-0.5">
                     {BY_OUTCOME.map((l) => (
                       <li key={l.name}>
-                        <Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
+                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-[15px] font-medium text-gray-800 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* By Industry — nested accordions */}
+                {/* By Industry — flat list, no nested accordions */}
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">By Industry</p>
-                  {BY_INDUSTRY.map((group) => (
-                    <div key={group.label}>
-                      <button
-                        onClick={() => toggleSub(group.label)}
-                        className="w-full flex items-center justify-between py-2 px-2 text-sm font-medium text-gray-600 rounded-lg"
-                      >
-                        {group.label}
-                        <ChevronDown open={openMobileSub === group.label} />
-                      </button>
-                      {openMobileSub === group.label && (
-                        <ul className="pl-3 space-y-0.5">
-                          {group.links.map((l) => (
-                            <li key={l.to}>
-                              <Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
+                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-2 px-2">By Industry</p>
+                  <ul className="space-y-0.5">
+                    {allIndustries.map((l) => (
+                      <li key={l.to}>
+                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-[15px] text-gray-700 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             )}
@@ -339,7 +327,14 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
       active || open ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
     }`;
 
-  const solutionsActive = anyActive([...BY_OUTCOME, ...BY_INDUSTRY.flatMap((g) => g.links), { name: "", to: HERO.to }]);
+  // Split the flat industry list into two balanced columns for the desktop panel.
+  const industryColSize = Math.ceil(allIndustries.length / 2);
+  const industryCols = [
+    allIndustries.slice(0, industryColSize),
+    allIndustries.slice(industryColSize),
+  ];
+
+  const solutionsActive = anyActive([...BY_OUTCOME, ...allIndustries, { name: "", to: HERO.to }]);
   const compareActive = anyActive([...COMPARE_ALTERNATIVES, ...COMPARE_ROUNDUPS]);
   const resourcesActive = anyActive(RESOURCES);
 
@@ -365,52 +360,52 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                 animate={{ opacity: 1, x: "-50%", y: 0 }}
                 exit={{ opacity: 0, x: "-50%", y: -6 }}
                 transition={{ duration: 0.18, ease: "easeOut" }}
-                className="fixed left-1/2 top-[88px] z-[200] bg-white rounded-2xl border border-gray-100 shadow-[0_16px_56px_rgba(0,0,0,0.14)] overflow-hidden"
-                style={{ width: "min(940px, calc(100vw - 48px))" }}
+                className="fixed left-1/2 top-[88px] z-[200] bg-white rounded-[20px] border border-gray-100 shadow-[0_20px_64px_rgba(0,0,0,0.16)] overflow-hidden"
+                style={{ width: "min(960px, calc(100vw - 48px))" }}
               >
-                <div className="grid grid-cols-12 gap-0">
+                <div className="flex">
                   {/* Featured hero — left rail */}
-                  <div className="col-span-3 bg-[#0A1128] p-6 flex flex-col justify-between">
+                  <div className="w-[260px] shrink-0 bg-[#0A1128] p-8 flex flex-col justify-between">
                     <div>
-                      <span className="inline-block text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full mb-3">FLAGSHIP</span>
-                      <Link href={HERO.to} onClick={close} className="block text-lg font-semibold text-white leading-tight hover:underline">
+                      <span className="inline-block text-[10px] font-bold tracking-wider bg-[#FCCA07] text-[#0A1128] px-2.5 py-1 rounded-full mb-5">FLAGSHIP</span>
+                      <Link href={HERO.to} onClick={close} className="block text-2xl font-semibold text-white leading-tight hover:text-[#FCCA07] transition-colors">
                         {HERO.name}
                       </Link>
-                      <p className="text-xs text-gray-300 mt-2 leading-snug">{HERO.tagline}</p>
+                      <p className="text-sm text-gray-300/90 mt-3 leading-relaxed">{HERO.tagline}</p>
                     </div>
-                    <Link href={HERO.to} onClick={close} className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-[#FCCA07] hover:gap-2 transition-all">
+                    <Link href={HERO.to} onClick={close} className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-[#FCCA07] hover:gap-2.5 transition-all">
                       See the agent →
                     </Link>
                   </div>
 
-                  {/* By Outcome */}
-                  <div className="col-span-3 p-6 border-r border-gray-100">
-                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">By Outcome</p>
-                    <ul className="space-y-2">
-                      {BY_OUTCOME.map((l) => (
-                        <li key={l.name}>
-                          <Link href={l.to} onClick={close} className={`text-sm leading-snug block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {/* Right content — two clean lenses, big type, generous spacing */}
+                  <div className="flex-1 flex gap-10 p-9">
+                    {/* By Outcome */}
+                    <div className="shrink-0">
+                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-5">By Outcome</p>
+                      <ul className="space-y-4">
+                        {BY_OUTCOME.map((l) => (
+                          <li key={l.name}>
+                            <Link href={l.to} onClick={close} className={`text-[15px] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF] font-semibold" : "text-gray-800 font-medium hover:text-[#0062FF]"}`}>{l.name}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  {/* By Industry */}
-                  <div className="col-span-6 p-6">
-                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">By Industry</p>
-                    <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                      {BY_INDUSTRY.map((group) => (
-                        <div key={group.label}>
-                          <p className="text-[11px] font-semibold text-[#0062FF] uppercase tracking-wider mb-1.5">{group.label}</p>
-                          <ul className="space-y-1">
-                            {group.links.map((l) => (
+                    {/* By Industry — flat two-column list, no sub-headers */}
+                    <div className="flex-1 pl-10 border-l border-gray-100">
+                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-5">By Industry</p>
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                        {industryCols.map((col, ci) => (
+                          <ul key={ci} className="space-y-4">
+                            {col.map((l) => (
                               <li key={l.to}>
-                                <Link href={l.to} onClick={close} className={`text-sm leading-snug block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link>
+                                <Link href={l.to} onClick={close} className={`text-[15px] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF] font-semibold" : "text-gray-700 hover:text-[#0062FF]"}`}>{l.name}</Link>
                               </li>
                             ))}
                           </ul>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
