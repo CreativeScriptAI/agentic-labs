@@ -7,7 +7,7 @@ const TechStackSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-4">
-            BUILD → INTEGRATE → VALIDATE
+            OUTCOMES, READY OR CUSTOM
           </p>
         </div>
 
@@ -35,10 +35,10 @@ const TechStackSection: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
-                  VOICE, CHAT, WORKFLOW & INTEGRATIONS.
+                  CUSTOM, BUILT AROUND YOUR BUSINESS
                 </p>
                 <h3 className="text-2xl lg:text-3xl font-[500] text-gray-900 mb-4">
-                  Full-Stack AI Agent Development.
+                  Custom AI, built around your business.
                 </h3>
               </div>
 
@@ -163,10 +163,10 @@ const TechStackSection: React.FC = () => {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
-                  READY-TO-DEPLOY AI AGENTS
+                  READY TO DEPLOY
                 </p>
                 <h3 className="text-xl lg:text-2xl font-[500] text-gray-900">
-                  Pre-Built AI Agents
+                  The AI Sales Agent, and more, ready to go
                 </h3>
               </div>
               <div className="w-12 h-12 flex items-center justify-center">
@@ -189,29 +189,29 @@ const TechStackSection: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">7+ ready-to-use agents</span>{" "}
-                  (support, lead gen, booking, etc.)
+                  <span className="font-semibold">AI Sales Agent and more:</span>{" "}
+                  answers, qualifies, and books every inbound lead
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Plug & play</span> with Slack,
-                  WhatsApp, CRMs, Email
+                  <span className="font-semibold">Every channel:</span> phone,
+                  WhatsApp, Instagram, SMS & email
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Customizable workflows</span>{" "}
-                  & branding
+                  <span className="font-semibold">Live in days,</span> zero
+                  from-scratch build
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Fastest way to go live</span>{" "}
-                  — zero from-scratch build
+                  <span className="font-semibold">Runs without you,</span> wired to
+                  your CRM, calendar & inbox
                 </p>
               </div>
             </div>
@@ -222,10 +222,10 @@ const TechStackSection: React.FC = () => {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
-                  ESTIMATION, VALIDATION, FEASIBILITY
+                  START HERE
                 </p>
                 <h3 className="text-xl lg:text-2xl font-[500] text-slate-800">
-                  AI Consulting & Strategy
+                  Not sure where AI fits? Start here.
                 </h3>
               </div>
               <div className="w-12 h-12 flex items-center justify-center">
@@ -248,29 +248,29 @@ const TechStackSection: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Identify</span> where AI saves
-                  time & cost
+                  <span className="font-semibold">Find</span> where AI actually
+                  saves you time & money
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
                   <span className="font-semibold">Review</span> your workflows &
-                  stack
+                  tools
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Plan</span> the right agents
-                  to build
+                  <span className="font-semibold">Plan</span> the few agents worth
+                  building
                 </p>
               </div>
               <div className="flex items-start">
                 <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
                 <p className="text-gray-700">
-                  <span className="font-semibold">Roadmap to scale</span> from
-                  pilot → production
+                  <span className="font-semibold">Roadmap</span> from pilot to
+                  production
                 </p>
               </div>
             </div>

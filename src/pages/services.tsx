@@ -12,11 +12,11 @@ const ServicesPage = () => {
     <RootLayout>
       <NextSeo
         title={`Our Services • ${CONFIG.blog.title}`}
-        description="We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on. We wire it to your stack, test on real traffic, watch the KPI, and keep it improving."
+        description="Outcomes, ready or custom. We build AI agents that handle your calls, chats, and leads across every channel, wired to your stack, tested on real traffic, kept working. Book a consultation."
         openGraph={{
           title: `Our Services • ${CONFIG.blog.title}`,
           description:
-            "We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on. We wire it to your stack, test on real traffic, watch the KPI, and keep it improving.",
+            "Outcomes, ready or custom. We build AI agents that handle your calls, chats, and leads across every channel, wired to your stack, tested on real traffic, kept working. Book a consultation.",
           type: "website",
           url: `${CONFIG.link}/services`,
         }}

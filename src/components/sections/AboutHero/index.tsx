@@ -25,15 +25,16 @@ const AboutHero: React.FC = () => {
               About Agentic AI Labs
             </h1>
             <p className="text-center font-sfpro text-slate-600 font-light text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl px-2">
-              We combine{" "}
-              <span className="text-blue-600 font-medium">AI tech</span> with
+              We&apos;re the{" "}
               <span className="text-blue-600 font-medium">
-                {" "}
-                human intelligence and empathy
-              </span>{" "}
-              to ship agents people actually trust and teams rely on. We wire it
-              to your stack, test on real traffic, watch the KPI, and keep it
-              improving.
+                lab that turns AI into outcomes
+              </span>
+              . You shouldn&apos;t have to become an AI expert to get ahead with
+              it, so we build the systems that do the work, run them on your real
+              traffic, and keep them working.{" "}
+              <span className="text-blue-600 font-medium">
+                Make AI work. So you don&apos;t have to.
+              </span>
             </p>
           </div>
         </div>

@@ -22,17 +22,17 @@ const ServicesHeroSection: React.FC = () => {
         <div className="flex flex-col max-w-6xl mx-auto">
           <div className="flex flex-col items-center justify-center py-16 sm:py-20">
             <h1 className="text-center font-mondwest text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-tight mb-8">
-              Our Services
+              Outcomes, ready or built for you.
             </h1>
             <p className="text-center font-sfpro text-slate-600 font-light text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-4xl px-2">
-              We combine{" "}
-              <span className="text-blue-600 font-medium">AI tech</span> with{" "}
+              Tell us the outcome you want. We&apos;ve either{" "}
+              <span className="text-blue-600 font-medium">already built it</span>,
+              or we{" "}
               <span className="text-blue-600 font-medium">
-                human intelligence and empathy
-              </span>{" "}
-              to ship agents people actually trust and teams rely on. We wire it
-              to your stack, test on real traffic, watch the KPI, and keep it
-              improving.
+                build it around your business
+              </span>
+              . Either way you get AI that works on real customers, not a demo
+              that breaks the moment one shows up.
             </p>
           </div>
         </div>

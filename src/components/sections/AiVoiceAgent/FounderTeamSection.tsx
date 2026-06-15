@@ -103,6 +103,7 @@ const FounderTeamSection = ({ productName = "Loop", variant = "dark" }: Props) =
                 <div>
                   <p className="font-sfpro font-semibold text-slate-900 text-lg leading-tight">Aditya Pandey</p>
                   <p className="font-sfpro text-slate-500 text-sm mt-0.5">Founder, Agentic AI Labs</p>
+                  <p className="font-sfpro text-slate-900 text-sm font-medium mt-1.5">Built by people who ship, not pitch.</p>
                   <span className="inline-block mt-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-[11px] font-sfpro font-medium tracking-wide">
                     Designer · Builder · Founder
                   </span>

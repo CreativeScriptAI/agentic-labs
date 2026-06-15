@@ -34,7 +34,7 @@ const ContactHeroSection = ({ noPadding = false }: ContactHeroSectionProps) => {
       icon: "/images/contactus/hero/image4.png",
       title: "Integration plan",
       description:
-        "How your AI agent fits into your current tools (CRM, WhatsApp, Twilio, GHL, Slack, website, etc.).",
+        "How your AI fits the tools you already use: CRM, WhatsApp, GHL, Slack, your site.",
     },
   ];
 

@@ -20,13 +20,14 @@ const ReasonExist: React.FC = () => {
         </p>
         <p className="text-xl sm:text-2xl font-sfpro text-slate-400 font-light leading-tight mb-6">
           <span className="text-slate-900 text-xl sm:text-2xl leading-9 sm:leading-10">
-            Founders already know what to build.
+            Every founder wants to be ahead with AI.
           </span>{" "}
           <span>
-            The gap is shipping fast and making it work in the real world.
-            Tutorials are easy. Production is hard. Most AI tools promise magic.
-            They get you a demo, not a dependable system. Production needs human
-            judgment, real integrations, edge-case handling, and thoughtful UX.
+            Almost nobody has the time or the skill to get there, so they buy
+            another tool, then another, and mistake the motion for progress. We
+            exist to end that. You don&apos;t need more tools. You need the
+            outcome. We build the AI that delivers it, and we own whether it
+            actually works.
           </span>
         </p>
       </div>

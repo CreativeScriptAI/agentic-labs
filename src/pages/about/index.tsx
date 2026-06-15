@@ -15,18 +15,18 @@ const AboutPage = () => {
     <RootLayout>
       <NextSeo
         title={`About • ${CONFIG.blog.title}`}
-        description="We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on."
+        description="The lab that turns AI into outcomes. You shouldn't have to become an AI expert to get ahead. We build the systems that do the work and keep them running in production."
         openGraph={{
           title: `About • ${CONFIG.blog.title}`,
           description:
-            "We combine AI tech with human intelligence and empathy to ship agents people actually trust and teams rely on.",
+            "The lab that turns AI into outcomes. You shouldn't have to become an AI expert to get ahead. We build the systems that do the work and keep them running in production.",
           type: "website",
           url: `${CONFIG.link}/about`,
         }}
       />
       <AboutHero />
-      <WhyDifferent />
       <ReasonExist />
+      <WhyDifferent />
       <WhatWeDo />
       <FounderTeamSection variant="light" />
       <ContactSection />
