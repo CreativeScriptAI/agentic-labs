@@ -2,16 +2,119 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCountry } from "src/hooks/useCountry";
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
   isMobile?: boolean;
   onLinkClick?: () => void;
 };
 
-type DropdownItem = { name: string; to: string; badge?: string; desc?: string };
-type NavItem =
-  | { type: "link"; id: number; name: string; to: string }
-  | { type: "dropdown"; id: number; name: string; items: DropdownItem[] };
+type NavLink = { name: string; to: string; desc?: string };
+type LinkGroup = { label: string; links: NavLink[] };
+
+// ─── IA v2 data — outcome-first, hero-led (see Information Architecture Research) ──────────
+
+// The one hero. Featured at the top of the Solutions panel. Brand name "AI Sales Agent",
+// pointed at the existing /ai-voice-agent/ page (kept as the canonical hero for now).
+const HERO = {
+  name: "AI Sales Agent",
+  to: "/ai-voice-agent/",
+  tagline: "One system, every channel — answers, qualifies & books every inbound lead.",
+};
+
+// Lens A — By Outcome / job-to-be-done (PRIMARY lens). Mapped to the closest existing pages.
+const BY_OUTCOME: NavLink[] = [
+  { name: "Answer, qualify & book every lead", to: "/ai-voice-agent/" },
+  { name: "Never miss a call", to: "/ai-for-missed-calls/" },
+  { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
+  { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },
+  { name: "Done-for-you setup", to: "/done-for-you-ai-voice-agent/" },
+];
+
+// Lens B — By Industry (the role-hats of the one hero).
+const BY_INDUSTRY: LinkGroup[] = [
+  {
+    label: "Healthcare",
+    links: [
+      { name: "Dental Clinics", to: "/ai-receptionist-for-dental-clinic/" },
+      { name: "Dental Practices", to: "/ai-receptionist-for-dental-practices/" },
+      { name: "Medical Clinics", to: "/ai-receptionist-for-medical-clinics/" },
+      { name: "Med Spas", to: "/ai-receptionist-for-med-spa/" },
+      { name: "Diagnostic Labs", to: "/ai-for-diagnostic-lab/" },
+    ],
+  },
+  {
+    label: "Hospitality & Local",
+    links: [
+      { name: "Restaurants", to: "/ai-receptionist-for-restaurant/" },
+      { name: "Salons", to: "/ai-booking-agent-for-salon/" },
+      { name: "Travel Agencies", to: "/ai-booking-agent-for-travel-agencies/" },
+      { name: "Gym & Fitness", to: "/ai-for-gym-fitness/" },
+    ],
+  },
+  {
+    label: "Home & Field Services",
+    links: [
+      { name: "Home Services", to: "/ai-dispatch-agent-for-home-services/" },
+      { name: "Pest Control", to: "/ai-for-pest-control/" },
+    ],
+  },
+  {
+    label: "Real Estate",
+    links: [
+      { name: "Showing Coordinator", to: "/ai-showing-coordinator-for-real-estate/" },
+    ],
+  },
+  {
+    label: "Sales & Agencies",
+    links: [
+      { name: "GHL Agencies (SDR)", to: "/ai-sdr-for-ghl-agencies/" },
+      { name: "eCommerce Support", to: "/ai-support-rep-for-ecommerce/" },
+    ],
+  },
+  {
+    label: "Coaching & Education",
+    links: [
+      { name: "Coaching Institutes", to: "/ai-for-coaching-institute/" },
+      { name: "Online Coaching", to: "/ai-show-up-agent-for-online-coaching/" },
+      { name: "Immigration Consultants", to: "/ai-for-immigration-consultant/" },
+    ],
+  },
+  {
+    label: "Hiring & Recruiting",
+    links: [
+      { name: "Recruiting Agencies", to: "/ai-interviewer-for-recruiting-agencies/" },
+      { name: "Blue-Collar Hiring", to: "/ai-interviewer-for-blue-collar-hiring/" },
+    ],
+  },
+];
+
+// Compare — first-class branch for bottom-funnel intent.
+const COMPARE_ALTERNATIVES: NavLink[] = [
+  { name: "vs Vapi", to: "/vapi-alternative/" },
+  { name: "vs Retell AI", to: "/retell-ai-alternative/" },
+  { name: "vs Bland AI", to: "/bland-ai-alternative/" },
+  { name: "vs GoHighLevel calling", to: "/gohighlevel-ai-calling-alternative/" },
+  { name: "vs GHL AI chatbot", to: "/ghl-ai-chatbot-alternative/" },
+  { name: "AI vs human receptionist", to: "/ai-vs-human-receptionist/" },
+];
+const COMPARE_ROUNDUPS: NavLink[] = [
+  { name: "Best AI for dental practices", to: "/best-ai-tools-for-dental-practices/" },
+  { name: "Best AI voice agents", to: "/best-ai-voice-agents-for-business/" },
+  { name: "Best AI for GoHighLevel", to: "/best-ai-for-gohighlevel-agencies/" },
+  { name: "Best AI for recruiting", to: "/best-ai-tools-for-recruiting-agencies/" },
+];
+
+// Resources — the authority layer.
+const RESOURCES: NavLink[] = [
+  { name: "Blog", to: "/blog/", desc: "Guides, case studies, and insights." },
+  { name: "AI Agents Repo", to: "/agents-repo/", desc: "Browse our library of pre-built AI agents." },
+  { name: "Why our agents remember", to: "/ai-memory-system/", desc: "The memory system behind production-grade AI." },
+  { name: "Glossary: What is Agentic AI?", to: "/glossary/what-is-agentic-ai/", desc: "Plain-English definitions." },
+];
+
+// ─── Icons ─────────────────────────────────────────────────────────────────────
 
 const ChevronDown = ({ open }: { open: boolean }) => (
   <svg
@@ -23,25 +126,42 @@ const ChevronDown = ({ open }: { open: boolean }) => (
   </svg>
 );
 
+// ─── Component ─────────────────────────────────────────────────────────────────
+
+// Top-level nav item ids
+const NAV = {
+  SOLUTIONS: 1,
+  COMPARE: 2,
+  RESOURCES: 3,
+} as const;
+
 const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const router = useRouter();
   const { countryPrefix } = useCountry();
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [openMobileGroup, setOpenMobileGroup] = useState<number | null>(null);
+  const [openMobileSub, setOpenMobileSub] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  // The Solutions mega-panel is portal'd to <body> (see below), so it lives outside
+  // navRef — track it separately for the outside-click check.
+  const panelRef = useRef<HTMLDivElement>(null);
 
   const currentPath = router.pathname.replace(/\/$/, "") || "/";
-
   const isActive = (to: string) =>
     currentPath === to.replace(/\/$/, "") || currentPath === to;
+  const anyActive = (links: NavLink[]) => links.some((l) => isActive(l.to));
 
-  const isGroupActive = (items: DropdownItem[]) =>
-    items.some((i) => isActive(i.to));
+  // Portals need the DOM — only render them after mount (avoids SSR mismatch).
+  useEffect(() => setMounted(true), []);
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+      const t = e.target as Node;
+      const insideNav = navRef.current?.contains(t);
+      const insidePanel = panelRef.current?.contains(t);
+      if (!insideNav && !insidePanel) {
         setOpenDropdown(null);
       }
     };
@@ -54,169 +174,320 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
     setOpenDropdown(null);
   }, [router.pathname]);
 
-  const navItems: NavItem[] = [
-    {
-      type: "dropdown",
-      id: 1,
-      name: "Products",
-      items: [
-        { name: "(Voice + Text) AI Agent", to: "/ai-voice-agent/", badge: "New", desc: "Calls answered. Follow-ups on WhatsApp." },
-        { name: "Second Brain for AI Agent", to: `${countryPrefix}/ai-memory-system/`, desc: "Memory that persists across every session." },
-        { name: "FREE AI Clarity Workshop", to: `${countryPrefix}/ai-clarity-workshop/`, desc: "One session. A clear AI roadmap for your business." },
-      ],
-    },
-    { type: "link", id: 2, name: "Services", to: `${countryPrefix}/services/` },
-    {
-      type: "dropdown",
-      id: 3,
-      name: "Resources",
-      items: [
-        { name: "Blog", to: `${countryPrefix}/blog/`, desc: "Guides, case studies, and insights." },
-        { name: "AI Agents Repo", to: `${countryPrefix}/agents-repo/`, desc: "Browse our library of pre-built AI agents." },
-      ],
-    },
-    { type: "link", id: 4, name: "About", to: `${countryPrefix}/about/` },
-  ];
+  const close = () => {
+    setOpenDropdown(null);
+    onLinkClick?.();
+  };
 
-  // ── MOBILE ──────────────────────────────────────────────────────────────────
+  // ── MOBILE ────────────────────────────────────────────────────────────────────
   if (isMobile) {
+    const toggleGroup = (id: number) =>
+      setOpenMobileGroup(openMobileGroup === id ? null : id);
+    const toggleSub = (id: string) =>
+      setOpenMobileSub(openMobileSub === id ? null : id);
+
     return (
       <nav className="w-full">
         <ul className="space-y-1">
-          {navItems.map((item) => {
-            if (item.type === "link") {
-              return (
-                <li key={item.id}>
-                  <Link
-                    href={item.to}
-                    onClick={onLinkClick}
-                    className={`flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg transition-colors ${
-                      isActive(item.to) ? "text-[#0A1128] font-semibold" : "text-gray-700 hover:text-[#0A1128]"
-                    }`}
-                  >
-                    <span>{item.name}</span>
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </li>
-              );
-            }
-
-            const isOpen = openMobileGroup === item.id;
-            return (
-              <li key={item.id}>
-                <button
-                  onClick={() => setOpenMobileGroup(isOpen ? null : item.id)}
-                  className={`w-full flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg transition-colors ${
-                    isGroupActive(item.items) ? "text-[#0A1128] font-semibold" : "text-gray-700"
-                  }`}
+          {/* Solutions */}
+          <li>
+            <button
+              onClick={() => toggleGroup(NAV.SOLUTIONS)}
+              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+            >
+              <span>Solutions</span>
+              <ChevronDown open={openMobileGroup === NAV.SOLUTIONS} />
+            </button>
+            {openMobileGroup === NAV.SOLUTIONS && (
+              <div className="pl-2 pb-3 space-y-3">
+                {/* Featured hero */}
+                <Link
+                  href={HERO.to}
+                  onClick={onLinkClick}
+                  className="block rounded-xl bg-[#0A1128] text-white px-3 py-3"
                 >
-                  <span>{item.name}</span>
-                  <ChevronDown open={isOpen} />
-                </button>
-                {isOpen && (
-                  <ul className="pl-4 pb-2 space-y-1">
-                    {item.items.map((sub) => (
-                      <li key={sub.to}>
-                        <Link
-                          href={sub.to}
-                          onClick={onLinkClick}
-                          className={`flex items-center justify-between py-2.5 px-2 text-sm rounded-lg transition-colors ${
-                            isActive(sub.to) ? "text-[#0A1128] font-semibold" : "text-gray-600 hover:text-[#0A1128]"
-                          }`}
-                        >
-                          <span>{sub.name}</span>
-                          {sub.badge && (
-                            <span className="text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full">{sub.badge}</span>
-                          )}
-                        </Link>
+                  <span className="flex items-center gap-2 text-sm font-semibold">
+                    {HERO.name}
+                    <span className="text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full">Flagship</span>
+                  </span>
+                  <span className="block text-xs text-gray-300 mt-1 leading-snug">{HERO.tagline}</span>
+                </Link>
+
+                {/* By Outcome */}
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">By Outcome</p>
+                  <ul className="space-y-0.5">
+                    {BY_OUTCOME.map((l) => (
+                      <li key={l.name}>
+                        <Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
                       </li>
                     ))}
                   </ul>
-                )}
-              </li>
-            );
-          })}
+                </div>
+
+                {/* By Industry — nested accordions */}
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">By Industry</p>
+                  {BY_INDUSTRY.map((group) => (
+                    <div key={group.label}>
+                      <button
+                        onClick={() => toggleSub(group.label)}
+                        className="w-full flex items-center justify-between py-2 px-2 text-sm font-medium text-gray-600 rounded-lg"
+                      >
+                        {group.label}
+                        <ChevronDown open={openMobileSub === group.label} />
+                      </button>
+                      {openMobileSub === group.label && (
+                        <ul className="pl-3 space-y-0.5">
+                          {group.links.map((l) => (
+                            <li key={l.to}>
+                              <Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* Compare */}
+          <li>
+            <button
+              onClick={() => toggleGroup(NAV.COMPARE)}
+              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+            >
+              <span>Compare</span>
+              <ChevronDown open={openMobileGroup === NAV.COMPARE} />
+            </button>
+            {openMobileGroup === NAV.COMPARE && (
+              <div className="pl-2 pb-3 space-y-3">
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">Alternatives</p>
+                  <ul className="space-y-0.5">
+                    {COMPARE_ALTERNATIVES.map((l) => (
+                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">Best-of roundups</p>
+                  <ul className="space-y-0.5">
+                    {COMPARE_ROUNDUPS.map((l) => (
+                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* Resources */}
+          <li>
+            <button
+              onClick={() => toggleGroup(NAV.RESOURCES)}
+              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+            >
+              <span>Resources</span>
+              <ChevronDown open={openMobileGroup === NAV.RESOURCES} />
+            </button>
+            {openMobileGroup === NAV.RESOURCES && (
+              <ul className="pl-4 pb-2 space-y-1">
+                {RESOURCES.map((l) => (
+                  <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {/* Services */}
+          <li>
+            <Link
+              href={`${countryPrefix}/services/`}
+              onClick={onLinkClick}
+              className={`flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg ${isActive("/services/") ? "text-[#0A1128] font-semibold" : "text-gray-700 hover:text-[#0A1128]"}`}
+            >
+              <span>Services</span>
+              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </li>
+
+          {/* About */}
+          <li>
+            <Link
+              href={`${countryPrefix}/about/`}
+              onClick={onLinkClick}
+              className={`flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg ${isActive("/about/") ? "text-[#0A1128] font-semibold" : "text-gray-700 hover:text-[#0A1128]"}`}
+            >
+              <span>About</span>
+              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </li>
         </ul>
       </nav>
     );
   }
 
-  // ── DESKTOP ─────────────────────────────────────────────────────────────────
+  // ── DESKTOP ───────────────────────────────────────────────────────────────────
+  const toggle = (id: number) => setOpenDropdown(openDropdown === id ? null : id);
+
+  // shared trigger button styling
+  const triggerClass = (active: boolean, open: boolean) =>
+    `flex items-center gap-1.5 text-sm font-medium transition-colors ${
+      active || open ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
+    }`;
+
+  const solutionsActive = anyActive([...BY_OUTCOME, ...BY_INDUSTRY.flatMap((g) => g.links), { name: "", to: HERO.to }]);
+  const compareActive = anyActive([...COMPARE_ALTERNATIVES, ...COMPARE_ROUNDUPS]);
+  const resourcesActive = anyActive(RESOURCES);
+
   return (
     <nav ref={navRef} className="flex">
       <ul className="flex items-center space-x-6">
-        {navItems.map((item) => {
-          if (item.type === "link") {
-            return (
-              <li key={item.id}>
-                <Link
-                  href={item.to}
-                  onClick={onLinkClick}
-                  className={`text-sm font-medium transition-colors ${
-                    isActive(item.to) ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            );
-          }
-
-          const isOpen = openDropdown === item.id;
-          const groupActive = isGroupActive(item.items);
-          return (
-            <li key={item.id} className="relative">
-              <button
-                onClick={() => setOpenDropdown(isOpen ? null : item.id)}
-                className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
-                  groupActive ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
-                }`}
+        {/* ── Solutions (mega-menu) ── */}
+        <li className="relative">
+          <button onClick={() => toggle(NAV.SOLUTIONS)} className={triggerClass(solutionsActive, openDropdown === NAV.SOLUTIONS)}>
+            Solutions
+            <ChevronDown open={openDropdown === NAV.SOLUTIONS} />
+          </button>
+          {/* Portal to <body> so the pill's backdrop-filter doesn't trap the fixed panel */}
+          {mounted && createPortal(
+            <AnimatePresence>
+            {openDropdown === NAV.SOLUTIONS && (
+              <motion.div
+                ref={panelRef}
+                key="solutions-mega"
+                // x:"-50%" must live in the motion transform — framer-motion writes inline
+                // `transform`, which overrides any Tailwind `-translate-x-1/2` class.
+                initial={{ opacity: 0, x: "-50%", y: -6 }}
+                animate={{ opacity: 1, x: "-50%", y: 0 }}
+                exit={{ opacity: 0, x: "-50%", y: -6 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
+                className="fixed left-1/2 top-[88px] z-[200] bg-white rounded-2xl border border-gray-100 shadow-[0_16px_56px_rgba(0,0,0,0.14)] overflow-hidden"
+                style={{ width: "min(940px, calc(100vw - 48px))" }}
               >
-                {item.name}
-                <ChevronDown open={isOpen} />
-              </button>
+                <div className="grid grid-cols-12 gap-0">
+                  {/* Featured hero — left rail */}
+                  <div className="col-span-3 bg-[#0A1128] p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full mb-3">FLAGSHIP</span>
+                      <Link href={HERO.to} onClick={close} className="block text-lg font-semibold text-white leading-tight hover:underline">
+                        {HERO.name}
+                      </Link>
+                      <p className="text-xs text-gray-300 mt-2 leading-snug">{HERO.tagline}</p>
+                    </div>
+                    <Link href={HERO.to} onClick={close} className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-[#FCCA07] hover:gap-2 transition-all">
+                      See the agent →
+                    </Link>
+                  </div>
 
-              {isOpen && (
-                <div
-                  className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50"
-                  style={{ width: "max-content", minWidth: "260px", maxWidth: "320px" }}
-                >
-                  {/* Triangle pointer */}
-                  <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
-                  <ul className="p-2">
-                    {item.items.map((sub) => (
-                      <li key={sub.to}>
-                        <Link
-                          href={sub.to}
-                          onClick={() => { setOpenDropdown(null); onLinkClick?.(); }}
-                          className={`block px-3 py-3 rounded-xl transition-colors hover:bg-gray-50 ${
-                            isActive(sub.to) ? "bg-gray-50" : ""
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 mb-0.5">
-                            <span className="text-sm font-semibold text-[#0A1128]" style={{ whiteSpace: "nowrap" }}>
-                              {sub.name}
-                            </span>
-                            {sub.badge && (
-                              <span className="text-[9px] font-bold bg-[#FCCA07] text-[#0A1128] px-1.5 py-0.5 rounded-full tracking-wide" style={{ whiteSpace: "nowrap", flexShrink: 0 }}>
-                                {sub.badge}
-                              </span>
-                            )}
-                          </div>
-                          {sub.desc && (
-                            <p className="text-xs text-gray-400 leading-snug">{sub.desc}</p>
-                          )}
-                        </Link>
-                      </li>
+                  {/* By Outcome */}
+                  <div className="col-span-3 p-6 border-r border-gray-100">
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">By Outcome</p>
+                    <ul className="space-y-2">
+                      {BY_OUTCOME.map((l) => (
+                        <li key={l.name}>
+                          <Link href={l.to} onClick={close} className={`text-sm leading-snug block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* By Industry */}
+                  <div className="col-span-6 p-6">
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">By Industry</p>
+                    <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                      {BY_INDUSTRY.map((group) => (
+                        <div key={group.label}>
+                          <p className="text-[11px] font-semibold text-[#0062FF] uppercase tracking-wider mb-1.5">{group.label}</p>
+                          <ul className="space-y-1">
+                            {group.links.map((l) => (
+                              <li key={l.to}>
+                                <Link href={l.to} onClick={close} className={`text-sm leading-snug block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            </AnimatePresence>,
+            document.body
+          )}
+        </li>
+
+        {/* ── Compare (dropdown) ── */}
+        <li className="relative">
+          <button onClick={() => toggle(NAV.COMPARE)} className={triggerClass(compareActive, openDropdown === NAV.COMPARE)}>
+            Compare
+            <ChevronDown open={openDropdown === NAV.COMPARE} />
+          </button>
+          {openDropdown === NAV.COMPARE && (
+            <div className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50 p-5" style={{ width: "max-content", minWidth: "480px" }}>
+              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
+              <div className="grid grid-cols-2 gap-x-8">
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">Alternatives</p>
+                  <ul className="space-y-2">
+                    {COMPARE_ALTERNATIVES.map((l) => (
+                      <li key={l.to}><Link href={l.to} onClick={close} className={`text-sm block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
                     ))}
                   </ul>
                 </div>
-              )}
-            </li>
-          );
-        })}
+                <div>
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">Best-of roundups</p>
+                  <ul className="space-y-2">
+                    {COMPARE_ROUNDUPS.map((l) => (
+                      <li key={l.to}><Link href={l.to} onClick={close} className={`text-sm block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+        </li>
+
+        {/* ── Resources (dropdown) ── */}
+        <li className="relative">
+          <button onClick={() => toggle(NAV.RESOURCES)} className={triggerClass(resourcesActive, openDropdown === NAV.RESOURCES)}>
+            Resources
+            <ChevronDown open={openDropdown === NAV.RESOURCES} />
+          </button>
+          {openDropdown === NAV.RESOURCES && (
+            <div className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50" style={{ width: "max-content", minWidth: "280px", maxWidth: "340px" }}>
+              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
+              <ul className="p-2">
+                {RESOURCES.map((l) => (
+                  <li key={l.to}>
+                    <Link href={l.to} onClick={close} className={`block px-3 py-3 rounded-xl transition-colors hover:bg-gray-50 ${isActive(l.to) ? "bg-gray-50" : ""}`}>
+                      <span className="text-sm font-semibold text-[#0A1128] block" style={{ whiteSpace: "nowrap" }}>{l.name}</span>
+                      {l.desc && <p className="text-xs text-gray-400 leading-snug mt-0.5">{l.desc}</p>}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </li>
+
+        {/* ── Services (link) ── */}
+        <li>
+          <Link href={`${countryPrefix}/services/`} onClick={onLinkClick} className={`text-sm font-medium transition-colors ${isActive("/services/") ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"}`}>
+            Services
+          </Link>
+        </li>
+
+        {/* ── About (link) ── */}
+        <li>
+          <Link href={`${countryPrefix}/about/`} onClick={onLinkClick} className={`text-sm font-medium transition-colors ${isActive("/about/") ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"}`}>
+            About
+          </Link>
+        </li>
       </ul>
     </nav>
   );

@@ -20,10 +20,15 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       { path: "/blog/", priority: 0.8 },
       { path: "/contact/", priority: 0.8 },
       { path: "/services/", priority: 0.8 },
-      { path: "/audit/", priority: 0.9 },
       { path: "/ai-clarity-workshop/", priority: 0.9 },
       { path: "/ai-memory-system/", priority: 0.9 },
       { path: "/ai-voice-agent/", priority: 0.95 },
+      { path: "/ai-voice-agent-global/", priority: 0.9 },
+      { path: "/ai-receptionist-for-medical-clinics/", priority: 0.9 },
+      { path: "/ai-receptionist-for-dental-practices/", priority: 0.9 },
+      { path: "/indian-ai-voices/", priority: 0.8 },
+      { path: "/agents-repo/", priority: 0.7 },
+      { path: "/privacy-policy/", priority: 0.3 },
     ];
 
     // Get blog posts
@@ -54,7 +59,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 
     // Add programmatic SEO routes (root level)
     const pSeoPriority = (type: string) => {
-      if (type === "positioning") return 0.90;
       if (type === "persona" || type === "integration") return 0.85;
       if (type === "comparison" || type === "memory-use-case") return 0.80;
       if (type === "directory") return 0.70;
