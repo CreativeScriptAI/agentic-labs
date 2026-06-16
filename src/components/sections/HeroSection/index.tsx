@@ -12,23 +12,32 @@ const HeroSection = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col max-w-6xl mx-auto py-12 sm:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6">
-            {/* Main Headline */}
+            {/* Main Headline — tiered hierarchy: premise, problem, payoff */}
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-4 sm:mb-6 text-center font-mondwest tracking-tight"
+              className="text-center font-mondwest tracking-tight mb-4 sm:mb-6"
               style={{ textWrap: "balance" }}
             >
-              <span>Your AI works in a demo. </span>
-              <span className="text-gray-500">It breaks with real customers. </span>
-              <span className="text-blue-600 block sm:inline">We fix that.</span>
+              {/* Premise + problem: smaller setup */}
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-snug">
+                You wanted to get ahead with AI.
+              </span>
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-bold text-gray-400 leading-snug mb-3 sm:mb-5">
+                You ended up with six tools and no time.
+              </span>
+              {/* Payoff: the dominant line */}
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-600 leading-[1.04]">
+                We give you the outcome instead.
+              </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-center text-slate-600 text-sm sm:text-base lg:text-lg font-normal leading-relaxed max-w-2xl px-4">
-              We build AI systems that talk to your customers, remember every
-              interaction, and take action — without you in the loop.
+              Agentic AI Labs builds AI that runs the repetitive parts of your
+              business, on real customers, in production. Not another tool for
+              your list. The result you were actually chasing.
             </p>
             <p className="text-center text-slate-800 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-2xl px-4">
-              Voice. Memory. Automation. One system. Production-grade.
+              Make AI work. So you don&apos;t have to.
             </p>
 
             {/* CTAs */}
@@ -45,7 +54,7 @@ const HeroSection = () => {
                 href="#what_we_build"
                 className="text-sm sm:text-base font-medium text-blue-600 hover:text-blue-700 transition-colors px-4 py-3"
               >
-                See How It Works &darr;
+                See how it works &darr;
               </a>
             </div>
           </div>

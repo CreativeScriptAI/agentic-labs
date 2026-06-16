@@ -63,8 +63,10 @@ const HowWeWorkSection = dynamic(
   { ssr: true, loading: () => <SectionLoader label="HOW IT WORKS" /> }
 );
 
+// NOTE: explicit "/index" path — a legacy WhoItsForSection.tsx file sits beside this
+// directory and would otherwise win module resolution, rendering the old section.
 const WhoItsForSection = dynamic(
-  () => import("src/components/sections/WhoItsForSection"),
+  () => import("src/components/sections/WhoItsForSection/index"),
   { ssr: true, loading: () => <SectionLoader label="IS THIS FOR YOU?" /> }
 );
 
@@ -139,9 +141,9 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   }
 
   const meta = {
-    title: "Agentic AI Labs | AI Systems That Work — Voice, Memory & Automation",
+    title: "Agentic AI Labs | AI That Answers, Qualifies & Books Your Leads",
     description:
-      "We build AI systems that talk to your customers, remember every interaction, and take action — without you in the loop. Voice. Memory. Automation. Production-grade.",
+      "We build AI that handles every call and message, qualifies leads, and books them, across every channel. Outcomes, not tools. Make AI work, so you don't have to.",
     type: "Website",
     url: "https://www.tryagentikai.com",
     keywords: [
@@ -174,7 +176,7 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
         data={{
           name: "AI System Development & Deployment",
           description:
-            "Custom AI system development — voice agents, memory layers, and automation workflows — built for production.",
+            "Custom AI system development: voice agents, memory layers, and automation workflows, built for production.",
         }}
       />
       <StructuredData type="website" data={{}} />
@@ -195,12 +197,12 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
             {
               question: "What if the AI says something wrong to a customer?",
               answer:
-                "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails — things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
+                "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails: things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
             },
             {
               question: "What tools do you integrate with?",
               answer:
-                "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack — and custom APIs. The system plugs into your stack, not the other way around.",
+                "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack, and custom APIs. The system plugs into your stack, not the other way around.",
             },
             {
               question: "How much does it cost?",
@@ -210,17 +212,17 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
             {
               question: "Can the AI hand off to a real person?",
               answer:
-                "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure — via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
+                "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure, via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
             },
             {
               question: "Who are your typical clients?",
               answer:
-                "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work — calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
+                "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work: calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
             },
             {
               question: "What happens after the system goes live?",
               answer:
-                "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan — we watch the system, tune it, and ship updates as your business evolves.",
+                "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan. We watch the system, tune it, and ship updates as your business evolves.",
             },
           ],
         }}

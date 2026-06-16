@@ -22,7 +22,7 @@ const WhoWeAreSection = () => {
           Built by engineers. Not an agency.
         </h2>
 
-        {/* Origin — flowing narrative */}
+        {/* Origin: flowing narrative */}
         <div className="space-y-5 sm:space-y-6 mb-10 sm:mb-14">
           <p className="text-slate-600 font-sfpro text-base sm:text-lg leading-relaxed">
             Three co-founders. Years of shipping SaaS apps and backend systems.
@@ -48,11 +48,11 @@ const WhoWeAreSection = () => {
         {/* Divider */}
         <div className="w-12 h-0.5 bg-blue-600 mx-auto mb-10 sm:mb-14" />
 
-        {/* Team callout — left-bordered for minimal accent */}
+        {/* Team callout: left-bordered for minimal accent */}
         <div className="border-l-2 border-blue-600 pl-5 sm:pl-6 mb-10 sm:mb-14 space-y-4">
           <p className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed">
             Behind the three of us sits a core team of AI devs, backend
-            engineers, ML specialists, and ops engineers — the kind of people
+            engineers, ML specialists, and ops engineers. The kind of people
             who&apos;d rather break things at 2am than ship something mid.
           </p>
           <p className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed">
@@ -63,10 +63,10 @@ const WhoWeAreSection = () => {
 
         {/* Closer */}
         <p className="text-blue-600 font-mondwest text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 sm:mb-14">
-          We&apos;re Agentic AI Labs. We build AI systems that work.
+          We&apos;re Agentic AI Labs. We make AI work, so you don&apos;t have to.
         </p>
 
-        {/* Credibility — minimal stat row */}
+        {/* Credibility: minimal stat row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           <div>
             <p className="text-2xl sm:text-3xl font-bold text-[#0A1128] font-mondwest">3</p>

@@ -6,7 +6,7 @@ const layers = [
     label: "VOICE",
     title: "Your AI talks.",
     description:
-      "It picks up calls. Answers questions. Qualifies leads. Handles conversations that used to take your team hours.",
+      "It picks up calls. Answers questions. Qualifies leads. Handles conversations that used to eat your team's hours.",
     tagline: "Not a script. A real conversation.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@ const layers = [
     label: "ACTION",
     title: "Your AI acts.",
     description:
-      "Books appointments. Updates your CRM. Sends follow-ups. Triggers workflows. Processes requests.",
+      "Books appointments. Updates your CRM. Sends follow-ups. Triggers workflows.",
     tagline: "Not a task list. Autonomous action.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,17 +64,18 @@ const WhatWeBuildSection = () => {
             Talk. Remember. Act.
           </h2>
           <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
-            One AI system. Three layers. Zero babysitting.
+            One system. It talks, it remembers, it acts. You babysit none of it.
           </h3>
         </div>
 
         {/* Intro */}
         <p className="text-center text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 px-4">
-          We don&apos;t sell you a voice agent. We don&apos;t sell you an
-          automation. We build one AI system where everything is connected.
+          We don&apos;t hand you a voice bot or an automation to wire up
+          yourself. We build the whole thing, working as one, and hand you the
+          result.
         </p>
 
-        {/* Three Layers — horizontal on desktop */}
+        {/* Three Layers: horizontal on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mb-10 sm:mb-14">
           {layers.map((layer, index) => (
             <div
@@ -122,9 +123,9 @@ const WhatWeBuildSection = () => {
         <div className="text-center max-w-2xl mx-auto">
           <div className="w-10 h-0.5 bg-blue-600 mx-auto mb-6 sm:mb-8" />
           <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed">
-            Most AI gives you one of these. We connect all three.{" "}
+            Most AI gives you one of these. We connect all three,{" "}
             <span className="font-semibold text-[#0A1128]">
-              That&apos;s the difference between a demo and a system.
+              so it actually does the job.
             </span>
           </p>
         </div>

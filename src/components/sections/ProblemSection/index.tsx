@@ -61,7 +61,7 @@ const ProblemSection = () => {
             THE PROBLEM
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest leading-tight">
-            You&apos;ve tried the tools.<br className="hidden sm:block" /> Here&apos;s why they broke.
+            You keep buying AI tools.<br className="hidden sm:block" /> You still don&apos;t have the outcome.
           </h2>
         </div>
 
@@ -125,17 +125,17 @@ const ProblemSection = () => {
           </div>
         </div>
 
-        {/* Punchline — navy callout */}
+        {/* Punchline: navy callout */}
         <div className="rounded-2xl bg-[#0A1128] px-8 py-8 sm:py-10 text-center relative overflow-hidden">
           {/* subtle top gradient accent */}
           <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
           <p className="text-white font-mondwest text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug mb-3">
-            The tools are commodities.
+            You don&apos;t need another tool.
             <br />
-            <span className="text-blue-400">The system that connects them</span> is the moat.
+            <span className="text-blue-400">You need the outcome.</span>
           </p>
           <p className="text-gray-400 font-sfpro text-base sm:text-lg">
-            That&apos;s what we build. Not another tool.
+            That&apos;s what we build. The result you wanted, not one more thing to manage.
           </p>
         </div>
 

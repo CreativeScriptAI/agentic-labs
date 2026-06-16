@@ -6,9 +6,9 @@ const CAL_LINK =
 
 const forYouItems = [
   "You have a working product and real customers.",
-  "You're spending hours on tasks an AI could handle — calls, follow-ups, support, scheduling.",
-  "You've tried building AI yourself and hit the wall. It works in a demo. It breaks in production.",
-  "You want a system that runs without you — not another tool to manage.",
+  "You're spending hours on tasks an AI could handle: calls, follow-ups, support, scheduling.",
+  "You've got a folder of AI tools you signed up for and never actually deployed.",
+  "You want a system that runs without you, not another tool to manage.",
   "Your budget is $5K+ and you're serious about making AI work, not just playing with it.",
 ];
 

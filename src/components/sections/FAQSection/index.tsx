@@ -11,9 +11,9 @@ interface FAQSectionProps {
 
 const defaultFaqs: FAQ[] = [
   {
-    question: 'What exactly is an "AI system" vs an "AI tool"?',
+    question: "Why hire you when I can buy an AI tool myself?",
     answer:
-      "An AI tool does one thing. A chatbot chats. An automation triggers a workflow. A voice agent makes calls. Our AI system connects all three: the voice talks to your customer, the memory remembers them, and the automation takes action. One integrated system, not three disconnected tools.",
+      "A tool is something you operate. We hand you the result. You can absolutely buy Vapi or n8n and wire them together yourself. When that turns into a second job you don't have time for, that's when founders call us.",
   },
   {
     question: "How fast can you build it?",
@@ -23,12 +23,12 @@ const defaultFaqs: FAQ[] = [
   {
     question: "What if the AI says something wrong to a customer?",
     answer:
-      "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails — things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
+      "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails: things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
   },
   {
     question: "What tools do you integrate with?",
     answer:
-      "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack — and custom APIs. The system plugs into your stack, not the other way around.",
+      "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack, and custom APIs. The system plugs into your stack, not the other way around.",
   },
   {
     question: "How much does it cost?",
@@ -38,17 +38,17 @@ const defaultFaqs: FAQ[] = [
   {
     question: "Can the AI hand off to a real person?",
     answer:
-      "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure — via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
+      "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure, via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
   },
   {
     question: "Who are your typical clients?",
     answer:
-      "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work — calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
+      "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work: calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
   },
   {
     question: "What happens after the system goes live?",
     answer:
-      "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan — we watch the system, tune it, and ship updates as your business evolves.",
+      "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan. We watch the system, tune it, and ship updates as your business evolves.",
   },
 ];
 

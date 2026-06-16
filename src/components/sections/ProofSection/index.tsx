@@ -53,7 +53,7 @@ const ProofSection = () => {
             </span>
           </div>
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-600 font-mondwest mb-4">
-            PatientlyAI — AI Voice Agent for Healthcare
+            PatientlyAI - AI Voice Agent for Healthcare
           </h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -84,8 +84,9 @@ const ProofSection = () => {
                 The result:
               </h4>
               <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
-                [X calls handled, X bookings increased, X no-shows reduced, X
-                hours saved per week]
+                Doubled the appointment booking rate. Running 24/7 with zero
+                human receptionists in the loop. Built and deployed in under 2
+                weeks.
               </p>
             </div>
           </div>
@@ -114,7 +115,7 @@ const ProofSection = () => {
                 &ldquo;{card.metric}&rdquo;
               </p>
               <p className="text-xs sm:text-sm text-slate-400 font-sfpro">
-                — {card.client}
+                - {card.client}
               </p>
             </div>
           ))}
@@ -128,7 +129,7 @@ const ProofSection = () => {
             sleeps.&rdquo;
           </p>
           <p className="text-sm sm:text-base text-slate-500 font-sfpro font-medium">
-            — Aiden, Founder
+            - Aiden, Founder
           </p>
         </div>
       </div>

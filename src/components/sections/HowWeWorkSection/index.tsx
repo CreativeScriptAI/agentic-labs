@@ -6,23 +6,23 @@ const CAL_LINK =
 
 const steps = [
   {
-    days: "Day 1–2",
+    days: "Day 1-2",
     title: "Discovery",
     description:
-      "We get on a call and map your workflows — every call, every follow-up, every manual task. We identify what the AI should handle and what stays human.",
+      "We get on a call and map your workflows. Every call, every follow-up, every manual task. We identify what the AI should handle and what stays human.",
     effort: "You spend: 1 hour on a call with us.",
     deliverable: "We deliver: A clear scope and build plan.",
   },
   {
-    days: "Day 3–7",
+    days: "Day 3-7",
     title: "Build",
     description:
-      "We build the AI system. Voice agent, memory layer, automation workflows — all connected. Integrated with your existing tools (GHL, HubSpot, Calendly, Stripe — whatever you use).",
+      "We build the system. Voice agent, memory layer, automation workflows, all connected. Integrated with your existing tools (GHL, HubSpot, Calendly, Stripe, whatever you use).",
     effort: "You spend: Nothing. We build.",
     deliverable: null,
   },
   {
-    days: "Day 8–11",
+    days: "Day 8-11",
     title: "Test",
     description:
       "We run real scenarios through the system. Your edge cases. Your tricky customers. The weird questions. We break it on purpose so it doesn't break on your customers.",
@@ -30,10 +30,10 @@ const steps = [
     deliverable: null,
   },
   {
-    days: "Day 12–14",
+    days: "Day 12-14",
     title: "Live",
     description:
-      "Your AI system goes live. We monitor every interaction from day one. We optimize, fix, and tune. You get a dashboard showing calls handled, appointments booked, and issues flagged.",
+      "Your AI goes live. We monitor every interaction from day one. We optimize, fix, and tune. You get a dashboard showing calls handled, appointments booked, and issues flagged.",
     effort: "You spend: Zero. It runs without you.",
     deliverable: null,
   },
@@ -87,7 +87,7 @@ const HowWeWorkSection = () => {
                     {step.days}
                   </span>
                   <span className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
-                    — {step.title}
+                    · {step.title}
                   </span>
                 </div>
                 <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-3">

@@ -18,16 +18,16 @@ const FinalCTASection = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Headline */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-          Your business runs.
+          Make AI work.
         </h2>
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 font-mondwest px-4 mb-6 sm:mb-8">
-          Your AI should too.
+          So you don&apos;t have to.
         </h3>
 
         {/* Body */}
         <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto mb-2">
-          One call. 15 minutes. We&apos;ll tell you exactly what an AI system
-          would look like for your business — and whether it even makes sense.
+          One call. 15 minutes. We&apos;ll tell you exactly what an AI agent
+          would do for your business, and whether it even makes sense.
         </p>
         <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed font-medium max-w-xl mx-auto mb-8 sm:mb-10">
           No pitch. No pressure. Just a straight answer.

@@ -112,9 +112,9 @@ const AIRolesSection = () => {
 
         {/* Intro text */}
         <p className="text-center text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16 px-4">
-          Every business is different. The AI system we build for a dental
-          practice looks different from one we build for a recruiting firm. But
-          the engine is the same: voice + memory + automation, working as one.
+          Every business is different. The AI we build for a dental practice
+          looks nothing like the one we build for a recruiting firm. But the
+          engine is the same: voice, memory, and automation, working as one.
         </p>
 
         {/* Role Cards Grid */}
