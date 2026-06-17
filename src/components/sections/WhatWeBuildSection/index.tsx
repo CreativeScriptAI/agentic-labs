@@ -1,46 +1,65 @@
 import React from "react";
+import { motion } from "framer-motion";
+import RevealText from "src/components/RevealText";
 
-const layers = [
+const cards = [
   {
-    number: "01",
-    label: "VOICE",
-    title: "Your AI talks.",
-    description:
-      "It picks up calls. Answers questions. Qualifies leads. Handles conversations that used to eat your team's hours.",
-    tagline: "Not a script. A real conversation.",
+    label: "Ready to deploy",
+    description: "Agents we have already built. Live in days, not months.",
+    meta: "Speed",
+    metaValue: "Live in days",
+    variant: "plain" as const,
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" />
       </svg>
     ),
   },
   {
-    number: "02",
-    label: "MEMORY",
-    title: "Your AI remembers.",
-    description:
-      "Every customer. Every conversation. Every preference. It gets smarter every month. Returning callers never repeat themselves.",
-    tagline: "Not a database. Intelligence.",
+    label: "Custom build",
+    description: "Designed around how your business actually works.",
+    meta: "Fit",
+    metaValue: "Built for you",
+    variant: "tint" as const,
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
-  },
-  {
-    number: "03",
-    label: "ACTION",
-    title: "Your AI acts.",
-    description:
-      "Books appointments. Updates your CRM. Sends follow-ups. Triggers workflows.",
-    tagline: "Not a task list. Autonomous action.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="m12 2 1.6 4.7L18.5 8l-3.5 3.4.9 4.9L12 14l-3.9 2.3.9-4.9L5.5 8l4.9-1.3L12 2Z" />
       </svg>
     ),
   },
 ];
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 320, damping: 30 },
+  },
+};
 
 const WhatWeBuildSection = () => {
   return (
@@ -56,79 +75,162 @@ const WhatWeBuildSection = () => {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 sm:mb-10">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
-            WHAT WE BUILD
+        <div className="text-center mb-10 sm:mb-14">
+          <p className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro">
+            What we do
           </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-            Talk. Remember. Act.
-          </h2>
-          <h3 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4">
-            One system. It talks, it remembers, it acts. You babysit none of it.
-          </h3>
-        </div>
 
-        {/* Intro */}
-        <p className="text-center text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 px-4">
-          We don&apos;t hand you a voice bot or an automation to wire up
-          yourself. We build the whole thing, working as one, and hand you the
-          result.
-        </p>
-
-        {/* Three Layers: horizontal on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mb-10 sm:mb-14">
-          {layers.map((layer, index) => (
-            <div
-              key={index}
-              className={`relative p-6 sm:p-8 ${
-                index < layers.length - 1
-                  ? "border-b lg:border-b-0 lg:border-r border-gray-200"
-                  : ""
-              }`}
+          <div className="relative inline-block px-4">
+            <RevealText
+              as="h2"
+              text="Tell us the outcome. We build it."
+              inView
+              stagger={0.14}
+              className="block text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-4"
+            />
+            {/* Hand-drawn underline accent under "build it." */}
+            <motion.svg
+              viewBox="0 0 240 14"
+              fill="none"
+              preserveAspectRatio="none"
+              className="absolute -bottom-1 right-4 w-[150px] sm:w-[180px] h-3 text-blue-600"
+              aria-hidden="true"
             >
-              {/* Number + Label */}
-              <div className="flex items-center gap-3 mb-5">
-                <span className="text-3xl sm:text-4xl font-bold text-blue-600/15 font-mondwest leading-none">
-                  {layer.number}
-                </span>
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-md bg-blue-600 flex items-center justify-center text-white flex-shrink-0">
-                    {layer.icon}
-                  </div>
-                  <span className="text-[10px] sm:text-xs text-blue-600 font-sfpro font-semibold uppercase tracking-widest">
-                    {layer.label}
-                  </span>
-                </div>
-              </div>
+              <motion.path
+                d="M2 9C40 4 90 3 150 5c30 1 60 3 88 2"
+                stroke="currentColor"
+                strokeWidth={3}
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, delay: 0.7, ease: "easeInOut" }}
+              />
+            </motion.svg>
+          </div>
 
-              {/* Title */}
-              <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-3">
-                {layer.title}
-              </h4>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-base sm:text-lg lg:text-[20px] font-normal text-[#1E293B] font-sfpro px-4 max-w-2xl mx-auto leading-relaxed mt-2"
+          >
+            We build the AI agents and automations that run the work. Not one
+            product. Whatever the job needs.
+          </motion.p>
 
-              {/* Description */}
-              <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-4">
-                {layer.description}
-              </p>
-
-              {/* Tagline */}
-              <p className="text-blue-600 font-sfpro text-xs sm:text-sm font-semibold tracking-wide">
-                {layer.tagline}
-              </p>
-            </div>
-          ))}
+          {/* One door, two speeds */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-[0_4px_16px_rgba(10,17,40,0.04)]"
+          >
+            <span className="font-sfpro text-xs sm:text-sm font-semibold text-[#0A1128]">
+              One door
+            </span>
+            <span className="h-1 w-1 rounded-full bg-blue-600" />
+            <span className="font-sfpro text-xs sm:text-sm font-semibold text-blue-600">
+              two speeds
+            </span>
+          </motion.div>
         </div>
+
+        {/* Two contrasting cards: stack on mobile, 2-up on desktop */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-12 sm:mb-16"
+        >
+          {cards.map((card, index) => {
+            const isTint = card.variant === "tint";
+            return (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                whileHover={{ y: -4 }}
+                className={[
+                  "group relative overflow-hidden rounded-3xl p-7 sm:p-9 transition-colors duration-300",
+                  isTint
+                    ? "bg-[#EEF3FF]"
+                    : "bg-white border border-slate-100",
+                ].join(" ")}
+              >
+                {/* Thin top accent line */}
+                <div
+                  aria-hidden="true"
+                  className={[
+                    "pointer-events-none absolute inset-x-0 top-0 h-0.5 transition-opacity duration-500",
+                    isTint
+                      ? "bg-blue-600/40 opacity-100"
+                      : "bg-blue-600/20 opacity-70 group-hover:opacity-100",
+                  ].join(" ")}
+                />
+
+                <div className="relative">
+                  {/* Icon */}
+                  <div
+                    className={[
+                      "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-blue-600",
+                      isTint ? "bg-white" : "bg-blue-600/10",
+                    ].join(" ")}
+                  >
+                    {card.icon}
+                  </div>
+
+                  {/* Meta label */}
+                  <p className="font-sfpro text-[11px] font-bold uppercase tracking-[0.16em] mb-2 text-blue-600">
+                    {card.meta}
+                  </p>
+
+                  {/* Title */}
+                  <h3 className="text-2xl sm:text-[28px] font-bold font-mondwest mb-3 leading-tight text-[#0A1128]">
+                    {card.label}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-sfpro text-sm sm:text-base leading-relaxed text-slate-600">
+                    {card.description}
+                  </p>
+
+                  {/* Footer tag */}
+                  <div
+                    className={[
+                      "mt-6 flex items-center gap-2 border-t pt-4",
+                      isTint ? "border-blue-600/15" : "border-slate-100",
+                    ].join(" ")}
+                  >
+                    <span className="inline-flex h-1.5 w-1.5 rounded-full bg-blue-600" />
+                    <span className="font-sfpro text-xs sm:text-sm font-semibold text-[#0A1128]">
+                      {card.metaValue}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
         {/* Closing line */}
-        <div className="text-center max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ type: "spring", stiffness: 320, damping: 30 }}
+          className="text-center max-w-2xl mx-auto"
+        >
           <div className="w-10 h-0.5 bg-blue-600 mx-auto mb-6 sm:mb-8" />
-          <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed">
-            Most AI gives you one of these. We connect all three,{" "}
+          <p className="text-slate-700 font-sfpro text-base sm:text-lg lg:text-xl leading-relaxed">
+            Ready or custom, same promise:{" "}
             <span className="font-semibold text-[#0A1128]">
-              so it actually does the job.
+              it works, and you don&apos;t run it.
             </span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

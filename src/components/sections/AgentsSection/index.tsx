@@ -1,8 +1,13 @@
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import AgentInfoModal from "src/components/sections/AgentInfoModal";
+import RevealText from "src/components/RevealText";
+
+const FADE_UP = { type: "spring" as const, stiffness: 320, damping: 30 };
+const VIEWPORT = { once: true, margin: "-80px" } as const;
 
 type AgentsSectionProps = {
   agents: any;
@@ -220,20 +225,53 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-700 font-semibold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
-            AGENTS WE&apos;VE SHIPPED
-          </p>
-          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
-            Recruit enterprise-grade AI agents
+        <div className="flex flex-col items-center text-center mb-8 sm:mb-12 lg:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT}
+            transition={FADE_UP}
+            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro px-4"
+          >
+            Agents we&apos;ve shipped
+          </motion.p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mondwest leading-tight px-4">
+            <RevealText
+              as="span"
+              text="Not demos."
+              inView
+              stagger={0.06}
+              className="block text-[#0A1128]"
+            />
+            <RevealText
+              as="span"
+              text="Agents already doing the work."
+              inView
+              delay={0.22}
+              stagger={0.05}
+              className="block text-blue-600 mt-1"
+            />
           </h2>
-          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
-            today, fully customizable
-          </h3>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT}
+            transition={{ ...FADE_UP, delay: 0.15 }}
+            className="text-slate-500 font-sfpro text-base sm:text-lg max-w-xl mx-auto mt-6 leading-relaxed px-4"
+          >
+            Browse what we&apos;ve built and deployed. Each one is live with a real
+            business right now.
+          </motion.p>
         </div>
 
         {/* Agents Banner */}
-        <div className="mb-8 sm:mb-12 lg:mb-14 sm:mx-0">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT}
+          transition={FADE_UP}
+          className="mb-8 sm:mb-12 lg:mb-14 sm:mx-0"
+        >
           <div className="max-w-6xl mx-auto sm:rounded-xl sm:border sm:border-slate-200 overflow-hidden">
             <div className="block">
               <div className="relative hidden sm:block">
@@ -286,121 +324,106 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Agent Navigation */}
-        <div className="mb-6">
-          <div className="sm:block md:flex md:justify-center overflow-x-auto w-full -mx-4 no-scrollbar px-8 md:mx-0">
-            <div className="flex flex-nowrap justify-start md:justify-center gap-6 min-w-max mx-auto">
-              {tabLabels.map((agentName: string, idx: number) => (
-                <button
-                  key={`${agentName}-${idx}`}
-                  onClick={() => goToIndex(idx)}
-                  className={`agent-tab pb-1 flex-shrink-0 whitespace-nowrap text-xs sm:text-sm lg:text-base xl:text-lg font-medium transition-colors duration-200 text-center ${
-                    selectedIndex === idx
-                      ? "is-active text-blue-600"
-                      : "text-gray-600 hover:text-blue-600"
-                  }`}
-                >
-                  {agentName}
-                </button>
-              ))}
+        {/* Selector (left) + agent card (right) */}
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
+          {/* Left: vertical agent selector (horizontal scroll on mobile) */}
+          <div className="w-full lg:w-56 flex-shrink-0">
+            <div className="flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-visible no-scrollbar -mx-4 px-4 lg:mx-0 lg:px-0">
+              {tabLabels.map((agentName: string, idx: number) => {
+                const active = selectedIndex === idx;
+                return (
+                  <button
+                    key={`${agentName}-${idx}`}
+                    onClick={() => goToIndex(idx)}
+                    className={`relative flex-shrink-0 text-left whitespace-nowrap rounded-xl px-4 py-2.5 font-sfpro text-sm font-medium transition-colors ${
+                      active ? "text-blue-600" : "text-slate-500 hover:text-blue-600"
+                    }`}
+                  >
+                    {active && (
+                      <motion.span
+                        layoutId="agentPill"
+                        className="absolute inset-0 rounded-xl bg-white border border-slate-100 shadow-[0_4px_18px_rgba(10,17,40,0.06)]"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                    <span className="relative z-10">{agentName}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
-        </div>
 
-        {/* Navigation Arrows - Only visible on mobile (< 768px) */}
-        <div className="flex md:hidden justify-center gap-2 mb-6">
-          <button
-            onClick={handlePrev}
-            className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={isAtStart}
-            aria-label="Previous agent"
-            title="Go to previous agent"
+          {/* Right: selected agent card */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT}
+            transition={FADE_UP}
+            className="flex-1 min-w-0 w-full"
           >
-            <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
+            <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_14px_44px_rgba(10,17,40,0.07)] p-6 sm:p-8">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-blue-500/[0.06] blur-3xl"
               />
-            </svg>
-          </button>
-          <button
-            onClick={handleNext}
-            className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={isAtEnd}
-            aria-label="Next agent"
-            title="Go to next agent"
-          >
-            <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
+              {/* content swaps with a gentle fade when you change agents */}
+              <motion.div
+                key={selectedIndex}
+                initial={{ opacity: 0, x: 12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={FADE_UP}
+                className="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-8"
+              >
+                <div className="flex-1 text-center sm:text-left order-2 sm:order-1">
+                  <div className="mb-4">
+                    <span className="inline-flex rounded-full bg-red-500 px-2.5 py-1 text-gray-50 font-sfpro text-[11px] font-bold tracking-wide leading-none">
+                      NEW
+                    </span>
+                  </div>
 
-        {/* Selected Agent Display */}
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="rounded-xl lg:rounded-2xl border border-slate-200 bg-white shadow-sm p-4 sm:p-6 lg:p-8">
-            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
-              <div className="flex-1 text-left">
-                <div className="mb-3 sm:mb-4">
-                  <span className="inline-flex rounded-lg bg-red-500 px-2.5 py-1 text-gray-50 font-sfpro text-xs sm:text-sm font-medium leading-none">
-                    NEW
-                  </span>
+                  <h3 className="font-mondwest text-[32px] sm:text-[38px] font-normal text-blue-600 mb-3 leading-tight">
+                    {selectedLabel}
+                  </h3>
+
+                  {selectedOverview?.title && (
+                    <h4 className="text-[#0A1128] font-sfpro text-base sm:text-lg font-semibold leading-snug mb-3">
+                      {selectedOverview.title}
+                    </h4>
+                  )}
+
+                  <p className="text-slate-500 font-sfpro text-sm sm:text-[15px] leading-relaxed mb-6">
+                    {(selectedOverview?.description || "").replace(/\s*—\s*/g, ", ")}
+                  </p>
+
+                  <button
+                    onClick={openAgentModal}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-gray-50 font-sfpro text-sm sm:text-base font-semibold shadow-[0_8px_24px_rgba(0,98,255,0.28)] transition-all hover:-translate-y-0.5 hover:bg-blue-700 active:scale-[0.98]"
+                  >
+                    Try {selectedLabel}
+                    <span aria-hidden="true">&rarr;</span>
+                  </button>
                 </div>
 
-                <h3 className="font-mondwest text-[36px] font-normal text-blue-600 mb-3 sm:mb-4 leading-tight">
-                  {selectedLabel}
-                </h3>
-
-                <h4 className="text-slate-800 font-sfpro text-[20px] font-medium leading-tight mb-3 sm:mb-4 max-w-3xl">
-                  {selectedOverview?.title || ""}
-                </h4>
-
-                <p className="text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg font-normal leading-relaxed mb-5 sm:mb-6 max-w-3xl">
-                  {selectedOverview?.description || ""}
-                </p>
-
-                <button
-                  onClick={openAgentModal}
-                  className="bg-blue-600 rounded-lg text-gray-50 font-sfpro text-sm sm:text-base font-medium hover:bg-blue-700 transition-colors duration-200 inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3"
-                >
-                  Try {selectedLabel}
-                </button>
-              </div>
-
-              <div className="flex-shrink-0">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-[214px] lg:h-[214px] rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  <Image
-                    src={botImageSrc || "/images/robot.png"}
-                    alt="Agent"
-                    width={214}
-                    height={214}
-                    className="w-full h-full object-contain"
-                  />
+                <div className="flex-shrink-0 order-1 sm:order-2">
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full bg-gradient-to-b from-blue-50 to-white ring-1 ring-blue-100/70 flex items-center justify-center overflow-hidden"
+                  >
+                    <Image
+                      src={botImageSrc || "/images/robot.png"}
+                      alt={selectedLabel}
+                      width={200}
+                      height={200}
+                      className="w-[82%] h-[82%] object-contain"
+                    />
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <AgentInfoModal

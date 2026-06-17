@@ -1,7 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { isYouTubeURL, getYouTubeEmbedURL } from "src/libs/utils/youtube";
 import useTestimonialsQuery from "../../../hooks/useTestimonialsQuery";
 import { TTestimonial } from "src/types";
+import RevealText from "src/components/RevealText";
 
 // Hook to check if component is mounted (client-side)
 const useIsClient = () => {
@@ -17,7 +19,7 @@ const useIsClient = () => {
 // Skeleton loader component for testimonials
 const TestimonialCardSkeleton = () => (
   <div
-    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full animate-pulse"
+    className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(10,17,40,0.06)] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full animate-pulse"
     style={{ height: "400px" }}
   >
     {/* Video/Content skeleton */}
@@ -341,16 +343,24 @@ const TestimonialsSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-4">
-            TESTIMONIALS
-          </p>
-          <h2 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
-            Founders have already seen
-          </h2>
-          <h3 className="text-lg sm:text-xl lg:text-2xl text-slate-800 text-left md:text-center font-normal font-sfpro leading-normal px-4">
-            transformational results
-          </h3>
+        <div className="flex flex-col items-start md:items-center text-left md:text-center mb-8 sm:mb-12 lg:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ type: "spring", stiffness: 320, damping: 30 }}
+            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro px-4"
+          >
+            Testimonials
+          </motion.p>
+          <RevealText
+            text="Founders have already seen transformational results"
+            as="h2"
+            className="text-2xl sm:text-3xl lg:text-4xl text-[#0A1128] font-mondwest leading-tight max-w-3xl px-4"
+            delay={0.05}
+            stagger={0.04}
+            inView
+          />
         </div>
 
         {/* Content based on state */}
@@ -402,11 +412,20 @@ const TestimonialsSection = () => {
                   gap: `${cardGapPx}px`,
                 }}
               >
-                {testimonials.map((testimonial) => (
-                  <div
+                {testimonials.map((testimonial, cardIndex) => (
+                  <motion.div
                     key={testimonial._id}
                     data-testimonial-card="true"
-                    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 320,
+                      damping: 30,
+                      delay: Math.min(cardIndex, visibleCount) * 0.08,
+                    }}
+                    className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(10,17,40,0.06)] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full transition-shadow duration-300 hover:shadow-[0_16px_44px_rgba(10,17,40,0.12)]"
                     style={{
                       width: `calc((100% - ${cardGapPx}px * (${visibleCount} - 1)) / ${visibleCount})`,
                       height: "400px", // Fixed height for all cards
@@ -417,7 +436,7 @@ const TestimonialsSection = () => {
                       {testimonial.videoURL &&
                         testimonial.videoURL.trim() !== "" ? (
                         <div
-                          className="mb-4 sm:mb-6 flex flex-col"
+                          className="mb-4 sm:mb-6 flex flex-col rounded-xl overflow-hidden bg-slate-50"
                           style={{ height: "240px" }}
                         >
                           {isYouTubeURL(testimonial.videoURL) ? (
@@ -453,7 +472,7 @@ const TestimonialsSection = () => {
                           style={{ height: "240px" }}
                         >
                           <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed overflow-y-auto h-full pr-2">
-                            {testimonial.review}
+                            {(testimonial.review || "").replace(/\s*—\s*/g, ", ")}
                           </p>
                         </div>
                       )}
@@ -473,7 +492,7 @@ const TestimonialsSection = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

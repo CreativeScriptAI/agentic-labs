@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import RevealText from "src/components/RevealText";
 
 export interface FAQ {
   question: string;
@@ -11,46 +13,31 @@ interface FAQSectionProps {
 
 const defaultFaqs: FAQ[] = [
   {
-    question: "Why hire you when I can buy an AI tool myself?",
+    question: "What can you actually build?",
     answer:
-      "A tool is something you operate. We hand you the result. You can absolutely buy Vapi or n8n and wire them together yourself. When that turns into a second job you don't have time for, that's when founders call us.",
+      "If a human does it on repeat, we can usually build an agent or automation for it. Calls, chats, follow-ups, scheduling, data, internal busywork.",
   },
   {
-    question: "How fast can you build it?",
-    answer:
-      "Most systems are live in 4 weeks. Week 1: we audit your workflows. Week 2: we build. Week 3: we test with real scenarios. Week 4: you're live with monitoring.",
+    question: "How long does it take?",
+    answer: "Most builds go live in weeks. Simpler ones, faster.",
   },
   {
-    question: "What if the AI says something wrong to a customer?",
+    question: "We already use some AI tools. Does that matter?",
     answer:
-      "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails: things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
+      "No. We build around what you have and connect it. That is the point.",
   },
   {
-    question: "What tools do you integrate with?",
+    question: "Will it sound like a robot to my customers?",
     answer:
-      "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack, and custom APIs. The system plugs into your stack, not the other way around.",
+      "No. And when it is not sure, it hands off to a human cleanly. Your customer never feels the seam.",
   },
   {
-    question: "How much does it cost?",
-    answer:
-      "Projects typically start at $5,000 for the initial build, with ongoing monthly maintenance for monitoring and optimization. Every project is scoped based on your specific workflows. We'll give you a clear number before you commit to anything.",
-  },
-  {
-    question: "Can the AI hand off to a real person?",
-    answer:
-      "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure, via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
-  },
-  {
-    question: "Who are your typical clients?",
-    answer:
-      "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work: calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
-  },
-  {
-    question: "What happens after the system goes live?",
-    answer:
-      "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan. We watch the system, tune it, and ship updates as your business evolves.",
+    question: "Is my business too small?",
+    answer: "That is usually exactly who we build for.",
   },
 ];
+
+const spring = { type: "spring", stiffness: 320, damping: 30 } as const;
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First FAQ is open by default
@@ -71,75 +58,120 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
-            QUESTIONS
-          </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4">
-            You&apos;re probably wondering.
-          </h2>
+        <div className="text-center mb-10 sm:mb-14 lg:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={spring}
+            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-5"
+          >
+            Questions
+          </motion.p>
+          <RevealText
+            text="You're probably wondering."
+            as="h2"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4"
+            delay={0.05}
+            stagger={0.04}
+            inView
+          />
         </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-3 sm:space-y-4 relative">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="w-full relative bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none"
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ ...spring, delay: index * 0.06 }}
+                className={`w-full relative bg-white rounded-2xl border overflow-hidden transition-colors duration-200 ${
+                  isOpen
+                    ? "border-blue-600/30 shadow-md"
+                    : "border-slate-100 shadow-sm"
+                }`}
               >
-                <h3
-                  className="pl-3 sm:pl-4 pr-2 font-sfpro text-sm sm:text-base"
-                  style={{
-                    color: "var(--Slate-900, #0F172A)",
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    lineHeight: "1.5",
-                  }}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  aria-expanded={isOpen}
+                  className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50/70 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600/40"
                 >
-                  {faq.question}
-                </h3>
-                <div className="pr-3 sm:pr-4 flex-shrink-0">
-                  <svg
-                    className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-600 transition-transform duration-200 ${
-                      openIndex === index ? "transform rotate-180" : ""
-                    }`}
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
+                  <h3
+                    className="font-sfpro text-sm sm:text-base"
+                    style={{
+                      color: isOpen ? "#0062FF" : "#0F172A",
+                      fontStyle: "normal",
+                      fontWeight: isOpen ? 600 : 500,
+                      lineHeight: "1.5",
+                      transition: "color 0.2s ease",
+                    }}
                   >
-                    <path
-                      d="M16.692 7.94229L10.442 14.1923C10.384 14.2504 10.3151 14.2965 10.2392 14.328C10.1633 14.3594 10.082 14.3756 9.99986 14.3756C9.91772 14.3756 9.8364 14.3594 9.76052 14.328C9.68465 14.2965 9.61572 14.2504 9.55767 14.1923L3.30767 7.94229C3.1904 7.82502 3.12451 7.66596 3.12451 7.5001C3.12451 7.33425 3.1904 7.17519 3.30767 7.05792C3.42495 6.94064 3.58401 6.87476 3.74986 6.87476C3.91571 6.87476 4.07477 6.94064 4.19205 7.05792L9.99986 12.8665L15.8077 7.05792C15.8657 6.99985 15.9347 6.95378 16.0105 6.92236C16.0864 6.89093 16.1677 6.87476 16.2499 6.87476C16.332 6.87476 16.4133 6.89093 16.4892 6.92236C16.565 6.95378 16.634 6.99985 16.692 7.05792C16.7501 7.11598 16.7962 7.18492 16.8276 7.26079C16.859 7.33666 16.8752 7.41798 16.8752 7.5001C16.8752 7.58223 16.859 7.66354 16.8276 7.73941C16.7962 7.81528 16.7501 7.88422 16.692 7.94229Z"
-                      fill="#475569"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              {openIndex === index && (
-                <div className="px-3 sm:px-4 pb-4 sm:pb-5">
-                  <div className="pt-2">
-                    <p
-                      className="leading-relaxed font-sfpro text-xs sm:text-sm"
-                      style={{
-                        color: "var(--Slate-600, #475569)",
-                        fontStyle: "normal",
-                        fontWeight: "400",
-                        lineHeight: "1.6",
-                      }}
+                    {faq.question}
+                  </h3>
+                  <motion.span
+                    aria-hidden="true"
+                    animate={{ rotate: isOpen ? 45 : 0 }}
+                    transition={spring}
+                    className={`flex-shrink-0 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full transition-colors duration-200 ${
+                      isOpen
+                        ? "bg-blue-600 text-white"
+                        : "bg-slate-100 text-slate-600"
+                    }`}
+                  >
+                    <svg
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+                      <path
+                        d="M8 2.5v11M2.5 8h11"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </motion.span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        height: { type: "spring", stiffness: 320, damping: 34 },
+                        opacity: { duration: 0.2 },
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 sm:px-6 pb-5 sm:pb-6">
+                        <div className="border-t border-slate-100 pt-3 sm:pt-4">
+                          <p
+                            className="leading-relaxed font-sfpro text-xs sm:text-sm"
+                            style={{
+                              color: "#475569",
+                              fontStyle: "normal",
+                              fontWeight: "400",
+                              lineHeight: "1.6",
+                            }}
+                          >
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </div>

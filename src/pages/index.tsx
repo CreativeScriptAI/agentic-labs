@@ -185,44 +185,27 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
         data={{
           faqs: [
             {
-              question: 'What exactly is an "AI system" vs an "AI tool"?',
+              question: "What can you actually build?",
               answer:
-                "An AI tool does one thing. A chatbot chats. An automation triggers a workflow. A voice agent makes calls. Our AI system connects all three: the voice talks to your customer, the memory remembers them, and the automation takes action. One integrated system, not three disconnected tools.",
+                "If a human does it on repeat, we can usually build an agent or automation for it. Calls, chats, follow-ups, scheduling, data, internal busywork.",
             },
             {
-              question: "How fast can you build it?",
-              answer:
-                "Most systems are live in 4 weeks. Week 1: we audit your workflows. Week 2: we build. Week 3: we test with real scenarios. Week 4: you're live with monitoring.",
+              question: "How long does it take?",
+              answer: "Most builds go live in weeks. Simpler ones, faster.",
             },
             {
-              question: "What if the AI says something wrong to a customer?",
+              question: "We already use some AI tools. Does that matter?",
               answer:
-                "Every system goes through a testing phase with real edge cases before it touches a single customer. We build guardrails: things the AI won't say, fallback to human handoff when it's unsure. And we monitor every interaction for the first 30 days.",
+                "No. We build around what you have and connect it. That is the point.",
             },
             {
-              question: "What tools do you integrate with?",
+              question: "Will it sound like a robot to my customers?",
               answer:
-                "We work with whatever you already use. GoHighLevel, HubSpot, Salesforce, Calendly, Stripe, Twilio, Zendesk, Slack, and custom APIs. The system plugs into your stack, not the other way around.",
+                "No. And when it is not sure, it hands off to a human cleanly. Your customer never feels the seam.",
             },
             {
-              question: "How much does it cost?",
-              answer:
-                "Projects typically start at $5,000 for the initial build, with ongoing monthly maintenance for monitoring and optimization. Every project is scoped based on your specific workflows. We'll give you a clear number before you commit to anything.",
-            },
-            {
-              question: "Can the AI hand off to a real person?",
-              answer:
-                "Yes. We set confidence thresholds so the AI escalates to a human when it's unsure, via live transfer, ticket creation, or Slack alert. The human gets the full transcript and context. The customer never notices the switch.",
-            },
-            {
-              question: "Who are your typical clients?",
-              answer:
-                "Founders and operations leaders at the 1-10 stage. They have a working product, real customers, and they're drowning in repetitive work: calls, follow-ups, support, scheduling. Common industries: healthcare, real estate, B2B SaaS, home services, e-commerce, recruiting.",
-            },
-            {
-              question: "What happens after the system goes live?",
-              answer:
-                "We don't disappear. The first 30 days include active monitoring and optimization. After that, you can extend with a monthly maintenance plan. We watch the system, tune it, and ship updates as your business evolves.",
+              question: "Is my business too small?",
+              answer: "That is usually exactly who we build for.",
             },
           ],
         }}
@@ -234,17 +217,17 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
       {/* Section 2: The Problem */}
       <ProblemSection />
 
-      {/* Section 3: What We Build (Talk. Remember. Act.) */}
-      <WhatWeBuildSection />
-
-      {/* Section 4: Agents We've Shipped (existing dynamic section) */}
+      {/* Section 3: Agents We've Shipped (existing dynamic section) */}
       <AgentsSection agents={agentsApiRaw?.data} />
 
-      {/* Section 5: AI Roles (static industry cards) */}
+      {/* Section 4: AI Roles (static industry cards) */}
       <AIRolesSection />
 
-      {/* Section 6: Trusted By (existing logo carousel) */}
+      {/* Section 5: Trusted By (existing logo carousel) */}
       <TrustedSection />
+
+      {/* Section 6: What We Build (Talk. Remember. Act.) — moved under Trusted By */}
+      <WhatWeBuildSection />
 
       {/* Section 7: Proof / Results */}
       <ProofSection />

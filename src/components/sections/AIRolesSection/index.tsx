@@ -1,8 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import { motion, type Variants } from "framer-motion";
+import RevealText from "src/components/RevealText";
 
 const CAL_LINK =
   "https://cal.com/ai-aditya/30min";
+
+const SPRING = { type: "spring" as const, stiffness: 320, damping: 30 };
+const VIEWPORT = { once: true, margin: "-80px" } as const;
+const gridV: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09 } },
+};
+const cardV: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: SPRING },
+};
 
 const roles = [
   {
@@ -10,43 +23,37 @@ const roles = [
     role: "AI Receptionist",
     description:
       "Answers every call. Books appointments. Remembers returning patients. Sends confirmations. 24/7.",
-    metric: "X calls handled/month for a dental practice",
   },
   {
     industry: "Recruiting / HR",
     role: "AI Interviewer",
     description:
-      "Conducts first-round voice screenings. Scores candidates. Pushes qualified ones to your pipeline. Your team only talks to people worth talking to.",
-    metric: "X candidates screened/week",
+      "Runs first-round voice screenings. Scores candidates. Pushes the qualified ones to your pipeline. Your team only talks to people worth talking to.",
   },
   {
     industry: "E-Commerce",
     role: "AI Support Rep",
     description:
-      "Handles returns, order status, product questions. Remembers each customer's history. They never repeat themselves.",
-    metric: "X% reduction in support tickets",
+      "Handles returns, order status, and product questions. Remembers each customer's history, so they never repeat themselves.",
   },
   {
     industry: "Real Estate",
     role: "AI Showing Coordinator",
     description:
       "Answers property inquiries. Qualifies buyers. Schedules showings. Syncs everything to your CRM.",
-    metric: "X showings booked/month",
   },
   {
     industry: "Home Services",
     role: "AI Dispatch Agent",
     description:
       "Answers service calls. Qualifies urgency. Books service windows. Notifies technicians. Never misses a call.",
-    metric: "X service calls handled/month",
   },
   {
     industry: "Agencies",
     role: "AI SDR",
     description:
-      "Calls leads. Qualifies them. Books meetings. Updates CRM. White-labeled under your brand.",
-    metric: null,
-    link: { text: "Learn about our agency partnership", href: "#" },
+      "Calls leads. Qualifies them. Books meetings. Updates the CRM. White-labeled under your brand.",
+    link: { text: "Our agency partnership", href: "/services/" },
   },
 ];
 
@@ -95,81 +102,138 @@ const AIRolesSection = () => {
         marginRight: "-1rem",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
-            BUILT FOR YOUR BUSINESS
-          </p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2">
-            We don&apos;t build generic AI.
-          </h2>
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4">
-            We build your AI{" "}
-            <span className="text-blue-600">role</span>.
-          </h3>
+        <div className="text-center mb-6 sm:mb-8">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT}
+            transition={SPRING}
+            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro"
+          >
+            What that looks like for you
+          </motion.p>
+          <RevealText
+            text="If a person does it on repeat, we can automate it."
+            as="h2"
+            inView
+            className="block text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest leading-tight px-2"
+          />
         </div>
 
         {/* Intro text */}
-        <p className="text-center text-slate-600 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16 px-4">
-          Every business is different. The AI we build for a dental practice
-          looks nothing like the one we build for a recruiting firm. But the
-          engine is the same: voice, memory, and automation, working as one.
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT}
+          transition={{ ...SPRING, delay: 0.12 }}
+          className="text-center text-slate-500 font-sfpro text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 px-4"
+        >
+          Every business is different. The agent we build for a clinic looks
+          nothing like the one we build for a recruiter. The engine is the same:
+          agents and automations, working as one.
+        </motion.p>
 
-        {/* Role Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          {roles.map((role, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 sm:p-6 flex flex-col hover:shadow-md transition-shadow duration-200"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
-                  {industryIcons[role.industry] || null}
-                </div>
-                <span className="text-xs sm:text-sm text-slate-500 font-sfpro uppercase tracking-wider">
-                  {role.industry}
-                </span>
-              </div>
-              <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-2">
-                {role.role}
-              </h4>
-              <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-3 flex-grow">
-                {role.description}
-              </p>
-              {role.metric && (
-                <p className="text-xs sm:text-sm text-slate-400 font-sfpro italic">
-                  [{role.metric}]
-                </p>
-              )}
-              {role.link && (
-                <Link
-                  href={role.link.href}
-                  className="text-sm text-blue-600 font-sfpro font-medium hover:text-blue-700 transition-colors mt-2"
+        {/* Role Cards — compact uniform grid, light surfaces */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 sm:mb-14"
+          initial="hidden"
+          whileInView="show"
+          viewport={VIEWPORT}
+          variants={gridV}
+        >
+          {roles.map((role, i) => {
+            const featured = i === 0;
+
+            if (featured) {
+              return (
+                <motion.div
+                  key={role.role}
+                  variants={cardV}
+                  whileHover={{ y: -4 }}
+                  transition={SPRING}
+                  className="group relative overflow-hidden rounded-2xl bg-blue-50/60 ring-1 ring-blue-100 p-5 flex flex-col shadow-[0_4px_18px_rgba(10,17,40,0.04)]"
                 >
-                  {role.link.text} &rarr;
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 left-0 w-1 bg-blue-500/70"
+                  />
+                  <div className="relative flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-lg bg-blue-100/80 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                      {industryIcons[role.industry] || null}
+                    </div>
+                    <span className="text-[10px] text-blue-600/80 font-sfpro uppercase tracking-[0.16em]">
+                      {role.industry}
+                    </span>
+                  </div>
+                  <h4 className="relative font-mondwest text-lg sm:text-xl text-[#0A1128] leading-tight mb-2">
+                    {role.role}
+                  </h4>
+                  <p className="relative text-slate-600 font-sfpro text-sm leading-relaxed flex-grow">
+                    {role.description}
+                  </p>
+                  <span className="relative mt-3 inline-flex items-center gap-1.5 self-start rounded-full bg-blue-100/70 px-2.5 py-1 text-[10px] font-sfpro font-semibold text-blue-700 uppercase tracking-[0.14em]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Most requested
+                  </span>
+                </motion.div>
+              );
+            }
+
+            return (
+              <motion.div
+                key={role.role}
+                variants={cardV}
+                whileHover={{ y: -4 }}
+                transition={SPRING}
+                className="group bg-white rounded-2xl border border-slate-100 p-5 flex flex-col shadow-[0_2px_10px_rgba(10,17,40,0.03)] hover:shadow-[0_8px_22px_rgba(10,17,40,0.06)] hover:border-blue-100 transition-all"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                    {industryIcons[role.industry] || null}
+                  </div>
+                  <span className="text-[10px] text-slate-400 font-sfpro uppercase tracking-[0.14em]">
+                    {role.industry}
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-[#0A1128] font-mondwest mb-2">
+                  {role.role}
+                </h4>
+                <p className="text-slate-500 font-sfpro text-sm leading-relaxed flex-grow">
+                  {role.description}
+                </p>
+                {role.link && (
+                  <Link
+                    href={role.link.href}
+                    className="group/link mt-3 inline-flex items-center gap-1 text-sm text-blue-600 font-sfpro font-medium hover:text-blue-700 transition-colors"
+                  >
+                    {role.link.text}
+                    <span className="inline-block transition-transform group-hover/link:translate-x-1">
+                      &rarr;
+                    </span>
+                  </Link>
+                )}
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
         {/* Closing */}
         <div className="text-center">
-          <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
-            Same system. Different roles. One question:{" "}
+          <p className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+            Same engine. Different jobs.{" "}
             <span className="font-semibold text-[#0A1128]">
-              What&apos;s the repetitive job your AI should be doing right now?
+              What is the repetitive work your AI should be doing right now?
             </span>
           </p>
           <Link
             href={CAL_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-[#FCCA07] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-[#0A1128] transition-colors hover:bg-yellow-500"
+            className="inline-block rounded-xl bg-[#FCCA07] px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0A1128] shadow-[0_6px_20px_rgba(252,202,7,0.35)] transition-all hover:-translate-y-0.5 hover:bg-[#f0bd00] hover:shadow-[0_10px_26px_rgba(252,202,7,0.45)] active:scale-[0.98]"
           >
-            Book a Free Call
+            Book a free call
           </Link>
         </div>
       </div>
