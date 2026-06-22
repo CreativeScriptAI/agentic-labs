@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ setIsMobileMenuOpen }) => {
     <Link
       href="/"
       aria-label={CONFIG.blog.title}
-      className="text-[24px] font-bold text-blue-600 font-mondwest hover:text-blue-700 transition-colors"
+      className="text-[24px] font-normal text-blue-600 font-alte tracking-[-0.04em] hover:text-blue-700 transition-colors"
       onClick={() => {
         if (setIsMobileMenuOpen) setIsMobileMenuOpen(false);
       }}

@@ -32,19 +32,19 @@ const TrustedSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 320, damping: 30 }}
-          className="text-center mb-10 sm:mb-14 lg:mb-16"
+          className="text-center mb-10 sm:mb-[60px]"
         >
-          <p className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro">
+          <p className="font-geist font-normal text-[12px] tracking-[0.02em] uppercase mb-5 text-[#0A1128]">
             Trusted by +50 businesses
           </p>
           <RevealText
             text="Trusted by founders, agencies, and teams worldwide"
             as="h2"
-            className="font-mondwest text-3xl sm:text-4xl lg:text-5xl text-[#0A1128] max-w-4xl mx-auto leading-tight"
+            className="font-alte font-normal text-3xl sm:text-4xl lg:text-5xl text-[#0A1128] max-w-4xl mx-auto leading-tight tracking-[-0.04em]"
             stagger={0.05}
             inView
           />
-          <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto mt-4 font-sfpro">
+          <p className="font-alte font-normal text-[15px] tracking-[-0.04em] text-slate-500 max-w-2xl mx-auto mt-5">
             Across the US, UK, UAE, and Brazil, used in healthcare, real estate,
             and B2B SaaS.
           </p>

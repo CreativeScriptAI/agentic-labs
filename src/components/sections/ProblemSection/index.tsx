@@ -82,11 +82,11 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT}
             transition={SPRING}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro"
+            className="text-red-500 font-normal font-geist text-[12px] tracking-[0.02em] uppercase mb-[10px]"
           >
             The problem
           </motion.p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mondwest leading-tight">
+          <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-normal font-alte leading-[1.2] tracking-[-0.04em]">
             <RevealText
               as="span"
               text="You keep buying AI tools."
@@ -128,7 +128,7 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT}
             transition={{ ...SPRING, delay: 0.15 }}
-            className="text-slate-500 font-sfpro text-base sm:text-lg max-w-xl mx-auto mt-6 leading-relaxed"
+            className="text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] max-w-xl mx-auto mt-[20px] leading-[1.5]"
           >
             You&apos;ve got the tabs open. ChatGPT, a workflow tool, three more you
             signed up for last month. And the work? Still sitting on you.
@@ -137,7 +137,7 @@ const ProblemSection = () => {
 
         {/* The misses, stacking in like notifications */}
         <motion.div
-          className="max-w-md mx-auto space-y-3"
+          className="max-w-md mx-auto space-y-[10px]"
           initial="hidden"
           whileInView="show"
           viewport={VIEWPORT}
@@ -147,21 +147,21 @@ const ProblemSection = () => {
             <motion.div
               key={m.title}
               variants={rowV}
-              className="flex items-start gap-3.5 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_18px_rgba(10,17,40,0.05)] px-4 py-3.5"
+              className="flex items-start gap-[14px] rounded-none bg-white border border-[#e7e6e4] px-[16px] py-[14px]"
             >
-              <div className="shrink-0 w-9 h-9 rounded-xl bg-red-50 text-red-400 flex items-center justify-center">
+              <div className="shrink-0 w-9 h-9 rounded-none bg-red-50 text-red-400 flex items-center justify-center">
                 {m.icon}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="font-sfpro text-sm font-semibold text-[#0A1128]">
+                  <span className="font-alte font-normal text-[15px] tracking-[-0.04em] text-[#0A1128]">
                     {m.title}
                   </span>
-                  <span className="font-sfpro text-[11px] text-slate-400 whitespace-nowrap">
+                  <span className="font-geist font-normal text-[12px] tracking-[0.02em] uppercase text-slate-400 whitespace-nowrap">
                     {m.time}
                   </span>
                 </div>
-                <p className="font-sfpro text-sm text-slate-500 mt-0.5">{m.note}</p>
+                <p className="font-alte font-normal text-[15px] tracking-[-0.04em] text-slate-500 mt-[4px] leading-[1.5]">{m.note}</p>
               </div>
             </motion.div>
           ))}
@@ -180,14 +180,14 @@ const ProblemSection = () => {
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={VIEWPORT}
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
-            className="mx-auto mb-6 h-0.5 w-12 rounded-full bg-blue-500"
+            className="mx-auto mb-[20px] h-0.5 w-12 rounded-none bg-blue-500"
           />
-          <p className="text-[#0A1128] font-mondwest text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug mb-4">
+          <p className="text-[#0A1128] font-alte font-normal text-[32px] sm:text-[40px] tracking-[-0.04em] leading-[1.2] mb-[20px]">
             You don&apos;t need another tool.
             <br />
             <span className="text-blue-600">You need it done.</span>
           </p>
-          <p className="text-slate-500 font-sfpro text-base sm:text-lg max-w-xl mx-auto">
+          <p className="text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] leading-[1.5] max-w-xl mx-auto">
             You didn&apos;t want more software. You wanted it handled. That is our
             whole job.
           </p>

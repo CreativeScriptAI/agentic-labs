@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const CAL_LINK = "https://cal.com/ai-aditya/30min";
 
@@ -70,7 +70,7 @@ const HowWeWorkSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ duration: 0.5 }}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-6"
+            className="text-[#0062FF] font-geist uppercase text-[12px] tracking-[0.02em] mb-4 sm:mb-6"
           >
             How it goes
           </motion.p>
@@ -78,14 +78,14 @@ const HowWeWorkSection = () => {
             text="You do almost nothing."
             as="h2"
             inView
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-2"
+            className="font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] text-[#0A1128] px-4 mb-2"
           />
           <motion.h3
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ ...spring, delay: 0.25 }}
-            className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4"
+            className="font-alte font-normal text-[15px] sm:text-[17px] lg:text-[19px] tracking-[-0.02em] text-[#1E293B] px-4"
           >
             From the first call to a system that runs itself.
           </motion.h3>
@@ -99,11 +99,11 @@ const HowWeWorkSection = () => {
         {/* ===================== MOBILE / TABLET: vertical timeline ===================== */}
         <div ref={trackRef} className="lg:hidden relative mb-10 sm:mb-14">
           {/* Track background */}
-          <div className="absolute left-[27px] sm:left-[31px] top-2 bottom-2 w-[2px] bg-slate-200 rounded-full" />
+          <div className="absolute left-[27px] sm:left-[31px] top-2 bottom-2 w-[2px] bg-[#e7e6e4]" />
           {/* Track progress that draws in on scroll */}
           <motion.div
             style={{ scaleY: lineScale }}
-            className="absolute left-[27px] sm:left-[31px] top-2 bottom-2 w-[2px] origin-top bg-gradient-to-b from-blue-600 to-blue-500 rounded-full"
+            className="absolute left-[27px] sm:left-[31px] top-2 bottom-2 w-[2px] origin-top bg-[#0062FF]"
           />
 
           <div className="space-y-5 sm:space-y-7">
@@ -128,29 +128,29 @@ const HowWeWorkSection = () => {
                       damping: 22,
                       delay: index * 0.08 + 0.1,
                     }}
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/25 ring-4 ring-[#F9F6F4]"
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-none bg-[#0062FF] flex items-center justify-center ring-4 ring-[#F9F6F4]"
                   >
-                    <span className="text-white font-mondwest text-xl sm:text-2xl font-bold leading-none">
+                    <span className="text-white font-alte font-normal text-2xl sm:text-3xl leading-none">
                       {index + 1}
                     </span>
                   </motion.div>
                 </div>
 
                 {/* Card */}
-                <div className="flex-grow bg-white rounded-2xl shadow-sm border border-slate-100 p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="flex-grow bg-white rounded-none border border-[#e7e6e4] p-5 sm:p-6 transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-2">
-                    <span className="text-[11px] sm:text-xs text-blue-600 font-sfpro font-semibold uppercase tracking-[0.14em]">
+                    <span className="font-geist uppercase text-[12px] tracking-[0.02em] text-[#0062FF]">
                       {step.days}
                     </span>
-                    <span className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
+                    <span className="font-alte font-normal text-[20px] tracking-[-0.04em] text-[#0A1128]">
                       {step.title}
                     </span>
                   </div>
-                  <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed mb-3">
+                  <p className="text-[#475569] font-alte font-normal text-[15px] leading-relaxed mb-3">
                     {step.description}
                   </p>
-                  <p className="inline-flex items-center gap-1.5 text-slate-800 font-sfpro text-sm sm:text-base font-medium">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  <p className="inline-flex items-center gap-1.5 text-[#0A1128] font-alte font-normal text-[15px]">
+                    <span className="h-1.5 w-1.5 rounded-none bg-emerald-500" />
                     {step.effort}
                   </p>
                 </div>
@@ -167,20 +167,18 @@ const HowWeWorkSection = () => {
           transition={spring}
           className="text-center"
         >
-          <p className="text-slate-700 font-sfpro text-sm sm:text-base lg:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+          <p className="text-[#334155] font-alte font-normal text-[15px] sm:text-[16px] lg:text-[17px] leading-relaxed mb-6 max-w-2xl mx-auto">
             Your part is about an hour at the start.{" "}
-            <span className="font-semibold text-[#0A1128]">
+            <span className="text-[#0A1128]">
               After that, you mostly forget it is there.
             </span>
           </p>
-          <Link
+          <BracketButton
+            label="Book a free call"
             href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-[#FCCA07] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-[#0A1128] shadow-sm transition-all hover:bg-yellow-500 hover:-translate-y-0.5 hover:shadow-md"
-          >
-            Book a free call
-          </Link>
+            variant="primary"
+            external
+          />
         </motion.div>
       </div>
     </div>
@@ -206,9 +204,8 @@ const DesktopTimeline = () => {
             y1="2"
             x2="1000"
             y2="2"
-            stroke="#E2E8F0"
+            stroke="#e7e6e4"
             strokeWidth="4"
-            strokeLinecap="round"
           />
           <motion.line
             x1="0"
@@ -217,7 +214,6 @@ const DesktopTimeline = () => {
             y2="2"
             stroke="#0062FF"
             strokeWidth="4"
-            strokeLinecap="round"
             initial={{ pathLength: 0 }}
             whileInView={{ pathLength: 1 }}
             viewport={viewport}
@@ -240,9 +236,9 @@ const DesktopTimeline = () => {
                 damping: 20,
                 delay: 0.25 + index * 0.18,
               }}
-              className="relative z-10 w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/30 ring-4 ring-[#F9F6F4]"
+              className="relative z-10 w-16 h-16 rounded-none bg-[#0062FF] flex items-center justify-center ring-4 ring-[#F9F6F4]"
             >
-              <span className="text-white font-mondwest text-2xl font-bold leading-none">
+              <span className="text-white font-alte font-normal text-3xl leading-none">
                 {index + 1}
               </span>
             </motion.div>
@@ -253,19 +249,19 @@ const DesktopTimeline = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewport}
               transition={{ ...spring, delay: 0.35 + index * 0.18 }}
-              className="mt-6 w-full bg-white rounded-3xl shadow-sm border border-slate-100 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+              className="mt-6 w-full bg-white rounded-none border border-[#e7e6e4] p-6 transition-transform duration-300 hover:-translate-y-1.5"
             >
-              <span className="block text-xs text-blue-600 font-sfpro font-semibold uppercase tracking-[0.16em] mb-1.5">
+              <span className="block font-geist uppercase text-[12px] tracking-[0.02em] text-[#0062FF] mb-1.5">
                 {step.days}
               </span>
-              <h4 className="text-xl font-bold text-[#0A1128] font-mondwest mb-3">
+              <h4 className="font-alte font-normal text-[20px] tracking-[-0.04em] text-[#0A1128] mb-3">
                 {step.title}
               </h4>
-              <p className="text-slate-600 font-sfpro text-sm leading-relaxed mb-4 min-h-[60px]">
+              <p className="text-[#475569] font-alte font-normal text-[15px] leading-relaxed mb-4 min-h-[60px]">
                 {step.description}
               </p>
-              <p className="inline-flex items-center gap-1.5 text-slate-800 font-sfpro text-sm font-medium">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <p className="inline-flex items-center gap-1.5 text-[#0A1128] font-alte font-normal text-[15px]">
+                <span className="h-1.5 w-1.5 rounded-none bg-emerald-500" />
                 {step.effort}
               </p>
             </motion.div>

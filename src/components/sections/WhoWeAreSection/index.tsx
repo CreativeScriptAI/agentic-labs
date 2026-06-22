@@ -89,7 +89,7 @@ const WhoWeAreSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={spring}
-          className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-6 text-center"
+          className="text-red-500 font-geist font-normal text-[12px] tracking-[0.02em] uppercase mb-4 sm:mb-6 text-center"
         >
           WHY IT WORKS
         </motion.p>
@@ -99,7 +99,7 @@ const WhoWeAreSection = () => {
           as="h2"
           text="We research the hard parts."
           inView
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest text-center mb-6 sm:mb-8"
+          className="text-[28px] sm:text-[34px] lg:text-[40px] font-normal text-[#0A1128] font-alte leading-[1.2] tracking-[-0.04em] text-center mb-6 sm:mb-8"
         />
 
         {/* Lead-in */}
@@ -108,7 +108,7 @@ const WhoWeAreSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={spring}
-          className="text-slate-600 font-sfpro text-base sm:text-lg leading-relaxed text-center max-w-2xl mx-auto mb-10 sm:mb-14"
+          className="text-slate-600 font-alte font-normal text-[15px] leading-relaxed text-center max-w-2xl mx-auto mb-10 sm:mb-14"
         >
           We don&apos;t just wire up other people&apos;s tools. We research the
           parts that make AI hold up.
@@ -128,19 +128,19 @@ const WhoWeAreSection = () => {
               variants={fadeUp}
               whileHover={{ y: -3 }}
               transition={spring}
-              className={`group border-t border-slate-200/70 pt-6 ${
+              className={`group border-t border-[#e7e6e4] pt-6 ${
                 i === 1 ? "sm:border-l sm:pl-10" : ""
               }`}
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50/70 text-blue-600 transition-colors group-hover:bg-blue-100">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-none border border-[#e7e6e4] bg-blue-50/70 text-blue-600 transition-colors group-hover:bg-blue-100">
                   {p.icon}
                 </span>
-                <h3 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest">
+                <h3 className="text-[20px] sm:text-[22px] font-normal text-[#0A1128] font-alte tracking-[-0.02em]">
                   {p.title}
                 </h3>
               </div>
-              <p className="text-slate-600 font-sfpro text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 font-alte font-normal text-[15px] leading-relaxed">
                 {p.body}
               </p>
             </motion.div>
@@ -153,7 +153,7 @@ const WhoWeAreSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={spring}
-          className="text-[#0A1128] font-sfpro text-base sm:text-lg font-semibold text-center max-w-2xl mx-auto mb-10 sm:mb-14"
+          className="text-[#0A1128] font-alte text-[15px] font-normal text-center max-w-2xl mx-auto mb-10 sm:mb-14"
         >
           That is why our work survives real customers, not just a demo. It is
           also why we call ourselves a lab.
@@ -178,7 +178,7 @@ const WhoWeAreSection = () => {
         >
           <motion.p
             variants={fadeUp}
-            className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed"
+            className="text-slate-700 font-alte font-normal text-[15px] leading-relaxed"
           >
             Behind the three of us sits a core team of AI devs, backend
             engineers, ML specialists, and ops engineers. The kind of people
@@ -186,7 +186,7 @@ const WhoWeAreSection = () => {
           </motion.p>
           <motion.p
             variants={fadeUp}
-            className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed"
+            className="text-slate-700 font-alte font-normal text-[15px] leading-relaxed"
           >
             We write scalable code. We build production-level systems.
             We don&apos;t do demos that look pretty and die on day one.
@@ -208,7 +208,7 @@ const WhoWeAreSection = () => {
             transition={spring}
             className="block w-8 h-px bg-blue-600/70 mx-auto mb-6 sm:mb-8 origin-center"
           />
-          <p className="text-[#0A1128] font-mondwest text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight tracking-tight">
+          <p className="text-[#0A1128] font-alte font-normal text-[28px] sm:text-[34px] leading-[1.2] tracking-[-0.04em]">
             We make AI work,{" "}
             <span className="text-blue-600">so you don&apos;t have to.</span>
           </p>
@@ -220,22 +220,22 @@ const WhoWeAreSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="grid grid-cols-2 md:grid-cols-4 text-center border-t border-slate-200/70 pt-8"
+          className="grid grid-cols-2 md:grid-cols-4 text-center border-t border-[#e7e6e4] pt-8"
         >
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
               variants={fadeUp}
               className={`px-4 py-2 ${
-                i % 2 !== 0 ? "border-l border-slate-200/60" : ""
+                i % 2 !== 0 ? "border-l border-[#e7e6e4]" : ""
               } ${i >= 2 ? "md:border-l" : ""} ${
                 i === 0 ? "md:border-l-0" : "md:border-l"
               }`}
             >
-              <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest leading-none tracking-tight">
+              <p className="text-[40px] font-normal text-[#0A1128] font-alte leading-none tracking-[-0.04em]">
                 {s.value}
               </p>
-              <p className="text-xs sm:text-sm text-slate-500 font-sfpro mt-2">
+              <p className="text-[12px] uppercase tracking-[0.02em] text-slate-500 font-geist font-normal mt-2">
                 {s.label}
               </p>
             </motion.div>

@@ -64,14 +64,14 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={spring}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-5"
+            className="text-red-500 font-geist font-normal text-[12px] tracking-[0.02em] uppercase mb-4 sm:mb-5"
           >
             Questions
           </motion.p>
           <RevealText
             text="You're probably wondering."
             as="h2"
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4"
+            className="font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] text-[#0A1128] px-4"
             delay={0.05}
             stagger={0.04}
             inView
@@ -89,23 +89,22 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ ...spring, delay: index * 0.06 }}
-                className={`w-full relative bg-white rounded-2xl border overflow-hidden transition-colors duration-200 ${
+                className={`w-full relative rounded-none border overflow-hidden transition-colors duration-200 ${
                   isOpen
-                    ? "border-blue-600/30 shadow-md"
-                    : "border-slate-100 shadow-sm"
+                    ? "bg-[#F4F7FF] border-[#0062FF]"
+                    : "bg-white border-[#e7e6e4]"
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
-                  className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 hover:bg-slate-50/70 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600/40"
+                  className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#0062FF]"
                 >
                   <h3
-                    className="font-sfpro text-sm sm:text-base"
+                    className="font-alte font-normal text-[15px] sm:text-[18px] tracking-[-0.04em]"
                     style={{
                       color: isOpen ? "#0062FF" : "#0F172A",
                       fontStyle: "normal",
-                      fontWeight: isOpen ? 600 : 500,
                       lineHeight: "1.5",
                       transition: "color 0.2s ease",
                     }}
@@ -116,10 +115,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
                     aria-hidden="true"
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={spring}
-                    className={`flex-shrink-0 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full transition-colors duration-200 ${
+                    className={`flex-shrink-0 flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-none transition-colors duration-200 ${
                       isOpen
-                        ? "bg-blue-600 text-white"
-                        : "bg-slate-100 text-slate-600"
+                        ? "bg-[#0062FF] text-white"
+                        : "bg-[#f0efed] text-slate-600"
                     }`}
                   >
                     <svg
@@ -152,14 +151,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
                       className="overflow-hidden"
                     >
                       <div className="px-5 sm:px-6 pb-5 sm:pb-6">
-                        <div className="border-t border-slate-100 pt-3 sm:pt-4">
+                        <div className="border-t border-[#e7e6e4] pt-3 sm:pt-4">
                           <p
-                            className="leading-relaxed font-sfpro text-xs sm:text-sm"
+                            className="font-alte font-normal text-[15px] leading-[1.5] tracking-[-0.04em]"
                             style={{
                               color: "#475569",
                               fontStyle: "normal",
-                              fontWeight: "400",
-                              lineHeight: "1.6",
                             }}
                           >
                             {faq.answer}

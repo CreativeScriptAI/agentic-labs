@@ -106,6 +106,17 @@ const config: Config = {
   				'Roboto',
   				'sans-serif'
   			],
+  			alte: [
+  				'var(--font-alte-haas)',
+  				'Helvetica Neue',
+  				'Arial',
+  				'sans-serif'
+  			],
+  			geist: [
+  				'var(--font-geist-mono)',
+  				'ui-monospace',
+  				'monospace'
+  			],
   			mondwest: [
   				'var(--font-mondwest)',
   				'sans-serif'

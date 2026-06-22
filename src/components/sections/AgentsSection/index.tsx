@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import AgentInfoModal from "src/components/sections/AgentInfoModal";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const FADE_UP = { type: "spring" as const, stiffness: 320, damping: 30 };
 const VIEWPORT = { once: true, margin: "-80px" } as const;
@@ -231,11 +231,11 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT}
             transition={FADE_UP}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro px-4"
+            className="text-blue-600 font-normal font-geist text-[12px] tracking-[0.02em] uppercase mb-4 px-4"
           >
             Agents we&apos;ve shipped
           </motion.p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mondwest leading-tight px-4">
+          <h2 className="font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] px-4">
             <RevealText
               as="span"
               text="Not demos."
@@ -257,7 +257,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT}
             transition={{ ...FADE_UP, delay: 0.15 }}
-            className="text-slate-500 font-sfpro text-base sm:text-lg max-w-xl mx-auto mt-6 leading-relaxed px-4"
+            className="text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] max-w-xl mx-auto mt-6 leading-relaxed px-4"
           >
             Browse what we&apos;ve built and deployed. Each one is live with a real
             business right now.
@@ -272,7 +272,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
           transition={FADE_UP}
           className="mb-8 sm:mb-12 lg:mb-14 sm:mx-0"
         >
-          <div className="max-w-6xl mx-auto sm:rounded-xl sm:border sm:border-slate-200 overflow-hidden">
+          <div className="max-w-6xl mx-auto rounded-none sm:border sm:border-[#e7e6e4] overflow-hidden">
             <div className="block">
               <div className="relative hidden sm:block">
               <Image
@@ -284,15 +284,16 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                 className="w-full h-auto"
                 priority={false}
               />
-                <Link
-                  href={agentsRepoHref}
-                  className="absolute inset-x-0 bottom-12 mx-auto inline-flex h-[35px] w-[180px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-center font-sfpro text-[16px] leading-[20px] font-medium text-[#F8F9FA]"
-                >
-                  Try AI Agents for free
-                </Link>
+                <div className="absolute inset-x-0 bottom-10 flex justify-center">
+                  <BracketButton
+                    label="Try AI Agents for free"
+                    href={agentsRepoHref}
+                    variant="primary"
+                  />
+                </div>
               </div>
               <div className="block sm:hidden">
-                <div className="relative mx-auto h-[426px] w-[327px] max-w-full overflow-hidden rounded-[8px] bg-white shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_6px_25px_0px_rgba(0,0,0,0.08),0px_2px_8px_0px_rgba(0,0,0,0.1)]">
+                <div className="relative mx-auto h-[426px] w-[327px] max-w-full overflow-hidden rounded-none bg-white border border-[#e7e6e4]">
                   <Image
                     src={agentsBannerMobile}
                     alt="AI Agents Repo banner mobile"
@@ -306,19 +307,18 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
 
                   <div className="absolute left-1/2 top-[40px] flex w-[258px] -translate-x-1/2 flex-col items-center gap-6 text-center">
                     <div className="flex flex-col items-center gap-2 text-[#0A1128] w-full">
-                      <h3 className="font-mondwest text-[36px] leading-none w-[243px]">
+                      <h3 className="font-alte font-normal text-[34px] tracking-[-0.04em] leading-[1.2] w-[243px]">
                         AI Agents Repo
                       </h3>
-                      <p className="text-slate-800 text-[14px] leading-normal w-full">
+                      <p className="text-slate-800 font-alte font-normal text-[15px] tracking-[-0.04em] leading-normal w-full">
                         Live repository of AI agents deployed by Agentic AI Labs.
                       </p>
                     </div>
-                    <Link
+                    <BracketButton
+                      label="Try AI Agents for free"
                       href={agentsRepoHref}
-                      className="inline-flex h-[40px] w-[197px] items-center justify-center rounded-[8px] bg-[#0062FF] px-[16px] py-[12px] text-center font-sfpro text-[16px] leading-[20px] font-medium text-[#F8F9FA]"
-                    >
-                      Try AI Agents for free
-                    </Link>
+                      variant="primary"
+                    />
                   </div>
                 </div>
               </div>
@@ -337,14 +337,14 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
                   <button
                     key={`${agentName}-${idx}`}
                     onClick={() => goToIndex(idx)}
-                    className={`relative flex-shrink-0 text-left whitespace-nowrap rounded-xl px-4 py-2.5 font-sfpro text-sm font-medium transition-colors ${
+                    className={`relative flex-shrink-0 text-left whitespace-nowrap rounded-none px-4 py-2.5 font-alte font-normal text-[15px] tracking-[-0.04em] transition-colors ${
                       active ? "text-blue-600" : "text-slate-500 hover:text-blue-600"
                     }`}
                   >
                     {active && (
                       <motion.span
                         layoutId="agentPill"
-                        className="absolute inset-0 rounded-xl bg-white border border-slate-100 shadow-[0_4px_18px_rgba(10,17,40,0.06)]"
+                        className="absolute inset-0 rounded-none bg-white border border-[#e7e6e4]"
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     )}
@@ -363,11 +363,7 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
             transition={FADE_UP}
             className="flex-1 min-w-0 w-full"
           >
-            <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_14px_44px_rgba(10,17,40,0.07)] p-6 sm:p-8">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-blue-500/[0.06] blur-3xl"
-              />
+            <div className="relative overflow-hidden rounded-none border border-[#e7e6e4] bg-white p-6 sm:p-8">
               {/* content swaps with a gentle fade when you change agents */}
               <motion.div
                 key={selectedIndex}
@@ -378,39 +374,39 @@ const AgentsSection: React.FC<AgentsSectionProps> = ({ agents }) => {
               >
                 <div className="flex-1 text-center sm:text-left order-2 sm:order-1">
                   <div className="mb-4">
-                    <span className="inline-flex rounded-full bg-red-500 px-2.5 py-1 text-gray-50 font-sfpro text-[11px] font-bold tracking-wide leading-none">
+                    <span className="inline-flex rounded-none bg-blue-600 px-2.5 py-1 text-gray-50 font-geist font-normal text-[12px] tracking-[0.02em] leading-none">
                       NEW
                     </span>
                   </div>
 
-                  <h3 className="font-mondwest text-[32px] sm:text-[38px] font-normal text-blue-600 mb-3 leading-tight">
+                  <h3 className="font-alte font-normal text-[28px] sm:text-[34px] tracking-[-0.04em] text-blue-600 mb-3 leading-[1.2]">
                     {selectedLabel}
                   </h3>
 
                   {selectedOverview?.title && (
-                    <h4 className="text-[#0A1128] font-sfpro text-base sm:text-lg font-semibold leading-snug mb-3">
+                    <h4 className="text-[#0A1128] font-alte font-normal text-[15px] tracking-[-0.04em] leading-snug mb-3">
                       {selectedOverview.title}
                     </h4>
                   )}
 
-                  <p className="text-slate-500 font-sfpro text-sm sm:text-[15px] leading-relaxed mb-6">
+                  <p className="text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed mb-6">
                     {(selectedOverview?.description || "").replace(/\s*—\s*/g, ", ")}
                   </p>
 
-                  <button
-                    onClick={openAgentModal}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-gray-50 font-sfpro text-sm sm:text-base font-semibold shadow-[0_8px_24px_rgba(0,98,255,0.28)] transition-all hover:-translate-y-0.5 hover:bg-blue-700 active:scale-[0.98]"
-                  >
-                    Try {selectedLabel}
-                    <span aria-hidden="true">&rarr;</span>
-                  </button>
+                  <div className="flex justify-center sm:justify-start">
+                    <BracketButton
+                      label={`Try ${selectedLabel}`}
+                      onClick={openAgentModal}
+                      variant="primary"
+                    />
+                  </div>
                 </div>
 
                 <div className="flex-shrink-0 order-1 sm:order-2">
                   <motion.div
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full bg-gradient-to-b from-blue-50 to-white ring-1 ring-blue-100/70 flex items-center justify-center overflow-hidden"
+                    className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-none bg-blue-50 border border-[#e7e6e4] flex items-center justify-center overflow-hidden"
                   >
                     <Image
                       src={botImageSrc || "/images/robot.png"}

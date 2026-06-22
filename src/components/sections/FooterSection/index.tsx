@@ -99,7 +99,7 @@ const COMPANY_LINKS: FootLink[] = [
 const FooterSection = () => {
   return (
     <div
-      className="py-12 sm:py-16"
+      className="py-20"
       style={{
         backgroundColor: "#F9F6F4",
         width: "calc(100% + 2rem)",
@@ -115,7 +115,7 @@ const FooterSection = () => {
         >
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.heading}>
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+              <h3 className="font-geist font-normal text-[12px] uppercase tracking-[0.02em] text-gray-400 mb-3">
                 {col.heading}
               </h3>
               <ul className="space-y-2">
@@ -123,7 +123,7 @@ const FooterSection = () => {
                   <li key={l.to}>
                     <Link
                       href={l.to}
-                      className="text-sm text-gray-600 hover:text-[#0062FF] transition-colors leading-snug"
+                      className="font-alte font-normal text-[15px] tracking-[-0.04em] text-gray-600 hover:text-gray-900 transition-colors leading-snug"
                     >
                       {l.name}
                     </Link>
@@ -134,24 +134,24 @@ const FooterSection = () => {
           ))}
         </nav>
 
-        <div className="border-t border-gray-200 pt-10 text-center">
+        <div className="border-t border-[#e7e6e4] pt-10 text-center">
           {/* Company Branding */}
-          <div className="mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-3 sm:mb-4 font-mondwest">
+          <div className="mb-8">
+            <h2 className="font-alte font-normal text-3xl sm:text-4xl text-gray-900 mb-4 tracking-[-0.04em]">
               Agentic AI Labs
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
+            <p className="font-alte font-normal text-gray-600 text-[15px] tracking-[-0.04em]">
               We build AI systems that work.
             </p>
           </div>
 
           {/* Company / utility links */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             {COMPANY_LINKS.map((l) => (
               <Link
                 key={l.to}
                 href={l.to}
-                className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors"
+                className="font-alte font-normal text-gray-500 hover:text-gray-900 text-[15px] tracking-[-0.04em] transition-colors"
               >
                 {l.name}
               </Link>
@@ -160,7 +160,7 @@ const FooterSection = () => {
               href="https://cal.com/ai-aditya/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 text-sm sm:text-base transition-colors"
+              className="font-alte font-normal text-gray-500 hover:text-gray-900 text-[15px] tracking-[-0.04em] transition-colors"
             >
               Book a Call
             </Link>
@@ -173,7 +173,7 @@ const FooterSection = () => {
               href="https://github.com/CreativeScriptAI"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
+              className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -190,7 +190,7 @@ const FooterSection = () => {
               href="https://x.com/tryagentikai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
+              className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -207,7 +207,7 @@ const FooterSection = () => {
               href="https://www.youtube.com/@agentailabs/shorts"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
+              className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -224,7 +224,7 @@ const FooterSection = () => {
               href="https://www.linkedin.com/company/creativescript/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
+              className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -239,18 +239,18 @@ const FooterSection = () => {
 
           {/* Attribution */}
           <div className="text-center">
-            <p className="text-gray-500 text-xs sm:text-sm">
+            <p className="font-alte font-normal text-gray-500 text-[12px] tracking-[-0.04em]">
               Crafted by{" "}
               <Link
                 href="https://creativescript.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black  transition-colors duration-200"
+                className="text-gray-900 transition-colors duration-200"
               >
                 creativescript.org
               </Link>
             </p>
-            <p className="text-gray-500 text-xs sm:text-sm mt-1">
+            <p className="font-alte font-normal text-gray-500 text-[12px] tracking-[-0.04em] mt-1">
               © 2026 Agentic AI Labs. All rights reserved.
             </p>
           </div>

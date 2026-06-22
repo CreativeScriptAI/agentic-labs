@@ -1,12 +1,11 @@
 import NavBar from "./NavBar";
 import Logo from "./Logo";
-import Link from "next/link";
 import Image from "next/image";
 import EllipseBackground from "../../../assets/images/EllipseBackground";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { mondwest } from "../../../assets/fonts/mondwest";
+import BracketButton from "src/components/BracketButton";
 
 type Props = {
   fullWidth: boolean;
@@ -235,32 +234,29 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           isHeaderVisible ? "top-0" : "-top-24"
         }`}
       >
-        {/* ── DESKTOP floating pill — glass morphism, centered, all pages ──── */}
+        {/* ── DESKTOP bar — flat surface, centered, all pages ──── */}
         <div className="hidden md:flex items-center justify-center px-6 pt-4">
           <div
-            className={`flex items-center gap-6 px-5 py-3 rounded-2xl border transition-all duration-300 ${
-              isScrolled
-                ? "bg-white/95 border-black/[0.07] shadow-[0_4px_28px_rgba(0,0,0,0.10)] backdrop-blur-xl"
-                : "bg-white/70 border-white/50 shadow-[0_2px_16px_rgba(0,0,0,0.06)] backdrop-blur-xl"
+            className={`flex items-center gap-6 px-5 py-2.5 rounded-none border border-[#e7e6e4] transition-colors duration-300 ${
+              isScrolled ? "bg-white" : "bg-[#F9F6F4]"
             }`}
           >
             <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
-            <div className="w-px h-5 bg-black/10" />
+            <div className="w-px h-5 bg-[#e7e6e4]" />
             <NavBar />
-            <div className="w-px h-5 bg-black/10" />
-            <Link
+            <div className="w-px h-5 bg-[#e7e6e4]" />
+            <BracketButton
+              label="Book Free Call"
               href="https://cal.com/ai-aditya/30min"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-5 py-2 text-xs font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
-            >
-              Book Free Call
-            </Link>
+              variant="primary"
+              external
+            />
           </div>
         </div>
 
         {/* ── MOBILE bar ───────────────────────────────────────────────────── */}
-        <div className={`md:hidden flex items-center justify-between px-4 py-3 border-b transition-all duration-300 ${
-          isScrolled ? "bg-white/95 border-black/[0.07] shadow-sm backdrop-blur-xl" : "bg-white/80 border-white/40 backdrop-blur-xl"
+        <div className={`md:hidden flex items-center justify-between px-4 py-3 border-b border-[#e7e6e4] transition-colors duration-300 ${
+          isScrolled ? "bg-white" : "bg-[#F9F6F4]"
         }`}>
           <div className="flex-shrink-0">
             <Logo setIsMobileMenuOpen={setIsMobileMenuOpen} />
@@ -279,17 +275,17 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
             type="button"
           >
             <span
-              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out ${
+              className={`block w-6 h-0.5 bg-[#0A1128] transition-all duration-300 ease-in-out ${
                 isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
+              className={`block w-6 h-0.5 bg-[#0A1128] transition-all duration-300 ease-in-out mt-1 ${
                 isMobileMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out mt-1 ${
+              className={`block w-6 h-0.5 bg-[#0A1128] transition-all duration-300 ease-in-out mt-1 ${
                 isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
@@ -325,7 +321,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
           {isMobileMenuOpen && (
             <motion.div
               key="mobile-menu-overlay"
-              className="md:hidden fixed inset-0 z-[100] bg-white"
+              className="md:hidden fixed inset-0 z-[100] bg-[#F9F6F4]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -355,7 +351,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
                   {/* Close Button */}
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-center w-8 h-8 rounded-full transition-colors"
+                    className="flex items-center justify-center w-8 h-8 rounded-none transition-colors"
                     aria-label="Close mobile menu"
                   >
                     <svg
@@ -386,23 +382,22 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 
                   {/* Book a Call Button - Fixed responsiveness */}
                   <div className="w-full">
-                    <button
+                    <BracketButton
+                      label="Book Free Call"
+                      variant="primary"
+                      className="w-full"
                       onClick={() => {
                         setIsMobileMenuOpen(false);
                         if (
                           typeof window !== "undefined" &&
                           (window as any).gtag_report_conversion
                         ) {
-                          return (window as any).gtag_report_conversion(
+                          (window as any).gtag_report_conversion(
                             "https://cal.com/ai-aditya/30min"
                           );
                         }
-                        return true;
                       }}
-                      className="block w-full text-center whitespace-nowrap rounded-xl bg-[#FCCA07] px-6 py-3 text-sm font-semibold text-[#0A1128] transition-all hover:bg-[#f0bd00] active:scale-[0.98]"
-                    >
-                      Book Free Call
-                    </button>
+                    />
                   </div>
                 </div>
               </motion.div>

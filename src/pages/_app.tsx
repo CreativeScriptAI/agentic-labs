@@ -2,7 +2,7 @@ import { AppPropsWithLayout } from "../types";
 import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
 import { RootLayout } from "../layouts";
 import { queryClient } from "../libs/react-query";
-import { mondwest, neuebit } from "../assets/fonts";
+import { mondwest, neuebit, alteHaas, geistMono } from "../assets/fonts";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
@@ -65,7 +65,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
         />
       </Head>
-      <div className={`${mondwest.variable} ${neuebit.variable}`}>
+      <div className={`${mondwest.variable} ${neuebit.variable} ${alteHaas.variable} ${geistMono.variable}`}>
         <QueryClientProvider client={queryClient}>
           <HydrationBoundary state={pageProps.dehydratedState}>
             <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>

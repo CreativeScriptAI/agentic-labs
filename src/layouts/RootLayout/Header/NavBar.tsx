@@ -194,7 +194,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
           <li>
             <button
               onClick={() => toggleGroup(NAV.SOLUTIONS)}
-              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+              className="w-full flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] text-gray-700 rounded-none"
             >
               <span>Solutions</span>
               <ChevronDown open={openMobileGroup === NAV.SOLUTIONS} />
@@ -205,22 +205,22 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                 <Link
                   href={HERO.to}
                   onClick={onLinkClick}
-                  className="block rounded-2xl bg-[#0A1128] text-white px-4 py-4"
+                  className="block rounded-none bg-[#0A1128] text-white px-4 py-4"
                 >
-                  <span className="flex items-center gap-2 text-base font-semibold">
+                  <span className="flex items-center gap-2 font-alte text-base font-normal tracking-[-0.04em]">
                     {HERO.name}
-                    <span className="text-[10px] font-bold bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-full">Flagship</span>
+                    <span className="font-geist text-[12px] tracking-[0.02em] uppercase bg-[#FCCA07] text-[#0A1128] px-2 py-0.5 rounded-none">Flagship</span>
                   </span>
-                  <span className="block text-sm text-gray-300/90 mt-1.5 leading-relaxed">{HERO.tagline}</span>
+                  <span className="block font-alte text-[15px] tracking-[-0.04em] text-gray-300/90 mt-1.5 leading-relaxed">{HERO.tagline}</span>
                 </Link>
 
                 {/* By Outcome */}
                 <div>
-                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-2 px-2">By Outcome</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-2 px-2">By Outcome</p>
                   <ul className="space-y-0.5">
                     {BY_OUTCOME.map((l) => (
                       <li key={l.name}>
-                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-[15px] font-medium text-gray-800 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
+                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-800 hover:text-[#0062FF] rounded-none">{l.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -228,11 +228,11 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
 
                 {/* By Industry — flat list, no nested accordions */}
                 <div>
-                  <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-2 px-2">By Industry</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-2 px-2">By Industry</p>
                   <ul className="space-y-0.5">
                     {allIndustries.map((l) => (
                       <li key={l.to}>
-                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-[15px] text-gray-700 hover:text-[#0062FF] rounded-lg">{l.name}</Link>
+                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-700 hover:text-[#0062FF] rounded-none">{l.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -245,7 +245,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
           <li>
             <button
               onClick={() => toggleGroup(NAV.COMPARE)}
-              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+              className="w-full flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] text-gray-700 rounded-none"
             >
               <span>Compare</span>
               <ChevronDown open={openMobileGroup === NAV.COMPARE} />
@@ -253,18 +253,18 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             {openMobileGroup === NAV.COMPARE && (
               <div className="pl-2 pb-3 space-y-3">
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">Alternatives</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-1 px-2">Alternatives</p>
                   <ul className="space-y-0.5">
                     {COMPARE_ALTERNATIVES.map((l) => (
-                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-600 hover:text-[#0062FF] rounded-none">{l.name}</Link></li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1 px-2">Best-of roundups</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-1 px-2">Best-of roundups</p>
                   <ul className="space-y-0.5">
                     {COMPARE_ROUNDUPS.map((l) => (
-                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                      <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-600 hover:text-[#0062FF] rounded-none">{l.name}</Link></li>
                     ))}
                   </ul>
                 </div>
@@ -276,7 +276,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
           <li>
             <button
               onClick={() => toggleGroup(NAV.RESOURCES)}
-              className="w-full flex items-center justify-between py-3 px-2 text-base font-medium text-gray-700 rounded-lg"
+              className="w-full flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] text-gray-700 rounded-none"
             >
               <span>Resources</span>
               <ChevronDown open={openMobileGroup === NAV.RESOURCES} />
@@ -284,7 +284,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             {openMobileGroup === NAV.RESOURCES && (
               <ul className="pl-4 pb-2 space-y-1">
                 {RESOURCES.map((l) => (
-                  <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 text-sm text-gray-600 hover:text-[#0062FF] rounded-lg">{l.name}</Link></li>
+                  <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-600 hover:text-[#0062FF] rounded-none">{l.name}</Link></li>
                 ))}
               </ul>
             )}
@@ -295,7 +295,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <Link
               href={`${countryPrefix}/services/`}
               onClick={onLinkClick}
-              className={`flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg ${isActive("/services/") ? "text-[#0A1128] font-semibold" : "text-gray-700 hover:text-[#0A1128]"}`}
+              className={`flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] rounded-none ${isActive("/services/") ? "text-[#0A1128]" : "text-gray-700 hover:text-[#0A1128]"}`}
             >
               <span>Services</span>
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -307,7 +307,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <Link
               href={`${countryPrefix}/about/`}
               onClick={onLinkClick}
-              className={`flex items-center justify-between py-3 px-2 text-base font-medium rounded-lg ${isActive("/about/") ? "text-[#0A1128] font-semibold" : "text-gray-700 hover:text-[#0A1128]"}`}
+              className={`flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] rounded-none ${isActive("/about/") ? "text-[#0A1128]" : "text-gray-700 hover:text-[#0A1128]"}`}
             >
               <span>About</span>
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -323,8 +323,8 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
 
   // shared trigger button styling
   const triggerClass = (active: boolean, open: boolean) =>
-    `flex items-center gap-1.5 text-sm font-medium transition-colors ${
-      active || open ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"
+    `flex items-center gap-1.5 font-alte text-[15px] font-normal tracking-[-0.04em] transition-colors ${
+      active || open ? "text-[#0A1128]" : "text-gray-500 hover:text-[#0A1128]"
     }`;
 
   // Split the flat industry list into two balanced columns for the desktop panel.
@@ -360,20 +360,20 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                 animate={{ opacity: 1, x: "-50%", y: 0 }}
                 exit={{ opacity: 0, x: "-50%", y: -6 }}
                 transition={{ duration: 0.18, ease: "easeOut" }}
-                className="fixed left-1/2 top-[88px] z-[200] bg-white rounded-[20px] border border-gray-100 shadow-[0_20px_64px_rgba(0,0,0,0.16)] overflow-hidden"
+                className="fixed left-1/2 top-[80px] z-[200] bg-white rounded-none border border-[#e7e6e4] overflow-hidden"
                 style={{ width: "min(960px, calc(100vw - 48px))" }}
               >
                 <div className="flex">
                   {/* Featured hero — left rail */}
                   <div className="w-[260px] shrink-0 bg-[#0A1128] p-8 flex flex-col justify-between">
                     <div>
-                      <span className="inline-block text-[10px] font-bold tracking-wider bg-[#FCCA07] text-[#0A1128] px-2.5 py-1 rounded-full mb-5">FLAGSHIP</span>
-                      <Link href={HERO.to} onClick={close} className="block text-2xl font-semibold text-white leading-tight hover:text-[#FCCA07] transition-colors">
+                      <span className="inline-block font-geist text-[12px] tracking-[0.02em] uppercase bg-[#FCCA07] text-[#0A1128] px-2.5 py-1 rounded-none mb-5">FLAGSHIP</span>
+                      <Link href={HERO.to} onClick={close} className="block font-alte text-2xl font-normal tracking-[-0.04em] text-white leading-tight hover:text-[#FCCA07] transition-colors">
                         {HERO.name}
                       </Link>
-                      <p className="text-sm text-gray-300/90 mt-3 leading-relaxed">{HERO.tagline}</p>
+                      <p className="font-alte text-[15px] tracking-[-0.04em] text-gray-300/90 mt-3 leading-relaxed">{HERO.tagline}</p>
                     </div>
-                    <Link href={HERO.to} onClick={close} className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-[#FCCA07] hover:gap-2.5 transition-all">
+                    <Link href={HERO.to} onClick={close} className="mt-8 inline-flex items-center gap-1.5 font-alte text-[15px] font-normal tracking-[-0.04em] text-[#FCCA07] hover:gap-2.5 transition-all">
                       See the agent →
                     </Link>
                   </div>
@@ -382,25 +382,25 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                   <div className="flex-1 flex gap-10 p-9">
                     {/* By Outcome */}
                     <div className="shrink-0">
-                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-5">By Outcome</p>
+                      <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-5">By Outcome</p>
                       <ul className="space-y-4">
                         {BY_OUTCOME.map((l) => (
                           <li key={l.name}>
-                            <Link href={l.to} onClick={close} className={`text-[15px] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF] font-semibold" : "text-gray-800 font-medium hover:text-[#0062FF]"}`}>{l.name}</Link>
+                            <Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-800 hover:text-[#0062FF]"}`}>{l.name}</Link>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* By Industry — flat two-column list, no sub-headers */}
-                    <div className="flex-1 pl-10 border-l border-gray-100">
-                      <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-[0.14em] mb-5">By Industry</p>
+                    <div className="flex-1 pl-10 border-l border-[#e7e6e4]">
+                      <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-5">By Industry</p>
                       <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                         {industryCols.map((col, ci) => (
                           <ul key={ci} className="space-y-4">
                             {col.map((l) => (
                               <li key={l.to}>
-                                <Link href={l.to} onClick={close} className={`text-[15px] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF] font-semibold" : "text-gray-700 hover:text-[#0062FF]"}`}>{l.name}</Link>
+                                <Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-700 hover:text-[#0062FF]"}`}>{l.name}</Link>
                               </li>
                             ))}
                           </ul>
@@ -423,22 +423,22 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <ChevronDown open={openDropdown === NAV.COMPARE} />
           </button>
           {openDropdown === NAV.COMPARE && (
-            <div className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50 p-5" style={{ width: "max-content", minWidth: "480px" }}>
-              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
+            <div className="absolute top-full left-0 mt-3 rounded-none bg-white border border-[#e7e6e4] z-50 p-5" style={{ width: "max-content", minWidth: "480px" }}>
+              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#e7e6e4] rotate-45" />
               <div className="grid grid-cols-2 gap-x-8">
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">Alternatives</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-3">Alternatives</p>
                   <ul className="space-y-2">
                     {COMPARE_ALTERNATIVES.map((l) => (
-                      <li key={l.to}><Link href={l.to} onClick={close} className={`text-sm block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
+                      <li key={l.to}><Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] block ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">Best-of roundups</p>
+                  <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-3">Best-of roundups</p>
                   <ul className="space-y-2">
                     {COMPARE_ROUNDUPS.map((l) => (
-                      <li key={l.to}><Link href={l.to} onClick={close} className={`text-sm block ${isActive(l.to) ? "text-[#0062FF] font-medium" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
+                      <li key={l.to}><Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] block ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-600 hover:text-[#0062FF]"}`}>{l.name}</Link></li>
                     ))}
                   </ul>
                 </div>
@@ -454,14 +454,14 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             <ChevronDown open={openDropdown === NAV.RESOURCES} />
           </button>
           {openDropdown === NAV.RESOURCES && (
-            <div className="absolute top-full left-0 mt-3 rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.14)] border border-gray-100 z-50" style={{ width: "max-content", minWidth: "280px", maxWidth: "340px" }}>
-              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
+            <div className="absolute top-full left-0 mt-3 rounded-none bg-white border border-[#e7e6e4] z-50" style={{ width: "max-content", minWidth: "280px", maxWidth: "340px" }}>
+              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#e7e6e4] rotate-45" />
               <ul className="p-2">
                 {RESOURCES.map((l) => (
                   <li key={l.to}>
-                    <Link href={l.to} onClick={close} className={`block px-3 py-3 rounded-xl transition-colors hover:bg-gray-50 ${isActive(l.to) ? "bg-gray-50" : ""}`}>
-                      <span className="text-sm font-semibold text-[#0A1128] block" style={{ whiteSpace: "nowrap" }}>{l.name}</span>
-                      {l.desc && <p className="text-xs text-gray-400 leading-snug mt-0.5">{l.desc}</p>}
+                    <Link href={l.to} onClick={close} className={`block px-3 py-3 rounded-none transition-colors hover:bg-[#F9F6F4] ${isActive(l.to) ? "bg-[#F9F6F4]" : ""}`}>
+                      <span className="font-alte text-[15px] font-normal tracking-[-0.04em] text-[#0A1128] block" style={{ whiteSpace: "nowrap" }}>{l.name}</span>
+                      {l.desc && <p className="font-alte text-[15px] tracking-[-0.04em] text-gray-400 leading-snug mt-0.5">{l.desc}</p>}
                     </Link>
                   </li>
                 ))}
@@ -472,14 +472,14 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
 
         {/* ── Services (link) ── */}
         <li>
-          <Link href={`${countryPrefix}/services/`} onClick={onLinkClick} className={`text-sm font-medium transition-colors ${isActive("/services/") ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"}`}>
+          <Link href={`${countryPrefix}/services/`} onClick={onLinkClick} className={`font-alte text-[15px] font-normal tracking-[-0.04em] transition-colors ${isActive("/services/") ? "text-[#0A1128]" : "text-gray-500 hover:text-[#0A1128]"}`}>
             Services
           </Link>
         </li>
 
         {/* ── About (link) ── */}
         <li>
-          <Link href={`${countryPrefix}/about/`} onClick={onLinkClick} className={`text-sm font-medium transition-colors ${isActive("/about/") ? "text-[#0A1128] font-semibold" : "text-gray-500 hover:text-[#0A1128]"}`}>
+          <Link href={`${countryPrefix}/about/`} onClick={onLinkClick} className={`font-alte text-[15px] font-normal tracking-[-0.04em] transition-colors ${isActive("/about/") ? "text-[#0A1128]" : "text-gray-500 hover:text-[#0A1128]"}`}>
             About
           </Link>
         </li>

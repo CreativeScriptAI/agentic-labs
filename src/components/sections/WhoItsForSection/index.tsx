@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const CAL_LINK =
   "https://cal.com/ai-aditya/30min";
@@ -64,13 +64,13 @@ const WhoItsForSection = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-14 lg:mb-16">
-          <p className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-5">
+          <p className="font-geist uppercase text-[12px] tracking-[0.02em] text-red-500 font-normal mb-4 sm:mb-5">
             Who this is for
           </p>
           <RevealText
             as="h2"
             text="Built for the person who became the bottleneck."
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4"
+            className="font-alte font-normal text-[#0A1128] text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] px-4"
             inView
           />
         </div>
@@ -84,13 +84,13 @@ const WhoItsForSection = () => {
             viewport={{ once: true, margin: "-80px" }}
             whileHover={{ y: -4 }}
             transition={spring}
-            className="relative rounded-2xl border-l-2 border-emerald-400 bg-emerald-50/60 p-6 sm:p-8"
+            className="relative rounded-none border border-[#e7e6e4] bg-white p-6 sm:p-8"
           >
             <div className="mb-5 sm:mb-6 flex items-center gap-3">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 ring-1 ring-emerald-200">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-none border border-emerald-300 text-emerald-600">
                 <CheckIcon />
               </span>
-              <h4 className="text-base sm:text-lg font-bold text-[#0A1128] font-mondwest">
+              <h4 className="font-geist uppercase font-normal text-[#0A1128] text-[12px] tracking-[0.02em]">
                 This is for you if:
               </h4>
             </div>
@@ -107,10 +107,10 @@ const WhoItsForSection = () => {
                   variants={itemVariants}
                   className="flex items-start gap-3"
                 >
-                  <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 ring-1 ring-emerald-200">
+                  <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-none border border-emerald-300 text-emerald-600">
                     <CheckIcon />
                   </span>
-                  <span className="text-slate-700 font-sfpro text-sm sm:text-base leading-relaxed">
+                  <span className="font-alte font-normal text-slate-700 text-[15px] tracking-[-0.04em] leading-relaxed">
                     {item}
                   </span>
                 </motion.li>
@@ -126,13 +126,13 @@ const WhoItsForSection = () => {
             viewport={{ once: true, margin: "-80px" }}
             whileHover={{ y: -4 }}
             transition={spring}
-            className="rounded-2xl p-6 sm:p-8 md:border-l md:border-slate-200/80"
+            className="rounded-none border border-[#e7e6e4] bg-white p-6 sm:p-8"
           >
             <div className="mb-5 sm:mb-6 flex items-center gap-3">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-red-50 text-red-400 ring-1 ring-red-100">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-none border border-red-300 text-red-400">
                 <XIcon />
               </span>
-              <h4 className="text-base sm:text-lg font-bold text-slate-400 font-mondwest">
+              <h4 className="font-geist uppercase font-normal text-slate-400 text-[12px] tracking-[0.02em]">
                 This is NOT for you if:
               </h4>
             </div>
@@ -149,10 +149,10 @@ const WhoItsForSection = () => {
                   variants={itemVariants}
                   className="flex items-start gap-3"
                 >
-                  <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-red-50 text-red-400 ring-1 ring-red-100">
+                  <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-none border border-red-300 text-red-400">
                     <XIcon />
                   </span>
-                  <span className="text-slate-400 font-sfpro text-sm sm:text-base leading-relaxed line-through decoration-red-200 decoration-1">
+                  <span className="font-alte font-normal text-slate-400 text-[15px] tracking-[-0.04em] leading-relaxed line-through decoration-red-200 decoration-1">
                     {item}
                   </span>
                 </motion.li>
@@ -169,20 +169,15 @@ const WhoItsForSection = () => {
           transition={spring}
           className="text-center"
         >
-          <p className="text-[#0A1128] font-sfpro text-base sm:text-lg lg:text-xl font-medium leading-relaxed mb-6">
+          <p className="font-alte font-normal text-[#0A1128] text-[15px] tracking-[-0.04em] leading-relaxed mb-6">
             If you&apos;re nodding at the first list, we should talk.
           </p>
-          <Link
+          <BracketButton
+            label="Book a free call"
             href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#FCCA07] px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-[#0A1128] shadow-lg shadow-[#FCCA07]/30 transition-all hover:-translate-y-0.5 hover:bg-yellow-500 hover:shadow-xl hover:shadow-[#FCCA07]/40"
-          >
-            Book a free call
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+            variant="primary"
+            external
+          />
         </motion.div>
       </div>
     </div>

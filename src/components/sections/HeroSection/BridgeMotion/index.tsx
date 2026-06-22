@@ -105,7 +105,7 @@ export default function BridgeMotion({
         initial={{ opacity: 0 }}
         animate={{ opacity: stage >= 1 ? 1 : 0 }}
         transition={{ duration: 0.4 }}
-        className="font-sfpro text-[11px] font-semibold tracking-[0.16em] uppercase text-gray-400 mb-3"
+        className="font-geist text-[11px] font-normal tracking-[0.22em] uppercase text-gray-400 mb-3"
       >
         Raw input
       </motion.p>
@@ -130,7 +130,7 @@ export default function BridgeMotion({
         ))}
       </div>
 
-      <p className="text-center font-sfpro text-xs text-slate-400 mt-3">
+      <p className="text-center font-geist text-xs font-normal text-slate-400 mt-3">
         Your tools and your data. Powerful, but disconnected.
       </p>
 
@@ -176,9 +176,9 @@ export default function BridgeMotion({
             scale: stage >= 4 ? 1 : PROCESSOR.initialScale,
           }}
           transition={PROCESSOR.spring}
-          className="inline-flex items-center gap-2.5 rounded-full bg-[#0062FF] text-white pl-2 pr-3.5 py-1.5 shadow-[0_8px_22px_rgba(0,98,255,0.22)]"
+          className="inline-flex items-center gap-2.5 rounded-none bg-[#0062FF] text-white pl-2 pr-3.5 py-1.5"
         >
-          <span className="shrink-0 w-7 h-7 rounded-full bg-white/15 flex items-center justify-center overflow-hidden">
+          <span className="shrink-0 w-7 h-7 rounded-none bg-white/15 flex items-center justify-center overflow-hidden">
             <Image
               src="/images/notebot_emoji.png"
               alt=""
@@ -187,11 +187,11 @@ export default function BridgeMotion({
               className="w-[22px] h-[22px]"
             />
           </span>
-          <span className="font-mondwest text-sm sm:text-base leading-none">
+          <span className="font-alte text-sm sm:text-base font-normal leading-none">
             Agentic AI Labs
           </span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 font-sfpro text-[10px] font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+          <span className="inline-flex items-center gap-1 rounded-none bg-white/15 px-2 py-0.5 font-geist text-[10px] font-normal tracking-[0.14em] uppercase">
+            <span className="w-1.5 h-1.5 rounded-none bg-emerald-300 animate-pulse" />
             processing
           </span>
         </motion.div>
@@ -199,7 +199,7 @@ export default function BridgeMotion({
           initial={{ opacity: 0 }}
           animate={{ opacity: stage >= 4 ? 1 : 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="font-sfpro text-xs text-slate-400 mt-2.5 text-center"
+          className="font-geist text-xs font-normal text-slate-400 mt-2.5 text-center"
         >
           We wire them into one system that works.
         </motion.p>
@@ -239,7 +239,7 @@ export default function BridgeMotion({
         transition={OUTCOME.spring}
         className="flex flex-col items-center"
       >
-        <p className="font-sfpro text-[11px] font-semibold tracking-[0.16em] uppercase text-emerald-500 mb-3">
+        <p className="font-geist text-[11px] font-normal tracking-[0.22em] uppercase text-emerald-500 mb-3">
           The outcome
         </p>
         <ul className="space-y-2.5">
@@ -255,7 +255,7 @@ export default function BridgeMotion({
                 ...OUTCOME.spring,
                 delay: stage >= 6 ? 0.15 + i * OUTCOME.stagger : 0,
               }}
-              className="flex items-center gap-2.5 font-sfpro text-sm text-[#0A1128]"
+              className="flex items-center gap-2.5 font-alte text-sm font-normal text-[#0A1128]"
             >
               <svg
                 className="shrink-0 w-4 h-4 text-emerald-500"
@@ -276,7 +276,7 @@ export default function BridgeMotion({
       </motion.div>
 
       {/* the fight line */}
-      <p className="text-center font-mondwest text-sm text-slate-400 mt-4">
+      <p className="text-center font-geist text-[11px] font-normal tracking-[0.22em] uppercase text-slate-400 mt-4">
         Outcomes, not tools.
       </p>
     </div>

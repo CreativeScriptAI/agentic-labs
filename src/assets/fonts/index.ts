@@ -2,3 +2,4 @@
 export * from "./roboto";
 export * from "./mondwest";
 export * from "./sfpro";
+export * from "./alteHaas";

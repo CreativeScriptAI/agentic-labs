@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const CAL_LINK =
   "https://cal.com/ai-aditya/30min";
@@ -26,19 +27,8 @@ const FinalCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT}
           transition={{ ...SPRING, damping: 26 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-white to-blue-50/60 px-4 py-10 sm:px-12 sm:py-16 text-center ring-1 ring-[#0A1128]/[0.06]"
+          className="relative overflow-hidden rounded-none bg-white border border-[#e7e6e4] px-4 py-10 sm:px-12 sm:py-16 text-center"
         >
-          {/* Soft in-palette glow, light surface */}
-          <motion.div
-            aria-hidden
-            initial={{ opacity: 0, scale: 0.6 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={VIEWPORT}
-            transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
-            className="pointer-events-none absolute -top-16 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full blur-3xl"
-            style={{ background: "radial-gradient(circle, rgba(37,99,235,0.10), transparent 70%)" }}
-          />
-
           <div className="relative max-w-2xl mx-auto">
             {/* Eyebrow + animated accent line */}
             <motion.div
@@ -48,7 +38,7 @@ const FinalCTASection = () => {
               transition={{ ...SPRING, delay: 0.1 }}
               className="mb-7 flex items-center justify-center gap-3"
             >
-              <span className="font-sfpro text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-red-500">
+              <span className="font-geist text-[15px] font-normal uppercase tracking-[0.2em] text-red-500">
                 Ready when you are
               </span>
             </motion.div>
@@ -65,14 +55,14 @@ const FinalCTASection = () => {
               as="h2"
               inView
               delay={0.25}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1128] font-mondwest mb-2 tracking-tight"
+              className="font-alte font-normal text-[40px] sm:text-[56px] lg:text-[75px] leading-[1.1] tracking-[-0.04em] text-[#0A1128] mb-2"
               text="Make AI work."
             />
             <RevealText
               as="h3"
               inView
               delay={0.45}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-600 font-mondwest mb-8 sm:mb-10 tracking-tight"
+              className="font-alte font-normal text-[40px] sm:text-[56px] lg:text-[75px] leading-[1.1] tracking-[-0.04em] text-blue-600 mb-8 sm:mb-10"
               text="So you don't have to."
             />
 
@@ -82,7 +72,7 @@ const FinalCTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VIEWPORT}
               transition={{ ...SPRING, delay: 0.55 }}
-              className="text-[#0A1128]/70 font-sfpro text-base sm:text-lg leading-relaxed font-medium max-w-md mx-auto mb-9 sm:mb-11"
+              className="font-alte font-normal text-[15px] sm:text-[24px] tracking-[-0.04em] leading-relaxed text-[#0A1128]/70 max-w-md mx-auto mb-9 sm:mb-11"
             >
               Book a free call, or call the AI yourself and hear it first.
             </motion.p>
@@ -101,22 +91,20 @@ const FinalCTASection = () => {
                 transition={SPRING}
                 className="w-full sm:w-auto"
               >
-                <Link
+                <BracketButton
+                  label="Book a free call"
                   href={CAL_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full sm:w-auto rounded-xl bg-[#FCCA07] px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-[#0A1128] shadow-[0_12px_30px_-10px_rgba(252,202,7,0.55)] transition-shadow hover:shadow-[0_18px_40px_-10px_rgba(252,202,7,0.7)]"
-                >
-                  Book a free call
-                </Link>
+                  external
+                  variant="primary"
+                  className="w-full sm:w-auto"
+                />
               </motion.div>
-              <Link
+              <BracketButton
+                label="Talk to the AI"
                 href="#talk-to-ai"
-                className="group inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-[#0A1128]/15 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-[#0A1128] transition-colors hover:bg-[#0A1128]/[0.04]"
-              >
-                Talk to the AI
-                <span className="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
-              </Link>
+                variant="secondary"
+                className="w-full sm:w-auto"
+              />
             </motion.div>
 
             {/* Subtext */}
@@ -125,9 +113,15 @@ const FinalCTASection = () => {
               whileInView={{ opacity: 1 }}
               viewport={VIEWPORT}
               transition={{ duration: 0.6, delay: 0.85 }}
-              className="text-[#0A1128]/50 font-sfpro text-xs sm:text-sm mt-6"
+              className="font-alte font-normal text-[15px] text-[#0A1128]/50 mt-6"
             >
-              Or email us: aditya@tryagentikai.com
+              Or email us:{" "}
+              <Link
+                href="mailto:aditya@tryagentikai.com"
+                className="font-alte underline underline-offset-4 hover:text-[#0A1128]"
+              >
+                aditya@tryagentikai.com
+              </Link>
             </motion.p>
           </div>
         </motion.div>

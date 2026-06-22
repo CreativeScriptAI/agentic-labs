@@ -27,18 +27,18 @@ export const TOOLS: Tool[] = [
 
 export const ToolChip: React.FC<{ tool: Tool }> = ({ tool }) => (
   <span
-    className="inline-flex items-center gap-1.5 rounded-lg bg-white border border-slate-200 px-2.5 py-1.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+    className="inline-flex items-center gap-1.5 rounded-none bg-white border border-[#e7e6e4] px-2.5 py-1.5"
     style={{ color: tool.color }}
   >
     {tool.Mark ? (
       <tool.Mark />
     ) : (
       <span
-        className="w-1.5 h-1.5 rounded-full"
+        className="w-1.5 h-1.5 rounded-none"
         style={{ backgroundColor: tool.color }}
       />
     )}
-    <span className="font-sfpro text-xs font-semibold">{tool.name}</span>
+    <span className="font-geist text-xs font-normal tracking-[0.02em]">{tool.name}</span>
   </span>
 );
 
@@ -50,12 +50,12 @@ export const CONTEXT: string[] = [
 ];
 
 export const ContextChip: React.FC<{ label: string }> = ({ label }) => (
-  <span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-50 border border-dashed border-slate-300 px-2.5 py-1.5 text-slate-500">
+  <span className="inline-flex items-center gap-1.5 rounded-none bg-white border border-[#e7e6e4] px-2.5 py-1.5 text-slate-500">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
       <ellipse cx="12" cy="5" rx="8" ry="3" />
       <path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
       <path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
     </svg>
-    <span className="font-sfpro text-xs font-medium">{label}</span>
+    <span className="font-geist text-xs font-normal tracking-[0.02em]">{label}</span>
   </span>
 );

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const CAL_LINK =
   "https://cal.com/ai-aditya/30min";
@@ -110,7 +111,7 @@ const AIRolesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT}
             transition={SPRING}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro"
+            className="text-blue-600 font-geist font-normal uppercase text-[12px] tracking-[0.02em] mb-4"
           >
             What that looks like for you
           </motion.p>
@@ -118,7 +119,7 @@ const AIRolesSection = () => {
             text="If a person does it on repeat, we can automate it."
             as="h2"
             inView
-            className="block text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest leading-tight px-2"
+            className="block font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] text-[#0A1128] px-2"
           />
         </div>
 
@@ -128,7 +129,7 @@ const AIRolesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT}
           transition={{ ...SPRING, delay: 0.12 }}
-          className="text-center text-slate-500 font-sfpro text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 px-4"
+          className="text-center text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 px-4"
         >
           Every business is different. The agent we build for a clinic looks
           nothing like the one we build for a recruiter. The engine is the same:
@@ -153,28 +154,32 @@ const AIRolesSection = () => {
                   variants={cardV}
                   whileHover={{ y: -4 }}
                   transition={SPRING}
-                  className="group relative overflow-hidden rounded-2xl bg-blue-50/60 ring-1 ring-blue-100 p-5 flex flex-col shadow-[0_4px_18px_rgba(10,17,40,0.04)]"
+                  className="group relative overflow-hidden rounded-none bg-white border border-[#e7e6e4] p-5 flex flex-col"
                 >
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 left-0 w-1 bg-blue-500/70"
+                    className="pointer-events-none absolute inset-y-0 left-0 w-[2px] bg-blue-500/70"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-blue-500/70"
                   />
                   <div className="relative flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-blue-100/80 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                    <div className="w-9 h-9 rounded-none bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                       {industryIcons[role.industry] || null}
                     </div>
-                    <span className="text-[10px] text-blue-600/80 font-sfpro uppercase tracking-[0.16em]">
+                    <span className="font-geist font-normal text-[11px] text-blue-600/80 uppercase tracking-[0.02em]">
                       {role.industry}
                     </span>
                   </div>
-                  <h4 className="relative font-mondwest text-lg sm:text-xl text-[#0A1128] leading-tight mb-2">
+                  <h4 className="relative font-alte font-normal text-[20px] tracking-[-0.04em] text-[#0A1128] leading-tight mb-2">
                     {role.role}
                   </h4>
-                  <p className="relative text-slate-600 font-sfpro text-sm leading-relaxed flex-grow">
+                  <p className="relative text-slate-600 font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed flex-grow">
                     {role.description}
                   </p>
-                  <span className="relative mt-3 inline-flex items-center gap-1.5 self-start rounded-full bg-blue-100/70 px-2.5 py-1 text-[10px] font-sfpro font-semibold text-blue-700 uppercase tracking-[0.14em]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="relative mt-3 inline-flex items-center gap-1.5 self-start rounded-none border border-[#e7e6e4] px-2.5 py-1 font-geist font-normal text-[11px] text-blue-700 uppercase tracking-[0.02em]">
+                    <span className="w-1.5 h-1.5 rounded-none bg-emerald-500 animate-pulse" />
                     Most requested
                   </span>
                 </motion.div>
@@ -187,26 +192,26 @@ const AIRolesSection = () => {
                 variants={cardV}
                 whileHover={{ y: -4 }}
                 transition={SPRING}
-                className="group bg-white rounded-2xl border border-slate-100 p-5 flex flex-col shadow-[0_2px_10px_rgba(10,17,40,0.03)] hover:shadow-[0_8px_22px_rgba(10,17,40,0.06)] hover:border-blue-100 transition-all"
+                className="group bg-white rounded-none border border-[#e7e6e4] p-5 flex flex-col hover:border-blue-200 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                  <div className="w-9 h-9 rounded-none bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                     {industryIcons[role.industry] || null}
                   </div>
-                  <span className="text-[10px] text-slate-400 font-sfpro uppercase tracking-[0.14em]">
+                  <span className="font-geist font-normal text-[11px] text-slate-400 uppercase tracking-[0.02em]">
                     {role.industry}
                   </span>
                 </div>
-                <h4 className="text-lg font-bold text-[#0A1128] font-mondwest mb-2">
+                <h4 className="font-alte font-normal text-[20px] tracking-[-0.04em] text-[#0A1128] mb-2">
                   {role.role}
                 </h4>
-                <p className="text-slate-500 font-sfpro text-sm leading-relaxed flex-grow">
+                <p className="text-slate-500 font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed flex-grow">
                   {role.description}
                 </p>
                 {role.link && (
                   <Link
                     href={role.link.href}
-                    className="group/link mt-3 inline-flex items-center gap-1 text-sm text-blue-600 font-sfpro font-medium hover:text-blue-700 transition-colors"
+                    className="group/link mt-3 inline-flex items-center gap-1 font-alte font-normal text-[15px] tracking-[-0.04em] text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     {role.link.text}
                     <span className="inline-block transition-transform group-hover/link:translate-x-1">
@@ -221,20 +226,18 @@ const AIRolesSection = () => {
 
         {/* Closing */}
         <div className="text-center">
-          <p className="text-slate-700 font-sfpro text-base sm:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+          <p className="text-slate-700 font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed mb-6 max-w-2xl mx-auto">
             Same engine. Different jobs.{" "}
-            <span className="font-semibold text-[#0A1128]">
+            <span className="font-normal text-[#0A1128]">
               What is the repetitive work your AI should be doing right now?
             </span>
           </p>
-          <Link
+          <BracketButton
+            label="Book a free call"
             href={CAL_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-xl bg-[#FCCA07] px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0A1128] shadow-[0_6px_20px_rgba(252,202,7,0.35)] transition-all hover:-translate-y-0.5 hover:bg-[#f0bd00] hover:shadow-[0_10px_26px_rgba(252,202,7,0.45)] active:scale-[0.98]"
-          >
-            Book a free call
-          </Link>
+            external
+            variant="primary"
+          />
         </div>
       </div>
     </div>

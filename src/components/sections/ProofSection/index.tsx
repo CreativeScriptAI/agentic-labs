@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import RevealText from "src/components/RevealText";
+import BracketButton from "src/components/BracketButton";
 
 const proofCards = [
   {
@@ -54,7 +54,7 @@ const ProofSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={spring}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 sm:mb-6"
+            className="font-geist font-normal uppercase text-[12px] tracking-[0.02em] text-[#0A1128] mb-4 sm:mb-6"
           >
             Proof
           </motion.p>
@@ -62,14 +62,14 @@ const ProofSection = () => {
             as="h2"
             text="Don't take our word for it."
             inView
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest px-4 mb-3"
+            className="font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] text-[#0A1128] px-4 mb-3"
           />
           <motion.h3
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ ...spring, delay: 0.1 }}
-            className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] font-sfpro px-4 max-w-2xl mx-auto"
+            className="font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed text-[#1E293B] px-4 max-w-2xl mx-auto"
           >
             Call our AI from your own phone and have a real conversation. Then
             picture it answering yours.
@@ -82,22 +82,22 @@ const ProofSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={spring}
-          className="relative rounded-3xl bg-[#EEF3FF] p-6 sm:p-9 lg:p-11 mb-10 sm:mb-14"
+          className="relative rounded-none bg-[#EEF3FF] border border-[#e7e6e4] p-6 sm:p-9 lg:p-11 mb-10 sm:mb-14"
         >
           <div className="relative">
             <div className="flex items-center gap-3 mb-5">
-              <span className="rounded-full bg-red-500 px-3 py-1 text-gray-50 font-sfpro text-xs font-bold tracking-[0.18em] uppercase">
+              <span className="rounded-none bg-[#0A1128] px-3 py-1 text-gray-50 font-geist font-normal text-[12px] tracking-[0.02em] uppercase">
                 Featured
               </span>
-              <span className="text-xs sm:text-sm text-slate-500 font-sfpro">
+              <span className="font-alte font-normal text-[15px] tracking-[-0.04em] text-slate-500">
                 Live with real customers
               </span>
             </div>
 
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0A1128] font-mondwest mb-1">
+            <h3 className="font-alte font-normal text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-[-0.04em] text-[#0A1128] mb-1">
               PatientlyAI
             </h3>
-            <p className="text-sm sm:text-base text-blue-600 font-sfpro mb-8">
+            <p className="font-alte font-normal text-[15px] tracking-[-0.04em] text-blue-600 mb-8">
               AI Voice Agent for Healthcare
             </p>
 
@@ -125,18 +125,18 @@ const ProofSection = () => {
                   transition={{ ...spring, delay: 0.12 + i * 0.08 }}
                   className={
                     col.highlight
-                      ? "rounded-2xl bg-white border-l-2 border-emerald-400 p-5 -mx-1 sm:mx-0 lg:-mt-5"
+                      ? "rounded-none bg-white border-l-2 border-emerald-400 p-5 -mx-1 sm:mx-0 lg:-mt-5"
                       : ""
                   }
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span
-                      className={`h-1.5 w-1.5 rounded-full ${
+                      className={`h-1.5 w-1.5 rounded-none ${
                         col.highlight ? "bg-emerald-500" : "bg-blue-500"
                       }`}
                     />
                     <h4
-                      className={`text-xs sm:text-sm font-bold font-sfpro uppercase tracking-[0.14em] ${
+                      className={`font-geist font-normal uppercase text-[12px] tracking-[0.02em] ${
                         col.highlight ? "text-emerald-600" : "text-slate-500"
                       }`}
                     >
@@ -144,8 +144,8 @@ const ProofSection = () => {
                     </h4>
                   </div>
                   <p
-                    className={`font-sfpro text-sm sm:text-base leading-relaxed ${
-                      col.highlight ? "text-[#0A1128] font-medium" : "text-slate-600"
+                    className={`font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed ${
+                      col.highlight ? "text-[#0A1128]" : "text-slate-600"
                     }`}
                   >
                     {col.body}
@@ -155,18 +155,16 @@ const ProofSection = () => {
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Link
+              <BracketButton
+                label="Try PatientlyAI"
                 href="/agent/patientlyai"
-                className="inline-flex items-center justify-center rounded-xl bg-blue-600 text-white font-sfpro text-sm sm:text-base font-semibold px-6 py-3 hover:bg-blue-700 transition-colors"
-              >
-                Try PatientlyAI &rarr;
-              </Link>
-              <Link
+                variant="primary"
+              />
+              <BracketButton
+                label="Talk to the AI"
                 href="/agent/patientlyai"
-                className="inline-flex items-center justify-center rounded-xl border border-blue-200 text-blue-700 font-sfpro text-sm sm:text-base font-medium px-6 py-3 hover:bg-white transition-colors"
-              >
-                Talk to the AI
-              </Link>
+                variant="secondary"
+              />
             </div>
           </div>
         </motion.div>
@@ -185,21 +183,21 @@ const ProofSection = () => {
               variants={fadeUp}
               whileHover={{ y: -4 }}
               transition={spring}
-              className="bg-white rounded-2xl border border-slate-100 p-6 transition-colors hover:border-slate-200"
+              className="bg-white rounded-none border border-[#e7e6e4] p-6 transition-colors hover:border-slate-300"
             >
-              <p className="text-xs text-red-500 font-bold font-sfpro uppercase tracking-[0.16em] mb-4">
+              <p className="font-geist font-normal uppercase text-[12px] tracking-[0.02em] text-[#0A1128] mb-4">
                 {card.industry}
               </p>
-              <p className="text-4xl sm:text-5xl font-bold text-blue-600 font-mondwest leading-none mb-1">
+              <p className="font-alte font-normal text-[40px] tracking-[-0.04em] text-blue-600 leading-none mb-1">
                 {card.stat}
               </p>
-              <p className="text-sm text-emerald-600 font-sfpro font-medium mb-4">
+              <p className="font-alte font-normal text-[15px] tracking-[-0.04em] text-emerald-600 mb-4">
                 {card.statLabel}
               </p>
-              <p className="text-slate-700 font-sfpro text-sm sm:text-base leading-relaxed mb-3">
+              <p className="font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed text-slate-700 mb-3">
                 {card.metric}
               </p>
-              <p className="text-xs text-slate-400 font-sfpro">
+              <p className="font-geist font-normal uppercase text-[12px] tracking-[0.02em] text-slate-400">
                 {card.client}
               </p>
             </motion.div>
@@ -212,24 +210,24 @@ const ProofSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={spring}
-          className="relative rounded-3xl border-y border-slate-100 p-8 sm:p-12 text-center"
+          className="relative rounded-none border-y border-[#e7e6e4] p-8 sm:p-12 text-center"
         >
           <span
             aria-hidden
-            className="absolute left-6 top-2 sm:left-10 sm:top-4 font-mondwest text-6xl sm:text-7xl text-blue-600/15 leading-none select-none"
+            className="absolute left-6 top-2 sm:left-10 sm:top-4 font-alte text-6xl sm:text-7xl text-blue-600/15 leading-none select-none"
           >
             &ldquo;
           </span>
-          <blockquote className="relative text-slate-700 font-sfpro text-lg sm:text-xl lg:text-2xl leading-relaxed italic mb-5 max-w-2xl mx-auto">
+          <blockquote className="relative font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed text-slate-700 italic mb-5 max-w-2xl mx-auto">
             Within 48 hours they built an AI caller that doubled our booking
             rate. It feels like having a full-time receptionist who never
             sleeps.
           </blockquote>
           <figcaption className="flex items-center justify-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-700 font-mondwest text-sm">
+            <span className="flex h-9 w-9 items-center justify-center rounded-none bg-blue-50 text-blue-700 font-alte font-normal text-sm">
               A
             </span>
-            <span className="text-sm sm:text-base text-slate-500 font-sfpro font-medium">
+            <span className="font-geist font-normal uppercase text-[12px] tracking-[0.02em] text-slate-500">
               Aiden, Founder
             </span>
           </figcaption>
@@ -241,7 +239,7 @@ const ProofSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={{ ...spring, delay: 0.05 }}
-          className="text-center text-base sm:text-lg text-slate-600 font-sfpro leading-relaxed mt-10 sm:mt-14 px-4 max-w-3xl mx-auto"
+          className="text-center font-alte font-normal text-[15px] tracking-[-0.04em] leading-relaxed text-slate-600 mt-10 sm:mt-14 px-4 max-w-3xl mx-auto"
         >
           We have built and shipped for real businesses in travel, home
           services, hiring, and coaching. Working with real customers. Not

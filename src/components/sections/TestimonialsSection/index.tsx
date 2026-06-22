@@ -19,22 +19,22 @@ const useIsClient = () => {
 // Skeleton loader component for testimonials
 const TestimonialCardSkeleton = () => (
   <div
-    className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(10,17,40,0.06)] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full animate-pulse"
+    className="bg-white rounded-none border border-[#e7e6e4] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full animate-pulse"
     style={{ height: "400px" }}
   >
     {/* Video/Content skeleton */}
     <div className="flex-grow mb-4 sm:mb-6">
-      <div className="w-full h-48 sm:h-56 lg:h-64 bg-gray-200 rounded-lg mb-4"></div>
+      <div className="w-full h-48 sm:h-56 lg:h-64 bg-gray-200 rounded-none mb-4"></div>
     </div>
 
     {/* Divider skeleton */}
-    <div className="h-px bg-gray-200 mb-4 sm:mb-6"></div>
+    <div className="h-px bg-[#e7e6e4] mb-4 sm:mb-6"></div>
 
     {/* Author info skeleton */}
     <div className="mt-auto flex items-center justify-between">
       <div className="flex-grow">
-        <div className="h-4 bg-gray-200 rounded w-32 mb-2"></div>
-        <div className="h-3 bg-gray-200 rounded w-24"></div>
+        <div className="h-4 bg-gray-200 rounded-none w-32 mb-2"></div>
+        <div className="h-3 bg-gray-200 rounded-none w-24"></div>
       </div>
     </div>
   </div>
@@ -61,8 +61,8 @@ const TestimonialsSkeleton = ({ visibleCount }: { visibleCount: number }) => (
 
     {/* Navigation skeleton */}
     <div className="flex justify-center sm:justify-end gap-2 mt-3 md:mt-6">
-      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-lg animate-pulse"></div>
-      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-lg animate-pulse"></div>
+      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-none animate-pulse"></div>
+      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-none animate-pulse"></div>
     </div>
   </div>
 );
@@ -95,17 +95,17 @@ const LazyYouTubeIframe = ({ url, title }: { url: string; title: string }) => {
   return (
     <div
       ref={iframeRef}
-      className="w-full h-full rounded-lg overflow-hidden relative"
+      className="w-full h-full rounded-none overflow-hidden relative"
     >
       {!isIntersecting ? (
-        <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
-          <div className="text-gray-500">Loading video...</div>
+        <div className="w-full h-full bg-gray-200 rounded-none flex items-center justify-center">
+          <div className="font-geist uppercase text-[12px] tracking-[0.02em] text-gray-500">Loading video...</div>
         </div>
       ) : (
         <iframe
           src={embedUrl || ""}
           title={title}
-          className="w-full h-full rounded-lg"
+          className="w-full h-full rounded-none"
           frameBorder="0"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -349,14 +349,14 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ type: "spring", stiffness: 320, damping: 30 }}
-            className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro px-4"
+            className="text-red-500 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 font-geist px-4"
           >
             Testimonials
           </motion.p>
           <RevealText
             text="Founders have already seen transformational results"
             as="h2"
-            className="text-2xl sm:text-3xl lg:text-4xl text-[#0A1128] font-mondwest leading-tight max-w-3xl px-4"
+            className="text-[28px] sm:text-[34px] lg:text-[40px] text-[#0A1128] font-alte font-normal leading-[1.2] tracking-[-0.04em] max-w-3xl px-4"
             delay={0.05}
             stagger={0.04}
             inView
@@ -370,17 +370,17 @@ const TestimonialsSection = () => {
 
         {!isLoading && testimonials.length === 0 && (
           <div className="flex flex-col justify-center items-center py-12 space-y-4">
-            <p className="text-gray-600 text-lg">
+            <p className="font-alte font-normal text-gray-600 text-[18px] tracking-[-0.04em]">
               No testimonials available at the moment.
             </p>
             {error && (
-              <div className="text-red-500 text-sm max-w-md text-center">
+              <div className="font-geist uppercase text-red-500 text-[12px] tracking-[0.02em] max-w-md text-center">
                 Error: {error.message}
               </div>
             )}
             <button
               onClick={handleManualRefetch}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+              className="font-geist uppercase text-[12px] tracking-[0.02em] px-4 py-2 bg-blue-500 text-white rounded-none border border-[#e7e6e4] hover:bg-blue-600 transition-colors"
             >
               Retry Fetch
             </button>
@@ -425,7 +425,7 @@ const TestimonialsSection = () => {
                       damping: 30,
                       delay: Math.min(cardIndex, visibleCount) * 0.08,
                     }}
-                    className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_30px_rgba(10,17,40,0.06)] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full transition-shadow duration-300 hover:shadow-[0_16px_44px_rgba(10,17,40,0.12)]"
+                    className="bg-white rounded-none border border-[#e7e6e4] p-4 sm:p-6 lg:p-8 flex flex-col flex-shrink-0 w-full transition-colors duration-300 hover:border-[#0A1128]"
                     style={{
                       width: `calc((100% - ${cardGapPx}px * (${visibleCount} - 1)) / ${visibleCount})`,
                       height: "400px", // Fixed height for all cards
@@ -436,7 +436,7 @@ const TestimonialsSection = () => {
                       {testimonial.videoURL &&
                         testimonial.videoURL.trim() !== "" ? (
                         <div
-                          className="mb-4 sm:mb-6 flex flex-col rounded-xl overflow-hidden bg-slate-50"
+                          className="mb-4 sm:mb-6 flex flex-col rounded-none overflow-hidden border border-[#e7e6e4]"
                           style={{ height: "240px" }}
                         >
                           {isYouTubeURL(testimonial.videoURL) ? (
@@ -455,7 +455,7 @@ const TestimonialsSection = () => {
                             <video
                               controls
                               preload="metadata"
-                              className="w-full h-full rounded-lg object-contain bg-black"
+                              className="w-full h-full rounded-none object-contain bg-black"
                               poster=""
                             >
                               <source
@@ -471,7 +471,7 @@ const TestimonialsSection = () => {
                           className="mb-4 sm:mb-6 overflow-hidden"
                           style={{ height: "240px" }}
                         >
-                          <p className="text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed overflow-y-auto h-full pr-2">
+                          <p className="font-alte font-normal text-gray-800 text-[15px] sm:text-[18px] lg:text-[24px] leading-relaxed tracking-[-0.04em] overflow-y-auto h-full pr-2">
                             {(testimonial.review || "").replace(/\s*—\s*/g, ", ")}
                           </p>
                         </div>
@@ -479,16 +479,16 @@ const TestimonialsSection = () => {
                     </div>
 
                     {/* Divider Line */}
-                    <hr className="border-t border-gray-200 mb-4 sm:mb-6" />
+                    <hr className="border-t border-[#e7e6e4] mb-4 sm:mb-6" />
 
                     {/* Author Info */}
                     <div className="mt-auto flex items-center justify-between">
                       <div className="flex-grow">
-                        <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+                        <h4 className="font-alte font-normal text-gray-900 mb-1 text-[15px] sm:text-[16px] tracking-[-0.04em]">
                           {testimonial.name}
                         </h4>
-                        <p className="text-gray-500 text-xs sm:text-sm">
-                          {testimonial.designation}
+                        <p className="font-geist uppercase text-gray-500 text-[12px] tracking-[0.02em]">
+                          {(testimonial.designation || "").replace(/\s*—\s*/g, ", ")}
                         </p>
                       </div>
                     </div>
@@ -501,7 +501,7 @@ const TestimonialsSection = () => {
             <div className="flex justify-center sm:justify-end gap-2 mt-3 md:mt-6">
               <button
                 onClick={handlePrev}
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-10 h-10 sm:w-12 sm:h-12 border border-[#e7e6e4] rounded-none flex items-center justify-center hover:border-[#0A1128] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isAtStart}
                 aria-label="Previous testimonial"
               >
@@ -521,7 +521,7 @@ const TestimonialsSection = () => {
               </button>
               <button
                 onClick={handleNext}
-                className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center hover:border-gray-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-10 h-10 sm:w-12 sm:h-12 border border-[#e7e6e4] rounded-none flex items-center justify-center hover:border-[#0A1128] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isAtEnd}
                 aria-label="Next testimonial"
               >

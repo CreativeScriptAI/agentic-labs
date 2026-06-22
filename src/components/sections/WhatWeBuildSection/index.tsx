@@ -75,8 +75,8 @@ const WhatWeBuildSection = () => {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-14">
-          <p className="text-red-500 font-bold text-xs tracking-[0.18em] uppercase mb-4 font-sfpro">
+        <div className="text-center mb-10 sm:mb-[60px]">
+          <p className="text-blue-600 font-normal font-geist uppercase text-[12px] tracking-[0.02em] mb-[20px]">
             What we do
           </p>
 
@@ -86,7 +86,7 @@ const WhatWeBuildSection = () => {
               text="Tell us the outcome. We build it."
               inView
               stagger={0.14}
-              className="block text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-4"
+              className="block text-[28px] sm:text-[34px] lg:text-[40px] font-normal text-[#0A1128] font-alte mb-[20px] leading-[1.2] tracking-[-0.04em]"
             />
             {/* Hand-drawn underline accent under "build it." */}
             <motion.svg
@@ -114,7 +114,7 @@ const WhatWeBuildSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-base sm:text-lg lg:text-[20px] font-normal text-[#1E293B] font-sfpro px-4 max-w-2xl mx-auto leading-relaxed mt-2"
+            className="text-[15px] font-normal text-[#1E293B] font-alte px-4 max-w-2xl mx-auto leading-relaxed mt-[10px] tracking-[-0.04em]"
           >
             We build the AI agents and automations that run the work. Not one
             product. Whatever the job needs.
@@ -126,13 +126,13 @@ const WhatWeBuildSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-[0_4px_16px_rgba(10,17,40,0.04)]"
+            className="mt-[30px] inline-flex items-center gap-[10px] rounded-none border border-[#e7e6e4] bg-white px-[20px] py-[10px]"
           >
-            <span className="font-sfpro text-xs sm:text-sm font-semibold text-[#0A1128]">
+            <span className="font-geist uppercase text-[12px] tracking-[0.02em] font-normal text-[#0A1128]">
               One door
             </span>
-            <span className="h-1 w-1 rounded-full bg-blue-600" />
-            <span className="font-sfpro text-xs sm:text-sm font-semibold text-blue-600">
+            <span className="h-1 w-1 rounded-none bg-blue-600" />
+            <span className="font-geist uppercase text-[12px] tracking-[0.02em] font-normal text-blue-600">
               two speeds
             </span>
           </motion.div>
@@ -154,17 +154,17 @@ const WhatWeBuildSection = () => {
                 variants={cardVariants}
                 whileHover={{ y: -4 }}
                 className={[
-                  "group relative overflow-hidden rounded-3xl p-7 sm:p-9 transition-colors duration-300",
+                  "group relative overflow-hidden rounded-none p-[30px] sm:p-[40px] transition-colors duration-300 border border-[#e7e6e4]",
                   isTint
-                    ? "bg-[#EEF3FF]"
-                    : "bg-white border border-slate-100",
+                    ? "bg-[#F9F6F4]"
+                    : "bg-white",
                 ].join(" ")}
               >
                 {/* Thin top accent line */}
                 <div
                   aria-hidden="true"
                   className={[
-                    "pointer-events-none absolute inset-x-0 top-0 h-0.5 transition-opacity duration-500",
+                    "pointer-events-none absolute inset-x-0 top-0 h-px transition-opacity duration-500",
                     isTint
                       ? "bg-blue-600/40 opacity-100"
                       : "bg-blue-600/20 opacity-70 group-hover:opacity-100",
@@ -175,37 +175,37 @@ const WhatWeBuildSection = () => {
                   {/* Icon */}
                   <div
                     className={[
-                      "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-blue-600",
-                      isTint ? "bg-white" : "bg-blue-600/10",
+                      "mb-[20px] inline-flex h-12 w-12 items-center justify-center rounded-none text-blue-600 border border-[#e7e6e4]",
+                      isTint ? "bg-white" : "bg-blue-600/5",
                     ].join(" ")}
                   >
                     {card.icon}
                   </div>
 
                   {/* Meta label */}
-                  <p className="font-sfpro text-[11px] font-bold uppercase tracking-[0.16em] mb-2 text-blue-600">
+                  <p className="font-geist text-[12px] font-normal uppercase tracking-[0.02em] mb-[10px] text-blue-600">
                     {card.meta}
                   </p>
 
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-[28px] font-bold font-mondwest mb-3 leading-tight text-[#0A1128]">
+                  <h3 className="text-[24px] font-normal font-alte mb-[10px] leading-[1.2] tracking-[-0.04em] text-[#0A1128]">
                     {card.label}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sfpro text-sm sm:text-base leading-relaxed text-slate-600">
+                  <p className="font-alte text-[15px] leading-relaxed tracking-[-0.04em] text-slate-600">
                     {card.description}
                   </p>
 
                   {/* Footer tag */}
                   <div
                     className={[
-                      "mt-6 flex items-center gap-2 border-t pt-4",
-                      isTint ? "border-blue-600/15" : "border-slate-100",
+                      "mt-[20px] flex items-center gap-[10px] border-t pt-[20px]",
+                      isTint ? "border-[#e7e6e4]" : "border-[#e7e6e4]",
                     ].join(" ")}
                   >
-                    <span className="inline-flex h-1.5 w-1.5 rounded-full bg-blue-600" />
-                    <span className="font-sfpro text-xs sm:text-sm font-semibold text-[#0A1128]">
+                    <span className="inline-flex h-1.5 w-1.5 rounded-none bg-blue-600" />
+                    <span className="font-geist text-[12px] font-normal uppercase tracking-[0.02em] text-[#0A1128]">
                       {card.metaValue}
                     </span>
                   </div>
@@ -223,10 +223,10 @@ const WhatWeBuildSection = () => {
           transition={{ type: "spring", stiffness: 320, damping: 30 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <div className="w-10 h-0.5 bg-blue-600 mx-auto mb-6 sm:mb-8" />
-          <p className="text-slate-700 font-sfpro text-base sm:text-lg lg:text-xl leading-relaxed">
+          <div className="w-10 h-px bg-blue-600 mx-auto mb-[30px] sm:mb-[40px]" />
+          <p className="text-slate-700 font-alte text-[15px] leading-relaxed tracking-[-0.04em]">
             Ready or custom, same promise:{" "}
-            <span className="font-semibold text-[#0A1128]">
+            <span className="font-normal text-[#0A1128]">
               it works, and you don&apos;t run it.
             </span>
           </p>

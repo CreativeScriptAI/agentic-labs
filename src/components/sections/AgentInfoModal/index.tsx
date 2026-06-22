@@ -224,7 +224,7 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
                 aria-expanded={isFeaturesExpanded}
                 aria-controls="shared-agent-features-panel"
               >
-                <p className="font-mondwest text-[#0A1128] text-[20px] uppercase tracking-wide">
+                <p className="font-geist text-[#0A1128] text-[15px] uppercase tracking-[0.02em] font-normal">
                   Feature & Benefits
                 </p>
                 {accordionCaret(isFeaturesExpanded)}
@@ -266,7 +266,7 @@ const AgentInfoModal: React.FC<AgentInfoModalProps> = ({
                 aria-expanded={isHowItWorksExpanded}
                 aria-controls="shared-agent-how-it-works-panel"
               >
-                <p className="font-mondwest text-[#0A1128] text-[20px] uppercase tracking-wide">
+                <p className="font-geist text-[#0A1128] text-[15px] uppercase tracking-[0.02em] font-normal">
                   How it Works
                 </p>
                 {accordionCaret(isHowItWorksExpanded)}
