@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import BracketButton from "src/components/BracketButton";
 
 interface ProjectSaveProps {
   data: {
@@ -31,7 +32,7 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
   return (
     <section className="section">
       <h2 className="section_title">
-        {data.title} <span className="italic">{data.titleHighlight}</span>
+        {data.title} <span className="font-alte">{data.titleHighlight}</span>
       </h2>
       <div className="w-full mx-auto flex flex-col-reverse md:flex-row justify-between gap-6 md:gap-8 max-md:items-center">
         <div className="flex flex-col gap-4 w-full max-w-[480px]">
@@ -43,7 +44,7 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
                 <div
                   key={item.title}
                   onClick={() => handleToggle(idx)}
-                  className="border-b rounded-lg bg-white w-full cursor-pointer py-6"
+                  className="border-b border-[#e7e6e4] rounded-none bg-white w-full cursor-pointer py-6"
                 >
                   <div
                     className={`flex items-center items-start gap-2 flex justify-between px-5 md:px-6 transition-all duration-200`}
@@ -66,7 +67,7 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
                       </div>
 
                       <div
-                        className={`text-base md:text-lg font-medium text-left transition-all duration-200 ${
+                        className={`font-alte text-base md:text-lg font-normal tracking-[-0.04em] text-left transition-all duration-200 ${
                           isOpen ? "" : ""
                         }`}
                       >
@@ -83,7 +84,7 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
                     </div>
                   </div>
                   {isOpen && (
-                    <div className="px-5 mx-[36px] md:px-6 pt-2 text-[#475569] text-sm md:text-base">
+                    <div className="px-5 mx-[36px] md:px-6 pt-2 font-alte text-[#475569] text-[15px] leading-[1.5] tracking-[-0.04em] font-normal">
                       {item.description}
                     </div>
                   )}
@@ -102,25 +103,21 @@ const ProjectSave = ({ data }: ProjectSaveProps) => {
           />
         )}
       </div>
-      <div className="w-full sm:justify-start flex justify-center">
-        <button
-          // href="https://tryagentikai.com/contact"
-          className="button_blue_border mt-4"
+      <div className="w-full sm:justify-start flex justify-center mt-4">
+        <BracketButton
+          label={data.ctaButton.text}
+          variant="secondary"
           onClick={() => {
             if (
               typeof window !== "undefined" &&
               (window as any).gtag_report_conversion
             ) {
-              return (window as any).gtag_report_conversion(
+              (window as any).gtag_report_conversion(
                 "https://tryagentikai.com/contact"
               );
             }
-            return true;
           }}
-        >
-          {data.ctaButton.text}
-          <ArrowUpRight size={20} />
-        </button>
+        />
       </div>
     </section>
   );

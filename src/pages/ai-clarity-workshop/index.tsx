@@ -16,7 +16,7 @@ import StructuredData from "src/components/StructuredData";
 const AiClarityPage = () => {
   return (
     <>
-      <section className="min-h-screen bg-background [&_*]:box-border">
+      <section className="min-h-screen bg-[#F9F6F4] [&_*]:box-border">
         <NextSeo
           title="AI Clarity Workshop"
           description="Learn how to use AI to improve your business."

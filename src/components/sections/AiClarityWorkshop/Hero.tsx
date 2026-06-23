@@ -1,6 +1,5 @@
-import { Button } from "src/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
+import BracketButton from "src/components/BracketButton";
 import ctaLinks from "src/constants/cta-links";
 
 const Hero = () => {
@@ -29,17 +28,6 @@ const Hero = () => {
           }
         }
       `}</style>
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent-highlight/10 rounded-full blur-3xl animate-float"
-          style={{
-            animationDelay: "2s",
-          }}
-        ></div>
-      </div>
-
       <div className="mx-auto w-full px-0 sm:px-6 md:px-8 h-full">
         {/* Horizontal Layout: Text Left, Image Right on Desktop */}
         <div className="relative max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:items-center lg:gap-8 xl:gap-12 h-full">
@@ -49,17 +37,17 @@ const Hero = () => {
               {/* Heading and Main Text Section */}
               <div className="flex flex-col gap-2">
                 {/* Tagline */}
-                <p className="text-[#040f20b3] mb-0  text-[13px] sm:text-[14px] md:text-[16px] font-normal px-4 sm:px-0">
+                <p className="font-geist uppercase tracking-[0.02em] text-[#040f20b3] mb-0 text-[12px] font-normal px-4 sm:px-0">
                   Get AI Clarity in 30 Minutes
                 </p>
 
                 {/* Headline and Subtext */}
                 <div className=" sm:mb-4 px-4 sm:px-0">
                   <h1
-                    className="font-semibold text-foreground text-[30px] sm:text-[38px] md:text-[48px] lg:text-[56px] mb-3 sm:mb-4"
+                    className="font-alte font-normal text-[#0A1128] text-[30px] sm:text-[38px] md:text-[48px] lg:text-[56px] mb-3 sm:mb-4"
                     style={{
-                      lineHeight: "1.1",
-                      letterSpacing: "-0.025em",
+                      lineHeight: "1.2",
+                      letterSpacing: "-0.04em",
                     }}
                     aria-label="You're losing time and money on the same repetitive work"
                   >
@@ -68,7 +56,7 @@ const Hero = () => {
                   </h1>
 
                   <p
-                    className="text-foreground/75 text-[15px] sm:text-[16px] md:text-[18px] mb-6 sm:mb-6 max-w-[520px]"
+                    className="font-alte font-normal text-[#0A1128]/75 text-[15px] sm:text-[16px] md:text-[18px] mb-6 sm:mb-6 max-w-[520px] tracking-[-0.04em]"
                     style={{
                       lineHeight: "1.5",
                     }}
@@ -99,26 +87,23 @@ const Hero = () => {
               <div className="w-full max-w-[520px] px-4 sm:px-0">
                 {/* Small note above CTA */}
                 <div className="text-left mb-2">
-                  <p className="text-muted-foreground/60 italic text-[12px] sm:text-[13px] md:text-[14px]">
+                  <p className="font-alte font-normal text-[#0A1128]/60 italic text-[12px] tracking-[-0.04em]">
                     Takes 60 seconds to book.
                   </p>
                 </div>
 
                 {/* CTA Button */}
-                
-                   {/* CTA Button */}
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-all duration-300 hover:shadow-lg w-full text-[14px] sm:text-[15px] md:text-[16px] font-semibold focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" size="lg" style={{
-              padding: '16px 24px',
-              minHeight: '56px'
-            }} aria-label="Book your free 30-minute AI Clarity Workshop">
-                <Link href={ctaLinks.aiClarityWorkshop} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                  Book Your Free AI Clarity Workshop
-                </Link>
-              </Button>
+                <BracketButton
+                  label="Book Your Free AI Clarity Workshop"
+                  href={ctaLinks.aiClarityWorkshop}
+                  variant="primary"
+                  external
+                  className="w-full"
+                />
 
                 {/* Trust Line */}
                 <div className="mt-2 sm:mt-3 text-left">
-                  <p className="text-muted-foreground/65 italic text-[11px] sm:text-[12px] md:text-[13px] leading-relaxed">
+                  <p className="font-alte font-normal text-[#0A1128]/65 italic text-[11px] sm:text-[12px] md:text-[13px] leading-relaxed tracking-[-0.04em]">
                     Trusted by 50+ founders | Built 10+ production-grade AI systems
                   </p>
                 </div>

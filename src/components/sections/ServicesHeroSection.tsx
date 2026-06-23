@@ -21,14 +21,14 @@ const ServicesHeroSection: React.FC = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col max-w-6xl mx-auto">
           <div className="flex flex-col items-center justify-center py-16 sm:py-20">
-            <h1 className="text-center font-mondwest text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-tight mb-8">
+            <h1 className="text-center font-alte font-normal text-4xl sm:text-5xl lg:text-6xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-8">
               Outcomes, ready or built for you.
             </h1>
-            <p className="text-center font-sfpro text-slate-600 font-light text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-4xl px-2">
+            <p className="text-center font-alte font-normal text-slate-600 text-lg sm:text-xl lg:text-2xl leading-[1.5] tracking-[-0.04em] max-w-4xl px-2">
               Tell us the outcome you want. We&apos;ve either{" "}
-              <span className="text-blue-600 font-medium">already built it</span>,
+              <span className="text-blue-600">already built it</span>,
               or we{" "}
-              <span className="text-blue-600 font-medium">
+              <span className="text-blue-600">
                 build it around your business
               </span>
               . Either way you get AI that works on real customers, not a demo

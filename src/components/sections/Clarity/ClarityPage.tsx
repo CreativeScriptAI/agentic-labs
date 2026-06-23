@@ -145,11 +145,11 @@ const CTAButton = ({
       justifyContent: "center",
       backgroundColor: "#FCCA07",
       color: "#0A1128",
-      fontWeight: 600,
+      fontWeight: 400,
       fontSize: "16px",
       lineHeight: 1.25,
       padding: fullWidth ? "18px 24px" : "14px 32px",
-      borderRadius: "8px",
+      borderRadius: "0px",
       textDecoration: "none",
       width: fullWidth ? "100%" : "auto",
       cursor: "pointer",
@@ -169,10 +169,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       style={{
+        fontFamily: "var(--font-geist-mono), monospace",
         color: "#ef4444",
-        fontSize: "11px",
-        fontWeight: 500,
-        letterSpacing: "0.1em",
+        fontSize: "12px",
+        fontWeight: 400,
+        letterSpacing: "0.02em",
         textTransform: "uppercase",
         marginBottom: "16px",
       }}
@@ -223,11 +224,11 @@ const CalendarIllustration = () => (
       strokeWidth="2"
     />
     {/* Top colored bar */}
-    <rect x="8" y="16" width="104" height="28" rx="10" fill="#2563eb" />
-    <rect x="8" y="30" width="104" height="14" fill="#2563eb" />
+    <rect x="8" y="16" width="104" height="28" rx="10" fill="#0062FF" />
+    <rect x="8" y="30" width="104" height="14" fill="#0062FF" />
     {/* Calendar header pins */}
-    <rect x="30" y="10" width="8" height="14" rx="4" fill="#2563eb" />
-    <rect x="82" y="10" width="8" height="14" rx="4" fill="#2563eb" />
+    <rect x="30" y="10" width="8" height="14" rx="4" fill="#0062FF" />
+    <rect x="82" y="10" width="8" height="14" rx="4" fill="#0062FF" />
     {/* Month label */}
     <text
       x="60"
@@ -260,7 +261,7 @@ const CalendarIllustration = () => (
         width="8"
         height="8"
         rx="2"
-        fill={col === 5 ? "#2563eb" : "#f3f4f6"}
+        fill={col === 5 ? "#0062FF" : "#f3f4f6"}
       />
     ))}
     {[0, 1, 2, 3, 4].map((col) => (
@@ -306,7 +307,7 @@ const EnvelopeIllustration = () => (
     />
     <path
       d="M4 22l25.5 18a5 5 0 005 0L60 22"
-      stroke="#2563eb"
+      stroke="#0062FF"
       strokeWidth="1.5"
       strokeLinejoin="round"
     />
@@ -330,18 +331,18 @@ const BriefcaseIcon = () => (
       width="20"
       height="14"
       rx="3"
-      stroke="#2563eb"
+      stroke="#0062FF"
       strokeWidth="1.5"
     />
     <path
       d="M8 8V6a4 4 0 018 0v2"
-      stroke="#2563eb"
+      stroke="#0062FF"
       strokeWidth="1.5"
       strokeLinecap="round"
     />
     <path
       d="M2 13h20"
-      stroke="#2563eb"
+      stroke="#0062FF"
       strokeWidth="1.5"
       strokeLinecap="round"
     />
@@ -381,8 +382,7 @@ export default function ClarityPage({
       style={{
         minHeight: "100vh",
         backgroundColor: "#F9F6F4",
-        fontFamily:
-          "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: "var(--font-alte-haas), sans-serif",
         overflowX: "hidden",
         paddingLeft: "env(safe-area-inset-left)",
         paddingRight: "env(safe-area-inset-right)",
@@ -395,7 +395,7 @@ export default function ClarityPage({
           top: 0,
           zIndex: 50,
           backgroundColor: "#F9F6F4",
-          borderBottom: "1px solid #e5e7eb",
+          borderBottom: "1px solid #e7e6e4",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -410,10 +410,10 @@ export default function ClarityPage({
         <Link
           href="/"
           style={{
-            fontFamily: "var(--font-mondwest), serif",
+            fontFamily: "var(--font-alte-haas), sans-serif",
             color: "#0A1128",
             fontSize: "clamp(14px, 3.5vw, 16px)",
-            fontWeight: 700,
+            fontWeight: 400,
             textDecoration: "none",
             letterSpacing: "-0.01em",
             flexShrink: 0,
@@ -427,7 +427,7 @@ export default function ClarityPage({
             style={{
               fontSize: "clamp(11px, 2.5vw, 13px)",
               color: "#16a34a",
-              fontWeight: 600,
+              fontWeight: 400,
               display: "flex",
               alignItems: "center",
               gap: "5px",
@@ -471,10 +471,10 @@ export default function ClarityPage({
               justifyContent: "center",
               backgroundColor: "#FCCA07",
               color: "#0A1128",
-              fontWeight: 600,
+              fontWeight: 400,
               fontSize: "12px",
               padding: "6px 12px",
-              borderRadius: "6px",
+              borderRadius: "0px",
               textDecoration: "none",
               flexShrink: 0,
               whiteSpace: "nowrap",
@@ -498,8 +498,9 @@ export default function ClarityPage({
       {isBooked && (
         <div
           style={{
-            backgroundColor: "#0A1128",
-            color: "#fff",
+            backgroundColor: "#F9F6F4",
+            color: "#0A1128",
+            borderBottom: "1px solid #e7e6e4",
             textAlign: "center",
             padding: "12px 16px",
             paddingLeft: "max(16px, env(safe-area-inset-left))",
@@ -508,18 +509,18 @@ export default function ClarityPage({
             lineHeight: 1.5,
           }}
         >
-          <span style={{ fontWeight: 600 }}>
+          <span style={{ fontWeight: 400 }}>
             ✓ You&apos;re confirmed{firstName ? `, ${firstName}` : ""}
           </span>
           {formattedDate && (
-            <span style={{ color: "rgba(255,255,255,0.65)" }}>
+            <span style={{ color: "rgba(10,17,40,0.6)" }}>
               {" "}
               · {formattedDate}
             </span>
           )}
           <span
             style={{
-              color: "rgba(255,255,255,0.65)",
+              color: "rgba(10,17,40,0.6)",
               display: "block",
               marginTop: "2px",
             }}
@@ -560,9 +561,9 @@ export default function ClarityPage({
                     backgroundColor: "#dcfce7",
                     color: "#15803d",
                     padding: "6px 14px",
-                    borderRadius: "20px",
+                    borderRadius: "0px",
                     fontSize: "14px",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     border: "1px solid #bbf7d0",
                   }}
                 >
@@ -586,9 +587,9 @@ export default function ClarityPage({
               <h1
                 style={
                   {
-                    fontFamily: "var(--font-mondwest), serif",
+                    fontFamily: "var(--font-alte-haas), sans-serif",
                     fontSize: "clamp(36px, 8vw, 64px)",
-                    fontWeight: 700,
+                    fontWeight: 400,
                     color: "#0A1128",
                     lineHeight: 1.05,
                     letterSpacing: "-0.02em",
@@ -611,7 +612,7 @@ export default function ClarityPage({
                 {email ? (
                   <>
                     We&apos;ve sent a calendar invite to{" "}
-                    <strong style={{ color: "#0A1128", fontWeight: 600 }}>
+                    <strong style={{ color: "#0A1128", fontWeight: 400 }}>
                       {email}
                     </strong>{" "}
                     with the Google Meet link.
@@ -633,9 +634,9 @@ export default function ClarityPage({
                   maxWidth: "480px",
                   margin: "0 auto",
                   backgroundColor: "#fff",
-                  borderRadius: "20px",
-                  border: "1px solid #e5e7eb",
-                  boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                  borderRadius: "0px",
+                  border: "1px solid #e7e6e4",
+                  boxShadow: "none",
                   overflow: "hidden",
                 }}
               >
@@ -652,7 +653,7 @@ export default function ClarityPage({
                       padding: "12px 16px",
                       backgroundColor: "#EEF4FF",
                       border: "1px solid #dbeafe",
-                      borderRadius: "12px",
+                      borderRadius: "0px",
                       marginBottom: "16px",
                       flexWrap: "wrap",
                     }}
@@ -668,12 +669,12 @@ export default function ClarityPage({
                         width="16"
                         height="14"
                         rx="3"
-                        stroke="#2563eb"
+                        stroke="#0062FF"
                         strokeWidth="1.5"
                       />
                       <path
                         d="M6 2v3M14 2v3M2 9h16"
-                        stroke="#2563eb"
+                        stroke="#0062FF"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                       />
@@ -682,8 +683,8 @@ export default function ClarityPage({
                       <p
                         style={{
                           fontSize: "11px",
-                          color: "#2563eb",
-                          fontWeight: 700,
+                          color: "#0062FF",
+                          fontWeight: 400,
                           marginBottom: "2px",
                           textTransform: "uppercase",
                           letterSpacing: "0.05em",
@@ -695,7 +696,7 @@ export default function ClarityPage({
                         style={{
                           fontSize: "clamp(13px, 3vw, 14px)",
                           color: "#0A1128",
-                          fontWeight: 600,
+                          fontWeight: 400,
                         }}
                       >
                         Scroll down to view what to prepare
@@ -742,7 +743,7 @@ export default function ClarityPage({
                   style={{
                     color: "#6b7280",
                     fontSize: "clamp(11px, 2.5vw, 12px)",
-                    fontWeight: 500,
+                    fontWeight: 400,
                     textAlign: "center",
                   }}
                 >
@@ -754,9 +755,9 @@ export default function ClarityPage({
               <h1
                 style={
                   {
-                    fontFamily: "var(--font-mondwest), serif",
+                    fontFamily: "var(--font-alte-haas), sans-serif",
                     fontSize: "clamp(28px, 7vw, 56px)",
-                    fontWeight: 700,
+                    fontWeight: 400,
                     color: "#0A1128",
                     lineHeight: 1.1,
                     letterSpacing: "-0.02em",
@@ -766,7 +767,7 @@ export default function ClarityPage({
                 }
               >
                 We build AI systems that run{" "}
-                <span style={{ color: "#2563eb" }}>parts of your business</span>{" "}
+                <span style={{ color: "#0062FF" }}>parts of your business</span>{" "}
                 autonomously.
               </h1>
 
@@ -781,7 +782,7 @@ export default function ClarityPage({
                 }}
               >
                 Not tools. Not demos. Production-grade AI systems that talk to
-                your customers, remember every interaction, and take action —
+                your customers, remember every interaction, and take action,
                 without you in the loop.
               </p>
 
@@ -805,7 +806,7 @@ export default function ClarityPage({
                   href="#what-to-expect"
                   style={{
                     fontSize: "14px",
-                    color: "#2563eb",
+                    color: "#0062FF",
                     textDecoration: "none",
                     display: "inline-block",
                     padding: "8px",
@@ -838,9 +839,9 @@ export default function ClarityPage({
             className="flex flex-col md:flex-row items-center gap-8"
             style={{
               backgroundColor: "#fff",
-              borderRadius: "24px",
-              border: "1px solid #e5e7eb",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.04)",
+              borderRadius: "0px",
+              border: "1px solid #e7e6e4",
+              boxShadow: "none",
               padding: "clamp(20px, 4vw, 32px)",
             }}
           >
@@ -862,7 +863,7 @@ export default function ClarityPage({
                   paddingBottom: "177.78%",
                   height: 0,
                   overflow: "hidden",
-                  borderRadius: "16px",
+                  borderRadius: "0px",
                   backgroundColor: "#000",
                   maxWidth: "100%",
                 }}
@@ -889,9 +890,9 @@ export default function ClarityPage({
               <SectionLabel>Who you&apos;ll meet on the call</SectionLabel>
               <h2
                 style={{
-                  fontFamily: "var(--font-mondwest), serif",
+                  fontFamily: "var(--font-alte-haas), sans-serif",
                   fontSize: "clamp(24px, 6vw, 42px)",
-                  fontWeight: 700,
+                  fontWeight: 400,
                   color: "#0A1128",
                   lineHeight: 1.15,
                   marginBottom: "20px",
@@ -918,7 +919,7 @@ export default function ClarityPage({
                   marginBottom: "24px",
                 }}
               >
-                My job right now isn&apos;t to sell you software — it&apos;s to
+                My job right now isn&apos;t to sell you software. It&apos;s to
                 figure out where your business is literally losing hours every
                 single week, and map out exactly how we can automate it. No
                 frills, no presentations. I look forward to meeting you.
@@ -934,8 +935,8 @@ export default function ClarityPage({
                 <span
                   style={{
                     fontSize: "12px",
-                    fontWeight: 600,
-                    color: "#2563eb",
+                    fontWeight: 400,
+                    color: "#0062FF",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
                   }}
@@ -965,9 +966,9 @@ export default function ClarityPage({
               <SectionLabel>Why Agentic AI Labs</SectionLabel>
               <h2
                 style={{
-                  fontFamily: "var(--font-mondwest), serif",
+                  fontFamily: "var(--font-alte-haas), sans-serif",
                   fontSize: "clamp(22px, 5vw, 38px)",
-                  fontWeight: 700,
+                  fontWeight: 400,
                   color: "#0A1128",
                   lineHeight: 1.2,
                   marginBottom: "4px",
@@ -977,10 +978,10 @@ export default function ClarityPage({
               </h2>
               <h3
                 style={{
-                  fontFamily: "var(--font-mondwest), serif",
+                  fontFamily: "var(--font-alte-haas), sans-serif",
                   fontSize: "clamp(22px, 5vw, 38px)",
-                  fontWeight: 700,
-                  color: "#2563eb",
+                  fontWeight: 400,
+                  color: "#0062FF",
                   lineHeight: 1.2,
                 }}
               >
@@ -1000,13 +1001,13 @@ export default function ClarityPage({
             >
               {[
                 {
-                  text: "3 technical co-founders — we build, we don't just consult.",
+                  text: "3 technical co-founders. We build, we don't just consult.",
                 },
                 {
                   text: "50+ AI systems shipped across healthcare, real estate, SaaS, and home services.",
                 },
                 {
-                  text: "Working prototype within 48 hours of kickoff — not a deck, a running bot.",
+                  text: "Working prototype within 48 hours of kickoff: not a deck, a running bot.",
                 },
                 {
                   text: "30 days active monitoring post-launch. We watch every interaction. No disappearing act.",
@@ -1016,9 +1017,9 @@ export default function ClarityPage({
                   key={i}
                   style={{
                     backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    border: "1px solid #f3f4f6",
-                    boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                    borderRadius: "0px",
+                    border: "1px solid #e7e6e4",
+                    boxShadow: "none",
                     padding: "16px 20px",
                     display: "flex",
                     alignItems: "flex-start",
@@ -1031,7 +1032,7 @@ export default function ClarityPage({
                       fontSize: "14px",
                       color: "#374151",
                       lineHeight: 1.55,
-                      fontWeight: 500,
+                      fontWeight: 400,
                     }}
                   >
                     {item.text}
@@ -1047,9 +1048,9 @@ export default function ClarityPage({
                 gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
                 gap: "1px",
                 backgroundColor: "#e5e7eb",
-                borderRadius: "12px",
+                borderRadius: "0px",
                 overflow: "hidden",
-                border: "1px solid #e5e7eb",
+                border: "1px solid #e7e6e4",
               }}
             >
               {[
@@ -1068,9 +1069,9 @@ export default function ClarityPage({
                 >
                   <div
                     style={{
-                      fontFamily: "var(--font-mondwest), serif",
+                      fontFamily: "var(--font-alte-haas), sans-serif",
                       fontSize: "clamp(20px, 5vw, 40px)",
-                      fontWeight: 700,
+                      fontWeight: 400,
                       color: "#0A1128",
                       lineHeight: 1,
                       marginBottom: "6px",
@@ -1090,7 +1091,7 @@ export default function ClarityPage({
                       color: "#6b7280",
                       textTransform: "uppercase",
                       letterSpacing: "0.06em",
-                      fontWeight: 500,
+                      fontWeight: 400,
                     }}
                   >
                     {s.label}
@@ -1109,9 +1110,9 @@ export default function ClarityPage({
             <SectionLabel>Real results</SectionLabel>
             <h2
               style={{
-                fontFamily: "var(--font-mondwest), serif",
+                fontFamily: "var(--font-alte-haas), sans-serif",
                 fontSize: "clamp(22px, 5vw, 36px)",
-                fontWeight: 700,
+                fontWeight: 400,
                 color: "#0A1128",
                 marginBottom: "4px",
               }}
@@ -1126,9 +1127,9 @@ export default function ClarityPage({
           <div
             style={{
               backgroundColor: "#fff",
-              borderRadius: "16px",
-              border: "1px solid #f3f4f6",
-              boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+              borderRadius: "0px",
+              border: "1px solid #e7e6e4",
+              boxShadow: "none",
               padding: "24px",
             }}
           >
@@ -1138,9 +1139,9 @@ export default function ClarityPage({
                 backgroundColor: "#ef4444",
                 color: "#fff",
                 fontSize: "11px",
-                fontWeight: 600,
+                fontWeight: 400,
                 padding: "3px 10px",
-                borderRadius: "6px",
+                borderRadius: "0px",
                 letterSpacing: "0.06em",
                 marginBottom: "12px",
               }}
@@ -1149,15 +1150,15 @@ export default function ClarityPage({
             </span>
             <h3
               style={{
-                fontFamily: "var(--font-mondwest), serif",
+                fontFamily: "var(--font-alte-haas), sans-serif",
                 fontSize: "clamp(18px, 4vw, 28px)",
-                fontWeight: 700,
-                color: "#2563eb",
+                fontWeight: 400,
+                color: "#0062FF",
                 marginBottom: "20px",
                 lineHeight: 1.2,
               }}
             >
-              PatientlyAI — AI Voice Agent for Healthcare
+              PatientlyAI: AI Voice Agent for Healthcare
             </h3>
 
             <div
@@ -1187,7 +1188,7 @@ export default function ClarityPage({
                   <p
                     style={{
                       fontSize: "13px",
-                      fontWeight: 600,
+                      fontWeight: 400,
                       color: "#0A1128",
                       marginBottom: "6px",
                     }}
@@ -1212,12 +1213,12 @@ export default function ClarityPage({
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                backgroundColor: "#2563eb",
+                backgroundColor: "#0062FF",
                 color: "#fff",
                 fontSize: "14px",
-                fontWeight: 600,
+                fontWeight: 400,
                 padding: "10px 20px",
-                borderRadius: "8px",
+                borderRadius: "0px",
                 textDecoration: "none",
                 minHeight: "44px",
                 cursor: "pointer",
@@ -1236,9 +1237,9 @@ export default function ClarityPage({
             <SectionLabel>Behind the systems</SectionLabel>
             <h2
               style={{
-                fontFamily: "var(--font-mondwest), serif",
+                fontFamily: "var(--font-alte-haas), sans-serif",
                 fontSize: "clamp(24px, 6vw, 42px)",
-                fontWeight: 700,
+                fontWeight: 400,
                 color: "#0A1128",
                 marginBottom: "8px",
                 lineHeight: 1.15,
@@ -1258,11 +1259,11 @@ export default function ClarityPage({
             <div
               style={{
                 width: "100%",
-                borderRadius: "16px",
+                borderRadius: "0px",
                 overflow: "hidden",
-                boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                boxShadow: "none",
                 backgroundColor: "#000",
-                border: "1px solid #e5e7eb",
+                border: "1px solid #e7e6e4",
               }}
             >
               <div
@@ -1291,11 +1292,11 @@ export default function ClarityPage({
             </div>
             {/* <div style={{
                             width: "100%",
-                            borderRadius: "16px",
+                            borderRadius: "0px",
                             overflow: "hidden",
-                            boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                            boxShadow: "none",
                             backgroundColor: "#fff",
-                            border: "1px solid #e5e7eb",
+                            border: "1px solid #e7e6e4",
                         }}>
                             <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
                                 <img
@@ -1336,9 +1337,9 @@ export default function ClarityPage({
               <SectionLabel>What founders say</SectionLabel>
               <h2
                 style={{
-                  fontFamily: "var(--font-mondwest), serif",
+                  fontFamily: "var(--font-alte-haas), sans-serif",
                   fontSize: "clamp(24px, 6vw, 42px)",
-                  fontWeight: 700,
+                  fontWeight: 400,
                   color: "#0A1128",
                 }}
               >
@@ -1358,10 +1359,11 @@ export default function ClarityPage({
             >
               <div
                 style={{
-                  borderRadius: "16px",
+                  borderRadius: "0px",
                   overflow: "hidden",
                   backgroundColor: "#000",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                  border: "1px solid #e7e6e4",
+                  boxShadow: "none",
                 }}
               >
                 <LazyVideo
@@ -1372,10 +1374,11 @@ export default function ClarityPage({
               </div>
               <div
                 style={{
-                  borderRadius: "16px",
+                  borderRadius: "0px",
                   overflow: "hidden",
                   backgroundColor: "#000",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                  border: "1px solid #e7e6e4",
+                  boxShadow: "none",
                 }}
               >
                 <LazyVideo
@@ -1419,9 +1422,9 @@ export default function ClarityPage({
                   key={i}
                   style={{
                     backgroundColor: "#fff",
-                    borderRadius: "16px",
-                    border: "1px solid #e5e7eb",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                    borderRadius: "0px",
+                    border: "1px solid #e7e6e4",
+                    boxShadow: "none",
                     padding: "24px",
                     display: "flex",
                     flexDirection: "column",
@@ -1455,7 +1458,7 @@ export default function ClarityPage({
                     <p
                       style={{
                         fontSize: "14px",
-                        fontWeight: 700,
+                        fontWeight: 400,
                         color: "#0A1128",
                       }}
                     >
@@ -1479,9 +1482,9 @@ export default function ClarityPage({
             <SectionLabel>What to expect</SectionLabel>
             <h2
               style={{
-                fontFamily: "var(--font-mondwest), serif",
+                fontFamily: "var(--font-alte-haas), sans-serif",
                 fontSize: "clamp(22px, 5vw, 36px)",
-                fontWeight: 700,
+                fontWeight: 400,
                 color: "#0A1128",
                 marginBottom: "4px",
               }}
@@ -1499,18 +1502,18 @@ export default function ClarityPage({
             {[
               {
                 title: "We look at your business and your workflows.",
-                desc: "Tell us what your team does every day. We listen first — no script, no agenda, no slide deck. You do most of the talking.",
+                desc: "Tell us what your team does every day. We listen first. No script, no agenda, no slide deck. You do most of the talking.",
                 note: "You need: 10 minutes of honest context.",
               },
               {
                 title:
-                  "We map your #1 AI opportunity — ranked by time and money saved.",
-                desc: "Every business has one or two workflows where AI does the heavy lifting. We find yours — and explain how we'd build it.",
+                  "We map your #1 AI opportunity, ranked by time and money saved.",
+                desc: "Every business has one or two workflows where AI does the heavy lifting. We find yours, and explain how we'd build it.",
                 note: "We deliver: A specific, ranked recommendation.",
               },
               {
                 title: "You leave with a clear 'build this first' plan.",
-                desc: "Not a proposal. Not a follow-up deck. A plain-language plan you can act on — with us or on your own.",
+                desc: "Not a proposal. Not a follow-up deck. A plain-language plan you can act on, with us or on your own.",
                 note: "No pressure. No commitment required.",
               },
             ].map((step, i) => (
@@ -1518,9 +1521,9 @@ export default function ClarityPage({
                 key={i}
                 style={{
                   backgroundColor: "#fff",
-                  borderRadius: "12px",
-                  border: "1px solid #f3f4f6",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                  borderRadius: "0px",
+                  border: "1px solid #e7e6e4",
+                  boxShadow: "none",
                   padding: "clamp(16px, 4vw, 20px)",
                   display: "flex",
                   gap: "clamp(12px, 3vw, 16px)",
@@ -1532,7 +1535,7 @@ export default function ClarityPage({
                     width: "36px",
                     height: "36px",
                     borderRadius: "50%",
-                    backgroundColor: "#2563eb",
+                    backgroundColor: "#0062FF",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -1543,9 +1546,9 @@ export default function ClarityPage({
                   <span
                     style={{
                       color: "#fff",
-                      fontFamily: "var(--font-mondwest), serif",
+                      fontFamily: "var(--font-alte-haas), sans-serif",
                       fontSize: "16px",
-                      fontWeight: 700,
+                      fontWeight: 400,
                     }}
                   >
                     {i + 1}
@@ -1554,9 +1557,9 @@ export default function ClarityPage({
                 <div style={{ flex: 1 }}>
                   <h3
                     style={{
-                      fontFamily: "var(--font-mondwest), serif",
+                      fontFamily: "var(--font-alte-haas), sans-serif",
                       fontSize: "clamp(15px, 3.5vw, 18px)",
-                      fontWeight: 700,
+                      fontWeight: 400,
                       color: "#0A1128",
                       marginBottom: "8px",
                       lineHeight: 1.3,
@@ -1577,8 +1580,8 @@ export default function ClarityPage({
                   <p
                     style={{
                       fontSize: "13px",
-                      color: "#2563eb",
-                      fontWeight: 600,
+                      color: "#0062FF",
+                      fontWeight: 400,
                     }}
                   >
                     {step.note}
@@ -1609,9 +1612,9 @@ export default function ClarityPage({
               <>
                 <h2
                   style={{
-                    fontFamily: "var(--font-mondwest), serif",
+                    fontFamily: "var(--font-alte-haas), sans-serif",
                     fontSize: "clamp(24px, 6vw, 40px)",
-                    fontWeight: 700,
+                    fontWeight: 400,
                     color: "#0A1128",
                     lineHeight: 1.15,
                     marginBottom: "4px",
@@ -1621,10 +1624,10 @@ export default function ClarityPage({
                 </h2>
                 <h3
                   style={{
-                    fontFamily: "var(--font-mondwest), serif",
+                    fontFamily: "var(--font-alte-haas), sans-serif",
                     fontSize: "clamp(24px, 6vw, 40px)",
-                    fontWeight: 700,
-                    color: "#2563eb",
+                    fontWeight: 400,
+                    color: "#0062FF",
                     lineHeight: 1.15,
                     marginBottom: "20px",
                   }}
@@ -1663,9 +1666,9 @@ export default function ClarityPage({
               <>
                 <h2
                   style={{
-                    fontFamily: "var(--font-mondwest), serif",
+                    fontFamily: "var(--font-alte-haas), sans-serif",
                     fontSize: "clamp(22px, 5vw, 36px)",
-                    fontWeight: 700,
+                    fontWeight: 400,
                     color: "#0A1128",
                     marginBottom: "6px",
                   }}
@@ -1706,14 +1709,14 @@ export default function ClarityPage({
                       bg: "#FFF5F5",
                       border: "#fecaca",
                       label: "Your biggest bottleneck",
-                      desc: "One thing — if it ran on autopilot — would change the week. That's what we'll map first.",
+                      desc: "One thing, if it ran on autopilot, would change the week. That's what we'll map first.",
                     },
                     {
                       icon: <IdeaIcon />,
                       bg: "#FFFBEB",
                       border: "#fde68a",
                       label: "Any AI ideas you've had",
-                      desc: "You've probably thought \"I wish AI could do ___\" — bring that gut sense. Even half-formed. We'll sharpen it.",
+                      desc: "You've probably thought \"I wish AI could do ___\". Bring that gut sense. Even half-formed. We'll sharpen it.",
                     },
                   ].map((item, i) => (
                     <div
@@ -1721,7 +1724,7 @@ export default function ClarityPage({
                       style={{
                         backgroundColor: item.bg,
                         border: `1px solid ${item.border}`,
-                        borderRadius: "14px",
+                        borderRadius: "0px",
                         padding:
                           "clamp(14px, 3vw, 16px) clamp(14px, 3vw, 18px)",
                         display: "flex",
@@ -1733,13 +1736,13 @@ export default function ClarityPage({
                         style={{
                           width: 40,
                           height: 40,
-                          borderRadius: "10px",
+                          borderRadius: "0px",
                           backgroundColor: "#fff",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                           flexShrink: 0,
-                          boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+                          boxShadow: "none",
                         }}
                       >
                         {item.icon}
@@ -1748,7 +1751,7 @@ export default function ClarityPage({
                         <p
                           style={{
                             fontSize: "14px",
-                            fontWeight: 700,
+                            fontWeight: 400,
                             color: "#0A1128",
                             marginBottom: "4px",
                           }}
@@ -1775,14 +1778,14 @@ export default function ClarityPage({
                     lineHeight: 1.6,
                   }}
                 >
-                  Questions?{" "}
+                  Questions? Email{" "}
                   <a
                     href="mailto:aditya@tryagentikai.com"
-                    style={{ color: "#2563eb", textDecoration: "none" }}
+                    style={{ color: "#0062FF", textDecoration: "none" }}
                   >
                     aditya@tryagentikai.com
-                  </a>{" "}
-                  — Aditya reads every one.
+                  </a>
+                  . Aditya reads every one.
                 </p>
               </>
             )}
@@ -1795,19 +1798,19 @@ export default function ClarityPage({
         <section style={{ padding: "40px 0", textAlign: "center" }}>
           <p
             style={{
-              fontFamily: "var(--font-mondwest), serif",
+              fontFamily: "var(--font-alte-haas), sans-serif",
               fontSize: "18px",
               color: "#0A1128",
               marginBottom: "4px",
             }}
           >
-            — Aditya
+            Aditya
           </p>
           <p style={{ fontSize: "13px", color: "#6b7280" }}>
             Founder, Agentic AI Labs &nbsp;·&nbsp;{" "}
             <a
               href="https://www.tryagentikai.com"
-              style={{ color: "#2563eb", textDecoration: "none" }}
+              style={{ color: "#0062FF", textDecoration: "none" }}
             >
               tryagentikai.com
             </a>

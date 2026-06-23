@@ -19,7 +19,7 @@ const ProjectStack = ({ data }: ProjectStackProps) => {
       <span className="section_label">{data.subtitle}</span>
       <hr className="bg-[#E2E8F0] max-w-[540px] mx-auto w-full" />
       <h2 className="section_title">
-        {data.title} <span className="italic">{data.titleHighlight}</span>
+        {data.title} <span className="font-alte">{data.titleHighlight}</span>
       </h2>
       <div className="w-full">
         {/* Centered horizontal scrollable container */}
@@ -36,7 +36,7 @@ const ProjectStack = ({ data }: ProjectStackProps) => {
                       height={48}
                     />
                   )}
-                  <span className="text-sm md:text-base text-[#0F172A] font-medium">
+                  <span className="font-alte text-[15px] tracking-[-0.04em] text-[#0A1128] font-normal">
                     {item.alt}
                   </span>
                 </div>

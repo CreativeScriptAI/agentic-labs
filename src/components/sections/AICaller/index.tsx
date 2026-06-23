@@ -185,7 +185,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
     <section
       className={`w-full ${
         contactRoute ? "py-16" : "sm:py-16 lg:py-20"
-      } bg-[#F8F9FA] rounded-lg`}
+      } bg-[#F9F6F4] border border-[#e7e6e4] rounded-none`}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12">
@@ -206,24 +206,23 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
 
             {/* Live Demo Label */}
             <div className="mb-4 flex justify-center lg:justify-start">
-              <span className="inline-block bg-[#FF5757] text-white text-xs font-sfpro font-medium px-3 py-1 rounded-md">
+              <span className="inline-block text-red-500 font-geist uppercase tracking-[0.02em] text-[12px] font-normal">
                 Live Demo
               </span>
             </div>
 
             {/* Headline */}
             <h2
-              className="text-2xl sm:text-3xl lg:text-4xl font-sfpro text-slate-800 mb-4 leading-tight text-left"
-              style={{ fontFamily: "EB Garamond" }}
+              className="text-2xl sm:text-3xl lg:text-4xl font-alte font-normal tracking-[-0.04em] text-slate-800 mb-4 leading-[1.2] text-left"
             >
               {data?.title || "Get a live demo from our AI calling agent"}
             </h2>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed font-[500] text-left">
+            <p className="font-alte text-[15px] leading-[1.5] tracking-[-0.04em] text-slate-600 mb-8 font-normal text-left">
               {data?.subtitle ||
                 "Drop your phone number and email our AI agent will "}
-              <span className="text-blue-600 font-medium">
+              <span className="text-blue-600 font-normal">
                 {data?.highlightedText ||
                   "give you a real call in under 30 seconds"}
               </span>
@@ -232,7 +231,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="relative space-y-4 bg-[#EAEAEA] p-4 rounded-lg md:block hidden"
+              className="relative space-y-4 bg-white border border-[#e7e6e4] p-4 rounded-none md:block hidden"
             >
               {/* Phone Number Row */}
               <div className="flex gap-3">
@@ -241,13 +240,13 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     disabled={isDetectingCountry}
-                    className="w-full px-4 py-1 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200 cursor-pointer flex items-center justify-between disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-1 font-alte text-[15px] tracking-[-0.04em] text-gray-700 bg-white rounded-none border border-[#e7e6e4] focus:border-blue-500 focus:outline-none transition-colors duration-200 cursor-pointer flex items-center justify-between disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <div className="flex items-center gap-1">
                       {isDetectingCountry ? (
                         <>
                           <div className="w-4 h-4 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                          <span className="font-medium text-gray-500">
+                          <span className="font-normal text-gray-500">
                             Detecting...
                           </span>
                         </>
@@ -256,7 +255,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                           <span className="text-base">
                             {selectedCountry.flag}
                           </span>
-                          <span className="font-medium text-gray-700">
+                          <span className="font-normal text-gray-700">
                             {selectedCountry.dialCode}
                           </span>
                         </>
@@ -283,18 +282,18 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
 
                   {/* Dropdown Menu */}
                   {isDropdownOpen && (
-                    <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto overflow-x-hidden">
+                    <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-[#e7e6e4] rounded-none z-50 max-h-60 overflow-y-auto overflow-x-hidden">
                       {countries.map((country) => (
                         <button
                           key={country.code}
                           type="button"
                           onClick={() => handleCountrySelect(country)}
-                          className="w-full px-3 py-3 text-sm text-left hover:bg-gray-50 flex items-center gap-2 transition-colors duration-150 border-b border-gray-100 last:border-b-0 min-w-0"
+                          className="w-full px-3 py-3 font-alte text-[15px] tracking-[-0.04em] text-left hover:bg-[#0A1128]/[0.04] flex items-center gap-2 transition-colors duration-150 border-b border-[#e7e6e4] last:border-b-0 min-w-0"
                         >
                           <span className="text-base flex-shrink-0">
                             {country.flag}
                           </span>
-                          <span className="font-medium text-gray-700 truncate">
+                          <span className="font-normal text-gray-700 truncate">
                             {country.dialCode}
                           </span>
                         </button>
@@ -309,7 +308,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
                     placeholder="Your Phone Number"
-                    className="w-full px-4 py-3 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                    className="w-full px-4 py-3 font-alte text-[15px] tracking-[-0.04em] text-gray-700 bg-white rounded-none border border-[#e7e6e4] focus:border-blue-500 focus:outline-none transition-colors duration-200"
                     required
                   />
                 </div>
@@ -324,7 +323,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Name"
-                    className="w-full px-4 py-3 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                    className="w-full px-4 py-3 font-alte text-[15px] tracking-[-0.04em] text-gray-700 bg-white rounded-none border border-[#e7e6e4] focus:border-blue-500 focus:outline-none transition-colors duration-200"
                     required
                   />
                 </div>
@@ -335,7 +334,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Email"
-                    className="w-full px-4 py-3 text-sm text-gray-700 bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 transition-colors duration-200"
+                    className="w-full px-4 py-3 font-alte text-[15px] tracking-[-0.04em] text-gray-700 bg-white rounded-none border border-[#e7e6e4] focus:border-blue-500 focus:outline-none transition-colors duration-200"
                     required
                   />
                 </div>
@@ -345,7 +344,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex justify-center items-center py-4 font-sfpro bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="w-full flex justify-center items-center py-4 font-geist uppercase tracking-[0.02em] text-[15px] bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-normal rounded-none transition-colors duration-200 focus:outline-none"
               >
                 {isSubmitting
                   ? "Submitting..."
@@ -357,7 +356,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
               <button
                 type="button"
                 disabled={isSubmitting}
-                className="w-full flex justify-center items-center py-4 font-sfpro bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="w-full flex justify-center items-center py-4 font-geist uppercase tracking-[0.02em] text-[15px] bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-normal rounded-none transition-colors duration-200 focus:outline-none"
                 onClick={() => {
                   window.location.href = `tel:${phone_number}`;
                 }}
@@ -373,7 +372,7 @@ const AICaller = ({ data, contactRoute = false }: AICallerProps) => {
           <div className="hidden lg:flex w-full lg:w-1/2 justify-center">
             <div className="relative">
               {/* Placeholder for pixel art illustration */}
-              <div className="rounded-lg flex items-center justify-center ">
+              <div className="rounded-none flex items-center justify-center ">
                 <Image
                   src="/images/aicaller.png"
                   alt="AI Caller"

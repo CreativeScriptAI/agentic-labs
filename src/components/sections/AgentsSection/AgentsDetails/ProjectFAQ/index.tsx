@@ -29,10 +29,10 @@ const ProjectFAQ = ({ data }: ProjectFAQProps) => {
             <div
               key={item.question}
               onClick={() => handleToggle(idx)}
-              className="border-b border-b-[#E2E8F0] rounded-lg transition-all cursor-pointer"
+              className="border-b border-b-[#e7e6e4] rounded-none transition-all cursor-pointer"
             >
               <div className="w-full flex items-center justify-between px-6 py-4 text-left">
-                <span className="text-lg text-[#0F172A]">{item.question}</span>
+                <span className="font-alte text-lg font-normal tracking-[-0.04em] text-[#0A1128]">{item.question}</span>
                 <ChevronDown
                   className={`transition-transform duration-200 ${
                     isOpen ? "rotate-180" : ""
@@ -49,7 +49,7 @@ const ProjectFAQ = ({ data }: ProjectFAQProps) => {
                 style={{ transitionProperty: "max-height, opacity, padding" }}
               >
                 {isOpen && (
-                  <p className="text-[#475569] text-base">{item.answer}</p>
+                  <p className="font-alte text-[#475569] text-[15px] leading-[1.5] tracking-[-0.04em] font-normal">{item.answer}</p>
                 )}
               </div>
             </div>

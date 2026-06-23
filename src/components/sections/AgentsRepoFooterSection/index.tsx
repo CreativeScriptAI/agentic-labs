@@ -16,8 +16,8 @@ const AgentsRepoFooterSection = () => {
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-10 pt-[60px] pb-10 sm:pb-[120px]">
         <div className="w-full max-w-[300px] mx-auto space-y-4 text-center">
           <div>
-            <h4 className="font-mondwest text-[34px] leading-none text-blue-600 mb-4">Agentic AI Labs</h4>
-            <p className="text-[14px] text-slate-600">The home of the AI Workforce</p>
+            <h4 className="font-alte font-normal text-[34px] leading-none tracking-[-0.04em] text-blue-600 mb-4">Agentic AI Labs</h4>
+            <p className="text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-slate-600">The home of the AI Workforce</p>
           </div>
 
           <div className="flex items-center justify-center gap-6 text-slate-600">
@@ -35,7 +35,7 @@ const AgentsRepoFooterSection = () => {
             </Link>
           </div>
 
-          <p className="text-[14px] text-[#868A97] leading-6">
+          <p className="text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-[#868A97]">
             Crafted by {" "}
             <Link
               href="https://creativescript.org"

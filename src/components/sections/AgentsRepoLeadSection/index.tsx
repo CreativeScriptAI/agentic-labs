@@ -17,14 +17,14 @@ const AgentsRepoLeadSection = () => {
       }}
     >
       <div className="relative z-10 max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-10 text-center">
-        <p className="text-[#E53935] text-[14px] tracking-[0.04em] font-normal uppercase mb-4">
+        <p className="text-red-500 text-[12px] tracking-[0.02em] font-normal font-geist uppercase mb-4">
           We&apos;ll plug it into your workflow in under 48hrs.
         </p>
 
-        <h2 className="text-[32px] leading-[1.2] font-sfpro tracking-[-0.02em] text-[#0A1128] mb-0">
+        <h2 className="text-[32px] leading-[1.2] font-alte font-normal tracking-[-0.04em] text-[#0A1128] mb-0">
           Free your team.
         </h2>
-        <h3 className="text-[32px] sm:text-[40px] leading-[1.15] font-mondwest tracking-[-0.02em] text-[#0A1128] mb-8">
+        <h3 className="text-[32px] sm:text-[40px] leading-[1.2] font-alte font-normal tracking-[-0.04em] text-[#0A1128] mb-8">
           Build your first <span className="text-blue-600">AI agent</span> today!
         </h3>
 
@@ -39,19 +39,25 @@ const AgentsRepoLeadSection = () => {
             type="email"
             required
             placeholder="Your email address"
-            className="w-full h-[54px] rounded-lg border border-slate-200 bg-white px-4 text-left text-[16px] text-slate-700 placeholder:text-slate-400 outline-none"
+            className="w-full h-[54px] rounded-none border border-[#e7e6e4] bg-white px-4 text-left text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-[#0A1128] placeholder:text-slate-400 outline-none focus:border-[#0062FF] transition-colors"
           />
           <textarea
             required
             placeholder="Write a message here"
             rows={3}
-            className="w-full h-[88px] rounded-lg border border-slate-200 bg-white px-4 py-3 text-left text-[16px] text-slate-700 placeholder:text-slate-400 outline-none resize-none"
+            className="w-full h-[88px] rounded-none border border-[#e7e6e4] bg-white px-4 py-3 text-left text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-[#0A1128] placeholder:text-slate-400 outline-none resize-none focus:border-[#0062FF] transition-colors"
           />
           <button
             type="submit"
-            className="w-full h-[44px] rounded-lg bg-blue-600 text-[14px] font-medium text-white hover:bg-blue-700 transition-colors"
+            className="group relative inline-flex w-full items-center justify-center rounded-none bg-[#FCCA07] h-[50px] px-[20px] font-alte text-[15px] uppercase tracking-[0.02em] font-normal text-[#0A1128] select-none transition-colors duration-200 hover:bg-[#f0bd00]"
           >
-            Book a Free Consultation
+            <span className="inline-block transition-transform duration-200 ease-out translate-x-[5px] group-hover:translate-x-0 group-active:translate-x-[9px]">
+              [
+            </span>
+            <span className="px-[10px] whitespace-nowrap">Book a Free Consultation</span>
+            <span className="inline-block transition-transform duration-200 ease-out -translate-x-[5px] group-hover:translate-x-0 group-active:-translate-x-[9px]">
+              ]
+            </span>
           </button>
         </form>
       </div>

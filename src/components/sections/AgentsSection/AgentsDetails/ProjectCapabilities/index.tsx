@@ -1,8 +1,8 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import BracketButton from "src/components/BracketButton";
 
 interface ProjectCapabilitiesProps {
   data: {
@@ -29,10 +29,10 @@ const Card = ({ card, index }: any) => {
         zIndex: index + 1,
       }}
     >
-      <div className="flex flex-col items-start gap-4 max-md:border-t max-md:pt-4 max-md:border-t-[#E2E8F0] max-md:p-6">
-        <span className="text-sm font-medium text-[#0062FF]">{card.label}</span>
-        <span className="text-xl font-medium text-[#0F172A]">{card.title}</span>
-        <p className="text-base font-normal text-[#475569]">
+      <div className="flex flex-col items-start gap-4 max-md:border-t max-md:pt-4 max-md:border-t-[#e7e6e4] max-md:p-6">
+        <span className="font-geist uppercase tracking-[0.02em] text-[12px] font-normal text-[#0062FF]">{card.label}</span>
+        <span className="font-alte text-xl font-normal tracking-[-0.04em] text-[#0A1128]">{card.title}</span>
+        <p className="font-alte text-[15px] leading-[1.5] tracking-[-0.04em] font-normal text-[#475569]">
           {card.description}
         </p>
       </div>
@@ -53,7 +53,7 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
   return (
     <section className="section !max-w-3xl">
       <h2 className="section_title">
-        {data.title} <span className="italic">{data.titleHighlight}</span>
+        {data.title} <span className="font-alte">{data.titleHighlight}</span>
       </h2>
       <div className="w-full cardContainer">
         {data.cards.map((card, index) => (
@@ -61,24 +61,22 @@ const ProjectCapabilities = ({ data }: ProjectCapabilitiesProps) => {
         ))}
       </div>
 
-      <button
-        // href="https://tryagentikai.com/contact"
-        className="button_blue_border mt-4"
-        onClick={() => {
-          if (
-            typeof window !== "undefined" &&
-            (window as any).gtag_report_conversion
-          ) {
-            return (window as any).gtag_report_conversion(
-              "https://tryagentikai.com/contact"
-            );
-          }
-          return true;
-        }}
-      >
-        {data.ctaButton.text}
-        <ArrowUpRight size={20} />
-      </button>
+      <div className="mt-4">
+        <BracketButton
+          label={data.ctaButton.text}
+          variant="secondary"
+          onClick={() => {
+            if (
+              typeof window !== "undefined" &&
+              (window as any).gtag_report_conversion
+            ) {
+              (window as any).gtag_report_conversion(
+                "https://tryagentikai.com/contact"
+              );
+            }
+          }}
+        />
+      </div>
     </section>
   );
 };

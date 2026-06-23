@@ -23,10 +23,10 @@ const WhyDifferent: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <p className="text-[11px] sm:text-xs tracking-widest text-red-500 uppercase mb-2">
+          <p className="font-geist text-[12px] tracking-[0.02em] text-red-500 uppercase font-normal mb-2">
             Standing out for the right reasons
           </p>
-          <h2 className="text-2xl sm:text-3xl font-mondwest text-slate-900">
+          <h2 className="text-2xl sm:text-3xl font-alte font-normal tracking-[-0.04em] leading-[1.2] text-[#0A1128]">
             Why Are We Different?
           </h2>
         </div>
@@ -113,20 +113,20 @@ const FeatureCard: React.FC<CardProps> = ({
       : "flex flex-col justify-between";
   return (
     <div
-      className={`bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-5 ${layoutClass} ${rowClass} ${
+      className={`bg-white rounded-none border border-[#e7e6e4] p-5 ${layoutClass} ${rowClass} ${
         containerClassName ?? ""
       }`}
     >
       {(title || description) && (
         <div className={imagePlacement === "right" ? "md:flex-1" : ""}>
           {title && (
-            <h3 className="text-slate-800 font-sfpro text-lg font-light mb-2">
+            <h3 className="text-[#0A1128] font-alte font-normal text-lg tracking-[-0.04em] mb-2">
               {title}
             </h3>
           )}
           {description && (
             <p
-              className={`text-slate-400 text-large leading-relaxed font-sfpro font-[400] ${
+              className={`text-[#0A1128]/40 text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal ${
                 descriptionClassName ?? ""
               }`}
             >

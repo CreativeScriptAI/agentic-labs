@@ -48,19 +48,20 @@ interface FAQItemProps {
 }
 
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onToggle }) => (
-    <div className="w-full relative bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-shadow duration-200 hover:shadow-md">
+    <div className="w-full relative bg-white rounded-none border border-[#e7e6e4] overflow-hidden transition-colors duration-200 hover:bg-[#F9F6F4]">
         <button
             onClick={onToggle}
-            className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+            className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-[#F9F6F4] transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-inset"
             aria-expanded={isOpen}
         >
             <h3
-                className="pl-3 sm:pl-4 pr-2 font-sfpro text-sm sm:text-base"
+                className="pl-3 sm:pl-4 pr-2 font-alte font-normal text-[15px]"
                 style={{
-                    color: "var(--Slate-900, #0F172A)",
+                    color: "#0A1128",
                     fontStyle: "normal",
                     fontWeight: "400",
                     lineHeight: "1.5",
+                    letterSpacing: "-0.04em",
                 }}
             >
                 {question}
@@ -87,12 +88,13 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onToggle })
             <div className="px-3 sm:px-4 pb-4 sm:pb-5 animate-fadeIn">
                 <div className="pt-2">
                     <p
-                        className="leading-relaxed font-sfpro text-xs sm:text-sm"
+                        className="leading-relaxed font-alte font-normal text-[15px]"
                         style={{
-                            color: "var(--Slate-600, #475569)",
+                            color: "#475569",
                             fontStyle: "normal",
                             fontWeight: "400",
-                            lineHeight: "1.6",
+                            lineHeight: "1.5",
+                            letterSpacing: "-0.04em",
                         }}
                     >
                         {answer}
@@ -118,10 +120,10 @@ const FAQSection = () => {
         >
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 sm:mb-12">
-                    <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 font-sfpro">
+                    <p className="text-red-500 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 sm:mb-6 font-geist">
                         QUESTIONS
                     </p>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A1128] font-mondwest">
+                    <h2 className="text-[32px] sm:text-[40px] font-normal text-[#0A1128] font-alte leading-[1.2] tracking-[-0.04em]">
                         You're probably wondering.
                     </h2>
                 </div>

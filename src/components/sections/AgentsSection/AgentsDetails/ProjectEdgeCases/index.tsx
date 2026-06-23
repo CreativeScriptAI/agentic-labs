@@ -1,5 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import BracketButton from "src/components/BracketButton";
 
 interface ProjectEdgeCasesProps {
   data: {
@@ -20,27 +20,27 @@ const ProjectEdgeCases = ({ data }: ProjectEdgeCasesProps) => {
   return (
     <section className="section">
       <h2 className="section_title">
-        {data.title} <span className="italic">{data.titleHighlight}</span>
+        {data.title} <span className="font-alte">{data.titleHighlight}</span>
       </h2>
       <div className="flex flex-col items-center justify-between gap-8 w-full">
-        <table className="w-full">
+        <table className="w-full border border-[#e7e6e4]">
           <thead>
             <tr>
-              <th className="text-left px-8 py-6 bg-[#E2E8F0] text-sm font-semibold text-[#111827]">
+              <th className="text-left px-8 py-6 bg-[#F9F6F4] border-b border-[#e7e6e4] font-geist uppercase tracking-[0.02em] text-[12px] font-normal text-[#0A1128]">
                 Situation
               </th>
-              <th className="text-left px-8 py-6 bg-[#0062FF] text-white text-sm font-semibold">
+              <th className="text-left px-8 py-6 bg-[#0062FF] text-white font-geist uppercase tracking-[0.02em] text-[12px] font-normal border-b border-[#e7e6e4]">
                 Solution
               </th>
             </tr>
           </thead>
           <tbody>
             {data.cases.map((item, idx) => (
-              <tr key={idx} className="border-b">
-                <td className="px-8 py-6 bg-white text-base font-normal text-[#475569] w-1/2">
+              <tr key={idx} className="border-b border-[#e7e6e4]">
+                <td className="px-8 py-6 bg-white font-alte text-[15px] leading-[1.5] tracking-[-0.04em] font-normal text-[#475569] w-1/2">
                   {item.situation}
                 </td>
-                <td className="px-8 py-6 text-blue-600 bg-white text-base font-medium w-1/2">
+                <td className="px-8 py-6 text-blue-600 bg-white font-alte text-[15px] leading-[1.5] tracking-[-0.04em] font-normal w-1/2">
                   {item.solution}
                 </td>
               </tr>
@@ -48,24 +48,22 @@ const ProjectEdgeCases = ({ data }: ProjectEdgeCasesProps) => {
           </tbody>
         </table>
 
-        <button
-          // href="https://tryagentikai.com/contact"
-          className="button_blue_border mt-4"
-          onClick={() => {
-            if (
-              typeof window !== "undefined" &&
-              (window as any).gtag_report_conversion
-            ) {
-              return (window as any).gtag_report_conversion(
-                "https://tryagentikai.com/contact"
-              );
-            }
-            return true;
-          }}
-        >
-          {data.ctaButton.text}
-          <ArrowUpRight size={20} />
-        </button>
+        <div className="mt-4">
+          <BracketButton
+            label={data.ctaButton.text}
+            variant="secondary"
+            onClick={() => {
+              if (
+                typeof window !== "undefined" &&
+                (window as any).gtag_report_conversion
+              ) {
+                (window as any).gtag_report_conversion(
+                  "https://tryagentikai.com/contact"
+                );
+              }
+            }}
+          />
+        </div>
       </div>
     </section>
   );

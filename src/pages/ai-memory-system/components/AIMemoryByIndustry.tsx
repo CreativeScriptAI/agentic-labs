@@ -165,32 +165,32 @@ const AIMemoryByIndustry = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <p className="text-blue-600 font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 font-sfpro">
+                    <p className="text-blue-600 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 font-geist">
                         Industry Verticals
                     </p>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-6">
+                    <h2 className="text-[32px] sm:text-[40px] font-normal text-[#0A1128] font-alte mb-6 leading-[1.2] tracking-[-0.04em]">
                         AI memory by industry.
                     </h2>
-                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+                    <p className="text-gray-600 font-alte font-normal text-[15px] sm:text-[17px] max-w-2xl mx-auto mb-8 leading-[1.5] tracking-[-0.04em]">
                         Proven results across verticals.
                     </p>
                 </div>
 
                 {/* Industry Cards List */}
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden divide-y divide-gray-100">
+                <div className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden divide-y divide-[#e7e6e4]">
                     {industries.map((industry, index) => {
                         const isOpen = openIndex === index;
                         return (
                             <div key={index} className="group scroll-mt-4">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className={`w-full flex items-center justify-between p-6 xs:p-8 text-left transition-colors hover:bg-gray-50 ${isOpen ? "bg-gray-50" : "bg-white"}`}
+                                    className={`w-full flex items-center justify-between p-6 xs:p-8 text-left transition-colors hover:bg-[#F9F6F4] ${isOpen ? "bg-[#F9F6F4]" : "bg-white"}`}
                                 >
                                     <div className="flex items-center gap-4 sm:gap-6">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${isOpen ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"}`}>
+                                        <div className={`w-12 h-12 rounded-none flex items-center justify-center transition-colors ${isOpen ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"}`}>
                                             {industry.icon}
                                         </div>
-                                        <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-1">
+                                        <h4 className="text-[20px] sm:text-[24px] font-normal text-[#0A1128] font-alte mb-1 leading-[1.2] tracking-[-0.04em]">
                                             {industry.industry}
                                         </h4>
                                     </div>
@@ -208,16 +208,16 @@ const AIMemoryByIndustry = () => {
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                                            className="overflow-hidden bg-gray-50/50"
+                                            className="overflow-hidden bg-[#F9F6F4]"
                                         >
-                                            <div className="p-6 sm:p-8 pt-0 border-t border-gray-100">
+                                            <div className="p-6 sm:p-8 pt-0 border-t border-[#e7e6e4]">
                                                 <div className="space-y-6 mt-6">
                                                     {/* Use Case */}
                                                     <div>
-                                                        <p className="font-bold text-gray-900 font-sfpro text-sm uppercase tracking-wide mb-2">
-                                                            🔍 Use Case
+                                                        <p className="font-normal text-gray-900 font-geist text-[12px] uppercase tracking-[0.02em] mb-2">
+                                                            Use Case
                                                         </p>
-                                                        <p className="text-gray-700 font-sfpro leading-relaxed">
+                                                        <p className="text-gray-700 font-alte font-normal text-[15px] leading-[1.5] tracking-[-0.04em]">
                                                             {industry.memoryUseCase}
                                                         </p>
                                                     </div>
@@ -225,12 +225,12 @@ const AIMemoryByIndustry = () => {
                                                     <div className="grid md:grid-cols-2 gap-8">
                                                         {/* What it stores */}
                                                         <div>
-                                                            <p className="font-bold text-gray-900 font-sfpro text-sm uppercase tracking-wide mb-3">
-                                                                💾 What it stores
+                                                            <p className="font-normal text-gray-900 font-geist text-[12px] uppercase tracking-[0.02em] mb-3">
+                                                                What it stores
                                                             </p>
                                                             <ul className="space-y-2">
                                                                 {industry.whatItStores.map((item, idx) => (
-                                                                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 font-sfpro">
+                                                                    <li key={idx} className="flex items-start gap-2 text-[15px] text-gray-600 font-alte font-normal tracking-[-0.04em]">
                                                                         <span className="text-blue-500 mt-0.5">•</span>
                                                                         {item}
                                                                     </li>
@@ -239,14 +239,14 @@ const AIMemoryByIndustry = () => {
                                                         </div>
 
                                                         {/* Real World Impact */}
-                                                        <div className="bg-white p-6 rounded-xl border border-green-100 shadow-sm">
-                                                            <p className="font-bold text-green-700 font-sfpro text-sm uppercase tracking-wide mb-3">
-                                                                🚀 Real-world Result
+                                                        <div className="bg-white p-6 rounded-none border border-[#e7e6e4]">
+                                                            <p className="font-normal text-green-700 font-geist text-[12px] uppercase tracking-[0.02em] mb-3">
+                                                                Real-world Result
                                                             </p>
-                                                            <p className="text-gray-700 font-sfpro text-sm mb-4 leading-relaxed">
+                                                            <p className="text-gray-700 font-alte font-normal text-[15px] mb-4 leading-[1.5] tracking-[-0.04em]">
                                                                 {industry.realWorldExample}
                                                             </p>
-                                                            <div className="bg-green-600 text-white py-2 px-4 rounded-lg text-center font-bold font-mondwest">
+                                                            <div className="bg-green-600 text-white py-2 px-4 rounded-none text-center font-normal font-alte tracking-[-0.04em]">
                                                                 {industry.metric}
                                                             </div>
                                                         </div>
@@ -262,14 +262,14 @@ const AIMemoryByIndustry = () => {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-12 bg-blue-50 p-6 sm:p-8 rounded-xl border border-blue-200 text-center">
-                    <p className="font-bold text-blue-900 font-sfpro text-lg sm:text-xl mb-3">
+                <div className="mt-12 bg-blue-50 p-6 sm:p-8 rounded-none border border-[#e7e6e4] text-center">
+                    <p className="font-normal text-blue-900 font-alte text-[17px] sm:text-[20px] mb-3 tracking-[-0.04em]">
                         Don't see your industry?
                     </p>
-                    <p className="text-blue-800 font-sfpro text-base sm:text-lg mb-4 max-w-2xl mx-auto">
+                    <p className="text-blue-800 font-alte font-normal text-[15px] sm:text-[17px] mb-4 max-w-2xl mx-auto leading-[1.5] tracking-[-0.04em]">
                         We've built memory systems for 20+ industries. If your business has repeat customers, memory works.
                     </p>
-                    <p className="text-blue-700 font-sfpro text-sm uppercase tracking-wide font-bold">
+                    <p className="text-blue-700 font-geist text-[12px] uppercase tracking-[0.02em] font-normal">
                         Book a call to see your custom demo
                     </p>
                 </div>

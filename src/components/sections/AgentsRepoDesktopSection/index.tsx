@@ -342,24 +342,24 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
     >
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h1 className="font-mondwest text-[32px] tracking-[-0.04em] text-[#0A1128] mb-2">
+          <h1 className="font-alte font-normal text-[32px] tracking-[-0.04em] text-[#0A1128] mb-2">
             AI Agents Repo
           </h1>
-          <p className="text-slate-600 text-base max-w-[301px] mx-auto leading-snug">
+          <p className="text-slate-600 text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal max-w-[301px] mx-auto">
             Live repository of AI agents deployed by Agentic AI Labs.
           </p>
         </div>
 
         <div className="flex flex-col items-center gap-4 px-2 sm:px-6 py-4 mb-8 sm:mb-10">
           <div className="w-[366px] max-w-full relative z-20">
-            <label className="flex items-center gap-2 rounded-[12px] border border-slate-200 bg-white px-[17px] py-[17px] text-slate-400 shadow-sm">
+            <label className="flex items-center gap-2 rounded-none border border-[#e7e6e4] bg-white px-[17px] py-[17px] text-slate-400">
               <span className="text-slate-400">{searchIcon}</span>
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(event) => setSearchQuery(event.target.value)}
                 placeholder="Search agents..."
-                className="w-full bg-transparent text-[14px] text-slate-700 outline-none placeholder:text-slate-400"
+                className="w-full bg-transparent text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-[#0A1128] outline-none placeholder:text-slate-400"
               />
             </label>
           </div>
@@ -370,10 +370,10 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                 key={tab}
                 type="button"
                 onClick={() => handleCategorySelect(tab)}
-                className={`shrink-0 rounded-[8px] px-4 py-2 text-[14px] font-normal uppercase transition-all duration-200 ${
+                className={`shrink-0 rounded-none border px-4 py-2 text-[12px] font-geist font-normal tracking-[0.02em] uppercase transition-all duration-200 ${
                   tab === activeCategory
-                    ? "bg-[#E2E8F0] text-[#0A1128]"
-                    : "bg-transparent text-slate-600 hover:bg-white/60 hover:text-[#0A1128]"
+                    ? "border-[#0062FF] bg-white text-[#0062FF]"
+                    : "border-[#e7e6e4] bg-transparent text-slate-600 hover:bg-white hover:text-[#0A1128]"
                 }`}
               >
                 {tab}
@@ -384,7 +384,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
 
         <div ref={listTopRef} className="space-y-10 sm:space-y-12">
           {groupedAgents.length === 0 && (
-            <div className="rounded-lg border border-slate-200 bg-white p-6 text-center text-slate-500">
+            <div className="rounded-none border border-[#e7e6e4] bg-white p-6 text-center text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-slate-500">
               No agents found.
             </div>
           )}
@@ -398,10 +398,10 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
             >
               {activeCategory !== "All Agents" && (
                 <div className="flex items-center gap-4 mb-4">
-                  <h2 className="text-[20px] leading-none text-[#0A1128] font-normal">
+                  <h2 className="text-[20px] leading-none text-[#0A1128] font-alte font-normal tracking-[-0.04em]">
                     {category}
                   </h2>
-                  <p className="text-[14px] text-slate-400">
+                  <p className="text-[12px] font-geist font-normal tracking-[0.02em] uppercase text-slate-400">
                     {categoryAgents.length} agents
                   </p>
                 </div>
@@ -414,7 +414,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                   return (
                     <article
                       key={agent.id || agent.name}
-                      className="w-full rounded-lg bg-white p-3 cursor-pointer"
+                      className="w-full rounded-none border border-[#e7e6e4] bg-white p-3 cursor-pointer transition-colors hover:bg-[#F9F6F4]"
                       onClick={() => openAgentModalByIndex(Math.max(idx, 0))}
                       role="button"
                       tabIndex={0}
@@ -425,7 +425,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         }
                       }}
                     >
-                      <div className="mb-4 aspect-[241/141] rounded-[6px] bg-slate-100 overflow-hidden flex items-center justify-center">
+                      <div className="mb-4 aspect-[241/141] rounded-none border border-[#e7e6e4] bg-slate-100 overflow-hidden flex items-center justify-center">
                         <Image
                           src={agent.image}
                           alt={agent.name}
@@ -435,11 +435,11 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         />
                       </div>
 
-                      <h3 className="text-slate-800 text-[20px] leading-tight mb-2 font-normal font-sfpro">
+                      <h3 className="text-slate-800 text-[20px] leading-tight mb-2 font-normal font-alte tracking-[-0.04em]">
                         {agent.name}
                       </h3>
 
-                      <p className="text-slate-600 text-[14px] leading-snug mb-3 line-clamp-2">
+                      <p className="text-slate-600 text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal mb-3 line-clamp-2">
                         {agent.subtitle}
                       </p>
 
@@ -454,7 +454,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         ).map((feature: any, featureIdx: number) => (
                           <li
                             key={`${agent.name}-feature-${featureIdx}`}
-                            className="flex items-center gap-1.5 text-[14px] text-slate-600"
+                            className="flex items-center gap-1.5 text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal text-slate-600"
                           >
                             <span className="text-[#0062FF]">✓</span>
                             <span>
@@ -468,7 +468,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
                         {agent.tags.slice(0, 2).map((tag: string, tagIndex: number) => (
                           <span
                             key={`${agent.name}-tag-${tagIndex}`}
-                            className="rounded bg-slate-200 px-2.5 py-1 text-[12px] font-medium text-[#0A1128]"
+                            className="rounded-none border border-[#e7e6e4] bg-[#F9F6F4] px-2.5 py-1 text-[12px] font-geist font-normal tracking-[0.02em] uppercase text-[#0A1128]"
                           >
                             {tag}
                           </span>
@@ -477,7 +477,7 @@ const AgentsRepoDesktopSection: React.FC<AgentsRepoDesktopSectionProps> = ({
 
                       <button
                         type="button"
-                        className="inline-flex items-center gap-1 text-[#0062FF] text-[14px]"
+                        className="inline-flex items-center gap-1 text-[#0062FF] text-[15px] leading-[1.5] tracking-[-0.04em] font-alte font-normal"
                         onClick={(event) => {
                           event.stopPropagation();
                           openAgentModalByIndex(Math.max(idx, 0));

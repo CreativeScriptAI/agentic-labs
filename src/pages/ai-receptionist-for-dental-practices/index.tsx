@@ -1,5 +1,6 @@
 import { NextPageWithLayout } from "../../types";
 import MetaConfig from "src/components/MetaConfig";
+import BracketButton from "src/components/BracketButton";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -37,38 +38,9 @@ const Section = ({
 
 // ─── Label ─────────────────────────────────────────────────────────────────────
 const SectionLabel = ({ text }: { text: string }) => (
-    <p className="text-xs font-bold text-blue-600 tracking-[0.15em] uppercase mb-4 font-sfpro">
+    <p className="text-xs font-geist font-normal text-blue-600 tracking-[0.02em] uppercase mb-4">
         {text}
     </p>
-);
-
-// ─── CTA Button ────────────────────────────────────────────────────────────────
-const CTAButton = ({
-    href,
-    label,
-    variant = "primary",
-    fullWidth = false,
-}: {
-    href: string;
-    label: string;
-    variant?: "primary" | "secondary";
-    fullWidth?: boolean;
-}) => (
-    <Link
-        href={href}
-        className={`inline-flex items-center justify-center whitespace-nowrap gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 cursor-pointer active:scale-[0.98] ${fullWidth ? "w-full" : ""
-            } ${variant === "primary"
-                ? "bg-[#FCCA07] text-[#0A1128] hover:bg-[#f0bd00]"
-                : "bg-white text-[#0A1128] border border-gray-200 hover:border-gray-300 hover:shadow-sm"
-            }`}
-    >
-        {label}
-        {variant === "primary" && (
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-            </svg>
-        )}
-    </Link>
 );
 
 // ─── Animated number counter ───────────────────────────────────────────────────
@@ -273,15 +245,15 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
             {/* ── Breadcrumb ── */}
-            <div className="bg-white border-b border-gray-100 pt-24">
+            <div className="bg-white border-b border-[#e7e6e4] pt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
                     <nav aria-label="Breadcrumb">
-                        <ol className="flex items-center gap-2 text-xs text-gray-500 font-sfpro">
+                        <ol className="flex items-center gap-2 text-xs text-gray-500 font-alte">
                             <li><Link href="/" className="hover:text-blue-600 transition-colors">Home</Link></li>
                             <li><span className="text-gray-300">/</span></li>
                             <li><span className="text-gray-400">AI Systems</span></li>
                             <li><span className="text-gray-300">/</span></li>
-                            <li className="text-gray-800 font-medium">AI Receptionist for Dental Practices</li>
+                            <li className="text-gray-800 font-normal">AI Receptionist for Dental Practices</li>
                         </ol>
                     </nav>
                 </div>
@@ -311,7 +283,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 initial={{ opacity: 0, y: -8 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4 }}
-                                className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-widest uppercase py-1.5 px-3 rounded-full font-sfpro"
+                                className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-geist font-normal tracking-[0.02em] uppercase py-1.5 px-3 rounded-none"
                             >
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                                 AI Receptionist · Dental Practices
@@ -322,7 +294,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 initial={{ opacity: 0, y: 12 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
-                                className="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#0A1128] leading-[1.1] font-mondwest tracking-tight"
+                                className="text-4xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#0A1128] leading-[1.1] font-alte tracking-tight"
                             >
                                 AI Receptionist for{" "}
                                 <span className="text-blue-600">Dental Practices</span>
@@ -333,7 +305,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 initial={{ opacity: 0, y: 12 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.18 }}
-                                className="text-lg text-gray-600 leading-relaxed font-sfpro max-w-xl"
+                                className="text-lg text-gray-600 leading-relaxed font-alte max-w-xl"
                             >
                                 Answers every call. Books directly into Dentrix or Open Dental. Remembers
                                 returning patients. Sends confirmations. Runs 24/7 — without a front desk
@@ -347,10 +319,10 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 transition={{ duration: 0.4, delay: 0.26 }}
                                 className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
                             >
-                                <CTAButton href={CAL_LINK} label="Book a Free Call" />
+                                <BracketButton label="Book a Free Call" href={CAL_LINK} variant="primary" external />
                                 <a
                                     href="#how-it-works"
-                                    className="inline-flex items-center justify-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors py-3.5 px-4 border border-transparent hover:bg-blue-50 rounded-lg font-sfpro cursor-pointer"
+                                    className="inline-flex items-center justify-center gap-1.5 text-sm font-normal text-blue-600 hover:text-blue-700 transition-colors py-3.5 px-4 border border-transparent hover:bg-blue-50 rounded-none font-alte cursor-pointer"
                                 >
                                     See how it works
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -376,8 +348,8 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                         />
                                     ))}
                                 </div>
-                                <p className="text-sm text-gray-500 font-sfpro">
-                                    Proven on <span className="font-semibold text-gray-800">49,000+ minutes</span> of live calls
+                                <p className="text-sm text-gray-500 font-alte">
+                                    Proven on <span className="font-normal text-gray-800">49,000+ minutes</span> of live calls
                                 </p>
                             </motion.div>
                         </div>
@@ -390,9 +362,9 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             className="space-y-4"
                         >
                             {/* The cost block */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden">
                                 <div className="bg-red-50 border-b border-red-100 px-6 py-4">
-                                    <p className="text-xs font-bold text-red-600 uppercase tracking-wider font-sfpro">
+                                    <p className="text-xs font-geist font-normal text-red-600 uppercase tracking-[0.02em]">
                                         What it costs you right now
                                     </p>
                                 </div>
@@ -402,38 +374,38 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                         { label: "Missed after-hours appointments", val: "~$30,000 / yr" },
                                     ].map((row, i) => (
                                         <div key={i} className="flex items-center justify-between">
-                                            <span className="text-sm text-gray-600 font-sfpro">{row.label}</span>
-                                            <span className="text-sm font-bold text-gray-900 font-sfpro">{row.val}</span>
+                                            <span className="text-sm text-gray-600 font-alte">{row.label}</span>
+                                            <span className="text-sm font-normal text-gray-900 font-alte">{row.val}</span>
                                         </div>
                                     ))}
-                                    <div className="pt-3 mt-1 border-t border-gray-100 flex items-center justify-between">
-                                        <span className="text-sm font-bold text-gray-800 font-sfpro">Total problem</span>
-                                        <span className="text-base font-bold text-red-600 font-mondwest">$67,000+ / yr</span>
+                                    <div className="pt-3 mt-1 border-t border-[#e7e6e4] flex items-center justify-between">
+                                        <span className="text-sm font-normal text-gray-800 font-alte">Total problem</span>
+                                        <span className="text-base font-normal text-red-600 font-alte">$67,000+ / yr</span>
                                     </div>
                                 </div>
                                 <div className="bg-green-50 border-t border-green-100 px-6 py-4">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm text-green-800 font-sfpro font-medium">We solve it for</span>
-                                        <span className="text-sm font-bold text-green-700 font-sfpro">$11,600 in Year 1</span>
+                                        <span className="text-sm text-green-800 font-alte font-normal">We solve it for</span>
+                                        <span className="text-sm font-normal text-green-700 font-alte">$11,600 in Year 1</span>
                                     </div>
-                                    <p className="text-xs text-green-600 font-sfpro mt-1">
+                                    <p className="text-xs text-green-600 font-alte mt-1">
                                         Source: U.S. Bureau of Labor Statistics, OEWS May 2024
                                     </p>
                                 </div>
                             </div>
 
                             {/* Industry news callout */}
-                            <div className="bg-blue-50 border border-blue-200 rounded-xl px-5 py-4 flex items-start gap-3">
+                            <div className="bg-blue-50 border border-blue-200 rounded-none px-5 py-4 flex items-start gap-3">
                                 <div className="mt-0.5 w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
                                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold text-blue-800 font-sfpro leading-relaxed">
+                                    <p className="text-xs font-normal text-blue-800 font-alte leading-relaxed">
                                         DECA Dental Group deployed Pearl AI across 9 US states (Feb 2026).
                                     </p>
-                                    <p className="text-xs text-blue-600 mt-0.5 font-sfpro">
+                                    <p className="text-xs text-blue-600 mt-0.5 font-alte">
                                         Source: Dentistry Today, Feb 25 2026 · The industry is moving.
                                     </p>
                                 </div>
@@ -448,21 +420,21 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="problem" bg="white">
                 <SectionLabel text="The Problem" />
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-6">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0A1128] font-alte tracking-tight mb-6">
                     Your front desk is your most expensive bottleneck.
                 </h2>
-                <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-10">
+                <p className="text-lg text-gray-600 font-alte leading-relaxed max-w-3xl mb-10">
                     If you run a dental practice, your front desk staff spends 4–6 hours every day answering
                     the same calls. Appointment booking. Rescheduling. Insurance questions. Confirmation
                     reminders.
                 </p>
-                <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-10">
+                <p className="text-lg text-gray-600 font-alte leading-relaxed max-w-3xl mb-10">
                     The median dental receptionist salary is{" "}
                     <strong className="text-gray-900">$37,230 per year</strong> — that's according to the
                     U.S. Bureau of Labor Statistics. For that money, you get someone who can only answer one
                     call at a time, can't work after 5pm, and is probably already stretched too thin.
                 </p>
-                <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-12">
+                <p className="text-lg text-gray-600 font-alte leading-relaxed max-w-3xl mb-12">
                     And that's when someone picks up. When they're with a patient at the desk, the phone rings
                     out. When the office is closed, calls go to voicemail. Most patients don't leave one.{" "}
                     <strong className="text-gray-900">They just call the next dentist.</strong>
@@ -474,7 +446,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5 }}
-                    className="relative bg-[#F9F6F4] border-l-4 border-blue-400 rounded-r-xl pl-6 pr-6 py-6 mb-10 max-w-3xl"
+                    className="relative bg-[#F9F6F4] border-l-4 border-blue-400 rounded-none pl-6 pr-6 py-6 mb-10 max-w-3xl"
                 >
                     <svg
                         className="absolute top-4 left-4 w-5 h-5 text-blue-300 opacity-60"
@@ -483,42 +455,42 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     >
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
-                    <blockquote className="text-gray-800 font-sfpro text-base leading-relaxed italic pt-4">
+                    <blockquote className="text-gray-800 font-alte text-base leading-relaxed italic pt-4">
                         "I opened my dermatology practice 18 months ago. Things are going well, too well,
                         actually. I went from 12 patients a day to 28 in a year and a half. The problem is my
                         overhead has scaled way faster than my revenue. I started with one front desk person and
                         one MA. I've now added a second MA and a billing coordinator, and I still need more
                         help."
                     </blockquote>
-                    <footer className="mt-4 text-xs text-gray-500 font-sfpro flex items-center gap-2">
-                        <span className="inline-block bg-orange-100 text-orange-700 px-2 py-0.5 rounded font-bold text-[10px] uppercase tracking-wider">
+                    <footer className="mt-4 text-xs text-gray-500 font-alte flex items-center gap-2">
+                        <span className="inline-block bg-orange-100 text-orange-700 px-2 py-0.5 rounded-none font-geist font-normal text-[10px] uppercase tracking-[0.02em]">
                             r/smallbusiness
                         </span>
                         <span>Practice owner, February 2026 · 192 upvotes</span>
                     </footer>
                 </motion.div>
 
-                <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-4">
+                <p className="text-lg text-gray-600 font-alte leading-relaxed max-w-3xl mb-4">
                     You've probably tried to fix this already. A second front desk person. An answering service.
                     A chatbot. None of them close the loop — someone still has to follow through.
                 </p>
-                <p className="text-lg text-gray-700 font-sfpro font-semibold max-w-3xl mb-12">
+                <p className="text-lg text-gray-700 font-alte font-normal max-w-3xl mb-12">
                     That's what an AI receptionist does. It closes the loop — every time.
                 </p>
 
                 {/* Trend stat */}
-                <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-5 max-w-2xl">
+                <div className="bg-amber-50 border border-amber-200 rounded-none px-6 py-5 max-w-2xl">
                     <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-amber-100 rounded-none flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                             </svg>
                         </div>
                         <div>
-                            <p className="text-sm font-bold text-amber-900 font-sfpro">
+                            <p className="text-sm font-normal text-amber-900 font-alte">
                                 "Dental answering service" searches dropped 88% in 12 months (Google Trends, US).
                             </p>
-                            <p className="text-xs text-amber-700 mt-1 font-sfpro">
+                            <p className="text-xs text-amber-700 mt-1 font-alte">
                                 Practices are already moving away from legacy answering services.
                             </p>
                         </div>
@@ -531,13 +503,13 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="what-we-build" bg="warm">
                 <SectionLabel text="What We Build" />
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-3">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0A1128] font-alte tracking-tight mb-3">
                     Talk. Remember. Act.
                 </h2>
-                <p className="text-xl text-blue-600 font-sfpro font-semibold mb-3">
+                <p className="text-xl text-blue-600 font-alte font-normal mb-3">
                     One AI system. Three layers. Zero missed calls.
                 </p>
-                <p className="text-lg text-gray-600 font-sfpro leading-relaxed max-w-3xl mb-12">
+                <p className="text-lg text-gray-600 font-alte leading-relaxed max-w-3xl mb-12">
                     We don't sell you a voice agent. We don't sell you an automation. We build one AI
                     Receptionist for your dental practice where every layer is connected — and the whole thing
                     runs without you in the loop.
@@ -550,9 +522,9 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             key={i}
                             onClick={() => setActiveLayer(i)}
                             aria-label={`View layer ${l.num}`}
-                            className={`flex-1 py-2 rounded-lg text-xs font-bold font-sfpro transition-all duration-200 cursor-pointer ${activeLayer === i
-                                ? `${colorMap[l.color].tab} text-white shadow-sm`
-                                : "bg-white text-gray-500 border border-gray-200 hover:border-gray-300"
+                            className={`flex-1 py-2 rounded-none text-xs font-normal font-alte transition-all duration-200 cursor-pointer ${activeLayer === i
+                                ? `${colorMap[l.color].tab} text-white`
+                                : "bg-white text-gray-500 border border-[#e7e6e4] hover:border-[#e7e6e4]"
                                 }`}
                         >
                             {l.num}
@@ -568,22 +540,22 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             initial={{ opacity: 0, y: 8 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className={`bg-white rounded-2xl border ${colorMap[layer.color].border} shadow-sm overflow-hidden mb-6`}
+                            className={`bg-white rounded-none border ${colorMap[layer.color].border} overflow-hidden mb-6`}
                         >
                             <div className={`${colorMap[layer.color].bg} px-7 py-6 border-b ${colorMap[layer.color].border}`}>
                                 <div className="flex items-center gap-3 mb-2">
-                                    <div className={`w-8 h-8 rounded-lg ${colorMap[layer.color].tab} flex items-center justify-center text-white`}>
+                                    <div className={`w-8 h-8 rounded-none ${colorMap[layer.color].tab} flex items-center justify-center text-white`}>
                                         {layer.icon}
                                     </div>
-                                    <span className={`text-xs font-bold ${colorMap[layer.color].text} tracking-widest uppercase font-sfpro`}>
+                                    <span className={`text-xs font-geist font-normal ${colorMap[layer.color].text} tracking-[0.02em] uppercase`}>
                                         Layer {layer.num}
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#0A1128] font-mondwest">{layer.title}</h3>
+                                <h3 className="text-2xl font-normal text-[#0A1128] font-alte">{layer.title}</h3>
                             </div>
                             <div className="px-7 py-6 space-y-4">
-                                <p className="text-gray-700 font-sfpro text-base leading-relaxed">{layer.body}</p>
-                                <p className="text-gray-500 font-sfpro text-sm leading-relaxed italic border-l-2 border-gray-100 pl-4">
+                                <p className="text-gray-700 font-alte text-base leading-relaxed">{layer.body}</p>
+                                <p className="text-gray-500 font-alte text-sm leading-relaxed italic border-l-2 border-[#e7e6e4] pl-4">
                                     {layer.detail}
                                 </p>
                             </div>
@@ -601,21 +573,21 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             tabIndex={0}
                             aria-label={`Select layer ${layer.num}`}
                             onKeyDown={(e) => e.key === "Enter" && setActiveLayer(i)}
-                            className={`rounded-xl border p-5 cursor-pointer transition-all duration-200 ${activeLayer === i
-                                ? `${colorMap[layer.color].bg} ${colorMap[layer.color].border} shadow-sm`
-                                : "bg-white border-gray-100 hover:border-gray-200"
+                            className={`rounded-none border p-5 cursor-pointer transition-all duration-200 ${activeLayer === i
+                                ? `${colorMap[layer.color].bg} ${colorMap[layer.color].border}`
+                                : "bg-white border-[#e7e6e4] hover:border-[#e7e6e4]"
                                 }`}
                         >
-                            <div className={`w-8 h-8 rounded-lg ${colorMap[layer.color].tab} flex items-center justify-center text-white mb-3`}>
+                            <div className={`w-8 h-8 rounded-none ${colorMap[layer.color].tab} flex items-center justify-center text-white mb-3`}>
                                 {layer.icon}
                             </div>
-                            <h4 className="text-sm font-bold text-[#0A1128] font-mondwest mb-1">{layer.title}</h4>
-                            <p className="text-xs text-gray-500 font-sfpro leading-relaxed line-clamp-3">{layer.body}</p>
+                            <h4 className="text-sm font-normal text-[#0A1128] font-alte mb-1">{layer.title}</h4>
+                            <p className="text-xs text-gray-500 font-alte leading-relaxed line-clamp-3">{layer.body}</p>
                         </div>
                     ))}
                 </div>
 
-                <p className="text-center text-gray-500 font-sfpro text-sm mt-10 max-w-xl mx-auto">
+                <p className="text-center text-gray-500 font-alte text-sm mt-10 max-w-xl mx-auto">
                     Most AI gives you one of these layers. We connect all three into one system that runs your
                     front desk — 24/7, without you touching anything.
                 </p>
@@ -626,10 +598,10 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="how-it-works" bg="white">
                 <SectionLabel text="How It Works" />
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-3">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0A1128] font-alte tracking-tight mb-3">
                     From "I need an AI receptionist" to "it's live."
                 </h2>
-                <p className="text-xl text-blue-600 font-sfpro font-semibold mb-12">Four weeks.</p>
+                <p className="text-xl text-blue-600 font-alte font-normal mb-12">Four weeks.</p>
 
                 <div className="space-y-0">
                     {[
@@ -686,21 +658,21 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                     <div className="absolute left-[17px] top-10 bottom-0 w-px bg-gray-100" />
                                 )}
                                 {/* Dot */}
-                                <div className={`flex-shrink-0 w-9 h-9 rounded-full ${dotColor} flex items-center justify-center shadow-sm z-10`}>
-                                    <span className="text-white text-xs font-bold font-mondwest">{i + 1}</span>
+                                <div className={`flex-shrink-0 w-9 h-9 rounded-full ${dotColor} flex items-center justify-center z-10`}>
+                                    <span className="text-white text-xs font-normal font-alte">{i + 1}</span>
                                 </div>
                                 {/* Content */}
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider font-sfpro">{step.week}</span>
-                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full font-sfpro ${dotColor} text-white`}>
+                                        <span className="text-xs font-geist font-normal text-gray-400 uppercase tracking-[0.02em]">{step.week}</span>
+                                        <span className={`text-xs font-normal px-2 py-0.5 rounded-none font-alte ${dotColor} text-white`}>
                                             {step.tag}
                                         </span>
                                     </div>
-                                    <p className="text-gray-700 font-sfpro text-base leading-relaxed mb-3">{step.body}</p>
-                                    <p className="text-sm font-semibold text-gray-800 font-sfpro">{step.cost}</p>
+                                    <p className="text-gray-700 font-alte text-base leading-relaxed mb-3">{step.body}</p>
+                                    <p className="text-sm font-normal text-gray-800 font-alte">{step.cost}</p>
                                     {step.deliver && (
-                                        <p className="text-sm text-blue-600 font-sfpro mt-0.5">{step.deliver}</p>
+                                        <p className="text-sm text-blue-600 font-alte mt-0.5">{step.deliver}</p>
                                     )}
                                 </div>
                             </motion.div>
@@ -708,14 +680,14 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     })}
                 </div>
 
-                <div className="mt-12 flex flex-col sm:flex-row items-center gap-4 p-6 bg-[#F9F6F4] rounded-xl border border-gray-200">
+                <div className="mt-12 flex flex-col sm:flex-row items-center gap-4 p-6 bg-[#F9F6F4] rounded-none border border-[#e7e6e4]">
                     <div className="flex-1">
-                        <p className="text-sm font-semibold text-gray-800 font-sfpro">
+                        <p className="text-sm font-normal text-gray-800 font-alte">
                             After week 4, your AI handles every routine call.
                         </p>
-                        <p className="text-sm text-gray-500 font-sfpro mt-0.5">Your front desk handles your patients.</p>
+                        <p className="text-sm text-gray-500 font-alte mt-0.5">Your front desk handles your patients.</p>
                     </div>
-                    <CTAButton href={CAL_LINK} label="Book Your Free Audit Call" />
+                    <BracketButton label="Book Your Free Audit Call" href={CAL_LINK} variant="primary" external />
                 </div>
             </Section>
 
@@ -724,10 +696,10 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="results" bg="warm">
                 <SectionLabel text="Results" />
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-4">
+                <h2 className="text-3xl sm:text-4xl font-normal text-[#0A1128] font-alte tracking-tight mb-4">
                     We don't say "trust us."<br />We show you what we built.
                 </h2>
-                <p className="text-base text-gray-500 font-sfpro mb-10 max-w-2xl">
+                <p className="text-base text-gray-500 font-alte mb-10 max-w-2xl">
                     PatientlyAI is a real AI voice caller we built and deployed for healthcare practices.
                     The numbers below are from our actual Vapi billing dashboard — not projections.
                 </p>
@@ -738,12 +710,12 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-6 shadow-sm"
+                    className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden mb-6"
                 >
                     {/* Card header */}
                     <div className="px-6 pt-6 pb-4 flex flex-col sm:flex-row items-start sm:items-center gap-5">
                         {/* Avatar */}
-                        <div className="w-20 h-20 rounded-full bg-[#F9F6F4] border border-gray-200 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        <div className="w-20 h-20 rounded-full bg-[#F9F6F4] border border-[#e7e6e4] flex items-center justify-center flex-shrink-0 overflow-hidden">
                             <img
                                 src="/images/patiently-bot.png"
                                 alt="PatientlyAI voice caller avatar"
@@ -755,18 +727,18 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         </div>
                         <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1.5">
-                                <span className="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded font-sfpro uppercase tracking-wide">
+                                <span className="bg-red-500 text-white text-[10px] font-geist font-normal px-2 py-0.5 rounded-none uppercase tracking-[0.02em]">
                                     NEW
                                 </span>
-                                <span className="text-xs text-gray-400 font-sfpro">Live healthcare AI</span>
+                                <span className="text-xs text-gray-400 font-alte">Live healthcare AI</span>
                             </div>
-                            <h3 className="text-xl font-bold text-blue-600 font-mondwest mb-1">
+                            <h3 className="text-xl font-normal text-blue-600 font-alte mb-1">
                                 PatientlyAI — your AI voice caller
                             </h3>
-                            <p className="text-sm font-semibold text-gray-800 font-sfpro mb-1">
+                            <p className="text-sm font-normal text-gray-800 font-alte mb-1">
                                 Voice AI agent that calls leads, books on GHL, and cuts no-shows
                             </p>
-                            <p className="text-sm text-gray-500 font-sfpro leading-relaxed">
+                            <p className="text-sm text-gray-500 font-alte leading-relaxed">
                                 It calls new leads instantly, follows up Day 1–Day 5, qualifies and handles
                                 objections, books straight into GoHighLevel, sends a Stripe deposit by SMS, and
                                 runs a T-24h reminder call.
@@ -775,7 +747,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         <div className="flex-shrink-0 self-start sm:self-center">
                             <Link
                                 href="/agent/689b540eeeab03d6cdeab527"
-                                className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors font-sfpro cursor-pointer"
+                                className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-normal px-4 py-2.5 rounded-none transition-colors font-alte cursor-pointer"
                             >
                                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -786,11 +758,11 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     </div>
 
                     {/* Divider */}
-                    <div className="border-t border-gray-100 mx-6" />
+                    <div className="border-t border-[#e7e6e4] mx-6" />
 
                     {/* Real data banner */}
                     <div className="px-6 py-4 bg-[#F9F6F4]">
-                        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider font-sfpro mb-3">
+                        <p className="text-xs font-geist font-normal text-gray-500 uppercase tracking-[0.02em] mb-3">
                             Real billing data · Vapi dashboard · Usage period Oct 01 – Oct 09, 2025
                         </p>
                         <div className="grid grid-cols-3 gap-3">
@@ -799,16 +771,16 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 { val: "49,496", label: "Call Minutes", sub: "mins of live voice" },
                                 { val: "$0.22", label: "Cost per Minute", sub: "fully managed" },
                             ].map((item, i) => (
-                                <div key={i} className="bg-white border border-gray-200 rounded-xl px-4 py-4 text-center shadow-sm">
-                                    <p className="text-xl sm:text-2xl font-bold text-[#0A1128] font-mondwest mb-0.5">
+                                <div key={i} className="bg-white border border-[#e7e6e4] rounded-none px-4 py-4 text-center">
+                                    <p className="text-xl sm:text-2xl font-normal text-[#0A1128] font-alte mb-0.5">
                                         {item.val}
                                     </p>
-                                    <p className="text-xs font-semibold text-gray-700 font-sfpro">{item.label}</p>
-                                    <p className="text-[10px] text-gray-400 font-sfpro mt-0.5">{item.sub}</p>
+                                    <p className="text-xs font-normal text-gray-700 font-alte">{item.label}</p>
+                                    <p className="text-[10px] text-gray-400 font-alte mt-0.5">{item.sub}</p>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[10px] text-gray-400 font-sfpro mt-3 flex items-center gap-1">
+                        <p className="text-[10px] text-gray-400 font-alte mt-3 flex items-center gap-1">
                             <svg className="w-3 h-3 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
@@ -819,11 +791,11 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
 
                 {/* Testimonial */}
                 <blockquote className="border-l-4 border-[#FCCA07] pl-6 py-1 mb-10 max-w-2xl">
-                    <p className="text-lg text-gray-700 font-sfpro italic leading-relaxed">
+                    <p className="text-lg text-gray-700 font-alte italic leading-relaxed">
                         "Within 48 hours they built an AI caller that doubled our booking rate. It feels like
                         having a full-time receptionist who never sleeps."
                     </p>
-                    <footer className="mt-3 text-sm font-semibold text-gray-900 font-sfpro">— Aiden, Founder</footer>
+                    <footer className="mt-3 text-sm font-normal text-gray-900 font-alte">— Aiden, Founder</footer>
                 </blockquote>
 
                 {/* Live stats row — real numbers */}
@@ -840,16 +812,16 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: i * 0.08 }}
-                            className="bg-white rounded-xl border border-gray-200 px-5 py-5 text-center shadow-sm"
+                            className="bg-white rounded-none border border-[#e7e6e4] px-5 py-5 text-center"
                         >
-                            <p className="text-2xl sm:text-3xl font-bold text-[#0A1128] font-mondwest mb-1">
+                            <p className="text-2xl sm:text-3xl font-normal text-[#0A1128] font-alte mb-1">
                                 <CountUp end={s.stat} suffix={s.suffix} prefix={s.prefix} />
                             </p>
-                            <p className="text-xs text-gray-500 font-sfpro leading-tight">{s.label}</p>
+                            <p className="text-xs text-gray-500 font-alte leading-tight">{s.label}</p>
                         </motion.div>
                     ))}
                 </div>
-                <p className="text-xs text-gray-400 font-sfpro">
+                <p className="text-xs text-gray-400 font-alte">
                     49,496 mins: Vapi billing dashboard, Oct 2025 · BLS figure: OEWS 2024, 128,500 openings/yr
                 </p>
             </Section>
@@ -859,14 +831,14 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="is-this-for-you" bg="white">
                 <SectionLabel text="Is This For You?" />
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-10">
+                <h2 className="text-3xl sm:text-4xl font-normal text-[#0A1128] font-alte tracking-tight mb-10">
                     Built for dental practices that have a phone problem.
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-10">
                     {/* Yes */}
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                        <p className="text-xs font-bold text-green-700 uppercase tracking-wider font-sfpro mb-4">
+                    <div className="bg-green-50 border border-green-200 rounded-none p-6">
+                        <p className="text-xs font-geist font-normal text-green-700 uppercase tracking-[0.02em] mb-4">
                             This is for you if:
                         </p>
                         <ul className="space-y-3">
@@ -877,7 +849,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 "You've tried an answering service and it couldn't actually book appointments",
                                 "Your budget is $5K+ and you're serious about solving this properly",
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700 font-sfpro">
+                                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700 font-alte">
                                     <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -888,8 +860,8 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     </div>
 
                     {/* No */}
-                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider font-sfpro mb-4">
+                    <div className="bg-gray-50 border border-[#e7e6e4] rounded-none p-6">
+                        <p className="text-xs font-geist font-normal text-gray-500 uppercase tracking-[0.02em] mb-4">
                             This is NOT for you if:
                         </p>
                         <ul className="space-y-3">
@@ -898,7 +870,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                                 "You have fewer than 50 calls per week (not enough volume for AI ROI)",
                                 "You want to manage and maintain the AI system yourself",
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-500 font-sfpro">
+                                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-500 font-alte">
                                     <svg className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                                     </svg>
@@ -910,8 +882,8 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                 </div>
 
                 {/* Geographic signal */}
-                <div className="bg-[#F9F6F4] border border-gray-200 rounded-xl px-6 py-5 mb-10">
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wider font-sfpro mb-3">
+                <div className="bg-[#F9F6F4] border border-[#e7e6e4] rounded-none px-6 py-5 mb-10">
+                    <p className="text-xs font-geist font-normal text-gray-500 uppercase tracking-[0.02em] mb-3">
                         Highest AI receptionist demand by state (Google Trends, Feb 2026)
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -922,21 +894,21 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                             { state: "Texas", score: "46" },
                             { state: "New York", score: "43" },
                         ].map(({ state, score }) => (
-                            <div key={state} className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-full px-3 py-1.5 text-xs font-sfpro">
-                                <span className="font-semibold text-gray-800">{state}</span>
+                            <div key={state} className="flex items-center gap-1.5 bg-white border border-[#e7e6e4] rounded-none px-3 py-1.5 text-xs font-alte">
+                                <span className="font-normal text-gray-800">{state}</span>
                                 <span className="text-gray-400">·</span>
-                                <span className="text-blue-600 font-bold">{score}</span>
+                                <span className="text-blue-600 font-normal">{score}</span>
                             </div>
                         ))}
                     </div>
-                    <p className="text-xs text-gray-400 font-sfpro mt-3">
+                    <p className="text-xs text-gray-400 font-alte mt-3">
                         If your practice is in one of these states, early movers are already pulling ahead.
                     </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
-                    <CTAButton href={CAL_LINK} label="Book a Free Call" />
-                    <p className="text-sm text-gray-500 font-sfpro pt-3 sm:pt-0 sm:self-center">
+                    <BracketButton label="Book a Free Call" href={CAL_LINK} variant="primary" external />
+                    <p className="text-sm text-gray-500 font-alte pt-3 sm:pt-0 sm:self-center">
                         If you nodded at the first list, we should talk.
                     </p>
                 </div>
@@ -947,7 +919,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <Section id="faq" bg="warm">
                 <SectionLabel text="Questions" />
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1128] font-mondwest tracking-tight mb-10">
+                <h2 className="text-3xl sm:text-4xl font-normal text-[#0A1128] font-alte tracking-tight mb-10">
                     You're probably wondering.
                 </h2>
                 <div className="space-y-3 max-w-3xl">
@@ -962,21 +934,21 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
             {/* ══════════════════════════════════════════════════════════════════ */}
             <section className="bg-[#0A1128] py-20 px-4">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-mondwest tracking-tight leading-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white font-alte tracking-tight leading-tight">
                         Your dental practice runs.
                         <br />
                         <span className="text-[#FCCA07]">Your AI should too.</span>
                     </h2>
-                    <p className="text-lg text-gray-300 font-sfpro leading-relaxed max-w-xl mx-auto">
+                    <p className="text-lg text-gray-300 font-alte leading-relaxed max-w-xl mx-auto">
                         One call. 15 minutes. We'll tell you exactly what an AI Receptionist would look like for
                         your practice — and whether it even makes sense.
                     </p>
-                    <p className="text-sm text-gray-400 font-sfpro">No pitch. No pressure. Just a straight answer.</p>
+                    <p className="text-sm text-gray-400 font-alte">No pitch. No pressure. Just a straight answer.</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                        <CTAButton href={CAL_LINK} label="Book Your Free Call" />
+                        <BracketButton label="Book Your Free Call" href={CAL_LINK} variant="primary" external />
                         <a
                             href="mailto:aditya@tryagentikai.com"
-                            className="text-sm text-gray-400 hover:text-white transition-colors font-sfpro"
+                            className="text-sm text-gray-400 hover:text-white transition-colors font-alte"
                         >
                             Or email aditya@tryagentikai.com
                         </a>
@@ -986,7 +958,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
 
             {/* ── Related Pages ── */}
             <Section bg="white">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider font-sfpro mb-5">
+                <p className="text-xs font-geist font-normal text-gray-400 uppercase tracking-[0.02em] mb-5">
                     Also building AI for:
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -999,7 +971,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                         <Link
                             key={href}
                             href={href}
-                            className="text-sm text-blue-600 hover:text-blue-800 font-sfpro border border-blue-100 hover:border-blue-300 rounded-full px-4 py-2 transition-all duration-150 hover:bg-blue-50"
+                            className="text-sm text-blue-600 hover:text-blue-800 font-alte border border-blue-100 hover:border-blue-300 rounded-none px-4 py-2 transition-all duration-150 hover:bg-blue-50"
                         >
                             {label} →
                         </Link>
@@ -1016,13 +988,13 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-sm"
                 >
-                    <div className="bg-[#0A1128] rounded-xl shadow-2xl border border-white/10 px-5 py-3.5 flex items-center justify-between gap-4">
-                        <p className="text-sm text-white font-sfpro font-medium leading-tight">
+                    <div className="bg-[#0A1128] rounded-none border border-white/10 px-5 py-3.5 flex items-center justify-between gap-4">
+                        <p className="text-sm text-white font-alte font-normal leading-tight">
                             Ready to stop missing calls?
                         </p>
                         <Link
                             href={CAL_LINK}
-                            className="flex-shrink-0 inline-flex items-center justify-center whitespace-nowrap bg-[#FCCA07] text-[#0A1128] text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#f0bd00] transition-all active:scale-[0.98] cursor-pointer"
+                            className="flex-shrink-0 inline-flex items-center justify-center whitespace-nowrap bg-[#FCCA07] text-[#0A1128] text-sm font-normal px-5 py-2.5 rounded-none hover:bg-[#f0bd00] transition-all active:scale-[0.98] cursor-pointer"
                         >
                             Book a Call
                         </Link>
@@ -1037,13 +1009,13 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
 const FAQItem = ({ q, a }: { q: string; a: string }) => {
     const [open, setOpen] = useState(false);
     return (
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden">
             <button
                 onClick={() => setOpen((p) => !p)}
                 aria-expanded={open}
                 className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-gray-50 transition-colors"
             >
-                <span className="text-sm font-semibold text-gray-900 font-sfpro pr-4">{q}</span>
+                <span className="text-sm font-normal text-gray-900 font-alte pr-4">{q}</span>
                 <span
                     className={`flex-shrink-0 w-5 h-5 text-gray-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
                 >
@@ -1060,7 +1032,7 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
                     transition={{ duration: 0.2 }}
                     className="px-6 pb-5"
                 >
-                    <p className="text-sm text-gray-600 font-sfpro leading-relaxed border-t border-gray-100 pt-4">{a}</p>
+                    <p className="text-sm text-gray-600 font-alte leading-relaxed border-t border-[#e7e6e4] pt-4">{a}</p>
                 </motion.div>
             )}
         </div>

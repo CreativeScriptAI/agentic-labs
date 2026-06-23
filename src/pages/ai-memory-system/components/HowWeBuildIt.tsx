@@ -110,13 +110,13 @@ const HowWeBuildIt = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <p className="text-blue-600 font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 font-sfpro">
+                    <p className="text-blue-600 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 font-geist">
                         Implementation Process
                     </p>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-6">
+                    <h2 className="text-[32px] sm:text-[40px] font-normal text-[#0A1128] font-alte mb-6 leading-[1.2] tracking-[-0.04em]">
                         From audit to live in 4 weeks.
                     </h2>
-                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+                    <p className="text-gray-600 font-alte font-normal text-[15px] sm:text-[17px] max-w-2xl mx-auto mb-8 leading-[1.5] tracking-[-0.04em]">
                         We don't sell you a tool and walk away. We build a custom memory system for your business.
                     </p>
                 </div>
@@ -130,7 +130,7 @@ const HowWeBuildIt = () => {
                         return (
                             <div key={index} className="relative z-10 scroll-mt-4">
                                 <div
-                                    className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen ? "border-blue-500 shadow-lg ring-1 ring-blue-100" : "border-gray-200 hover:border-blue-300 hover:shadow-md"
+                                    className={`bg-white rounded-none border transition-colors duration-300 overflow-hidden ${isOpen ? "border-blue-600" : "border-[#e7e6e4] hover:border-blue-300"
                                         }`}
                                 >
                                     <button
@@ -138,25 +138,25 @@ const HowWeBuildIt = () => {
                                         className="w-full flex items-center gap-4 sm:gap-6 p-6 sm:p-8 text-left"
                                     >
                                         {/* Icon Box */}
-                                        <div className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center transition-all ${isOpen ? "bg-blue-600 text-white shadow-md scale-110" : "bg-blue-50 text-blue-600 group-hover:bg-blue-100"
+                                        <div className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-none flex items-center justify-center transition-colors ${isOpen ? "bg-blue-600 text-white" : "bg-blue-50 text-blue-600 group-hover:bg-blue-100"
                                             }`}>
                                             {week.icon}
                                         </div>
 
                                         {/* Header Text */}
                                         <div className="flex-grow">
-                                            <p className={`text-xs sm:text-sm font-bold tracking-widest uppercase mb-1 ${isOpen ? "text-blue-600" : "text-gray-400"
+                                            <p className={`text-[12px] font-normal tracking-[0.02em] uppercase mb-1 font-geist ${isOpen ? "text-blue-600" : "text-gray-400"
                                                 }`}>
                                                 {week.week}
                                             </p>
-                                            <h3 className={`text-lg sm:text-2xl font-bold font-mondwest transition-colors ${isOpen ? "text-[#0A1128]" : "text-gray-700"
+                                            <h3 className={`text-[20px] sm:text-[24px] font-normal font-alte transition-colors leading-[1.2] tracking-[-0.04em] ${isOpen ? "text-[#0A1128]" : "text-gray-700"
                                                 }`}>
                                                 {week.title}
                                             </h3>
                                         </div>
 
                                         {/* Chevron */}
-                                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-blue-50"
+                                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-[#F9F6F4] text-gray-400 group-hover:bg-blue-50"
                                             }`}>
                                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -175,18 +175,18 @@ const HowWeBuildIt = () => {
                                             >
                                                 <div className="px-6 sm:px-8 pb-8 pt-0">
                                                     <div className="pl-0 sm:pl-[5.5rem]"> {/* Indent to align with text */}
-                                                        <p className="text-gray-600 font-sfpro text-base sm:text-lg mb-6 leading-relaxed border-l-2 border-blue-100 pl-4">
+                                                        <p className="text-gray-600 font-alte font-normal text-[15px] sm:text-[17px] mb-6 leading-[1.5] tracking-[-0.04em] border-l-2 border-[#e7e6e4] pl-4">
                                                             {week.description}
                                                         </p>
 
-                                                        <div className="bg-blue-50/50 rounded-xl p-5 border border-blue-100">
-                                                            <p className="font-bold text-blue-900 font-sfpro text-xs uppercase tracking-wide mb-3 flex items-center gap-2">
+                                                        <div className="bg-blue-50/50 rounded-none p-5 border border-[#e7e6e4]">
+                                                            <p className="font-normal text-blue-900 font-geist text-[12px] uppercase tracking-[0.02em] mb-3 flex items-center gap-2">
                                                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                                                                 Key Deliverables
                                                             </p>
                                                             <div className="grid sm:grid-cols-2 gap-3">
                                                                 {week.deliverables.map((item, idx) => (
-                                                                    <div key={idx} className="flex items-start gap-2 text-sm text-gray-700 font-sfpro">
+                                                                    <div key={idx} className="flex items-start gap-2 text-[15px] text-gray-700 font-alte font-normal tracking-[-0.04em]">
                                                                         <svg className="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                                         </svg>
@@ -207,15 +207,14 @@ const HowWeBuildIt = () => {
                 </div>
 
                 {/* Guarantee Box */}
-                <div className="mt-12 bg-white rounded-2xl p-8 border-2 border-blue-100 text-center shadow-lg relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400"></div>
-                    <p className="text-blue-600 font-bold text-xs sm:text-sm tracking-widest uppercase mb-3 font-sfpro">
+                <div className="mt-12 bg-white rounded-none p-8 border border-[#e7e6e4] text-center relative overflow-hidden">
+                    <p className="text-blue-600 font-normal text-[12px] tracking-[0.02em] uppercase mb-3 font-geist">
                         Our Guarantee
                     </p>
-                    <p className="text-[#0A1128] font-sfpro text-lg sm:text-xl font-medium max-w-3xl mx-auto">
-                        If we can't deploy a working memory system in 4 weeks, <span className="text-blue-600 font-bold">we don't charge you.</span>
+                    <p className="text-[#0A1128] font-alte text-[17px] sm:text-[20px] font-normal max-w-3xl mx-auto leading-[1.5] tracking-[-0.04em]">
+                        If we can't deploy a working memory system in 4 weeks, <span className="text-blue-600">we don't charge you.</span>
                     </p>
-                    <p className="text-gray-400 text-sm mt-2 italic">(We've never missed a deadline.)</p>
+                    <p className="text-gray-400 text-[15px] mt-2 italic font-alte tracking-[-0.04em]">(We've never missed a deadline.)</p>
                 </div>
             </div>
         </Section>

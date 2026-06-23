@@ -21,11 +21,11 @@ const ProjectHero = ({ data }: ProjectHeroProps) => {
       <span className="section_label">{data.subtitle}</span>
       <h1 className="section_title">
         {data.title}{" "}
-        <span className="font-mondwest text-slate-600">
+        <span className="font-alte text-slate-600">
           {data.titleHighlight}
         </span>
       </h1>
-      <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-[680px] mx-auto mb-6 md:mb-8">
+      <p className="font-alte text-slate-600 text-[15px] leading-[1.5] tracking-[-0.04em] max-w-[680px] mx-auto mb-6 md:mb-8">
         {data.description}
       </p>
       {/* <AICaller /> */}

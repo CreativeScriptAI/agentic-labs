@@ -28,10 +28,10 @@ const ContactFAQSection: React.FC<ContactFAQSectionProps> = ({
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <p className="text-red-500 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6">
+          <p className="text-red-500 font-geist font-normal text-[12px] tracking-[0.02em] uppercase mb-4 sm:mb-6">
             FREQUENTLY ASKED QUESTIONS
           </p>
-          <h2 className="text-lg sm:text-xl lg:text-[24px] font-normal text-[#1E293B] max-w-4xl mx-auto text-center font-sfpro px-4">
+          <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-normal text-[#0A1128] max-w-4xl mx-auto text-center font-alte leading-[1.2] tracking-[-0.04em] px-4">
             Still have Questions?
           </h2>
         </div>
@@ -41,18 +41,16 @@ const ContactFAQSection: React.FC<ContactFAQSectionProps> = ({
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="w-full relative bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
+              className="w-full relative bg-white rounded-none border border-[#e7e6e4] overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none"
+                className="w-full py-4 sm:py-5 text-left flex items-center justify-between hover:bg-[#0A1128]/[0.02] transition-colors duration-200 focus:outline-none"
               >
                 <h3
-                  className="pl-3 sm:pl-4 pr-2 font-sfpro text-sm sm:text-base"
+                  className="pl-3 sm:pl-4 pr-2 font-alte font-normal text-[15px] text-[#0A1128]"
                   style={{
-                    color: "var(--Slate-900, #0F172A)",
                     fontStyle: "normal",
-                    fontWeight: "400",
                     lineHeight: "1.5",
                   }}
                 >
@@ -81,12 +79,10 @@ const ContactFAQSection: React.FC<ContactFAQSectionProps> = ({
                 <div className="px-3 sm:px-4 pb-4 sm:pb-5">
                   <div className="pt-2">
                     <p
-                      className="leading-relaxed font-sfpro text-xs sm:text-sm"
+                      className="font-alte font-normal text-[15px] leading-[1.5] tracking-[-0.04em]"
                       style={{
                         color: "var(--Slate-600, #475569)",
                         fontStyle: "normal",
-                        fontWeight: "400",
-                        lineHeight: "1.6",
                       }}
                     >
                       {faq.answer}

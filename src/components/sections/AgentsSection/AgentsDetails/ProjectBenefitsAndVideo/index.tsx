@@ -24,7 +24,7 @@ function ProjectBenefitsAndVideo({ data }: ProjectBenefitsAndVideoProps) {
 
   return (
      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-        <ul className="flex flex-col items-start md:items-start gap-2 md:gap-4 font-sfpro text-xs md:text-sm text-slate-800 font-medium lg:w-1/2">
+        <ul className="flex flex-col items-start md:items-start gap-2 md:gap-4 font-alte text-[15px] leading-[1.5] tracking-[-0.04em] text-slate-800 font-normal lg:w-1/2">
           {data.benefits.map((benefit, index) => (
             <li key={index} className="flex items-center gap-1 text-slate-600">
               <div>
@@ -59,7 +59,7 @@ function ProjectBenefitsAndVideo({ data }: ProjectBenefitsAndVideoProps) {
             {isLoading && <SkeletonLoader />}
             {isVideo ? (
               <video
-                className={`w-full max-w-[440px] rounded-lg transition-opacity duration-300 ${
+                className={`w-full max-w-[440px] rounded-none transition-opacity duration-300 ${
                   isLoading ? "opacity-0 absolute inset-0" : "opacity-100"
                 }`}
                 autoPlay

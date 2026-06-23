@@ -88,7 +88,7 @@ const ProductionIssuesAccordion = () => {
                 return (
                     <div
                         key={index}
-                        className={`bg-white rounded-xl border transition-all duration-300 overflow-hidden scroll-mt-4 ${isOpen ? "border-blue-500 shadow-md" : "border-gray-200 hover:border-blue-300"
+                        className={`bg-white rounded-none border transition-colors duration-300 overflow-hidden scroll-mt-4 ${isOpen ? "border-blue-600" : "border-[#e7e6e4] hover:border-blue-300"
                             }`}
                     >
                         <button
@@ -96,19 +96,19 @@ const ProductionIssuesAccordion = () => {
                             className="w-full flex items-center justify-between p-5 md:p-6 text-left group"
                         >
                             <div className="flex items-center gap-4 md:gap-6">
-                                <span className={`font-mondwest text-xl md:text-2xl ${isOpen ? "text-blue-600" : "text-gray-300 group-hover:text-blue-400"}`}>
+                                <span className={`font-geist text-[15px] tracking-[0.02em] ${isOpen ? "text-blue-600" : "text-gray-300 group-hover:text-blue-400"}`}>
                                     {issue.number}
                                 </span>
                                 <div>
-                                    <h4 className={`font-bold font-sfpro text-lg md:text-xl transition-colors ${isOpen ? "text-blue-900" : "text-gray-900"}`}>
+                                    <h4 className={`font-normal font-alte text-[17px] md:text-[20px] transition-colors tracking-[-0.04em] ${isOpen ? "text-blue-900" : "text-gray-900"}`}>
                                         {issue.title}
                                     </h4>
-                                    <p className="text-sm text-gray-500 font-sfpro mt-1 hidden sm:block">
+                                    <p className="text-[15px] text-gray-500 font-alte font-normal mt-1 hidden sm:block tracking-[-0.04em]">
                                         {issue.summary}
                                     </p>
                                 </div>
                             </div>
-                            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-500"}`}>
+                            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? "bg-blue-100 text-blue-600 rotate-180" : "bg-[#F9F6F4] text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-500"}`}>
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                 </svg>
@@ -125,19 +125,19 @@ const ProductionIssuesAccordion = () => {
                                 >
                                     <div className="px-6 pb-6 md:px-20 md:pb-8 pt-0">
                                         <div className="h-px w-full bg-gray-100 mb-6"></div>
-                                        <div className="space-y-6 text-sm md:text-base font-sfpro">
+                                        <div className="space-y-6 text-[15px] font-alte font-normal tracking-[-0.04em]">
                                             <div>
-                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">The Problem</p>
-                                                <p className="text-gray-700 leading-relaxed">{issue.problem}</p>
+                                                <p className="text-[12px] font-normal text-gray-400 uppercase tracking-[0.02em] mb-2 font-geist">The Problem</p>
+                                                <p className="text-gray-700 leading-[1.5]">{issue.problem}</p>
                                             </div>
                                             <div className="grid md:grid-cols-2 gap-6">
-                                                <div className="bg-red-50 p-4 rounded-lg border border-red-100">
-                                                    <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2">❌ What Breaks</p>
-                                                    <p className="text-red-800 leading-relaxed font-medium">{issue.whatBreaks}</p>
+                                                <div className="bg-red-50 p-4 rounded-none border border-[#e7e6e4]">
+                                                    <p className="text-[12px] font-normal text-red-600 uppercase tracking-[0.02em] mb-2 font-geist">What Breaks</p>
+                                                    <p className="text-red-800 leading-[1.5] font-normal">{issue.whatBreaks}</p>
                                                 </div>
-                                                <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                                                    <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">✅ How We Fix It</p>
-                                                    <p className="text-blue-800 leading-relaxed font-medium">{issue.howWeFix}</p>
+                                                <div className="bg-blue-50 p-4 rounded-none border border-[#e7e6e4]">
+                                                    <p className="text-[12px] font-normal text-blue-600 uppercase tracking-[0.02em] mb-2 font-geist">How We Fix It</p>
+                                                    <p className="text-blue-800 leading-[1.5] font-normal">{issue.howWeFix}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -158,13 +158,13 @@ const ProductionVsDemo = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <p className="text-red-500 font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 font-sfpro">
+                    <p className="text-red-500 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 font-geist">
                         Why Demos Don't Scale
                     </p>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-6">
+                    <h2 className="text-[32px] sm:text-[40px] font-normal text-[#0A1128] font-alte mb-6 leading-[1.2] tracking-[-0.04em]">
                         Production-grade vs demo-grade.
                     </h2>
-                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-gray-600 font-alte font-normal text-[15px] sm:text-[17px] max-w-2xl mx-auto leading-[1.5] tracking-[-0.04em]">
                         It's easy to build a demo that remembers your name once. It's brutally hard to build a system that remembers 10,000 customers forever.
                     </p>
                 </div>
@@ -174,29 +174,29 @@ const ProductionVsDemo = () => {
 
                 {/* Comparison Table - Redesigned as Summary Cards */}
                 <div className="grid md:grid-cols-2 gap-6 mt-16 text-center md:text-left">
-                    <div className="bg-white p-8 rounded-2xl border border-red-100 shadow-sm opacity-70 hover:opacity-100 transition-opacity">
-                        <h4 className="font-bold text-gray-900 mb-4 font-sfpro text-lg flex items-center justify-center md:justify-start gap-2">
+                    <div className="bg-white p-8 rounded-none border border-[#e7e6e4] opacity-70 hover:opacity-100 transition-opacity">
+                        <h4 className="font-normal text-gray-900 mb-4 font-alte text-[17px] flex items-center justify-center md:justify-start gap-2 tracking-[-0.04em]">
                             <span className="w-2 h-2 rounded-full bg-red-500"></span>
                             The "Demo" Approach
                         </h4>
-                        <ul className="space-y-3 text-gray-600 font-sfpro text-sm sm:text-base inline-block text-left">
-                            <li className="flex items-start gap-2">❌ Breaks after ~50 interactions</li>
-                            <li className="flex items-start gap-2">❌ "Hallucinates" wrong memories</li>
-                            <li className="flex items-start gap-2">❌ Non-compliant (GDPR/HIPAA risks)</li>
+                        <ul className="space-y-3 text-gray-600 font-alte font-normal text-[15px] inline-block text-left tracking-[-0.04em]">
+                            <li className="flex items-start gap-2">Breaks after ~50 interactions</li>
+                            <li className="flex items-start gap-2">"Hallucinates" wrong memories</li>
+                            <li className="flex items-start gap-2">Non-compliant (GDPR/HIPAA risks)</li>
                         </ul>
                     </div>
-                    <div className="bg-white p-8 rounded-2xl border-2 border-blue-100 shadow-lg relative overflow-hidden">
-                        <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                    <div className="bg-white p-8 rounded-none border border-[#e7e6e4] relative overflow-hidden">
+                        <div className="absolute top-0 right-0 bg-blue-600 text-white text-[12px] font-normal px-3 py-1 rounded-none font-geist uppercase tracking-[0.02em]">
                             RECOMMENDED
                         </div>
-                        <h4 className="font-bold text-blue-900 mb-4 font-sfpro text-lg flex items-center justify-center md:justify-start gap-2">
+                        <h4 className="font-normal text-blue-900 mb-4 font-alte text-[17px] flex items-center justify-center md:justify-start gap-2 tracking-[-0.04em]">
                             <span className="w-2 h-2 rounded-full bg-blue-500"></span>
                             Production-Grade System
                         </h4>
-                        <ul className="space-y-3 text-gray-700 font-sfpro text-sm sm:text-base inline-block text-left">
-                            <li className="flex items-start gap-2">✅ Scale to millions of vectors</li>
-                            <li className="flex items-start gap-2">✅ Atomic locking for concurrency</li>
-                            <li className="flex items-start gap-2">✅ Enterprise security & compliance</li>
+                        <ul className="space-y-3 text-gray-700 font-alte font-normal text-[15px] inline-block text-left tracking-[-0.04em]">
+                            <li className="flex items-start gap-2">Scale to millions of vectors</li>
+                            <li className="flex items-start gap-2">Atomic locking for concurrency</li>
+                            <li className="flex items-start gap-2">Enterprise security & compliance</li>
                         </ul>
                     </div>
                 </div>

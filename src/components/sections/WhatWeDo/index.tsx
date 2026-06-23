@@ -21,7 +21,7 @@ const items: WhatWeDoItem[] = [
     description: (
       <>
         Build one production agent in{" "}
-        <span className="font-semibold text-slate-700">7 days.</span>
+        <span className="text-[#0A1128]">7 days.</span>
       </>
     ),
     Icon: BuildSvg,
@@ -63,11 +63,11 @@ const WhatWeDo: React.FC = () => {
     <section className="py-16 sm:py-20 bg-[#F9F6F4] w-[calc(100%+2rem)] -ml-4 -mr-4 bg-[url('/images/bg.svg')] bg-repeat bg-auto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12">
-          <p className="text-[11px] sm:text-xs tracking-widest text-red-500 uppercase mb-3">
+          <p className="font-geist text-[12px] tracking-[0.02em] text-red-500 uppercase font-normal mb-3">
             WHAT WE DO
           </p>
           <h2
-            className="font-sfpro text-2xl font-[500] italic leading-tight mb-4 mx-auto text-[#0062FF]"
+            className="font-alte font-normal text-2xl italic leading-[1.2] tracking-[-0.04em] mb-4 mx-auto text-[#0062FF]"
             style={{
               maxWidth: "32rem",
             }}
@@ -75,7 +75,7 @@ const WhatWeDo: React.FC = () => {
             “Experiment fast, validate faster, ship only what holds up in
             production.”
           </h2>
-          <p className="text-slate-500 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="font-alte font-normal text-[#0A1128]/60 text-base sm:text-lg leading-[1.5] tracking-[-0.04em] max-w-3xl mx-auto">
             We run your AI ideas like a lab. Rapid experiments on the bench.
             Field trials on real traffic. When the mix of models, data, and code
             proves out, we lock the formula and ship it to production.
@@ -86,10 +86,10 @@ const WhatWeDo: React.FC = () => {
           {items.map(({ title, description, Icon, variant = "default" }) => (
             <div
               key={title}
-              className={`group relative rounded-xl p-5 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border transition-colors ${
+              className={`group relative rounded-none p-5 border transition-colors ${
                 variant === "primary"
                   ? "bg-[#0062FF] border-transparent"
-                  : "bg-white border-slate-100 hover:bg-[#0062FF] hover:border-transparent"
+                  : "bg-white border-[#e7e6e4] hover:bg-[#0062FF] hover:border-transparent"
               }`}
             >
               <div className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center">
@@ -111,19 +111,19 @@ const WhatWeDo: React.FC = () => {
                 </span>
               </div>
               <h3
-                className={`font-sfpro text-xl font-[500] mb-2 pr-12 ${
+                className={`font-alte font-normal text-xl tracking-[-0.04em] mb-2 pr-12 ${
                   variant === "primary"
                     ? "text-white"
-                    : "text-slate-900 group-hover:text-white"
+                    : "text-[#0A1128] group-hover:text-white"
                 }`}
               >
                 {title}
               </h3>
               <p
-                className={`text-sm font-sfpro font-[400] leading-relaxed ${
+                className={`text-[15px] font-alte font-normal leading-[1.5] tracking-[-0.04em] ${
                   variant === "primary"
                     ? "text-white/90"
-                    : "text-slate-400 group-hover:text-white/90"
+                    : "text-[#0A1128]/40 group-hover:text-white/90"
                 }`}
               >
                 {description}

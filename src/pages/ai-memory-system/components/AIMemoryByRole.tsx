@@ -130,7 +130,7 @@ const roles: RoleCardProps[] = [
         ],
         example: {
             scenario: "Customer: 'I need to return this.'",
-            response: "Hi Sarah! I see you ordered the blue sweater last week. Want to exchange it for a different size, or get a refund? (Last time you exchanged for a larger size—want me to send that again?)",
+            response: "Hi Sarah! I see you ordered the blue sweater last week. Want to exchange it for a different size, or get a refund? (Last time you exchanged for a larger size, want me to send that again?)",
         },
         businessOutcome: [
             "60% reduction in support tickets",
@@ -179,7 +179,7 @@ const roles: RoleCardProps[] = [
         ],
         example: {
             scenario: "Customer: 'My AC stopped working again.'",
-            response: "Hi Tom! I see we serviced your AC 6 months ago. Same unit? I'll send Mike—he handled it last time and knows your system.",
+            response: "Hi Tom! I see we serviced your AC 6 months ago. Same unit? I'll send Mike. He handled it last time and knows your system.",
         },
         businessOutcome: [
             "Faster diagnosis (AI knows the history)",
@@ -245,36 +245,36 @@ const AIMemoryByRole = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <p className="text-blue-600 font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 font-sfpro">
+                    <p className="text-blue-600 font-normal text-[12px] tracking-[0.02em] uppercase mb-4 font-geist">
                         Industry Applications
                     </p>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1128] font-mondwest mb-6">
+                    <h2 className="text-[32px] sm:text-[40px] font-normal text-[#0A1128] font-alte mb-6 leading-[1.2] tracking-[-0.04em]">
                         See it in action by role.
                     </h2>
-                    <p className="text-gray-600 font-sfpro text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+                    <p className="text-gray-600 font-alte font-normal text-[15px] sm:text-[17px] max-w-2xl mx-auto mb-8 leading-[1.5] tracking-[-0.04em]">
                         Memory isn't abstract. It's specific to the job your AI does.
                     </p>
                 </div>
 
                 {/* Role List Accordion */}
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden divide-y divide-gray-100">
+                <div className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden divide-y divide-[#e7e6e4]">
                     {roles.map((role, index) => {
                         const isOpen = openIndex === index;
                         return (
                             <div key={index} className="group scroll-mt-4">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className={`w-full flex items-center justify-between p-6 xs:p-8 text-left transition-colors hover:bg-gray-50 ${isOpen ? "bg-gray-50" : "bg-white"}`}
+                                    className={`w-full flex items-center justify-between p-6 xs:p-8 text-left transition-colors hover:bg-[#F9F6F4] ${isOpen ? "bg-[#F9F6F4]" : "bg-white"}`}
                                 >
                                     <div className="flex items-center gap-4 sm:gap-6">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${isOpen ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"}`}>
+                                        <div className={`w-12 h-12 rounded-none flex items-center justify-center transition-colors ${isOpen ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"}`}>
                                             {role.icon}
                                         </div>
                                         <div>
-                                            <h4 className="text-lg sm:text-xl font-bold text-[#0A1128] font-mondwest mb-1">
+                                            <h4 className="text-[20px] sm:text-[24px] font-normal text-[#0A1128] font-alte mb-1 leading-[1.2] tracking-[-0.04em]">
                                                 {role.role}
                                             </h4>
-                                            <p className="text-sm text-gray-500 font-sfpro uppercase tracking-wide">
+                                            <p className="text-[12px] text-gray-500 font-geist font-normal uppercase tracking-[0.02em]">
                                                 {role.industry}
                                             </p>
                                         </div>
@@ -293,18 +293,18 @@ const AIMemoryByRole = () => {
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                                            className="overflow-hidden bg-gray-50/50"
+                                            className="overflow-hidden bg-[#F9F6F4]"
                                         >
-                                            <div className="p-6 sm:p-8 pt-0 border-t border-gray-100">
+                                            <div className="p-6 sm:p-8 pt-0 border-t border-[#e7e6e4]">
                                                 <div className="grid md:grid-cols-2 gap-8 mt-6">
                                                     {/* Left Column: What it remembers */}
                                                     <div>
-                                                        <p className="font-bold text-gray-900 font-sfpro text-sm uppercase tracking-wide mb-4">
-                                                            🧠 What it remembers
+                                                        <p className="font-normal text-gray-900 font-geist text-[12px] uppercase tracking-[0.02em] mb-4">
+                                                            What it remembers
                                                         </p>
                                                         <ul className="space-y-3">
                                                             {role.whatItRemembers.map((item, idx) => (
-                                                                <li key={idx} className="flex items-start gap-2 text-sm text-gray-700 font-sfpro">
+                                                                <li key={idx} className="flex items-start gap-2 text-[15px] text-gray-700 font-alte font-normal tracking-[-0.04em]">
                                                                     <span className="text-blue-500 mt-0.5">•</span>
                                                                     {item}
                                                                 </li>
@@ -312,12 +312,12 @@ const AIMemoryByRole = () => {
                                                         </ul>
 
                                                         <div className="mt-8">
-                                                            <p className="font-bold text-green-700 font-sfpro text-sm uppercase tracking-wide mb-4">
-                                                                📈 Business Outcome
+                                                            <p className="font-normal text-green-700 font-geist text-[12px] uppercase tracking-[0.02em] mb-4">
+                                                                Business Outcome
                                                             </p>
                                                             <ul className="space-y-3">
                                                                 {role.businessOutcome.map((item, idx) => (
-                                                                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-700 font-sfpro">
+                                                                    <li key={idx} className="flex items-start gap-2 text-[15px] text-gray-700 font-alte font-normal tracking-[-0.04em]">
                                                                         <span className="text-green-500 mt-0.5">✓</span>
                                                                         {item}
                                                                     </li>
@@ -328,20 +328,20 @@ const AIMemoryByRole = () => {
 
                                                     {/* Right Column: Example Scenario */}
                                                     <div>
-                                                        <div className="bg-white p-6 rounded-xl border border-blue-100 shadow-sm h-full">
+                                                        <div className="bg-white p-6 rounded-none border border-[#e7e6e4] h-full">
                                                             <div className="flex items-center justify-between mb-4">
-                                                                <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wide">
+                                                                <span className="text-[12px] font-normal text-blue-600 bg-blue-50 px-3 py-1 rounded-none uppercase tracking-[0.02em] font-geist">
                                                                     Live Example
                                                                 </span>
                                                             </div>
-                                                            <div className="space-y-4 text-sm font-sfpro">
+                                                            <div className="space-y-4 text-[15px] font-alte font-normal tracking-[-0.04em]">
                                                                 <div>
-                                                                    <p className="text-gray-500 text-xs uppercase mb-1">User Says:</p>
+                                                                    <p className="text-gray-500 text-[12px] uppercase mb-1 font-geist tracking-[0.02em]">User Says:</p>
                                                                     <p className="text-gray-900 italic">"{role.example.scenario}"</p>
                                                                 </div>
-                                                                <div className="pl-4 border-l-2 border-blue-500">
-                                                                    <p className="text-blue-600 text-xs uppercase mb-1 font-bold">AI Response:</p>
-                                                                    <p className="text-blue-900 font-medium">"{role.example.response}"</p>
+                                                                <div className="pl-4 border-l-2 border-blue-600">
+                                                                    <p className="text-blue-600 text-[12px] uppercase mb-1 font-normal font-geist tracking-[0.02em]">AI Response:</p>
+                                                                    <p className="text-blue-900 font-normal">"{role.example.response}"</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -357,10 +357,10 @@ const AIMemoryByRole = () => {
                 </div>
 
                 {/* Key Insight */}
-                <div className="mt-12 bg-blue-600 rounded-xl p-8 text-center text-white shadow-lg">
-                    <p className="font-bold text-blue-200 uppercase tracking-widest text-xs mb-3">Key Insight</p>
-                    <p className="font-sfpro text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-                        Same system. Different roles. Different memories. One question: <strong>What's the repetitive job your AI should be doing right now?</strong>
+                <div className="mt-12 bg-blue-600 rounded-none p-8 text-center text-white">
+                    <p className="font-normal text-blue-200 uppercase tracking-[0.02em] text-[12px] mb-3 font-geist">Key Insight</p>
+                    <p className="font-alte font-normal text-[17px] sm:text-[20px] leading-[1.5] max-w-3xl mx-auto tracking-[-0.04em]">
+                        Same system. Different roles. Different memories. One question: <span className="font-normal">What's the repetitive job your AI should be doing right now?</span>
                     </p>
                 </div>
             </div>

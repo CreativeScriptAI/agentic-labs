@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import MetaConfig from "src/components/MetaConfig";
+import BracketButton from "src/components/BracketButton";
 import { ProgrammaticPageData } from "src/data/programmaticSeoPages";
 
 type Props = { page: ProgrammaticPageData };
@@ -15,24 +16,11 @@ const Container = ({ children, className = "", size = "md" }: { children: React.
 };
 
 const Label = ({ text, dark }: { text: string; dark?: boolean }) => (
-  <p className={`text-[11px] font-bold tracking-[0.18em] uppercase mb-4 flex items-center gap-2 ${dark ? "text-[#FCCA07]/70" : "text-[#0A1128]/40"}`}>
-    <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dark ? "bg-[#FCCA07]" : "bg-[#FCCA07]"}`} />
+  <p className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-4 flex items-center gap-2 ${dark ? "text-[#FCCA07]/70" : "text-red-500"}`}>
+    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-[#FCCA07]" />
     {text}
   </p>
 );
-
-const Btn = ({ href, label, variant = "primary" }: { href: string; label: string; variant?: "primary" | "outline" | "outline-dark" }) => {
-  const styles = {
-    primary: "bg-[#0A1128] text-white hover:bg-[#131d3a]",
-    outline: "border-2 border-[#0A1128]/15 text-[#0A1128] hover:border-[#0A1128]/40",
-    "outline-dark": "border-2 border-white/20 text-white hover:border-white/50",
-  };
-  return (
-    <Link href={href} className={`inline-flex items-center justify-center whitespace-nowrap rounded-lg px-7 py-3.5 text-sm font-semibold transition-all active:scale-[0.98] ${styles[variant]}`}>
-      {label}
-    </Link>
-  );
-};
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
 
@@ -191,7 +179,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* ────────────────────────────────────────────────────────────────────── */}
       {/* HERO                                                                  */}
       {/* ────────────────────────────────────────────────────────────────────── */}
-      <section className="bg-[#0A1128] pt-28 pb-16 sm:pt-32 sm:pb-20 relative overflow-hidden">
+      <section className="bg-[#F9F6F4] pt-28 pb-16 sm:pt-32 sm:pb-20 relative overflow-hidden">
         <Container size="lg" className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -200,26 +188,24 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
               {/* Trust badge */}
               <div className="flex items-center gap-2 mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FCCA07]" />
-                <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/35">
+                <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-red-500">
                   {page.heroLabel}
                 </span>
               </div>
 
-              <h1 className="text-[2.5rem] sm:text-5xl lg:text-[3.4rem] font-eb-garamond italic text-white leading-[1.1] tracking-[-0.01em] mb-6">
+              <h1 className="text-[2.5rem] sm:text-5xl lg:text-[3.4rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
                 {page.heroHeadline}
               </h1>
 
-              <p className="text-base sm:text-lg text-white/45 max-w-xl mb-10 leading-relaxed">
+              <p className="font-alte font-normal text-[15px] sm:text-base text-slate-600 max-w-xl mb-10 leading-[1.5] tracking-[-0.04em]">
                 {page.heroSubheadline}
               </p>
 
               {/* CTA row */}
               <div className="flex flex-col sm:flex-row gap-3 sm:items-center mb-14">
-                <Link href={page.ctaHref} className="inline-flex items-center justify-center rounded-lg bg-[#FCCA07] text-[#0A1128] font-semibold px-7 py-3.5 text-sm hover:bg-[#f0bd00] transition-all active:scale-[0.98]">
-                  {page.ctaLabel}
-                </Link>
+                <BracketButton label={page.ctaLabel} href={page.ctaHref} variant="primary" />
                 {page.howItWorks && (
-                  <a href="#how-it-works" className="inline-flex items-center gap-2 text-sm font-medium text-white/35 hover:text-white/60 transition-colors px-1 py-3">
+                  <a href="#how-it-works" className="font-alte font-normal inline-flex items-center gap-2 text-[15px] tracking-[-0.04em] text-slate-500 hover:text-[#0A1128] transition-colors px-1 py-3">
                     See how it works
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </a>
@@ -228,11 +214,11 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
 
               {/* Stats row — bottom of left column */}
               {page.proofStats && (
-                <div className="flex items-start gap-0 border-t border-white/[0.06] pt-8">
+                <div className="flex items-start gap-0 border-t border-[#e7e6e4] pt-8">
                   {page.proofStats.map((s, i) => (
-                    <div key={i} className={`flex-1 ${i > 0 ? "border-l border-white/[0.06] pl-6" : ""} ${i < page.proofStats!.length - 1 ? "pr-6" : ""}`}>
-                      <p className="font-eb-garamond italic text-3xl sm:text-4xl text-[#FCCA07] leading-none tracking-tight">{s.stat}</p>
-                      <p className="text-[9px] font-bold tracking-[0.12em] uppercase text-white/25 mt-2 leading-tight">{s.label}</p>
+                    <div key={i} className={`flex-1 ${i > 0 ? "border-l border-[#e7e6e4] pl-6" : ""} ${i < page.proofStats!.length - 1 ? "pr-6" : ""}`}>
+                      <p className="font-alte font-normal text-3xl sm:text-4xl text-blue-600 leading-none tracking-[-0.04em]">{s.stat}</p>
+                      <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-slate-400 mt-2 leading-tight">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -242,7 +228,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             {/* ── Right: Image with floating badges ── */}
             <div className="hidden lg:block relative" style={{ minHeight: 480 }}>
               {/* Main image */}
-              <div className="relative w-full h-[480px] rounded-3xl overflow-hidden">
+              <div className="relative w-full h-[480px] rounded-none overflow-hidden border border-[#e7e6e4]">
                 <Image
                   src={getImages(page.pathSegments[0]).hero}
                   alt={page.heroHeadline}
@@ -256,29 +242,29 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
               </div>
 
               {/* Floating badge: top-right — yellow accent card */}
-              <div className="absolute -top-4 -right-4 bg-[#FCCA07] rounded-2xl px-5 py-4 shadow-lg" style={{ zIndex: 4 }}>
-                <p className="font-eb-garamond italic text-3xl text-[#0A1128] leading-none">{page.proofStats?.[2]?.stat || "24/7"}</p>
-                <p className="text-[10px] font-bold tracking-widest uppercase text-[#0A1128]/50 mt-1.5">{page.proofStats?.[2]?.label || "Always on"}</p>
+              <div className="absolute -top-4 -right-4 bg-[#FCCA07] rounded-none px-5 py-4" style={{ zIndex: 4 }}>
+                <p className="font-alte font-normal text-3xl text-[#0A1128] leading-none tracking-[-0.04em]">{page.proofStats?.[2]?.stat || "24/7"}</p>
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-[#0A1128]/50 mt-1.5">{page.proofStats?.[2]?.label || "Always on"}</p>
               </div>
 
               {/* Floating badge: bottom-left — WhatsApp */}
-              <div className="absolute -bottom-3 -left-3 bg-white rounded-2xl px-5 py-4 shadow-lg border border-gray-100" style={{ zIndex: 4 }}>
+              <div className="absolute -bottom-3 -left-3 bg-white rounded-none px-5 py-4 border border-[#e7e6e4]" style={{ zIndex: 4 }}>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-none bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[#0A1128]">WhatsApp summary</p>
-                    <p className="text-[11px] text-gray-400">Sent in &lt; 10 seconds</p>
+                    <p className="font-alte font-normal text-[15px] text-[#0A1128]">WhatsApp summary</p>
+                    <p className="font-alte font-normal text-[12px] text-slate-400">Sent in &lt; 10 seconds</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating badge: bottom-right — live indicator */}
-              <div className="absolute bottom-8 -right-3 bg-[#0A1128] rounded-xl px-4 py-3 shadow-lg border border-white/10" style={{ zIndex: 4 }}>
+              <div className="absolute bottom-8 -right-3 bg-white rounded-none px-4 py-3 border border-[#e7e6e4]" style={{ zIndex: 4 }}>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-[11px] text-white/70 font-medium">Live in 7 days</span>
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="font-alte font-normal text-[12px] text-[#0A1128]">Live in 7 days</span>
                 </div>
               </div>
             </div>
@@ -292,7 +278,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       <section className="py-20 sm:py-28 bg-white">
         <Container size="lg">
           <Label text="The Problem" />
-          <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-[#0A1128] leading-[1.1] mb-12 max-w-2xl">
+          <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-12 max-w-2xl">
             {page.painTitle}
           </h2>
 
@@ -300,9 +286,9 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             {/* Pain points */}
             <div className="lg:col-span-7 space-y-0">
               {page.painPoints.map((item, i) => (
-                <div key={i} className={`flex gap-5 py-6 ${i > 0 ? "border-t border-gray-100" : ""}`}>
-                  <span className="text-[13px] font-mono text-[#0A1128]/20 pt-0.5 flex-shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                  <p className="text-[15px] text-gray-600 leading-relaxed">{item}</p>
+                <div key={i} className={`flex gap-5 py-6 ${i > 0 ? "border-t border-[#e7e6e4]" : ""}`}>
+                  <span className="font-geist text-[12px] text-[#0A1128]/30 pt-0.5 flex-shrink-0 tracking-[0.02em]">{String(i + 1).padStart(2, "0")}</span>
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{item}</p>
                 </div>
               ))}
             </div>
@@ -310,28 +296,28 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             {/* Cost callout */}
             <div className="lg:col-span-5">
               {page.costCallout && (
-                <div className="bg-[#FAFAF8] rounded-2xl border border-gray-100 overflow-hidden sticky top-28">
+                <div className="bg-[#F9F6F4] rounded-none border border-[#e7e6e4] overflow-hidden sticky top-28">
                   <div className="p-6 space-y-4">
                     {page.costCallout.items.map((row) => (
                       <div key={row.label} className="flex justify-between gap-3">
-                        <span className="text-sm text-gray-500">{row.label}</span>
-                        <span className="text-sm font-semibold text-[#0A1128] whitespace-nowrap">{row.amount}</span>
+                        <span className="font-alte font-normal text-[15px] text-slate-500 tracking-[-0.04em]">{row.label}</span>
+                        <span className="font-alte font-normal text-[15px] text-[#0A1128] whitespace-nowrap tracking-[-0.04em]">{row.amount}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="border-t border-gray-100 p-6 space-y-3">
+                  <div className="border-t border-[#e7e6e4] p-6 space-y-3">
                     <div className="flex justify-between gap-3">
-                      <span className="text-sm font-semibold text-gray-900">Revenue at risk</span>
-                      <span className="text-sm font-bold text-rose-600">{page.costCallout.total}</span>
+                      <span className="font-alte font-normal text-[15px] text-[#0A1128] tracking-[-0.04em]">Revenue at risk</span>
+                      <span className="font-alte font-normal text-[15px] text-red-500 tracking-[-0.04em]">{page.costCallout.total}</span>
                     </div>
                     <div className="flex justify-between gap-3">
-                      <span className="text-sm text-gray-500">We solve it for</span>
-                      <span className="text-sm font-bold text-[#0A1128] bg-[#FCCA07]/20 px-2 py-0.5 rounded">{page.costCallout.solvesFor}</span>
+                      <span className="font-alte font-normal text-[15px] text-slate-500 tracking-[-0.04em]">We solve it for</span>
+                      <span className="font-alte font-normal text-[15px] text-[#0A1128] bg-[#FCCA07]/20 px-2 py-0.5 rounded-none tracking-[-0.04em]">{page.costCallout.solvesFor}</span>
                     </div>
                   </div>
                   {page.costCallout.source && (
-                    <div className="border-t border-gray-100 px-6 py-3">
-                      <p className="text-[10px] text-gray-400">{page.costCallout.source}</p>
+                    <div className="border-t border-[#e7e6e4] px-6 py-3">
+                      <p className="font-alte font-normal text-[12px] text-slate-400">{page.costCallout.source}</p>
                     </div>
                   )}
                 </div>
@@ -341,10 +327,10 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
               {page.practitionerQuote && (
                 <div className="mt-6 relative">
                   <QuoteIcon />
-                  <p className="text-[15px] text-gray-600 italic leading-relaxed mt-2">
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em] mt-2">
                     &ldquo;{page.practitionerQuote.text}&rdquo;
                   </p>
-                  <p className="text-xs text-gray-400 font-medium mt-3">— {page.practitionerQuote.attribution}</p>
+                  <p className="font-alte font-normal text-[12px] text-slate-400 mt-3">{page.practitionerQuote.attribution}</p>
                 </div>
               )}
             </div>
@@ -355,37 +341,37 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* ────────────────────────────────────────────────────────────────────── */}
       {/* STATUS QUO + INDUSTRY SIGNAL                                          */}
       {/* ────────────────────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-[#FAFAF8] border-y border-gray-100">
+      <section className="py-20 sm:py-28 bg-[#F9F6F4] border-y border-[#e7e6e4]">
         <Container size="lg">
           <Label text="What You've Already Tried" />
-          <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-[#0A1128] leading-[1.1] mb-10 max-w-2xl">
+          <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-10 max-w-2xl">
             {page.statusQuoTitle}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
             {page.statusQuoItems.map((item, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-100 p-6 relative">
+              <div key={i} className="bg-white rounded-none border border-[#e7e6e4] p-6 relative">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-5 h-5 rounded-full border border-rose-200 bg-rose-50 flex items-center justify-center flex-shrink-0">
                     <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#E11D48" strokeWidth="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                   </span>
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-gray-400">Option {i + 1}</span>
+                  <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-slate-400">Option {i + 1}</span>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">{item}</p>
+                <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{item}</p>
               </div>
             ))}
           </div>
 
           {page.industrySignal && (
-            <div className="bg-white rounded-2xl border border-gray-100 p-8 sm:p-10">
+            <div className="bg-white rounded-none border border-[#e7e6e4] p-8 sm:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-4">
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-blue-600 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-full">Market Signal</span>
-                  <h3 className="text-xl font-eb-garamond italic text-[#0A1128] mt-4 leading-snug">{page.industrySignal.headline}</h3>
+                  <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-blue-600 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-none">Market Signal</span>
+                  <h3 className="text-xl font-alte font-normal text-[#0A1128] mt-4 leading-[1.2] tracking-[-0.04em]">{page.industrySignal.headline}</h3>
                 </div>
                 <div className="lg:col-span-8">
-                  <p className="text-sm text-gray-500 leading-relaxed">{page.industrySignal.body}</p>
-                  <p className="text-[10px] text-gray-400 font-medium mt-4">
+                  <p className="font-alte font-normal text-[15px] text-slate-500 leading-[1.5] tracking-[-0.04em]">{page.industrySignal.body}</p>
+                  <p className="font-alte font-normal text-[12px] text-slate-400 mt-4">
                     {page.industrySignal.source}{page.industrySignal.date ? ` · ${page.industrySignal.date}` : ""}
                   </p>
                 </div>
@@ -403,11 +389,11 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
             <div>
               <Label text="What We Build" />
-              <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-[#0A1128] leading-[1.1] max-w-xl">
+              <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] max-w-xl">
                 {page.solutionTitle}
               </h2>
             </div>
-            <div className="relative h-[280px] rounded-2xl overflow-hidden">
+            <div className="relative h-[280px] rounded-none overflow-hidden border border-[#e7e6e4]">
               <Image
                 src={getImages(page.pathSegments[0]).solution}
                 alt={page.solutionTitle}
@@ -421,17 +407,17 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           {page.layers ? (
             <div className="space-y-0">
               {page.layers.map((layer, i) => (
-                <div key={layer.title} className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start py-12 ${i > 0 ? "border-t border-gray-100" : ""}`}>
+                <div key={layer.title} className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start py-12 ${i > 0 ? "border-t border-[#e7e6e4]" : ""}`}>
                   {/* Number + title */}
                   <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <span className="font-eb-garamond italic text-[5rem] text-[#FCCA07]/20 leading-none block -mb-4">
+                    <span className="font-alte font-normal text-[5rem] text-[#FCCA07] leading-none block -mb-4 tracking-[-0.04em]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-xl font-eb-garamond italic text-[#0A1128] leading-snug">{layer.title}</h3>
+                    <h3 className="text-xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em]">{layer.title}</h3>
                   </div>
                   {/* Body */}
                   <div className={`lg:col-span-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                    <p className="text-[15px] text-gray-500 leading-[1.8]">{layer.body}</p>
+                    <p className="font-alte font-normal text-[15px] text-slate-500 leading-[1.5] tracking-[-0.04em]">{layer.body}</p>
                   </div>
                 </div>
               ))}
@@ -440,8 +426,8 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             <div className="space-y-4 max-w-3xl">
               {page.solutionItems.map((item, i) => (
                 <div key={i} className="flex gap-4 py-4">
-                  <span className="font-eb-garamond italic text-3xl text-[#0A1128]/10 leading-none flex-shrink-0 w-10">{String(i + 1).padStart(2, "0")}</span>
-                  <p className="text-[15px] text-gray-600 leading-relaxed pt-1">{item}</p>
+                  <span className="font-alte font-normal text-3xl text-[#0A1128]/20 leading-none flex-shrink-0 w-10 tracking-[-0.04em]">{String(i + 1).padStart(2, "0")}</span>
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em] pt-1">{item}</p>
                 </div>
               ))}
             </div>
@@ -453,46 +439,46 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* HOW IT WORKS                                                          */}
       {/* ────────────────────────────────────────────────────────────────────── */}
       {page.howItWorks && (
-        <section id="how-it-works" className="py-20 sm:py-28 bg-[#0A1128]">
+        <section id="how-it-works" className="py-20 sm:py-28 bg-[#F9F6F4] border-y border-[#e7e6e4]">
           <Container size="lg">
-            <Label text="The Process" dark />
-            <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-white leading-[1.1] mb-4 max-w-2xl">
+            <Label text="The Process" />
+            <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-4 max-w-2xl">
               From first call to live. One week.
             </h2>
-            <p className="text-base text-white/35 mb-14 max-w-xl">
+            <p className="font-alte font-normal text-[15px] sm:text-base text-slate-500 mb-14 max-w-xl leading-[1.5] tracking-[-0.04em]">
               We handle the prompts, the telephony, and the integrations. You just answer the qualified pings.
             </p>
 
             {/* Timeline */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 border border-[#e7e6e4] bg-white">
               {page.howItWorks.map((step, i) => (
                 <div
                   key={step.phase}
-                  className={`relative cursor-pointer group ${i > 0 ? "lg:border-l border-t lg:border-t-0 border-white/[0.06]" : ""}`}
+                  className={`relative cursor-pointer group ${i > 0 ? "lg:border-l border-t lg:border-t-0 border-[#e7e6e4]" : ""}`}
                   onClick={() => setActiveStep(i)}
                 >
                   {/* Step content */}
-                  <div className={`p-6 lg:p-8 transition-all ${activeStep === i ? "bg-white/[0.04]" : "hover:bg-white/[0.02]"}`}>
+                  <div className={`p-6 lg:p-8 transition-all ${activeStep === i ? "bg-[#F9F6F4]" : "hover:bg-[#F9F6F4]/60"}`}>
                     {/* Phase label */}
                     <div className="flex items-center gap-3 mb-5">
-                      <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
-                        activeStep === i ? "bg-[#FCCA07] text-[#0A1128]" : "bg-white/[0.06] text-white/40"
+                      <span className={`w-8 h-8 rounded-full flex items-center justify-center font-geist text-[12px] font-normal tracking-[0.02em] transition-colors ${
+                        activeStep === i ? "bg-[#FCCA07] text-[#0A1128]" : "bg-[#F9F6F4] border border-[#e7e6e4] text-slate-400"
                       }`}>
                         {String(step.week).padStart(2, "0")}
                       </span>
-                      <span className={`text-[10px] font-bold tracking-widest uppercase transition-colors ${
-                        activeStep === i ? "text-white/70" : "text-white/25"
+                      <span className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase transition-colors ${
+                        activeStep === i ? "text-[#0A1128]" : "text-slate-400"
                       }`}>
                         {step.phase}
                       </span>
                     </div>
 
-                    <p className={`text-sm leading-relaxed transition-colors ${activeStep === i ? "text-white/60" : "text-white/20"}`}>
+                    <p className={`font-alte font-normal text-[15px] leading-[1.5] tracking-[-0.04em] transition-colors ${activeStep === i ? "text-slate-600" : "text-slate-400"}`}>
                       {step.body}
                     </p>
 
-                    <div className={`mt-5 pt-4 border-t transition-colors ${activeStep === i ? "border-white/10" : "border-white/[0.04]"}`}>
-                      <p className={`text-xs font-medium transition-colors ${activeStep === i ? "text-white/40" : "text-white/15"}`}>
+                    <div className={`mt-5 pt-4 border-t transition-colors ${activeStep === i ? "border-[#e7e6e4]" : "border-[#e7e6e4]/60"}`}>
+                      <p className={`font-alte font-normal text-[12px] transition-colors ${activeStep === i ? "text-slate-500" : "text-slate-400"}`}>
                         Your time: {step.youSpend}
                       </p>
                     </div>
@@ -510,7 +496,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       <section className="py-20 sm:py-28 bg-white">
         <Container size="lg">
           <Label text="Results" />
-          <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-[#0A1128] leading-[1.1] mb-14 max-w-2xl">
+          <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-14 max-w-2xl">
             {page.proofTitle}
           </h2>
 
@@ -519,22 +505,22 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
               {/* Left — client + problem */}
               <div className="lg:col-span-5">
-                <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-3">{page.caseStudy.client}</p>
-                <div className="bg-[#FAFAF8] rounded-2xl border border-gray-100 p-6">
-                  <p className="text-[10px] font-bold tracking-widest uppercase text-rose-500 mb-2">The problem</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{page.caseStudy.problem}</p>
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-slate-400 mb-3">{page.caseStudy.client}</p>
+                <div className="bg-[#F9F6F4] rounded-none border border-[#e7e6e4] p-6">
+                  <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-red-500 mb-2">The problem</p>
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{page.caseStudy.problem}</p>
                 </div>
               </div>
 
               {/* Right — system + result */}
               <div className="lg:col-span-7 space-y-4">
-                <div className="bg-[#FAFAF8] rounded-2xl border border-gray-100 p-6">
-                  <p className="text-[10px] font-bold tracking-widest uppercase text-blue-600 mb-2">What we built</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{page.caseStudy.system}</p>
+                <div className="bg-[#F9F6F4] rounded-none border border-[#e7e6e4] p-6">
+                  <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-blue-600 mb-2">What we built</p>
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{page.caseStudy.system}</p>
                 </div>
-                <div className="bg-[#0A1128] rounded-2xl p-6 border-l-4 border-[#FCCA07]">
-                  <p className="text-[10px] font-bold tracking-widest uppercase text-[#FCCA07] mb-2">The result</p>
-                  <p className="text-sm text-white/70 leading-relaxed">{page.caseStudy.result}</p>
+                <div className="bg-[#F9F6F4] rounded-none p-6 border border-[#e7e6e4] border-l-4 border-l-[#FCCA07]">
+                  <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-emerald-600 mb-2">The result</p>
+                  <p className="font-alte font-normal text-[15px] text-[#0A1128] leading-[1.5] tracking-[-0.04em]">{page.caseStudy.result}</p>
                 </div>
               </div>
             </div>
@@ -542,17 +528,17 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
 
           {/* Testimonial + image */}
           {page.testimonial && (
-            <div className="border-t border-gray-100 pt-10 mt-10">
+            <div className="border-t border-[#e7e6e4] pt-10 mt-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-7">
                   <QuoteIcon />
-                  <p className="text-xl sm:text-2xl font-eb-garamond italic text-[#0A1128] leading-snug mt-3">
+                  <p className="text-xl sm:text-2xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mt-3">
                     &ldquo;{page.testimonial.quote}&rdquo;
                   </p>
-                  <p className="text-sm text-gray-400 font-medium mt-4">— {page.testimonial.author}</p>
+                  <p className="font-alte font-normal text-[15px] text-slate-400 mt-4">{page.testimonial.author}</p>
                 </div>
                 <div className="lg:col-span-5">
-                  <div className="relative h-[240px] rounded-2xl overflow-hidden">
+                  <div className="relative h-[240px] rounded-none overflow-hidden border border-[#e7e6e4]">
                     <Image
                       src={getImages(page.pathSegments[0]).result}
                       alt="Result"
@@ -570,9 +556,9 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           {!page.caseStudy && (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {page.proofBullets.map((item) => (
-                <div key={item} className="flex items-start gap-3 p-5 rounded-xl border border-gray-100 bg-[#FAFAF8]">
+                <div key={item} className="flex items-start gap-3 p-5 rounded-none border border-[#e7e6e4] bg-[#F9F6F4]">
                   <CheckSvg />
-                  <p className="text-sm text-gray-600 leading-relaxed">{item}</p>
+                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{item}</p>
                 </div>
               ))}
             </div>
@@ -584,35 +570,35 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* FIT CHECKLIST                                                         */}
       {/* ────────────────────────────────────────────────────────────────────── */}
       {page.fitChecklist && (
-        <section className="py-20 sm:py-28 bg-[#FAFAF8] border-y border-gray-100">
+        <section className="py-20 sm:py-28 bg-[#F9F6F4] border-y border-[#e7e6e4]">
           <Container size="lg">
             <Label text="Is This for You?" />
-            <h2 className="text-3xl sm:text-[2.75rem] font-eb-garamond italic text-[#0A1128] leading-[1.1] mb-12 max-w-2xl">
+            <h2 className="text-3xl sm:text-[2.5rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-12 max-w-2xl">
               {page.fitChecklist.headline}
             </h2>
 
             <div className="grid gap-6 lg:grid-cols-2">
               {/* For you */}
-              <div className="bg-white rounded-2xl border border-gray-100 p-8">
-                <p className="text-[10px] font-bold tracking-widest uppercase text-emerald-600 mb-6">This is for you if</p>
+              <div className="bg-white rounded-none border border-[#e7e6e4] p-8">
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-emerald-600 mb-6">This is for you if</p>
                 <ul className="space-y-4">
                   {page.fitChecklist.forYou.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckSvg className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                      <span className="font-alte font-normal text-[15px] text-[#0A1128] leading-[1.5] tracking-[-0.04em]">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Not for you */}
-              <div className="bg-white rounded-2xl border border-gray-100 p-8">
-                <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-6">This is NOT for you if</p>
+              <div className="bg-white rounded-none border border-[#e7e6e4] p-8">
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-slate-400 mb-6">This is NOT for you if</p>
                 <ul className="space-y-4">
                   {page.fitChecklist.notForYou.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <XSvg className="w-4 h-4 text-gray-300 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-500 leading-relaxed">{item}</span>
+                      <span className="font-alte font-normal text-[15px] text-slate-500 leading-[1.5] tracking-[-0.04em]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -620,7 +606,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             </div>
 
             {page.fitChecklist.geographicNote && (
-              <p className="text-sm text-gray-500 mt-6 text-center">{page.fitChecklist.geographicNote}</p>
+              <p className="font-alte font-normal text-[15px] text-slate-500 mt-6 text-center tracking-[-0.04em]">{page.fitChecklist.geographicNote}</p>
             )}
           </Container>
         </section>
@@ -635,7 +621,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             {/* Left heading */}
             <div className="lg:col-span-4">
               <Label text="FAQ" />
-              <h2 className="text-3xl font-eb-garamond italic text-[#0A1128] leading-tight lg:sticky lg:top-28">
+              <h2 className="text-3xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] lg:sticky lg:top-28">
                 Questions we get asked.
               </h2>
             </div>
@@ -643,13 +629,13 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             {/* Right accordion */}
             <div className="lg:col-span-8 space-y-0">
               {page.faq.map((item, i) => (
-                <div key={i} className={`${i > 0 ? "border-t border-gray-100" : ""}`}>
+                <div key={i} className={`${i > 0 ? "border-t border-[#e7e6e4]" : ""}`}>
                   <button
                     className="w-full flex items-start justify-between gap-4 py-5 text-left group"
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   >
-                    <span className="font-semibold text-[15px] text-[#0A1128] group-hover:text-[#0A1128]/70 transition-colors">{item.question}</span>
-                    <span className={`w-6 h-6 rounded-full border flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${openFaq === i ? "bg-[#FCCA07] border-[#FCCA07] rotate-180" : "border-gray-200"}`}>
+                    <span className="font-alte font-normal text-[15px] text-[#0A1128] group-hover:text-[#0A1128]/70 transition-colors tracking-[-0.04em]">{item.question}</span>
+                    <span className={`w-6 h-6 rounded-full border flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${openFaq === i ? "bg-[#FCCA07] border-[#FCCA07] rotate-180" : "border-[#e7e6e4]"}`}>
                       <svg className={`w-3 h-3 ${openFaq === i ? "text-[#0A1128]" : "text-gray-400"}`} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
@@ -664,7 +650,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-sm text-gray-500 leading-relaxed pb-5 pr-10">{item.answer}</p>
+                        <p className="font-alte font-normal text-[15px] text-slate-500 leading-[1.5] tracking-[-0.04em] pb-5 pr-10">{item.answer}</p>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -678,25 +664,25 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
       {/* ────────────────────────────────────────────────────────────────────── */}
       {/* FINAL CTA                                                             */}
       {/* ────────────────────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-[#0A1128]">
+      <section className="py-20 sm:py-28 bg-[#F9F6F4]">
         <Container size="md">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-white leading-tight mb-4">
+          <div className="rounded-none bg-white border border-[#e7e6e4] px-4 py-12 sm:px-12 sm:py-16 text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-4">
               Stop losing revenue to<br />
-              <span className="text-white/40">an unanswered phone.</span>
+              <span className="text-blue-600">an unanswered phone.</span>
             </h2>
-            <p className="text-white/35 mb-10 max-w-md mx-auto text-sm leading-relaxed">
+            <p className="font-alte font-normal text-slate-500 mb-10 max-w-md mx-auto text-[15px] leading-[1.5] tracking-[-0.04em]">
               {page.ctaSupportText}
             </p>
 
-            <Link href={page.ctaHref} className="inline-flex items-center justify-center rounded-lg bg-[#FCCA07] text-[#0A1128] font-semibold px-8 py-4 text-sm hover:bg-[#f0bd00] transition-all active:scale-[0.98]">
-              {page.ctaLabel}
-            </Link>
+            <div className="flex justify-center">
+              <BracketButton label={page.ctaLabel} href={page.ctaHref} variant="primary" />
+            </div>
 
             {page.ctaEmailFallback && (
-              <p className="mt-6 text-sm text-white/25">
+              <p className="mt-6 font-alte font-normal text-[15px] text-slate-400">
                 Or email{" "}
-                <a href={`mailto:${page.ctaEmailFallback}`} className="text-white/40 hover:text-white/70 transition-colors underline underline-offset-2">
+                <a href={`mailto:${page.ctaEmailFallback}`} className="text-[#0A1128] hover:text-blue-600 transition-colors underline underline-offset-2">
                   {page.ctaEmailFallback}
                 </a>
               </p>
@@ -704,10 +690,10 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           </div>
 
           {/* Related links */}
-          <div className="mt-16 pt-8 border-t border-white/[0.06]">
+          <div className="mt-16 pt-8 border-t border-[#e7e6e4]">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
               {page.relatedLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-white/30 hover:text-white/60 transition-colors">
+                <Link key={link.href} href={link.href} className="flex items-center gap-2 font-alte font-normal text-[15px] text-slate-500 hover:text-[#0A1128] transition-colors tracking-[-0.04em]">
                   {link.label}
                   <ArrowIcon />
                 </Link>

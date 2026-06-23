@@ -14,7 +14,7 @@ const sections = [
           We collect information you provide directly to us, information we
           collect automatically, and information from third-party sources.
         </p>
-        <h3 className="text-lg font-semibold text-slate-800 mb-2">
+        <h3 className="font-alte font-normal text-lg text-slate-800 tracking-[-0.04em] mb-2">
           Information You Provide
         </h3>
         <ul className="list-disc pl-6 space-y-1 mb-4 text-slate-600">
@@ -36,7 +36,7 @@ const sections = [
             onboarding or discovery calls.
           </li>
         </ul>
-        <h3 className="text-lg font-semibold text-slate-800 mb-2">
+        <h3 className="font-alte font-normal text-lg text-slate-800 tracking-[-0.04em] mb-2">
           Information Collected Automatically
         </h3>
         <ul className="list-disc pl-6 space-y-1 mb-4 text-slate-600">
@@ -58,7 +58,7 @@ const sections = [
             performance data.
           </li>
         </ul>
-        <h3 className="text-lg font-semibold text-slate-800 mb-2">
+        <h3 className="font-alte font-normal text-lg text-slate-800 tracking-[-0.04em] mb-2">
           Information from Third Parties
         </h3>
         <ul className="list-disc pl-6 space-y-1 text-slate-600">
@@ -146,7 +146,7 @@ const sections = [
           </li>
           <li>
             <strong>Consent:</strong> where you have given us clear, freely
-            given consent — for example, for certain marketing communications or
+            given consent, for example, for certain marketing communications or
             cookies.
           </li>
           <li>
@@ -370,9 +370,9 @@ const sections = [
         processed in countries other than your own, including countries whose
         data protection laws may differ from those in your jurisdiction. Where
         we transfer data outside the European Economic Area (EEA) or UK, we
-        ensure appropriate safeguards are in place — such as Standard
+        ensure appropriate safeguards are in place, such as Standard
         Contractual Clauses approved by the European Commission, or equivalent
-        mechanisms — to protect your personal data.
+        mechanisms, to protect your personal data.
       </p>
     ),
   },
@@ -453,8 +453,8 @@ const sections = [
           Privacy Policy or the way we handle your personal data, please contact
           us:
         </p>
-        <div className="bg-white border border-gray-200 rounded-xl p-6 text-slate-700 space-y-1">
-          <p className="font-semibold text-slate-900">Agentic AI Labs</p>
+        <div className="bg-white border border-[#e7e6e4] rounded-none p-6 text-slate-700 space-y-1">
+          <p className="font-alte font-normal text-slate-900">Agentic AI Labs</p>
           <p>
             Email:{" "}
             <a
@@ -489,11 +489,11 @@ const PrivacyPolicyPage = () => {
     <RootLayout>
       <NextSeo
         title="Privacy Policy | Agentic AI Labs"
-        description="Agentic AI Labs Privacy Policy — how we collect, use, and protect your personal data."
+        description="Agentic AI Labs Privacy Policy. How we collect, use, and protect your personal data."
         openGraph={{
           title: "Privacy Policy | Agentic AI Labs",
           description:
-            "Agentic AI Labs Privacy Policy — how we collect, use, and protect your personal data.",
+            "Agentic AI Labs Privacy Policy. How we collect, use, and protect your personal data.",
           type: "website",
           url: "https://www.tryagentikai.com/privacy-policy",
         }}
@@ -516,17 +516,17 @@ const PrivacyPolicyPage = () => {
           <EllipseBackground />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-blue-600 font-medium text-sm uppercase tracking-widest mb-4">
+          <p className="text-red-500 font-geist uppercase text-[12px] tracking-[0.02em] font-normal mb-4">
             Legal
           </p>
-          <h1 className="font-mondwest text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-tight mb-6">
+          <h1 className="font-alte font-normal text-4xl sm:text-5xl lg:text-6xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
             Privacy Policy
           </h1>
-          <p className="text-slate-500 text-sm sm:text-base">
-            Effective Date: <strong>18 March 2026</strong>
+          <p className="font-alte font-normal text-slate-500 text-[15px] tracking-[-0.04em] leading-[1.5]">
+            Effective Date: <strong className="font-normal">18 March 2026</strong>
           </p>
-          <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            At <strong>Agentic AI Labs</strong>, we take your privacy seriously.
+          <p className="mt-4 font-alte font-normal text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-[1.5] tracking-[-0.04em]">
+            At <strong className="font-normal">Agentic AI Labs</strong>, we take your privacy seriously.
             This policy explains what data we collect, how we use it, and the
             choices you have.
           </p>
@@ -535,11 +535,11 @@ const PrivacyPolicyPage = () => {
 
       {/* Table of Contents */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-12">
-          <h2 className="font-semibold text-slate-900 mb-4 text-base">
+        <div className="bg-[#F9F6F4] border border-[#e7e6e4] rounded-none p-6 mb-12">
+          <h2 className="font-geist uppercase tracking-[0.02em] font-normal text-[#0A1128] mb-4 text-[15px]">
             Contents
           </h2>
-          <ol className="space-y-1 text-sm text-blue-700">
+          <ol className="space-y-1 font-alte font-normal text-[15px] tracking-[-0.04em] leading-[1.5] text-blue-600">
             {sections.map((s) => (
               <li key={s.id}>
                 <a href={`#${s.id}`} className="hover:underline">
@@ -554,20 +554,20 @@ const PrivacyPolicyPage = () => {
         <div className="space-y-12">
           {sections.map((s) => (
             <section key={s.id} id={s.id} className="scroll-mt-24">
-              <h2 className="font-mondwest text-2xl sm:text-3xl text-slate-900 mb-5 pb-3 border-b border-gray-200">
+              <h2 className="font-alte font-normal text-2xl sm:text-3xl text-[#0A1128] tracking-[-0.04em] leading-[1.2] mb-5 pb-3 border-b border-[#e7e6e4]">
                 {s.title}
               </h2>
-              <div className="text-slate-600 leading-relaxed">{s.content}</div>
+              <div className="font-alte font-normal text-slate-600 text-base leading-[1.5] tracking-[-0.04em]">{s.content}</div>
             </section>
           ))}
         </div>
 
         {/* Bottom note */}
-        <div className="mt-16 mb-8 text-center text-sm text-slate-400">
+        <div className="mt-16 mb-8 text-center font-geist uppercase tracking-[0.02em] font-normal text-[12px] text-slate-400">
           Last updated: 18 March 2026 &nbsp;·&nbsp; Agentic AI Labs &nbsp;·&nbsp;{" "}
           <a
             href="mailto:aditya@tryagentikai.com"
-            className="text-blue-500 hover:underline"
+            className="text-blue-600 hover:underline"
           >
             aditya@tryagentikai.com
           </a>

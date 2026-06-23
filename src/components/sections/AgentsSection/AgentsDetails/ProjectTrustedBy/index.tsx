@@ -14,7 +14,7 @@ const ProjectTrustedBy = ({ data }: ProjectTrustedByProps) => {
   return (
     <section className="w-full overflow-hidden ">
       <div className="text-center py-8">
-        <span className="section_label text-slate-600 text-center font-sfpro text-xs font-medium leading-3 tracking-[2px] uppercase">
+        <span className="section_label text-slate-600 text-center font-geist text-[12px] font-normal leading-3 tracking-[0.02em] uppercase">
           {data.title}
         </span>
       </div>

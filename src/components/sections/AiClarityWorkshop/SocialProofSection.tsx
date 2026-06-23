@@ -167,43 +167,43 @@ const SocialProofSection = ({
           {variant === "voice" ? (
             <>
               <h2
-                className="font-eb-garamond italic text-[#0A1128] mb-4 text-[32px] sm:text-[42px] md:text-[52px]"
-                style={{ lineHeight: "1.05" }}
+                className="font-alte font-normal text-[#0A1128] mb-4 text-[32px] sm:text-[42px] md:text-[52px] tracking-[-0.04em]"
+                style={{ lineHeight: "1.2" }}
               >
                 {heading ?? (
                   <>
                     Founders who&apos;ve seen it{" "}
-                    <span className="text-gray-400">in action.</span>
+                    <span className="text-[#0A1128]/40">in action.</span>
                   </>
                 )}
               </h2>
-              <p className="text-gray-500 mt-4 text-[15px] sm:text-[16px] md:text-[17px]">
-                {subheading ?? "Real feedback from real business owners — across industries and time zones."}
+              <p className="font-alte font-normal text-[#0A1128]/60 mt-4 text-[15px] sm:text-[16px] md:text-[17px] tracking-[-0.04em]">
+                {subheading ?? "Real feedback from real business owners, across industries and time zones."}
               </p>
             </>
           ) : (
             <>
               <h2
-                className="font-semibold text-foreground mb-4 text-[28px] sm:text-[36px] md:text-[44px]"
-                style={{ lineHeight: "1.1" }}
+                className="font-alte font-normal text-[#0A1128] mb-4 text-[28px] sm:text-[36px] md:text-[44px] tracking-[-0.04em]"
+                style={{ lineHeight: "1.2" }}
               >
                 {heading ?? (
                   <>
                     We&apos;ve helped teams find clarity across{" "}
                     <span className="relative inline-block">
-                      <span className="absolute bg-yellow-200 h-full left-[-4px] top-0 right-[-4px] z-0 rounded"></span>
+                      <span className="absolute bg-[#FCCA07] h-full left-[-4px] top-0 right-[-4px] z-0 rounded-none"></span>
                       <span className="relative z-10">industries</span>
                     </span>
                     .
                   </>
                 )}
               </h2>
-              <p className="text-gray-600 mt-4 text-[16px] sm:text-[17px] md:text-[18px]">
+              <p className="font-alte font-normal text-[#0A1128]/60 mt-4 text-[16px] sm:text-[17px] md:text-[18px] tracking-[-0.04em]">
                 {subheading ?? (
                   <>
                     From SaaS and fintech to healthcare and Web3 our audits have
                     uncovered{" "}
-                    <span className="font-semibold text-black">
+                    <span className="font-alte font-normal text-[#0A1128]">
                       $100K+ in hidden ROI
                     </span>
                     .
@@ -231,7 +231,7 @@ const SocialProofSection = ({
             return (
               <div
                 key={uniqueKey}
-                className="rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                className="rounded-none overflow-hidden border border-[#e7e6e4] transition-all duration-300"
                 style={{
                   backgroundColor: item.type === "video" ? "#000" : "#FFFFFF",
                   gridColumn: `span ${item.colspan}`,
@@ -253,7 +253,7 @@ const SocialProofSection = ({
                           videoRefs.current[uniqueKey] = el;
                         }}
                         src={item.videoUrl}
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-full object-cover rounded-none"
                         playsInline
                         preload="metadata"
                         loop
@@ -281,7 +281,7 @@ const SocialProofSection = ({
                       {playingVideo !== uniqueKey && (
                         <>
                           {/* Dark Gradient Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none rounded-lg" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none rounded-none" />
 
                           {/* Play Button - Center */}
                           <div
@@ -289,7 +289,7 @@ const SocialProofSection = ({
                             style={{ zIndex: 10 }}
                           >
                             <div
-                              className="w-20 h-20 rounded-full bg-blue-600 group-hover:bg-blue-700 flex items-center justify-center group-hover:scale-110 transition-all shadow-2xl pointer-events-auto cursor-pointer"
+                              className="w-20 h-20 rounded-full bg-blue-600 group-hover:bg-blue-700 flex items-center justify-center group-hover:scale-110 transition-all pointer-events-auto cursor-pointer"
                               onClick={() => {
                                 // Pause all other videos
                                 Object.entries(videoRefs.current).forEach(
@@ -318,14 +318,14 @@ const SocialProofSection = ({
                           <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10 pointer-events-none">
                             {item.name && (
                               <h3
-                                className="font-bold text-[22px] mb-1"
+                                className="font-alte font-normal text-[22px] mb-1"
                                 style={{ lineHeight: "1.2" }}
                               >
                                 {item.name}
                               </h3>
                             )}
                             {item.title && (
-                              <p className="text-white/90 text-[14px] leading-tight">
+                              <p className="font-alte font-normal text-white/90 text-[14px] leading-tight">
                                 {item.title}
                               </p>
                             )}
@@ -345,7 +345,7 @@ const SocialProofSection = ({
                             }
                             setFullscreenVideo(uniqueKey);
                           }}
-                          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all"
+                          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all"
                         >
                           <Maximize2 size={20} />
                         </button>
@@ -356,13 +356,13 @@ const SocialProofSection = ({
                   <div className="p-6">
                     <Quote className="text-blue-600 mb-3" size={24} />
                     <p
-                      className="text-black italic mb-4 text-[15px]"
+                      className="font-alte font-normal text-[#0A1128] italic mb-4 text-[15px] tracking-[-0.04em]"
                       style={{ lineHeight: "1.6" }}
                     >
                       &quot;{item.quote}&quot;
                     </p>
-                    <p className="text-gray-600" style={{ fontSize: "13px" }}>
-                      — {item.industry}
+                    <p className="font-alte font-normal text-[#0A1128]/60 tracking-[-0.04em]" style={{ fontSize: "13px" }}>
+                      {item.industry}
                     </p>
                   </div>
                 )}
@@ -373,14 +373,14 @@ const SocialProofSection = ({
 
         {/* Industries Badge */}
         <div className="text-center">
-          <p className="text-gray-600 mb-4" style={{ fontSize: "14px" }}>
+          <p className="font-geist uppercase tracking-[0.02em] font-normal text-[#0A1128]/60 mb-4" style={{ fontSize: "12px" }}>
             Trusted across industries:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((industry, index) => (
               <span
                 key={index}
-                className="rounded-full px-4 py-2 text-black shadow-sm bg-white"
+                className="rounded-none px-4 py-2 font-alte font-normal text-[#0A1128] border border-[#e7e6e4] bg-white tracking-[-0.04em]"
                 style={{ fontSize: "14px" }}
               >
                 {industry}
@@ -430,7 +430,7 @@ const SocialProofSection = ({
               setFullscreenVideo(null);
               setPlayingVideo(null);
             }}
-            className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white shadow-2xl transition-all hover:scale-110 group"
+            className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-all hover:scale-110 group"
             aria-label="Close fullscreen"
           >
             <X
@@ -471,11 +471,9 @@ const SocialProofSection = ({
                     {/* Video with cinematic styling */}
                     <video
                       src={item.videoUrl}
-                      className="w-full h-full object-contain rounded-xl shadow-2xl"
+                      className="w-full h-full object-contain rounded-none"
                       style={{
                         maxHeight: "90vh",
-                        boxShadow:
-                          "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 100px rgba(59, 130, 246, 0.3)",
                       }}
                       controls
                       autoPlay
@@ -487,16 +485,16 @@ const SocialProofSection = ({
                     {/* Video Info Overlay - Bottom */}
                     {item.name && (
                       <div
-                        className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent rounded-b-xl"
+                        className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/90 via-black/60 to-transparent rounded-none"
                         style={{
                           animation: "slideUp 0.6s ease-out 0.2s backwards",
                         }}
                       >
-                        <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">
+                        <h3 className="text-white text-2xl md:text-3xl font-alte font-normal mb-2">
                           {item.name}
                         </h3>
                         {item.title && (
-                          <p className="text-white/80 text-base md:text-lg">
+                          <p className="font-alte font-normal text-white/80 text-base md:text-lg">
                             {item.title}
                           </p>
                         )}
@@ -505,7 +503,7 @@ const SocialProofSection = ({
 
                     {/* Subtle Vignette Effect */}
                     <div
-                      className="absolute inset-0 pointer-events-none rounded-xl"
+                      className="absolute inset-0 pointer-events-none rounded-none"
                       style={{
                         background:
                           "radial-gradient(ellipse at center, transparent 0%, transparent 60%, rgba(0,0,0,0.3) 100%)",
@@ -519,11 +517,11 @@ const SocialProofSection = ({
 
           {/* Instructions - Bottom Center */}
           <div
-            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm z-[60] hidden md:block"
+            className="fixed bottom-8 left-1/2 transform -translate-x-1/2 font-alte font-normal text-white/60 text-sm z-[60] hidden md:block"
             style={{ animation: "fadeIn 0.6s ease-out 0.4s backwards" }}
           >
             Press{" "}
-            <kbd className="px-2 py-1 bg-white/10 rounded text-white/80 font-mono text-xs">
+            <kbd className="px-2 py-1 bg-white/10 rounded-none text-white/80 font-geist text-xs">
               ESC
             </kbd>{" "}
             or click outside to close

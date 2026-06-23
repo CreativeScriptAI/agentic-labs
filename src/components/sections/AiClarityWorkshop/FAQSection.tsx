@@ -24,7 +24,7 @@ const defaultFaqs: WorkshopFAQ[] = [
   {
     question: "Do I need to know AI?",
     answer:
-      "Not at all. You don't need technical skills or AI knowledge. You bring the problems — we translate them into simple automation opportunities.",
+      "Not at all. You don't need technical skills or AI knowledge. You bring the problems, we translate them into simple automation opportunities.",
   },
   {
     question: "What do I need before the call?",
@@ -34,17 +34,17 @@ const defaultFaqs: WorkshopFAQ[] = [
   {
     question: "How long does the workshop take?",
     answer:
-      "The session is 30 minutes. Short, sharp, and focused — designed to save you weeks of trial-and-error.",
+      "The session is 30 minutes. Short, sharp, and focused, designed to save you weeks of trial-and-error.",
   },
   {
     question: "What happens after the call?",
     answer:
-      "You get a simple 1-page breakdown: • What to automate • Expected ROI (time + cost savings) • A clear next-step plan. You can execute it yourself or work with us — your call.",
+      "You get a simple 1-page breakdown: • What to automate • Expected ROI (time + cost savings) • A clear next-step plan. You can execute it yourself or work with us. Your call.",
   },
   {
     question: "Who is this workshop for?",
     answer:
-      "Founders, operators, growth leaders, and teams drowning in manual work — especially across sales, support, ops, and marketing. If you're stuck deciding what to automate, this is for you.",
+      "Founders, operators, growth leaders, and teams drowning in manual work, especially across sales, support, ops, and marketing. If you're stuck deciding what to automate, this is for you.",
   },
   {
     question: "What if I'm a small team?",
@@ -54,7 +54,7 @@ const defaultFaqs: WorkshopFAQ[] = [
   {
     question: "What if we already use AI tools?",
     answer:
-      "Perfect. Most companies use AI as isolated tools — not systems. We look at end-to-end workflow gaps and help you connect everything so the tools actually work together.",
+      "Perfect. Most companies use AI as isolated tools, not systems. We look at end-to-end workflow gaps and help you connect everything so the tools actually work together.",
   },
   {
     question: "Is my data safe?",
@@ -64,12 +64,12 @@ const defaultFaqs: WorkshopFAQ[] = [
   {
     question: "What if you can't find any automation opportunities?",
     answer:
-      "Hasn't happened yet — but if it does, the workshop is free. We only charge when we unlock clear ROI.",
+      "Hasn't happened yet, but if it does, the workshop is free. We only charge when we unlock clear ROI.",
   },
   {
     question: "Who actually leads the AI Clarity Workshop?",
     answer:
-      "Every workshop is run by Agentic AI Labs' senior builders—the same team that ships production voice, chat, and workflow agents. You're talking to architects who've executed 50+ founder workshops, not a sales crew reading a script.",
+      "Every workshop is run by Agentic AI Labs' senior builders, the same team that ships production voice, chat, and workflow agents. You're talking to architects who've executed 50+ founder workshops, not a sales crew reading a script.",
   },
   {
     question:
@@ -81,12 +81,12 @@ const defaultFaqs: WorkshopFAQ[] = [
     question:
       "Can we bring our own recordings, scripts, or dashboards to review?",
     answer:
-      "Absolutely. Bring call recordings, SOPs, dashboards—anything that shows how your work actually happens. The more honest context we get, the sharper the recommendations.",
+      "Absolutely. Bring call recordings, SOPs, dashboards, anything that shows how your work actually happens. The more honest context we get, the sharper the recommendations.",
   },
   {
     question: "What if we already have an AI team or vendor?",
     answer:
-      "Perfect. Consider us your second-opinion partner. We benchmark what you've built, highlight gaps, and show how a production-grade agent could sit alongside—or replace—piecemeal tools. It's clarity before you spend another dollar.",
+      "Perfect. Consider us your second-opinion partner. We benchmark what you've built, highlight gaps, and show how a production-grade agent could sit alongside, or replace, piecemeal tools. It's clarity before you spend another dollar.",
   },
   {
     question: "Do you give specific tooling and model recommendations?",
@@ -105,15 +105,14 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
   return (
     <section
       id="faq"
-      className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 bg-secondary/30"
+      className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 bg-[#F9F6F4]"
     >
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2
-            className="font-sf-pro font-semibold text-foreground mb-4 text-[28px] sm:text-[36px] md:text-[44px]"
+            className="font-alte font-normal text-[#0A1128] mb-4 text-[28px] sm:text-[36px] md:text-[44px] tracking-[-0.04em]"
             style={{
-              lineHeight: "1.1",
-              fontVariationSettings: "'wdth' 100",
+              lineHeight: "1.2",
             }}
           >
             You might be wondering...
@@ -125,17 +124,16 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs = defaultFaqs }) => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="rounded-lg px-4 sm:px-6 shadow-sm"
+              className="rounded-none px-4 sm:px-6 border border-[#e7e6e4]"
               style={{ backgroundColor: "#FFFFFF" }}
             >
               <AccordionTrigger
-                className="text-foreground hover:text-primary text-left text-[16px] sm:text-[17px] md:text-[18px]"
-                style={{ fontVariationSettings: "'wdth' 100" }}
+                className="font-alte font-normal text-[#0A1128] hover:text-blue-600 text-left text-[16px] sm:text-[17px] md:text-[18px] tracking-[-0.04em]"
               >
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent
-                className="text-muted-foreground"
+                className="font-alte font-normal text-[#0A1128]/60 tracking-[-0.04em]"
                 style={{ fontSize: "16px", lineHeight: "1.6" }}
               >
                 {faq.answer}

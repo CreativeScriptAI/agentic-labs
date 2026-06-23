@@ -30,7 +30,7 @@ const Category: React.FC<Props> = ({ readOnly = false, children }) => {
   return (
     <div
       onClick={() => handleClick(children)}
-      className={`py-1 px-2 rounded-full w-fit text-sm opacity-90 text-gray-100 ${
+      className={`py-1 px-2 rounded-none w-fit font-geist uppercase tracking-[0.02em] font-normal text-[12px] opacity-90 text-gray-100 ${
         readOnly ? "cursor-default" : "cursor-pointer"
       }`}
       style={{

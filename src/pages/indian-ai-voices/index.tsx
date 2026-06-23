@@ -56,48 +56,48 @@ export default function IndianAIVoicesPage() {
                 <meta name="description" content="Explore our library of premium, production-grade AI voices designed for the Indian market." />
             </Head>
 
-            <div className="min-h-screen bg-[#F9F6F4] font-sfpro text-slate-900 pt-32 pb-16">
+            <div className="min-h-screen bg-[#F9F6F4] font-alte font-normal text-[#0A1128] pt-32 pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Header Section */}
                     <div className="text-center mb-16 space-y-6">
-                        <span className="text-red-500 font-bold text-xs tracking-widest uppercase border border-red-200 bg-red-50 rounded-full py-1.5 px-4 inline-block">
+                        <span className="font-geist text-red-500 text-[12px] font-normal tracking-[0.02em] uppercase border border-red-200 bg-red-50 rounded-none py-1.5 px-4 inline-block">
                             Voice Directory
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-mondwest leading-tight text-[#0A1128]">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-alte font-normal leading-[1.2] tracking-[-0.04em] text-[#0A1128]">
                             Production-Grade AI Voices <br />
-                            <span className="text-red-500">For the Indian Market</span>
+                            <span className="text-blue-600">For the Indian Market</span>
                         </h1>
-                        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
+                        <p className="max-w-2xl mx-auto text-[15px] md:text-base text-slate-600 font-alte font-normal leading-[1.5] tracking-[-0.04em]">
                             Listen to our highly localized, conversational agents designed for different industries and roles. From banking to healthcare, find the perfect voice for your workflows.
                         </p>
                     </div>
 
                     {/* Filters */}
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12 bg-white p-4 rounded-xl shadow-sm border border-gray-100 mx-auto max-w-5xl transition-all">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12 bg-white p-4 rounded-none border border-[#e7e6e4] mx-auto max-w-5xl transition-all">
                         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                             <div className="w-full md:w-auto">
-                                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5 pl-1">
+                                <label className="block font-geist text-[12px] font-normal uppercase tracking-[0.02em] text-slate-400 mb-1.5 pl-1">
                                     Industry
                                 </label>
                                 <select
                                     value={filterIndustry}
                                     onChange={(e) => setFilterIndustry(e.target.value)}
-                                    className="w-full md:w-48 bg-gray-50 border border-gray-200 text-slate-700 rounded-lg focus:ring-red-500 focus:border-red-500 px-3 py-2.5 outline-none text-sm font-medium transition-colors"
+                                    className="w-full md:w-48 bg-[#F9F6F4] border border-[#e7e6e4] text-[#0A1128] rounded-none focus:ring-blue-600 focus:border-blue-600 px-3 py-2.5 outline-none text-[15px] font-alte font-normal transition-colors"
                                 >
                                     {industries.map((ind) => (
                                         <option key={ind} value={ind}>{ind}</option>
                                     ))}
                                 </select>
                             </div>
-                            <div className="h-12 w-px bg-gray-100 mx-2 hidden md:block" />
+                            <div className="h-12 w-px bg-[#e7e6e4] mx-2 hidden md:block" />
                             <div className="w-full md:w-auto">
-                                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5 pl-1">
+                                <label className="block font-geist text-[12px] font-normal uppercase tracking-[0.02em] text-slate-400 mb-1.5 pl-1">
                                     Gender
                                 </label>
                                 <select
                                     value={filterGender}
                                     onChange={(e) => setFilterGender(e.target.value)}
-                                    className="w-full md:w-40 bg-gray-50 border border-gray-200 text-slate-700 rounded-lg focus:ring-red-500 focus:border-red-500 px-3 py-2.5 outline-none text-sm font-medium transition-colors"
+                                    className="w-full md:w-40 bg-[#F9F6F4] border border-[#e7e6e4] text-[#0A1128] rounded-none focus:ring-blue-600 focus:border-blue-600 px-3 py-2.5 outline-none text-[15px] font-alte font-normal transition-colors"
                                 >
                                     <option value="All">All Genders</option>
                                     <option value="male">Male</option>
@@ -105,8 +105,8 @@ export default function IndianAIVoicesPage() {
                                 </select>
                             </div>
                         </div>
-                        <div className="text-sm font-medium text-slate-500 w-full md:w-auto text-center md:text-right mt-4 md:mt-0 px-4">
-                            Showing <span className="text-red-500 font-bold">{filteredVoices.length}</span> voices
+                        <div className="text-[15px] font-alte font-normal text-slate-500 w-full md:w-auto text-center md:text-right mt-4 md:mt-0 px-4 tracking-[-0.04em]">
+                            Showing <span className="text-blue-600">{filteredVoices.length}</span> voices
                         </div>
                     </div>
 
@@ -118,22 +118,22 @@ export default function IndianAIVoicesPage() {
                             return (
                                 <div
                                     key={voice.id}
-                                    className={`group bg-white rounded-2xl p-6 border transition-all duration-300 ${isPlaying
-                                            ? 'border-red-400 shadow-md ring-1 ring-red-100 scale-[1.02] translate-y-[-4px]'
-                                            : 'border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 hover:translate-y-[-2px]'
+                                    className={`group bg-white rounded-none p-6 border transition-all duration-300 ${isPlaying
+                                            ? 'border-blue-400 scale-[1.02] translate-y-[-4px]'
+                                            : 'border-[#e7e6e4] hover:border-blue-200 hover:translate-y-[-2px]'
                                         }`}
                                 >
                                     <div className="flex justify-between items-start mb-5">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-[#0A1128] font-mondwest tracking-wide">{voice.name}</h3>
-                                            <p className="text-sm font-medium text-red-500 mt-0.5 capitalize">{voice.gender} &middot; {voice.industry}</p>
+                                            <h3 className="text-2xl font-alte font-normal text-[#0A1128] tracking-[-0.04em]">{voice.name}</h3>
+                                            <p className="text-[15px] font-alte font-normal text-blue-600 mt-0.5 capitalize tracking-[-0.04em]">{voice.gender} &middot; {voice.industry}</p>
                                         </div>
 
                                         <button
                                             onClick={() => handlePlay(voice.id)}
-                                            className={`h-12 w-12 flex items-center justify-center rounded-full transition-all duration-300 shadow-sm flex-shrink-0 ${isPlaying
-                                                    ? 'bg-red-500 text-white shadow-red-200 scale-105'
-                                                    : 'bg-red-50 text-red-600 hover:bg-red-100 hover:scale-105'
+                                            className={`h-12 w-12 flex items-center justify-center rounded-full transition-all duration-300 flex-shrink-0 ${isPlaying
+                                                    ? 'bg-blue-600 text-white scale-105'
+                                                    : 'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:scale-105'
                                                 }`}
                                             aria-label={isPlaying ? "Pause voice" : "Play voice"}
                                         >
@@ -161,17 +161,17 @@ export default function IndianAIVoicesPage() {
                                     </div>
 
                                     <div className="mb-6 line-clamp-3 min-h-[4rem]">
-                                        <p className="text-sm text-slate-600 leading-relaxed font-medium">
+                                        <p className="text-[15px] text-slate-600 leading-[1.5] font-alte font-normal tracking-[-0.04em]">
                                             "{voice.description}"
                                         </p>
                                     </div>
 
-                                    <div className="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
-                                        <span className="inline-flex items-center px-2.5 py-1 rounded border border-gray-200 bg-gray-50 text-[11px] font-semibold tracking-wide text-gray-700 uppercase">
+                                    <div className="pt-5 border-t border-[#e7e6e4] flex flex-wrap gap-2">
+                                        <span className="font-geist inline-flex items-center px-2.5 py-1 rounded-none border border-[#e7e6e4] bg-[#F9F6F4] text-[12px] font-normal tracking-[0.02em] text-[#0A1128] uppercase">
                                             {voice.role}
                                         </span>
                                         {voice.tags.map((tag) => (
-                                            <span key={tag} className="inline-flex items-center px-2.5 py-1 rounded border border-red-100 bg-red-50 text-[11px] font-semibold tracking-wide text-red-600 uppercase">
+                                            <span key={tag} className="font-geist inline-flex items-center px-2.5 py-1 rounded-none border border-blue-100 bg-blue-50 text-[12px] font-normal tracking-[0.02em] text-blue-600 uppercase">
                                                 {tag}
                                             </span>
                                         ))}
@@ -182,15 +182,15 @@ export default function IndianAIVoicesPage() {
                     </div>
 
                     {filteredVoices.length === 0 && (
-                        <div className="text-center py-24 bg-white rounded-2xl border border-dashed border-gray-300 max-w-3xl mx-auto mt-8">
+                        <div className="text-center py-24 bg-white rounded-none border border-dashed border-[#e7e6e4] max-w-3xl mx-auto mt-8">
                             <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                             </svg>
-                            <h3 className="text-lg font-bold text-gray-900 mb-1">No voices found</h3>
-                            <p className="text-gray-500 font-medium max-w-sm mx-auto">We couldn't find any voices matching your selected criteria.</p>
+                            <h3 className="text-lg font-alte font-normal text-[#0A1128] mb-1 tracking-[-0.04em]">No voices found</h3>
+                            <p className="text-slate-500 font-alte font-normal max-w-sm mx-auto text-[15px] tracking-[-0.04em]">We couldn't find any voices matching your selected criteria.</p>
                             <button
                                 onClick={() => { setFilterIndustry("All"); setFilterGender("All"); }}
-                                className="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+                                className="mt-6 inline-flex items-center px-4 py-2 border border-[#e7e6e4] text-[15px] font-alte font-normal rounded-none text-[#0A1128] bg-[#FCCA07] hover:bg-[#f0bd00] focus:outline-none transition-colors"
                             >
                                 Clear Filters
                             </button>

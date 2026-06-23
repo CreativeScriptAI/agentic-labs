@@ -15,11 +15,11 @@ const ReasonExist: React.FC = () => {
       }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-[11px] sm:text-xs tracking-widest text-red-500 uppercase mb-4">
+        <p className="font-geist text-[12px] tracking-[0.02em] text-red-500 uppercase font-normal mb-4">
           Reason Why We Exist
         </p>
-        <p className="text-xl sm:text-2xl font-sfpro text-slate-400 font-light leading-tight mb-6">
-          <span className="text-slate-900 text-xl sm:text-2xl leading-9 sm:leading-10">
+        <p className="text-xl sm:text-2xl font-alte font-normal text-[#0A1128]/40 leading-[1.5] tracking-[-0.04em] mb-6">
+          <span className="text-[#0A1128] text-xl sm:text-2xl leading-9 sm:leading-10">
             Every founder wants to be ahead with AI.
           </span>{" "}
           <span>

@@ -1,7 +1,6 @@
-import { Check, ArrowRight, ExternalLink } from "lucide-react";
-import { Button } from "src/components/ui/button";
+import { Check, ArrowRight } from "lucide-react";
+import BracketButton from "src/components/BracketButton";
 import OptimizedImage from "src/components/OptimizedImage";
-import Link from "next/link";
 
 const TeamSection = () => {
   const capabilities = [
@@ -10,26 +9,23 @@ const TeamSection = () => {
     "Deliver measurable ROI across industries",
   ];
   return (
-    <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 bg-background">
+    <section className="py-10 md:py-16 px-4 sm:px-6 lg:px-8 bg-[#F9F6F4]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2
-            className="font-sf-pro font-semibold mb-4 sm:mb-6 text-sm sm:text-base"
+            className="font-geist uppercase font-normal mb-4 sm:mb-6 text-[12px] sm:text-[15px] text-red-500"
             style={{
-              letterSpacing: "0.5px",
-              color: "#EF4444",
-              fontVariationSettings: "'wdth' 100",
+              letterSpacing: "0.02em",
             }}
           >
             OUR AGENTIC AI LABS TEAM
           </h2>
 
           <h3
-            className="font-sf-pro font-semibold text-foreground text-[26px] sm:text-[32px] md:text-[38px]"
+            className="font-alte font-normal text-[#0A1128] text-[26px] sm:text-[32px] md:text-[38px] tracking-[-0.04em]"
             style={{
               lineHeight: "1.2",
-              fontVariationSettings: "'wdth' 100",
             }}
           >
             Real engineers. Real experience. Real results.
@@ -38,7 +34,7 @@ const TeamSection = () => {
 
         {/* Main Content Grid */}
         <div
-          className="grid md:grid-cols-2 gap-12 items-center rounded-lg p-8 md:p-12 shadow-sm"
+          className="grid md:grid-cols-2 gap-12 items-center rounded-none p-8 md:p-12 border border-[#e7e6e4]"
           style={{ backgroundColor: "#FFFFFF" }}
         >
           {/* Left Content */}
@@ -46,18 +42,12 @@ const TeamSection = () => {
             {/* Badges */}
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
               <span
-                className="px-3 py-1.5 sm:px-4 sm:py-2 bg-muted rounded-full text-foreground font-medium text-xs sm:text-sm"
-                style={{
-                  fontVariationSettings: "'wdth' 100",
-                }}
+                className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-none border border-[#e7e6e4] text-[#0A1128] font-alte font-normal text-xs sm:text-sm tracking-[-0.04em]"
               >
                 10+ production AI agents
               </span>
               <span
-                className="px-3 py-1.5 sm:px-4 sm:py-2 bg-muted rounded-full text-foreground font-medium text-xs sm:text-sm"
-                style={{
-                  fontVariationSettings: "'wdth' 100",
-                }}
+                className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-none border border-[#e7e6e4] text-[#0A1128] font-alte font-normal text-xs sm:text-sm tracking-[-0.04em]"
               >
                 Core team: 10+ experts
               </span>
@@ -65,15 +55,14 @@ const TeamSection = () => {
 
             {/* Description */}
             <p
-              className="text-foreground/80 text-sm sm:text-base"
+              className="font-alte font-normal text-[#0A1128]/80 text-sm sm:text-base tracking-[-0.04em]"
               style={{
                 lineHeight: "1.6",
-                fontVariationSettings: "'wdth' 100",
               }}
             >
               Expert team led by the same team that has shipped 10+
               production-level AI agents for real businesses.{" "}
-              <strong className="font-semibold text-foreground">
+              <strong className="font-alte font-normal text-[#0A1128]">
                 10+ production-level AI agents
               </strong>{" "}
               for real businesses.
@@ -83,17 +72,16 @@ const TeamSection = () => {
             <div className="space-y-2 sm:space-y-3 py-3 sm:py-4">
               {capabilities.map((item, index) => (
                 <div key={index} className="flex items-start gap-2 sm:gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded bg-green-500 flex items-center justify-center">
+                  <div className="mt-0.5 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-none bg-emerald-600 flex items-center justify-center">
                     <Check
                       className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white"
                       strokeWidth={3}
                     />
                   </div>
                   <p
-                    className="text-foreground/80 text-sm sm:text-base"
+                    className="font-alte font-normal text-[#0A1128]/80 text-sm sm:text-base tracking-[-0.04em]"
                     style={{
                       lineHeight: "1.5",
-                      fontVariationSettings: "'wdth' 100",
                     }}
                   >
                     {item}
@@ -107,11 +95,7 @@ const TeamSection = () => {
             {/* Link */}
             <a
               href="#"
-              className="inline-flex items-center gap-1.5 sm:gap-2 font-semibold transition-colors duration-300 py-2 text-sm sm:text-base"
-              style={{
-                color: "#3B82F6",
-                fontVariationSettings: "'wdth' 100",
-              }}
+              className="inline-flex items-center gap-1.5 sm:gap-2 font-alte font-normal text-blue-600 transition-colors duration-300 py-2 text-sm sm:text-base tracking-[-0.04em]"
             >
               We&apos;ve built it, tested it, and scaled it{" "}
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -119,23 +103,14 @@ const TeamSection = () => {
 
             {/* CTA Button */}
             <div className="pt-3 sm:pt-4">
-              <Link href="/">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground w-full md:w-auto px-6 py-5 sm:px-8 sm:py-6 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
-                  style={{
-                    fontVariationSettings: "'wdth' 100",
-                  }}
-                >
-                  See all AI Agents we&apos;ve built{" "}
-                  <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2" />
-                </Button>
-              </Link>
+              <BracketButton
+                label="See all AI Agents we've built"
+                href="/"
+                variant="primary"
+                className="w-full md:w-auto"
+              />
               <p
-                className="text-muted-foreground mt-2 sm:mt-3 text-center md:text-left text-xs sm:text-sm"
-                style={{
-                  fontVariationSettings: "'wdth' 100",
-                }}
+                className="font-alte font-normal text-[#0A1128]/60 mt-2 sm:mt-3 text-center md:text-left text-xs sm:text-sm tracking-[-0.04em]"
               >
                 Opens live examples we&apos;ve shipped.
               </p>

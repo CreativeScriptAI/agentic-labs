@@ -6,7 +6,7 @@ const TechStackSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-4">
+          <p className="text-red-500 font-geist font-normal text-[15px] uppercase tracking-[0.02em] mb-4">
             OUTCOMES, READY OR CUSTOM
           </p>
         </div>
@@ -14,7 +14,7 @@ const TechStackSection: React.FC = () => {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Full-Stack AI Agent Development Card - Spans 2 columns */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+          <div className="lg:col-span-2 bg-white rounded-none border border-[#e7e6e4] p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Side */}
               <div>
@@ -34,17 +34,17 @@ const TechStackSection: React.FC = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
+                <p className="text-red-500 font-geist font-normal text-[12px] uppercase tracking-[0.02em] mb-2">
                   CUSTOM, BUILT AROUND YOUR BUSINESS
                 </p>
-                <h3 className="text-2xl lg:text-3xl font-[500] text-gray-900 mb-4">
+                <h3 className="text-2xl lg:text-3xl font-alte font-normal text-[#0A1128] tracking-[-0.04em] mb-4">
                   Custom AI, built around your business.
                 </h3>
               </div>
 
               {/* Right Side - Tech Stack */}
               <div>
-                <p className="text-blue-600 font-medium text-sm uppercase tracking-wider mb-6">
+                <p className="text-blue-600 font-geist font-normal text-[12px] uppercase tracking-[0.02em] mb-6">
                   TECH STACK WE USE
                 </p>
 
@@ -52,7 +52,7 @@ const TechStackSection: React.FC = () => {
                   {/* LLMs & Frameworks */}
                   <div>
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-none flex items-center justify-center mr-3">
                         <svg
                           className="w-4 h-4 text-white"
                           fill="currentColor"
@@ -61,11 +61,11 @@ const TechStackSection: React.FC = () => {
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                         LLMs & Frameworks:
                       </h4>
                     </div>
-                    <p className="text-gray-600 ml-9">
+                    <p className="font-alte font-normal text-[15px] text-gray-600 ml-9 leading-[1.5] tracking-[-0.04em]">
                       OpenAI, Anthropic, Llama, LangChain, CrewAI, Haystack
                     </p>
                   </div>
@@ -73,7 +73,7 @@ const TechStackSection: React.FC = () => {
                   {/* Voice & Speech */}
                   <div>
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-none flex items-center justify-center mr-3">
                         <svg
                           className="w-4 h-4 text-white"
                           fill="currentColor"
@@ -82,11 +82,11 @@ const TechStackSection: React.FC = () => {
                           <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z" />
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                         Voice & Speech:
                       </h4>
                     </div>
-                    <p className="text-gray-600 ml-9">
+                    <p className="font-alte font-normal text-[15px] text-gray-600 ml-9 leading-[1.5] tracking-[-0.04em]">
                       ElevenLabs, Whisper, Speechmatics
                     </p>
                   </div>
@@ -94,7 +94,7 @@ const TechStackSection: React.FC = () => {
                   {/* Databases & Memory */}
                   <div>
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-none flex items-center justify-center mr-3">
                         <svg
                           className="w-4 h-4 text-white"
                           fill="currentColor"
@@ -103,11 +103,11 @@ const TechStackSection: React.FC = () => {
                           <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zM4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4zM4 16v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z" />
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                         Databases & Memory:
                       </h4>
                     </div>
-                    <p className="text-gray-600 ml-9">
+                    <p className="font-alte font-normal text-[15px] text-gray-600 ml-9 leading-[1.5] tracking-[-0.04em]">
                       Pinecone, ChromaDB, Weaviate, MongoDB
                     </p>
                   </div>
@@ -115,7 +115,7 @@ const TechStackSection: React.FC = () => {
                   {/* APIs & Integrations */}
                   <div>
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-none flex items-center justify-center mr-3">
                         <svg
                           className="w-4 h-4 text-white"
                           fill="currentColor"
@@ -124,11 +124,11 @@ const TechStackSection: React.FC = () => {
                           <path d="M8.5 12c0-.55.45-1 1-1h5c.55 0 1 .45 1 1s-.45 1-1 1h-5c-.55 0-1-.45-1-1zm7.5-1h4v2h-4v-2zm-8 0H4v2h4v-2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                         APIs & Integrations:
                       </h4>
                     </div>
-                    <p className="text-gray-600 ml-9">
+                    <p className="font-alte font-normal text-[15px] text-gray-600 ml-9 leading-[1.5] tracking-[-0.04em]">
                       HubSpot, Salesforce, Notion, Slack, Google Suite, PandaDoc
                     </p>
                   </div>
@@ -136,7 +136,7 @@ const TechStackSection: React.FC = () => {
                   {/* Deployment */}
                   <div>
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-blue-600 rounded-none flex items-center justify-center mr-3">
                         <svg
                           className="w-4 h-4 text-white"
                           fill="currentColor"
@@ -145,11 +145,11 @@ const TechStackSection: React.FC = () => {
                           <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                         Deployment:
                       </h4>
                     </div>
-                    <p className="text-gray-600 ml-9">
+                    <p className="font-alte font-normal text-[15px] text-gray-600 ml-9 leading-[1.5] tracking-[-0.04em]">
                       AWS, GCP, Azure, custom on-prem solutions
                     </p>
                   </div>
@@ -159,13 +159,13 @@ const TechStackSection: React.FC = () => {
           </div>
 
           {/* Pre-Built AI Agents Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+          <div className="bg-white rounded-none border border-[#e7e6e4] p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
+                <p className="text-red-500 font-geist font-normal text-[12px] uppercase tracking-[0.02em] mb-2">
                   READY TO DEPLOY
                 </p>
-                <h3 className="text-xl lg:text-2xl font-[500] text-gray-900">
+                <h3 className="text-xl lg:text-2xl font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                   The AI Sales Agent, and more, ready to go
                 </h3>
               </div>
@@ -187,30 +187,30 @@ const TechStackSection: React.FC = () => {
 
             <div className="space-y-4">
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">AI Sales Agent and more:</span>{" "}
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">AI Sales Agent and more:</span>{" "}
                   answers, qualifies, and books every inbound lead
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Every channel:</span> phone,
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Every channel:</span> phone,
                   WhatsApp, Instagram, SMS & email
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Live in days,</span> zero
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Live in days,</span> zero
                   from-scratch build
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Runs without you,</span> wired to
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Runs without you,</span> wired to
                   your CRM, calendar & inbox
                 </p>
               </div>
@@ -218,13 +218,13 @@ const TechStackSection: React.FC = () => {
           </div>
 
           {/* AI Consulting & Strategy Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+          <div className="bg-white rounded-none border border-[#e7e6e4] p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <p className="text-red-500 font-medium text-sm uppercase tracking-wider mb-2">
+                <p className="text-red-500 font-geist font-normal text-[12px] uppercase tracking-[0.02em] mb-2">
                   START HERE
                 </p>
-                <h3 className="text-xl lg:text-2xl font-[500] text-slate-800">
+                <h3 className="text-xl lg:text-2xl font-alte font-normal text-[#0A1128] tracking-[-0.04em]">
                   Not sure where AI fits? Start here.
                 </h3>
               </div>
@@ -246,30 +246,30 @@ const TechStackSection: React.FC = () => {
 
             <div className="space-y-4">
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Find</span> where AI actually
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Find</span> where AI actually
                   saves you time & money
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Review</span> your workflows &
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Review</span> your workflows &
                   tools
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Plan</span> the few agents worth
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Plan</span> the few agents worth
                   building
                 </p>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-blue-600 rounded-sm mr-3 mt-1 flex-shrink-0"></div>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Roadmap</span> from pilot to
+                <div className="w-4 h-4 bg-blue-600 rounded-none mr-3 mt-1 flex-shrink-0"></div>
+                <p className="font-alte font-normal text-[15px] text-gray-700 leading-[1.5] tracking-[-0.04em]">
+                  <span className="font-normal text-[#0A1128]">Roadmap</span> from pilot to
                   production
                 </p>
               </div>

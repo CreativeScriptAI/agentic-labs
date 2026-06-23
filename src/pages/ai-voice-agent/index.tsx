@@ -5,6 +5,7 @@ import MetaConfig from "src/components/MetaConfig";
 import { NextPageWithLayout } from "../../types";
 import SocialProofSection from "src/components/sections/AiClarityWorkshop/SocialProofSection";
 import FounderTeamSection from "src/components/sections/AiVoiceAgent/FounderTeamSection";
+import BracketButton from "src/components/BracketButton";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const CAL_LINK =
@@ -45,7 +46,7 @@ const Container = ({
 
 const SectionLabel = ({ text, dark = false }: { text: string; dark?: boolean }) => (
   <p
-    className={`text-xs font-bold tracking-[0.15em] uppercase mb-3 flex items-center gap-2 ${
+    className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-3 flex items-center gap-2 ${
       dark ? "text-blue-400" : "text-blue-600"
     }`}
   >
@@ -72,7 +73,7 @@ const PrimaryBtn = ({
     md: "px-6 py-3 text-sm",
     lg: "px-7 py-3.5 text-sm",
   };
-  const cls = `inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-[#FCCA07] text-[#0A1128] font-semibold transition-all hover:bg-[#f0bd00] active:scale-[0.98] cursor-pointer ${sizeMap[size]} ${fullWidth ? "w-full" : ""}`;
+  const cls = `inline-flex items-center justify-center whitespace-nowrap rounded-none bg-[#FCCA07] text-[#0A1128] font-normal transition-all hover:bg-[#f0bd00] active:scale-[0.98] cursor-pointer ${sizeMap[size]} ${fullWidth ? "w-full" : ""}`;
   if (onClick) return <button onClick={onClick} className={cls}>{label}</button>;
   return <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
 };
@@ -97,10 +98,10 @@ const OutlineBtn = ({
     md: "px-7 py-3.5 text-sm min-h-[48px]",
     lg: "px-8 py-4 text-base min-h-[52px]",
   };
-  const cls = `inline-flex items-center justify-center rounded-lg border-2 font-semibold transition-all active:scale-[0.98] cursor-pointer ${
+  const cls = `inline-flex items-center justify-center rounded-none border font-normal transition-all active:scale-[0.98] cursor-pointer ${
     dark
       ? "border-white/40 text-white hover:border-white hover:bg-white/10"
-      : "border-[#0A1128]/20 text-[#0A1128] hover:border-[#0A1128] hover:bg-[#0A1128] hover:text-white"
+      : "border-[#e7e6e4] text-[#0A1128] hover:border-[#0A1128] hover:bg-[#0A1128] hover:text-white"
   } ${sizeMap[size]} ${fullWidth ? "w-full" : ""}`;
   if (onClick) return <button onClick={onClick} className={cls}>{label}</button>;
   return <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
@@ -139,7 +140,7 @@ const DEMOS: Record<DemoTab, {
       { speaker: "Dhvani", text: "Ji Priya ji! Kal 7:15 AM sleeper bus mein 2 seats hain. ₹350 per seat. Book karein?" },
       { speaker: "Caller", text: "Haan book kar do! Seat A4 aur A5 chahiye." },
     ],
-    whatsappMessage: "Hi Priya! Your **2 seats — Pune → Mumbai** are confirmed for **Tomorrow 7:15 AM**. \n\n🎫 Booking ID: GFT-2847\n💺 Seats: A4 & A5\n📍 Boarding: Swargate Bus Stand",
+    whatsappMessage: "Hi Priya! Your **2 seats, Pune to Mumbai** are confirmed for **Tomorrow 7:15 AM**. \n\n🎫 Booking ID: GFT-2847\n💺 Seats: A4 & A5\n📍 Boarding: Swargate Bus Stand",
     crmData: {
       status: "Booking Confirmed",
       notes: "Pune-Mumbai, 2 seats A4-A5, 7:15AM. New customer.",
@@ -159,7 +160,7 @@ const DEMOS: Record<DemoTab, {
       { speaker: "Dhvani", text: "Samajh gaya Arjun ji! Gas issue lag raha hai. Kal subah 9 baje technician bhejun?" },
       { speaker: "Caller", text: "Haan kal 9 baje theek rahega. Address bhej deta hoon." },
     ],
-    whatsappMessage: "Hi Arjun! Your **AC repair request** is logged. Technician arrives **Tomorrow by 9:00 AM**. \n\n🔧 Issue: No cooling — 1.5T Daikin\n📞 Technician: +91 98100 22234\n💰 Visit charge: ₹299",
+    whatsappMessage: "Hi Arjun! Your **AC repair request** is logged. Technician arrives **Tomorrow by 9:00 AM**. \n\n🔧 Issue: No cooling, 1.5T Daikin\n📞 Technician: +91 98100 22234\n💰 Visit charge: ₹299",
     crmData: {
       status: "Job Dispatched",
       notes: "AC no cooling - Daikin 1.5T. Tomorrow 9AM slot.",
@@ -240,35 +241,35 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         <div>
           <SectionLabel text="Guftugu · Calls answered. Follow-ups on WhatsApp." dark />
 
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.6rem] font-bold text-white leading-[1.08] tracking-[-0.02em] mb-6">
+          <h1 className="font-alte font-normal text-4xl sm:text-5xl lg:text-[3.6rem] text-white leading-[1.08] tracking-[-0.04em] mb-6">
             <span className="text-[#FF8800]">7 leads</span> called<br />
             last night.<br />
             <span className="text-white/65">All 7 got answered.</span>
           </h1>
 
           {/* Outcome-first sub, Indian framing */}
-          <p className="text-lg sm:text-xl text-white/80 max-w-lg mb-3 leading-relaxed">
+          <p className="font-alte font-normal text-lg sm:text-xl text-white/80 max-w-lg mb-3 leading-relaxed">
             Guftugu answers every call and follows up on WhatsApp, automatically, in Hindi or English, 24/7.
           </p>
-          <p className="text-base text-white/50 mb-4 max-w-md leading-relaxed">
+          <p className="font-alte font-normal text-base text-white/50 mb-4 max-w-md leading-relaxed">
             Like a full-time receptionist, except she costs{" "}
-            <span className="text-white/75 font-semibold">₹2,499/month</span> and never misses a call.
+            <span className="text-white/75 font-normal">₹2,499/month</span> and never misses a call.
           </p>
 
           {/* WhatsApp trust badge */}
           <div className="flex items-center gap-2 mb-10">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-[#25D366] bg-[#25D366]/10 border border-[#25D366]/25 rounded-full px-3 py-1.5">
+            <span className="inline-flex items-center gap-1.5 font-geist text-[12px] font-normal tracking-[0.02em] text-[#25D366] bg-[#25D366]/10 border border-[#25D366]/25 rounded-none px-3 py-1.5">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               WhatsApp follow-up included
             </span>
-            <span className="text-xs text-white/35 font-medium tracking-wide">हर कॉल का जवाब</span>
+            <span className="font-alte text-xs text-white/35 font-normal tracking-wide">हर कॉल का जवाब</span>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
-            <PrimaryBtn href={CAL_LINK} label="Take Your AI Agent Live in 30 Mins" size="lg" />
+            <BracketButton label="Take Your AI Agent Live in 30 Mins" href={CAL_LINK} variant="primary" external />
             <button
               onClick={() => smoothScrollTo("pricing")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-xl text-white text-sm font-semibold transition-all hover:bg-white/10 active:scale-[0.98]" style={{ border: "1px solid rgba(255,255,255,0.55)" }}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 rounded-none text-white font-alte text-sm font-normal transition-all hover:bg-white/10 active:scale-[0.98]" style={{ border: "1px solid rgba(255,255,255,0.55)" }}
             >
               Plans from ₹2,499/mo
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -278,7 +279,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
           </div>
 
           {/* Trust footer */}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/40">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-alte font-normal text-sm text-white/40">
             <span className="flex items-center gap-1.5">
               <span className="w-1 h-1 rounded-full bg-emerald-400/70 flex-shrink-0" />
               No tech setup needed
@@ -289,7 +290,7 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
             </span>
             <span className="flex items-center gap-1.5">
               <span className="w-1 h-1 rounded-full bg-[#FCCA07]/70 flex-shrink-0" />
-              <span className="text-white/55 font-medium">Live in 30 mins</span>
+              <span className="text-white/55 font-normal">Live in 30 mins</span>
             </span>
           </div>
         </div>
@@ -298,23 +299,23 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
         <div className="relative hidden lg:block h-[600px]" style={{ perspective: "1000px" }}>
           {/* Card 1, Dental · saffron + gold */}
           <div className="absolute" style={{ top: "10%", right: "20%", transform: "rotate(8deg)", zIndex: 3 }}>
-            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
-              <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
+            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-[#e7e6e4]">
+              <div className="flex justify-between font-geist text-[12px] uppercase tracking-[0.02em] border-b border-[#e7e6e4] pb-2 mb-3 text-gray-500 font-normal">
                 <span>Dental &amp; Medical</span>
                 <span className="text-[#FF8800]">AI-001</span>
               </div>
-              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", borderRadius: "2px", isolation: "isolate" }}>
+              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", isolation: "isolate" }}>
                 <div className="animate-aura-breath absolute rounded-full" style={{ top: 0, left: 0, width: "150%", height: "100%", background: "#ff5500", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.85 }} />
                 <div className="animate-aura-breath absolute rounded-full" style={{ bottom: 0, right: 0, width: "100%", height: "150%", background: "#ffaa00", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.85, animationDelay: "-2s" }} />
               </div>
-              <div className="mt-auto border-t border-gray-100 pt-3 flex justify-between items-end">
+              <div className="mt-auto border-t border-[#e7e6e4] pt-3 flex justify-between items-end">
                 <div>
-                  <div className="font-eb-garamond italic text-[#111111] text-xl leading-none">AI Receptionist</div>
-                  <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">+4 appointments today</div>
+                  <div className="font-alte font-normal text-[#111111] text-xl leading-none">AI Receptionist</div>
+                  <div className="font-alte text-[9px] text-gray-400 mt-0.5 tracking-wide">+4 appointments today</div>
                 </div>
                 <button
                   onClick={() => { onCardPlay("travel"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#FF8800", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(255,136,0,0.4)" }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#FF8800", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -325,23 +326,23 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
 
           {/* Card 2, Hiring · pink + cyan */}
           <div className="absolute" style={{ top: "30%", right: "42%", transform: "rotate(-12deg) scale(0.95)", zIndex: 2 }}>
-            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
-              <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
+            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-[#e7e6e4]">
+              <div className="flex justify-between font-geist text-[12px] uppercase tracking-[0.02em] border-b border-[#e7e6e4] pb-2 mb-3 text-gray-500 font-normal">
                 <span>Hiring &amp; Staffing</span>
                 <span className="text-[#FF0055]">AI-002</span>
               </div>
-              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", borderRadius: "2px", isolation: "isolate" }}>
+              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", isolation: "isolate" }}>
                 <div className="animate-aura-breath absolute rounded-full" style={{ top: "-10%", left: "-10%", width: "140%", height: "140%", background: "#ff0055", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.8 }} />
                 <div className="animate-aura-breath absolute rounded-full" style={{ bottom: "-20%", right: "-20%", width: "120%", height: "120%", background: "#00ccff", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.8, animationDelay: "-4s" }} />
               </div>
-              <div className="mt-auto border-t border-gray-100 pt-3 flex justify-between items-end">
+              <div className="mt-auto border-t border-[#e7e6e4] pt-3 flex justify-between items-end">
                 <div>
-                  <div className="font-eb-garamond italic text-[#111111] text-xl leading-none">AI Interviewer</div>
-                  <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">12 candidates screened</div>
+                  <div className="font-alte font-normal text-[#111111] text-xl leading-none">AI Interviewer</div>
+                  <div className="font-alte text-[9px] text-gray-400 mt-0.5 tracking-wide">12 candidates screened</div>
                 </div>
                 <button
                   onClick={() => { onCardPlay("homeservices"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#00B4D8", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(0,180,216,0.4)" }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#00B4D8", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -352,23 +353,23 @@ const Hero = ({ onCardPlay }: { onCardPlay: (tab: DemoTab) => void }) => (
 
           {/* Card 3, Real Estate · blue + teal */}
           <div className="absolute" style={{ top: "48%", right: "8%", transform: "rotate(15deg) scale(0.9)", zIndex: 1 }}>
-            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-black/[0.08]" style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.08)" }}>
-              <div className="flex justify-between text-[8px] uppercase tracking-[0.05em] border-b border-gray-100 pb-2 mb-3 text-gray-500 font-semibold">
+            <div className="bg-white w-[260px] h-[360px] p-4 flex flex-col border border-[#e7e6e4]">
+              <div className="flex justify-between font-geist text-[12px] uppercase tracking-[0.02em] border-b border-[#e7e6e4] pb-2 mb-3 text-gray-500 font-normal">
                 <span>Real Estate</span>
                 <span className="text-[#3300FF]">AI-003</span>
               </div>
-              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", borderRadius: "2px", isolation: "isolate" }}>
+              <div className="flex-1 relative overflow-hidden mb-3" style={{ background: "#fafafa", isolation: "isolate" }}>
                 <div className="animate-aura-breath absolute rounded-full" style={{ top: "-20%", right: "-20%", width: "160%", height: "160%", background: "#3300ff", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.8 }} />
                 <div className="animate-aura-breath absolute rounded-full" style={{ bottom: "-20%", left: "-20%", width: "140%", height: "140%", background: "#00ffcc", filter: "blur(35px)", mixBlendMode: "multiply", opacity: 0.8, animationDelay: "-1s" }} />
               </div>
-              <div className="mt-auto border-t border-gray-100 pt-3 flex justify-between items-end">
+              <div className="mt-auto border-t border-[#e7e6e4] pt-3 flex justify-between items-end">
                 <div>
-                  <div className="font-eb-garamond italic text-[#111111] text-xl leading-none">Lead Qualifier</div>
-                  <div className="text-[9px] text-gray-400 mt-0.5 tracking-wide">3 site visits booked</div>
+                  <div className="font-alte font-normal text-[#111111] text-xl leading-none">Lead Qualifier</div>
+                  <div className="font-alte text-[9px] text-gray-400 mt-0.5 tracking-wide">3 site visits booked</div>
                 </div>
                 <button
                   onClick={() => { onCardPlay("coaching"); document.getElementById("hear-it")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
-                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#7C3AED", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 2px 8px rgba(124,58,237,0.4)" }}
+                  style={{ width: 28, height: 28, borderRadius: "50%", background: "#7C3AED", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}
                   title="Hear this agent"
                 >
                   <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0L10 6L0 12V0Z"/></svg>
@@ -406,17 +407,17 @@ const WaveformBars = ({ isPlaying, color }: { isPlaying: boolean; color: string 
 
 const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName: string; data: any }) => {
   return (
-    <div className="bg-slate-50 rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl relative h-full flex flex-col font-sfpro transition-all">
-      <div className="bg-white px-6 py-5 flex items-center justify-between border-b border-slate-200 shadow-sm relative z-10">
+    <div className="bg-slate-50 rounded-none border-4 border-[#1e293b] overflow-hidden relative h-full flex flex-col font-alte font-normal transition-all">
+      <div className="bg-white px-6 py-5 flex items-center justify-between border-b border-slate-200 relative z-10">
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+          <div className="w-7 h-7 rounded-none bg-emerald-50 border border-emerald-100 flex items-center justify-center">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
           </div>
-          <h5 className="text-slate-800 text-xs font-bold tracking-widest uppercase">Lead CRM</h5>
+          <h5 className="text-slate-800 font-geist text-[12px] font-normal tracking-[0.02em] uppercase">Lead CRM</h5>
         </div>
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-50 border border-emerald-100">
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-none bg-emerald-50 border border-emerald-100">
            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
-           <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700">Live Sync</span>
+           <span className="font-geist text-[12px] font-normal uppercase tracking-[0.02em] text-emerald-700">Live Sync</span>
         </div>
       </div>
       <div className="flex-1 p-5 bg-slate-50 overflow-hidden relative">
@@ -426,13 +427,13 @@ const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName
             { name: "Priya K.", status: "Contacted", time: "2h ago", color: "bg-blue-100 text-blue-700 border-blue-200" },
             { name: "Amit S.", status: "Closed", time: "5h ago", color: "bg-amber-100 text-amber-700 border-amber-200" },
           ].map((lead, i) => (
-            <div key={i} className="flex items-center justify-between p-4 rounded-xl bg-white border border-slate-200 shadow-sm opacity-50 relative ml-8">
+            <div key={i} className="flex items-center justify-between p-4 rounded-none bg-white border border-slate-200 opacity-50 relative ml-8">
               <div className="absolute -left-10 w-2.5 h-2.5 rounded-full bg-slate-200 border-2 border-slate-50" />
               <div className="flex items-center gap-3.5">
-                <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold border ${lead.color}`}>{lead.name[0]}</div>
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-normal border ${lead.color}`}>{lead.name[0]}</div>
                 <div>
-                    <p className="text-sm text-slate-700 font-bold">{lead.name}</p>
-                    <p className="text-[10px] text-slate-400 font-medium">{lead.time}</p>
+                    <p className="text-sm text-slate-700 font-normal">{lead.name}</p>
+                    <p className="text-[10px] text-slate-400 font-normal">{lead.time}</p>
                 </div>
               </div>
             </div>
@@ -441,29 +442,29 @@ const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName
             {isVisible && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 10 }} animate={{ opacity: 1, scale: 1, y: 0 }}
-                className="p-5 rounded-2xl border border-[#2D22FF]/20 bg-white relative shadow-xl ml-8 z-10"
+                className="p-5 rounded-none border border-[#2D22FF]/20 bg-white relative ml-8 z-10"
               >
-                <div className="absolute -left-[40px] top-6 w-3 h-3 rounded-full bg-[#2D22FF] border-2 border-slate-50 shadow-[0_0_12px_rgba(45,34,255,0.4)]" />
+                <div className="absolute -left-[40px] top-6 w-3 h-3 rounded-full bg-[#2D22FF] border-2 border-slate-50" />
                 <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
                   <div className="flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2D22FF] to-[#1e17ba] flex items-center justify-center text-sm font-bold text-white shadow-md">{leadName[0]}</div>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2D22FF] to-[#1e17ba] flex items-center justify-center text-sm font-normal text-white">{leadName[0]}</div>
                     <div className="min-w-0">
-                      <p className="text-sm font-bold text-slate-800 truncate">{leadName}</p>
-                      <p className="text-[10px] text-slate-500 font-medium">Synced via Voice</p>
+                      <p className="text-sm font-normal text-slate-800 truncate">{leadName}</p>
+                      <p className="text-[10px] text-slate-500 font-normal">Synced via Voice</p>
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[9px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-100 leading-none">{data.status}</span>
+                  <span className="px-2.5 py-1 rounded-none text-[9px] font-normal bg-emerald-50 text-emerald-600 border border-emerald-100 leading-none">{data.status}</span>
                 </div>
                 <div className="space-y-3">
                   <div className="flex flex-col gap-1.5 flex-1 min-w-0">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase">Summary</span>
-                      <span className="text-[9px] text-[#2D22FF] font-bold bg-[#2D22FF]/5 px-2 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="font-geist text-[12px] text-slate-400 font-normal tracking-[0.02em] uppercase">Summary</span>
+                      <span className="text-[9px] text-[#2D22FF] font-normal bg-[#2D22FF]/5 px-2 py-0.5 rounded-none flex items-center gap-1">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg> Voice Agent
                       </span>
                     </div>
-                    <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                      <p className="text-xs text-slate-600 leading-relaxed italic">&quot;{data.notes}&quot;</p>
+                    <div className="bg-slate-50 rounded-none p-3 border border-slate-100">
+                      <p className="text-xs text-slate-600 leading-relaxed">&quot;{data.notes}&quot;</p>
                     </div>
                   </div>
                 </div>
@@ -473,7 +474,7 @@ const CRMMockup = ({ isVisible, leadName, data }: { isVisible: boolean; leadName
         </div>
       </div>
       <div className="py-4 bg-white border-t border-slate-100 flex items-center justify-center gap-1.5 opacity-40 grayscale">
-         <span className="text-[9px] font-bold uppercase tracking-[0.3em]">Powered by Guftugu</span>
+         <span className="font-geist text-[12px] font-normal uppercase tracking-[0.02em]">Powered by Guftugu</span>
       </div>
     </div>
   );
@@ -489,18 +490,18 @@ const WhatsAppMockup = ({
   confirmMessage: string;
 }) => {
   const renderMsg = (html: string) =>
-    html.replace(/\n/g, "<br/>").replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#111b21]">$1</strong>');
+    html.replace(/\n/g, "<br/>").replace(/\*\*(.*?)\*\*/g, '<strong class="font-normal text-[#111b21]">$1</strong>');
 
   return (
-    <div className="h-full flex flex-col font-sfpro bg-[#e5ddd5]" style={{ backgroundImage: "url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')", backgroundSize: "450px" }}>
+    <div className="h-full flex flex-col font-alte font-normal bg-[#e5ddd5]" style={{ backgroundImage: "url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')", backgroundSize: "450px" }}>
       {/* Header */}
-      <div className="bg-[#075e54] pt-10 pb-3 px-3 flex items-center shadow-md z-20 sticky top-0">
+      <div className="bg-[#075e54] pt-10 pb-3 px-3 flex items-center z-20 sticky top-0">
         <div className="flex items-center gap-1 text-white mr-1">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm">G</div>
+          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-normal text-sm">G</div>
         </div>
         <div className="flex-1 min-w-0">
-          <h5 className="text-white text-[16px] font-bold leading-tight truncate">Guftugu AI</h5>
+          <h5 className="text-white text-[16px] font-normal leading-tight truncate">Guftugu AI</h5>
           <p className="text-white/70 text-[11px] leading-none mt-0.5">online</p>
         </div>
         <div className="flex items-center gap-4 text-white/90 ml-2">
@@ -517,12 +518,12 @@ const WhatsAppMockup = ({
             <motion.div
               key="customer-msg"
               initial={{ opacity: 0, scale: 0.9, y: 8 }} animate={{ opacity: 1, scale: 1, y: 0 }}
-              className="bg-[#d9fdd3] p-2.5 rounded-[12px] rounded-tr-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-end"
+              className="bg-[#d9fdd3] p-2.5 rounded-none max-w-[85%] relative self-end"
             >
               <div className="absolute top-0 -right-2 w-3 h-3 bg-[#d9fdd3]" style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }} />
               <p className="text-[#111b21] text-[14px] leading-[1.4] pr-10">{customerMessage}</p>
               <div className="absolute bottom-1 right-1.5 flex items-center gap-0.5 opacity-50">
-                <span className="text-[9px] text-[#667781] font-medium leading-none">16:41</span>
+                <span className="text-[9px] text-[#667781] font-normal leading-none">16:41</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="-ml-[11px]"/></svg>
               </div>
             </motion.div>
@@ -539,7 +540,7 @@ const WhatsAppMockup = ({
             >
               <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/10 backdrop-blur-sm">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[10px] text-[#333] font-semibold">Dhvani is calling you…</span>
+                <span className="text-[10px] text-[#333] font-normal">Dhvani is calling you…</span>
               </div>
             </motion.div>
           )}
@@ -551,7 +552,7 @@ const WhatsAppMockup = ({
             <motion.div
               key="confirm-msg"
               initial={{ opacity: 0, scale: 0.9, y: 8 }} animate={{ opacity: 1, scale: 1, y: 0 }}
-              className="bg-white p-2.5 rounded-[12px] rounded-tl-none shadow-[0_1px_1px_rgba(0,0,0,0.1)] max-w-[85%] relative self-start"
+              className="bg-white p-2.5 rounded-none max-w-[85%] relative self-start"
             >
               <div className="absolute top-0 -left-2 w-3 h-3 bg-white" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
               <div className="pr-12 min-w-[120px]">
@@ -559,7 +560,7 @@ const WhatsAppMockup = ({
                   dangerouslySetInnerHTML={{ __html: renderMsg(confirmMessage) }} />
               </div>
               <div className="absolute bottom-1 right-1.5 flex items-center gap-0.5 opacity-50">
-                <span className="text-[9px] text-[#667781] font-medium leading-none">16:43</span>
+                <span className="text-[9px] text-[#667781] font-normal leading-none">16:43</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 12l4 4 10-10" stroke="#53bdeb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="-ml-[11px]"/></svg>
               </div>
             </motion.div>
@@ -569,7 +570,7 @@ const WhatsAppMockup = ({
 
       {/* Input bar */}
       <div className="p-2 pb-6 flex gap-2 items-center bg-transparent z-10">
-        <div className="bg-white rounded-full flex-1 h-[42px] px-3 flex items-center gap-3 shadow-sm border border-black/5">
+        <div className="bg-white rounded-none flex-1 h-[42px] px-3 flex items-center gap-3 border border-[#e7e6e4]">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>
           {step === 0 ? (
             <span className="text-[#111b21] text-sm flex-1 truncate">{customerMessage}</span>
@@ -578,7 +579,7 @@ const WhatsAppMockup = ({
           )}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#667781" strokeWidth="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19"/></svg>
         </div>
-        <div className={`w-[42px] h-[42px] rounded-full flex items-center justify-center text-white shadow-md transition-all ${step === 0 ? "bg-[#00a884] animate-pulse" : "bg-[#00a884]"}`}>
+        <div className={`w-[42px] h-[42px] rounded-full flex items-center justify-center text-white transition-all ${step === 0 ? "bg-[#00a884] animate-pulse" : "bg-[#00a884]"}`}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white" className="ml-1"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
         </div>
       </div>
@@ -723,11 +724,11 @@ const HearItYourselfSection = ({
         {/* Header */}
         <div className="text-center mb-16">
           <SectionLabel text="Live Demo" dark />
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-eb-garamond italic text-white leading-tight mb-6">
+          <h2 className="font-alte font-normal text-4xl sm:text-5xl lg:text-7xl text-white leading-tight mb-6">
             Text. Call. Done.{" "}
             <span className="text-white/40">In under 2 minutes.</span>
           </h2>
-          <p className="text-white/60 text-lg max-w-xl mx-auto font-sfpro">
+          <p className="text-white/60 text-lg max-w-xl mx-auto font-alte font-normal">
             Customer texts on WhatsApp → Dhvani calls back → confirms on WhatsApp → CRM updated. Automatically.
           </p>
         </div>
@@ -736,7 +737,7 @@ const HearItYourselfSection = ({
         <div className="flex justify-center gap-3 mb-12">
           {(Object.keys(DEMOS) as DemoTab[]).map((tab) => (
             <button key={tab} onClick={() => onTabChange(tab)}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 border-2 ${activeTab === tab ? "bg-[#2D22FF] border-[#2D22FF] text-white shadow-lg" : "border-white/10 text-white/40 hover:text-white"}`}>
+              className={`px-6 py-2.5 rounded-none font-alte text-xs font-normal transition-all duration-300 border ${activeTab === tab ? "bg-[#2D22FF] border-[#2D22FF] text-white" : "border-white/10 text-white/40 hover:text-white"}`}>
               {DEMOS[tab].label}
             </button>
           ))}
@@ -748,7 +749,7 @@ const HearItYourselfSection = ({
             <div key={i} className="flex items-center gap-2">
               <motion.div
                 animate={{ backgroundColor: mobileActivePanel === i ? pill.color + "22" : "rgba(255,255,255,0.04)", borderColor: mobileActivePanel === i ? pill.color + "66" : "rgba(255,255,255,0.1)" }}
-                className="px-3 py-1.5 rounded-full border text-[11px] font-bold transition-all"
+                className="px-3 py-1.5 rounded-none border font-alte text-[11px] font-normal transition-all"
                 style={{ color: mobileActivePanel === i ? pill.color : "rgba(255,255,255,0.3)" }}
               >
                 {pill.label}
@@ -768,17 +769,17 @@ const HearItYourselfSection = ({
             >
               <button
                 onClick={handlePlay}
-                className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-[#FCCA07] text-[#0A1128] font-bold text-base transition-all hover:bg-[#f0bd00] active:scale-[0.97] shadow-[0_0_40px_rgba(252,202,7,0.25)]"
+                className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-none bg-[#FCCA07] text-[#0A1128] font-alte font-normal text-base transition-all hover:bg-[#f0bd00] active:scale-[0.97]"
               >
                 {/* Pulse ring */}
-                <span className="absolute inset-0 rounded-2xl bg-[#FCCA07] animate-ping opacity-20 pointer-events-none" />
+                <span className="absolute inset-0 rounded-none bg-[#FCCA07] animate-ping opacity-20 pointer-events-none" />
                 <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#0A1128]/10">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
                 </span>
                 <span className="relative">Watch the {demo.label} demo</span>
-                <span className="relative text-[#0A1128]/50 text-sm font-medium">~5 sec</span>
+                <span className="relative text-[#0A1128]/50 text-sm font-normal">~5 sec</span>
               </button>
-              <p className="text-white/30 text-xs">
+              <p className="font-alte text-white/30 text-xs">
                 See how a customer texts WhatsApp → Dhvani calls back → booking confirmed
               </p>
             </motion.div>
@@ -794,11 +795,11 @@ const HearItYourselfSection = ({
                 ${mobileActivePanel === 0 ? "block" : "hidden xl:block"}
                 ${currentStep < 1 ? "opacity-60 scale-[0.98]" : "opacity-100 scale-100"}`}
             >
-              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+              <div className="mb-4 flex items-center gap-2 px-2 font-geist text-[12px] font-normal tracking-[0.02em] text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep >= 1 && currentStep <= 1 ? "bg-[#25D366] animate-pulse" : currentStep === 4 ? "bg-[#25D366] animate-pulse" : "bg-white/10"}`} />
                 01. WhatsApp (Customer)
               </div>
-              <div className="h-[360px] sm:h-[440px] xl:h-[520px] rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden shadow-2xl">
+              <div className="h-[360px] sm:h-[440px] xl:h-[520px] rounded-none border-4 border-[#1e293b] overflow-hidden">
                 <WhatsAppMockup
                   step={currentStep}
                   customerMessage={demo.customerMessage}
@@ -813,21 +814,21 @@ const HearItYourselfSection = ({
             <div className={`flex-1 transition-all duration-700
               ${mobileActivePanel === 1 ? "block" : "hidden xl:block"}
               ${currentStep < 2 ? "xl:opacity-20 xl:blur-[2px]" : "xl:opacity-100"}`}>
-              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+              <div className="mb-4 flex items-center gap-2 px-2 font-geist text-[12px] font-normal tracking-[0.02em] text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep >= 2 && currentStep <= 3 ? "bg-[#2D22FF] animate-pulse" : "bg-white/10"}`} />
                 02. Voice Agent (Dhvani)
               </div>
-              <div className="rounded-[2.5rem] border-4 border-[#1e293b] overflow-hidden relative h-[360px] sm:h-[440px] xl:h-[520px] flex flex-col bg-[#0A0D14] shadow-2xl">
+              <div className="rounded-none border-4 border-[#1e293b] overflow-hidden relative h-[360px] sm:h-[440px] xl:h-[520px] flex flex-col bg-[#0A0D14]">
                 <div className="px-6 pt-12 pb-5 border-b border-white/5 flex items-center justify-between bg-black/40 backdrop-blur-xl z-20">
                   <div className="flex items-center gap-4 min-w-0 flex-1">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${currentStep >= 2 ? "bg-[#2D22FF] shadow-[0_0_20px_#2D22FF66]" : "bg-white/5"}`}>
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
                     </div>
                     <div className="flex flex-col min-w-0">
-                      <div className="text-white text-[15px] font-bold flex items-center gap-1.5 leading-tight truncate">
+                      <div className="text-white text-[15px] font-normal flex items-center gap-1.5 leading-tight truncate">
                         {demo.callerName} <span className="text-white/20 font-normal">to</span> <span className="text-[#818cf8] shrink-0">Dhvani AI</span>
                       </div>
-                      <p className="text-white/30 text-[10px] font-bold mt-1 uppercase tracking-wider truncate">{demo.scenario}</p>
+                      <p className="text-white/30 font-geist text-[12px] font-normal mt-1 uppercase tracking-[0.02em] truncate">{demo.scenario}</p>
                     </div>
                   </div>
                 </div>
@@ -840,7 +841,7 @@ const HearItYourselfSection = ({
                         </div>
                         {currentStep === 1 ? (
                           <div className="flex flex-col items-center gap-2">
-                            <p className="text-[#818cf8] text-[11px] font-bold tracking-[0.2em] uppercase">Incoming call…</p>
+                            <p className="text-[#818cf8] font-geist text-[12px] font-normal tracking-[0.02em] uppercase">Incoming call…</p>
                             <div className="flex gap-1.5 items-center">
                               {[0, 1, 2].map(i => (
                                 <div key={i} className="w-2 h-2 rounded-full bg-[#2D22FF]/60 animate-bounce" style={{ animationDelay: `${i * 0.15}s` }} />
@@ -848,7 +849,7 @@ const HearItYourselfSection = ({
                             </div>
                           </div>
                         ) : (
-                          <p className="text-white/15 text-[11px] font-bold tracking-[0.2em] uppercase">Waiting for call…</p>
+                          <p className="text-white/15 font-geist text-[12px] font-normal tracking-[0.02em] uppercase">Waiting for call…</p>
                         )}
                       </motion.div>
                     ) : (
@@ -857,10 +858,10 @@ const HearItYourselfSection = ({
                         {demo.transcript.slice(0, visibleMessages).map((msg, i) => (
                           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} key={i}
                             className={`flex gap-3 max-w-[85%] ${msg.speaker === "Dhvani" ? "flex-row mr-auto" : "flex-row-reverse ml-auto"}`}>
-                            <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center text-[10px] font-bold mt-auto mb-1 shadow-sm ${msg.speaker === "Dhvani" ? "bg-[#1e293b] text-white" : "bg-white/10 text-white/60"}`}>
+                            <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center text-[10px] font-normal mt-auto mb-1 ${msg.speaker === "Dhvani" ? "bg-[#1e293b] text-white" : "bg-white/10 text-white/60"}`}>
                               {msg.speaker === "Dhvani" ? "D" : demo.callerName[0]}
                             </div>
-                            <div className={`px-4 py-3 rounded-[1.25rem] text-[13.5px] shadow-sm leading-relaxed ${msg.speaker === "Dhvani" ? "bg-[#1e293b]/80 border border-white/5 text-white/90 rounded-bl-none" : "bg-[#2D22FF] text-white rounded-br-none"}`}>
+                            <div className={`px-4 py-3 rounded-none text-[13.5px] leading-relaxed ${msg.speaker === "Dhvani" ? "bg-[#1e293b]/80 border border-white/5 text-white/90" : "bg-[#2D22FF] text-white"}`}>
                               <p>{msg.text}</p>
                             </div>
                           </motion.div>
@@ -874,12 +875,12 @@ const HearItYourselfSection = ({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className={`w-2 h-2 rounded-full ${isPlaying ? "bg-emerald-400 animate-ping" : "bg-white/10"}`} />
-                      <span className="text-[10px] text-white/30 font-bold uppercase tracking-widest">
+                      <span className="font-geist text-[12px] text-white/30 font-normal uppercase tracking-[0.02em]">
                         {isPlaying ? "Processing Voice" : currentStep >= 4 ? "Call Ended" : "Ready"}
                       </span>
                     </div>
                     {currentStep > 0 && (
-                      <button onClick={handleRestart} className="text-[10px] text-[#2D22FF] font-bold uppercase tracking-widest">
+                      <button onClick={handleRestart} className="font-geist text-[12px] text-[#2D22FF] font-normal uppercase tracking-[0.02em]">
                         Restart
                       </button>
                     )}
@@ -894,7 +895,7 @@ const HearItYourselfSection = ({
             <div className={`flex-1 transition-all duration-700
               ${mobileActivePanel === 2 ? "block" : "hidden xl:block"}
               ${currentStep < 5 ? "xl:opacity-10 xl:blur-[3px] xl:scale-95" : "xl:opacity-100 xl:scale-100"}`}>
-              <div className="mb-4 flex items-center gap-2 px-2 text-[10px] font-bold tracking-widest text-white/30 uppercase">
+              <div className="mb-4 flex items-center gap-2 px-2 font-geist text-[12px] font-normal tracking-[0.02em] text-white/30 uppercase">
                 <div className={`w-2 h-2 rounded-full ${currentStep === 5 ? "bg-emerald-400 animate-pulse" : "bg-white/10"}`} />
                 03. Sync (CRM)
               </div>
@@ -907,7 +908,7 @@ const HearItYourselfSection = ({
 
         <div className="mt-12 flex flex-col items-center gap-3 text-center">
           <div className="w-12 h-px bg-white/10" />
-          <p className="max-w-md text-white/20 text-xs font-medium tracking-wide font-sfpro leading-relaxed px-6">
+          <p className="max-w-md text-white/20 text-xs font-normal tracking-wide font-alte leading-relaxed px-6">
             Showing actual Guftugu behavior: customer texts WhatsApp → Dhvani calls back → Sandesh sends confirmation → CRM synced. All automatic.
           </p>
         </div>
@@ -977,7 +978,7 @@ const SocialProofBar = () => {
     },
   ];
   return (
-    <div className="bg-[#FAF9F8] border-b border-black/[0.04]">
+    <div className="bg-[#F9F6F4] border-b border-[#e7e6e4]">
       <Container size="lg">
         <div className="py-8 sm:py-10 grid grid-cols-2 lg:grid-cols-5 gap-y-8 gap-x-4 items-center justify-center">
           {metrics.map((m, i) => (
@@ -987,14 +988,14 @@ const SocialProofBar = () => {
               </span>
               <div className="flex items-baseline justify-center gap-[2px]">
                 {m.prefix && (
-                  <span className="font-mono text-sm text-[#0A1128]/30 mr-0.5" style={{ fontFeatureSettings: '"tnum"' }}>{m.prefix}</span>
+                  <span className="font-geist text-sm font-normal text-[#0A1128]/30 mr-0.5" style={{ fontFeatureSettings: '"tnum"' }}>{m.prefix}</span>
                 )}
-                <span className="font-eb-garamond italic text-[2.75rem] sm:text-[3rem] text-[#0A1128] leading-none tracking-tight">{m.num}</span>
+                <span className="font-alte font-normal text-[2.75rem] sm:text-[3rem] text-[#0A1128] leading-none tracking-[-0.04em]">{m.num}</span>
                 {m.unit && (
-                  <span className="font-mono text-xs text-[#0A1128]/30 ml-0.5 uppercase tracking-[0.1em]">{m.unit}</span>
+                  <span className="font-geist text-[12px] font-normal text-[#0A1128]/30 ml-0.5 uppercase tracking-[0.02em]">{m.unit}</span>
                 )}
               </div>
-              <p className="text-[9px] font-bold tracking-[0.22em] uppercase text-[#0A1128]/30 mt-3">
+              <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-[#0A1128]/30 mt-3">
                 {m.label}
               </p>
             </div>
@@ -1037,7 +1038,7 @@ const CALL_SAMPLES: CallSample[] = [
     callerName: "Dinanath",
     businessName: "City Health Clinic",
     label: "Patient Health Follow-up",
-    scenario: "Dhvani calls Dinanath to check on his recovery post-visit, asks about new symptoms & logs feedback — fully automated outbound care call.",
+    scenario: "Dhvani calls Dinanath to check on his recovery post-visit, asks about new symptoms & logs feedback. Fully automated outbound care call.",
     duration: "1:58",
     tag: "Healthcare",
     tagColor: "#10B981",
@@ -1148,12 +1149,12 @@ const RealCallSamplesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <SectionLabel text="Real Calls · Real Customers" dark />
-          <h2 className="font-eb-garamond italic text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
+          <h2 className="font-alte font-normal text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
             Hear Dhvani in action.{" "}
             <span className="text-white/40">With real callers.</span>
           </h2>
-          <p className="text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Actual recordings of Dhvani handling live customer calls — not scripted demos.
+          <p className="font-alte font-normal text-white/50 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            Actual recordings of Dhvani handling live customer calls, not scripted demos.
           </p>
         </div>
 
@@ -1167,9 +1168,9 @@ const RealCallSamplesSection = () => {
             return (
               <div
                 key={sample.id}
-                className={`relative rounded-[2rem] border flex flex-col overflow-hidden transition-all duration-500 cursor-pointer group ${
+                className={`relative rounded-none border flex flex-col overflow-hidden transition-all duration-500 cursor-pointer group ${
                   isPlaying
-                    ? "border-[#FCCA07]/25 shadow-[0_0_60px_rgba(252,202,7,0.1),0_0_0_1px_rgba(252,202,7,0.08)]"
+                    ? "border-[#FCCA07]/25"
                     : "border-white/[0.07] hover:border-white/[0.14]"
                 }`}
                 style={{
@@ -1192,20 +1193,20 @@ const RealCallSamplesSection = () => {
                     <div className="flex items-center gap-4">
                       {/* Avatar */}
                       <div
-                        className={`w-12 h-12 rounded-2xl flex items-center justify-center text-sm font-black shrink-0 transition-all duration-300 ${isPlaying ? "shadow-[0_0_20px_rgba(252,202,7,0.3)]" : ""}`}
+                        className={`w-12 h-12 rounded-none flex items-center justify-center text-sm font-normal shrink-0 transition-all duration-300`}
                         style={{ backgroundColor: `${sample.tagColor}22`, color: sample.tagColor }}
                       >
                         {initials}
                       </div>
                       <div>
-                        <p className="text-white font-bold text-[15px] leading-tight">{sample.callerName}</p>
-                        <p className="text-white/35 text-[12px] mt-0.5 font-medium">{sample.businessName}</p>
+                        <p className="text-white font-alte font-normal text-[15px] leading-tight">{sample.callerName}</p>
+                        <p className="text-white/35 font-alte text-[12px] mt-0.5 font-normal">{sample.businessName}</p>
                       </div>
                     </div>
                     {/* Call type + tag */}
                     <div className="flex flex-col items-end gap-1.5 shrink-0">
                       <span
-                        className={`text-[9px] font-black tracking-[0.2em] uppercase px-2.5 py-1 rounded-full border ${
+                        className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase px-2.5 py-1 rounded-none border ${
                           sample.callType === "inbound"
                             ? "text-emerald-400 bg-emerald-400/10 border-emerald-400/20"
                             : "text-[#818cf8] bg-[#818cf8]/10 border-[#818cf8]/20"
@@ -1214,7 +1215,7 @@ const RealCallSamplesSection = () => {
                         {sample.callType === "inbound" ? "↙ Inbound" : "↗ Outbound"}
                       </span>
                       <span
-                        className="text-[9px] font-black tracking-[0.18em] uppercase px-2.5 py-1 rounded-full"
+                        className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase px-2.5 py-1 rounded-none"
                         style={{ color: sample.tagColor, backgroundColor: `${sample.tagColor}15` }}
                       >
                         {sample.tag}
@@ -1224,13 +1225,13 @@ const RealCallSamplesSection = () => {
 
                   {/* Row 2: Call title + scenario */}
                   <div className="border-t border-white/[0.05] pt-5">
-                    <h3 className="text-white font-bold text-base sm:text-[17px] mb-2 leading-snug">{sample.label}</h3>
-                    <p className="text-white/40 text-[13px] leading-relaxed">{sample.scenario}</p>
+                    <h3 className="text-white font-alte font-normal text-base sm:text-[17px] mb-2 leading-snug">{sample.label}</h3>
+                    <p className="text-white/40 font-alte font-normal text-[13px] leading-relaxed">{sample.scenario}</p>
                   </div>
 
                   {/* Row 3: Waveform visualizer (full width) */}
                   <div
-                    className={`rounded-xl px-4 py-5 flex flex-col gap-3 transition-all duration-300 ${
+                    className={`rounded-none px-4 py-5 flex flex-col gap-3 transition-all duration-300 ${
                       isPlaying ? "bg-white/[0.06]" : "bg-white/[0.03]"
                     }`}
                   >
@@ -1239,7 +1240,7 @@ const RealCallSamplesSection = () => {
                       {[0.3,0.55,0.8,0.45,1,0.6,0.75,0.35,0.9,0.5,0.7,0.4,0.85,0.55,0.65,0.38,0.92,0.48,0.72,0.42,0.88,0.52,0.68,0.36].map((h, i) => (
                         <div
                           key={i}
-                          className="flex-1 rounded-full origin-center transition-all"
+                          className="flex-1 rounded-none origin-center transition-all"
                           style={{
                             height: `${h * 40}px`,
                             backgroundColor: isPlaying
@@ -1254,9 +1255,9 @@ const RealCallSamplesSection = () => {
                       ))}
                     </div>
                     {/* Progress bar */}
-                    <div className="h-[2px] rounded-full bg-white/[0.07] overflow-hidden">
+                    <div className="h-[2px] rounded-none bg-white/[0.07] overflow-hidden">
                       <div
-                        className="h-full rounded-full transition-all duration-300"
+                        className="h-full rounded-none transition-all duration-300"
                         style={{
                           width: `${pct}%`,
                           background: "linear-gradient(90deg, #FCCA07cc, #FCCA07)",
@@ -1265,10 +1266,10 @@ const RealCallSamplesSection = () => {
                     </div>
                     {/* Time row */}
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono tabular-nums text-white/30">
+                      <span className="text-[10px] font-geist font-normal tabular-nums text-white/30">
                         {isPlaying ? getElapsedTime(sample) : "0:00"}
                       </span>
-                      <span className="text-[10px] font-mono tabular-nums text-white/20">{sample.duration}</span>
+                      <span className="text-[10px] font-geist font-normal tabular-nums text-white/20">{sample.duration}</span>
                     </div>
                   </div>
 
@@ -1276,7 +1277,7 @@ const RealCallSamplesSection = () => {
                   <div className="flex items-center gap-4">
                     <button
                       onClick={(e) => { e.stopPropagation(); handlePlay(sample); }}
-                      className={`flex items-center gap-3 px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 active:scale-95 ${
+                      className={`flex items-center gap-3 px-5 py-3 rounded-none font-alte font-normal text-sm transition-all duration-300 active:scale-95 ${
                         isPlaying
                           ? "bg-[#FCCA07] text-[#0A1128]"
                           : "bg-white/[0.08] text-white hover:bg-white/[0.14] border border-white/[0.07] hover:border-white/[0.15]"
@@ -1300,7 +1301,7 @@ const RealCallSamplesSection = () => {
                     {isPlaying && (
                       <div className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                        <span className="text-[11px] text-emerald-400 font-bold tracking-wide">Now playing</span>
+                        <span className="text-[11px] text-emerald-400 font-alte font-normal tracking-wide">Now playing</span>
                       </div>
                     )}
                   </div>
@@ -1314,7 +1315,7 @@ const RealCallSamplesSection = () => {
         {/* Bottom note */}
         <div className="flex items-center justify-center gap-2 mt-10">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <p className="text-white/20 text-xs">
+          <p className="text-white/20 font-alte font-normal text-xs">
             Recordings shared with customer consent. Names and sensitive details redacted.
           </p>
         </div>
@@ -1354,35 +1355,35 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white overflow-hidden">
+    <section className="py-24 sm:py-32 bg-[#F9F6F4] overflow-hidden">
       <Container size="lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Left: The Premise */}
           <div className="lg:col-span-5">
             <SectionLabel text="The Problem" />
-            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-6">
+            <h2 className="font-alte font-normal text-4xl sm:text-5xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
               Aapka marketing theek hai. <br />
               <span className="text-gray-400">Missed calls problem hai.</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Most Indian businesses don&apos;t lose leads to big competitors or wrong pricing. 
-              They lose them in the <span className="text-[#0A1128] font-bold">3 seconds</span> after the phone rings and nobody picks up.
+            <p className="font-alte font-normal text-lg text-gray-600 mb-8 leading-relaxed">
+              Most Indian businesses don&apos;t lose leads to big competitors or wrong pricing.
+              They lose them in the <span className="text-[#0A1128] font-normal">3 seconds</span> after the phone rings and nobody picks up.
             </p>
             
             <div className="space-y-6">
-              <div className="flex gap-4 p-5 rounded-2xl bg-[#0A1128]/[0.02] border border-[#0A1128]/5">
+              <div className="flex gap-4 p-5 rounded-none bg-[#0A1128]/[0.02] border border-[#e7e6e4]">
                 <div className="w-10 h-10 rounded-full bg-[#0A1128] text-[#FCCA07] flex items-center justify-center flex-shrink-0">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                 </div>
                 <div>
-                  <p className="font-bold text-[#0A1128] text-sm mb-1">The 3-Second Rule</p>
-                  <p className="text-sm text-gray-500 leading-relaxed">If you don&apos;t answer, a lead takes 3 seconds to open Google Maps and call your next competitor. You never get a second chance.</p>
+                  <p className="font-alte font-normal text-[#0A1128] text-sm mb-1">The 3-Second Rule</p>
+                  <p className="font-alte font-normal text-sm text-gray-500 leading-relaxed">If you don&apos;t answer, a lead takes 3 seconds to open Google Maps and call your next competitor. You never get a second chance.</p>
                 </div>
               </div>
-              
-              <div className="pl-5 border-l-2 border-[#0A1128]/10">
-                <p className="text-sm text-gray-400 italic font-eb-garamond text-lg">
+
+              <div className="pl-5 border-l-2 border-[#e7e6e4]">
+                <p className="text-sm text-gray-400 font-alte font-normal text-lg">
                   &quot;Nobody answers. Lead waits. Lead calls next clinic. You just paid FB/Google for your competitor&apos;s lead.&quot;
                 </p>
               </div>
@@ -1391,14 +1392,14 @@ const ProblemSection = () => {
 
           {/* Right: The Ledger of Losses */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-[2rem] border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden flex flex-col">
-              
+            <div className="bg-white rounded-none border border-[#e7e6e4] relative overflow-hidden flex flex-col">
+
               {/* Header */}
               <div className="px-7 py-5 bg-[#0A1128] flex justify-between items-center z-10">
-                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/50">Ledger of Uncaptured Revenue</p>
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-white/50">Ledger of Uncaptured Revenue</p>
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/5">
                   <span className="w-1.5 h-1.5 rounded-full bg-rose-400/80 animate-pulse" />
-                  <p className="text-[9px] font-bold text-rose-300/80 tracking-wider uppercase">Active Leakage</p>
+                  <p className="font-geist text-[12px] font-normal text-rose-300/80 tracking-[0.02em] uppercase">Active Leakage</p>
                 </div>
               </div>
 
@@ -1407,12 +1408,12 @@ const ProblemSection = () => {
                 {costs.map((c, i) => (
                   <div key={i} className="group px-7 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all hover:bg-gray-50/50">
                     <div className="flex-1 min-w-0">
-                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">{c.scenario}</p>
-                      <p className="text-sm text-[#0A1128] font-medium max-w-xs">{c.note}</p>
+                      <p className="font-geist text-[12px] font-normal text-gray-400 uppercase tracking-[0.02em] mb-1.5">{c.scenario}</p>
+                      <p className="font-alte text-sm text-[#0A1128] font-normal max-w-xs">{c.note}</p>
                     </div>
                     <div className="flex flex-col items-end">
-                      <span className="font-eb-garamond italic text-3xl sm:text-[2.25rem] text-[#D44A4A] leading-none mb-1.5 tracking-tight group-hover:text-rose-700 transition-colors duration-300">{c.cost}</span>
-                      <span className="text-[9px] font-bold text-gray-300 uppercase tracking-wider">{c.impact}</span>
+                      <span className="font-alte font-normal text-3xl sm:text-[2.25rem] text-[#D44A4A] leading-none mb-1.5 tracking-[-0.04em] group-hover:text-rose-700 transition-colors duration-300">{c.cost}</span>
+                      <span className="font-geist text-[12px] font-normal text-gray-300 uppercase tracking-[0.02em]">{c.impact}</span>
                     </div>
                   </div>
                 ))}
@@ -1422,7 +1423,7 @@ const ProblemSection = () => {
               <div className="bg-[#050A14] p-8 text-white relative border-t border-gray-100 flex-1">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-[40px] pointer-events-none" />
                 
-                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 mb-6 flex items-center gap-3">
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-white/40 mb-6 flex items-center gap-3">
                   <span className="w-8 h-px bg-white/10" /> The Hidden Cost Flow
                 </p>
                 
@@ -1433,14 +1434,14 @@ const ProblemSection = () => {
                     { t: "Candidate applied on Monday.", s: "Screened Thursday. Joined elsewhere.", tag: "Hire Lost" },
                   ].map((row, i) => (
                     <div key={i} className="flex items-center gap-4 group">
-                      <div className="w-7 h-7 rounded bg-white/[0.02] border border-white/5 flex items-center justify-center flex-shrink-0 text-white/30 text-[10px] font-mono group-hover:bg-white/5 transition-colors">
+                      <div className="w-7 h-7 rounded-none bg-white/[0.02] border border-white/5 flex items-center justify-center flex-shrink-0 text-white/30 text-[10px] font-geist group-hover:bg-white/5 transition-colors">
                         0{i+1}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[13px] font-medium text-white/80 truncate mb-0.5">{row.t}</p>
-                        <p className="text-[11px] text-white/30">{row.s}</p>
+                        <p className="font-alte text-[13px] font-normal text-white/80 truncate mb-0.5">{row.t}</p>
+                        <p className="font-alte text-[11px] text-white/30">{row.s}</p>
                       </div>
-                      <div className="text-[9px] font-semibold px-2.5 py-1 rounded bg-white/[0.03] text-white/40 border border-white/5 whitespace-nowrap">
+                      <div className="font-alte text-[9px] font-normal px-2.5 py-1 rounded-none bg-white/[0.03] text-white/40 border border-white/5 whitespace-nowrap">
                         {row.tag}
                       </div>
                     </div>
@@ -1448,9 +1449,9 @@ const ProblemSection = () => {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-white/5">
-                  <p className="font-eb-garamond italic text-[1.35rem] text-white/90 leading-snug">
+                  <p className="font-alte font-normal text-[1.35rem] text-white/90 leading-snug">
                     Yeh sab revenue aapne pehle se kama liya tha. <br/>
-                    <span className="text-white/30 italic">Table pe pada reh gaya.</span>
+                    <span className="text-white/30">Table pe pada reh gaya.</span>
                   </p>
                 </div>
               </div>
@@ -1476,14 +1477,14 @@ const SolutionSection = () => {
         {/* The Transition */}
         <div className="flex flex-col gap-3 mb-12">
           {["Hire a second receptionist. She gets busy too.", "Add a WhatsApp chatbot. Half your leads call instead of typing.", "Buy a generic voice bot. Lead goes cold. Nobody follows up."].map((t, i) => (
-            <div key={i} className="flex items-center gap-3 text-sm text-gray-400 group">
-              <div className="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center flex-shrink-0 group-hover:border-red-200 group-hover:bg-red-50 group-hover:text-red-400 transition-colors">
+            <div key={i} className="flex items-center gap-3 font-alte font-normal text-sm text-gray-400 group">
+              <div className="w-5 h-5 rounded-full border border-[#e7e6e4] flex items-center justify-center flex-shrink-0 group-hover:border-red-200 group-hover:bg-red-50 group-hover:text-red-400 transition-colors">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
               </div>
               {t}
             </div>
           ))}
-          <p className="text-lg font-bold text-[#0A1128] mt-4 flex items-center gap-2">
+          <p className="font-alte text-lg font-normal text-[#0A1128] mt-4 flex items-center gap-2">
             <span className="w-8 h-[2px] bg-[#0A1128]/10" />
             None of them fix the whole pipeline. Guftugu is the whole pipeline.
           </p>
@@ -1493,13 +1494,13 @@ const SolutionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-16">
           <div>
             <SectionLabel text="The System · Guftugu" />
-            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-4">
+            <h2 className="font-alte font-normal text-4xl sm:text-5xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-4">
               Every call answered.<br />
               Every lead followed up.<br />
               <span className="text-gray-400">You only get pinged when it&apos;s hot.</span>
             </h2>
           </div>
-          <p className="text-lg text-gray-500 max-w-md leading-relaxed mb-1">
+          <p className="font-alte font-normal text-lg text-gray-500 max-w-md leading-relaxed mb-1">
             Guftugu is not a &quot;chatbot&quot; or a &quot;voice bot.&quot; It&apos;s your complete lead generation system, trained on your data and running 24/7.
           </p>
         </div>
@@ -1509,7 +1510,7 @@ const SolutionSection = () => {
           
           {/* Connector Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 rounded-full bg-white border border-[#e7e6e4] flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A1128" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14"/><path d="M13 5l7 7-7 7"/>
               </svg>
@@ -1517,14 +1518,14 @@ const SolutionSection = () => {
           </div>
 
           {/* Dhvani (Voice) */}
-          <div className="group bg-white rounded-[32px] p-8 sm:p-10 border border-orange-100 shadow-sm transition-all hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1">
+          <div className="group bg-white rounded-none p-8 sm:p-10 border border-orange-100 transition-all hover:-translate-y-1">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-3xl overflow-hidden border-2 border-orange-50 flex-shrink-0 bg-gray-50">
+              <div className="w-16 h-16 rounded-none overflow-hidden border-2 border-orange-50 flex-shrink-0 bg-gray-50">
                 <img src="https://www.facehash.dev/api/avatar?name=Dhvani&size=128&shape=round" width={64} height={64} alt="Dhvani" loading="lazy" />
               </div>
               <div>
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-orange-500 bg-orange-50 px-2 py-0.5 rounded">The Voice</span>
-                <p className="text-2xl font-bold text-[#0A1128]">Dhvani</p>
+                <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-orange-500 bg-orange-50 px-2 py-0.5 rounded-none">The Voice</span>
+                <p className="text-2xl font-alte font-normal text-[#0A1128]">Dhvani</p>
               </div>
             </div>
 
@@ -1539,8 +1540,8 @@ const SolutionSection = () => {
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0A1128] mb-0.5">{f.t}</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">{f.s}</p>
+                    <p className="font-alte text-sm font-normal text-[#0A1128] mb-0.5">{f.t}</p>
+                    <p className="font-alte text-xs text-gray-500 leading-relaxed">{f.s}</p>
                   </div>
                 </li>
               ))}
@@ -1548,14 +1549,14 @@ const SolutionSection = () => {
           </div>
 
           {/* Sandesh (WhatsApp) */}
-          <div className="group bg-white rounded-[32px] p-8 sm:p-10 border border-green-100 shadow-sm transition-all hover:shadow-xl hover:shadow-green-500/5 hover:-translate-y-1">
+          <div className="group bg-white rounded-none p-8 sm:p-10 border border-green-100 transition-all hover:-translate-y-1">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-3xl overflow-hidden border-2 border-green-50 flex-shrink-0 bg-gray-50">
+              <div className="w-16 h-16 rounded-none overflow-hidden border-2 border-green-50 flex-shrink-0 bg-gray-50">
                 <img src="https://www.facehash.dev/api/avatar?name=Sandesh&size=128&shape=round" width={64} height={64} alt="Sandesh" loading="lazy" />
               </div>
               <div>
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded">The Text</span>
-                <p className="text-2xl font-bold text-[#0A1128]">Sandesh</p>
+                <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded-none">The Text</span>
+                <p className="text-2xl font-alte font-normal text-[#0A1128]">Sandesh</p>
               </div>
             </div>
 
@@ -1570,8 +1571,8 @@ const SolutionSection = () => {
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0A1128] mb-0.5">{f.t}</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">{f.s}</p>
+                    <p className="font-alte text-sm font-normal text-[#0A1128] mb-0.5">{f.t}</p>
+                    <p className="font-alte text-xs text-gray-500 leading-relaxed">{f.s}</p>
                   </div>
                 </li>
               ))}
@@ -1582,28 +1583,28 @@ const SolutionSection = () => {
         {/* Outcome Node */}
         <div className="flex flex-col items-center mt-12 mb-20">
           <div className="w-1 h-12 bg-gradient-to-b from-gray-200 to-[#FCCA07] mb-4 rounded-full" />
-          <div className="bg-[#0A1128] text-white px-8 py-4 rounded-2xl flex items-center gap-4 shadow-xl">
+          <div className="bg-[#0A1128] text-white px-8 py-4 rounded-none flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-[#FCCA07] flex items-center justify-center text-[#0A1128] flex-shrink-0">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
             </div>
             <div>
-              <p className="text-sm font-bold leading-tight">You only get pinged when a lead is HOT.</p>
-              <p className="text-[10px] text-white/40 uppercase tracking-widest mt-0.5">Direct WhatsApp alert to your personal phone</p>
+              <p className="font-alte text-sm font-normal leading-tight">You only get pinged when a lead is HOT.</p>
+              <p className="font-geist text-[12px] text-white/40 uppercase tracking-[0.02em] mt-0.5">Direct WhatsApp alert to your personal phone</p>
             </div>
           </div>
         </div>
 
         {/* Memory / Compounding Layer */}
-        <div className="bg-white rounded-[32px] p-8 sm:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
+        <div className="bg-white rounded-none p-8 sm:p-12 border border-[#e7e6e4] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#0A1128]/[0.02] rounded-full blur-3xl pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
             <div className="lg:col-span-4">
-              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black tracking-widest uppercase">
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-none bg-blue-50 border border-blue-100 text-blue-600 font-geist text-[12px] font-normal tracking-[0.02em] uppercase">
                 Continuous Improvement
               </div>
-              <h3 className="text-3xl font-eb-garamond italic text-[#0A1128] mb-4">Gets sharper with every call.</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <h3 className="text-3xl font-alte font-normal text-[#0A1128] mb-4">Gets sharper with every call.</h3>
+              <p className="font-alte text-sm text-gray-500 leading-relaxed">
                 Unlike a human hire, Guftugu never stops learning. It analyzes every rejection, every doubt, and every question to refine your script automatically.
               </p>
             </div>
@@ -1614,11 +1615,11 @@ const SolutionSection = () => {
                 { w: "Week 3: Pattern Match", h: "Context Awareness", s: "Recognizes returning callers, maps frequent doubts automatically.", icon: "🧠" },
                 { w: "Month 2: High Gear", h: "Lead Filtering", s: "Your team only talks to pre-qualified leads worth their time.", icon: "⚡" },
               ].map((m, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-gray-50 border border-gray-100 group transition-all hover:bg-[#0A1128] hover:text-white">
+                <div key={i} className="p-6 rounded-none bg-gray-50 border border-[#e7e6e4] group transition-all hover:bg-[#0A1128] hover:text-white">
                   <div className="text-2xl mb-4 grayscale group-hover:grayscale-0 transition-all">{m.icon}</div>
-                  <p className="text-[10px] font-black tracking-widest uppercase text-gray-400 group-hover:text-white/40 mb-2">{m.w}</p>
-                  <p className="font-bold text-sm mb-2 text-[#0A1128] group-hover:text-white">{m.h}</p>
-                  <p className="text-xs text-gray-500 group-hover:text-white/60 leading-relaxed">{m.s}</p>
+                  <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 group-hover:text-white/40 mb-2">{m.w}</p>
+                  <p className="font-alte font-normal text-sm mb-2 text-[#0A1128] group-hover:text-white">{m.h}</p>
+                  <p className="font-alte text-xs text-gray-500 group-hover:text-white/60 leading-relaxed">{m.s}</p>
                 </div>
               ))}
             </div>
@@ -1688,18 +1689,18 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white overflow-hidden relative">
+    <section className="py-24 sm:py-32 bg-[#F9F6F4] overflow-hidden relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-      
+
       <Container size="lg">
         {/* Header */}
         <div className="text-center mb-16 relative">
           <SectionLabel text="The Process" />
-          <h2 className="text-4xl sm:text-6xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-4">
+          <h2 className="font-alte font-normal text-4xl sm:text-6xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-4">
             Three steps. <br />
             <span className="text-gray-400">You barely have to show up.</span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
+          <p className="font-alte font-normal text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
             We are a done-for-you service. We handle the prompts, the telephony, and the integrations. You just answer the qualified pings.
           </p>
         </div>
@@ -1713,30 +1714,30 @@ const HowItWorksSection = () => {
           </div>
 
           {steps.map((step, i) => (
-            <div key={i} className="group relative bg-[#F9F6F4]/50 border border-gray-100 rounded-[32px] p-8 transition-all hover:bg-white hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1">
+            <div key={i} className="group relative bg-white border border-[#e7e6e4] rounded-none p-8 transition-all hover:-translate-y-1">
               {/* Step number + Badge */}
               <div className="flex items-center justify-between mb-8">
-                <div className="w-12 h-12 rounded-2xl bg-[#0A1128] text-[#FCCA07] flex items-center justify-center font-bold text-xl shadow-lg shadow-black/10">
+                <div className="w-12 h-12 rounded-none bg-[#0A1128] text-[#FCCA07] flex items-center justify-center font-alte font-normal text-xl">
                   {step.num}
                 </div>
-                <div className="px-3 py-1 rounded-full bg-[#0A1128]/5 border border-[#0A1128]/5 text-[#0A1128] text-[10px] font-black tracking-widest uppercase">
+                <div className="px-3 py-1 rounded-none bg-[#0A1128]/5 border border-[#0A1128]/5 text-[#0A1128] font-geist text-[12px] font-normal tracking-[0.02em] uppercase">
                   {step.badge}
                 </div>
               </div>
 
               {/* Icon & Title */}
               <div className="mb-6">
-                <div className="w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center text-[#0A1128] mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-white border border-[#e7e6e4] flex items-center justify-center text-[#0A1128] mb-4 group-hover:scale-110 transition-transform">
                   {step.icon}
                 </div>
-                <h3 className="text-2xl font-eb-garamond italic text-[#0A1128] mb-3">{step.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed min-h-[48px]">{step.sub}</p>
+                <h3 className="text-2xl font-alte font-normal text-[#0A1128] mb-3">{step.title}</h3>
+                <p className="font-alte text-sm text-gray-500 leading-relaxed min-h-[48px]">{step.sub}</p>
               </div>
 
               {/* Action List */}
               <ul className="space-y-3 mb-8">
                 {step.bullets.map((b, j) => (
-                  <li key={j} className="flex gap-2 text-xs text-gray-600 leading-relaxed">
+                  <li key={j} className="flex gap-2 font-alte text-xs text-gray-600 leading-relaxed">
                     <span className="text-gray-400 flex-shrink-0 mt-0.5">-</span>
                     {b}
                   </li>
@@ -1744,7 +1745,7 @@ const HowItWorksSection = () => {
               </ul>
 
               {/* Your effort callout */}
-              <p className="text-[11px] font-semibold text-[#0A1128] border-t border-gray-300 pt-3">{step.you}</p>
+              <p className="font-alte text-[11px] font-normal text-[#0A1128] border-t border-[#e7e6e4] pt-3">{step.you}</p>
 
               {/* Connector arrow, hidden on last */}
               {i < steps.length - 1 && (
@@ -1757,7 +1758,7 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="flex justify-center">
-          <PrimaryBtn href={CAL_LINK} label="Take Your AI Agent Live in 30 Mins" size="lg" />
+          <BracketButton label="Take Your AI Agent Live in 30 Mins" href={CAL_LINK} variant="primary" external />
         </div>
       </Container>
     </section>
@@ -1897,17 +1898,17 @@ const UseCasesSection = () => {
     <section id="use-cases" className="py-20 sm:py-24 bg-[#F9F6F4]">
       <Container>
         <SectionLabel text="Primary use cases" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-8">
+        <h2 className="font-alte font-normal text-3xl sm:text-4xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-8">
           Pick your industry. See what you stop losing.
         </h2>
 
         {/* Tab bar */}
-        <div className="flex gap-0 mb-10 border-b border-gray-200 overflow-x-auto">
+        <div className="flex gap-0 mb-10 border-b border-[#e7e6e4] overflow-x-auto">
           {tabs.map((t) => (
             <button
               key={t.key}
               onClick={() => setActive(t.key)}
-              className={`flex items-center gap-2 px-5 py-3 text-sm font-semibold whitespace-nowrap transition-all border-b-2 -mb-px ${
+              className={`flex items-center gap-2 px-5 py-3 font-alte text-sm font-normal whitespace-nowrap transition-all border-b-2 -mb-px ${
                 active === t.key
                   ? "border-[#0A1128] text-[#0A1128]"
                   : "border-transparent text-gray-400 hover:text-gray-600"
@@ -1922,16 +1923,16 @@ const UseCasesSection = () => {
         </div>
 
         {/* Active use case card */}
-        <div className="bg-white border border-black/[0.06] overflow-hidden rounded-2xl" style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.04)" }}>
+        <div className="bg-white border border-[#e7e6e4] overflow-hidden rounded-none">
 
           {/* Header */}
           <div style={{ borderTop: `3px solid ${uc.accentColor}` }}>
             <div className="bg-[#0A1128] px-6 sm:px-8 py-6">
-              <span className="text-xs font-bold tracking-widest uppercase flex items-center gap-2" style={{ color: uc.accentColor }}>
+              <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase flex items-center gap-2" style={{ color: uc.accentColor }}>
                 <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: uc.accentColor }} />
                 {uc.role}
               </span>
-              <h3 className="text-xl sm:text-2xl font-eb-garamond italic text-white mt-2 leading-snug">
+              <h3 className="text-xl sm:text-2xl font-alte font-normal text-white mt-2 leading-snug">
                 {uc.headline}
               </h3>
             </div>
@@ -1941,32 +1942,31 @@ const UseCasesSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-5 border-b border-gray-100">
             {/* Problem snapshot */}
             <div className="sm:col-span-2 px-6 sm:px-8 py-6 bg-gray-50 border-b border-gray-100 sm:border-b-0 sm:border-r sm:border-gray-100">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-4">The problem</p>
+              <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 mb-4">The problem</p>
               <div className="flex gap-2 mb-5">
                 {uc.snap.map((s, i) => (
-                  <div key={i} className="flex-1 bg-white rounded-xl border border-gray-100 p-3 text-center" style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}>
-                    <p className="font-eb-garamond italic text-xl text-[#0A1128] leading-none">{s.value}</p>
-                    <p className="text-[10px] text-gray-400 mt-1.5 leading-tight">{s.label}</p>
+                  <div key={i} className="flex-1 bg-white rounded-none border border-[#e7e6e4] p-3 text-center">
+                    <p className="font-alte font-normal text-xl text-[#0A1128] leading-none">{s.value}</p>
+                    <p className="font-alte text-[10px] text-gray-400 mt-1.5 leading-tight">{s.label}</p>
                   </div>
                 ))}
               </div>
-              <p className="font-eb-garamond italic text-[#0A1128] text-base leading-snug">{uc.punchline}</p>
+              <p className="font-alte font-normal text-[#0A1128] text-base leading-snug">{uc.punchline}</p>
             </div>
 
             {/* Outcome chips */}
             <div className="sm:col-span-3 px-6 sm:px-8 py-6">
-              <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-4">With Guftugu</p>
+              <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 mb-4">With Guftugu</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {uc.outcomes.map((o, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2.5 rounded-lg border border-gray-100 bg-white px-3 py-2.5"
-                    style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+                    className="flex items-center gap-2.5 rounded-none border border-[#e7e6e4] bg-white px-3 py-2.5"
                   >
                     <span className="flex-shrink-0" style={{ color: uc.accentColor }}>
                       {OUTCOME_ICONS[o.icon]}
                     </span>
-                    <span className="text-[13px] text-[#0A1128] font-medium leading-snug">{o.text}</span>
+                    <span className="font-alte text-[13px] text-[#0A1128] font-normal leading-snug">{o.text}</span>
                   </div>
                 ))}
               </div>
@@ -1977,15 +1977,15 @@ const UseCasesSection = () => {
           <div className="px-6 sm:px-8 py-6 border-b border-gray-100">
             <div className="grid grid-cols-[1fr_1fr_1fr] gap-x-3 gap-y-2">
               {/* Header */}
-              <div className="text-[10px] font-bold tracking-widest uppercase text-gray-400 pb-1" />
-              <div className="text-[10px] font-bold tracking-widest uppercase text-gray-400 pb-1">Before</div>
-              <div className="text-[10px] font-bold tracking-widest uppercase pb-1" style={{ color: uc.accentColor }}>With Guftugu</div>
+              <div className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 pb-1" />
+              <div className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 pb-1">Before</div>
+              <div className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase pb-1" style={{ color: uc.accentColor }}>With Guftugu</div>
               {/* Rows */}
               {uc.comparison.map((row, i) => (
                 <>
-                  <div key={`m${i}`} className="text-xs text-gray-500 self-center py-1">{row.metric}</div>
-                  <div key={`b${i}`} className="bg-gray-100 rounded-lg px-3 py-2 text-xs font-semibold text-gray-600">{row.before}</div>
-                  <div key={`a${i}`} className="rounded-lg px-3 py-2 text-xs font-semibold" style={{ background: "#F0FDF4", color: "#15803d" }}>{row.after}</div>
+                  <div key={`m${i}`} className="font-alte text-xs text-gray-500 self-center py-1">{row.metric}</div>
+                  <div key={`b${i}`} className="bg-gray-100 rounded-none px-3 py-2 font-alte text-xs font-normal text-gray-600">{row.before}</div>
+                  <div key={`a${i}`} className="rounded-none px-3 py-2 font-alte text-xs font-normal" style={{ background: "#F0FDF4", color: "#15803d" }}>{row.after}</div>
                 </>
               ))}
             </div>
@@ -1995,10 +1995,10 @@ const UseCasesSection = () => {
           <div className="px-6 sm:px-8 py-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <p className="text-sm font-bold text-[#0A1128]">{uc.cta.label}</p>
-                <p className="text-xs text-gray-500 mt-0.5">{uc.cta.note}</p>
+                <p className="font-alte text-sm font-normal text-[#0A1128]">{uc.cta.label}</p>
+                <p className="font-alte text-xs text-gray-500 mt-0.5">{uc.cta.note}</p>
               </div>
-              <PrimaryBtn href={CAL_LINK} label="Request Free Audit" />
+              <BracketButton label="Request Free Audit" href={CAL_LINK} variant="primary" external />
             </div>
           </div>
         </div>
@@ -2080,8 +2080,8 @@ const AllUseCasesGrid = () => {
     <Container className="mt-16">
       {/* Header */}
       <div className="mb-10">
-        <p className="text-xl sm:text-3xl font-eb-garamond italic text-[#0A1128] mb-1.5">One system. Seven industries. Zero missed calls.</p>
-        <p className="text-sm text-gray-500 max-w-lg">Same Guftugu, configured for how your business actually works.</p>
+        <p className="text-xl sm:text-3xl font-alte font-normal text-[#0A1128] mb-1.5">One system. Seven industries. Zero missed calls.</p>
+        <p className="font-alte text-sm text-gray-500 max-w-lg">Same Guftugu, configured for how your business actually works.</p>
       </div>
 
       {/* Grid */}
@@ -2090,12 +2090,12 @@ const AllUseCasesGrid = () => {
           <Link
             key={i}
             href={c.href}
-            className="group relative bg-white rounded-2xl p-6 border border-gray-100 flex flex-col gap-4 transition-all hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 no-underline"
+            className="group relative bg-white rounded-none p-6 border border-[#e7e6e4] flex flex-col gap-4 transition-all hover:-translate-y-1 no-underline"
             style={{ borderTop: `2px solid ${c.accent}` }}
           >
             {/* Header: Persona + Industry */}
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0 bg-gray-50">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white flex-shrink-0 bg-gray-50">
                 <img
                   src={`https://www.facehash.dev/api/avatar?name=${c.avatar}&size=96&shape=round`}
                   width={48}
@@ -2106,21 +2106,21 @@ const AllUseCasesGrid = () => {
                 />
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] font-black tracking-widest uppercase mb-0.5" style={{ color: c.accent }}>
+                <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-0.5" style={{ color: c.accent }}>
                   {c.role}
                 </p>
-                <p className="font-bold text-[#0A1128] text-sm truncate">{c.industry}</p>
+                <p className="font-alte font-normal text-[#0A1128] text-sm truncate">{c.industry}</p>
               </div>
             </div>
 
             {/* Outcome */}
-            <p className="text-xs text-gray-500 leading-relaxed font-medium">
+            <p className="font-alte text-xs text-gray-500 leading-relaxed font-normal">
               {c.outcome}
             </p>
 
             {/* Metric / ROI chip */}
-            <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
-              <span className={`inline-flex px-2 py-1 rounded-md text-[9px] font-bold tracking-tight ${i % 2 === 0 ? "bg-blue-50 text-blue-600" : "bg-orange-50 text-orange-600"}`}>
+            <div className="mt-auto pt-4 border-t border-[#e7e6e4] flex items-center justify-between">
+              <span className={`inline-flex px-2 py-1 rounded-none font-geist text-[12px] font-normal tracking-[0.02em] ${i % 2 === 0 ? "bg-blue-50 text-blue-600" : "bg-orange-50 text-orange-600"}`}>
                 {c.metric}
               </span>
               <svg className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#0A1128] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2132,16 +2132,16 @@ const AllUseCasesGrid = () => {
       </div>
 
       {/* CTA banner */}
-      <div className="bg-[#0A1128] rounded-2xl px-7 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 overflow-hidden relative">
+      <div className="bg-[#0A1128] rounded-none px-7 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none" />
         <div className="relative">
-          <p className="text-white font-bold text-base mb-1">Don&apos;t see your industry?</p>
-          <p className="text-white/50 text-xs max-w-md leading-relaxed">
+          <p className="text-white font-alte font-normal text-base mb-1">Don&apos;t see your industry?</p>
+          <p className="font-alte text-white/50 text-xs max-w-md leading-relaxed">
             We&apos;ve built for 20+ use cases. If you have calls, leads, or candidates, Guftugu works. We build your exact script in 30 minutes.
           </p>
         </div>
         <div className="relative">
-          <PrimaryBtn href={CAL_LINK} label="Check your use case" size="md" />
+          <BracketButton label="Check your use case" href={CAL_LINK} variant="primary" external />
         </div>
       </div>
     </Container>
@@ -2175,29 +2175,29 @@ const WhyDifferentSection = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-[#F9F6F4] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-l from-transparent via-gray-100 to-transparent" />
-      
+
       <Container size="lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* Sticky Header */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <SectionLabel text="Guftugu Advantage" />
-            <h2 className="text-4xl sm:text-5xl font-eb-garamond italic text-[#0A1128] leading-[1.05] mb-6">
+            <h2 className="font-alte font-normal text-4xl sm:text-5xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
               Every other AI company starts with a demo. <br />
               <span className="text-gray-400">We start with your business.</span>
             </h2>
-            <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+            <p className="font-alte font-normal text-lg text-gray-500 mb-8 leading-relaxed">
               Most Voice AI breaks the moment it goes live in an Indian business. The accent is wrong, the background noise is too high, or the follow-up never happens.
             </p>
-            
-            <div className="p-6 rounded-2xl bg-[#0A1128] text-white">
-              <p className="text-sm font-bold text-[#FCCA07] uppercase tracking-widest mb-2">The Guftugu Promise</p>
-              <p className="text-xs text-white/60 leading-relaxed mb-4">
+
+            <div className="p-6 rounded-none bg-[#0A1128] text-white">
+              <p className="font-geist text-[12px] font-normal text-[#FCCA07] uppercase tracking-[0.02em] mb-2">The Guftugu Promise</p>
+              <p className="font-alte text-xs text-white/60 leading-relaxed mb-4">
                 We don&apos;t just sell software. We provide the headcount. Guftugu is your digital receptionist that actually works in the real world.
               </p>
-              <div className="flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-white/30">
+              <div className="flex items-center gap-2 font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-white/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 No developers required
               </div>
@@ -2207,14 +2207,14 @@ const WhyDifferentSection = () => {
           {/* Comparison Cards */}
           <div className="lg:col-span-7 space-y-4">
             {points.map((p, i) => (
-              <div key={i} className="group relative p-8 bg-gray-50 rounded-[32px] border border-gray-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-black/5 hover:border-[#FCCA07]/30">
+              <div key={i} className="group relative p-8 bg-white rounded-none border border-[#e7e6e4] transition-all hover:border-[#FCCA07]/30">
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-white border border-gray-200 flex items-center justify-center text-2xl shadow-sm transition-transform group-hover:scale-110">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-none bg-white border border-[#e7e6e4] flex items-center justify-center text-2xl transition-transform group-hover:scale-110">
                     {p.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-bold text-[#0A1128] mb-2">{p.title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                    <h3 className="text-xl font-alte font-normal text-[#0A1128] mb-2">{p.title}</h3>
+                    <p className="font-alte text-sm text-gray-500 leading-relaxed font-normal">
                       {p.sub}
                     </p>
                   </div>
@@ -2226,16 +2226,16 @@ const WhyDifferentSection = () => {
             ))}
             
             {/* The "Rest" muted block */}
-            <div className="mt-12 p-8 rounded-[32px] border border-dashed border-gray-200 opacity-50 bg-gray-50/50">
-              <p className="text-[10px] font-black tracking-[0.2em] uppercase text-gray-400 mb-6">Traditional Alternatives</p>
+            <div className="mt-12 p-8 rounded-none border border-dashed border-[#e7e6e4] opacity-50 bg-gray-50/50">
+              <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 mb-6">Traditional Alternatives</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <p className="text-xs font-bold text-gray-400 mb-1 line-through">US-Based Platforms</p>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-tighter">Requires Dev Team · Accents fail · Higher cost</p>
+                  <p className="font-alte text-xs font-normal text-gray-400 mb-1 line-through">US-Based Platforms</p>
+                  <p className="font-geist text-[12px] font-normal text-gray-400 uppercase tracking-[0.02em]">Requires Dev Team · Accents fail · Higher cost</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-400 mb-1 line-through">WhatsApp Chatbots</p>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-tighter">Lower conversion · Lead friction · Manual entry</p>
+                  <p className="font-alte text-xs font-normal text-gray-400 mb-1 line-through">WhatsApp Chatbots</p>
+                  <p className="font-geist text-[12px] font-normal text-gray-400 uppercase tracking-[0.02em]">Lower conversion · Lead friction · Manual entry</p>
                 </div>
               </div>
             </div>
@@ -2286,38 +2286,38 @@ const PricingCalculator = () => {
 
   const DurationBtn = ({ val }: { val: number }) => (
     <button onClick={() => setAvgDuration(val)}
-      className={`px-5 py-2 rounded-xl text-sm font-bold border-2 transition-all ${
+      className={`px-5 py-2 rounded-none font-alte text-sm font-normal border transition-all ${
         avgDuration === val
           ? "bg-[#0A1128] border-[#0A1128] text-white"
-          : "border-gray-200 text-gray-400 hover:border-[#0A1128]/30 hover:text-[#0A1128]"
+          : "border-[#e7e6e4] text-gray-400 hover:border-[#0A1128]/30 hover:text-[#0A1128]"
       }`}>
       {val} min
     </button>
   );
 
   return (
-    <div className="rounded-3xl overflow-hidden border border-gray-100 shadow-md mb-12 bg-white">
+    <div className="rounded-none overflow-hidden border border-[#e7e6e4] mb-12 bg-white">
 
       {/* Header */}
-      <div className="px-8 py-5 border-b border-gray-100">
-        <p className="text-[10px] font-black tracking-[0.2em] uppercase text-[#2D22FF] mb-0.5">Pricing Calculator</p>
-        <p className="text-base font-semibold text-[#0A1128]">
-          Drag the slider — see exactly what you pay beyond the free bundle.
+      <div className="px-8 py-5 border-b border-[#e7e6e4]">
+        <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-[#2D22FF] mb-0.5">Pricing Calculator</p>
+        <p className="font-alte text-base font-normal text-[#0A1128]">
+          Drag the slider, see exactly what you pay beyond the free bundle.
         </p>
       </div>
 
       {/* Inputs */}
-      <div className="px-8 py-7 border-b border-gray-100 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-8 items-start">
+      <div className="px-8 py-7 border-b border-[#e7e6e4] grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-8 items-start">
         <div>
           <div className="flex items-end justify-between mb-3">
             <div>
-              <p className="text-sm font-bold text-[#0A1128]">How many calls do you get per day?</p>
-              <p className="text-xs text-gray-400 mt-0.5">Include missed calls, after-hours, voicemail rings</p>
+              <p className="font-alte text-sm font-normal text-[#0A1128]">How many calls do you get per day?</p>
+              <p className="font-alte text-xs text-gray-400 mt-0.5">Include missed calls, after-hours, voicemail rings</p>
             </div>
             <div className="ml-4 flex-shrink-0 text-right">
-              <span className="text-3xl font-eb-garamond italic text-[#0A1128] leading-none">{callsPerDay}</span>
-              <span className="text-sm font-normal text-gray-400 ml-1">/day</span>
-              <p className="text-[11px] text-gray-400 mt-0.5">{callsPerMonth} calls/mo · {minutesNeeded} min/mo</p>
+              <span className="text-3xl font-alte font-normal text-[#0A1128] leading-none">{callsPerDay}</span>
+              <span className="font-alte text-sm font-normal text-gray-400 ml-1">/day</span>
+              <p className="font-alte text-[11px] text-gray-400 mt-0.5">{callsPerMonth} calls/mo · {minutesNeeded} min/mo</p>
             </div>
           </div>
           <input type="range" min="1" max="100" step="1" value={callsPerDay}
@@ -2331,7 +2331,7 @@ const PricingCalculator = () => {
           <div className="flex justify-between mt-2">
             {[{ v: 3, l: "Quiet" }, { v: 15, l: "Steady" }, { v: 30, l: "Busy" }, { v: 60, l: "High" }, { v: 100, l: "Enterprise" }].map(({ v, l }) => (
               <button key={v} onClick={() => setCallsPerDay(v)}
-                className={`text-[10px] font-bold transition-colors ${callsPerDay === v ? "text-[#0A1128]" : "text-gray-300 hover:text-gray-500"}`}>
+                className={`font-alte text-[10px] font-normal transition-colors ${callsPerDay === v ? "text-[#0A1128]" : "text-gray-300 hover:text-gray-500"}`}>
                 {l}
               </button>
             ))}
@@ -2339,8 +2339,8 @@ const PricingCalculator = () => {
         </div>
 
         <div>
-          <p className="text-sm font-bold text-[#0A1128] mb-1">Avg call length</p>
-          <p className="text-xs text-gray-400 mb-3">Most business calls: 1–2 min</p>
+          <p className="font-alte text-sm font-normal text-[#0A1128] mb-1">Avg call length</p>
+          <p className="font-alte text-xs text-gray-400 mb-3">Most business calls: 1–2 min</p>
           <div className="flex gap-2">
             <DurationBtn val={1} />
             <DurationBtn val={2} />
@@ -2350,7 +2350,7 @@ const PricingCalculator = () => {
       </div>
 
       {/* Three-tier cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#e7e6e4]">
         {([1, 2, 3] as TierKey[]).map((key) => {
           const r = results[key];
           const isSmart = key === smartKey;
@@ -2365,29 +2365,29 @@ const PricingCalculator = () => {
 
               {/* Name + badge */}
               <div className="flex items-center justify-between">
-                <p className={`text-xs font-black tracking-widest uppercase ${
+                <p className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase ${
                   isSmart ? "text-white/40" : isBlocked ? "text-gray-300" : "text-gray-400"
                 }`}>{r.name}</p>
-                {isSmart && <span className="text-[9px] font-black tracking-[0.15em] uppercase px-2.5 py-1 rounded-full bg-[#FCCA07] text-[#0A1128]">Best fit</span>}
-                {!isSmart && !isBlocked && key === 2 && <span className="text-[9px] font-bold text-[#2D22FF] bg-blue-50 px-2 py-0.5 rounded-full">Most popular</span>}
-                {isBlocked && <span className="text-[9px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">Volume too high</span>}
+                {isSmart && <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase px-2.5 py-1 rounded-none bg-[#FCCA07] text-[#0A1128]">Best fit</span>}
+                {!isSmart && !isBlocked && key === 2 && <span className="font-geist text-[12px] font-normal text-[#2D22FF] bg-blue-50 px-2 py-0.5 rounded-none">Most popular</span>}
+                {isBlocked && <span className="font-geist text-[12px] font-normal text-amber-600 bg-amber-50 px-2 py-0.5 rounded-none">Volume too high</span>}
               </div>
 
               {/* Fee + voice rate */}
               <div className={`flex items-center gap-3 pb-4 border-b ${isSmart ? "border-white/10" : "border-gray-100"}`}>
                 <div>
-                  <span className={`text-2xl font-bold ${isSmart ? "text-white" : "text-[#0A1128]"}`}>{fmt(r.monthly)}</span>
-                  <span className={`text-xs ml-0.5 ${isSmart ? "text-white/30" : "text-gray-400"}`}>/mo</span>
+                  <span className={`text-2xl font-alte font-normal ${isSmart ? "text-white" : "text-[#0A1128]"}`}>{fmt(r.monthly)}</span>
+                  <span className={`font-alte text-xs ml-0.5 ${isSmart ? "text-white/30" : "text-gray-400"}`}>/mo</span>
                 </div>
-                <div className={`text-[11px] font-bold px-2.5 py-1 rounded-lg ${isSmart ? "bg-white/10 text-white/60" : "bg-gray-100 text-gray-500"}`}>
+                <div className={`font-alte text-[11px] font-normal px-2.5 py-1 rounded-none ${isSmart ? "bg-white/10 text-white/60" : "bg-gray-100 text-gray-500"}`}>
                   ₹{r.voiceRate}/min
                 </div>
               </div>
 
               {/* Capacity warning */}
               {isBlocked && (
-                <div className="text-[11px] text-amber-600 bg-amber-50 rounded-xl px-3 py-2.5 leading-snug">
-                  {r.concurrent} concurrent line{r.concurrent > 1 ? "s" : ""} — {callsPerDay} calls/day would cause missed calls.
+                <div className="font-alte text-[11px] text-amber-600 bg-amber-50 rounded-none px-3 py-2.5 leading-snug">
+                  {r.concurrent} concurrent line{r.concurrent > 1 ? "s" : ""}, {callsPerDay} calls/day would cause missed calls.
                 </div>
               )}
 
@@ -2395,38 +2395,38 @@ const PricingCalculator = () => {
                 <>
                   {/* Bundle progress bar */}
                   <div>
-                    <div className="flex justify-between text-[10px] mb-1.5">
+                    <div className="flex justify-between font-alte text-[10px] mb-1.5">
                       <span className={isSmart ? "text-white/40" : "text-gray-400"}>
                         {r.included.toLocaleString("en-IN")} min free bundle
                       </span>
-                      <span className={`font-bold ${isOver ? "text-amber-400" : "text-emerald-400"}`}>
+                      <span className={`font-normal ${isOver ? "text-amber-400" : "text-emerald-400"}`}>
                         {minutesNeeded} min/mo
                       </span>
                     </div>
-                    <div className={`h-1.5 rounded-full overflow-hidden ${isSmart ? "bg-white/10" : "bg-gray-100"}`}>
+                    <div className={`h-1.5 rounded-none overflow-hidden ${isSmart ? "bg-white/10" : "bg-gray-100"}`}>
                       <div
-                        className={`h-full rounded-full transition-all duration-300 ${isOver ? "bg-amber-400" : "bg-emerald-400"}`}
+                        className={`h-full rounded-none transition-all duration-300 ${isOver ? "bg-amber-400" : "bg-emerald-400"}`}
                         style={{ width: `${r.bundleUsedPct}%` }}
                       />
                     </div>
-                    <p className={`text-[10px] mt-1 ${isSmart ? "text-white/25" : "text-gray-400"}`}>
+                    <p className={`font-alte text-[10px] mt-1 ${isSmart ? "text-white/25" : "text-gray-400"}`}>
                       {isOver
-                        ? `bundle full — +${r.extraMin.toLocaleString("en-IN")} min over`
+                        ? `bundle full, +${r.extraMin.toLocaleString("en-IN")} min over`
                         : `${(r.included - minutesNeeded).toLocaleString("en-IN")} min remaining`
                       }
                     </p>
                   </div>
 
                   {/* HERO: extra charges */}
-                  <div className={`rounded-2xl p-5 text-center ${isSmart ? "bg-white/5" : "bg-gray-50 border border-gray-100"}`}>
-                    <p className={`text-[10px] font-bold uppercase tracking-[0.15em] mb-3 ${isSmart ? "text-white/30" : "text-gray-400"}`}>
+                  <div className={`rounded-none p-5 text-center ${isSmart ? "bg-white/5" : "bg-gray-50 border border-[#e7e6e4]"}`}>
+                    <p className={`font-geist text-[12px] font-normal uppercase tracking-[0.02em] mb-3 ${isSmart ? "text-white/30" : "text-gray-400"}`}>
                       Extra voice charges
                     </p>
-                    <p className={`font-eb-garamond italic leading-none transition-colors ${isOver ? "text-amber-400" : "text-emerald-400"}`}
+                    <p className={`font-alte font-normal leading-none transition-colors ${isOver ? "text-amber-400" : "text-emerald-400"}`}
                       style={{ fontSize: "3.5rem" }}>
                       {isOver ? fmt(r.overageCost) : "₹0"}
                     </p>
-                    <p className={`text-[11px] mt-2 leading-snug ${isSmart ? "text-white/25" : "text-gray-400"}`}>
+                    <p className={`font-alte text-[11px] mt-2 leading-snug ${isSmart ? "text-white/25" : "text-gray-400"}`}>
                       {isOver
                         ? `+${r.extraMin} min × ₹${r.voiceRate}/min`
                         : `all ${minutesNeeded} min within free bundle`
@@ -2435,15 +2435,15 @@ const PricingCalculator = () => {
                   </div>
 
                   {/* Monthly total */}
-                  <div className={`flex justify-between text-xs font-bold pt-1 ${isSmart ? "text-white/60" : "text-gray-500"}`}>
+                  <div className={`flex justify-between font-alte text-xs font-normal pt-1 ${isSmart ? "text-white/60" : "text-gray-500"}`}>
                     <span>Est. monthly total</span>
                     <span className={isSmart ? "text-white" : "text-[#0A1128]"}>{fmt(r.total)}/mo</span>
                   </div>
 
                   {/* WhatsApp unlimited */}
-                  <div className={`flex items-center justify-between text-xs pt-1 border-t ${isSmart ? "border-white/10 text-white/40" : "border-gray-100 text-gray-400"}`}>
+                  <div className={`flex items-center justify-between font-alte text-xs pt-1 border-t ${isSmart ? "border-white/10 text-white/40" : "border-[#e7e6e4] text-gray-400"}`}>
                     <span>WhatsApp follow-ups</span>
-                    <span className={`font-bold ${isSmart ? "text-white/70" : "text-[#0A1128]"}`}>Unlimited ∞</span>
+                    <span className={`font-normal ${isSmart ? "text-white/70" : "text-[#0A1128]"}`}>Unlimited ∞</span>
                   </div>
                 </>
               )}
@@ -2451,15 +2451,15 @@ const PricingCalculator = () => {
               {/* CTA */}
               {isSmart ? (
                 <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="mt-auto w-full bg-[#FCCA07] text-[#0A1128] text-xs font-black py-3 rounded-xl text-center block hover:bg-[#f0bd00] transition-colors active:scale-[0.98] tracking-wide">
+                  className="mt-auto w-full bg-[#FCCA07] text-[#0A1128] font-alte text-xs font-normal py-3 rounded-none text-center block hover:bg-[#f0bd00] transition-colors active:scale-[0.98] tracking-wide">
                   Start with {r.name} →
                 </a>
               ) : (
                 <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className={`mt-auto w-full border-2 text-xs font-bold py-3 rounded-xl text-center block transition-all ${
+                  className={`mt-auto w-full border font-alte text-xs font-normal py-3 rounded-none text-center block transition-all ${
                     isBlocked
-                      ? "border-gray-100 text-gray-300 cursor-not-allowed pointer-events-none"
-                      : "border-gray-200 text-gray-400 hover:border-[#0A1128] hover:text-[#0A1128]"
+                      ? "border-[#e7e6e4] text-gray-300 cursor-not-allowed pointer-events-none"
+                      : "border-[#e7e6e4] text-gray-400 hover:border-[#0A1128] hover:text-[#0A1128]"
                   }`}>
                   {isBlocked ? "Not enough capacity" : `Choose ${r.name}`}
                 </a>
@@ -2470,9 +2470,9 @@ const PricingCalculator = () => {
       </div>
 
       {/* Footer */}
-      <div className="px-8 py-4 bg-gray-50 border-t border-gray-100">
-        <p className="text-[11px] text-gray-400 leading-relaxed">
-          <span className="font-bold text-gray-500">How it works:</span> The monthly fee covers your AI agent, dedicated number, WhatsApp follow-ups, and management. Each plan includes a free voice bundle — no extra charges until you exceed it. Beyond the bundle, usage is billed at the voice rate shown. Estimate based on {avgDuration} min avg call.
+      <div className="px-8 py-4 bg-gray-50 border-t border-[#e7e6e4]">
+        <p className="font-alte text-[11px] text-gray-400 leading-relaxed">
+          <span className="font-normal text-gray-500">How it works:</span> The monthly fee covers your AI agent, dedicated number, WhatsApp follow-ups, and management. Each plan includes a free voice bundle, no extra charges until you exceed it. Beyond the bundle, usage is billed at the voice rate shown. Estimate based on {avgDuration} min avg call.
         </p>
       </div>
 
@@ -2497,7 +2497,7 @@ const PricingSection = () => {
       featureGroups: [
         { label: "Calls & Coverage", items: [
           { text: "100 voice minutes/month", val: null },
-          { text: "1 AI agent — support or sales", val: null },
+          { text: "1 AI agent for support or sales", val: null },
           { text: "Indian business number + Hindi or English", val: null },
         ]},
         { label: "Follow-up", items: [
@@ -2530,7 +2530,7 @@ const PricingSection = () => {
         ]},
         { label: "Follow-up System", items: [
           { text: "14-day WhatsApp + voice follow-up sequence", val: "₹8,000 value" },
-          { text: "No-Show Recovery — checks in 2 hrs before", val: "₹5,000 value" },
+          { text: "No-Show Recovery, checks in 2 hrs before", val: "₹5,000 value" },
           { text: "Smart channel switching + Owner alerts", val: null },
         ]},
         { label: "Setup & Automation", items: [
@@ -2562,7 +2562,7 @@ const PricingSection = () => {
         ]},
         { label: "Growth Automation", items: [
           { text: "Dead Lead Reactivation, 30-day drip", val: "₹20,000 value" },
-          { text: "Autonomous A/B testing — AI picks the winner", val: "₹15,000 value" },
+          { text: "Autonomous A/B testing, AI picks the winner", val: "₹15,000 value" },
           { text: "2-way CRM sync: Salesforce, HubSpot, Zoho", val: null },
         ]},
         { label: "Success & Reporting", items: [
@@ -2581,27 +2581,27 @@ const PricingSection = () => {
         <SectionLabel text="Pricing" />
 
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-3">
+        <h2 className="font-alte font-normal text-3xl sm:text-4xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-3">
           One missed call costs more<br className="hidden sm:block" /> than your entire monthly plan.
         </h2>
-        <p className="text-gray-500 mb-10 max-w-lg">
+        <p className="font-alte text-gray-500 mb-10 max-w-lg">
           A single converted lead pays for 3 months. No hidden fees. No per-minute surprise billing at month end.
         </p>
 
         {/* Human vs AI anchor bar */}
-        <div className="flex flex-col sm:flex-row mb-12 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <div className="flex flex-col sm:flex-row mb-12 rounded-none overflow-hidden border border-[#e7e6e4]">
           <div className="flex-1 bg-[#0A1128] px-6 py-5">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-white/60 mb-1.5">What you pay a human receptionist</p>
-            <p className="text-2xl font-bold text-white">₹25,000 – ₹35,000<span className="text-sm font-normal text-white/60">/month</span></p>
-            <p className="text-xs text-white/60 mt-1">Salary only. Add training, sick days, and zero night/weekend coverage.</p>
+            <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-white/60 mb-1.5">What you pay a human receptionist</p>
+            <p className="text-2xl font-alte font-normal text-white">₹25,000 – ₹35,000<span className="text-sm font-normal text-white/60">/month</span></p>
+            <p className="font-alte text-xs text-white/60 mt-1">Salary only. Add training, sick days, and zero night/weekend coverage.</p>
           </div>
           <div className="flex items-center justify-center bg-[#FCCA07] px-5 py-3 sm:py-0">
-            <span className="text-[#0A1128] font-black text-base tracking-tight">VS</span>
+            <span className="text-[#0A1128] font-alte font-normal text-base tracking-tight">VS</span>
           </div>
           <div className="flex-1 bg-white px-6 py-5">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-600 mb-1.5">Your Guftugu AI agent</p>
-            <p className="text-2xl font-bold text-[#0A1128]">Starts at ₹2,499<span className="text-sm font-normal text-gray-500">/month</span></p>
-            <p className="text-xs text-gray-600 mt-1">Answers every call. Follows up on WhatsApp. Works 24/7. Never quits.</p>
+            <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-600 mb-1.5">Your Guftugu AI agent</p>
+            <p className="text-2xl font-alte font-normal text-[#0A1128]">Starts at ₹2,499<span className="text-sm font-normal text-gray-500">/month</span></p>
+            <p className="font-alte text-xs text-gray-600 mt-1">Answers every call. Follows up on WhatsApp. Works 24/7. Never quits.</p>
           </div>
         </div>
 
@@ -2610,24 +2610,24 @@ const PricingSection = () => {
           {tiers.map((t, i) => (
             <div key={i} className={`relative flex flex-col ${t.badge ? "mt-5" : ""}`}>
               {t.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FCCA07] text-[#0A1128] text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap z-10 shadow-sm">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FCCA07] text-[#0A1128] font-geist text-[12px] font-normal px-4 py-1.5 rounded-none whitespace-nowrap z-10">
                   {t.badge}
                 </div>
               )}
-              <div className={`rounded-2xl border flex flex-col flex-1 overflow-hidden ${
-                t.highlight ? "bg-[#0A1128] border-[#0A1128] text-white" : "bg-white border-gray-200 text-[#0A1128]"
+              <div className={`rounded-none border flex flex-col flex-1 overflow-hidden ${
+                t.highlight ? "bg-[#0A1128] border-[#0A1128] text-white" : "bg-white border-[#e7e6e4] text-[#0A1128]"
               }`}>
 
                 {/* Header */}
-                <div className={`px-6 pt-7 pb-5 border-b ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
-                  <span className={`inline-flex px-2.5 py-1 rounded-full text-[10px] font-bold tracking-[0.12em] uppercase mb-3 ${
+                <div className={`px-6 pt-7 pb-5 border-b ${t.highlight ? "border-white/10" : "border-[#e7e6e4]"}`}>
+                  <span className={`inline-flex px-2.5 py-1 rounded-none font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-3 ${
                     t.highlight ? "bg-blue-500/20 text-blue-300" : "bg-blue-50 text-blue-600"
                   }`}>
                     {t.tag}
                   </span>
 
                   {/* Replaces */}
-                  <div className={`flex items-start gap-1.5 text-xs mb-4 min-h-[2.5rem] ${t.highlight ? "text-white/60" : "text-gray-500"}`}>
+                  <div className={`flex items-start gap-1.5 font-alte text-xs mb-4 min-h-[2.5rem] ${t.highlight ? "text-white/60" : "text-gray-500"}`}>
                     <svg className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                     </svg>
@@ -2635,52 +2635,52 @@ const PricingSection = () => {
                   </div>
 
                   {/* Price */}
-                  <p className={`text-xs font-medium mb-0.5 ${t.highlight ? "text-white/50" : "text-gray-400"}`}>{t.setup}</p>
+                  <p className={`font-alte text-xs font-normal mb-0.5 ${t.highlight ? "text-white/50" : "text-gray-400"}`}>{t.setup}</p>
                   <div className="flex items-baseline gap-1.5 mb-1">
-                    <span className="text-4xl font-bold tracking-tight">{t.monthly}</span>
-                    <span className={`text-sm ${t.highlight ? "text-white/50" : "text-gray-400"}`}>/month</span>
+                    <span className="text-4xl font-alte font-normal tracking-tight">{t.monthly}</span>
+                    <span className={`font-alte text-sm ${t.highlight ? "text-white/50" : "text-gray-400"}`}>/month</span>
                   </div>
-                  <p className={`text-xs mb-4 font-medium ${t.highlight ? "text-[#FCCA07]/70" : "text-gray-400"}`}>
-                    {t.perDay} — less than your chai per appointment
+                  <p className={`font-alte text-xs mb-4 font-normal ${t.highlight ? "text-[#FCCA07]/70" : "text-gray-400"}`}>
+                    {t.perDay}, less than your chai per appointment
                   </p>
 
                   {/* Value stack */}
-                  <div className={`rounded-xl px-4 py-3 ${t.highlight ? "bg-white/8" : "bg-gray-100"}`}>
-                    <p className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${t.highlight ? "text-white/50" : "text-gray-500"}`}>
+                  <div className={`rounded-none px-4 py-3 ${t.highlight ? "bg-white/8" : "bg-gray-100"}`}>
+                    <p className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-1 ${t.highlight ? "text-white/50" : "text-gray-500"}`}>
                       Total value inside
                     </p>
                     <div className="flex items-center gap-2">
-                      <span className={`text-lg font-bold line-through ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.worthOf}</span>
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${t.highlight ? "bg-white/15 text-white/70" : "bg-gray-300 text-gray-600"}`}>you save</span>
+                      <span className={`text-lg font-alte font-normal line-through ${t.highlight ? "text-white/40" : "text-gray-400"}`}>{t.worthOf}</span>
+                      <span className={`font-geist text-[12px] font-normal px-2 py-0.5 rounded-none ${t.highlight ? "bg-white/15 text-white/70" : "bg-gray-300 text-gray-600"}`}>you save</span>
                     </div>
                   </div>
                 </div>
 
                 {/* ROI callout */}
-                <div className={`mx-5 mt-4 px-3.5 py-2.5 rounded-xl flex items-start gap-2.5 ${t.highlight ? "bg-green-400/10 border border-green-400/20" : "bg-green-50 border border-green-100"}`}>
+                <div className={`mx-5 mt-4 px-3.5 py-2.5 rounded-none flex items-start gap-2.5 ${t.highlight ? "bg-green-400/10 border border-green-400/20" : "bg-green-50 border border-green-100"}`}>
                   <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
-                  <p className={`text-xs leading-snug ${t.highlight ? "text-green-300" : "text-green-700"}`}>{t.roi}</p>
+                  <p className={`font-alte text-xs leading-snug ${t.highlight ? "text-green-300" : "text-green-700"}`}>{t.roi}</p>
                 </div>
 
                 {/* Features */}
                 <div className="px-6 py-5 space-y-5">
                   {t.featureGroups.map((group, gi) => (
                     <div key={gi}>
-                      <p className={`text-[9px] font-bold tracking-[0.14em] uppercase mb-2 ${t.highlight ? "text-white/35" : "text-gray-400"}`}>
+                      <p className={`font-geist text-[12px] font-normal tracking-[0.02em] uppercase mb-2 ${t.highlight ? "text-white/35" : "text-gray-400"}`}>
                         {group.label}
                       </p>
                       <ul className="space-y-1.5">
                         {group.items.map((f, j) => (
-                          <li key={j} className={`flex items-start gap-2 text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
+                          <li key={j} className={`flex items-start gap-2 font-alte text-sm leading-snug ${t.highlight ? "text-white/80" : "text-gray-600"}`}>
                             <svg className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${t.highlight ? "text-green-400" : "text-green-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                             </svg>
                             <span>
                               {f.text}
                               {f.val && (
-                                <span className={`ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-md ${t.highlight ? "bg-[#FCCA07]/20 text-[#FCCA07]" : "bg-blue-50 text-blue-500"}`}>
+                                <span className={`ml-1.5 font-geist text-[12px] font-normal px-1.5 py-0.5 rounded-none ${t.highlight ? "bg-[#FCCA07]/20 text-[#FCCA07]" : "bg-blue-50 text-blue-500"}`}>
                                   {f.val}
                                 </span>
                               )}
@@ -2695,14 +2695,14 @@ const PricingSection = () => {
                 <div className="flex-1" />
 
                 {/* Footer */}
-                <div className={`px-6 pb-6 pt-4 border-t ${t.highlight ? "border-white/10" : "border-gray-100"}`}>
+                <div className={`px-6 pb-6 pt-4 border-t ${t.highlight ? "border-white/10" : "border-[#e7e6e4]"}`}>
                   {t.overage && (
-                    <p className={`text-xs mb-2 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>Overage: {t.overage}</p>
+                    <p className={`font-alte text-xs mb-2 ${t.highlight ? "text-white/30" : "text-gray-400"}`}>Overage: {t.overage}</p>
                   )}
-                  <p className={`text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>Best for: {t.best}</p>
+                  <p className={`font-alte text-xs mb-4 ${t.highlight ? "text-white/40" : "text-gray-400"}`}>Best for: {t.best}</p>
                   <button
                     onClick={() => window.open(t.ctaHref, "_blank", "noopener,noreferrer")}
-                    className={`inline-flex items-center justify-center w-full py-3 rounded-lg text-sm font-semibold transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap ${
+                    className={`inline-flex items-center justify-center w-full py-3 rounded-none font-alte text-sm font-normal transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap ${
                       t.highlight
                         ? "bg-[#FCCA07] text-[#0A1128] hover:bg-[#f0bd00]"
                         : "bg-[#0A1128] text-white hover:bg-[#0d1633]"
@@ -2717,7 +2717,7 @@ const PricingSection = () => {
         </div>
 
         {/* Trust strip */}
-        <div className={`flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-5 px-6 rounded-2xl border border-gray-200 bg-white text-sm text-gray-500`}>
+        <div className={`flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-5 px-6 rounded-none border border-[#e7e6e4] bg-white font-alte text-sm text-gray-500`}>
           {["No hidden fees", "No per-minute billing surprises", "Cancel anytime", "Live in 30 mins", "TRAI-compliant numbers"].map((item) => (
             <span key={item} className="flex items-center gap-1.5 whitespace-nowrap">
               <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2731,31 +2731,31 @@ const PricingSection = () => {
         <PricingCalculator />
 
         {/* Booster Packs */}
-        <div className="mt-8 border border-gray-200 rounded-2xl overflow-hidden bg-white">
+        <div className="mt-8 border border-[#e7e6e4] rounded-none overflow-hidden bg-white">
 
           {/* Header */}
-          <div className="px-6 py-5 border-b border-gray-100">
+          <div className="px-6 py-5 border-b border-[#e7e6e4]">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-base">🔋</span>
-              <p className="text-sm font-bold text-[#0A1128]">Booster Pack Recharge</p>
+              <p className="font-alte text-sm font-normal text-[#0A1128]">Booster Pack Recharge</p>
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed max-w-xl">
+            <p className="font-alte text-xs text-gray-500 leading-relaxed max-w-xl">
               When your included minutes are used up, top up with a Booster Pack. You can set this to{" "}
-              <strong className="text-gray-700">trigger automatically</strong> when your balance drops below a threshold — or do it{" "}
-              <strong className="text-gray-700">manually</strong> from the dashboard whenever you need.{" "}
+              <strong className="font-normal text-gray-700">trigger automatically</strong> when your balance drops below a threshold, or do it{" "}
+              <strong className="font-normal text-gray-700">manually</strong> from the dashboard whenever you need.{" "}
               No surprise charges either way.
             </p>
           </div>
 
           {/* Minutes Booster — tiered table */}
-          <div className="px-6 py-4 border-b border-gray-100">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-3">⏱ Minutes Booster</p>
+          <div className="px-6 py-4 border-b border-[#e7e6e4]">
+            <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 mb-3">⏱ Minutes Booster</p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-gray-50">
                     {["For Plan", "Pack Price", "Minutes Added", "Effective Rate"].map((h) => (
-                      <th key={h} className="text-left text-[10px] font-bold text-gray-500 uppercase tracking-wide px-4 py-2.5 border border-gray-100 whitespace-nowrap">{h}</th>
+                      <th key={h} className="text-left font-geist text-[12px] font-normal text-gray-500 uppercase tracking-[0.02em] px-4 py-2.5 border border-[#e7e6e4] whitespace-nowrap">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -2766,34 +2766,34 @@ const PricingSection = () => {
                     { plan: "🏢 Enterprise",    price: "₹4,500", minutes: "1,000 minutes", rate: "₹4.50/min" },
                   ].map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50/60 transition-colors">
-                      <td className="px-4 py-3 border border-gray-100 font-medium text-[#0A1128] text-xs whitespace-nowrap">{row.plan}</td>
-                      <td className="px-4 py-3 border border-gray-100 font-bold text-[#0A1128] text-sm">{row.price}</td>
-                      <td className="px-4 py-3 border border-gray-100 text-gray-600 text-xs">{row.minutes}</td>
-                      <td className="px-4 py-3 border border-gray-100 text-gray-600 text-xs font-medium">{row.rate}</td>
+                      <td className="px-4 py-3 border border-[#e7e6e4] font-alte font-normal text-[#0A1128] text-xs whitespace-nowrap">{row.plan}</td>
+                      <td className="px-4 py-3 border border-[#e7e6e4] font-alte font-normal text-[#0A1128] text-sm">{row.price}</td>
+                      <td className="px-4 py-3 border border-[#e7e6e4] font-alte text-gray-600 text-xs">{row.minutes}</td>
+                      <td className="px-4 py-3 border border-[#e7e6e4] font-alte text-gray-600 text-xs font-normal">{row.rate}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-[11px] text-gray-400 mt-2.5">Unused minutes roll over to the next month. Packs can be stacked.</p>
+            <p className="font-alte text-[11px] text-gray-400 mt-2.5">Unused minutes roll over to the next month. Packs can be stacked.</p>
           </div>
 
           {/* Agent Booster */}
           <div className="px-6 py-4">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-3">🤖 Agent Booster</p>
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 bg-gray-50 rounded-xl px-4 py-4 border border-gray-100">
+            <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-gray-400 mb-3">🤖 Agent Booster</p>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 bg-gray-50 rounded-none px-4 py-4 border border-[#e7e6e4]">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <p className="text-sm font-bold text-[#0A1128]">Add a second voice agent</p>
-                  <span className="text-[10px] font-bold bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">Starter only</span>
+                  <p className="font-alte text-sm font-normal text-[#0A1128]">Add a second voice agent</p>
+                  <span className="font-geist text-[12px] font-normal bg-gray-200 text-gray-600 px-2 py-0.5 rounded-none">Starter only</span>
                 </div>
-                <p className="text-xs text-gray-500 leading-relaxed max-w-md">
-                  Need a second phone number — a different branch, department, or after-hours line — but not ready to upgrade? Add a second basic voice agent to your Starter plan.
+                <p className="font-alte text-xs text-gray-500 leading-relaxed max-w-md">
+                  Need a second phone number, a different branch, department, or after-hours line, but not ready to upgrade? Add a second basic voice agent to your Starter plan.
                   Voice answering only; upgrade to Professional for memory, WhatsApp follow-up, and analytics.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-3">
                   {["Second number covered", "Basic qualification only", "No WhatsApp / no memory"].map((note, i) => (
-                    <span key={i} className="flex items-center gap-1 text-[11px] text-gray-500">
+                    <span key={i} className="flex items-center gap-1 font-alte text-[11px] text-gray-500">
                       <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${i === 2 ? "bg-gray-300" : "bg-emerald-400"}`} />
                       {note}
                     </span>
@@ -2801,19 +2801,19 @@ const PricingSection = () => {
                 </div>
               </div>
               <div className="flex-shrink-0 text-right sm:text-left">
-                <p className="text-xl font-bold text-[#0A1128]">₹799</p>
-                <p className="text-xs text-gray-400">/month per agent</p>
+                <p className="text-xl font-alte font-normal text-[#0A1128]">₹799</p>
+                <p className="font-alte text-xs text-gray-400">/month per agent</p>
               </div>
             </div>
           </div>
 
           {/* Footer */}
-          <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
-            <p className="text-[11px] text-gray-400 text-center">All Booster Packs are pre-purchased blocks — not per-minute billing. You always know exactly what you&apos;re spending.</p>
+          <div className="px-6 py-3 bg-gray-50 border-t border-[#e7e6e4]">
+            <p className="font-alte text-[11px] text-gray-400 text-center">All Booster Packs are pre-purchased blocks, not per-minute billing. You always know exactly what you&apos;re spending.</p>
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 mt-4 text-center">
+        <p className="font-alte text-xs text-gray-400 mt-4 text-center">
           WhatsApp charges billed directly to your Meta Business account at Meta&apos;s standard rates. We handle the full technical setup.
         </p>
       </Container>
@@ -2845,35 +2845,35 @@ const FreeAuditSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="py-20 sm:py-24 bg-[#F9F6F4]">
       <Container>
         <SectionLabel text="Free audit" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-2 max-w-2xl">
+        <h2 className="font-alte font-normal text-3xl sm:text-4xl text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-2 max-w-2xl">
           Find out how many leads you&apos;re losing right now.
           <br />
           <span className="text-gray-400">Before you spend anything.</span>
         </h2>
-        <p className="text-gray-500 mb-10 max-w-xl">
+        <p className="font-alte text-gray-500 mb-10 max-w-xl">
           The audit makes the invisible visible, missed calls, response times, follow-through.
           After seeing it, you&apos;ll know exactly what needs fixing.{" "}
-          <strong className="text-[#0A1128]">48 hours. Free. No commitment.</strong>
+          <strong className="font-normal text-[#0A1128]">48 hours. Free. No commitment.</strong>
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           {audits.map((a, i) => (
-            <div key={i} className="bg-[#F9F6F4] rounded-2xl p-6 flex flex-col">
+            <div key={i} className="bg-white border border-[#e7e6e4] rounded-none p-6 flex flex-col">
               <div className="text-3xl mb-3">{a.icon}</div>
-              <p className="text-xs font-bold text-blue-600 tracking-widest uppercase mb-1">{a.for}</p>
-              <p className="font-eb-garamond italic text-[#0A1128] text-xl mb-2">{a.name}</p>
-              <p className="text-sm text-gray-500 leading-relaxed flex-1 mb-4">{a.desc}</p>
-              <OutlineBtn href={CAL_LINK} label="Request this audit" size="sm" />
+              <p className="font-geist text-[12px] font-normal text-blue-600 tracking-[0.02em] uppercase mb-1">{a.for}</p>
+              <p className="font-alte font-normal text-[#0A1128] text-xl mb-2">{a.name}</p>
+              <p className="font-alte text-sm text-gray-500 leading-relaxed flex-1 mb-4">{a.desc}</p>
+              <BracketButton label="Request this audit" href={CAL_LINK} variant="secondary" external />
             </div>
           ))}
         </div>
 
-        <p className="text-sm text-gray-400 text-center">
+        <p className="font-alte text-sm text-gray-400 text-center">
           Not a clinic, agency, or recruiter?{" "}
-          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+          <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-normal">
             Request a general missed-call audit.
           </a>
         </p>
@@ -2933,17 +2933,17 @@ const FAQSection = () => {
     <section id="faq" className="py-20 sm:py-24 bg-[#F9F6F4]">
       <Container size="sm">
         <SectionLabel text="FAQ" />
-        <h2 className="text-3xl sm:text-4xl font-eb-garamond italic text-[#0A1128] leading-tight mb-8">
+        <h2 className="text-3xl sm:text-4xl font-alte font-normal tracking-[-0.04em] text-[#0A1128] leading-tight mb-8">
           The questions we actually get asked.
         </h2>
         <div className="space-y-2">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+            <div key={i} className="bg-white rounded-none border border-[#e7e6e4] overflow-hidden">
               <button
                 className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 transition-colors"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-semibold text-sm text-[#0A1128]">{faq.q}</span>
+                <span className="font-alte font-normal text-[15px] text-[#0A1128]">{faq.q}</span>
                 <svg
                   className={`w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}
                   fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -2988,7 +2988,7 @@ const FinalCTA = () => {
     <section className="py-20 sm:py-28 bg-[#0A1128]">
       <Container className="text-center" size="md">
         <SectionLabel text="Get started today" dark />
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-eb-garamond italic text-white leading-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-alte font-normal tracking-[-0.04em] text-white leading-tight mb-4">
           Your competitor picked up that call.
           <br />
           <span className="text-white/60">You can answer the next one.</span>
@@ -3001,13 +3001,13 @@ const FinalCTA = () => {
 
         {STATS.demoNumber && (
           <p className="mt-4 text-white/30 text-xs">
-            Or call our AI right now: <span className="text-white/50 font-medium">{STATS.demoNumber}</span>
+            Or call our AI right now: <span className="text-white/50 font-normal">{STATS.demoNumber}</span>
           </p>
         )}
 
         {/* Audit cards */}
         <div className="mt-12 mb-10">
-          <p className="text-white/30 text-xs font-bold tracking-widest uppercase mb-5">Not ready to talk? Start with a free audit</p>
+          <p className="text-white/30 text-[12px] font-geist font-normal tracking-[0.02em] uppercase mb-5">Not ready to talk? Start with a free audit</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {audits.map((a) => (
               <a
@@ -3015,10 +3015,10 @@ const FinalCTA = () => {
                 href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-4 hover:bg-white/[0.08] hover:border-white/20 transition-all"
+                className="group flex flex-col items-center gap-2 rounded-none border border-white/10 bg-white/[0.04] px-5 py-4 hover:bg-white/[0.08] hover:border-white/20 transition-all"
               >
                 <span className="text-[#FCCA07]/80 group-hover:text-[#FCCA07] transition-colors">{a.icon}</span>
-                <p className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">{a.label}</p>
+                <p className="text-[15px] font-alte font-normal text-white/80 group-hover:text-white transition-colors">{a.label}</p>
                 <p className="text-[11px] text-white/35">{a.desc}</p>
               </a>
             ))}
@@ -3050,7 +3050,7 @@ const PageFooter = () => (
 
         {/* Brand block */}
         <div className="lg:col-span-2">
-          <Link href="/" className="font-mondwest text-lg text-white font-normal tracking-[-0.02em] mb-2 block">
+          <Link href="/" className="font-alte text-lg text-white font-normal tracking-[-0.02em] mb-2 block">
             Guftugu
           </Link>
           <p className="text-xs text-white/40 mb-1">Voice + WhatsApp AI</p>
@@ -3079,7 +3079,7 @@ const PageFooter = () => (
 
         {/* Product links */}
         <div>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">Product</p>
+          <p className="text-[10px] font-geist font-normal tracking-[0.02em] uppercase text-white/30 mb-4">Product</p>
           <nav className="flex flex-col gap-2.5">
             <button onClick={() => smoothScrollTo("use-cases")} className="text-sm text-white/50 hover:text-white text-left transition-colors">Use Cases</button>
             <button onClick={() => smoothScrollTo("pricing")} className="text-sm text-white/50 hover:text-white text-left transition-colors">Pricing</button>
@@ -3090,7 +3090,7 @@ const PageFooter = () => (
 
         {/* Industry pages (SEO internal links) */}
         <div>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">By Industry</p>
+          <p className="text-[10px] font-geist font-normal tracking-[0.02em] uppercase text-white/30 mb-4">By Industry</p>
           <nav className="flex flex-col gap-2.5">
             <Link href="/ai-booking-agent-for-travel-agencies" className="text-sm text-white/50 hover:text-white transition-colors">Travel & Transport</Link>
             <Link href="/ai-dispatch-agent-for-home-services" className="text-sm text-white/50 hover:text-white transition-colors">Home Services</Link>
@@ -3103,7 +3103,7 @@ const PageFooter = () => (
 
         {/* Free audits */}
         <div>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4">Free Audits</p>
+          <p className="text-[10px] font-geist font-normal tracking-[0.02em] uppercase text-white/30 mb-4">Free Audits</p>
           <nav className="flex flex-col gap-2.5">
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Ghost Patient Report</a>
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Speed-to-Lead Test</a>

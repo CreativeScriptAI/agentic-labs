@@ -8,7 +8,7 @@ const benefits = [
   {
     icon: "⚡",
     title: "Instant Follow-Up",
-    desc: "AI contacts every lead within 60 seconds — day or night.",
+    desc: "AI contacts every lead within 60 seconds, day or night.",
   },
   {
     icon: "🧠",
@@ -31,7 +31,7 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>AI Lead Nurturing for Real Estate — Agentic AI Labs</title>
+        <title>AI Lead Nurturing for Real Estate | Agentic AI Labs</title>
         <meta
           name="description"
           content="Stop losing real estate leads to slow follow-up. Our AI system contacts, qualifies, and nurtures every lead automatically."
@@ -52,7 +52,7 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
         {/* Top bar */}
         <div className="flex justify-center pt-6 pb-2 px-4">
           <span
-            className="text-xs font-semibold tracking-widest uppercase"
+            className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase"
             style={{ color: "#0062FF" }}
           >
             Agentic AI Labs
@@ -62,22 +62,22 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
         {/* Hero */}
         <section className="flex flex-col items-center text-center px-4 pt-8 pb-10">
           <div
-            className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide"
+            className="font-geist inline-flex items-center gap-2 rounded-none border px-4 py-1.5 mb-6 text-[12px] font-normal tracking-[0.02em] uppercase"
             style={{ backgroundColor: "#FCCA07", borderColor: "#e6b800", color: "#0A1128" }}
           >
             🏡 Real Estate Lead Nurturing
           </div>
 
           <h1
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight max-w-2xl"
+            className="font-alte font-normal text-3xl sm:text-4xl lg:text-5xl leading-[1.2] tracking-[-0.04em] max-w-2xl"
             style={{ color: "#0A1128" }}
           >
             Never Lose a Real Estate Lead Again
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed">
-            Our AI follows up in <strong className="text-gray-800">60 seconds</strong>,
-            qualifies buyers automatically, and nurtures cold leads for months — so you
+          <p className="font-alte font-normal mt-4 text-[15px] sm:text-base text-slate-600 max-w-xl leading-[1.5] tracking-[-0.04em]">
+            Our AI follows up in <strong className="font-normal text-[#0A1128]">60 seconds</strong>,
+            qualifies buyers automatically, and nurtures cold leads for months, so you
             close more deals without hiring more staff.
           </p>
         </section>
@@ -89,46 +89,45 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="flex gap-4 p-5 rounded-2xl border"
-                style={{ backgroundColor: "#ffffff", borderColor: "rgba(0,0,0,0.06)" }}
+                className="flex gap-4 p-5 rounded-none border"
+                style={{ backgroundColor: "#ffffff", borderColor: "#e7e6e4" }}
               >
                 <span className="text-2xl leading-none mt-0.5">{b.icon}</span>
                 <div>
-                  <p className="font-semibold text-sm" style={{ color: "#0A1128" }}>
+                  <p className="font-alte font-normal text-[15px]" style={{ color: "#0A1128" }}>
                     {b.title}
                   </p>
-                  <p className="text-sm text-gray-500 mt-0.5 leading-snug">{b.desc}</p>
+                  <p className="font-alte font-normal text-[15px] text-slate-500 mt-0.5 leading-[1.5] tracking-[-0.04em]">{b.desc}</p>
                 </div>
               </div>
             ))}
 
-            <p className="text-xs text-gray-400 mt-2 leading-relaxed">
+            <p className="font-alte font-normal text-[12px] text-slate-400 mt-2 leading-[1.5]">
               Tested with real estate teams in the US & India. Average response
-              time drop: from 4 hours → 45 seconds.
+              time drop: from 4 hours to 45 seconds.
             </p>
           </div>
 
           {/* GHL Form card */}
           <div
-            className="lg:w-1/2 w-full rounded-2xl border overflow-hidden"
+            className="lg:w-1/2 w-full rounded-none border overflow-hidden"
             style={{
               backgroundColor: "#ffffff",
-              borderColor: "rgba(0,0,0,0.06)",
-              boxShadow: "0 4px 32px rgba(0,0,0,0.07)",
+              borderColor: "#e7e6e4",
             }}
           >
-            <div className="px-6 py-4 border-b" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
-              <p className="font-semibold text-sm" style={{ color: "#0A1128" }}>
+            <div className="px-6 py-4 border-b" style={{ borderColor: "#e7e6e4" }}>
+              <p className="font-alte font-normal text-[15px]" style={{ color: "#0A1128" }}>
                 Get Your Free AI Lead System Demo
               </p>
-              <p className="text-xs text-gray-400 mt-0.5">
+              <p className="font-alte font-normal text-[12px] text-slate-400 mt-0.5">
                 Takes 30 seconds. We&apos;ll reach out within 2 hours.
               </p>
             </div>
 
             <iframe
               src={`https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`}
-              style={{ width: "100%", height: "621px", border: "none", borderRadius: "0 0 16px 16px" }}
+              style={{ width: "100%", height: "621px", border: "none", borderRadius: "0" }}
               id={`inline-${GHL_FORM_ID}`}
               data-layout={`{'id':'INLINE'}`}
               data-trigger-type="alwaysShow"
@@ -148,7 +147,7 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
 
         {/* Footer strip */}
         <div className="text-center pb-8 px-4">
-          <p className="text-xs text-gray-400">
+          <p className="font-alte font-normal text-[12px] text-slate-400">
             © {new Date().getFullYear()} Agentic AI Labs · Your data is never sold or shared.
           </p>
         </div>

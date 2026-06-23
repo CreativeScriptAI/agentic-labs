@@ -14,7 +14,7 @@ const ProjectIssues = ({ data }: ProjectIssuesProps) => {
     <section className="section">
       <h2 className="section_title">
         {data.title}{" "}
-        <span className="font-mondwest text-slate-600">
+        <span className="font-alte text-slate-600">
           {data.titleHighlight}
         </span>
       </h2>
@@ -31,8 +31,8 @@ const ProjectIssues = ({ data }: ProjectIssuesProps) => {
         <ul className="flex flex-col items-start gap-3 md:gap-4">
           {data.issues.map((issue, index) => (
             <li key={index} className="flex items-start gap-4">
-              <div className="block w-5 h-5 bg-[#0062FF] shrink-0 mt-1 "></div>
-              <div className="font-sfpro text-[14px] font-normal text-slate-800">
+              <div className="block w-5 h-5 bg-[#0062FF] rounded-none shrink-0 mt-1 "></div>
+              <div className="font-alte text-[15px] leading-[1.5] tracking-[-0.04em] font-normal text-slate-800">
                 {issue}
               </div>
             </li>
