@@ -4,6 +4,13 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import MetaConfig from "src/components/MetaConfig";
 import BracketButton from "src/components/BracketButton";
+import AnimatedStat from "src/components/programmatic/AnimatedStat";
+import LogoStrip from "src/components/programmatic/LogoStrip";
+import ComparisonBars from "src/components/programmatic/ComparisonBars";
+import BigStatCards from "src/components/programmatic/BigStatCards";
+import ConnectorLine from "src/components/programmatic/ConnectorLine";
+import NodeNumber from "src/components/programmatic/NodeNumber";
+import HeroFlowExplainer from "src/components/programmatic/HeroFlowExplainer";
 import { ProgrammaticPageData } from "src/data/programmaticSeoPages";
 
 type Props = { page: ProgrammaticPageData };
@@ -150,6 +157,11 @@ const PAGE_IMAGES: Record<string, PageImages> = {
     solution: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=640&q=80&auto=format&fit=crop",    // personal training
     result: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=640&q=80&auto=format&fit=crop",      // group fitness
   },
+  "gohighlevel-ai-voice-pipeline": {
+    hero: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=640&q=80&auto=format&fit=crop",        // person on phone call
+    solution: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",    // dashboard / workflow
+    result: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=640&q=80&auto=format&fit=crop",      // team celebrating
+  },
 };
 
 const DEFAULT_IMAGES: PageImages = {
@@ -217,15 +229,24 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
                 <div className="flex items-start gap-0 border-t border-[#e7e6e4] pt-8">
                   {page.proofStats.map((s, i) => (
                     <div key={i} className={`flex-1 ${i > 0 ? "border-l border-[#e7e6e4] pl-6" : ""} ${i < page.proofStats!.length - 1 ? "pr-6" : ""}`}>
-                      <p className="font-alte font-normal text-3xl sm:text-4xl text-blue-600 leading-none tracking-[-0.04em]">{s.stat}</p>
+                      <p className="font-alte font-normal text-3xl sm:text-4xl text-blue-600 leading-none tracking-[-0.04em]">
+                        <AnimatedStat value={s.stat} />
+                      </p>
                       <p className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-slate-400 mt-2 leading-tight">{s.label}</p>
                     </div>
                   ))}
                 </div>
               )}
+
+              {/* Trust logos */}
+              <LogoStrip logos={page.logos} />
             </div>
 
-            {/* ── Right: Image with floating badges ── */}
+            {/* Right: hero explainer infographic, or image fallback */}
+            {page.heroSteps && (
+              <HeroFlowExplainer steps={page.heroSteps} caption={page.heroExplainerCaption} />
+            )}
+            {!page.heroSteps && (
             <div className="hidden lg:block relative" style={{ minHeight: 480 }}>
               {/* Main image */}
               <div className="relative w-full h-[480px] rounded-none overflow-hidden border border-[#e7e6e4]">
@@ -268,6 +289,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
                 </div>
               </div>
             </div>
+            )}
           </div>
         </Container>
       </section>
@@ -301,9 +323,14 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
                     {page.costCallout.items.map((row) => (
                       <div key={row.label} className="flex justify-between gap-3">
                         <span className="font-alte font-normal text-[15px] text-slate-500 tracking-[-0.04em]">{row.label}</span>
-                        <span className="font-alte font-normal text-[15px] text-[#0A1128] whitespace-nowrap tracking-[-0.04em]">{row.amount}</span>
+                        <span className="font-alte font-normal text-[15px] text-[#0A1128] whitespace-nowrap tracking-[-0.04em]">
+                          <AnimatedStat value={row.amount} />
+                        </span>
                       </div>
                     ))}
+                    {page.comparisonBars && (
+                      <ComparisonBars title={page.comparisonBars.title} bars={page.comparisonBars.bars} />
+                    )}
                   </div>
                   <div className="border-t border-[#e7e6e4] p-6 space-y-3">
                     <div className="flex justify-between gap-3">
@@ -362,12 +389,28 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             ))}
           </div>
 
+          {page.statusQuoBars && (
+            <div className="bg-white rounded-none border border-[#e7e6e4] p-8 mb-16">
+              <ComparisonBars title={page.statusQuoBars.title} bars={page.statusQuoBars.bars} />
+            </div>
+          )}
+
           {page.industrySignal && (
             <div className="bg-white rounded-none border border-[#e7e6e4] p-8 sm:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <div className="lg:col-span-4">
                   <span className="font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-blue-600 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-none">Market Signal</span>
                   <h3 className="text-xl font-alte font-normal text-[#0A1128] mt-4 leading-[1.2] tracking-[-0.04em]">{page.industrySignal.headline}</h3>
+                  {page.industrySignal.stat && (
+                    <div className="mt-5">
+                      <p className="font-alte font-normal text-4xl text-blue-600 leading-none tracking-[-0.04em]">
+                        <AnimatedStat value={page.industrySignal.stat} />
+                      </p>
+                      {page.industrySignal.statLabel && (
+                        <p className="font-geist text-[11px] font-normal tracking-[0.02em] uppercase text-slate-400 mt-2">{page.industrySignal.statLabel}</p>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="lg:col-span-8">
                   <p className="font-alte font-normal text-[15px] text-slate-500 leading-[1.5] tracking-[-0.04em]">{page.industrySignal.body}</p>
@@ -407,12 +450,14 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           {page.layers ? (
             <div className="space-y-0">
               {page.layers.map((layer, i) => (
-                <div key={layer.title} className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start py-12 ${i > 0 ? "border-t border-[#e7e6e4]" : ""}`}>
+                <div key={layer.title} className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start py-12">
+                  {/* Connector line — draws in as this step scrolls into view */}
+                  {i > 0 && <ConnectorLine />}
                   {/* Number + title */}
                   <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <span className="font-alte font-normal text-[5rem] text-[#FCCA07] leading-none block -mb-4 tracking-[-0.04em]">
+                    <NodeNumber className="font-alte font-normal text-[5rem] text-[#FCCA07] leading-none block -mb-4 tracking-[-0.04em]">
                       {String(i + 1).padStart(2, "0")}
-                    </span>
+                    </NodeNumber>
                     <h3 className="text-xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em]">{layer.title}</h3>
                   </div>
                   {/* Body */}
@@ -552,16 +597,22 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
             </div>
           )}
 
-          {/* Fallback proof bullets */}
+          {/* Fallback proof bullets — big-stat cards when proofStats is available, plain bullets otherwise */}
           {!page.caseStudy && (
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {page.proofBullets.map((item) => (
-                <div key={item} className="flex items-start gap-3 p-5 rounded-none border border-[#e7e6e4] bg-[#F9F6F4]">
-                  <CheckSvg />
-                  <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{item}</p>
-                </div>
-              ))}
-            </div>
+            page.proofStats && page.proofStats.length === page.proofBullets.length ? (
+              <BigStatCards
+                cards={page.proofStats.map((s, i) => ({ stat: s.stat, label: s.label, support: page.proofBullets[i] }))}
+              />
+            ) : (
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {page.proofBullets.map((item) => (
+                  <div key={item} className="flex items-start gap-3 p-5 rounded-none border border-[#e7e6e4] bg-[#F9F6F4]">
+                    <CheckSvg />
+                    <p className="font-alte font-normal text-[15px] text-slate-600 leading-[1.5] tracking-[-0.04em]">{item}</p>
+                  </div>
+                ))}
+              </div>
+            )
           )}
         </Container>
       </section>
@@ -624,6 +675,14 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
               <h2 className="text-3xl font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] lg:sticky lg:top-28">
                 Questions we get asked.
               </h2>
+              {page.faqStat && (
+                <div className="mt-8 pt-6 border-t border-[#e7e6e4] lg:sticky lg:top-64">
+                  <p className="font-alte font-normal text-4xl text-[#0A1128] leading-none tracking-[-0.04em]">
+                    <AnimatedStat value={page.faqStat.stat} />
+                  </p>
+                  <p className="font-geist text-[11px] font-normal tracking-[0.02em] uppercase text-slate-400 mt-2">{page.faqStat.label}</p>
+                </div>
+              )}
             </div>
 
             {/* Right accordion */}
