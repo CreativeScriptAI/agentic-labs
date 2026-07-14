@@ -7,9 +7,6 @@ import BracketButton from "src/components/BracketButton";
 /* hero copy fades up after the headline reveals */
 const FADE_UP = { type: "spring" as const, stiffness: 320, damping: 30 };
 
-const CAL_LINK =
-  "https://cal.com/ai-aditya/30min";
-
 const HeroSection = () => {
   return (
     <div className="relative overflow-hidden bg-[#F9F6F4] w-[calc(100%+2rem)] -ml-4 -mr-4 pt-[80px] pb-[70px] sm:pt-[100px] sm:pb-[90px] lg:py-[120px]">
@@ -75,9 +72,8 @@ const HeroSection = () => {
             >
               <BracketButton
                 label="Book a free call"
-                href={CAL_LINK}
+                href="/ai-clarity-workshop"
                 variant="primary"
-                external
               />
             </motion.div>
 

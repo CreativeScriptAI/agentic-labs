@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import RevealText from "src/components/RevealText";
 import BracketButton from "src/components/BracketButton";
 
-const CAL_LINK =
-  "https://cal.com/ai-aditya/30min";
-
 const VIEWPORT = { once: true, margin: "-80px" };
 const SPRING = { type: "spring", stiffness: 320, damping: 30 } as const;
 
@@ -93,8 +90,7 @@ const FinalCTASection = () => {
               >
                 <BracketButton
                   label="Book a free call"
-                  href={CAL_LINK}
-                  external
+                  href="/ai-clarity-workshop"
                   variant="primary"
                   className="w-full sm:w-auto"
                 />

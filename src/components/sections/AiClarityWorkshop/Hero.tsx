@@ -5,7 +5,7 @@ import ctaLinks from "src/constants/cta-links";
 const Hero = () => {
 
   return (
-    <section className="relative  h-full overflow-hidden pt-32 sm:pt-20 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
+    <section className="relative  h-full overflow-hidden pt-32 sm:pt-32 pb-6 sm:pb-2 px-0 sm:px-6 md:px-8 flex items-start justify-center">
       <style>{`
         @keyframes drawPath {
           from {
