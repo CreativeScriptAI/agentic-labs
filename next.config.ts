@@ -257,6 +257,17 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // Book-a-call → the free AI Clarity Workshop (the clarity call funnel)
+      {
+        source: "/book-a-call",
+        destination: "/ai-clarity-workshop",
+        permanent: false,
+      },
+      {
+        source: "/book-a-call/",
+        destination: "/ai-clarity-workshop",
+        permanent: false,
+      },
       // Pricing page → hub pricing section
       {
         source: "/ai-voice-agent-pricing",

@@ -79,11 +79,6 @@ const HeroSection = () => {
                 variant="primary"
                 external
               />
-              <BracketButton
-                label="Talk to the AI"
-                href="#what_we_build"
-                variant="secondary"
-              />
             </motion.div>
 
             {/* Trust strip */}

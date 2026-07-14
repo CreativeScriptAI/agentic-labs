@@ -99,12 +99,6 @@ const FinalCTASection = () => {
                   className="w-full sm:w-auto"
                 />
               </motion.div>
-              <BracketButton
-                label="Talk to the AI"
-                href="#talk-to-ai"
-                variant="secondary"
-                className="w-full sm:w-auto"
-              />
             </motion.div>
 
             {/* Subtext */}

@@ -160,11 +160,6 @@ const ProofSection = () => {
                 href="/agent/patientlyai"
                 variant="primary"
               />
-              <BracketButton
-                label="Talk to the AI"
-                href="/agent/patientlyai"
-                variant="secondary"
-              />
             </div>
           </div>
         </motion.div>
