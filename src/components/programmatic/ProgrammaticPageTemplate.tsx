@@ -11,6 +11,7 @@ import BigStatCards from "src/components/programmatic/BigStatCards";
 import ConnectorLine from "src/components/programmatic/ConnectorLine";
 import NodeNumber from "src/components/programmatic/NodeNumber";
 import HeroFlowExplainer from "src/components/programmatic/HeroFlowExplainer";
+import ScreenshotShowcase from "src/components/programmatic/ScreenshotShowcase";
 import { ProgrammaticPageData } from "src/data/programmaticSeoPages";
 
 type Props = { page: ProgrammaticPageData };
@@ -479,6 +480,13 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
           )}
         </Container>
       </section>
+
+      {/* ────────────────────────────────────────────────────────────────────── */}
+      {/* SCREENSHOT SHOWCASE (real product-UI shots)                           */}
+      {/* ────────────────────────────────────────────────────────────────────── */}
+      {page.screenshots && page.screenshots.length > 0 && (
+        <ScreenshotShowcase title={`Inside the build: the real tools behind ${page.heroLabel}`} shots={page.screenshots} />
+      )}
 
       {/* ────────────────────────────────────────────────────────────────────── */}
       {/* HOW IT WORKS                                                          */}

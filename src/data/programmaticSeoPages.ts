@@ -107,6 +107,9 @@ export type ProgrammaticPageData = {
   /** Optional: single big stat rendered above the FAQ accordion */
   faqStat?: { stat: string; label: string };
 
+  // ── Screenshot showcase (optional) — real product-UI shots, rendered as a gallery ──
+  screenshots?: Array<{ src: string; caption: string; credit?: string }>;
+
   // ── CTA ───────────────────────────────────────────────────────────────────────
   ctaLabel: string;
   ctaHref: string;
@@ -7823,6 +7826,2959 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "vapi",
       "retell",
       "n8n"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "vapi-gohighlevel-integration"
+    ],
+    "title": "Vapi GoHighLevel Integration | Agentic AI Labs",
+    "description": "We build a production Vapi and GoHighLevel voice pipeline: form triggers an instant AI call, live conversation, summary written back to the contact, follow-up that stops on reply.",
+    "heroLabel": "Vapi + GoHighLevel, Built Live",
+    "heroHeadline": "A lead just hit submit. Right now nobody is calling them back.",
+    "heroSubheadline": "We wire Vapi into GoHighLevel so the form fires an instant call. The AI talks, the summary lands on the contact, and the follow-up runs itself until they reply.",
+    "heroExplainerCaption": "One pipeline: form to live call to write-back to follow-up, all inside GoHighLevel.",
+    "heroSteps": [
+      {
+        "label": "Form or ad captures a lead",
+        "sub": "Trigger fires the second they submit",
+        "accent": true
+      },
+      {
+        "label": "GHL webhook launches a Vapi call",
+        "sub": "Dial-out starts in seconds"
+      },
+      {
+        "label": "Vapi runs the live conversation",
+        "sub": "Qualifies, answers, books the slot"
+      },
+      {
+        "label": "Summary writes back to the contact",
+        "sub": "Notes and fields update in GHL"
+      },
+      {
+        "label": "Follow-up runs with a kill switch",
+        "sub": "Sequence stops the moment they reply",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why the lead you paid for goes quiet",
+    "painPoints": [
+      "The form fills out at 9pm and your first callback happens the next afternoon.",
+      "By the time someone dials, the prospect already booked with whoever answered first.",
+      "Your GHL workflow sends a text, but nothing actually has a conversation."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Average time a business takes to respond to a new lead",
+          "amount": "47 hours"
+        },
+        {
+          "label": "Lead quality lost after the first 5 minutes",
+          "amount": "drops 80%"
+        },
+        {
+          "label": "Deals won by whoever responds first",
+          "amount": "78%"
+        }
+      ],
+      "total": "Most of your ad spend leaking out through response lag",
+      "solvesFor": "A Vapi and GHL pipeline that calls within the first minute",
+      "source": "Velocify (3.5M leads); HBR/MIT lead response study"
+    },
+    "statusQuoTitle": "What teams reach for before this",
+    "statusQuoItems": [
+      "A GHL SMS autoresponder that pings the lead but never talks to them.",
+      "A Zapier chain to Vapi that breaks silently when a field is missing.",
+      "A human who is supposed to call fast but is asleep, on another call, or off that day."
+    ],
+    "statusQuoBars": {
+      "title": "Speed to first real conversation",
+      "bars": [
+        {
+          "label": "Vapi call the moment the form fires",
+          "valueLabel": "under 1 minute",
+          "widthPercent": 100,
+          "accent": true
+        },
+        {
+          "label": "SMS autoresponder, no conversation",
+          "valueLabel": "text only, no call",
+          "widthPercent": 45
+        },
+        {
+          "label": "Manual callback when someone is free",
+          "valueLabel": "47 hours average",
+          "widthPercent": 8
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "The first responder is taking the deal before anyone else dials.",
+      "body": "Response speed has quietly become the whole game. Leads contacted inside one minute convert far better than ones that wait, and the first business to reach a prospect wins the large majority of deals. A voice pipeline that dials in seconds is no longer an edge case. It is becoming the baseline that fast movers hold and slow movers lose to.",
+      "source": "Velocify lead response study; HBR/MIT",
+      "date": "2026",
+      "stat": "78%",
+      "statLabel": "of deals go to the first responder"
+    },
+    "solutionTitle": "What we actually build into GoHighLevel",
+    "solutionItems": [
+      "A GHL trigger that fires a Vapi call the instant a form or ad lead lands.",
+      "A Vapi assistant scripted for your offer, your objections, and your calendar.",
+      "Post-call write-back that drops a summary and updates fields on the contact.",
+      "A follow-up sequence with a kill switch that stops when the lead replies."
+    ],
+    "layers": [
+      {
+        "title": "Layer 1: The instant call.",
+        "body": "The GoHighLevel workflow watches your forms and ad lead events. The second one lands, it fires a webhook to Vapi and the outbound call starts. No queue, no batch, no waiting for a human to be free. The lead's phone rings while they are still on your page, which is exactly the window where response speed still wins the deal."
+      },
+      {
+        "title": "Layer 2: The live conversation.",
+        "body": "Vapi runs the call as the voice engine: natural turn-taking, real interruption handling, and a script tuned to your qualification questions and objections. We author and test the assistant logic with Claude Opus 4.8 and GPT Codex, so the branching, guardrails, and edge cases are handled in code rather than guessed at. It qualifies, answers the obvious questions, and books straight into your calendar."
+      },
+      {
+        "title": "Layer 3: Write-back and follow-up.",
+        "body": "When the call ends, the post-call summary writes back to the GHL contact: notes, custom fields, and stage all updated automatically. Then the follow-up sequence takes over across SMS and email. The kill switch is the part people miss. The moment the lead replies, the sequence stops, so nobody gets that awkward chase message after they already said yes."
+      }
+    ],
+    "proofTitle": "Why speed to a real call changes the math",
+    "proofBullets": [
+      "Calling within the first minute instead of waiting massively lifts conversion on the same leads.",
+      "Reaching leads inside five minutes makes them far likelier to qualify and connect.",
+      "Waiting past the five-minute mark quietly burns most of the lead quality you paid for."
+    ],
+    "proofStats": [
+      {
+        "stat": "391%",
+        "label": "conversion lift calling within 1 minute vs a 2-minute wait"
+      },
+      {
+        "stat": "21x",
+        "label": "more likely to qualify when you respond within 5 minutes"
+      },
+      {
+        "stat": "80%",
+        "label": "of lead quality lost after the first 5 minutes"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Chance of actually connecting with a fresh lead",
+      "bars": [
+        {
+          "label": "Vapi + GHL, call inside 5 minutes",
+          "valueLabel": "100x more likely to contact",
+          "widthPercent": 100,
+          "accent": true
+        },
+        {
+          "label": "Same-day human callback",
+          "valueLabel": "lead already cooling",
+          "widthPercent": 30
+        },
+        {
+          "label": "Next-day callback (industry average)",
+          "valueLabel": "quality dropped 80%",
+          "widthPercent": 10
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "How does Vapi actually connect to GoHighLevel?",
+        "answer": "A GoHighLevel workflow trigger fires a webhook to Vapi the moment a form or ad lead is created. Vapi places the outbound call, and when it ends, we post the summary and structured fields back onto the GHL contact through the API. It runs as one pipeline, not two disconnected tools."
+      },
+      {
+        "question": "Why use Vapi instead of GoHighLevel's built-in calling?",
+        "answer": "GHL is excellent at CRM, pipelines, and sequences, but it is not a real-time voice engine. Vapi handles the live conversation: low-latency turn-taking, interruptions, and natural speech. We let each tool do what it is best at and stitch them together so the lead experience is one smooth call."
+      },
+      {
+        "question": "What does the post-call write-back include?",
+        "answer": "A plain-language call summary in the contact notes, plus any structured fields we scope with you: qualified yes or no, budget, timeline, and booking status. The opportunity stage can move automatically so your pipeline reflects the call without anyone typing it in."
+      },
+      {
+        "question": "What is the kill switch on the follow-up?",
+        "answer": "After the call, a follow-up sequence runs across SMS and email. The moment the lead replies through any channel, the sequence stops firing so they never get a chase message after they already responded. It keeps the automation from feeling like a bot that will not stop."
+      },
+      {
+        "question": "How is the assistant built and tested?",
+        "answer": "We author the Vapi assistant logic, branching, and guardrails with Claude Opus 4.8 and GPT Codex, then run real call scenarios against it before launch: cold leads, warm leads, objections, and awkward edge cases. We break it on purpose so it holds up with your actual prospects."
+      }
+    ],
+    "faqStat": {
+      "stat": "< 1 min",
+      "label": "from form submit to the lead's phone ringing"
+    },
+    "ctaLabel": "See the Vapi + GHL pipeline mapped to your funnel",
+    "ctaSupportText": "We map your current form-to-follow-up flow and show exactly where leads go cold before anyone calls.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI Voice Pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "GoHighLevel Speed to Lead Automation",
+        "href": "/gohighlevel-speed-to-lead-automation"
+      },
+      {
+        "label": "Vapi Alternative",
+        "href": "/vapi-alternative"
+      }
+    ],
+    "keywords": [
+      "vapi gohighlevel integration",
+      "vapi ghl integration",
+      "gohighlevel vapi voice ai",
+      "vapi outbound call gohighlevel",
+      "ghl speed to lead automation",
+      "ai voice agent for gohighlevel",
+      "vapi webhook gohighlevel",
+      "instant lead callback automation",
+      "vapi post call summary ghl",
+      "gohighlevel ai calling pipeline"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/vapi-gohighlevel-integration/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "vapi"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "retell-gohighlevel-integration"
+    ],
+    "title": "Retell AI GoHighLevel Integration: Voice That Calls Leads in Seconds | Agentic AI Labs",
+    "description": "A production Retell AI GoHighLevel integration that calls every new lead in seconds, qualifies live on the phone, writes fields back to GHL, then follows up on autopilot.",
+    "heroLabel": "Retell AI + GoHighLevel",
+    "heroHeadline": "Your best lead just filled out the form and nobody picked up the phone.",
+    "heroSubheadline": "We wire Retell AI into GoHighLevel so a real-sounding voice agent calls the instant a lead lands, qualifies them in a live conversation, and writes everything back to the contact record before your team has even read the notification.",
+    "heroExplainerCaption": "The full path from form submit to booked follow-up, running inside your own GHL account.",
+    "heroSteps": [
+      {
+        "label": "New lead lands in GoHighLevel",
+        "sub": "Form, ad, or webhook fires",
+        "accent": true
+      },
+      {
+        "label": "Retell AI dials in seconds",
+        "sub": "Triggered straight from the workflow",
+        "accent": false
+      },
+      {
+        "label": "Live qualification on the call",
+        "sub": "Natural voice, real back and forth",
+        "accent": false
+      },
+      {
+        "label": "Summary and fields written to GHL",
+        "sub": "Contact record updated automatically",
+        "accent": false
+      },
+      {
+        "label": "Follow-up runs with a kill switch",
+        "sub": "Stops when a human steps in",
+        "accent": true
+      }
+    ],
+    "painTitle": "The speed problem no CRM automation actually fixes",
+    "painPoints": [
+      "A lead fills out your form at 9pm and sits untouched until someone opens the pipeline the next morning.",
+      "Your team is on other calls, at lunch, or asleep, and the window where that lead wanted to talk quietly closes.",
+      "By the time anyone dials, the prospect has filled out three competitor forms and taken the first callback."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Lead quality after the first five minutes",
+          "amount": "Drops 80%"
+        },
+        {
+          "label": "Deals claimed by whoever calls first",
+          "amount": "78% of them"
+        },
+        {
+          "label": "Time an average business takes to respond",
+          "amount": "47 hours"
+        }
+      ],
+      "total": "Every slow lead is pipeline leaking to a faster competitor",
+      "solvesFor": "Contacting and qualifying every new lead within seconds, at any hour, without adding headcount",
+      "source": "Response-time benchmarks: HBR/MIT lead study, Velocify (3.5M leads)"
+    },
+    "statusQuoTitle": "How teams try to win speed to lead today",
+    "statusQuoItems": [
+      "Round-robin auto-assignment still waits on a human to be free and dial.",
+      "Instant SMS auto-replies get ignored and never actually qualify anyone.",
+      "A cheaper bare voicebot reads a script, misreads answers, and never updates the CRM."
+    ],
+    "statusQuoBars": {
+      "title": "Time from new lead to a real qualifying conversation",
+      "bars": [
+        {
+          "label": "Manual callback (team dials)",
+          "valueLabel": "hours, if at all",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "SMS auto-reply",
+          "valueLabel": "no live qualification",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Basic scripted voicebot",
+          "valueLabel": "stalls on real answers",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Retell AI on GoHighLevel",
+          "valueLabel": "seconds",
+          "widthPercent": 8,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Calling within one minute beats waiting even two",
+      "body": "Analysis of 3.5 million leads found that dialing a new lead within the first minute converts far better than a callback just a couple of minutes later. Speed is not a nice-to-have, it is the single biggest lever on a fresh lead. A voice agent is the only way to hit that window on every lead, overnight and on weekends included.",
+      "source": "Velocify lead-response study",
+      "date": "3.5M leads analyzed",
+      "stat": "391%",
+      "statLabel": "conversion lift calling within 1 minute vs a 2-minute wait"
+    },
+    "solutionTitle": "What we actually build into your GoHighLevel account",
+    "solutionItems": [
+      "A GHL workflow that fires a Retell AI call the second a new lead is created, with no human in the loop.",
+      "A tuned voice agent that holds a natural conversation, handles interruptions, and qualifies against your real criteria.",
+      "A post-call step that writes the summary, disposition, and extracted fields straight onto the GHL contact.",
+      "Automated follow-up sequences with a kill switch that halts the moment your team picks up the conversation."
+    ],
+    "layers": [
+      {
+        "title": "Instant trigger and live call",
+        "body": "The moment a contact is created in GoHighLevel, the workflow calls Retell AI and the agent dials out. No queue, no assignment delay. The prospect hears a natural voice while they are still on your page, which is exactly when they are most likely to answer."
+      },
+      {
+        "title": "Qualification and structured write-back",
+        "body": "The agent runs your qualifying questions in a real back-and-forth, then a post-call step pushes a clean summary and extracted fields (budget, timeline, intent, service) onto the contact record. Your team opens GHL to a qualified lead, not a raw form fill."
+      },
+      {
+        "title": "Follow-up with a real kill switch",
+        "body": "If the lead is not reached or asks for a callback, an automated sequence takes over. The instant a human replies or books, the kill switch stops the automation so nobody gets double-messaged. The agent logic is built and tuned with Claude Opus 4.8 and GPT Codex, then tested against real call transcripts before it ever touches a live lead."
+      }
+    ],
+    "proofTitle": "Why speed to lead is the whole game",
+    "proofBullets": [
+      "Responding inside five minutes makes a lead 21x more likely to qualify and 100x more likely to be contacted at all, per the HBR/MIT study.",
+      "Whoever calls first takes the deal, and a voice agent is first on every single lead, day or night.",
+      "Wait past five minutes and the lead's quality falls off a cliff, so the automation is built to move in seconds, not minutes."
+    ],
+    "proofStats": [
+      {
+        "stat": "21x / 100x",
+        "label": "more likely to qualify / to contact when you respond within 5 minutes"
+      },
+      {
+        "stat": "78%",
+        "label": "of deals go to the first business that responds"
+      },
+      {
+        "stat": "80%",
+        "label": "drop in lead quality after the first 5 minutes"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Coverage on new leads, per week",
+      "bars": [
+        {
+          "label": "Human team (business hours)",
+          "valueLabel": "misses nights and weekends",
+          "widthPercent": 45,
+          "accent": false
+        },
+        {
+          "label": "Shared inbox and hope",
+          "valueLabel": "breaks silently",
+          "widthPercent": 25,
+          "accent": false
+        },
+        {
+          "label": "Retell AI on GHL",
+          "valueLabel": "every lead, every hour",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this work inside my existing GoHighLevel account?",
+        "answer": "Yes. We build it directly into your GHL workflows and custom fields. Retell AI is the voice engine, GoHighLevel stays the system of record, and everything the agent learns lands on the contact you already have."
+      },
+      {
+        "question": "Will the voice agent sound like an obvious robot?",
+        "answer": "No. Retell AI produces natural, low-latency speech that handles interruptions and pauses like a person. We tune the script, pacing, and objection handling against your real calls so it fits your brand rather than reading a flat template."
+      },
+      {
+        "question": "What happens when the AI cannot handle a lead?",
+        "answer": "It hands off cleanly. The agent can transfer live, book a callback, or trigger a task for your team, and the kill switch stops all automation the instant a human takes over so nobody gets a duplicate message."
+      },
+      {
+        "question": "How do you make sure it does not say the wrong thing?",
+        "answer": "The conversation logic is built and hardened with Claude Opus 4.8 and GPT Codex, then tested against real call transcripts and edge cases before it goes live. You approve the script and guardrails, and every call is logged and summarized in GHL."
+      },
+      {
+        "question": "How fast can this go live?",
+        "answer": "Most pipelines are done-for-you and running in days, not months. We map your qualifying criteria, build the workflow and agent, test against sample calls, then flip it on for one lead source before scaling to the rest."
+      }
+    ],
+    "faqStat": {
+      "stat": "47 hours",
+      "label": "the average business's lead response time, the gap this pipeline closes to seconds"
+    },
+    "ctaLabel": "Get your Retell AI GoHighLevel pipeline built",
+    "ctaSupportText": "Book a call and we will map your lead sources, qualifying criteria, and GHL setup, then show you exactly how the voice pipeline will run before you commit.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "GoHighLevel speed-to-lead automation",
+        "href": "/gohighlevel-speed-to-lead-automation"
+      },
+      {
+        "label": "Retell AI alternative",
+        "href": "/retell-ai-alternative"
+      }
+    ],
+    "keywords": [
+      "retell ai gohighlevel integration",
+      "retell ai ghl integration",
+      "gohighlevel ai voice agent",
+      "retell ai speed to lead",
+      "ghl voice ai automation",
+      "ai voice agent gohighlevel",
+      "retell ai lead qualification",
+      "gohighlevel ai cold caller",
+      "automated lead callback ghl",
+      "done for you gohighlevel voice ai"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/retell-gohighlevel-integration/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "retell"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "n8n-gohighlevel-email-pipeline"
+    ],
+    "title": "n8n GoHighLevel Email Pipeline: AI Follow-Ups That Stop on Reply | Agentic AI Labs",
+    "description": "We build a cold-email drip on GoHighLevel plus n8n: capture leads, send AI-written follow-ups, advance pipeline stages, and stop the moment they reply.",
+    "heroLabel": "GoHighLevel plus n8n email automation",
+    "heroHeadline": "The lead replied three days ago. Your drip kept emailing them anyway.",
+    "heroSubheadline": "Most email sequences do not listen. They fire on a timer, ignore replies, and quietly torch your best leads. We build a GoHighLevel plus n8n pipeline that writes personalized follow-ups, moves contacts through your stages, and shuts off the second someone answers.",
+    "heroExplainerCaption": "How one lead moves through the pipeline, from opt-in to reply.",
+    "heroSteps": [
+      {
+        "label": "Lead lands in GoHighLevel",
+        "sub": "Form, ad, or import captures contact",
+        "accent": true
+      },
+      {
+        "label": "n8n picks up the trigger",
+        "sub": "Fires on new contact or stage change",
+        "accent": false
+      },
+      {
+        "label": "AI writes the next follow-up",
+        "sub": "Personalized to that contact",
+        "accent": false
+      },
+      {
+        "label": "Contact advances a pipeline stage",
+        "sub": "Opportunity moves automatically",
+        "accent": false
+      },
+      {
+        "label": "Reply detected, drip stops",
+        "sub": "No more emails, handoff to you",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why your current sequence is costing you the reply",
+    "painPoints": [
+      "A lead answers your first email, and the automation keeps sending the next three anyway. You look like you never read their message.",
+      "Every contact gets the exact same template, so the follow-ups read like a broadcast and land like one too.",
+      "Someone has to remember to drag opportunities between pipeline stages by hand, and on a busy week nobody does."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Leads you paid to acquire",
+          "amount": "already in the pipeline"
+        },
+        {
+          "label": "The follow-up that never fired",
+          "amount": "or fired after they replied"
+        },
+        {
+          "label": "Manual stage updates",
+          "amount": "skipped on busy days"
+        }
+      ],
+      "total": "Warm leads going cold in the gap between reply and response",
+      "solvesFor": "Every captured lead gets a timely, relevant follow-up until they answer, then the system steps back",
+      "source": "Based on the GoHighLevel plus n8n pipelines we build for SMBs and agencies"
+    },
+    "statusQuoTitle": "How teams run cold email today",
+    "statusQuoItems": [
+      "Native drips blast on a fixed timer and cannot tell that a lead already replied.",
+      "Virtual assistants copy, paste, and personalize by hand until volume outgrows them.",
+      "Heavy sending platforms charge per contact or per seat, so scaling up quietly scales your bill."
+    ],
+    "statusQuoBars": {
+      "title": "What happens when a lead replies mid-sequence",
+      "bars": [
+        {
+          "label": "Native timer drip",
+          "valueLabel": "keeps sending anyway",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "Manual VA process",
+          "valueLabel": "catches it if awake",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "GoHighLevel plus n8n pipeline",
+          "valueLabel": "stops on reply",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Buyers punish the follow-up that ignores their reply",
+      "body": "Prospects increasingly judge a company by whether its outreach feels aware. A sequence that keeps firing after someone has already answered reads as spam and burns the goodwill your first email earned. Reply-aware automation is becoming table stakes, not a nicety.",
+      "source": "Agentic AI Labs, from client cold-email pipelines",
+      "date": "2026",
+      "stat": "Reply-aware",
+      "statLabel": "the new baseline for outbound"
+    },
+    "solutionTitle": "What we actually build on GoHighLevel plus n8n",
+    "solutionItems": [
+      "Lead capture wired into GoHighLevel, so every form, ad, and import lands as a real contact with an opportunity.",
+      "n8n workflows that trigger on new contacts and stage changes, billing per execution instead of per contact.",
+      "AI-written follow-ups personalized to each contact, drafted fresh rather than pulled from one static template.",
+      "Reply detection that halts the drip and hands the conversation back to you the moment a lead answers."
+    ],
+    "layers": [
+      {
+        "title": "Capture and orchestrate",
+        "body": "GoHighLevel holds the contacts, opportunities, and pipeline stages. n8n sits alongside as the automation brain, listening for triggers and running the logic GoHighLevel workflows cannot express on their own."
+      },
+      {
+        "title": "Write and personalize",
+        "body": "Each follow-up is generated by a large language model we wire in, built with Claude Opus 4.8 and GPT Codex, so the copy speaks to that specific contact instead of reusing one template across your whole list."
+      },
+      {
+        "title": "Advance and stop",
+        "body": "As contacts engage, n8n moves their opportunity through your pipeline stages automatically. When a reply arrives, the sequence stops and the lead is flagged for a human, so no one gets emailed after they have already answered."
+      }
+    ],
+    "proofTitle": "Why this holds up at volume",
+    "proofBullets": [
+      "Because n8n bills per execution rather than per contact, adding more leads does not multiply a per-seat or per-contact subscription.",
+      "Because reply detection is built into the flow, the drip stops itself instead of relying on someone to notice and pause it.",
+      "Because we build on your existing GoHighLevel account, the pipeline, contacts, and reporting stay in the tool your team already uses."
+    ],
+    "proofStats": [
+      {
+        "stat": "Per execution",
+        "label": "how n8n bills, so cost tracks work not list size"
+      },
+      {
+        "stat": "Stops on reply",
+        "label": "the drip halts itself, no manual pausing"
+      },
+      {
+        "stat": "Your GoHighLevel",
+        "label": "built on the CRM you already run"
+      }
+    ],
+    "comparisonBars": {
+      "title": "What drives your cost as you scale",
+      "bars": [
+        {
+          "label": "Per-contact sending platform",
+          "valueLabel": "cost climbs with list size",
+          "widthPercent": 95,
+          "accent": false
+        },
+        {
+          "label": "Per-seat outbound tool",
+          "valueLabel": "cost climbs with headcount",
+          "widthPercent": 70,
+          "accent": false
+        },
+        {
+          "label": "n8n per-execution pipeline",
+          "valueLabel": "cost tracks actual work",
+          "widthPercent": 35,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Do I need to leave GoHighLevel to use this?",
+        "answer": "No. We build on top of your existing GoHighLevel account. Your contacts, opportunities, and pipeline stages stay where they are. n8n runs alongside GoHighLevel and handles the automation logic and AI follow-up writing that native workflows cannot do on their own."
+      },
+      {
+        "question": "What actually happens when a lead replies?",
+        "answer": "The moment a reply is detected, n8n stops the drip for that contact so no further automated emails go out. The lead is flagged and handed back to you or your team for a real conversation. That is the whole point: the system emails until someone answers, then steps back."
+      },
+      {
+        "question": "Why n8n instead of a dedicated cold-email tool?",
+        "answer": "n8n bills per execution rather than per contact or per seat, so your cost tracks the work being done instead of the size of your list. It also lets us wire in AI follow-up writing and custom pipeline logic that off-the-shelf senders keep behind rigid templates."
+      },
+      {
+        "question": "How are the follow-ups personalized?",
+        "answer": "Each follow-up is generated by a large language model we wire into the workflow, built with Claude Opus 4.8 and GPT Codex. Instead of one static template sent to everyone, the copy is drafted for that specific contact using the data captured in GoHighLevel."
+      },
+      {
+        "question": "Is this done for me or do I have to build it?",
+        "answer": "We build and wire the full pipeline for you: lead capture, the n8n workflows, the AI follow-up writing, the pipeline stage automation, and the reply-detection stop. You bring your GoHighLevel account and your offer. We build the machine around it and hand it over running."
+      }
+    ],
+    "faqStat": {
+      "stat": "Reply, then stop",
+      "label": "the behavior every sequence should have but most lack"
+    },
+    "ctaLabel": "Book a pipeline build call",
+    "ctaSupportText": "Walk us through your GoHighLevel setup and your offer. We will map the n8n email pipeline that captures, follows up, advances, and stops on reply. Reach us at aditya@tryagentikai.com.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "n8n content automation pipeline",
+        "href": "/n8n-content-automation-pipeline"
+      },
+      {
+        "label": "AI SDR for GoHighLevel agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      }
+    ],
+    "keywords": [
+      "n8n gohighlevel email pipeline",
+      "gohighlevel n8n automation",
+      "n8n cold email automation",
+      "gohighlevel email drip automation",
+      "ai cold email follow up",
+      "gohighlevel pipeline automation",
+      "n8n email sequence workflow",
+      "reply detection email automation",
+      "done for you gohighlevel automation",
+      "ai sdr gohighlevel"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/n8n-gohighlevel-email-pipeline/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "n8n"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "ai-social-media-content-pipeline"
+    ],
+    "title": "AI Social Media Content Pipeline: Curate, Draft, Auto-Publish | Agentic AI Labs",
+    "description": "An AI social media content pipeline that curates niche news, drafts posts in your voice, and auto-publishes to Facebook, Instagram, LinkedIn, and Threads on schedule.",
+    "heroLabel": "AI Social Media Content Pipeline",
+    "heroHeadline": "It is Tuesday again and your feed has been silent since last month.",
+    "heroSubheadline": "You know posting consistently builds trust and pipeline. You also know it never survives contact with a real workday. This is a pipeline that reads your niche, drafts the posts, waits for your yes, and ships to four networks on a schedule. You stay the voice. The busywork disappears.",
+    "heroExplainerCaption": "One n8n workflow: niche news in, approved posts out to four networks.",
+    "heroSteps": [
+      {
+        "label": "Curate niche news",
+        "sub": "Pulls fresh sources you choose",
+        "accent": true
+      },
+      {
+        "label": "Draft with AI",
+        "sub": "Posts written in your voice",
+        "accent": false
+      },
+      {
+        "label": "Review sheet",
+        "sub": "You approve or edit first",
+        "accent": false
+      },
+      {
+        "label": "Schedule slots",
+        "sub": "Queued to your posting calendar",
+        "accent": false
+      },
+      {
+        "label": "Auto-publish",
+        "sub": "Four networks, one click gone",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why the calendar keeps winning",
+    "painPoints": [
+      "You open the app to post, then a client call swallows the afternoon and the idea is gone.",
+      "Four networks each want a slightly different format, so one post quietly becomes an hour of reformatting.",
+      "The weeks you go quiet are the weeks referrals forget you exist."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Time lost per post across sourcing, writing, and reformatting",
+          "amount": "the better part of an hour"
+        },
+        {
+          "label": "Networks left dark when the week gets busy",
+          "amount": "usually most of them"
+        },
+        {
+          "label": "Warm audience attention decaying between posts",
+          "amount": "compounds downward"
+        }
+      ],
+      "total": "quiet weeks that quietly cost you top-of-mind trust",
+      "solvesFor": "consistent presence across four networks without stealing your working hours",
+      "source": "Common pattern reported by the SMB owners and agency operators we build for"
+    },
+    "statusQuoTitle": "How teams try to stay consistent today",
+    "statusQuoItems": [
+      "Posting by hand means it happens on good weeks and vanishes on busy ones.",
+      "Generic scheduling tools queue what you already wrote, but they never source ideas or draft for you.",
+      "A hired contractor adds coordination, briefs, and a bill, and still needs your review anyway."
+    ],
+    "statusQuoBars": {
+      "title": "What actually holds up week after week",
+      "bars": [
+        {
+          "label": "Manual posting when you remember",
+          "valueLabel": "breaks on busy weeks",
+          "widthPercent": 30,
+          "accent": false
+        },
+        {
+          "label": "Scheduler that only queues your drafts",
+          "valueLabel": "you still write everything",
+          "widthPercent": 45,
+          "accent": false
+        },
+        {
+          "label": "Freelancer or agency retainer",
+          "valueLabel": "cost plus coordination",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "This pipeline: curate, draft, approve, publish",
+          "valueLabel": "runs on schedule",
+          "widthPercent": 95,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Consistency, not volume, is what compounds on social",
+      "body": "Across networks, accounts that show up on a steady cadence stay in front of their audience and keep surfacing in feeds. The hard part was never knowing that. It was doing it every week without a system that removes the manual steps between idea and published post.",
+      "source": "Agentic AI Labs field observation",
+      "date": "2026",
+      "stat": "4 networks",
+      "statLabel": "published from one approval step"
+    },
+    "solutionTitle": "What we actually built for you",
+    "solutionItems": [
+      "A curation step that watches the news sources and topics in your niche, so drafts start from what is current, not from a blank page.",
+      "AI drafting that writes each post in your voice and adapts the format per network, so Instagram and LinkedIn do not get the same block of text.",
+      "A review sheet approval step where you skim, edit, or approve in one place before anything goes live, so nothing publishes without your yes.",
+      "Scheduled auto-publishing to Facebook, Instagram, LinkedIn, and Threads, so approved posts ship in your chosen slots while you do other work."
+    ],
+    "layers": [
+      {
+        "title": "Curation and drafting layer",
+        "body": "n8n pulls from the sources you pick, then the drafting runs on frontier models (Claude Opus 4.8 and GPT Codex) tuned to your voice and offers. You get posts grounded in current niche news, not recycled filler."
+      },
+      {
+        "title": "Human approval layer",
+        "body": "Every draft lands in a review sheet before it can publish. You approve, edit, or reject in one pass. This is the guardrail that keeps automation from ever posting something off-brand in your name."
+      },
+      {
+        "title": "Multi-network publishing layer",
+        "body": "Approved posts are queued and auto-published to Facebook, Instagram, LinkedIn, and Threads on your schedule, each formatted for its network. One approval becomes four consistent presences."
+      }
+    ],
+    "proofTitle": "Why this holds up in a real business",
+    "proofBullets": [
+      "Nothing reaches your audience without passing through the review sheet, so the automation extends your judgment instead of replacing it.",
+      "The whole pipeline runs on n8n, so the logic is visible, owned by you, and editable as your niche and networks change.",
+      "We draft on Claude Opus 4.8 and GPT Codex, so the writing quality is closer to your own hand than to obvious template output."
+    ],
+    "proofStats": [
+      {
+        "stat": "Human-in-loop",
+        "label": "approval before every publish"
+      },
+      {
+        "stat": "n8n",
+        "label": "transparent, owned workflow"
+      },
+      {
+        "stat": "Opus 4.8 + Codex",
+        "label": "drafting engine"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Effort per week to stay visible on four networks",
+      "bars": [
+        {
+          "label": "Doing it yourself, end to end",
+          "valueLabel": "hours you rarely have",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "Scheduler tool plus your own writing",
+          "valueLabel": "still hours of drafting",
+          "widthPercent": 65,
+          "accent": false
+        },
+        {
+          "label": "This pipeline: you just review and approve",
+          "valueLabel": "minutes to skim and ship",
+          "widthPercent": 20,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Which networks does the pipeline publish to?",
+        "answer": "Facebook, Instagram, LinkedIn, and Threads. Approved posts are formatted per network and published to each on the schedule you set, from one approval step."
+      },
+      {
+        "question": "Does anything post without my review?",
+        "answer": "No. Every draft stops at a review sheet first. You approve, edit, or reject before it can publish. The approval step is a permanent part of the pipeline, not an option we can skip."
+      },
+      {
+        "question": "Where do the post ideas come from?",
+        "answer": "From curation. The pipeline watches the news sources and topics in your niche that you choose, so drafts start from what is current in your space rather than from a blank prompt."
+      },
+      {
+        "question": "What is it built on, and can I own it?",
+        "answer": "It runs on n8n, so the full workflow is transparent and yours to keep and edit. The drafting itself runs on frontier models, Claude Opus 4.8 and GPT Codex, tuned to your voice."
+      },
+      {
+        "question": "Will the posts actually sound like me?",
+        "answer": "That is the point of the drafting layer and the review sheet together. We tune the model to your voice and past posts, and you get final say on every draft before it ships."
+      }
+    ],
+    "faqStat": {
+      "stat": "4 networks",
+      "label": "from a single approval step"
+    },
+    "ctaLabel": "Get your content pipeline built",
+    "ctaSupportText": "We map your niche sources, voice, and posting schedule, then build the n8n pipeline with your review sheet in the loop. You show up consistently across four networks without the weekly scramble.",
+    "relatedLinks": [
+      {
+        "label": "n8n content automation pipeline",
+        "href": "/n8n-content-automation-pipeline"
+      },
+      {
+        "label": "Done-for-you GoHighLevel automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      },
+      {
+        "label": "AI SDR for GoHighLevel agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      }
+    ],
+    "keywords": [
+      "ai social media content pipeline",
+      "ai content pipeline for social media",
+      "automate social media posting with ai",
+      "n8n social media automation",
+      "ai post scheduling facebook instagram linkedin threads",
+      "ai content curation and drafting",
+      "auto publish social media posts",
+      "social media automation for agencies",
+      "ai social media workflow n8n",
+      "done for you social media automation"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/ai-social-media-content-pipeline/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "n8n",
+      "make",
+      "zapier"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "facebook-dm-automation-meta-api"
+    ],
+    "title": "Facebook DM Automation with the Meta API | Agentic AI Labs",
+    "description": "Facebook DM and comment automation on the Meta API. AI answers DMs and comments from your knowledge base, with keyword triggers and instant link delivery.",
+    "heroLabel": "Facebook DM Automation",
+    "heroHeadline": "A comment lands at 11pm and the buyer is gone by morning.",
+    "heroSubheadline": "People message your page ready to buy, then they wait. We wire Facebook into the Meta API so AI reads every DM and comment, answers from your own knowledge base, and drops the link before the intent cools.",
+    "heroExplainerCaption": "How a DM or comment becomes an answered, linked reply",
+    "heroSteps": [
+      {
+        "label": "DM or comment arrives",
+        "sub": "Meta API captures the event",
+        "accent": true
+      },
+      {
+        "label": "OS.1 reads the intent",
+        "sub": "Matches it to your knowledge base",
+        "accent": false
+      },
+      {
+        "label": "Keyword trigger fires",
+        "sub": "Chosen words unlock the reply",
+        "accent": false
+      },
+      {
+        "label": "AI writes the answer",
+        "sub": "In your voice, on brand",
+        "accent": false
+      },
+      {
+        "label": "Reply and link delivered",
+        "sub": "Logged into GHL",
+        "accent": true
+      }
+    ],
+    "painTitle": "Where page conversations go to die",
+    "painPoints": [
+      "Someone comments \"price\" on a post and nobody sees it for hours, so the buying moment quietly passes.",
+      "Your inbox fills with the same three questions, and answering each one by hand eats the time you should spend closing.",
+      "Nights and weekends are dead zones, so every DM that lands after you clock out sits unread until you are back."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "DMs answered next business day",
+          "amount": "intent gone cold"
+        },
+        {
+          "label": "Buy-signal comments left unseen",
+          "amount": "silent drop-off"
+        },
+        {
+          "label": "Repeat questions handled by hand",
+          "amount": "hours per week"
+        }
+      ],
+      "total": "Revenue leaking through an unwatched inbox",
+      "solvesFor": "Every DM and comment answered fast, straight from your knowledge base",
+      "source": "Common friction pattern across SMB and agency Facebook pages"
+    },
+    "statusQuoTitle": "How pages handle DMs today",
+    "statusQuoItems": [
+      "A human checks the inbox between other tasks, so replies land whenever someone remembers.",
+      "Basic auto-responders send one canned line that ignores what the person actually asked.",
+      "Comment sections go unmonitored, so the highest-intent questions never get a reply at all."
+    ],
+    "statusQuoBars": {
+      "title": "Time from message to real answer",
+      "bars": [
+        {
+          "label": "Manual inbox checking",
+          "valueLabel": "hours, if seen",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "Canned auto-reply",
+          "valueLabel": "instant but wrong",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "OS.1 on the Meta API",
+          "valueLabel": "answered in seconds",
+          "widthPercent": 18,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Messaging is where buyers now expect to reach a business",
+      "body": "Meta has pushed conversations off the feed and into DMs and comments, and buyers increasingly expect an answer there in minutes, not the next business day. Pages that respond in the moment capture intent the rest let go cold.",
+      "source": "Meta business messaging trends",
+      "date": "2025",
+      "stat": "In minutes",
+      "statLabel": "The window buyers now expect a reply in"
+    },
+    "solutionTitle": "What we build on the Meta API",
+    "solutionItems": [
+      "AI answers incoming DMs directly from a knowledge base you upload, so replies match your real pricing, policies, and offers.",
+      "Comment automation watches your posts and responds to the people asking to buy, publicly or in DM.",
+      "Keyword-triggered replies let a word like \"guide\" or \"price\" fire a specific answer and deliver the exact link.",
+      "Every conversation flows into GHL as a contact and workflow, so nothing lives only inside Facebook."
+    ],
+    "layers": [
+      {
+        "title": "OS.1, the automation engine",
+        "body": "OS.1 is our in-house tool that powers all Meta and text automation. It connects to the Meta API, reads each DM and comment, matches intent against your uploaded knowledge base, and decides whether to answer, trigger a keyword flow, or hand off. It is the brain behind every reply on this page."
+      },
+      {
+        "title": "The knowledge base and reply models",
+        "body": "You upload what your business actually knows: offers, pricing, FAQs, objections. We build the reasoning with Claude Opus 4.8 and GPT Codex so answers stay accurate and in your voice, and we tune keyword triggers so specific words deliver specific links every time."
+      },
+      {
+        "title": "GHL as the CRM and workflow layer",
+        "body": "OS.1 plugs into GoHighLevel. Every answered DM or comment becomes a contact, a tag, and a workflow step, so a Facebook conversation turns into a tracked lead you can nurture, route, and follow up on outside the platform."
+      }
+    ],
+    "proofTitle": "Why this holds up in the real world",
+    "proofBullets": [
+      "Because OS.1 answers from a knowledge base you control, replies stay accurate instead of hallucinating offers you do not run.",
+      "Because it runs on the official Meta API, DMs and comments are handled inside Facebook's own rules, not a fragile browser hack.",
+      "Because everything lands in GHL, the automation is measurable and every conversation is a contact you own."
+    ],
+    "proofStats": [
+      {
+        "stat": "Your KB",
+        "label": "Answers come from your uploaded knowledge, not guesses"
+      },
+      {
+        "stat": "Meta API",
+        "label": "Official integration, not a scraper that breaks"
+      },
+      {
+        "stat": "Into GHL",
+        "label": "Every conversation becomes a tracked contact"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Coverage of incoming page conversations",
+      "bars": [
+        {
+          "label": "You checking manually",
+          "valueLabel": "misses off hours",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Generic chatbot plugin",
+          "valueLabel": "DMs only, canned",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "OS.1 DM and comment automation",
+          "valueLabel": "DMs and comments, 24/7",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this use the official Meta API or a workaround?",
+        "answer": "The official Meta API. OS.1 connects through Facebook's approved integration, so your DM and comment automation runs inside Meta's rules instead of a browser trick that breaks on the next update."
+      },
+      {
+        "question": "How does the AI know what to say?",
+        "answer": "It answers from a knowledge base you upload: your offers, pricing, FAQs, and policies. We build the reasoning with Claude Opus 4.8 and GPT Codex so replies stay accurate and sound like you, not a generic bot."
+      },
+      {
+        "question": "What are keyword-triggered replies?",
+        "answer": "You pick words, like \"price\" or \"guide\", that a commenter or DMer might send. When that word appears, OS.1 fires a specific reply and delivers the exact link you want, automatically."
+      },
+      {
+        "question": "Can it reply to comments on posts, not just DMs?",
+        "answer": "Yes. Comment automation watches your posts and responds to high-intent commenters, either publicly or by moving them into DM, so the buying question in your comment section never goes unanswered."
+      },
+      {
+        "question": "Where do the conversations end up?",
+        "answer": "In GoHighLevel. OS.1 plugs into GHL as the CRM and workflow layer, so every DM and comment becomes a contact, a tag, and a follow-up workflow you own outside Facebook."
+      }
+    ],
+    "faqStat": {
+      "stat": "24/7",
+      "label": "DMs and comments answered, including nights and weekends"
+    },
+    "ctaLabel": "Automate your Facebook DMs and comments",
+    "ctaSupportText": "We map your knowledge base, wire OS.1 into the Meta API, and connect it to GHL. You watch DMs and comments get answered in seconds.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI Voice Pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "AI SDR for GHL Agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      },
+      {
+        "label": "Done-For-You GoHighLevel Automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      }
+    ],
+    "keywords": [
+      "facebook dm automation",
+      "facebook messenger automation",
+      "meta api dm automation",
+      "facebook comment automation",
+      "auto reply facebook comments",
+      "facebook lead automation",
+      "keyword triggered facebook replies",
+      "ai facebook dm assistant",
+      "facebook automation for agencies",
+      "gohighlevel facebook integration"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/facebook-dm-automation-meta-api/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "instagram-comment-automation-ai"
+    ],
+    "title": "Instagram Comment Automation with AI | Agentic AI Labs",
+    "description": "AI watches your Instagram posts, replies to comments from your knowledge base, and moves keyword commenters into DMs and your CRM. Powered by OS.1.",
+    "heroLabel": "Instagram Comment Automation",
+    "heroHeadline": "A post goes viral overnight and the comments sit unanswered until noon.",
+    "heroSubheadline": "By the time you reach the \"how much?\" comment, the buyer already scrolled on. We put an AI on every post that answers from your knowledge base, catches the buying words, and pulls that person into your DMs and your CRM while intent is still hot.",
+    "heroExplainerCaption": "How a single comment becomes a tracked lead, end to end.",
+    "heroSteps": [
+      {
+        "label": "Comment lands",
+        "sub": "Someone replies on your post or reel",
+        "accent": true
+      },
+      {
+        "label": "AI reads intent",
+        "sub": "Matches question to knowledge base",
+        "accent": false
+      },
+      {
+        "label": "Public reply posts",
+        "sub": "On-brand answer under the comment",
+        "accent": false
+      },
+      {
+        "label": "Keyword fires DM",
+        "sub": "Trigger words open a private thread",
+        "accent": false
+      },
+      {
+        "label": "Lead hits CRM",
+        "sub": "Contact and tag land in GHL",
+        "accent": true
+      }
+    ],
+    "painTitle": "Where Instagram comments quietly leak revenue",
+    "painPoints": [
+      "The highest-intent comments (\"price?\", \"link?\", \"does it work for X?\") arrive when nobody is watching the account.",
+      "Every buyer you answer manually is a buyer a competitor answered faster, and Instagram rewards the reply that came first.",
+      "Comments live and die inside Instagram, so even the ones you do answer never make it into a CRM you can follow up from."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Comments left unanswered overnight and on weekends",
+          "amount": "Silent hours"
+        },
+        {
+          "label": "Buying-intent replies that never became a DM",
+          "amount": "Missed openings"
+        },
+        {
+          "label": "Interested commenters that never entered your CRM",
+          "amount": "Untracked leads"
+        }
+      ],
+      "total": "Warm buyers who raised their hand and got silence",
+      "solvesFor": "turning every comment into a captured, followed-up lead",
+      "source": "Common pattern across the SMB and agency accounts we onboard"
+    },
+    "statusQuoTitle": "How teams handle comments today",
+    "statusQuoItems": [
+      "Manual replies depend on someone being awake, online, and fast enough to beat the scroll.",
+      "Generic auto-reply apps post the same canned line to everyone and cannot answer a real question.",
+      "Nothing connects the comment to a contact record, so follow-up is guesswork or nonexistent."
+    ],
+    "statusQuoBars": {
+      "title": "Speed and quality of the first reply",
+      "bars": [
+        {
+          "label": "OS.1 comment automation",
+          "valueLabel": "answers in seconds, on-brand",
+          "widthPercent": 100,
+          "accent": true
+        },
+        {
+          "label": "Replying by hand",
+          "valueLabel": "hours later, if at all",
+          "widthPercent": 35,
+          "accent": false
+        },
+        {
+          "label": "Canned auto-reply apps",
+          "valueLabel": "instant but off-topic",
+          "widthPercent": 45,
+          "accent": false
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Meta keeps widening what automated accounts can do inside comments and DMs",
+      "body": "Meta's own Messenger and Instagram messaging APIs are built for exactly this handoff: a public comment triggers a private message, and the conversation moves into a system you own. The accounts winning attention are the ones treating comments as an inbox, not a vanity metric.",
+      "source": "Meta Platforms messaging API documentation",
+      "date": "2026",
+      "stat": "Comment to DM",
+      "statLabel": "the handoff Meta explicitly supports"
+    },
+    "solutionTitle": "What we actually build for your account",
+    "solutionItems": [
+      "OS.1, our in-house engine, watches your posts and reels and reads each new comment for intent instead of just matching a single word.",
+      "Public replies are written from a knowledge base you control, so answers sound like your brand and stay accurate as your offers change.",
+      "Keyword triggers you define (like \"price\", \"link\", or a launch codeword) move that commenter from a public reply into a private DM automatically.",
+      "Every triggered commenter lands in GoHighLevel as a contact with tags, so your existing workflows, follow-ups, and pipelines take over."
+    ],
+    "layers": [
+      {
+        "title": "OS.1: the automation engine",
+        "body": "OS.1 is our own tool for Meta and text automation. It connects to your Instagram, watches posts in real time, classifies comment intent, and decides whether to reply publicly, open a DM, or both. It is the layer that makes replies feel written rather than canned."
+      },
+      {
+        "title": "GoHighLevel: the CRM and workflow layer",
+        "body": "OS.1 plugs into GoHighLevel as the system of record. When a keyword fires, the commenter becomes a tagged contact and drops into the GHL workflows you already run, so speed-to-lead, nurture, and booking all continue outside Instagram."
+      },
+      {
+        "title": "How we build and tune it",
+        "body": "We build the intent logic and reply generation with Claude Opus 4.8 and GPT Codex, then tune the knowledge base against your real comment history. You review the answers before anything goes live, and we adjust triggers as your offers and campaigns change."
+      }
+    ],
+    "proofTitle": "Why this holds up in a real account",
+    "proofBullets": [
+      "Replies are generated from your knowledge base, not a fixed template, so a \"does this work for gyms?\" comment gets a real answer instead of a generic thanks.",
+      "The comment-to-DM-to-CRM path is one continuous flow, so a hot commenter never falls out between Instagram and your follow-up system.",
+      "You keep full control: you define the triggers, approve the knowledge base, and can pause or edit any behavior without touching code."
+    ],
+    "proofStats": [
+      {
+        "stat": "Knowledge-base driven",
+        "label": "answers, not canned templates"
+      },
+      {
+        "stat": "One flow",
+        "label": "comment to DM to CRM"
+      },
+      {
+        "stat": "You approve",
+        "label": "every reply and trigger"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Comment tools versus OS.1 comment automation",
+      "bars": [
+        {
+          "label": "OS.1 (comment to DM to CRM)",
+          "valueLabel": "answers, captures, and hands off",
+          "widthPercent": 100,
+          "accent": true
+        },
+        {
+          "label": "Basic auto-reply apps",
+          "valueLabel": "one canned line, no capture",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Manual community management",
+          "valueLabel": "slow and stops at the DM",
+          "widthPercent": 50,
+          "accent": false
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does the AI reply to every comment or only some?",
+        "answer": "You decide. Most accounts have OS.1 reply publicly to genuine questions and reserve the DM-and-CRM handoff for comments that contain your buying-intent keywords, so casual comments stay light and hot leads get pulled in."
+      },
+      {
+        "question": "Will the replies sound like a bot?",
+        "answer": "They are written from a knowledge base in your voice and generated fresh per comment, not pasted from one template. We build the logic with Claude Opus 4.8 and GPT Codex and tune it against your real comment history before it goes live."
+      },
+      {
+        "question": "How does a comment end up in my CRM?",
+        "answer": "When a comment triggers one of your keywords, OS.1 opens a DM and creates or updates a contact in GoHighLevel with tags. From there your existing GHL workflows handle follow-up, booking, and nurture."
+      },
+      {
+        "question": "Is this allowed under Meta's rules?",
+        "answer": "Yes. It runs on Meta's official messaging APIs, which are designed for exactly this public-comment-to-private-DM handoff. We keep behavior inside Meta's guidelines rather than scraping or automating logins."
+      },
+      {
+        "question": "Do I keep control over what it says and does?",
+        "answer": "Fully. You approve the knowledge base, define the trigger keywords, and can edit or pause any behavior at any time. Nothing runs that you have not signed off on."
+      }
+    ],
+    "faqStat": {
+      "stat": "Official APIs",
+      "label": "built on Meta's messaging platform, not scraping"
+    },
+    "ctaLabel": "Get Instagram comment automation built for your account",
+    "ctaSupportText": "We map your posts, buying keywords, and GHL workflows, then stand up OS.1 comment automation done-for-you. You approve every reply before it goes live.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel speed-to-lead automation",
+        "href": "/gohighlevel-speed-to-lead-automation"
+      },
+      {
+        "label": "AI SDR for GoHighLevel agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      },
+      {
+        "label": "Done-for-you GoHighLevel automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      }
+    ],
+    "keywords": [
+      "instagram comment automation",
+      "instagram comment automation ai",
+      "auto reply to instagram comments",
+      "instagram comment to dm automation",
+      "instagram dm automation tool",
+      "comment triggered dm instagram",
+      "instagram lead generation automation",
+      "instagram comments to crm",
+      "automated instagram engagement for business",
+      "gohighlevel instagram automation"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/instagram-comment-automation-ai/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "zoom-meeting-proposal-automation"
+    ],
+    "title": "Zoom Meeting Proposal Automation with AI | Agentic AI Labs",
+    "description": "Turn every Zoom call into a tailored proposal sent before the prospect leaves the tab. AI transcribes, drafts, and emails it through GoHighLevel automatically.",
+    "heroLabel": "Zoom meeting automation ai",
+    "heroHeadline": "The call went great, and then the proposal sat in your drafts for four days.",
+    "heroSubheadline": "The moment a prospect says yes is the moment they start cooling off. We wire your Zoom calls so a tailored proposal, built from what was actually said, lands in their inbox before they close the tab.",
+    "heroExplainerCaption": "One pipeline, from spoken call to sent proposal, with nobody touching a keyboard.",
+    "heroSteps": [
+      {
+        "label": "Zoom call ends",
+        "sub": "Recording closes, webhook fires",
+        "accent": true
+      },
+      {
+        "label": "Transcript generated",
+        "sub": "Full call transcribed automatically",
+        "accent": false
+      },
+      {
+        "label": "AI reads the intent",
+        "sub": "Pain, scope, budget, next step",
+        "accent": false
+      },
+      {
+        "label": "Proposal drafted",
+        "sub": "Tailored to their exact words",
+        "accent": false
+      },
+      {
+        "label": "Emailed via GoHighLevel",
+        "sub": "In their inbox, contact tagged",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why warm calls quietly go cold",
+    "painPoints": [
+      "You finish a strong discovery call, then push the follow-up to tomorrow because three more calls are waiting today.",
+      "By the time you sit down to write the proposal, you are reconstructing what they said from half a page of scribbled notes.",
+      "The prospect who was ready on the call has already heard back from two competitors who followed up the same hour."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Hot prospect goes quiet",
+          "amount": "follow-up window closes"
+        },
+        {
+          "label": "Manual proposal writing",
+          "amount": "30 to 60 min per call"
+        },
+        {
+          "label": "Details lost from memory",
+          "amount": "generic, off-target quotes"
+        }
+      ],
+      "total": "Every hour of delay leaks signed revenue out of a deal you already won on the call",
+      "solvesFor": "Turning meeting momentum into a sent proposal while the prospect is still leaning in",
+      "source": "TryAgentik post-meeting automation pipeline"
+    },
+    "statusQuoTitle": "What most teams do after the call ends",
+    "statusQuoItems": [
+      "A virtual assistant retypes the notes and drafts a proposal by hand, hours later.",
+      "A generic template goes out with the prospect name swapped in and nothing else changed.",
+      "The rep means to follow up, gets pulled into the next call, and the thread dies."
+    ],
+    "statusQuoBars": {
+      "title": "Time from call end to proposal in inbox",
+      "bars": [
+        {
+          "label": "Manual write-up next day",
+          "valueLabel": "often 1 to 3 days",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "VA turnaround",
+          "valueLabel": "a few hours, if free",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Template blast",
+          "valueLabel": "fast but off-target",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Automated pipeline",
+          "valueLabel": "minutes after hangup",
+          "widthPercent": 8,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Speed of follow-up is the strongest signal a buyer feels",
+      "body": "When two vendors are close on fit, the one whose proposal arrives while the conversation is still fresh reads as more serious and more capable. Buyers rarely wait for the slower reply; they move with whoever shows up first with something specific to what they said.",
+      "source": "Sales response-time research, widely replicated across B2B studies",
+      "date": "2026",
+      "stat": "First",
+      "statLabel": "specific reply usually wins the frame"
+    },
+    "solutionTitle": "What we actually build for you",
+    "solutionItems": [
+      "Automatic Zoom transcription that triggers the moment your call recording closes, no upload step and no button to remember.",
+      "An AI drafting layer that reads the full transcript and pulls out the prospect pain, the scope discussed, the objections raised, and the agreed next step.",
+      "A tailored proposal written from those exact points, in your voice and structure, not a name-swapped template.",
+      "Delivery straight through GoHighLevel: the proposal is emailed to the contact and the record is tagged and updated for your pipeline."
+    ],
+    "layers": [
+      {
+        "title": "Capture layer",
+        "body": "A Zoom webhook fires the instant the meeting recording finalizes. We pull the transcript automatically, so the pipeline starts with zero manual steps from your rep. No forwarding, no copy-paste, no waiting on a nightly export."
+      },
+      {
+        "title": "Reasoning layer",
+        "body": "The transcript is read by Claude Opus 4.8, with GPT Codex handling the structured extraction and formatting logic. It separates what the prospect needs from small talk, and drafts a proposal scoped to what was genuinely agreed, so the quote matches the conversation instead of a template."
+      },
+      {
+        "title": "Delivery layer",
+        "body": "The finished proposal is routed into GoHighLevel and emailed to the contact from your domain. The contact record is tagged, the opportunity stage moves, and your team sees a clean trail. You can set it to auto-send or to pause for a one-click human review first."
+      }
+    ],
+    "proofTitle": "Why this holds up in real pipelines",
+    "proofBullets": [
+      "The proposal quotes the prospect's own words, so it reads as written for them and not pulled from a folder.",
+      "It runs inside GoHighLevel, the CRM your agency and clients already live in, so nothing new to log into.",
+      "You stay in control: run it fully automatic, or gate every send behind a fast human approval."
+    ],
+    "proofStats": [
+      {
+        "stat": "Transcript-based",
+        "label": "drafted from the actual call, not a guess"
+      },
+      {
+        "stat": "Native GHL",
+        "label": "sent and tracked inside GoHighLevel"
+      },
+      {
+        "stat": "Auto or review",
+        "label": "you choose the send mode"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Proposal quality against a name-swapped template",
+      "bars": [
+        {
+          "label": "Generic template blast",
+          "valueLabel": "ignores what was said",
+          "widthPercent": 30,
+          "accent": false
+        },
+        {
+          "label": "Rushed manual draft",
+          "valueLabel": "misses half the notes",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Transcript-tailored draft",
+          "valueLabel": "matches the real call",
+          "widthPercent": 95,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this work with my existing Zoom and GoHighLevel setup?",
+        "answer": "Yes. It hooks into your current Zoom account and your GoHighLevel sub-account or agency. We connect to the tools you already run, so there is no new platform for your team to learn and no migration."
+      },
+      {
+        "question": "Will the proposal actually sound like us, or like a robot?",
+        "answer": "Like you. We build the draft against your own proposal structure, tone, and offer language. The AI fills it with points from the specific call, so it reads as a human on your team wrote it right after hanging up."
+      },
+      {
+        "question": "What models power the drafting?",
+        "answer": "We build the reasoning with Claude Opus 4.8 for reading and writing the proposal, and GPT Codex for the structured extraction and formatting logic. That pairing is what keeps the output tailored to each transcript rather than generic."
+      },
+      {
+        "question": "Can I review a proposal before it goes out?",
+        "answer": "Absolutely. You choose the mode. Fully automatic sends the moment the draft is ready, or a review gate holds it for a one-click human approval before it reaches the contact. Many teams start in review mode and switch to auto once they trust it."
+      },
+      {
+        "question": "What happens on a call where nothing was really agreed?",
+        "answer": "You set the rules. The pipeline can require a clear next step or a scope discussion before it drafts, so unqualified or exploratory calls do not trigger a proposal. It only fires when the conversation earned one."
+      }
+    ],
+    "faqStat": {
+      "stat": "Minutes",
+      "label": "from call end to a proposal in the inbox"
+    },
+    "ctaLabel": "Automate your post-call proposals",
+    "ctaSupportText": "Book a short call. We will map your Zoom and GoHighLevel setup and show you the pipeline running on a real transcript.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "Speed to lead automation for GoHighLevel",
+        "href": "/gohighlevel-speed-to-lead-automation"
+      },
+      {
+        "label": "Done-for-you GoHighLevel automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      }
+    ],
+    "keywords": [
+      "zoom meeting automation ai",
+      "zoom meeting proposal automation",
+      "automated proposal from zoom transcript",
+      "ai proposal generator from meeting",
+      "gohighlevel proposal automation",
+      "post meeting follow up automation",
+      "zoom transcript to proposal ai",
+      "ai sales follow up automation",
+      "automated meeting follow up gohighlevel",
+      "ai meeting to proposal pipeline"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/zoom-meeting-proposal-automation/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "make"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "make-zoom-proposal-automation"
+    ],
+    "title": "Make.com Zoom Automation: Auto-Send Proposals After Every Call | Agentic AI Labs",
+    "description": "Make.com Zoom automation that transcribes the call, drafts the proposal, and emails it through GoHighLevel the moment your meeting ends. Done-for-you build.",
+    "heroLabel": "Make.com Zoom Automation",
+    "heroHeadline": "The call ended an hour ago and the proposal is still a blank page.",
+    "heroSubheadline": "You just ran a sharp discovery call. Now the follow-up sits in a tab while the prospect's interest quietly cools. We wire Make.com into Zoom so the proposal writes itself and lands in their inbox the moment you hang up.",
+    "heroExplainerCaption": "One Make.com scenario carries the meeting from Zoom recording to a sent proposal, with no manual hand-off anywhere in the middle.",
+    "heroSteps": [
+      {
+        "label": "Zoom meeting ends",
+        "sub": "Recording fires the Make scenario",
+        "accent": true
+      },
+      {
+        "label": "AssemblyAI transcribes",
+        "sub": "Full call becomes clean text",
+        "accent": false
+      },
+      {
+        "label": "LLM drafts the proposal",
+        "sub": "Scope and price from the conversation",
+        "accent": false
+      },
+      {
+        "label": "GoHighLevel matches contact",
+        "sub": "Proposal attached to the right record",
+        "accent": false
+      },
+      {
+        "label": "Email sends itself",
+        "sub": "Prospect reads it while warm",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why strong calls still go cold",
+    "painPoints": [
+      "The best moment to send a proposal is right after the call, which is exactly when you are drained and already pulled toward the next thing.",
+      "Rebuilding scope and pricing from memory lets details drift, and a rushed document reads like a rushed document.",
+      "By the time the follow-up finally goes out that evening, the prospect has cooled and is weighing whoever replied first."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Discovery calls where the follow-up slips past same-day",
+          "amount": "momentum bleeds out"
+        },
+        {
+          "label": "Proposals written from memory instead of the transcript",
+          "amount": "scope gaps and pricing drift"
+        },
+        {
+          "label": "Warm prospects left waiting on the document",
+          "amount": "attention lost to faster competitors"
+        }
+      ],
+      "total": "Won deals that quietly turn into ghosted threads",
+      "solvesFor": "Every call turned into a same-minute proposal, while the prospect is still leaning in",
+      "source": "Common pattern across SMB and agency sales desks we build for"
+    },
+    "statusQuoTitle": "How teams handle post-call proposals today",
+    "statusQuoItems": [
+      "Manual write-ups depend on the rep having energy left and remembering the details, so quality swings call to call.",
+      "Template-only tools spit out generic documents that ignore what was actually said on the call.",
+      "Our Make.com build reads the real transcript and sends a tailored proposal before the rep opens their laptop."
+    ],
+    "statusQuoBars": {
+      "title": "Time from hang-up to proposal in the prospect's inbox",
+      "bars": [
+        {
+          "label": "Write it yourself later",
+          "valueLabel": "hours to next day",
+          "widthPercent": 90,
+          "accent": false
+        },
+        {
+          "label": "Generic proposal template",
+          "valueLabel": "fast but off-target",
+          "widthPercent": 50,
+          "accent": false
+        },
+        {
+          "label": "Make.com Zoom automation (us)",
+          "valueLabel": "minutes, tailored",
+          "widthPercent": 12,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Speed to follow-up is now the deciding factor in competitive deals",
+      "body": "Buyers increasingly reward whoever responds first while the conversation is fresh. When a tailored proposal arrives within minutes of the call, you set the anchor before anyone else replies. When it arrives the next day, you are one of several tabs the prospect forgot to open.",
+      "source": "Aggregated B2B sales response-time research",
+      "date": "2026",
+      "stat": "First to respond",
+      "statLabel": "tends to win the deal"
+    },
+    "solutionTitle": "What we actually build into your Make.com scenario",
+    "solutionItems": [
+      "A Zoom trigger that fires the moment the recording is ready, so nothing waits on a human clicking a button.",
+      "AssemblyAI transcription that turns the full call into clean, structured text the model can reason over.",
+      "An LLM step that drafts the proposal from what was said: scope, deliverables, and pricing grounded in the actual conversation.",
+      "A GoHighLevel step that finds the right contact, logs the proposal, and sends the email under your brand automatically."
+    ],
+    "layers": [
+      {
+        "title": "Capture and transcribe",
+        "body": "The Zoom recording triggers the Make.com scenario and AssemblyAI transcribes the call end to end. No copy-paste, no waiting for a human to kick things off. The transcript becomes the single source of truth for everything downstream."
+      },
+      {
+        "title": "Draft with a frontier model",
+        "body": "We generate the proposal with Claude Opus 4.8, with GPT Codex handling the scenario logic and edge-case wiring. The model pulls scope, deliverables, and pricing signals from the transcript so the document reflects the real conversation, not a generic template."
+      },
+      {
+        "title": "Match and send through GoHighLevel",
+        "body": "The scenario locates the contact in GoHighLevel, attaches the proposal to their record, and sends the email under your domain and branding. The rep sees a sent, logged follow-up before they have even closed the Zoom window."
+      }
+    ],
+    "proofTitle": "Why this build holds up in production",
+    "proofBullets": [
+      "It runs on the tools you already pay for, so there is no new platform for your team to learn or maintain.",
+      "The proposal is grounded in the transcript, so it references what the prospect actually asked for instead of boilerplate.",
+      "Every run is logged in GoHighLevel, so you can see exactly what went out, to whom, and when."
+    ],
+    "proofStats": [
+      {
+        "stat": "Your stack",
+        "label": "Make.com, Zoom, AssemblyAI, GoHighLevel"
+      },
+      {
+        "stat": "Transcript-grounded",
+        "label": "proposals reflect the real call"
+      },
+      {
+        "stat": "Fully logged",
+        "label": "every send tracked in your CRM"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Where the follow-up effort actually lands",
+      "bars": [
+        {
+          "label": "Manual post-call workflow",
+          "valueLabel": "rep does all of it",
+          "widthPercent": 95,
+          "accent": false
+        },
+        {
+          "label": "Virtual assistant writes it up",
+          "valueLabel": "faster but still hours",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Make.com automation (us)",
+          "valueLabel": "runs itself",
+          "widthPercent": 8,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this work with my existing Zoom and GoHighLevel accounts?",
+        "answer": "Yes. We build the scenario on top of the accounts you already have. Zoom provides the recording trigger, GoHighLevel holds your contacts and sends the email, and Make.com orchestrates the flow between them. No migration required."
+      },
+      {
+        "question": "How accurate is the transcription and proposal?",
+        "answer": "AssemblyAI handles the transcription and performs well on real sales calls. The proposal is drafted by Claude Opus 4.8, with GPT Codex used to build and harden the scenario logic. Because the draft is grounded in the actual transcript, it references what was discussed rather than generic filler."
+      },
+      {
+        "question": "Can I review the proposal before it sends?",
+        "answer": "Yes. We can add a review-and-approve step so a draft lands in front of you first, or run it fully automatic for speed. Most teams start with a review gate and switch to auto-send once they trust the output."
+      },
+      {
+        "question": "What happens on calls where no proposal makes sense?",
+        "answer": "We add guardrails so the scenario only generates and sends when the call qualifies, for example when a real scope was discussed. Internal syncs and unqualified calls are skipped so your prospects never get an irrelevant document."
+      },
+      {
+        "question": "How long does it take you to build this for us?",
+        "answer": "It is a done-for-you build. We handle the Make.com scenario, the AssemblyAI and GoHighLevel connections, the prompt design, and testing against your real call recordings before it goes live. Timeline depends on your setup, and we scope it clearly up front."
+      }
+    ],
+    "faqStat": {
+      "stat": "Done for you",
+      "label": "we build, test, and hand over the working scenario"
+    },
+    "ctaLabel": "Get your post-call proposal automation built",
+    "ctaSupportText": "We map your Zoom, AssemblyAI, and GoHighLevel setup, then build the Make.com scenario that sends a tailored proposal the moment each call ends.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI Voice Pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "Done-For-You GoHighLevel Automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      },
+      {
+        "label": "AI SDR for GoHighLevel Agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      }
+    ],
+    "keywords": [
+      "make.com zoom automation",
+      "make.com zoom proposal automation",
+      "automate proposals after zoom calls",
+      "zoom transcript to proposal",
+      "assemblyai make.com integration",
+      "gohighlevel proposal automation",
+      "post-meeting follow-up automation",
+      "make.com sales automation",
+      "auto send proposal after meeting",
+      "zoom gohighlevel automation"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/make-zoom-proposal-automation/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "make",
+      "gohighlevel"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "ai-appointment-booking-voice-agent"
+    ],
+    "title": "AI Appointment Booking Agent That Answers and Books While You Sleep | Agentic AI Labs",
+    "description": "An AI voice agent answers, qualifies, and books appointments into your GoHighLevel calendar 24/7, then confirms and reminds to cut no-shows. Inbound and outbound.",
+    "heroLabel": "AI Appointment Booking Voice Agent",
+    "heroHeadline": "The lead called at 9:47pm and nobody picked up.",
+    "heroSubheadline": "By morning they had already booked with someone else. An AI voice agent answers that call on the first ring, qualifies the lead, and drops a real appointment straight into your GoHighLevel calendar. It runs inbound and outbound, around the clock, and never sleeps through a hot lead.",
+    "heroExplainerCaption": "How one call becomes a confirmed appointment on your calendar",
+    "heroSteps": [
+      {
+        "label": "Call answered on first ring",
+        "sub": "Inbound or outbound, 24/7",
+        "accent": true
+      },
+      {
+        "label": "Agent qualifies the caller",
+        "sub": "Live questions, natural voice",
+        "accent": false
+      },
+      {
+        "label": "Open slot read from GoHighLevel",
+        "sub": "Checks your real calendar",
+        "accent": false
+      },
+      {
+        "label": "Appointment booked live",
+        "sub": "Written into GHL instantly",
+        "accent": false
+      },
+      {
+        "label": "Confirm and remind automatically",
+        "sub": "Cuts no-shows before they happen",
+        "accent": true
+      }
+    ],
+    "painTitle": "Speed decides who wins, and most businesses lose it in the first five minutes",
+    "painPoints": [
+      "A form comes in at midnight and sits untouched until someone opens the CRM the next afternoon.",
+      "Your team is on other calls, at lunch, or asleep, so the phone rings out and the lead moves on.",
+      "You call back hours later and the person has cooled off, gone quiet, or already booked elsewhere."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Average business response time to a new lead",
+          "amount": "47 hours"
+        },
+        {
+          "label": "Lead quality drop after just 5 minutes",
+          "amount": "80%"
+        },
+        {
+          "label": "Deals won by the first responder",
+          "amount": "78%"
+        }
+      ],
+      "total": "Every slow callback is a booked appointment handed to a faster competitor",
+      "solvesFor": "Answering and booking inside the window where the lead still wants to talk",
+      "source": "Velocify, HBR/MIT, and lead response research"
+    },
+    "statusQuoTitle": "How new leads get handled today, ranked worst to best",
+    "statusQuoItems": [
+      "Voicemail and web forms wait in a queue nobody watches after hours.",
+      "A human callback averages 47 hours, long after the lead has moved on.",
+      "An AI voice agent answers in seconds and books before the moment passes."
+    ],
+    "statusQuoBars": {
+      "title": "Speed to first real conversation",
+      "bars": [
+        {
+          "label": "Missed call to voicemail",
+          "valueLabel": "never called back",
+          "widthPercent": 10,
+          "accent": false
+        },
+        {
+          "label": "Human callback queue",
+          "valueLabel": "47 hours later",
+          "widthPercent": 35,
+          "accent": false
+        },
+        {
+          "label": "AI voice agent",
+          "valueLabel": "answers in seconds",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Calling within one minute lifts conversions by 391 percent",
+      "body": "Velocify analyzed 3.5 million leads and found that dialing a new lead within the first minute converted 391 percent better than waiting even two minutes. The gap is not marginal. It is the difference between a booked calendar and a dead lead. An AI voice agent is the only way to hit that first minute on every single lead, at any hour.",
+      "source": "Velocify, analysis of 3.5M leads",
+      "date": "2026",
+      "stat": "391%",
+      "statLabel": "conversion lift calling within 1 minute vs a 2-minute wait"
+    },
+    "solutionTitle": "One voice agent that answers, qualifies, books, confirms, and reminds",
+    "solutionItems": [
+      "Answers inbound calls and dials outbound follow-ups the moment a lead comes in.",
+      "Qualifies the caller with your questions in a natural back-and-forth conversation.",
+      "Reads open slots from your GoHighLevel calendar and books the appointment live.",
+      "Sends the confirmation and the reminder sequence automatically to cut no-shows."
+    ],
+    "layers": [
+      {
+        "title": "The voice layer",
+        "body": "A natural-sounding agent handles the whole call: greeting, qualifying questions, objection handling, and the booking itself. It sounds like a trained front-desk person, not a phone tree, and it never puts a caller on hold or drops the moment."
+      },
+      {
+        "title": "The GoHighLevel layer",
+        "body": "The agent is wired directly into your GHL calendar and contact records. It checks real availability, writes the appointment to the right calendar, updates the contact, and triggers your confirmation and reminder workflows so no-shows fall before the day arrives."
+      },
+      {
+        "title": "The reasoning layer",
+        "body": "We build the agent's logic and conversation flows with Claude Opus 4.8 and GPT Codex, so it handles messy real calls: half-answers, reschedules, wrong numbers, and callers who talk over it. That is what keeps it booking instead of breaking."
+      }
+    ],
+    "proofTitle": "Why answering first is the whole advantage",
+    "proofBullets": [
+      "Respond inside five minutes and you are 21 times more likely to qualify the lead than at 30 minutes.",
+      "Wait longer than five minutes and the odds of a real contact collapse by 100 times.",
+      "The business that responds first closes the large majority of the deals."
+    ],
+    "proofStats": [
+      {
+        "stat": "21x",
+        "label": "more likely to qualify when responding within 5 minutes (HBR/MIT)"
+      },
+      {
+        "stat": "100x",
+        "label": "more likely to contact within 5 minutes vs 30 minutes (HBR/MIT)"
+      },
+      {
+        "stat": "78%",
+        "label": "of deals won by the first responder"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Odds of qualifying a lead by response time",
+      "bars": [
+        {
+          "label": "Called after 30 minutes",
+          "valueLabel": "odds have collapsed",
+          "widthPercent": 15,
+          "accent": false
+        },
+        {
+          "label": "Called after 5 minutes",
+          "valueLabel": "quality already dropping",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Answered within 1 minute by AI",
+          "valueLabel": "peak conversion window",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does it actually book into my GoHighLevel calendar, or just take a message?",
+        "answer": "It books live. The agent reads real availability from your GHL calendar during the call, writes the appointment to the correct calendar, updates the contact record, and fires your confirmation and reminder workflows. The caller hangs up with a real slot, not a promise of a callback."
+      },
+      {
+        "question": "Can it handle both inbound calls and outbound follow-up?",
+        "answer": "Yes. It answers inbound calls 24/7 so nothing rings out, and it dials outbound the instant a new lead hits your CRM so you hit that critical first minute. The same agent covers both directions with the same qualifying logic."
+      },
+      {
+        "question": "Will it sound like an obvious robot and scare callers off?",
+        "answer": "No. It uses a natural conversational voice with real back-and-forth, handles interruptions and half-answers, and follows your script and tone. We tune the conversation flows so it reads as a competent front-desk person, not a phone tree."
+      },
+      {
+        "question": "How does it cut no-shows?",
+        "answer": "Booking is only half the job. Once the appointment lands, the agent triggers your confirmation message and a reminder sequence through GoHighLevel automatically, so the appointment is reinforced before the day arrives and fewer people ghost the slot."
+      },
+      {
+        "question": "What is the agent actually built on?",
+        "answer": "We build the reasoning and conversation logic with Claude Opus 4.8 and GPT Codex, wired into your telephony and GoHighLevel. That combination is what lets it handle messy real calls, reschedules, and objections instead of falling apart on anything off-script."
+      }
+    ],
+    "faqStat": {
+      "stat": "47 hours",
+      "label": "average business response time an AI agent replaces with seconds"
+    },
+    "ctaLabel": "Get your AI booking agent built",
+    "ctaSupportText": "We build, wire, and tune the whole agent into your GoHighLevel calendar for you, inbound and outbound. You just start seeing booked appointments.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "GoHighLevel speed-to-lead automation",
+        "href": "/gohighlevel-speed-to-lead-automation"
+      },
+      {
+        "label": "AI SDR for GHL agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      }
+    ],
+    "keywords": [
+      "ai appointment booking agent",
+      "ai voice agent for appointment booking",
+      "gohighlevel ai booking agent",
+      "ai voice agent gohighlevel",
+      "automated appointment booking voice ai",
+      "ai receptionist appointment scheduling",
+      "speed to lead voice agent",
+      "24/7 ai call answering and booking",
+      "reduce no-shows with ai reminders",
+      "inbound and outbound ai voice agent"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/ai-appointment-booking-voice-agent/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "vapi",
+      "retell"
+    ]
+  },
+  {
+    "type": "comparison",
+    "pathSegments": [
+      "n8n-automation-keeps-breaking"
+    ],
+    "title": "Your n8n Automation Keeps Breaking. We Rebuild It Production-Grade | Agentic AI Labs",
+    "description": "Your self-built n8n automation keeps breaking: token expiry, silent failures, rate limits, API changes. We rebuild it production-grade with monitoring, alerts, and support.",
+    "heroLabel": "n8n Rebuild and Rescue",
+    "heroHeadline": "The workflow ran fine for weeks, then quietly stopped, and nobody noticed until a client did.",
+    "heroSubheadline": "You built an n8n automation that worked in testing. In production it breaks on token expiry, silent errors, and rate limits. We rebuild it to run unattended, tell you the moment something fails, and stay fixed.",
+    "heroExplainerCaption": "We take your fragile workflow and make it production-grade. Same job, but it recovers from failures, alerts you the moment it cannot, and does not die when an API changes underneath it.",
+    "heroSteps": [
+      {
+        "label": "Audit your workflow",
+        "sub": "Find every silent failure point",
+        "accent": true
+      },
+      {
+        "label": "Rebuild the logic",
+        "sub": "Retries, auth refresh, error branches",
+        "accent": false
+      },
+      {
+        "label": "Add monitoring",
+        "sub": "Every run watched, not assumed",
+        "accent": false
+      },
+      {
+        "label": "Wire up alerts",
+        "sub": "You hear about it first",
+        "accent": false
+      },
+      {
+        "label": "Ongoing support",
+        "sub": "We fix it when APIs shift",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why a working automation keeps dying in production",
+    "painPoints": [
+      "An OAuth token expires and the whole workflow stops, but nothing tells you it stopped.",
+      "A rate limit or a timeout throws once, the run fails silently, and the data just never arrives.",
+      "A platform ships an API change overnight, and a node that worked yesterday now returns an error."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Records that silently never synced while the workflow sat broken",
+          "amount": "unknown until a client flags it"
+        },
+        {
+          "label": "Time lost re-checking a workflow you cannot trust to run itself",
+          "amount": "a recurring tax on your week"
+        },
+        {
+          "label": "Trust cost when a customer finds the failure before you do",
+          "amount": "hard to win back"
+        },
+        {
+          "label": "Nights and weekends spent patching nodes instead of running the business",
+          "amount": "your own hours"
+        }
+      ],
+      "total": "Every silent failure is work you thought was done, quietly undone",
+      "solvesFor": "an automation you can trust to run without you watching it",
+      "source": "Common failure patterns in self-built n8n workflows"
+    },
+    "statusQuoTitle": "Your DIY workflow versus a production-grade rebuild",
+    "statusQuoItems": [
+      "A DIY workflow assumes the happy path, so one expired token or timeout takes the whole thing down.",
+      "When it fails, it fails quietly, and you find out hours or days later from someone else.",
+      "A production build expects failure: it retries, refreshes auth, isolates errors, and alerts you when it truly cannot recover."
+    ],
+    "statusQuoBars": {
+      "title": "What happens when a node fails mid-run",
+      "bars": [
+        {
+          "label": "Self-built happy-path workflow",
+          "valueLabel": "breaks silently, stops running",
+          "widthPercent": 100,
+          "accent": false
+        },
+        {
+          "label": "Workflow with a bit of error handling bolted on",
+          "valueLabel": "sometimes recovers, still misses failures",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Production-grade rebuild",
+          "valueLabel": "retries, recovers, alerts you if not",
+          "widthPercent": 18,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "The gap is not n8n, it is production engineering",
+      "body": "n8n is powerful enough to run a real business process. The reason self-built workflows break is that they are built for the demo, not for production. No retries, no auth refresh, no monitoring, no alerting. The tool did not fail. The workflow was never hardened for the conditions it actually runs in.",
+      "source": "Observed patterns across self-built automation rescues",
+      "date": "2026",
+      "stat": "Silent",
+      "statLabel": "failures are the ones that cost you most, because you do not see them coming"
+    },
+    "solutionTitle": "What we build when we rebuild your workflow",
+    "solutionItems": [
+      "A full audit of your existing workflow that names every point where it can fail silently.",
+      "A rebuild with real error handling: retries with backoff, automatic auth and token refresh, and isolated error branches so one bad node does not kill the run.",
+      "Monitoring on every execution, so a failed or stalled run is caught by the system, not by a client.",
+      "Alerts that reach you the moment something needs a human, plus ongoing support when a platform changes its API."
+    ],
+    "layers": [
+      {
+        "title": "The resilience layer",
+        "body": "We rebuild the workflow to expect failure. Every external call gets retries with backoff, timeouts are handled instead of ignored, and OAuth tokens refresh automatically before they expire. Error branches isolate a failing node so the rest of the run still completes instead of collapsing."
+      },
+      {
+        "title": "The visibility layer",
+        "body": "Every execution is monitored. When a run fails, stalls, or returns something unexpected, the system catches it and alerts you through the channel you actually watch. You stop finding out about breakages from customers, because you find out first, with the context to know what broke."
+      },
+      {
+        "title": "The support layer",
+        "body": "Platform APIs change and rate limits shift, so a production automation needs an owner. We build the logic on Claude Opus 4.8 and GPT Codex, keep the workflow documented, and stay on to fix it when something upstream moves. Your automation gets maintained instead of quietly rotting."
+      }
+    ],
+    "proofTitle": "Why the rebuild holds up where the DIY version did not",
+    "proofBullets": [
+      "We assume every external service will fail eventually, so the workflow is built to recover from token expiry, rate limits, and timeouts instead of dying on them.",
+      "You never depend on manually checking whether it ran, because monitoring watches every execution and alerts you only when a human is genuinely needed.",
+      "When a platform changes its API, you have someone who owns the fix, so a breaking change becomes a quick patch instead of a dead pipeline."
+    ],
+    "proofStats": [
+      {
+        "stat": "Built to fail safely",
+        "label": "retries, auth refresh, and error branches on every fragile call"
+      },
+      {
+        "stat": "Watched, not assumed",
+        "label": "monitoring and alerts on every single run"
+      },
+      {
+        "stat": "Owned, not abandoned",
+        "label": "ongoing support when platform APIs change"
+      }
+    ],
+    "comparisonBars": {
+      "title": "How each version handles a token that expired overnight",
+      "bars": [
+        {
+          "label": "Original DIY workflow",
+          "valueLabel": "stops, stays broken until noticed",
+          "widthPercent": 100,
+          "accent": false
+        },
+        {
+          "label": "Workflow with manual checks",
+          "valueLabel": "caught only if someone looks",
+          "widthPercent": 50,
+          "accent": false
+        },
+        {
+          "label": "Our production-grade rebuild",
+          "valueLabel": "refreshes auth or alerts you fast",
+          "widthPercent": 15,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "My n8n automation not working anymore, can you fix it instead of rebuilding it?",
+        "answer": "We start with an audit. If your existing workflow is close to sound, we harden it in place with retries, auth refresh, monitoring, and alerts. If it was built happy-path only, a clean rebuild is usually faster and cheaper than patching around problems that will keep resurfacing. We tell you which one your workflow needs before any work starts."
+      },
+      {
+        "question": "Why does my workflow keep failing silently when it tested fine?",
+        "answer": "Testing runs once, under ideal conditions. Production runs repeatedly, against services that expire tokens, throttle requests, time out, and change their APIs. A workflow built only for the happy path has nothing to catch those events, so it stops without telling anyone. Production hardening is exactly the layer that was missing."
+      },
+      {
+        "question": "Do I have to move off n8n?",
+        "answer": "No. n8n is a capable platform and we keep you on it. The problem is almost never the tool, it is that the workflow was never engineered for the conditions it runs in. We rebuild inside your existing n8n so you keep ownership and avoid a migration."
+      },
+      {
+        "question": "How will I know if something breaks after the rebuild?",
+        "answer": "That is the point of the monitoring and alert layer. Every execution is watched, and when a run fails or stalls in a way that needs a human, you get an alert through the channel you actually check. You hear about problems first, with enough context to know what happened, instead of hearing about them from a client."
+      },
+      {
+        "question": "What happens when a platform changes its API and breaks a node?",
+        "answer": "That is what the support layer is for. API changes and shifting rate limits are normal, so a production automation needs an owner. When something upstream moves, we patch the workflow. Because it is documented and built on Claude Opus 4.8 and GPT Codex, the fix is quick instead of a rebuild from scratch."
+      }
+    ],
+    "faqStat": {
+      "stat": "Silent",
+      "label": "failures are the costliest, because you find out last. We make sure you find out first."
+    },
+    "ctaLabel": "Get your broken n8n workflow rebuilt",
+    "ctaSupportText": "Send us the workflow that keeps breaking. We audit it, tell you whether to harden or rebuild, and turn it into an automation you can trust to run without you watching it.",
+    "relatedLinks": [
+      {
+        "label": "n8n Content Automation Pipeline",
+        "href": "/n8n-content-automation-pipeline"
+      },
+      {
+        "label": "Done-For-You GoHighLevel Automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      },
+      {
+        "label": "GoHighLevel AI Voice Pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      }
+    ],
+    "keywords": [
+      "n8n automation not working",
+      "n8n automation keeps breaking",
+      "n8n workflow failing silently",
+      "fix broken n8n automation",
+      "n8n production monitoring",
+      "n8n error handling and alerts",
+      "n8n token expiry fix",
+      "n8n rate limit errors",
+      "production-grade n8n workflow",
+      "n8n workflow rescue service"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/n8n-automation-keeps-breaking/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "n8n",
+      "make",
+      "zapier"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "bland-ai-outbound-pipeline"
+    ],
+    "title": "Bland AI Outbound Calling Pipeline for GoHighLevel | Agentic AI Labs",
+    "description": "We build Bland AI outbound calling pipelines wired into GoHighLevel: dials your lists, qualifies live, books meetings, logs every outcome to the CRM.",
+    "heroLabel": "Bland AI Outbound Calling",
+    "heroHeadline": "Your list has 800 leads and one person to call them.",
+    "heroSubheadline": "We build a Bland AI outbound pipeline that dials the whole list, qualifies live on the phone, books the ready ones, and writes every outcome back to GoHighLevel. You get scale without hiring a floor of dialers.",
+    "heroExplainerCaption": "List to booked meeting, fully logged in your CRM, with a kill switch you control.",
+    "heroSteps": [
+      {
+        "label": "Pull the list",
+        "sub": "Segment loads from GoHighLevel",
+        "accent": true
+      },
+      {
+        "label": "Dial at scale",
+        "sub": "Bland places concurrent outbound calls",
+        "accent": false
+      },
+      {
+        "label": "Qualify live",
+        "sub": "Agent asks, listens, branches",
+        "accent": false
+      },
+      {
+        "label": "Book or route",
+        "sub": "Calendar slot or human handoff",
+        "accent": false
+      },
+      {
+        "label": "Log every outcome",
+        "sub": "Result written to the CRM",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why your outbound stalls at the same ceiling",
+    "painPoints": [
+      "A rep can hold maybe 60 real conversations a day, so the bottom of your list never gets a first dial.",
+      "Speed decides the deal, and a list worked over three days is cold by the time anyone picks up.",
+      "Outcomes live in a rep's head and sticky notes, so your CRM never reflects what actually happened on the calls."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Leads that never get a first dial",
+          "amount": "bottom of the list"
+        },
+        {
+          "label": "Deals lost to slow follow-up",
+          "amount": "first responder wins 78%"
+        },
+        {
+          "label": "Call outcomes never logged to CRM",
+          "amount": "pipeline you cannot see"
+        }
+      ],
+      "total": "A paid list that ages faster than one team can work it",
+      "solvesFor": "every lead dialed fast, qualified, and logged before it goes cold",
+      "source": "HBR/MIT lead response study"
+    },
+    "statusQuoTitle": "The usual ways to scale outbound, and where they break",
+    "statusQuoItems": [
+      "Hiring more dialers raises payroll and management load before it raises connect rates, and quality drifts by the week.",
+      "Cheap offshore call centers read a script but cannot branch on what the prospect actually says.",
+      "DIY power dialers still cap out at one human per call, so the list still ages faster than you can work it."
+    ],
+    "statusQuoBars": {
+      "title": "Coverage on an 800-lead list, first pass",
+      "bars": [
+        {
+          "label": "One rep, manual dialing",
+          "valueLabel": "never finishes",
+          "widthPercent": 25,
+          "accent": false
+        },
+        {
+          "label": "Offshore call center",
+          "valueLabel": "reads script, cannot branch",
+          "widthPercent": 45,
+          "accent": false
+        },
+        {
+          "label": "Bland pipeline into GoHighLevel",
+          "valueLabel": "whole list, same day",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Speed to first contact is the single biggest lever in outbound",
+      "body": "Analysis of 3.5 million leads found calling within one minute lifted conversion by 391% against a two-minute wait. Yet the average business takes 47 hours to respond, and lead quality drops 80% after the first five minutes. An always-on dialer is the only way to hold that window at volume.",
+      "source": "Velocify (3.5M leads); HBR/MIT lead response study",
+      "date": "2026",
+      "stat": "391%",
+      "statLabel": "conversion lift calling within 1 minute vs a 2-minute wait"
+    },
+    "solutionTitle": "What we actually build",
+    "solutionItems": [
+      "A Bland AI outbound agent that dials your GoHighLevel segments at volume and holds a real qualifying conversation, not a recording.",
+      "Live branching so the agent asks, listens, and routes based on the answer: book, disqualify, or hand to a human.",
+      "Two-way CRM sync that writes call outcome, transcript, and next step to the GoHighLevel contact on every dial.",
+      "Guardrails and a kill switch: call caps, quiet hours, retry limits, and a one-click stop you control."
+    ],
+    "layers": [
+      {
+        "title": "The dialer",
+        "body": "Bland AI runs the outbound calls. We picked it because it is the cheapest option at outbound scale, so cost per dial stays low even when you are working thousands of contacts. Concurrency means the whole list gets a first call the same day it loads, while speed still matters most."
+      },
+      {
+        "title": "The brain",
+        "body": "We design and test the conversation logic against real objections, then compile the agent prompts and branching with Claude Opus 4.8 and GPT Codex. That is what lets the agent qualify live, handle a curveball answer, and know when to book versus hand off, instead of dead-reading a script."
+      },
+      {
+        "title": "The system of record",
+        "body": "GoHighLevel stays the source of truth. Every call writes outcome, transcript, and next action back to the contact, and booked meetings drop straight onto the calendar. You manage one CRM, not a pile of call logs, and you can see the pipeline the pipeline is building."
+      }
+    ],
+    "proofTitle": "Why speed-to-lead is the whole game",
+    "proofBullets": [
+      "Responding inside five minutes makes a lead 21 times more likely to qualify, so an always-on dialer beats a rep who gets to the list tomorrow.",
+      "Get to leads within one minute instead of waiting two and conversion climbs 391%, which is exactly the window a pipeline can hold and a human cannot.",
+      "Whoever calls first takes most of the business, and a pipeline that never sleeps is first far more often than a team that clocks out."
+    ],
+    "proofStats": [
+      {
+        "stat": "21x",
+        "label": "more likely to qualify when you respond within 5 minutes (HBR/MIT)"
+      },
+      {
+        "stat": "391%",
+        "label": "conversion lift calling within 1 minute vs a 2-minute wait (Velocify)"
+      },
+      {
+        "stat": "78%",
+        "label": "of deals won by the first responder"
+      }
+    ],
+    "comparisonBars": {
+      "title": "Time from lead landing to first live call",
+      "bars": [
+        {
+          "label": "Average business response",
+          "valueLabel": "47 hours",
+          "widthPercent": 100,
+          "accent": false
+        },
+        {
+          "label": "Busy human rep, good day",
+          "valueLabel": "hours, if the list is short",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Bland pipeline, always on",
+          "valueLabel": "inside the 5-minute window",
+          "widthPercent": 8,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Why Bland AI instead of Vapi or Retell for outbound?",
+        "answer": "For high-volume outbound specifically, Bland is the cheapest per dial at scale, and cost per call is what decides whether working a big list is profitable. We also build on Vapi and Retell when a use case fits them better, so we pick the dialer for the job rather than forcing one platform."
+      },
+      {
+        "question": "Will it actually qualify leads, or just read a script?",
+        "answer": "It qualifies. The conversation logic branches on what the prospect says, so the agent can ask a follow-up, handle an objection, disqualify, or book. We design and compile that logic with Claude Opus 4.8 and GPT Codex, then test it against your real objections before it ever dials a live lead."
+      },
+      {
+        "question": "How does it connect to GoHighLevel?",
+        "answer": "It runs two-way. The pipeline pulls the segment to dial from your GoHighLevel account and writes the outcome, transcript, and next step back to each contact after the call. Booked meetings land on your calendar automatically, so the CRM stays the single source of truth."
+      },
+      {
+        "question": "What stops it from calling at the wrong time or too often?",
+        "answer": "Guardrails. We set call caps, quiet hours, per-contact retry limits, and a one-click kill switch that stops the whole pipeline instantly. You stay in control of pace and compliance, and nothing runs that you have not approved."
+      },
+      {
+        "question": "Do you build the whole thing for us or hand us a template?",
+        "answer": "We build and run it done-for-you: the Bland agent, the GoHighLevel wiring, the guardrails, and the outcome logging. You bring the list and the offer. We deliver a working pipeline and tune the conversation logic against real call results after launch."
+      }
+    ],
+    "faqStat": {
+      "stat": "47 hrs",
+      "label": "average business response time to a new lead, versus minutes for an always-on pipeline"
+    },
+    "ctaLabel": "Book a pipeline build call",
+    "ctaSupportText": "Bring your list and your offer. We map the outbound pipeline, show you the Bland plus GoHighLevel build, and scope a done-for-you rollout with guardrails and a kill switch from day one.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "AI SDR for GoHighLevel agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      },
+      {
+        "label": "Bland AI alternative",
+        "href": "/bland-ai-alternative"
+      }
+    ],
+    "keywords": [
+      "bland ai outbound calling",
+      "bland ai gohighlevel",
+      "outbound calling pipeline",
+      "ai outbound dialer",
+      "bland ai lead qualification",
+      "high volume outbound ai calls",
+      "ai cold calling automation",
+      "gohighlevel outbound automation",
+      "bland ai crm integration",
+      "done for you outbound ai calling"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/bland-ai-outbound-pipeline/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "bland"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "elevenlabs-voice-agent-production"
+    ],
+    "title": "ElevenLabs Voice Agent in Production: The System Around the Voice | Agentic AI Labs",
+    "description": "ElevenLabs gives you a lifelike voice. We build the production system around it: telephony, conversation logic, CRM writeback, and follow-up that actually books.",
+    "heroLabel": "ElevenLabs Voice Agent, Productionized",
+    "heroHeadline": "The demo sounded perfect. Then a real caller went off script.",
+    "heroSubheadline": "ElevenLabs gives you a voice that sounds human. A voice is not a system. We wrap it in telephony, conversation logic, CRM writeback, and follow-up so the call turns into a booked appointment, not a lost lead.",
+    "heroExplainerCaption": "ElevenLabs is the voice layer. Everything around it is the agent.",
+    "heroSteps": [
+      {
+        "label": "Call connects on your number",
+        "sub": "Telephony routes to the agent",
+        "accent": true
+      },
+      {
+        "label": "ElevenLabs speaks the response",
+        "sub": "Lifelike voice, low latency",
+        "accent": false
+      },
+      {
+        "label": "Logic decides the next move",
+        "sub": "Qualify, answer, or route",
+        "accent": false
+      },
+      {
+        "label": "CRM writeback fires live",
+        "sub": "Contact, notes, tags updated",
+        "accent": false
+      },
+      {
+        "label": "Follow-up sends automatically",
+        "sub": "Booking link or callback",
+        "accent": true
+      }
+    ],
+    "painTitle": "Why a great voice alone still loses the lead",
+    "painPoints": [
+      "The voice sounds amazing in the demo, then a caller asks something the script never planned for and the call stalls.",
+      "The conversation happens, but nothing lands in your CRM, so nobody knows the lead called and nobody follows up.",
+      "The agent takes the call but cannot book anything, so the caller hangs up and dials the competitor who picks up."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "Missed and abandoned calls",
+          "amount": "Leads you paid for, gone"
+        },
+        {
+          "label": "No CRM record of the call",
+          "amount": "Follow-up never happens"
+        },
+        {
+          "label": "Voice with no booking path",
+          "amount": "Interest with no outcome"
+        }
+      ],
+      "total": "Every unbooked call is revenue at risk",
+      "solvesFor": "Turning answered calls into booked, tracked, followed-up appointments",
+      "source": "Composite of common SMB and agency inbound-call gaps"
+    },
+    "statusQuoTitle": "How teams try to ship an ElevenLabs agent today",
+    "statusQuoItems": [
+      "Wire ElevenLabs straight to a phone number and hope the caller stays on the happy path.",
+      "Bolt a chatbot script onto the voice and watch it break the moment someone interrupts.",
+      "Ship the voice, skip the CRM and follow-up, then wonder why booked calls do not go up."
+    ],
+    "statusQuoBars": {
+      "title": "What happens when the caller goes off script",
+      "bars": [
+        {
+          "label": "Voice-only, no system",
+          "valueLabel": "stalls and hangs up",
+          "widthPercent": 30,
+          "accent": false
+        },
+        {
+          "label": "Chatbot script bolted on",
+          "valueLabel": "breaks on interrupt",
+          "widthPercent": 45,
+          "accent": false
+        },
+        {
+          "label": "Full production agent (us)",
+          "valueLabel": "recovers and books",
+          "widthPercent": 95,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Realistic voice raised the bar, so the system behind it is now what wins",
+      "body": "Lifelike synthesis is close to solved. The gap that decides whether a call converts is everything around the voice: catching the call, holding the conversation when it wanders, recording it, and following up. That is where most voice agent projects quietly fall apart.",
+      "source": "Agentic AI Labs field observation",
+      "date": "2026",
+      "stat": "Voice",
+      "statLabel": "is one layer, not the whole agent"
+    },
+    "solutionTitle": "What we actually build around ElevenLabs",
+    "solutionItems": [
+      "Telephony that answers on your number, handles hold, transfer, and voicemail like a real receptionist.",
+      "Conversation logic that qualifies, answers real questions, and recovers when the caller goes off script.",
+      "Live CRM writeback so every call becomes a contact, a note, and a tag the moment it ends.",
+      "Automatic follow-up: a booking link, a callback, or a text so interest never sits idle."
+    ],
+    "layers": [
+      {
+        "title": "Voice layer: ElevenLabs",
+        "body": "ElevenLabs handles what it is best at: a natural, low-latency voice that does not sound robotic. We treat it as the mouth of the system, not the brain. It speaks; the logic layer decides what to say."
+      },
+      {
+        "title": "Brain layer: conversation logic",
+        "body": "The reasoning runs on frontier models (Claude Opus 4.8 and GPT Codex) tuned to your intake. It qualifies, answers off-script questions, and knows when to book, route to a human, or take a message instead of guessing."
+      },
+      {
+        "title": "System layer: telephony, CRM, follow-up",
+        "body": "Telephony carries the call, CRM writeback records it live (contact, transcript, tags), and follow-up fires the instant the call ends. This is the layer that turns a good conversation into a booked, tracked outcome."
+      }
+    ],
+    "proofTitle": "Why this holds up on real calls, not just demos",
+    "proofBullets": [
+      "We build the conversation logic on frontier models (Claude Opus 4.8 and GPT Codex), so the agent handles the questions no script anticipated instead of freezing.",
+      "Every call writes back to your CRM in real time, so the record exists whether or not a human ever listens to it.",
+      "Follow-up is wired into the same flow, so an answered call becomes a booking link or callback without anyone lifting a finger."
+    ],
+    "proofStats": [
+      {
+        "stat": "Opus 4.8 + Codex",
+        "label": "power the conversation logic"
+      },
+      {
+        "stat": "Live writeback",
+        "label": "every call, into your CRM"
+      },
+      {
+        "stat": "Auto follow-up",
+        "label": "fires the moment the call ends"
+      }
+    ],
+    "comparisonBars": {
+      "title": "ElevenLabs voice alone vs. the full production agent",
+      "bars": [
+        {
+          "label": "ElevenLabs voice, wired to a number",
+          "valueLabel": "sounds great, drops the ball",
+          "widthPercent": 35,
+          "accent": false
+        },
+        {
+          "label": "Voice plus a rigid script",
+          "valueLabel": "handles the happy path only",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "Production agent we build",
+          "valueLabel": "holds, records, and books",
+          "widthPercent": 95,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Do you replace ElevenLabs or work with it?",
+        "answer": "We work with it. ElevenLabs stays as your voice layer because the voice quality is excellent. We build the telephony, conversation logic, CRM writeback, and follow-up around it so the voice becomes a working agent."
+      },
+      {
+        "question": "What actually powers the conversation, if not ElevenLabs?",
+        "answer": "ElevenLabs speaks, but the decisions come from the logic layer. We build that on frontier models (Claude Opus 4.8 and GPT Codex), tuned to your intake so the agent qualifies, answers real questions, and knows when to book or route to a human."
+      },
+      {
+        "question": "Will it write into my CRM?",
+        "answer": "Yes. Every call writes back live: a contact, the transcript or notes, and tags. This works with GoHighLevel and similar CRMs, so the call becomes a record and a follow-up trigger the moment it ends."
+      },
+      {
+        "question": "What happens when a caller goes off script?",
+        "answer": "That is the whole point of the system layer. The logic recovers, answers the question, and continues instead of stalling. If it hits something it should not handle, it routes to a human or takes a message rather than guessing."
+      },
+      {
+        "question": "Is this for SMB owners or agencies?",
+        "answer": "Both. Owners get a receptionist that never misses a call and always follows up. Agencies get a production voice agent they can deploy for clients without stitching the telephony, logic, and CRM together themselves."
+      }
+    ],
+    "faqStat": {
+      "stat": "4 layers",
+      "label": "telephony, logic, CRM, follow-up, around one voice"
+    },
+    "ctaLabel": "Book a build call",
+    "ctaSupportText": "Bring your ElevenLabs voice. We will show you the telephony, logic, CRM writeback, and follow-up that turn it into an agent that books.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI voice pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "Vapi alternative",
+        "href": "/vapi-alternative"
+      },
+      {
+        "label": "Retell AI alternative",
+        "href": "/retell-ai-alternative"
+      }
+    ],
+    "keywords": [
+      "elevenlabs voice agent",
+      "elevenlabs voice agent production",
+      "elevenlabs phone agent",
+      "production voice ai agent",
+      "elevenlabs telephony integration",
+      "voice agent with crm writeback",
+      "elevenlabs ai receptionist",
+      "voice ai for smb",
+      "ai voice agent for agencies",
+      "elevenlabs conversation logic"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/elevenlabs-voice-agent-production/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel",
+      "vapi"
+    ]
+  },
+  {
+    "type": "integration",
+    "pathSegments": [
+      "os1-meta-automation"
+    ],
+    "title": "OS.1 Meta Automation: One Engine for FB, IG and WhatsApp | Agentic AI Labs",
+    "description": "OS.1 is our in-house engine that answers Facebook, Instagram and WhatsApp messages from one shared knowledge base and logs every conversation into GoHighLevel.",
+    "heroLabel": "OS.1 Meta Automation Engine",
+    "heroHeadline": "A buyer messaged your Instagram at 11pm and got silence.",
+    "heroSubheadline": "OS.1 is our in-house engine for Meta and text automation. It answers Facebook DMs, Instagram DMs and comments, and WhatsApp from one shared knowledge base. Every conversation lands in GoHighLevel, so nothing sits unread and no lead falls between three separate inboxes.",
+    "heroExplainerCaption": "One message from any Meta channel, answered on brand and logged as a contact in GoHighLevel.",
+    "heroSteps": [
+      {
+        "label": "Message lands",
+        "sub": "FB DM, IG DM, comment, or WhatsApp",
+        "accent": true
+      },
+      {
+        "label": "OS.1 reads intent",
+        "sub": "Understands the question in context",
+        "accent": false
+      },
+      {
+        "label": "Pulls shared knowledge",
+        "sub": "One brain for every channel",
+        "accent": false
+      },
+      {
+        "label": "Replies in thread",
+        "sub": "On-brand answer in seconds",
+        "accent": false
+      },
+      {
+        "label": "Logs to GoHighLevel",
+        "sub": "Contact, thread, and tags saved",
+        "accent": true
+      }
+    ],
+    "painTitle": "Three inboxes, one team, and messages slipping through all of them",
+    "painPoints": [
+      "A comment on your Instagram post asks about pricing and sits for hours while you are on a call.",
+      "Facebook, Instagram, and WhatsApp each answer differently because a different person happens to reply.",
+      "The person who messaged never makes it into your CRM, so no follow up ever happens."
+    ],
+    "costCallout": {
+      "items": [
+        {
+          "label": "After-hours DMs",
+          "amount": "answered too late"
+        },
+        {
+          "label": "IG comments with buying intent",
+          "amount": "lost in the noise"
+        },
+        {
+          "label": "WhatsApp threads",
+          "amount": "never logged to CRM"
+        }
+      ],
+      "total": "Warm buyers going cold in unwatched inboxes",
+      "solvesFor": "every Meta message answered and captured in one place",
+      "source": "Common gaps we see across SMB and agency Meta accounts"
+    },
+    "statusQuoTitle": "How most teams handle Meta messages today",
+    "statusQuoItems": [
+      "Someone keeps three apps open and refreshes them between other tasks.",
+      "Bolt-on chatbots answer FAQs but cannot see WhatsApp or log to your CRM.",
+      "Replies get copied into the CRM by hand later, if anyone remembers."
+    ],
+    "statusQuoBars": {
+      "title": "Coverage across your Meta channels",
+      "bars": [
+        {
+          "label": "Manual inbox checking",
+          "valueLabel": "gaps after hours",
+          "widthPercent": 35,
+          "accent": false
+        },
+        {
+          "label": "Single-channel chatbot",
+          "valueLabel": "IG and FB only",
+          "widthPercent": 55,
+          "accent": false
+        },
+        {
+          "label": "OS.1 unified engine",
+          "valueLabel": "all channels, one brain",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "industrySignal": {
+      "headline": "Buyers now expect a reply in the same channel they messaged",
+      "body": "More first-touch conversations start in a DM or a comment than on a contact form. When those threads live in separate apps with no shared memory, answers get slow and inconsistent, and the lead is never recorded anywhere you can follow up from.",
+      "source": "Agentic AI Labs field observations",
+      "date": "2026",
+      "stat": "3 channels",
+      "statLabel": "unified into one system by OS.1"
+    },
+    "solutionTitle": "What OS.1 actually does",
+    "solutionItems": [
+      "Handles Facebook DMs, Instagram DMs and comments, and WhatsApp from one engine.",
+      "Answers from a single shared knowledge base, so every channel says the same thing.",
+      "Logs each conversation as a contact and thread inside GoHighLevel automatically.",
+      "Replies in the original thread in your brand voice, then hands off to a human when needed."
+    ],
+    "layers": [
+      {
+        "title": "One shared knowledge base",
+        "body": "You update your offers, pricing, and answers in one place. OS.1 uses that same brain whether the question comes from a Facebook DM, an Instagram comment, or a WhatsApp thread, so nobody gets a different story depending on where they message."
+      },
+      {
+        "title": "Reasoning built on frontier models",
+        "body": "OS.1 is built with Claude Opus 4.8 and GPT Codex for intent understanding and drafting. That is why it reads a vague comment or a multi-part question and still replies in context instead of firing a canned FAQ block."
+      },
+      {
+        "title": "Everything logged in GoHighLevel",
+        "body": "Every thread becomes a contact and a conversation record in GoHighLevel, tagged by channel and intent. Your pipeline, automations, and follow ups run on real data instead of screenshots someone forgot to save."
+      }
+    ],
+    "proofTitle": "Why teams put OS.1 on their Meta accounts",
+    "proofBullets": [
+      "OS.1 covers Facebook, Instagram, and WhatsApp in one engine, so there is no channel left watching itself.",
+      "Because every channel reads the same knowledge base, a customer gets the same answer no matter where they ask.",
+      "Every conversation is written into GoHighLevel, so follow up runs on your CRM instead of memory."
+    ],
+    "proofStats": [
+      {
+        "stat": "3-in-1",
+        "label": "FB, IG, and WhatsApp on one engine"
+      },
+      {
+        "stat": "1 brain",
+        "label": "shared knowledge base for all channels"
+      },
+      {
+        "stat": "100%",
+        "label": "of handled threads logged to GoHighLevel"
+      }
+    ],
+    "comparisonBars": {
+      "title": "OS.1 versus a bolt-on chatbot",
+      "bars": [
+        {
+          "label": "Generic FAQ chatbot",
+          "valueLabel": "single channel, no CRM",
+          "widthPercent": 40,
+          "accent": false
+        },
+        {
+          "label": "Manual multi-inbox",
+          "valueLabel": "breaks silently after hours",
+          "widthPercent": 30,
+          "accent": false
+        },
+        {
+          "label": "OS.1 by Agentic AI Labs",
+          "valueLabel": "all channels, logged to GHL",
+          "widthPercent": 100,
+          "accent": true
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "What exactly is OS.1?",
+        "answer": "OS.1 is our in-house engine for Meta and text-based automation. One system handles Facebook DMs, Instagram DMs and comments, and WhatsApp from a shared knowledge base, and logs every conversation into GoHighLevel."
+      },
+      {
+        "question": "Does it really cover comments, not just DMs?",
+        "answer": "Yes. OS.1 reads and replies to Instagram comments as well as DMs, so a buying-intent comment on a post gets answered instead of buried under the rest of the thread."
+      },
+      {
+        "question": "How does OS.1 stay on brand and accurate?",
+        "answer": "It answers only from the shared knowledge base you control, and its reasoning is built with Claude Opus 4.8 and GPT Codex. You update the brain in one place and every channel reflects it."
+      },
+      {
+        "question": "How does it connect to GoHighLevel?",
+        "answer": "Each conversation becomes a contact and a threaded record in GoHighLevel, tagged by channel and intent, so your existing pipelines, automations, and follow ups run on it directly."
+      },
+      {
+        "question": "Can a human still take over a conversation?",
+        "answer": "Yes. OS.1 handles the first response and routine questions, then hands off to your team inside GoHighLevel when a thread needs a person, with the full history attached."
+      }
+    ],
+    "faqStat": {
+      "stat": "1 system",
+      "label": "replacing three separate Meta inboxes"
+    },
+    "ctaLabel": "See OS.1 running on your Meta accounts",
+    "ctaSupportText": "We connect Facebook, Instagram, and WhatsApp to one OS.1 engine and wire every conversation into your GoHighLevel. Book a walkthrough and we will show it live on your channels.",
+    "relatedLinks": [
+      {
+        "label": "GoHighLevel AI Voice Pipeline",
+        "href": "/gohighlevel-ai-voice-pipeline"
+      },
+      {
+        "label": "AI SDR for GHL Agencies",
+        "href": "/ai-sdr-for-ghl-agencies"
+      },
+      {
+        "label": "Done-for-You GoHighLevel Automation",
+        "href": "/done-for-you-gohighlevel-automation"
+      }
+    ],
+    "keywords": [
+      "os.1 meta automation",
+      "meta automation engine",
+      "facebook instagram whatsapp automation",
+      "instagram dm automation",
+      "whatsapp automation gohighlevel",
+      "facebook messenger automation for business",
+      "instagram comment automation",
+      "gohighlevel meta integration",
+      "unified social inbox automation",
+      "ai dm automation for agencies"
+    ],
+    "canonicalUrl": "https://www.tryagentikai.com/os1-meta-automation/",
+    "ctaHref": "/contact",
+    "ctaEmailFallback": "aditya@tryagentikai.com",
+    "logos": [
+      "gohighlevel"
     ]
   },
 ];
