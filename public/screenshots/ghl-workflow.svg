@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Geist, ui-sans-serif, system-ui, sans-serif">
+  <rect width="640" height="420" fill="#F4F6F9"/>
+  <rect x="0" y="0" width="640" height="44" fill="#FFFFFF"/>
+  <line x1="0" y1="44" x2="640" y2="44" stroke="#e7e6e4"/>
+  <text x="20" y="28" fill="#0A1128" font-size="13" font-weight="500">Workflow: Speed to Lead</text>
+  <rect x="200" y="13" width="70" height="18" rx="4" fill="#E6F1FB"/><text x="212" y="26" fill="#185FA5" font-size="11">Published</text>
+  <!-- vertical spine -->
+  <line x1="120" y1="80" x2="120" y2="368" stroke="#c9c7c0" stroke-width="2"/>
+  <!-- trigger -->
+  <g>
+    <circle cx="120" cy="92" r="7" fill="#FCCA07"/>
+    <rect x="150" y="72" width="420" height="44" rx="10" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="168" y="90" fill="#8a8a84" font-size="10">TRIGGER</text>
+    <text x="168" y="106" fill="#0A1128" font-size="13" font-weight="500">Form submitted</text>
+    <text x="470" y="99" fill="#b0aea7" font-size="11">0s</text>
+  </g>
+  <!-- action 1 -->
+  <g>
+    <circle cx="120" cy="164" r="7" fill="#0A1128"/>
+    <rect x="150" y="144" width="420" height="44" rx="10" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="168" y="162" fill="#8a8a84" font-size="10">ACTION</text>
+    <text x="168" y="178" fill="#0A1128" font-size="13" font-weight="500">Send SMS + start AI voice call</text>
+    <text x="452" y="171" fill="#34D399" font-size="11" font-weight="500">&lt; 60s</text>
+  </g>
+  <!-- action 2 -->
+  <g>
+    <circle cx="120" cy="236" r="7" fill="#0A1128"/>
+    <rect x="150" y="216" width="420" height="44" rx="10" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="168" y="234" fill="#8a8a84" font-size="10">ACTION</text>
+    <text x="168" y="250" fill="#0A1128" font-size="13" font-weight="500">Write summary back to contact</text>
+  </g>
+  <!-- condition -->
+  <g>
+    <circle cx="120" cy="308" r="7" fill="#0A1128"/>
+    <rect x="150" y="288" width="420" height="44" rx="10" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="168" y="306" fill="#8a8a84" font-size="10">IF / ELSE</text>
+    <text x="168" y="322" fill="#0A1128" font-size="13" font-weight="500">Lead replied?  Kill switch stops all channels</text>
+  </g>
+  <!-- footer -->
+  <line x1="0" y1="368" x2="640" y2="368" stroke="#e7e6e4"/>
+  <circle cx="24" cy="392" r="5" fill="#34D399"/>
+  <text x="38" y="397" fill="#0A1128" font-size="12">Built inside GoHighLevel · no code to maintain</text>
+</svg>

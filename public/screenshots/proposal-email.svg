@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Geist, ui-sans-serif, system-ui, sans-serif">
+  <rect width="640" height="420" fill="#F9F6F4"/>
+  <rect x="0" y="0" width="640" height="44" fill="#0A1128"/>
+  <text x="20" y="28" fill="#FFFFFF" font-size="13" font-weight="500">New message</text>
+  <g transform="translate(566,14)"><circle cx="8" cy="8" r="5" fill="#34D399"/><text x="20" y="12" fill="#34D399" font-size="11">Auto-sent</text></g>
+  <!-- fields -->
+  <g font-size="12">
+    <text x="24" y="76" fill="#8a8a84">To</text>
+    <rect x="70" y="62" width="546" height="26" rx="6" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="84" y="79" fill="#0A1128">arjun@brightsmiledental.com</text>
+    <text x="24" y="112" fill="#8a8a84">Subject</text>
+    <rect x="70" y="98" width="546" height="26" rx="6" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="84" y="115" fill="#0A1128" font-weight="500">Your proposal from Agentic AI Labs</text>
+  </g>
+  <!-- body -->
+  <rect x="24" y="140" width="592" height="212" rx="8" fill="#FFFFFF" stroke="#e7e6e4"/>
+  <g fill="#0A1128" font-size="12">
+    <text x="44" y="170">Hi Arjun,</text>
+    <text x="44" y="196" fill="#4a4a46">Great speaking on the call. Based on what you shared, here</text>
+    <text x="44" y="214" fill="#4a4a46">is a plan to cut no-shows and recover missed calls:</text>
+  </g>
+  <g font-size="12">
+    <circle cx="50" cy="238" r="3" fill="#FCCA07"/><text x="64" y="242" fill="#0A1128">AI receptionist for after-hours calls</text>
+    <circle cx="50" cy="262" r="3" fill="#FCCA07"/><text x="64" y="266" fill="#0A1128">Instant callback on every web form</text>
+    <circle cx="50" cy="286" r="3" fill="#FCCA07"/><text x="64" y="290" fill="#0A1128">Scope, timeline, and a fixed quote inside</text>
+  </g>
+  <rect x="44" y="308" width="150" height="30" rx="6" fill="#FCCA07"/><text x="60" y="328" fill="#0A1128" font-size="12" font-weight="500">View full proposal</text>
+  <!-- footer note -->
+  <text x="24" y="380" fill="#8a8a84" font-size="11">Drafted from your Zoom transcript and sent through GoHighLevel, seconds after the call ended.</text>
+</svg>

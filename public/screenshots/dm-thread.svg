@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Geist, ui-sans-serif, system-ui, sans-serif">
+  <rect width="640" height="420" fill="#F9F6F4"/>
+  <!-- header -->
+  <rect x="0" y="0" width="640" height="60" fill="#FFFFFF"/>
+  <line x1="0" y1="60" x2="640" y2="60" stroke="#e7e6e4"/>
+  <circle cx="40" cy="30" r="18" fill="#FCCA07"/>
+  <text x="40" y="35" fill="#0A1128" font-size="15" font-weight="500" text-anchor="middle">R</text>
+  <text x="70" y="26" fill="#0A1128" font-size="14" font-weight="500">Riya S.</text>
+  <text x="70" y="44" fill="#8a8a84" font-size="11">Instagram DM · new</text>
+  <g transform="translate(548,20)"><circle cx="8" cy="12" r="5" fill="#34D399"/><text x="20" y="17" fill="#34D399" font-size="12" font-weight="500">AI on</text></g>
+  <!-- incoming -->
+  <g transform="translate(24,86)">
+    <rect x="0" y="0" width="300" height="34" rx="14" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="16" y="21" fill="#0A1128" font-size="13">Hi, do you have any slots this weekend?</text>
+    <text x="4" y="50" fill="#b0aea7" font-size="10">11:42 PM</text>
+  </g>
+  <!-- outgoing (AI) -->
+  <g transform="translate(236,132)">
+    <rect x="0" y="0" width="380" height="52" rx="14" fill="#0A1128"/>
+    <text x="16" y="22" fill="#FFFFFF" font-size="13">Yes! We have Saturday 4pm and Sunday 11am.</text>
+    <text x="16" y="40" fill="#FFFFFF" font-size="13">Want me to hold one for you?</text>
+    <text x="228" y="70" fill="#b0aea7" font-size="10">AI replied in 3 seconds</text>
+  </g>
+  <!-- incoming -->
+  <g transform="translate(24,206)">
+    <rect x="0" y="0" width="220" height="34" rx="14" fill="#FFFFFF" stroke="#e7e6e4"/>
+    <text x="16" y="21" fill="#0A1128" font-size="13">Saturday works, thank you!</text>
+  </g>
+  <!-- outgoing (AI) -->
+  <g transform="translate(276,252)">
+    <rect x="0" y="0" width="340" height="34" rx="14" fill="#0A1128"/>
+    <text x="16" y="21" fill="#FFFFFF" font-size="13">Done. You are booked for Saturday 4pm.</text>
+  </g>
+  <!-- status strip -->
+  <line x1="0" y1="324" x2="640" y2="324" stroke="#e7e6e4"/>
+  <g transform="translate(24,342)">
+    <rect x="0" y="0" width="150" height="34" rx="8" fill="#FCCA07"/><text x="16" y="22" fill="#0A1128" font-size="12" font-weight="500">Booked Sat 4:00 PM</text>
+    <rect x="164" y="0" width="160" height="34" rx="8" fill="#FFFFFF" stroke="#e7e6e4"/><circle cx="182" cy="17" r="5" fill="#34D399"/><text x="196" y="22" fill="#0A1128" font-size="12">Logged to CRM</text>
+    <rect x="338" y="0" width="180" height="34" rx="8" fill="#FFFFFF" stroke="#e7e6e4"/><text x="354" y="22" fill="#0A1128" font-size="12">Answered from your KB</text>
+  </g>
+</svg>

@@ -6332,6 +6332,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Average business", valueLabel: "47 hours", widthPercent: 100 },
       ],
     },
+    screenshots: [
+      { src: "/screenshots/ghl-workflow.svg", caption: "The workflow that fires the instant a lead submits, built inside GoHighLevel." },
+      { src: "/screenshots/voice-call-ui.svg", caption: "The AI agent qualifies the lead live and books straight into the calendar." },
+      { src: "/screenshots/crm-contact.svg", caption: "Every call writes a summary, outcome, and next step back to the contact automatically." },
+    ],
   },
   {
     type: "integration",
@@ -6469,6 +6474,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "ai news to social post",
     ],
     logos: ["n8n", "make", "zapier"],
+    screenshots: [
+      { src: "/screenshots/n8n-canvas.svg", caption: "The n8n pipeline that discovers, writes, and publishes, running on schedule." },
+      { src: "/screenshots/crm-contact.svg", caption: "Approved posts and results tracked automatically, no manual logging." },
+    ],
   },
   {
     "type": "integration",
@@ -6698,6 +6707,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "vapi"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/ghl-workflow.svg",
+        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
+      },
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -6924,6 +6947,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "n8n"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/ghl-workflow.svg",
+        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
+      },
+      {
+        "src": "/screenshots/proposal-email.svg",
+        "caption": "A tailored proposal drafted from the call and sent through GoHighLevel in seconds."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -7149,6 +7186,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -7374,6 +7421,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -7605,6 +7662,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -7826,6 +7893,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "vapi",
       "retell",
       "n8n"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/ghl-workflow.svg",
+        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
+      },
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      }
     ]
   },
   {
@@ -8045,6 +8126,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "vapi"
+    ],
+    "screenshots": [
+      { "src": "/screenshots/voice-call-ui.svg", "caption": "The AI agent qualifies the lead live and books straight into the calendar, with the outcome synced to your CRM." }
     ]
   },
   {
@@ -8277,6 +8361,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "retell"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      },
+      {
+        "src": "/screenshots/ghl-workflow.svg",
+        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
+      }
     ]
   },
   {
@@ -8503,6 +8601,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "n8n"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/n8n-canvas.svg",
+        "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -8736,6 +8844,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "n8n",
       "make",
       "zapier"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/n8n-canvas.svg",
+        "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
+      },
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      }
     ]
   },
   {
@@ -8961,6 +9079,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -9186,6 +9314,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -9418,6 +9556,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "make"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/proposal-email.svg",
+        "caption": "A tailored proposal drafted from the call and sent through GoHighLevel in seconds."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -9644,6 +9792,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "make",
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/proposal-email.svg",
+        "caption": "A tailored proposal drafted from the call and sent through GoHighLevel in seconds."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -9871,6 +10029,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel",
       "vapi",
       "retell"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      },
+      {
+        "src": "/screenshots/ghl-workflow.svg",
+        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
+      }
     ]
   },
   {
@@ -10102,6 +10274,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "n8n",
       "make",
       "zapier"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/n8n-canvas.svg",
+        "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
+      }
     ]
   },
   {
@@ -10328,6 +10506,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "bland"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -10554,6 +10742,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "logos": [
       "gohighlevel",
       "vapi"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/voice-call-ui.svg",
+        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      }
     ]
   },
   {
@@ -10779,6 +10977,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaEmailFallback": "aditya@tryagentikai.com",
     "logos": [
       "gohighlevel"
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/dm-thread.svg",
+        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
+      },
+      {
+        "src": "/screenshots/crm-contact.svg",
+        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
+      },
+      {
+        "src": "/screenshots/n8n-canvas.svg",
+        "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
+      }
     ]
   },
 ];

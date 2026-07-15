@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Geist, ui-sans-serif, system-ui, sans-serif">
+  <rect width="640" height="420" fill="#F4F6F9"/>
+  <rect x="0" y="0" width="640" height="44" fill="#FFFFFF"/>
+  <line x1="0" y1="44" x2="640" y2="44" stroke="#e7e6e4"/>
+  <text x="20" y="28" fill="#0A1128" font-size="13" font-weight="500">Contact record</text>
+  <rect x="168" y="13" width="94" height="18" rx="4" fill="#EAF3DE"/><text x="180" y="26" fill="#3B6D11" font-size="11">Auto-updated</text>
+  <!-- contact header -->
+  <circle cx="52" cy="86" r="22" fill="#FCCA07"/><text x="52" y="92" fill="#0A1128" font-size="18" font-weight="500" text-anchor="middle">P</text>
+  <text x="86" y="80" fill="#0A1128" font-size="16" font-weight="500">Priya Menon</text>
+  <text x="86" y="100" fill="#8a8a84" font-size="12">+91 98xxx xxxxx · New lead</text>
+  <rect x="470" y="70" width="150" height="30" rx="6" fill="#0A1128"/><text x="486" y="90" fill="#FFFFFF" font-size="12">Stage: Booked</text>
+  <!-- fields written back -->
+  <line x1="24" y1="128" x2="616" y2="128" stroke="#e7e6e4"/>
+  <g font-size="12">
+    <text x="24" y="156" fill="#8a8a84">Call outcome</text><text x="200" y="156" fill="#0A1128">Qualified · booked Thursday 2pm</text>
+    <text x="24" y="188" fill="#8a8a84">AI call summary</text><text x="200" y="188" fill="#0A1128">Wanted a cleaning, asked about pricing,</text>
+    <text x="200" y="206" fill="#0A1128">confirmed insurance, booked in.</text>
+    <text x="24" y="238" fill="#8a8a84">Response time</text><text x="200" y="238" fill="#0A1128">41 seconds from form submit</text>
+    <text x="24" y="270" fill="#8a8a84">Next follow-up</text><text x="200" y="270" fill="#0A1128">Reminder SMS, 24h before</text>
+  </g>
+  <!-- activity chips -->
+  <line x1="24" y1="300" x2="616" y2="300" stroke="#e7e6e4"/>
+  <text x="24" y="326" fill="#8a8a84" font-size="10">ACTIVITY</text>
+  <g transform="translate(24,336)">
+    <rect x="0" y="0" width="140" height="30" rx="8" fill="#FFFFFF" stroke="#e7e6e4"/><circle cx="18" cy="15" r="5" fill="#34D399"/><text x="32" y="19" fill="#0A1128" font-size="11">AI call · 2m 10s</text>
+    <rect x="152" y="0" width="130" height="30" rx="8" fill="#FFFFFF" stroke="#e7e6e4"/><text x="168" y="19" fill="#0A1128" font-size="11">Summary saved</text>
+    <rect x="294" y="0" width="120" height="30" rx="8" fill="#FCCA07"/><text x="310" y="19" fill="#0A1128" font-size="11" font-weight="500">Appt booked</text>
+  </g>
+</svg>

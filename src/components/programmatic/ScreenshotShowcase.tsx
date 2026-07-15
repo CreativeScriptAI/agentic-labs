@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { animate, useInView } from "framer-motion";
 
 type Shot = { src: string; caption: string; credit?: string };
@@ -31,8 +30,9 @@ const Card: React.FC<{ shot: Shot; index: number; wide: boolean }> = ({ shot, in
         <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
       </div>
-      <div className={`relative w-full ${wide ? "h-[320px]" : "h-[220px]"} bg-[#F9F6F4]`}>
-        <Image src={shot.src} alt={shot.caption} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover object-top" />
+      <div className={`relative w-full ${wide ? "h-[320px]" : "h-[240px]"} bg-[#F9F6F4]`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={shot.src} alt={shot.caption} className="w-full h-full object-cover object-top" />
       </div>
       <div className="px-5 py-4 border-t border-[#e7e6e4]">
         <p className="font-alte font-normal text-[14px] text-[#0A1128] leading-[1.4] tracking-[-0.04em]">{shot.caption}</p>
