@@ -7,7 +7,7 @@ const CONFIG = {
     bio: "We develop ai-agents",
     email: "contact@creativescript.org",
     linkedin: "",
-    github: "",
+    github: "pandey27nilesh",
     instagram: "",
   },
   projects: [

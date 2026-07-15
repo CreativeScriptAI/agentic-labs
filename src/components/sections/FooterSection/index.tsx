@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CONFIG } from "site.config";
 
 // ─── Complete footer sitemap — lean nav up top, deep crawlable map down here ──────────────
 // Mirrors every programmatic + static page so all routes have a crawlable home and link
@@ -71,6 +72,37 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "Salesforce", to: "/ai-agent-salesforce-integration/" },
       { name: "AI Voice Agent (Hindi)", to: "/ai-voice-agent-hindi/" },
       { name: "Indian AI Voices", to: "/indian-ai-voices/" },
+    ],
+  },
+  {
+    heading: "GoHighLevel Builds",
+    links: [
+      { name: "GHL AI Voice Pipeline", to: "/gohighlevel-ai-voice-pipeline/" },
+      { name: "Speed to Lead", to: "/gohighlevel-speed-to-lead-automation/" },
+      { name: "Cold Email Automation", to: "/gohighlevel-cold-email-automation/" },
+      { name: "AI Appointment Booking", to: "/ai-appointment-booking-voice-agent/" },
+      { name: "Done-for-You GHL", to: "/done-for-you-gohighlevel-automation/" },
+      { name: "Vapi + GoHighLevel", to: "/vapi-gohighlevel-integration/" },
+      { name: "Retell + GoHighLevel", to: "/retell-gohighlevel-integration/" },
+      { name: "Bland Outbound Pipeline", to: "/bland-ai-outbound-pipeline/" },
+      { name: "ElevenLabs Production", to: "/elevenlabs-voice-agent-production/" },
+    ],
+  },
+  {
+    heading: "Tools & Social Automations",
+    links: [
+      { name: "n8n Content Pipeline", to: "/n8n-content-automation-pipeline/" },
+      { name: "n8n + GHL Email", to: "/n8n-gohighlevel-email-pipeline/" },
+      { name: "AI Social Media Pipeline", to: "/ai-social-media-content-pipeline/" },
+      { name: "Fix Broken n8n Automation", to: "/n8n-automation-keeps-breaking/" },
+      { name: "Zoom to Proposal", to: "/zoom-meeting-proposal-automation/" },
+      { name: "Make Zoom Automation", to: "/make-zoom-proposal-automation/" },
+      { name: "Facebook DM (GHL)", to: "/gohighlevel-facebook-dm-automation/" },
+      { name: "Instagram DM (GHL)", to: "/gohighlevel-instagram-dm-automation/" },
+      { name: "Facebook DM (Meta API)", to: "/facebook-dm-automation-meta-api/" },
+      { name: "Instagram Comments AI", to: "/instagram-comment-automation-ai/" },
+      { name: "WhatsApp Automation", to: "/whatsapp-gohighlevel-automation/" },
+      { name: "OS.1 Meta Automation", to: "/os1-meta-automation/" },
     ],
   },
   {
@@ -170,7 +202,7 @@ const FooterSection = () => {
           <div className="flex justify-center items-center space-x-4 sm:space-x-6 mb-6 sm:mb-8">
             {/* GitHub */}
             <Link
-              href="https://github.com/CreativeScriptAI"
+              href={`https://github.com/${CONFIG.profile.github}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
