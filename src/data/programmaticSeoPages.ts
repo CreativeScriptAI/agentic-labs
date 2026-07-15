@@ -107,8 +107,8 @@ export type ProgrammaticPageData = {
   /** Optional: single big stat rendered above the FAQ accordion */
   faqStat?: { stat: string; label: string };
 
-  // ── Screenshot showcase (optional) — real product-UI shots, rendered as a gallery ──
-  screenshots?: Array<{ src: string; caption: string; credit?: string }>;
+  // ── Screenshot showcase (optional) — real photos + product-UI mockups, gallery ──
+  screenshots?: Array<{ src: string; caption: string; credit?: string; photo?: boolean }>;
 
   // ── CTA ───────────────────────────────────────────────────────────────────────
   ctaLabel: string;
@@ -6333,6 +6333,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
     },
     screenshots: [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       { src: "/screenshots/ghl-workflow.svg", caption: "The workflow that fires the instant a lead submits, built inside GoHighLevel." },
       { src: "/screenshots/voice-call-ui.svg", caption: "The AI agent qualifies the lead live and books straight into the calendar." },
       { src: "/screenshots/crm-contact.svg", caption: "Every call writes a summary, outcome, and next step back to the contact automatically." },
@@ -6475,6 +6476,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     logos: ["n8n", "make", "zapier"],
     screenshots: [
+      { "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop", "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.", "photo": true },
       { src: "/screenshots/n8n-canvas.svg", caption: "The n8n pipeline that discovers, writes, and publishes, running on schedule." },
       { src: "/screenshots/crm-contact.svg", caption: "Approved posts and results tracked automatically, no manual logging." },
     ],
@@ -6709,6 +6711,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "vapi"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/ghl-workflow.svg",
         "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
@@ -6949,6 +6952,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "n8n"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop", "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.", "photo": true },
       {
         "src": "/screenshots/ghl-workflow.svg",
         "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
@@ -7188,6 +7192,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
@@ -7423,6 +7428,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
@@ -7664,6 +7670,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
@@ -7895,6 +7902,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "n8n"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/ghl-workflow.svg",
         "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
@@ -8128,6 +8136,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "vapi"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       { "src": "/screenshots/voice-call-ui.svg", "caption": "The AI agent qualifies the lead live and books straight into the calendar, with the outcome synced to your CRM." }
     ]
   },
@@ -8363,6 +8372,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "retell"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/voice-call-ui.svg",
         "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
@@ -8603,6 +8613,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "n8n"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop", "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.", "photo": true },
       {
         "src": "/screenshots/n8n-canvas.svg",
         "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
@@ -8846,6 +8857,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "zapier"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop", "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.", "photo": true },
       {
         "src": "/screenshots/n8n-canvas.svg",
         "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
@@ -9081,6 +9093,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
@@ -9316,6 +9329,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
@@ -9558,6 +9572,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "make"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=75&auto=format&fit=crop", "caption": "Post-call automation turns your meetings into sent proposals in seconds.", "photo": true },
       {
         "src": "/screenshots/proposal-email.svg",
         "caption": "A tailored proposal drafted from the call and sent through GoHighLevel in seconds."
@@ -9794,6 +9809,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=75&auto=format&fit=crop", "caption": "Post-call automation turns your meetings into sent proposals in seconds.", "photo": true },
       {
         "src": "/screenshots/proposal-email.svg",
         "caption": "A tailored proposal drafted from the call and sent through GoHighLevel in seconds."
@@ -10031,6 +10047,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "retell"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/voice-call-ui.svg",
         "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
@@ -10276,6 +10293,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "zapier"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop", "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.", "photo": true },
       {
         "src": "/screenshots/n8n-canvas.svg",
         "caption": "The n8n pipeline that discovers, writes, and publishes, running on schedule."
@@ -10508,6 +10526,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "bland"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/voice-call-ui.svg",
         "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
@@ -10744,6 +10763,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "vapi"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
       {
         "src": "/screenshots/voice-call-ui.svg",
         "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
@@ -10979,6 +10999,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "gohighlevel"
     ],
     "screenshots": [
+      { "src": "https://images.unsplash.com/photo-1611746869696-d09bce200020?w=1200&q=75&auto=format&fit=crop", "caption": "AI answers WhatsApp, Instagram, and Facebook messages instantly from your knowledge base.", "photo": true },
       {
         "src": "/screenshots/dm-thread.svg",
         "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."

@@ -594,7 +594,7 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
                   <div className="relative h-[240px] rounded-none overflow-hidden border border-[#e7e6e4]">
                     <Image
                       src={getImages(page.pathSegments[0]).result}
-                      alt="Result"
+                      alt={`${page.heroLabel} results for ${page.keywords[0] || page.heroLabel}`}
                       fill
                       sizes="(min-width: 1024px) 40vw, 100vw"
                       className="object-cover"

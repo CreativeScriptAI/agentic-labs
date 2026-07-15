@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
 
-type Shot = { src: string; caption: string; credit?: string };
+type Shot = { src: string; caption: string; credit?: string; photo?: boolean };
 
 const Card: React.FC<{ shot: Shot; index: number; wide: boolean }> = ({ shot, index, wide }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,12 +24,14 @@ const Card: React.FC<{ shot: Shot; index: number; wide: boolean }> = ({ shot, in
       className={`${wide ? "sm:col-span-2" : ""} rounded-none border border-[#e7e6e4] bg-white overflow-hidden`}
       style={{ opacity: 0, transform: "translateY(16px)" }}
     >
-      {/* Browser chrome bar */}
-      <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-[#e7e6e4] bg-[#F9F6F4]">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
-      </div>
+      {/* Browser chrome bar — only on UI mockups, not real photos */}
+      {!shot.photo && (
+        <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-[#e7e6e4] bg-[#F9F6F4]">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
+        </div>
+      )}
       <div className={`relative w-full ${wide ? "h-[320px]" : "h-[240px]"} bg-[#F9F6F4]`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={shot.src} alt={shot.caption} className="w-full h-full object-cover object-top" />

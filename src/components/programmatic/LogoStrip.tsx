@@ -36,7 +36,7 @@ const LogoStrip: React.FC<{ logos?: string[] }> = ({ logos }) => {
           transition={{ duration: 0.4, delay: i * 0.08 }}
           className="grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
         >
-          <Image src={logo.src} alt={logo.alt} width={logo.w} height={logo.h} />
+          <Image src={logo.src} alt={`${logo.alt} logo`} width={logo.w} height={logo.h} />
         </motion.div>
       ))}
     </div>
