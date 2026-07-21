@@ -6303,6 +6303,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We build it directly on your GoHighLevel account. You keep ownership of the workflow.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
       { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
@@ -6458,6 +6459,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We build it on your n8n, connect your accounts, and keep it running. You keep the workflow.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
+      { label: "Our AI automation services", href: "/services/" },
       { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
       { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
       { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
@@ -6678,6 +6680,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a speed-to-lead build call",
     "ctaSupportText": "We map your GoHighLevel lead sources and show you the exact workflow that answers in seconds, qualifies, and books. No generic template, built for your pipeline.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -6919,6 +6922,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a build call for your GoHighLevel cold email",
     "ctaSupportText": "We map your pipeline stages, wire the n8n layer, and turn on the kill switch. Reach Agentic AI Labs at aditya@tryagentikai.com.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI Voice Pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -7160,6 +7164,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a Facebook automation walkthrough",
     "ctaSupportText": "We map your DMs, comments, and keyword triggers to your knowledge base and GoHighLevel workflows, then show you exactly how OS.1 would answer on your page.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "AI voice agent for GoHighLevel",
         "href": "/ai-voice-agent-for-gohighlevel"
@@ -7396,6 +7401,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a DM automation walkthrough",
     "ctaSupportText": "See OS.1 answer a live DM from a sample knowledge base and drop the lead into GoHighLevel, in one call.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "AI voice agent for GoHighLevel",
         "href": "/ai-voice-agent-for-gohighlevel"
@@ -7638,6 +7644,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See it answer your WhatsApp",
     "ctaSupportText": "Book a short walkthrough. We will show OS.1 answering a real WhatsApp thread, qualifying, and logging straight into GoHighLevel.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "AI voice agent for GoHighLevel",
         "href": "/ai-voice-agent-for-gohighlevel"
@@ -7867,6 +7874,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a GoHighLevel automation build call",
     "ctaSupportText": "We will map your lead paths, show you where responses are leaking, and scope a stack that answers every inquiry in seconds.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline, end to end",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -8103,6 +8111,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See the Vapi + GHL pipeline mapped to your funnel",
     "ctaSupportText": "We map your current form-to-follow-up flow and show exactly where leads go cold before anyone calls.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI Voice Pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -8240,7 +8249,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     "industrySignal": {
       "headline": "Calling within one minute beats waiting even two",
-      "body": "Analysis of 3.5 million leads found that dialing a new lead within the first minute converts far better than a callback just a couple of minutes later. Speed is not a nice-to-have, it is the single biggest lever on a fresh lead. A voice agent is the only way to hit that window on every lead, overnight and on weekends included.",
+      "body": "Analysis of 3.5 million leads found that dialing a new lead within the first minute converts far better than a callback just a couple of minutes later. Speed is the single biggest lever on a fresh lead. A voice agent is the only way to hit that window on every lead, overnight and on weekends included.",
       "source": "Velocify lead-response study",
       "date": "3.5M leads analyzed",
       "stat": "391%",
@@ -8339,6 +8348,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your Retell AI GoHighLevel pipeline built",
     "ctaSupportText": "Book a call and we will map your lead sources, qualifying criteria, and GHL setup, then show you exactly how the voice pipeline will run before you commit.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -8481,7 +8491,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     "industrySignal": {
       "headline": "Buyers punish the follow-up that ignores their reply",
-      "body": "Prospects increasingly judge a company by whether its outreach feels aware. A sequence that keeps firing after someone has already answered reads as spam and burns the goodwill your first email earned. Reply-aware automation is becoming table stakes, not a nicety.",
+      "body": "Prospects judge a company by whether its outreach feels aware. A sequence that keeps firing after someone has already answered reads as spam and burns the goodwill your first email earned. Reply-aware automation is now expected outbound behavior.",
       "source": "Agentic AI Labs, from client cold-email pipelines",
       "date": "2026",
       "stat": "Reply-aware",
@@ -8580,6 +8590,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a pipeline build call",
     "ctaSupportText": "Walk us through your GoHighLevel setup and your offer. We will map the n8n email pipeline that captures, follows up, advances, and stops on reply. Reach us at aditya@tryagentikai.com.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -8823,6 +8834,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your content pipeline built",
     "ctaSupportText": "We map your niche sources, voice, and posting schedule, then build the n8n pipeline with your review sheet in the loop. You show up consistently across four networks without the weekly scramble.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "n8n content automation pipeline",
         "href": "/n8n-content-automation-pipeline"
@@ -9061,6 +9073,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Automate your Facebook DMs and comments",
     "ctaSupportText": "We map your knowledge base, wire OS.1 into the Meta API, and connect it to GHL. You watch DMs and comments get answered in seconds.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI Voice Pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -9297,6 +9310,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get Instagram comment automation built for your account",
     "ctaSupportText": "We map your posts, buying keywords, and GHL workflows, then stand up OS.1 comment automation done-for-you. You approve every reply before it goes live.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel speed-to-lead automation",
         "href": "/gohighlevel-speed-to-lead-automation"
@@ -9441,7 +9455,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "industrySignal": {
       "headline": "Speed of follow-up is the strongest signal a buyer feels",
       "body": "When two vendors are close on fit, the one whose proposal arrives while the conversation is still fresh reads as more serious and more capable. Buyers rarely wait for the slower reply; they move with whoever shows up first with something specific to what they said.",
-      "source": "Sales response-time research, widely replicated across B2B studies",
+      "source": "Patterns from our own B2B sales follow-up work",
       "date": "2026",
       "stat": "First",
       "statLabel": "specific reply usually wins the frame"
@@ -9539,6 +9553,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Automate your post-call proposals",
     "ctaSupportText": "Book a short call. We will map your Zoom and GoHighLevel setup and show you the pipeline running on a real transcript.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -9776,6 +9791,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your post-call proposal automation built",
     "ctaSupportText": "We map your Zoom, AssemblyAI, and GoHighLevel setup, then build the Make.com scenario that sends a tailored proposal the moment each call ends.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI Voice Pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -9914,7 +9930,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     "industrySignal": {
       "headline": "Calling within one minute lifts conversions by 391 percent",
-      "body": "Velocify analyzed 3.5 million leads and found that dialing a new lead within the first minute converted 391 percent better than waiting even two minutes. The gap is not marginal. It is the difference between a booked calendar and a dead lead. An AI voice agent is the only way to hit that first minute on every single lead, at any hour.",
+      "body": "Velocify analyzed 3.5 million leads and found that dialing a new lead within the first minute converted 391 percent better than waiting even two minutes. That gap is the difference between a booked calendar and a dead lead. An AI voice agent is the only way to hit that first minute on every single lead, at any hour.",
       "source": "Velocify, analysis of 3.5M leads",
       "date": "2026",
       "stat": "391%",
@@ -10013,6 +10029,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your AI booking agent built",
     "ctaSupportText": "We build, wire, and tune the whole agent into your GoHighLevel calendar for you, inbound and outbound. You just start seeing booked appointments.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -10259,6 +10276,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your broken n8n workflow rebuilt",
     "ctaSupportText": "Send us the workflow that keeps breaking. We audit it, tell you whether to harden or rebuild, and turn it into an automation you can trust to run without you watching it.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "n8n Content Automation Pipeline",
         "href": "/n8n-content-automation-pipeline"
@@ -10493,6 +10511,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a pipeline build call",
     "ctaSupportText": "Bring your list and your offer. We map the outbound pipeline, show you the Bland plus GoHighLevel build, and scope a done-for-you rollout with guardrails and a kill switch from day one.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -10730,6 +10749,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a build call",
     "ctaSupportText": "Bring your ElevenLabs voice. We will show you the telephony, logic, CRM writeback, and follow-up that turn it into an agent that books.",
     "relatedLinks": [
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       {
         "label": "GoHighLevel AI voice pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
@@ -10967,6 +10987,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See OS.1 running on your Meta accounts",
     "ctaSupportText": "We connect Facebook, Instagram, and WhatsApp to one OS.1 engine and wire every conversation into your GoHighLevel. Book a walkthrough and we will show it live on your channels.",
     "relatedLinks": [
+      { label: "Our AI automation services", href: "/services/" },
       {
         "label": "GoHighLevel AI Voice Pipeline",
         "href": "/gohighlevel-ai-voice-pipeline"
