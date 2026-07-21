@@ -106,6 +106,23 @@ const FOOTER_COLUMNS: FootColumn[] = [
     ],
   },
   {
+    heading: "Alternatives & Comparisons",
+    links: [
+      { name: "Leadlock AI Alternative", to: "/leadlock-ai-alternative/" },
+      { name: "GHL AI Employee Alternative", to: "/gohighlevel-ai-employee-alternative/" },
+      { name: "Zapier Alternative for Agencies", to: "/zapier-alternative-for-agencies/" },
+      { name: "Make.com Alternative", to: "/make-com-alternative/" },
+      { name: "Lindy AI Alternative", to: "/lindy-ai-alternative/" },
+      { name: "n8n vs Zapier vs Make", to: "/n8n-vs-zapier-vs-make/" },
+      { name: "Zapier Automation Keeps Breaking", to: "/zapier-automation-keeps-breaking/" },
+      { name: "smallest.ai Alternative", to: "/smallest-ai-alternative/" },
+      { name: "Synthflow Alternative", to: "/synthflow-alternative/" },
+      { name: "Vapi vs Retell vs Bland", to: "/vapi-vs-retell-vs-bland/" },
+      { name: "ElevenLabs vs Vapi", to: "/elevenlabs-vs-vapi/" },
+      { name: "Done-for-You n8n Automation", to: "/done-for-you-n8n-automation/" },
+    ],
+  },
+  {
     heading: "Resources",
     links: [
       { name: "Blog", to: "/blog/" },

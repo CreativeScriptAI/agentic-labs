@@ -3046,7 +3046,7 @@ const PageFooter = () => (
   <footer className="bg-[#060D1F] pt-14 pb-8">
     <Container size="lg">
       {/* Main footer grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10 border-b border-white/[0.08]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10 pb-10 border-b border-white/[0.08]">
 
         {/* Brand block */}
         <div className="lg:col-span-2">
@@ -3108,6 +3108,19 @@ const PageFooter = () => (
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Ghost Patient Report</a>
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Speed-to-Lead Test</a>
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white transition-colors">Hiring Volume Audit</a>
+          </nav>
+        </div>
+
+        {/* Compare & alternatives (SEO internal links) */}
+        <div>
+          <p className="text-[10px] font-geist font-normal tracking-[0.02em] uppercase text-white/30 mb-4">Compare & Alternatives</p>
+          <nav className="flex flex-col gap-2.5">
+            <Link href="/vapi-vs-retell-vs-bland" className="text-sm text-white/50 hover:text-white transition-colors">Vapi vs Retell vs Bland</Link>
+            <Link href="/elevenlabs-vs-vapi" className="text-sm text-white/50 hover:text-white transition-colors">ElevenLabs vs Vapi</Link>
+            <Link href="/synthflow-alternative" className="text-sm text-white/50 hover:text-white transition-colors">Synthflow Alternative</Link>
+            <Link href="/smallest-ai-alternative" className="text-sm text-white/50 hover:text-white transition-colors">smallest.ai Alternative</Link>
+            <Link href="/leadlock-ai-alternative" className="text-sm text-white/50 hover:text-white transition-colors">Leadlock AI Alternative</Link>
+            <Link href="/gohighlevel-ai-employee-alternative" className="text-sm text-white/50 hover:text-white transition-colors">GHL AI Employee Alternative</Link>
           </nav>
         </div>
       </div>
