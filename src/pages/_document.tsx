@@ -135,6 +135,65 @@ class MyDocument extends Document {
 
           {/* Manifest */}
           <link rel="manifest" href="/manifest.webmanifest" />
+
+          {/* Site-wide Organization entity. Every page previously declared
+              Organization only as a nested "provider" inside Service schema,
+              which never established the org as a standalone entity Google can
+              attach reputation to. This is the sitewide anchor for that. */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": `${CONFIG.link}/#organization`,
+                name: "Agentic AI Labs",
+                url: CONFIG.link,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${CONFIG.link}/favicon.png`,
+                },
+                description:
+                  "Agentic AI Labs builds production AI voice agents and automation systems for businesses, wired into GoHighLevel, n8n, and existing CRMs.",
+                email: CONFIG.profile.email,
+                founder: {
+                  "@type": "Person",
+                  name: "Aditya Pandey",
+                  jobTitle: "Founder",
+                },
+                knowsAbout: [
+                  "AI voice agents",
+                  "GoHighLevel automation",
+                  "n8n workflow automation",
+                  "conversational AI",
+                  "CRM integration",
+                  "AI receptionists",
+                ],
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "sales",
+                  email: CONFIG.profile.email,
+                  url: `${CONFIG.link}/contact/`,
+                },
+              }),
+            }}
+          />
+
+          {/* WebSite entity, pairs with Organization so the two are linked
+              rather than floating independently. */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": `${CONFIG.link}/#website`,
+                url: CONFIG.link,
+                name: "Agentic AI Labs",
+                publisher: { "@id": `${CONFIG.link}/#organization` },
+              }),
+            }}
+          />
         </Head>
         <body className="bg-[#F9F6F4]">
           <Main />

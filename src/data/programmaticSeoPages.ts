@@ -160,7 +160,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Leads lost to slow follow-up (est.)", amount: "$60,000 / year" },
       ],
       total: "$110,000+ / year in friction",
-      solvesFor: "$3,000–$6,000 setup + $1,200–$2,500 / month",
+      solvesFor: "$3,000 to $6,000 setup + $1,200 to $2,500 / month",
       source: "U.S. Bureau of Labor Statistics, OES 2024",
     },
     practitionerQuote: {
@@ -209,7 +209,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the AI SDR. Voice outreach, lead memory, GHL pipeline automation — all connected and tested against your specific offer and ICP.",
+        body: "Day 1 afternoon to Day 2 — We build the AI SDR. Voice outreach, lead memory, GHL pipeline automation — all connected and tested against your specific offer and ICP.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -221,7 +221,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your AI SDR goes live. We monitor every interaction for the first 30 days. You get a dashboard: leads qualified, meetings booked, conversion by source.",
+        body: "Day 4 to 5 — Your AI SDR goes live. We monitor every interaction for the first 30 days. You get a dashboard: leads qualified, meetings booked, conversion by source.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -285,12 +285,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How long does it take to go live?",
         answer:
-          "Most builds go live in 1 week. Day 1: audit your workflow. Days 1–2: build the system. Day 3: test with real scenarios. Days 4–5: go live with monitoring.",
+          "Most builds go live in 1 week. Day 1: audit your workflow. Days 1 to 2: build the system. Day 3: test with real scenarios. Days 4 to 5: go live with monitoring.",
       },
       {
         question: "How much does it cost?",
         answer:
-          "GHL agency AI SDR systems start at $3,000–$6,000 for the initial build, with $1,200–$2,500/month for ongoing monitoring and optimization. Every project is scoped based on your lead volume, tools, and workflows. We give you a clear number before you commit.",
+          "GHL agency AI SDR systems start at $3,000 to $6,000 for the initial build, with $1,200 to $2,500/month for ongoing monitoring and optimization. Every project is scoped based on your lead volume, tools, and workflows. We give you a clear number before you commit.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -299,8 +299,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+      { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
+      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai sdr for ghl agencies",
@@ -333,7 +336,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Missed placements from bottlenecked screening pipeline", amount: "$25,000+ / year" },
       ],
       total: "$110,000+ / year in screening drag per recruiter",
-      solvesFor: "$3,500–$6,500 setup + $1,200–$2,500 / month",
+      solvesFor: "$3,500 to $6,500 setup + $1,200 to $2,500 / month",
       source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 13-1071)",
     },
     practitionerQuote: {
@@ -382,7 +385,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the AI interviewer: voice layer, role-specific question trees, disqualifier logic, candidate memory, and ATS automation.",
+        body: "Day 1 afternoon to Day 2 — We build the AI interviewer: voice layer, role-specific question trees, disqualifier logic, candidate memory, and ATS automation.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -394,7 +397,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your AI interviewer goes live. We monitor every screen for the first 30 days. You get a dashboard: screens completed, top-fit route rate, time reclaimed per recruiter.",
+        body: "Day 4 to 5 — Your AI interviewer goes live. We monitor every screen for the first 30 days. You get a dashboard: screens completed, top-fit route rate, time reclaimed per recruiter.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -456,9 +459,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We will map your current screening funnel and estimate time reclaimed per recruiter.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Support Rep for Ecommerce", href: "/ai-support-rep-for-ecommerce" },
-      { label: "AI Agent HubSpot Integration", href: "/ai-agent-hubspot-integration" },
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
+      { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
+      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
+      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai interviewer for recruiting agencies",
@@ -491,7 +497,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "CSAT damage from slow response during promos (est.)", amount: "$20,000+ / year" },
       ],
       total: "$73,700+ / year per support rep in friction costs",
-      solvesFor: "$3,000–$5,500 setup + $1,000–$2,000 / month",
+      solvesFor: "$3,000 to $5,500 setup + $1,000 to $2,000 / month",
       source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 43-4051)",
     },
     practitionerQuote: {
@@ -540,7 +546,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the support AI: intent routing, order memory, policy guardrails, and help desk automation. All connected to your stack.",
+        body: "Day 1 afternoon to Day 2 — We build the support AI: intent routing, order memory, policy guardrails, and help desk automation. All connected to your stack.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -552,7 +558,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your AI support rep goes live. We monitor every interaction for 30 days. You get a dashboard: tickets resolved, response time, CSAT, and escalation rate.",
+        body: "Day 4 to 5 — Your AI support rep goes live. We monitor every interaction for 30 days. You get a dashboard: tickets resolved, response time, CSAT, and escalation rate.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -614,9 +620,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We will map your top ticket intents and identify which ones should be automated first.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
-      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI COD Confirmation Agent", href: "/ai-cod-confirmation-agent" },
+      { label: "HubSpot AI Agent", href: "/ai-agent-hubspot-integration" },
+      { label: "Salesforce AI Agent", href: "/ai-agent-salesforce-integration" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     keywords: [
       "ai support rep for ecommerce",
@@ -688,7 +696,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the AI voice agent, connect it to GHL, add Mem0 lead memory, and wire automation for opportunity updates, routing, and confirmations.",
+        body: "Day 1 afternoon to Day 2 — We build the AI voice agent, connect it to GHL, add Mem0 lead memory, and wire automation for opportunity updates, routing, and confirmations.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -700,7 +708,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your GHL AI voice system goes live. We monitor every interaction for 30 days. You get a dashboard: calls handled, meetings booked, pipeline accuracy, and alerts for anything unusual.",
+        body: "Day 4 to 5 — Your GHL AI voice system goes live. We monitor every interaction for 30 days. You get a dashboard: calls handled, meetings booked, pipeline accuracy, and alerts for anything unusual.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -712,7 +720,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "GHL agency — home services clients",
-      problem: "Agency was running AI voice campaigns for 4 home services clients. Webhook failures were silently dropping call summaries 3–4 times per week. Clients were complaining that their pipelines looked wrong and follow-up was inconsistent.",
+      problem: "Agency was running AI voice campaigns for 4 home services clients. Webhook failures were silently dropping call summaries 3 to 4 times per week. Clients were complaining that their pipelines looked wrong and follow-up was inconsistent.",
       system: "Hardened AI voice agent with dead-letter queue for failed webhooks, Mem0 lead memory mapped to GHL contacts, and automated opportunity staging with real-time sync monitoring.",
       result: "Webhook failure rate dropped from 12% to under 0.5%. Pipeline accuracy improved to 98%+. Agency retained all 4 clients and added 2 more on referral within 90 days.",
     },
@@ -762,9 +770,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We will review your GHL automations and show where production failures are most likely.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "AI Agent for HubSpot", href: "/ai-agent-hubspot-integration" },
+      { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
+      { label: "GoHighLevel Speed to Lead", href: "/gohighlevel-speed-to-lead-automation" },
+      { label: "AI Appointment Booking Agent", href: "/ai-appointment-booking-voice-agent" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai voice agent for gohighlevel",
@@ -836,7 +846,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the AI system: conversation layer, contact memory, property mapping, lifecycle automation, and owner routing. All connected to your HubSpot instance.",
+        body: "Day 1 afternoon to Day 2 — We build the AI system: conversation layer, contact memory, property mapping, lifecycle automation, and owner routing. All connected to your HubSpot instance.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -848,7 +858,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your AI agent goes live inside HubSpot. We monitor for 30 days. You get a dashboard: contacts touched, stages progressed, handoff quality, and any anomalies.",
+        body: "Day 4 to 5 — Your AI agent goes live inside HubSpot. We monitor for 30 days. You get a dashboard: contacts touched, stages progressed, handoff quality, and any anomalies.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -910,9 +920,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We will audit your HubSpot funnel and outline an AI system rollout plan.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Agent Salesforce Integration", href: "/ai-agent-salesforce-integration" },
-      { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "AI Support Rep for Ecommerce", href: "/ai-support-rep-for-ecommerce" },
+      { label: "Salesforce AI Agent", href: "/ai-agent-salesforce-integration" },
+      { label: "AI COD Confirmation Agent", href: "/ai-cod-confirmation-agent" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     keywords: [
       "ai agent hubspot integration",
@@ -984,7 +996,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the AI system: conversation layer, Salesforce object mapping, memory architecture, automated field writes, and owner routing.",
+        body: "Day 1 afternoon to Day 2 — We build the AI system: conversation layer, Salesforce object mapping, memory architecture, automated field writes, and owner routing.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -996,7 +1008,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Your Salesforce AI agent goes live. We monitor all interactions for 30 days. You get a dashboard: records updated, opportunities progressed, data accuracy score, and error log.",
+        body: "Day 4 to 5 — Your Salesforce AI agent goes live. We monitor all interactions for 30 days. You get a dashboard: records updated, opportunities progressed, data accuracy score, and error log.",
         youSpend: "Zero. It runs without you.",
       },
     ],
@@ -1058,9 +1070,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We will map your Salesforce process and identify where AI can remove manual drag.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Agent HubSpot Integration", href: "/ai-agent-hubspot-integration" },
-      { label: "Bland AI Alternative", href: "/bland-ai-alternative" },
+      { label: "AI Support Rep for Ecommerce", href: "/ai-support-rep-for-ecommerce" },
+      { label: "AI COD Confirmation Agent", href: "/ai-cod-confirmation-agent" },
+      { label: "HubSpot AI Agent", href: "/ai-agent-hubspot-integration" },
       { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     keywords: [
       "ai agent salesforce integration",
@@ -1088,13 +1102,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Vapi API costs at scale", amount: "$800–$2,000 / month" },
-        { label: "Engineering time on glue code (est.)", amount: "$4,000–$8,000 / month" },
+        { label: "Vapi API costs at scale", amount: "$800 to $2,000 / month" },
+        { label: "Engineering time on glue code (est.)", amount: "$4,000 to $8,000 / month" },
         { label: "Downtime impact on missed outcomes", amount: "$5,000+ / month" },
       ],
-      total: "$10,000–$17,000+/month in fragile tooling costs",
-      solvesFor: "$4,000–$8,000 setup + $1,500–$3,000 / month",
-      source: "Internal estimates based on client audits, 2025–2026",
+      total: "$10,000 to $17,000+/month in fragile tooling costs",
+      solvesFor: "$4,000 to $8,000 setup + $1,500 to $3,000 / month",
+      source: "Internal estimates based on client audits, 2025 to 2026",
     },
     practitionerQuote: {
       text: "We spent 3 months building on Vapi. It was great until we hit 500 calls/day. Then the middleware became a full-time job.",
@@ -1142,7 +1156,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We rebuild the architecture around your use case. Voice + memory + automation — connected and hardened for production load. Your existing scripts are the starting point.",
+        body: "Day 1 afternoon to Day 2 — We rebuild the architecture around your use case. Voice + memory + automation — connected and hardened for production load. Your existing scripts are the starting point.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -1154,7 +1168,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Migration complete. We monitor every call for 30 days. You get a dashboard with reliability metrics, call outcomes, and business KPIs. If something needs tuning, we tune it.",
+        body: "Day 4 to 5 — Migration complete. We monitor every call for 30 days. You get a dashboard with reliability metrics, call outcomes, and business KPIs. If something needs tuning, we tune it.",
         youSpend: "Zero. It runs.",
       },
     ],
@@ -1218,7 +1232,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "Projects start at $4,000–$8,000 for the initial build, with $1,500–$3,000/month for ongoing monitoring and optimization. Every project is scoped to your actual architecture — we give you a clear number before you commit.",
+          "Projects start at $4,000 to $8,000 for the initial build, with $1,500 to $3,000/month for ongoing monitoring and optimization. Every project is scoped to your actual architecture — we give you a clear number before you commit.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -1228,7 +1242,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
       { label: "Bland AI Alternative", href: "/bland-ai-alternative" },
+      { label: "Vapi vs Retell vs Bland", href: "/vapi-vs-retell-vs-bland" },
       { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "vapi alternative",
@@ -1256,13 +1272,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Retell AI API costs at production volume", amount: "$600–$1,800 / month" },
-        { label: "Engineering time wiring CRM and automation (est.)", amount: "$3,000–$6,000 / month" },
+        { label: "Retell AI API costs at production volume", amount: "$600 to $1,800 / month" },
+        { label: "Engineering time wiring CRM and automation (est.)", amount: "$3,000 to $6,000 / month" },
         { label: "Revenue impact from context loss and dropped handoffs", amount: "$8,000+ / month" },
       ],
-      total: "$11,600–$15,800+/month in fragile tooling costs",
-      solvesFor: "$4,000–$7,000 setup + $1,500–$2,800 / month",
-      source: "Internal estimates based on client audits, 2025–2026",
+      total: "$11,600 to $15,800+/month in fragile tooling costs",
+      solvesFor: "$4,000 to $7,000 setup + $1,500 to $2,800 / month",
+      source: "Internal estimates based on client audits, 2025 to 2026",
     },
     practitionerQuote: {
       text: "Retell AI got us from zero to demo in a weekend. It took us four more months to realize the demo and production system were completely different problems.",
@@ -1310,7 +1326,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We rebuild around your use case: voice layer hardened for production + Mem0 memory + automation connecting calls to your CRM and tools.",
+        body: "Day 1 afternoon to Day 2 — We rebuild around your use case: voice layer hardened for production + Mem0 memory + automation connecting calls to your CRM and tools.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -1322,7 +1338,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — System goes live. We monitor every call for 30 days. You get a dashboard: call outcomes, context retention rate, CRM update accuracy, and business KPIs.",
+        body: "Day 4 to 5 — System goes live. We monitor every call for 30 days. You get a dashboard: call outcomes, context retention rate, CRM update accuracy, and business KPIs.",
         youSpend: "Zero. It runs.",
       },
     ],
@@ -1386,7 +1402,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
       { label: "Bland AI Alternative", href: "/bland-ai-alternative" },
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Vapi vs Retell vs Bland", href: "/vapi-vs-retell-vs-bland" },
+      { label: "ElevenLabs vs Vapi", href: "/elevenlabs-vs-vapi" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "retell ai alternative",
@@ -1414,13 +1433,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Bland AI campaign costs at volume", amount: "$500–$1,500 / month" },
-        { label: "Manual CRM cleanup after campaigns (est.)", amount: "$2,500–$5,000 / month" },
+        { label: "Bland AI campaign costs at volume", amount: "$500 to $1,500 / month" },
+        { label: "Manual CRM cleanup after campaigns (est.)", amount: "$2,500 to $5,000 / month" },
         { label: "Leads lost to rigid scripting that breaks edge cases", amount: "$6,000+ / month" },
       ],
-      total: "$9,000–$12,500+/month in outbound friction",
-      solvesFor: "$3,500–$6,500 setup + $1,200–$2,500 / month",
-      source: "Internal estimates based on outbound AI client audits, 2025–2026",
+      total: "$9,000 to $12,500+/month in outbound friction",
+      solvesFor: "$3,500 to $6,500 setup + $1,200 to $2,500 / month",
+      source: "Internal estimates based on outbound AI client audits, 2025 to 2026",
     },
     practitionerQuote: {
       text: "Bland AI is great for blast campaigns. The moment you need any kind of memory or follow-up logic that changes based on what the lead said, you're on your own with middleware.",
@@ -1468,7 +1487,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 2 — We build the outbound AI system: voice layer with contextual logic + Mem0 lead memory + CRM automation for outcome routing and follow-up.",
+        body: "Day 1 afternoon to Day 2 — We build the outbound AI system: voice layer with contextual logic + Mem0 lead memory + CRM automation for outcome routing and follow-up.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -1480,7 +1499,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 4–5 — Production system goes live. We monitor call outcomes for 30 days and tune classification and routing. You get a dashboard: connect rate, conversion by script variant, and CRM accuracy.",
+        body: "Day 4 to 5 — Production system goes live. We monitor call outcomes for 30 days and tune classification and routing. You get a dashboard: connect rate, conversion by script variant, and CRM accuracy.",
         youSpend: "Zero. It runs.",
       },
     ],
@@ -1543,8 +1562,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "Vapi vs Retell vs Bland", href: "/vapi-vs-retell-vs-bland" },
+      { label: "ElevenLabs vs Vapi", href: "/elevenlabs-vs-vapi" },
+      { label: "Synthflow Alternative", href: "/synthflow-alternative" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "bland ai alternative",
@@ -1582,7 +1604,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "AI receptionists are the fastest-growing AI deployment category in service businesses in 2026.",
-      body: "Receptionists (SOC 43-4171) represent one of the most common roles being augmented by AI voice systems, with 1.1 million employed nationally at a mean wage of $38,500/year. Service businesses investing in AI reception are reporting 40–60% reductions in missed-call rates and 30%+ improvements in after-hours booking capture. The critical distinction: production-grade AI receptionists complete the full loop from call to calendar update without staff intervention.",
+      body: "Receptionists (SOC 43-4171) represent one of the most common roles being augmented by AI voice systems, with 1.1 million employed nationally at a mean wage of $38,500/year. Service businesses investing in AI reception are reporting 40 to 60% reductions in missed-call rates and 30%+ improvements in after-hours booking capture. The critical distinction: production-grade AI receptionists complete the full loop from call to calendar update without staff intervention.",
       source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 43-4171)",
       date: "2024",
     },
@@ -1619,9 +1641,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can assess whether an AI receptionist model fits your workflow.",
     relatedLinks: [
-      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
-      { label: "AI Receptionist for Medical Clinics", href: "/ai-receptionist-for-medical-clinics" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
       { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "what is an ai receptionist",
@@ -1696,9 +1720,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can audit your current voice setup and show where production gaps are.",
     relatedLinks: [
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "what is an ai voice agent",
@@ -1773,9 +1798,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can map where agentic AI fits your operations without unnecessary risk.",
     relatedLinks: [
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "what is agentic ai",
@@ -1850,9 +1876,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can help scope your first system-level workflow.",
     relatedLinks: [
-      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
-      { label: "AI Memory System", href: "/ai-memory-system" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai agent vs ai system",
@@ -1927,9 +1954,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaHref: "/ai-voice-agent/#pricing",
     ctaSupportText: "We can assess your current setup against production-grade criteria.",
     relatedLinks: [
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
-      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "what is production grade ai",
@@ -1966,8 +1994,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Choose by demo instead of production behavior.",
     ],
     industrySignal: {
-      headline: "Dental practices field 200–400 calls per month — missed calls average $200+ in lost appointment value each.",
-      body: "Receptionists (SOC 43-4171) are employed nationally at a mean wage of $38,500/year. For dental practices, the economics are stark: a missed call that would have converted to a new patient appointment costs $150–$350 in lost revenue. AI reception systems that reliably capture, book, and confirm after-hours calls typically pay for themselves within 60–90 days at typical practice call volumes.",
+      headline: "Dental practices field 200 to 400 calls per month — missed calls average $200+ in lost appointment value each.",
+      body: "Receptionists (SOC 43-4171) are employed nationally at a mean wage of $38,500/year. For dental practices, the economics are stark: a missed call that would have converted to a new patient appointment costs $150 to $350 in lost revenue. AI reception systems that reliably capture, book, and confirm after-hours calls typically pay for themselves within 60 to 90 days at typical practice call volumes.",
       source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 43-4171) + dental practice benchmarks",
       date: "2024",
     },
@@ -1985,8 +2013,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     proofStats: [
       { stat: "$38,500", label: "mean annual wage for a dental receptionist (BLS 2024)" },
-      { stat: "40–60%", label: "typical reduction in missed calls with AI reception" },
-      { stat: "60–90 days", label: "typical payback period at average practice volume" },
+      { stat: "40 to 60%", label: "typical reduction in missed calls with AI reception" },
+      { stat: "60 to 90 days", label: "typical payback period at average practice volume" },
     ],
     faq: [
       {
@@ -2010,9 +2038,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We can audit your current stack and recommend what to keep, replace, or integrate.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
-      { label: "AI Memory System", href: "/ai-memory-system" },
       { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI Receptionist for Dental Clinics", href: "/ai-receptionist-for-dental-clinic" },
+      { label: "AI for Diagnostic Labs", href: "/ai-for-diagnostic-lab" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "best ai tools for dental practices",
@@ -2094,8 +2124,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
       { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "best ai voice agents for business",
@@ -2177,8 +2209,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
+      { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
+      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
+      { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "best ai for gohighlevel agencies",
@@ -2259,9 +2294,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We can assess your recruiting workflow and recommend a production-first rollout plan.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
-      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
-      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
+      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "best ai tools for recruiting agencies",
@@ -2277,7 +2314,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-booking-agent-for-travel-agencies"],
     title: "AI Booking Agent for Travel Agencies — Stop Losing Revenue to Missed Bookings",
     description:
-      `A bus operator in Delhi NCR was losing 20–30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ${P.starterINR}/mo.`,
+      `A bus operator in Delhi NCR was losing 20 to 30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp — live in 7 days. Starts at ${P.starterINR}/mo.`,
     canonicalUrl: makeCanonical(["ai-booking-agent-for-travel-agencies"]),
     heroLabel: "Bus · Tour · Cab · Transport Operators",
     heroHeadline: "20 booking calls missed yesterday. Your competitor answered all of them.",
@@ -2286,16 +2323,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     painTitle: "The 3-minute window that's bleeding your revenue",
     painPoints: [
       "A passenger calls at 8 PM about tomorrow's route. Your office closed at 7. They call the next operator on Google — booked within 3 minutes. You wake up to nothing.",
-      "Your technician is handling a group booking on call. Two more inquiries come in simultaneously. Both ring out. Both call someone else. That's ₹3,000–₹8,000 gone in 60 seconds.",
+      "Your technician is handling a group booking on call. Two more inquiries come in simultaneously. Both ring out. Both call someone else. That's ₹3,000 to ₹8,000 gone in 60 seconds.",
       "WhatsApp messages pile up during rush hours — 15 unread by evening. By the time you reply, half have already booked elsewhere. The other half don't respond anymore.",
     ],
     costCallout: {
       items: [
-        { label: "Average booking value per seat (bus, tour, cab)", amount: "₹800 – ₹4,000" },
-        { label: "Booking calls missed per day (single-person operation)", amount: "20 – 30 calls" },
-        { label: "Group bookings lost per week (after-hours, rush overlap)", amount: "3 – 5 groups" },
+        { label: "Average booking value per seat (bus, tour, cab)", amount: "₹800 to ₹4,000" },
+        { label: "Booking calls missed per day (single-person operation)", amount: "20 to 30 calls" },
+        { label: "Group bookings lost per week (after-hours, rush overlap)", amount: "3 to 5 groups" },
       ],
-      total: "₹16,000–₹1,60,000/day ($200–$2,000/day) walking to whichever operator picked up first",
+      total: "₹16,000 to ₹1,60,000/day ($200 to $2,000/day) walking to whichever operator picked up first",
       solvesFor: `${P.starterDual} — every call answered, every inquiry captured, 24/7`,
       source: "ANT Bus Services pilot data + live travel operator deployments, Agentic AI Labs 2026",
     },
@@ -2307,7 +2344,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "One person managing calls, WhatsApp, walk-ins, and dispatch simultaneously — the moment two calls overlap, one is lost forever.",
       "WhatsApp Business auto-reply: sends a template, but nobody follows up for hours. The customer already booked by then.",
-      "Hiring a second person for evenings at ₹15,000–₹20,000/month — still can't handle two calls at once, still takes weekends off, still misses the 10 PM group inquiry.",
+      "Hiring a second person for evenings at ₹15,000 to ₹20,000/month — still can't handle two calls at once, still takes weekends off, still misses the 10 PM group inquiry.",
     ],
     industrySignal: {
       headline: "In transport, the first operator who picks up wins. Speed of response is the only differentiator.",
@@ -2363,13 +2400,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     proofTitle: "We didn't build this in a lab. We built it on a live bus route in Delhi NCR.",
     proofBullets: [
-      "20–30 calls/day that previously went unanswered — now every single one is captured and sent to the operator's WhatsApp.",
+      "20 to 30 calls/day that previously went unanswered — now every single one is captured and sent to the operator's WhatsApp.",
       "Intent-triggered callbacks on online leads converted inquiries that had always gone cold before.",
       "Setup was live in 7 days. No app installs, no hardware, no changes to the operator's existing workflow.",
     ],
     caseStudy: {
       client: "ANT Bus Services — Bus Travel Agency, Delhi NCR",
-      problem: "Single operator managing all booking inquiries by phone and WhatsApp manually. During group booking rushes and after 8 PM, 20–30 calls per day were going unanswered. Competitor operators with faster response were capturing the overflow. After-hours inquiries — including group bookings worth ₹15,000–₹40,000 — were lost entirely.",
+      problem: "Single operator managing all booking inquiries by phone and WhatsApp manually. During group booking rushes and after 8 PM, 20 to 30 calls per day were going unanswered. Competitor operators with faster response were capturing the overflow. After-hours inquiries — including group bookings worth ₹15,000 to ₹40,000 — were lost entirely.",
       system: "AI booking agent deployed on the operator's existing phone number. Answers every inbound call in Hindi and English, captures route, date, passenger count, and contact details, and sends a structured WhatsApp summary to the operator's team within 10 seconds. Intent-triggered callback activated: when a lead fills a form or shows interest online, the AI calls them back within 60 seconds.",
       result: "Zero missed booking inquiries — day or night. After-hours calls fully covered for the first time. A 10 PM group booking for 18 passengers was captured, detailed, and confirmed the next morning — worth more than several months of the service cost. Live in 7 days with no changes to the operator's existing setup.",
     },
@@ -2386,7 +2423,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       headline: "Built for travel and transport operators who lose bookings because nobody picks up.",
       forYou: [
         "You run a bus, tour, cab, or transport business and get 10+ booking inquiries per day by phone or WhatsApp",
-        "You're a 1–3 person operation and can't answer every call — especially during rush hours, evenings, and weekends",
+        "You're a 1 to 3 person operation and can't answer every call — especially during rush hours, evenings, and weekends",
         "You've lost group bookings because the inquiry came in after hours and nobody responded until morning",
         "Your booking logic is straightforward: routes, dates, seats, pricing — the kind of questions a trained front desk person handles",
         "You want this live and handling real calls within 7 days — not a 3-month 'implementation project'",
@@ -2427,7 +2464,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How long does it take to set up?",
         answer:
-          "7 days from your first call with us to live on your number. Day 1: we map your routes and logic. Days 2–5: we build and train the agent. Day 6: you review test calls. Day 7: you're live. No app installs, no hardware, no changes to how your team currently works.",
+          "7 days from your first call with us to live on your number. Day 1: we map your routes and logic. Days 2 to 5: we build and train the agent. Day 6: you review test calls. Day 7: you're live. No app installs, no hardware, no changes to how your team currently works.",
       },
       {
         question: "What does it cost?",
@@ -2445,9 +2482,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll call your business number as a mystery customer, time the response, and show you exactly how many inquiries you're missing. 30 minutes. Free. No commitment.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
-      { label: "AI Receptionist for Med Spa & Clinics", href: "/ai-receptionist-for-med-spa" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai booking agent for travel agencies",
@@ -2479,7 +2518,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-dispatch-agent-for-home-services"],
     title: "AI Dispatch Agent for Home Services — Stop Losing Jobs to Missed Repair Calls",
     description:
-      "Home services businesses lose ₹1,500–₹3,000 every time a call goes unanswered. We build an AI voice dispatcher that answers 24/7, captures the fault and location, and routes the job to your team's WhatsApp — so no job walks to a competitor.",
+      "Home services businesses lose ₹1,500 to ₹3,000 every time a call goes unanswered. We build an AI voice dispatcher that answers 24/7, captures the fault and location, and routes the job to your team's WhatsApp — so no job walks to a competitor.",
     canonicalUrl: makeCanonical(["ai-dispatch-agent-for-home-services"]),
     heroLabel: "Built for AC, Plumbing, Pest & Home Repair Companies",
     heroHeadline: "Your technician is on a job. 3 calls just came in. All 3 went to your competitor.",
@@ -2489,14 +2528,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     painPoints: [
       "Calls come in at all hours — AC breaks at 11 PM, pipe bursts on a Sunday. Your team isn't available. The job goes elsewhere.",
       "When two calls come in at once, one always drops. That caller doesn't leave a voicemail — they call someone else.",
-      "Google and Meta ads run 24/7 generating inbound leads. Your team works 9:30–6:30. The gap is where revenue leaks.",
+      "Google and Meta ads run 24/7 generating inbound leads. Your team works 9:30 to 6:30. The gap is where revenue leaks.",
     ],
     costCallout: {
       items: [
-        { label: "Average home services job value (AC, plumbing, pest)", amount: "₹1,500 – ₹5,000" },
-        { label: "Missed calls per day (busy operator)", amount: "5 – 15 calls" },
+        { label: "Average home services job value (AC, plumbing, pest)", amount: "₹1,500 to ₹5,000" },
+        { label: "Missed calls per day (busy operator)", amount: "5 to 15 calls" },
       ],
-      total: "₹7,500–₹75,000/day ($100–$1,000/day) walking out every day",
+      total: "₹7,500 to ₹75,000/day ($100 to $1,000/day) walking out every day",
       solvesFor: `${P.starterDual} — the agent answers every single one`,
       source: "Pilot data — Book My Garage, home services operators, India 2026",
     },
@@ -2508,7 +2547,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "A dedicated dispatcher who still misses overlap calls and goes offline at night.",
       "WhatsApp Business auto-reply that sends a generic message — but still needs a human to actually respond.",
-      "Hiring a night-shift receptionist for ₹15,000–₹20,000/month who still can't handle two simultaneous calls.",
+      "Hiring a night-shift receptionist for ₹15,000 to ₹20,000/month who still can't handle two simultaneous calls.",
     ],
     industrySignal: {
       headline: "24/7 availability is now the baseline expectation — not a differentiator.",
@@ -2546,7 +2585,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD THE DISPATCHER",
-        body: "Days 2–6 — We build the dispatch agent. Trained on your services, your pricing, your geography. Hindi, English, or regional language from day one.",
+        body: "Days 2 to 6 — We build the dispatch agent. Trained on your services, your pricing, your geography. Hindi, English, or regional language from day one.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -2570,7 +2609,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Home Services Marketplace — Bangalore",
-      problem: "Google and Meta ads running 24/7 generating 30–40 inbound calls per day. Team available 9:30 AM–6:30 PM. Every lead arriving outside those hours sat cold until morning — by which time they'd already called three other providers.",
+      problem: "Google and Meta ads running 24/7 generating 30 to 40 inbound calls per day. Team available 9:30 AM to 6:30 PM. Every lead arriving outside those hours sat cold until morning — by which time they'd already called three other providers.",
       system: "AI dispatch agent deployed on the business number. Handles all inbound calls 24/7. Captures fault type, location, and contact info. Routes hot jobs to the team lead's WhatsApp in real time. Standard inquiries queued for morning review.",
       result: "After-hours leads no longer go cold. Job dispatch time from call to WhatsApp ping dropped to under 60 seconds. Team starts each morning with a structured list of overnight inquiries — not a pile of missed calls.",
     },
@@ -2608,7 +2647,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What languages does it handle?",
         answer:
-          "Hindi and English confirmed on day one. Marathi, Gujarati, Tamil available with 2–3 days additional training. Regional variants (Bhojpuri, Haryanvi) available on request. The agent detects the caller's language and responds accordingly.",
+          "Hindi and English confirmed on day one. Marathi, Gujarati, Tamil available with 2 to 3 days additional training. Regional variants (Bhojpuri, Haryanvi) available on request. The agent detects the caller's language and responds accordingly.",
       },
       {
         question: "Does it integrate with my existing system?",
@@ -2631,9 +2670,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll map your call flow and show exactly what the agent would handle — before you commit to anything.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Booking Agent for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI for Pest Control", href: "/ai-for-pest-control" },
+      { label: "AI Booking Agent for Salons", href: "/ai-booking-agent-for-salon" },
+      { label: "AI for Gyms and Fitness", href: "/ai-for-gym-fitness" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai dispatch agent for home services",
@@ -2666,21 +2708,21 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     painTitle: "The screening bottleneck that costs you placements every week",
     painPoints: [
       "Applications arrive faster than your team can call them back. The ones you don't reach first go to your competitor's pipeline.",
-      "First-round screening is the same 5 questions every time — but it takes a human caller 8–12 minutes per candidate, all day, every day.",
+      "First-round screening is the same 5 questions every time — but it takes a human caller 8 to 12 minutes per candidate, all day, every day.",
       "Language is a hard barrier. A team that only speaks standard Hindi loses Bihar and UP workers who speak Bhojpuri or Maithili.",
     ],
     costCallout: {
       items: [
-        { label: "Human first-round caller cost (India)", amount: "₹15,000 – ₹20,000 / month" },
-        { label: "Candidates screened per human caller per day", amount: "40 – 60 max" },
-        { label: "Candidates screened by AI per day", amount: "500 – 1,000+" },
+        { label: "Human first-round caller cost (India)", amount: "₹15,000 to ₹20,000 / month" },
+        { label: "Candidates screened per human caller per day", amount: "40 to 60 max" },
+        { label: "Candidates screened by AI per day", amount: "500 to 1,000+" },
       ],
       total: "3 callers × ₹18,000/month ($700/month) = ₹54,000/month ($2,100/month) to screen what AI does for a fraction",
       solvesFor: `${P.proDual} — unlimited concurrent screening in any language`,
       source: "Pipeline data — Digital Labour Chowk, Gulf Jobs, Agentic AI Labs, 2026",
     },
     practitionerQuote: {
-      text: "We got 150–200 calls a day after the TV feature. We had 8 people. It was humanly impossible to keep up. Half the candidates were gone by the time we called them back.",
+      text: "We got 150 to 200 calls a day after the TV feature. We had 8 people. It was humanly impossible to keep up. Half the candidates were gone by the time we called them back.",
       attribution: "Blue-collar hiring platform founder, Delhi NCR — Agentic AI Labs sales call, 2026",
     },
     statusQuoTitle: "What most hiring agencies try first",
@@ -2691,7 +2733,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "Blue-collar hiring platforms are seeing application volume they can't manually process.",
-      body: "Staffing platforms in logistics, construction, and manufacturing report 3–5× growth in inbound applications since 2024 — driven by job portal integrations and social media outreach. The bottleneck has shifted from sourcing to screening. Platforms that automate first-round qualification fill roles 4× faster than those still using manual calling teams. Language handling is the differentiator — platforms that screen in regional languages (Bhojpuri, Maithili, Tamil) access candidate pools their competitors can't reach.",
+      body: "Staffing platforms in logistics, construction, and manufacturing report 3 to 5× growth in inbound applications since 2024 — driven by job portal integrations and social media outreach. The bottleneck has shifted from sourcing to screening. Platforms that automate first-round qualification fill roles 4× faster than those still using manual calling teams. Language handling is the differentiator — platforms that screen in regional languages (Bhojpuri, Maithili, Tamil) access candidate pools their competitors can't reach.",
       source: "IndiaHires Industry Report + Agentic AI Labs pipeline data, Q1 2026",
       date: "Q1 2026",
     },
@@ -2725,7 +2767,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD THE INTERVIEWER",
-        body: "Days 2–7 — AI interviewer built and trained on your questions, your qualification thresholds, and your languages. CRM integration mapped. Call recording configured.",
+        body: "Days 2 to 7 — AI interviewer built and trained on your questions, your qualification thresholds, and your languages. CRM integration mapped. Call recording configured.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -2749,7 +2791,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Blue-Collar Hiring Platform — Delhi NCR",
-      problem: "Platform received 150–200 application calls per day following a TV feature. 8 team members trying to run first-round screening manually — 3-hour backlogs building by 10 AM daily. Candidates were applying to 5–10 platforms simultaneously; whoever called first got them.",
+      problem: "Platform received 150 to 200 application calls per day following a TV feature. 8 team members trying to run first-round screening manually — 3-hour backlogs building by 10 AM daily. Candidates were applying to 5 to 10 platforms simultaneously; whoever called first got them.",
       system: "AI first-round interviewer deployed on the inbound application number. Every call triggers an immediate screening call in the applicant's language. Qualification responses stored in Tele CRM. Recordings saved. Qualified candidates flagged for human follow-up. Unqualified candidates receive automated closure.",
       result: "Application backlog eliminated. 100% of inbound applications screened on same-day basis. Human callers shifted from first-round screening to offer and onboarding calls only — higher-value work, no more repetitive qualification.",
     },
@@ -2767,7 +2809,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       forYou: [
         "You run a blue-collar, construction, logistics, or manufacturing hiring platform or agency",
         "You receive 50+ applications per day and can't call all of them back in time",
-        "Your first-round screen is 5–10 standard questions that are the same for every candidate",
+        "Your first-round screen is 5 to 10 standard questions that are the same for every candidate",
         "Language diversity in your candidate pool (Hindi, regional languages) is a real operational challenge",
         "You want qualified candidates only — not a full list of every applicant",
       ],
@@ -2809,9 +2851,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your screening questions and show you the exact qualification flow the AI would run.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
-      { label: "Best AI Tools for Recruiting Agencies", href: "/best-ai-tools-for-recruiting-agencies" },
+      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
+      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai interviewer for blue collar hiring",
@@ -2836,7 +2880,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-show-up-agent-for-online-coaching"],
     title: "AI Show-Up Agent for Coaching — Go from 50% to 70%+ Show-Up Rate in 2 Weeks",
     description:
-      "Industry average show-up rate for coaching businesses is 45–55%. Your lead filled the form, watched your content, picked a slot — then didn't show. We build an AI confirmation agent that calls every booked lead before their slot, handles reschedules, and updates your CRM — so your sales team only shows up to calls that are already confirmed.",
+      "Industry average show-up rate for coaching businesses is 45 to 55%. Your lead filled the form, watched your content, picked a slot — then didn't show. We build an AI confirmation agent that calls every booked lead before their slot, handles reschedules, and updates your CRM — so your sales team only shows up to calls that are already confirmed.",
     canonicalUrl: makeCanonical(["ai-show-up-agent-for-online-coaching"]),
     heroLabel: "Built for Online Coaching & Mentorship Businesses",
     heroHeadline: "Half your booked calls aren't showing up. One AI confirmation call fixes that.",
@@ -2844,13 +2888,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Your lead filled the form. Watched your content. Booked a time. Then didn't show. Half of them every week. The only thing between you and that revenue is one voice confirmation call — two hours before.",
     painTitle: "The revenue you already earned — and lost between 'booked' and 'started'",
     painPoints: [
-      "Industry average show-up rate is 45–55%. Half of every sales call you have scheduled is revenue that evaporates before it starts.",
+      "Industry average show-up rate is 45 to 55%. Half of every sales call you have scheduled is revenue that evaporates before it starts.",
       "Text reminders and emails are ignored. The only medium that consistently moves a no-show to a show is a voice call. But calling 70 leads manually before their slots isn't sustainable.",
       "When a lead doesn't show, you still paid for the ad, the lead form, and the calendar spot. The acquisition cost already happened — you just didn't get the revenue.",
     ],
     costCallout: {
       items: [
-        { label: "Average ticket price (coaching / mentorship)", amount: "$500 – $10,000" },
+        { label: "Average ticket price (coaching / mentorship)", amount: "$500 to $10,000" },
         { label: "Weekly booked calls at 45% show-up (75 calls/week)", amount: "34 live calls, 41 no-shows" },
         { label: "At 70% show-up (same 75 calls/week)", amount: "53 live calls — 19 recovered" },
       ],
@@ -2876,14 +2920,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     solutionTitle: "One confirmation call. 20% more live conversations. Same ad spend.",
     solutionItems: [
-      "AI calls every booked lead 2–3 hours before their scheduled slot to confirm they're still coming.",
+      "AI calls every booked lead 2 to 3 hours before their scheduled slot to confirm they're still coming.",
       "Handles reschedules in real time — books a new slot, updates GHL, no human needed.",
       "Logs every confirmation result back to your CRM so your sales team's view is always current.",
     ],
     layers: [
       {
         title: "Calls every booked lead 2 hours before — not a text, a voice call.",
-        body: "2–3 hours before every scheduled call, the AI calls the booked lead. Not a text. Not an email. A voice call — natural, brief, warm. 'Hey, confirming your call with [Coach] at 3 PM today — are you still good to go?' The lead who was drifting reconnects with the commitment they made. Show-up rate moves. Validated in live pilots at 50% → 70%+.",
+        body: "2 to 3 hours before every scheduled call, the AI calls the booked lead. Not a text. Not an email. A voice call — natural, brief, warm. 'Hey, confirming your call with [Coach] at 3 PM today — are you still good to go?' The lead who was drifting reconnects with the commitment they made. Show-up rate moves. Validated in live pilots at 50% → 70%+.",
       },
       {
         title: "Catches cancellations and rebooks in the same call.",
@@ -2904,19 +2948,19 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD THE CONFIRMATION AGENT",
-        body: "Days 2–3 — AI confirmation agent built with your tone, your coach's name, your offer context. Natural script — not robotic, not scripted-sounding.",
+        body: "Days 2 to 3 — AI confirmation agent built with your tone, your coach's name, your offer context. Natural script — not robotic, not scripted-sounding.",
         youSpend: "Nothing. We build.",
       },
       {
         week: 3,
         phase: "TEST AGAINST REAL BOOKINGS",
         body: "Day 4 — Test calls against real booked lead scenarios: confirmation, reschedule request, no-answer, wrong number. You review recordings.",
-        youSpend: "20 minutes reviewing 5–6 test call recordings.",
+        youSpend: "20 minutes reviewing 5 to 6 test call recordings.",
       },
       {
         week: 4,
         phase: "GO LIVE — EVERY SLOT CONFIRMED",
-        body: "Day 5 — Live. Every new booking triggers a confirmation call 2–3 hours before the slot. GHL updates in real time. We monitor for 30 days and tune based on your actual show-up data.",
+        body: "Day 5 — Live. Every new booking triggers a confirmation call 2 to 3 hours before the slot. GHL updates in real time. We monitor for 30 days and tune based on your actual show-up data.",
         youSpend: "Zero. Watch your show-up rate climb.",
       },
     ],
@@ -2929,7 +2973,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     caseStudy: {
       client: "MPM — My Personal Mentors, Canada",
       problem: "Coaching business running 75 booked sales calls per week. Show-up rate was 50%. Half of every week's pipeline was evaporating between booking and call time. Email and SMS reminders were being ignored. Manual follow-up by the sales team was pulling closers off revenue work.",
-      system: "AI show-up agent integrated with GoHighLevel. Triggers confirmation call 2–3 hours before every scheduled slot. Handles reschedules, books new slots, logs results back to GHL automatically. Human sales team only interacts with confirmed, live leads.",
+      system: "AI show-up agent integrated with GoHighLevel. Triggers confirmation call 2 to 3 hours before every scheduled slot. Handles reschedules, books new slots, logs results back to GHL automatically. Human sales team only interacts with confirmed, live leads.",
       result: "Show-up rate moved from 50% to 70%+. 15 additional live conversations per week from the same lead volume. Sales team stopped doing confirmation calls entirely — now only on revenue-generating conversations.",
     },
     testimonial: {
@@ -2989,9 +3033,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "Tell us your current show-up rate. We'll show you the math on what a 20% improvement means for your revenue.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
+      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
+      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai show up agent for coaching businesses",
@@ -3026,13 +3072,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     painTitle: "Every missed call in real estate has a commission attached to it",
     painPoints: [
       "Agents showing one property can't answer inquiries on another. The window before a hot lead moves to a competitor is under 3 minutes.",
-      "20–25 inbound calls per day from buyers, renters, and referrals — while simultaneously doing outbound follow-up and showings. Something always gets missed.",
+      "20 to 25 inbound calls per day from buyers, renters, and referrals — while simultaneously doing outbound follow-up and showings. Something always gets missed.",
       "One lost 2M AED transaction = 40,000 AED in commission gone. A single missed call has a price tag most agents don't quantify until they lose the deal.",
     ],
     costCallout: {
       items: [
-        { label: "Commission on a 2M AED transaction (India: ₹1Cr+ property)", amount: "₹2,00,000 – ₹4,00,000" },
-        { label: "Inbound inquiries per day (active agent / brokerage)", amount: "20 – 50 calls" },
+        { label: "Commission on a 2M AED transaction (India: ₹1Cr+ property)", amount: "₹2,00,000 to ₹4,00,000" },
+        { label: "Inbound inquiries per day (active agent / brokerage)", amount: "20 to 50 calls" },
         { label: "Window before a hot lead goes to a competitor", amount: "3 minutes" },
       ],
       total: "1 missed inquiry/day × 5% close rate × ₹2L ($2,500) avg commission = ₹3,65,000/year ($4,500/year) leaving through the door",
@@ -3058,7 +3104,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     solutionTitle: "Every inquiry answered. Every lead qualified. Every commission protected.",
     solutionItems: [
       "Answers every inbound call while you're in a showing — instantly, professionally, as your first-layer receptionist.",
-      "Asks 3–4 qualifying questions: property type, budget, timeline, location preference.",
+      "Asks 3 to 4 qualifying questions: property type, budget, timeline, location preference.",
       "Logs the full lead record to your CRM so you follow up with context — not a cold callback.",
     ],
     layers: [
@@ -3068,7 +3114,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "Qualifies the lead — budget, type, timeline — before you call back.",
-        body: "Budget range. Property type (buy / rent). Timeline. Location preference. Are they working with another agent? These 4–5 questions filter time-wasters from serious buyers and tell you everything you need to prioritize your callback. Every lead logged with full responses before you even know the call happened.",
+        body: "Budget range. Property type (buy / rent). Timeline. Location preference. Are they working with another agent? These 4 to 5 questions filter time-wasters from serious buyers and tell you everything you need to prioritize your callback. Every lead logged with full responses before you even know the call happened.",
       },
       {
         title: "Flags hot leads to your WhatsApp. Batches the rest.",
@@ -3085,7 +3131,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD THE SHOWING COORDINATOR",
-        body: "Days 2–7 — AI showing coordinator built and trained on your listings context, your qualification criteria, and your languages. CRM integration mapped.",
+        body: "Days 2 to 7 — AI showing coordinator built and trained on your listings context, your qualification criteria, and your languages. CRM integration mapped.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -3109,7 +3155,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Real Estate Agent — Mumbai (Active Brokerage)",
-      problem: "Agent handling 20–25 inbound calls per day while running outbound follow-up and active showings simultaneously. Hot listing inquiries regularly going unanswered while agent was with other buyers. Estimated 3–5 potential leads per week lost to competing agents who picked up first.",
+      problem: "Agent handling 20 to 25 inbound calls per day while running outbound follow-up and active showings simultaneously. Hot listing inquiries regularly going unanswered while agent was with other buyers. Estimated 3 to 5 potential leads per week lost to competing agents who picked up first.",
       system: "AI first-layer showing coordinator deployed on agent's business number. Answers all inbound calls, runs 4-question qualification (type, budget, timeline, location), logs structured record to CRM, flags hot leads for immediate callback alert to agent's WhatsApp.",
       result: "Zero missed inbound inquiries during showings. Agent receives hot lead alerts in real time with full qualification context. Callback conversion improved because agent calls back with the buyer's budget and intent already known — not starting from scratch.",
     },
@@ -3170,9 +3216,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your current inquiry volume and show you exactly what the agent handles — before you commit to anything.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Booking for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
-      { label: "Best AI Voice Agents for Business", href: "/best-ai-voice-agents-for-business" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai showing coordinator for real estate",
@@ -3196,7 +3245,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-receptionist-for-med-spa"],
     title: "AI Receptionist for Med Spas — Capture Every After-Hours Treatment Inquiry",
     description:
-      "A caller rings at 7 PM about a Botox consultation or laser treatment. Your front desk is gone. That lead — worth ₹15,000–₹80,000 in treatment revenue — just called the next clinic on Google. We build an AI receptionist that answers after hours, captures treatment interest and contact details, and logs everything so your team follows up before the lead goes cold.",
+      "A caller rings at 7 PM about a Botox consultation or laser treatment. Your front desk is gone. That lead — worth ₹15,000 to ₹80,000 in treatment revenue — just called the next clinic on Google. We build an AI receptionist that answers after hours, captures treatment interest and contact details, and logs everything so your team follows up before the lead goes cold.",
     canonicalUrl: makeCanonical(["ai-receptionist-for-med-spa"]),
     heroLabel: "Built for Med Spas, Aesthetic & Cosmetic Clinics",
     heroHeadline: "A ₹50,000 Botox inquiry called at 8 PM. Your front desk was gone. So was the booking.",
@@ -3205,13 +3254,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     painTitle: "High-value treatment inquiries don't arrive on a schedule",
     painPoints: [
       "Potential clients researching Botox, laser, or cosmetic procedures often call in the evening after work. Your front desk is gone. The call rings out.",
-      "Cosmetic treatment decisions are comparison-driven — the prospect is calling 3–5 clinics. The first one that responds wins the consultation.",
-      "1 lost Botox series = ₹25,000–₹50,000. 1 lost laser package = ₹40,000–₹80,000. 1 lost hair transplant inquiry = ₹1,00,000+. The cost of a missed call is not ₹0.",
+      "Cosmetic treatment decisions are comparison-driven — the prospect is calling 3 to 5 clinics. The first one that responds wins the consultation.",
+      "1 lost Botox series = ₹25,000 to ₹50,000. 1 lost laser package = ₹40,000 to ₹80,000. 1 lost hair transplant inquiry = ₹1,00,000+. The cost of a missed call is not ₹0.",
     ],
     costCallout: {
       items: [
-        { label: "Average aesthetic treatment package value", amount: "₹25,000 – ₹1,00,000" },
-        { label: "After-hours inquiries missed (active clinic)", amount: "5 – 15 per week" },
+        { label: "Average aesthetic treatment package value", amount: "₹25,000 to ₹1,00,000" },
+        { label: "After-hours inquiries missed (active clinic)", amount: "5 to 15 per week" },
         { label: "Comparison window (how long before they call next clinic)", amount: "Under 10 minutes" },
       ],
       total: "5 missed inquiries/week × 20% close × ₹40,000 ($500) avg = ₹20,000/week ($250/week) walking out the door",
@@ -3225,7 +3274,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoTitle: "What most aesthetic clinics try first",
     statusQuoItems: [
       "A voicemail box that prospects never leave a message on — they hang up and call the next clinic immediately.",
-      "A second receptionist for evening hours — adds ₹15,000–₹25,000/month and still doesn't cover weekends or public holidays.",
+      "A second receptionist for evening hours — adds ₹15,000 to ₹25,000/month and still doesn't cover weekends or public holidays.",
       "Online booking forms that require navigating the website — too much friction for a caller who wants a quick answer about pricing and availability.",
     ],
     industrySignal: {
@@ -3264,7 +3313,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD THE RECEPTIONIST",
-        body: "Days 2–7 — AI receptionist built and trained on your treatments, your pricing boundaries, your intake script. English, Hindi, or Arabic depending on your market.",
+        body: "Days 2 to 7 — AI receptionist built and trained on your treatments, your pricing boundaries, your intake script. English, Hindi, or Arabic depending on your market.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -3280,7 +3329,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         youSpend: "Zero. Every after-hours inquiry is captured and logged before morning.",
       },
     ],
-    proofTitle: "8–10 after-hours inquiries per week — every one now captured.",
+    proofTitle: "8 to 10 after-hours inquiries per week — every one now captured.",
     proofBullets: [
       "Same first-layer receptionist model validated in dental clinic deployments — missed call to captured inquiry in under 3 minutes.",
       "Treatment intake script handles pricing questions, appointment interest, and escalation triggers without disclosing sensitive clinical details.",
@@ -3288,8 +3337,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Aesthetic Clinic — Metro India (Analogous Dental Clinic Model)",
-      problem: "Clinic receiving 8–12 after-hours treatment inquiries per week — primarily for Botox, laser, and PRP packages. Front desk unavailable after 7 PM and on weekends. High-value prospects calling multiple clinics simultaneously; whichever answered first won the consultation booking.",
-      system: "AI first-layer receptionist deployed on clinic's main number. Handles after-hours calls 7 PM – 9 AM and weekends. Captures treatment interest, preferred timing, and contact details. Logs structured intake records for morning front desk review. High-ticket inquiries trigger WhatsApp alert to clinic manager.",
+      problem: "Clinic receiving 8 to 12 after-hours treatment inquiries per week — primarily for Botox, laser, and PRP packages. Front desk unavailable after 7 PM and on weekends. High-value prospects calling multiple clinics simultaneously; whichever answered first won the consultation booking.",
+      system: "AI first-layer receptionist deployed on clinic's main number. Handles after-hours calls 7 PM to 9 AM and weekends. Captures treatment interest, preferred timing, and contact details. Logs structured intake records for morning front desk review. High-ticket inquiries trigger WhatsApp alert to clinic manager.",
       result: "After-hours inquiry capture rate went from near-zero to 100%. Morning front desk review queue includes structured lead records — treatment interest, contact, urgency. First-response advantage recovered against competing clinics.",
     },
     testimonial: {
@@ -3349,9 +3398,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your treatment menu and after-hours call volume — and show you exactly what the agent handles before you commit.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Receptionist for Dental Practices", href: "/ai-receptionist-for-dental-practices" },
-      { label: "AI Receptionist for Medical Clinics", href: "/ai-receptionist-for-medical-clinics" },
+      { label: "AI Receptionist for Dental Clinics", href: "/ai-receptionist-for-dental-clinic" },
+      { label: "AI for Diagnostic Labs", href: "/ai-for-diagnostic-lab" },
+      { label: "Best AI Tools for Dental", href: "/best-ai-tools-for-dental-practices" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai receptionist for med spa",
@@ -3390,13 +3441,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Leads lost to unanswered calls (10+ missed/week)", amount: "$500–$2,000 / week" },
-        { label: "SDR time on manual follow-up and qualification", amount: "$2,000–$4,000 / month" },
-        { label: "Pipeline leakage from no-context callbacks", amount: "$1,000–$3,000 / month" },
+        { label: "Leads lost to unanswered calls (10+ missed/week)", amount: "$500 to $2,000 / week" },
+        { label: "SDR time on manual follow-up and qualification", amount: "$2,000 to $4,000 / month" },
+        { label: "Pipeline leakage from no-context callbacks", amount: "$1,000 to $3,000 / month" },
       ],
-      total: "$5,000–$12,000+/month in revenue lost to a text-only chatbot covering a voice-first pipeline",
-      solvesFor: "$1,500–$3,000 / month for a full voice + memory system that plugs into GHL",
-      source: "Internal estimates based on GHL agency audits, 2025–2026",
+      total: "$5,000 to $12,000+/month in revenue lost to a text-only chatbot covering a voice-first pipeline",
+      solvesFor: "$1,500 to $3,000 / month for a full voice + memory system that plugs into GHL",
+      source: "Internal estimates based on GHL agency audits, 2025 to 2026",
     },
     practitionerQuote: {
       text: "GHL is great infrastructure. The problem is the built-in chatbot only handles text. Half my leads call. They don't text. I needed something that actually picks up the phone and talks to people — and still updates my pipeline.",
@@ -3406,7 +3457,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "Enable the built-in AI chatbot and hope leads prefer texting. They don't — 60%+ of inbound leads in service businesses still call.",
       "Stack a separate voice tool on top of GHL with Zapier or Make as glue. It works until webhook failures silently drop leads at scale.",
-      "Hire an SDR to answer calls manually and update GHL — adding $3,000–$5,000/month in payroll for a problem that should be automated.",
+      "Hire an SDR to answer calls manually and update GHL — adding $3,000 to $5,000/month in payroll for a problem that should be automated.",
     ],
     industrySignal: {
       headline: "GHL agencies are racing to add voice AI — but the built-in chatbot isn't keeping up.",
@@ -3444,7 +3495,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD",
-        body: "Day 1 afternoon – Day 3 — We build the AI voice agent, connect it to your GHL account, add Mem0 memory mapped to your contacts, and wire automation for opportunity updates, routing, and confirmations.",
+        body: "Day 1 afternoon to Day 3 — We build the AI voice agent, connect it to your GHL account, add Mem0 memory mapped to your contacts, and wire automation for opportunity updates, routing, and confirmations.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -3456,7 +3507,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE",
-        body: "Day 5–7 — Live on your tracking numbers. Every call answered, every lead qualified, every pipeline stage updated automatically. We monitor for 30 days and tune on real data.",
+        body: "Day 5 to 7 — Live on your tracking numbers. Every call answered, every lead qualified, every pipeline stage updated automatically. We monitor for 30 days and tune on real data.",
         youSpend: "Zero. Your GHL pipeline updates itself.",
       },
     ],
@@ -3468,7 +3519,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "GHL Agency — Home Services Clients",
-      problem: "Agency running 12 GHL sub-accounts for home services clients. Built-in chatbot handled text inquiries but 60%+ of leads called. Calls went to voicemail or a shared receptionist with no GHL integration. Pipeline stages were updated manually, often 24–48 hours late. Leads went cold before follow-up.",
+      problem: "Agency running 12 GHL sub-accounts for home services clients. Built-in chatbot handled text inquiries but 60%+ of leads called. Calls went to voicemail or a shared receptionist with no GHL integration. Pipeline stages were updated manually, often 24 to 48 hours late. Leads went cold before follow-up.",
       system: "AI voice agent deployed across all sub-accounts. Answers every inbound call, qualifies using client-specific criteria, updates GHL opportunity stages in real time. Mem0 memory layer maps to GHL contacts — returning callers get continuity. Hot leads route to closers instantly with full context.",
       result: "Zero missed inbound calls across all sub-accounts. Pipeline stages update within 60 seconds of call completion. Client-reported lead response time dropped from 4+ hours to under 2 minutes. Agency retained 3 at-risk accounts by demonstrating measurable pipeline improvement.",
     },
@@ -3520,7 +3571,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What does it cost?",
         answer:
-          "GHL voice agent projects start at $3,000–$6,000 for the initial build, with $1,500–$2,500/month for ongoing monitoring and optimization. Multi-sub-account deployments are priced per account. We scope it clearly before you commit.",
+          "GHL voice agent projects start at $3,000 to $6,000 for the initial build, with $1,500 to $2,500/month for ongoing monitoring and optimization. Multi-sub-account deployments are priced per account. We scope it clearly before you commit.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3529,8 +3580,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+      { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
+      { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
+      { label: "Vapi + GoHighLevel", href: "/vapi-gohighlevel-integration" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ghl ai chatbot alternative",
@@ -3568,11 +3622,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "DIY platform cost (Vapi/Retell API + telephony)", amount: "$200–$800 / month" },
-        { label: "Developer to build and maintain the system", amount: "$2,000–$5,000 / month" },
-        { label: "Your time managing, debugging, and firefighting", amount: "10–20 hours / month" },
+        { label: "DIY platform cost (Vapi/Retell API + telephony)", amount: "$200 to $800 / month" },
+        { label: "Developer to build and maintain the system", amount: "$2,000 to $5,000 / month" },
+        { label: "Your time managing, debugging, and firefighting", amount: "10 to 20 hours / month" },
       ],
-      total: "DIY total: $3,000–$6,000/month + your time — for a system that still breaks",
+      total: "DIY total: $3,000 to $6,000/month + your time — for a system that still breaks",
       solvesFor: `Done-for-you: ${P.starterINR}/mo (${P.starterUSD}/mo) — we build, deploy, and manage everything`,
       source: "Based on client audits of DIY voice AI implementations, Agentic AI Labs 2026",
     },
@@ -3605,7 +3659,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "We deploy it on your number in 7 days.",
-        body: "Day 1: audit call. Days 2–5: we build. Day 6: you review test calls. Day 7: live on your number. No app installs. No developer needed. No migration. Your customers call the same number they've always called — except now every call gets answered.",
+        body: "Day 1: audit call. Days 2 to 5: we build. Day 6: you review test calls. Day 7: live on your number. No app installs. No developer needed. No migration. Your customers call the same number they've always called — except now every call gets answered.",
       },
       {
         title: "We manage it so you never touch the tech.",
@@ -3628,8 +3682,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 3,
         phase: "YOU REVIEW, WE REFINE",
-        body: "We send you 5–10 test call recordings. You listen, tell us what sounds right and what doesn't. We refine the agent until it handles your calls the way you would.",
-        youSpend: "20–30 minutes reviewing recordings.",
+        body: "We send you 5 to 10 test call recordings. You listen, tell us what sounds right and what doesn't. We refine the agent until it handles your calls the way you would.",
+        youSpend: "20 to 30 minutes reviewing recordings.",
       },
       {
         week: 4,
@@ -3642,11 +3696,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     proofBullets: [
       "Average time from first call to live agent: 7 days. Fastest: 2 days (simple inbound FAQ agent).",
       "Clients who switched from DIY to done-for-you saved an average of $3,000/month in developer and maintenance costs.",
-      "100% of agents deployed in Hindi + English. Regional languages (Marathi, Tamil, Gujarati, Arabic) added in 2–3 days.",
+      "100% of agents deployed in Hindi + English. Regional languages (Marathi, Tamil, Gujarati, Arabic) added in 2 to 3 days.",
     ],
     caseStudy: {
       client: "Multi-Vertical — 50+ Agents Deployed",
-      problem: "Business owners across travel, home services, coaching, real estate, and healthcare were losing leads to missed calls, after-hours gaps, and slow follow-up. Most had tried DIY platforms and failed — or were paying developers $3K–$5K/month to maintain fragile systems.",
+      problem: "Business owners across travel, home services, coaching, real estate, and healthcare were losing leads to missed calls, after-hours gaps, and slow follow-up. Most had tried DIY platforms and failed — or were paying developers $3K to $5K/month to maintain fragile systems.",
       system: "Done-for-you AI voice agent built on each business's exact workflow. Voice + WhatsApp + CRM integration. Deployed on existing business numbers. Hindi, English, and regional language support. 30-day monitored launch with weekly tuning.",
       result: "Zero missed calls from day one. After-hours coverage for the first time. WhatsApp follow-up automated. Clients report the agent pays for itself within the first week — typically from a single captured lead that would have gone to a competitor.",
     },
@@ -3666,7 +3720,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "You've tried a DIY platform (Vapi, Retell, Bland) and realized it needs more engineering than you have",
         "You lose leads to missed calls, after-hours gaps, or slow follow-up — and you want it fixed in days, not months",
         "You want someone to build, deploy, and manage the AI — not hand you a tool and walk away",
-        `Your budget is ${P.starterINR}–${P.entINR}/month (${P.starterUSD}–${P.proUSD}/month) — not $5K/month for a developer`,
+        `Your budget is ${P.starterINR} to ${P.entINR}/month (${P.starterUSD} to ${P.proUSD}/month) — not $5K/month for a developer`,
       ],
       notForYou: [
         "You have an in-house engineering team that wants to build and maintain the voice AI system themselves",
@@ -3689,12 +3743,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How long does it take to go live?",
         answer:
-          "7 days from your first call with us. Day 1: audit. Days 2–5: build. Day 6: you review test calls. Day 7: live. Some simple agents (FAQ, appointment booking) launch in 2–3 days.",
+          "7 days from your first call with us. Day 1: audit. Days 2 to 5: build. Day 6: you review test calls. Day 7: live. Some simple agents (FAQ, appointment booking) launch in 2 to 3 days.",
       },
       {
         question: "What languages does the AI handle?",
         answer:
-          "Hindi, English, and Hinglish from day one. Marathi, Gujarati, Tamil, Telugu, Arabic available with 2–3 days additional setup. The agent detects the caller's language and responds in kind.",
+          "Hindi, English, and Hinglish from day one. Marathi, Gujarati, Tamil, Telugu, Arabic available with 2 to 3 days additional setup. The agent detects the caller's language and responds in kind.",
       },
       {
         question: "What happens if the AI can't answer something?",
@@ -3714,7 +3768,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "Can I switch from a DIY setup I already built?",
         answer:
-          "Yes. We migrate your existing setup — whether it's on Vapi, Retell, Bland, or a custom build. We audit what you have, keep what works, rebuild what doesn't, and take over management. Most migrations complete in 5–7 days.",
+          "Yes. We migrate your existing setup — whether it's on Vapi, Retell, Bland, or a custom build. We audit what you have, keep what works, rebuild what doesn't, and take over management. Most migrations complete in 5 to 7 days.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -3722,9 +3776,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll build it, deploy it, and manage it. You just answer the qualified leads.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Booking Agent for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
-      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
-      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Retell AI Alternative", href: "/retell-ai-alternative" },
+      { label: "Bland AI Alternative", href: "/bland-ai-alternative" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "done for you ai voice agent",
@@ -3758,8 +3814,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "One works 24/7, speaks 5 languages, handles 10 calls simultaneously, and never calls in sick. The other takes lunch breaks. This is the honest comparison — with real numbers in ₹ and $.",
     painTitle: "What a human receptionist actually costs you",
     painPoints: [
-      `Salary: ${P.humanINR} ($200–$300/month). Add training, benefits, sick days, and turnover costs — the real number is 30–40% higher than the salary alone.`,
-      "Availability: 8–10 hours per day, 5–6 days per week. Every call outside those hours goes to voicemail. Weekend and holiday inquiries are gone.",
+      `Salary: ${P.humanINR} ($200 to $300/month). Add training, benefits, sick days, and turnover costs — the real number is 30 to 40% higher than the salary alone.`,
+      "Availability: 8 to 10 hours per day, 5 to 6 days per week. Every call outside those hours goes to voicemail. Weekend and holiday inquiries are gone.",
       "Capacity: One call at a time. When two calls come in simultaneously, one rings out. That caller doesn't leave a voicemail — they call your competitor.",
     ],
     costCallout: {
@@ -3768,7 +3824,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         { label: "Human receptionist (US/UK/UAE)", amount: `${P.humanUSD}` },
         { label: "AI receptionist", amount: `${P.starterINR} / ${P.starterUSD} / month` },
       ],
-      total: "Human = ₹3,00,000/year ($24,000–$48,000/year). AI = ₹29,988/year ($3,588/year). That's a 10x cost difference.",
+      total: "Human = ₹3,00,000/year ($24,000 to $48,000/year). AI = ₹29,988/year ($3,588/year). That's a 10x cost difference.",
       solvesFor: `${P.starterDual} — 24/7, multilingual, unlimited concurrent calls`,
       source: "Salary data: Glassdoor India + BLS (US), 2026. AI pricing: Agentic AI Labs.",
     },
@@ -3836,8 +3892,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     proofTitle: "The numbers don't lie. Here's the real comparison.",
     proofBullets: [
-      "AI answers in < 3 rings. Human average: 4–6 rings (if available).",
-      "AI available 24/7/365. Human available 8–10 hours, 5–6 days/week.",
+      "AI answers in < 3 rings. Human average: 4 to 6 rings (if available).",
+      "AI available 24/7/365. Human available 8 to 10 hours, 5 to 6 days/week.",
       "AI handles unlimited concurrent calls. Human handles 1 at a time.",
     ],
     proofStats: [
@@ -3892,9 +3948,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "See the pricing plans and calculate your savings. We'll show you the exact comparison for your business.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
-      { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Dispatch for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI for Pest Control", href: "/ai-for-pest-control" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai vs human receptionist",
@@ -3918,25 +3976,25 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-for-missed-calls"],
     title: "AI for Missed Calls — Stop Losing Revenue to an Unanswered Phone",
     description:
-      "The average service business misses 20–40% of inbound calls. Each missed call is a customer who called your competitor instead. We build an AI voice agent that answers every call, captures the inquiry, and sends your team a WhatsApp summary — 24/7.",
+      "The average service business misses 20 to 40% of inbound calls. Each missed call is a customer who called your competitor instead. We build an AI voice agent that answers every call, captures the inquiry, and sends your team a WhatsApp summary — 24/7.",
     canonicalUrl: makeCanonical(["ai-for-missed-calls"]),
     heroLabel: "The Missed Call Problem",
     heroHeadline: "Every missed call is a customer who just called your competitor.",
     heroSubheadline:
-      "Your ads are running. Your website is live. Leads are calling. But 20–40% of those calls ring out, go to voicemail, or hit an engaged tone. Every one of them is revenue you already paid to generate — lost to whoever picked up first.",
+      "Your ads are running. Your website is live. Leads are calling. But 20 to 40% of those calls ring out, go to voicemail, or hit an engaged tone. Every one of them is revenue you already paid to generate — lost to whoever picked up first.",
     painTitle: "The invisible revenue leak most businesses don't measure",
     painPoints: [
-      "The call comes in while your team is on another call. It rings 4 times and drops. The caller doesn't leave a voicemail — they Google the next option. That's ₹1,500–₹50,000 gone in 30 seconds, depending on your industry.",
+      "The call comes in while your team is on another call. It rings 4 times and drops. The caller doesn't leave a voicemail — they Google the next option. That's ₹1,500 to ₹50,000 gone in 30 seconds, depending on your industry.",
       "After-hours calls are the highest-intent calls. A patient with a toothache at 9 PM, a homeowner with a burst pipe on Sunday, a buyer browsing property at midnight. These callers need help NOW. Voicemail isn't help.",
-      "You're spending ₹50,000–₹2,00,000/month ($600–$2,500/month) on Google Ads, Meta Ads, and SEO to generate these calls. Then losing 20–40% of them to an unanswered phone. Your cost per acquisition just doubled.",
+      "You're spending ₹50,000 to ₹2,00,000/month ($600 to $2,500/month) on Google Ads, Meta Ads, and SEO to generate these calls. Then losing 20 to 40% of them to an unanswered phone. Your cost per acquisition just doubled.",
     ],
     costCallout: {
       items: [
-        { label: "Average missed calls per day (service business)", amount: "5–15 calls" },
-        { label: "Average revenue per converted call", amount: "₹1,500–₹50,000 / $20–$500" },
-        { label: "Monthly ad spend generating those calls", amount: "₹50,000–₹2,00,000 / $600–$2,500" },
+        { label: "Average missed calls per day (service business)", amount: "5 to 15 calls" },
+        { label: "Average revenue per converted call", amount: "₹1,500 to ₹50,000 / $20 to $500" },
+        { label: "Monthly ad spend generating those calls", amount: "₹50,000 to ₹2,00,000 / $600 to $2,500" },
       ],
-      total: "20–40% of your ad-generated calls are going unanswered — money spent on leads you never spoke to",
+      total: "20 to 40% of your ad-generated calls are going unanswered — money spent on leads you never spoke to",
       solvesFor: `${P.starterDual} — every call answered, every lead captured, 24/7`,
       source: "Industry data: BIA/Kelsey missed call study + Agentic AI Labs client audits, 2026",
     },
@@ -3947,7 +4005,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoTitle: "What businesses try to fix the missed call problem",
     statusQuoItems: [
       "Voicemail — 80% of callers don't leave one. They call the next business on Google instead.",
-      "Hire a second person for evenings — ₹15,000–₹20,000/month ($200–$300/month), still can't handle two calls at once, still takes weekends off.",
+      "Hire a second person for evenings — ₹15,000 to ₹20,000/month ($200 to $300/month), still can't handle two calls at once, still takes weekends off.",
       "Call forwarding to personal phone — you answer during dinner, while driving, in meetings. Not sustainable, not professional.",
     ],
     industrySignal: {
@@ -3980,7 +4038,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 1,
         phase: "MEASURE YOUR MISSED CALL PROBLEM",
-        body: "We audit your current call volume and missed call rate. Most businesses are shocked — they think they miss 5%, it's usually 20–40%. You leave with a clear revenue number attached to the problem.",
+        body: "We audit your current call volume and missed call rate. Most businesses are shocked — they think they miss 5%, it's usually 20 to 40%. You leave with a clear revenue number attached to the problem.",
         youSpend: "30 minutes. We pull the data.",
       },
       {
@@ -4004,7 +4062,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     proofTitle: "Businesses stop losing leads the day the AI goes live.",
     proofBullets: [
-      "Travel operator: 20–30 missed calls/day reduced to zero. Group booking worth months of the service fee captured on the first night.",
+      "Travel operator: 20 to 30 missed calls/day reduced to zero. Group booking worth months of the service fee captured on the first night.",
       "Home services: After-hours coverage for the first time. 14 calls captured in week one that would have gone to competitors.",
       "Coaching business: Show-up rate improved from 50% to 70%+ with AI confirmation calls — 15 extra live conversations per week.",
     ],
@@ -4032,7 +4090,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How many calls am I actually missing?",
         answer:
-          "Most businesses think they miss 5–10% of calls. The actual number is usually 20–40%. We measure it on our audit call — it takes 30 minutes and you'll have the exact number.",
+          "Most businesses think they miss 5 to 10% of calls. The actual number is usually 20 to 40%. We measure it on our audit call — it takes 30 minutes and you'll have the exact number.",
       },
       {
         question: "What happens when the AI answers a call my team could have handled?",
@@ -4052,7 +4110,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How fast can I go live?",
         answer:
-          "7 days from your first call with us. Simple inbound FAQ agents can launch in 2–3 days.",
+          "7 days from your first call with us. Simple inbound FAQ agents can launch in 2 to 3 days.",
       },
       {
         question: "What does it cost?",
@@ -4065,9 +4123,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll audit your missed call rate for free. 30 minutes. You'll know exactly how much revenue you're losing.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
-      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI Dispatch for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI for Pest Control", href: "/ai-for-pest-control" },
+      { label: "AI Booking Agent for Salons", href: "/ai-booking-agent-for-salon" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai for missed calls",
@@ -4108,10 +4168,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     costCallout: {
       items: [
         { label: "Leads lost to GHL calling limitations (Indian agencies)", amount: "100% of voice leads (no Indian number support)" },
-        { label: "Manual calling by GHL agency team", amount: "₹50,000–₹1,00,000 / $600–$1,200 / month" },
+        { label: "Manual calling by GHL agency team", amount: "₹50,000 to ₹1,00,000 / $600 to $1,200 / month" },
         { label: "Pipeline accuracy with manual CRM updates", amount: "Inconsistent — hours or days late" },
       ],
-      total: "GHL agencies running voice campaigns manually are spending 3–5x what AI calling costs — with worse results",
+      total: "GHL agencies running voice campaigns manually are spending 3 to 5x what AI calling costs — with worse results",
       solvesFor: `${P.proDual} — production AI caller plugged into your GHL pipeline`,
       source: "GoHighLevel community feedback + Agentic AI Labs GHL agency audits, 2026",
     },
@@ -4236,9 +4296,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll review your GHL pipeline and show you exactly where AI calling fills the gap.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
+      { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
+      { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "gohighlevel ai calling alternative",
@@ -4267,19 +4330,19 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     heroLabel: "Built for Dental Clinics — India & Worldwide",
     heroHeadline: "Your dentist is elbow-deep in a root canal. The phone rings. Nobody picks up. That new patient just called the clinic next door.",
     heroSubheadline:
-      "Dental clinics get 30–50 calls a day. 20–30% go unanswered during procedures. Evening toothache calls — the highest-urgency, highest-value inquiries — go straight to voicemail. First clinic to answer wins the patient.",
+      "Dental clinics get 30 to 50 calls a day. 20 to 30% go unanswered during procedures. Evening toothache calls — the highest-urgency, highest-value inquiries — go straight to voicemail. First clinic to answer wins the patient.",
     painTitle: "Every unanswered call is a patient who books somewhere else",
     painPoints: [
-      "Your hygienist is scaling, your dentist is mid-extraction, and the front desk is handling a walk-in. The phone rings 4 times and stops. That was a new patient inquiry worth ₹3,000–₹50,000 ($50–$600) in procedures.",
+      "Your hygienist is scaling, your dentist is mid-extraction, and the front desk is handling a walk-in. The phone rings 4 times and stops. That was a new patient inquiry worth ₹3,000 to ₹50,000 ($50 to $600) in procedures.",
       "Evening toothache calls are the highest-urgency leads you get — and they arrive when your clinic is closed. Patients in pain don't leave voicemails. They Google the next clinic that picks up.",
-      "New patients comparison-shop. They call 2–3 clinics. The first one to answer, explain services, and offer an appointment slot wins. The second one to call back gets a 'thanks, I already booked somewhere.'",
+      "New patients comparison-shop. They call 2 to 3 clinics. The first one to answer, explain services, and offer an appointment slot wins. The second one to call back gets a 'thanks, I already booked somewhere.'",
     ],
     costCallout: {
       items: [
-        { label: "Average dental procedure value", amount: "₹3,000 – ₹50,000 ($50 – $600)" },
-        { label: "Missed calls during procedures (busy clinic)", amount: "8 – 15 per day" },
-        { label: "After-hours toothache calls missed per week", amount: "8 – 10" },
-        { label: "Patient lifetime value (3–5 year retention)", amount: "₹50,000 – ₹2,00,000 ($600 – $2,500)" },
+        { label: "Average dental procedure value", amount: "₹3,000 to ₹50,000 ($50 to $600)" },
+        { label: "Missed calls during procedures (busy clinic)", amount: "8 to 15 per day" },
+        { label: "After-hours toothache calls missed per week", amount: "8 to 10" },
+        { label: "Patient lifetime value (3 to 5 year retention)", amount: "₹50,000 to ₹2,00,000 ($600 to $2,500)" },
       ],
       total: "8 missed after-hours calls/week × 25% conversion × ₹5,000 avg procedure = ₹10,000/week (₹40,000/month or ~$500/month) walking out the door",
       solvesFor: `${P.starterDual} — every call answered, every patient captured`,
@@ -4292,12 +4355,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoTitle: "What most dental clinics try before this",
     statusQuoItems: [
       "Asking the dental assistant to 'grab the phone' mid-procedure — breaks sterile protocol and stresses your team.",
-      "A second receptionist for peak hours — adds ₹12,000–₹20,000/month ($150–$250/month) and still doesn't cover evenings or Sundays.",
+      "A second receptionist for peak hours — adds ₹12,000 to ₹20,000/month ($150 to $250/month) and still doesn't cover evenings or Sundays.",
       "Voicemail with a 'we'll call you back' message — patients in pain don't wait. They call the next clinic on Google Maps.",
     ],
     industrySignal: {
       headline: "India has 200,000+ dental clinics — and phone answering is the #1 operational bottleneck.",
-      body: "The Indian dental market is growing at 11% CAGR. Clinic density in metro areas means a competing clinic is always a 2-minute Google search away. Patient surveys consistently show that the ability to reach a clinic by phone is a top-3 factor in choosing a dentist — above price, above online reviews. Clinics that answer every call, every time, book 25–40% more new patients than those with even occasional missed calls. The gap is widest after hours, when toothache emergencies peak and most clinics are dark.",
+      body: "The Indian dental market is growing at 11% CAGR. Clinic density in metro areas means a competing clinic is always a 2-minute Google search away. Patient surveys consistently show that the ability to reach a clinic by phone is a top-3 factor in choosing a dentist — above price, above online reviews. Clinics that answer every call, every time, book 25 to 40% more new patients than those with even occasional missed calls. The gap is widest after hours, when toothache emergencies peak and most clinics are dark.",
       source: "Indian Dental Association market data + Agentic AI Labs clinic surveys, 2026",
       date: "2026",
     },
@@ -4318,7 +4381,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "Books the slot, sends the confirmation, cuts no-shows by a third.",
-        body: "The AI checks your available slots, books the appointment, and sends the patient a WhatsApp confirmation with your clinic address, preparation instructions (fasting for surgical procedures, bring X-rays, etc.), and a reminder 24 hours before the visit. Patients who receive instant confirmation are 30–35% less likely to no-show. Your 15–20% no-show rate drops to single digits.",
+        body: "The AI checks your available slots, books the appointment, and sends the patient a WhatsApp confirmation with your clinic address, preparation instructions (fasting for surgical procedures, bring X-rays, etc.), and a reminder 24 hours before the visit. Patients who receive instant confirmation are 30 to 35% less likely to no-show. Your 15 to 20% no-show rate drops to single digits.",
       },
     ],
     howItWorks: [
@@ -4331,7 +4394,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD YOUR AI RECEPTIONIST",
-        body: "Days 2–7 — AI receptionist trained on your specific services, pricing boundaries, appointment durations, and triage logic. Hindi, English, or regional language based on your patient base.",
+        body: "Days 2 to 7 — AI receptionist trained on your specific services, pricing boundaries, appointment durations, and triage logic. Hindi, English, or regional language based on your patient base.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -4347,7 +4410,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         youSpend: "Zero. Every call is answered and logged.",
       },
     ],
-    proofTitle: "8–10 after-hours calls per week that used to go to voicemail — every one now a booked patient.",
+    proofTitle: "8 to 10 after-hours calls per week that used to go to voicemail — every one now a booked patient.",
     proofBullets: [
       "Missed call rate dropped from 25% to under 2% — including during procedures and lunch breaks.",
       "After-hours toothache calls captured and triaged within 3 rings — no more 'we'll call you back tomorrow.'",
@@ -4355,7 +4418,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Multi-Chair Dental Clinic — Metro India",
-      problem: "3-chair dental clinic receiving 35–45 calls per day. Front desk staffed by one person who also handled billing and walk-ins. During peak procedure hours (10 AM – 1 PM and 4 PM – 7 PM), 8–12 calls went unanswered daily. After-hours calls — primarily evening toothaches — were 8–10 per week, all going to voicemail. Each missed after-hours call was worth ₹5,000+ in emergency procedure revenue.",
+      problem: "3-chair dental clinic receiving 35 to 45 calls per day. Front desk staffed by one person who also handled billing and walk-ins. During peak procedure hours (10 AM to 1 PM and 4 PM to 7 PM), 8 to 12 calls went unanswered daily. After-hours calls — primarily evening toothaches — were 8 to 10 per week, all going to voicemail. Each missed after-hours call was worth ₹5,000+ in emergency procedure revenue.",
       system: "AI receptionist deployed on the clinic's main number. Handles all calls during procedures, lunch, and after hours. Captures patient details, triages urgency, books appointments, sends WhatsApp confirmations. Emergency calls trigger an immediate SMS to the dentist's personal number.",
       result: "After-hours inquiry capture rate: 0% → 100%. In-hours missed calls: 12/day → under 1/day. New patient bookings increased 32% in the first month. No-show rate dropped from 18% to 7%.",
     },
@@ -4408,7 +4471,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How does it reduce no-shows?",
         answer:
-          "Three mechanisms: (1) Instant WhatsApp confirmation with clinic address and prep instructions the moment an appointment is booked. (2) Automated reminder 24 hours before the appointment. (3) If the patient doesn't confirm the reminder, the AI calls them. Clinics using all three see no-show rates drop from 15–20% to 5–8%.",
+          "Three mechanisms: (1) Instant WhatsApp confirmation with clinic address and prep instructions the moment an appointment is booked. (2) Automated reminder 24 hours before the appointment. (3) If the patient doesn't confirm the reminder, the AI calls them. Clinics using all three see no-show rates drop from 15 to 20% to 5 to 8%.",
       },
       {
         question: "What happens to the calls during business hours?",
@@ -4431,9 +4494,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your call volume, missed call patterns, and show you exactly what the AI handles — before you commit to anything.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "Best AI Tools for Dental Practices", href: "/best-ai-tools-for-dental-practices" },
-      { label: "AI Receptionist for Med Spas", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
+      { label: "AI for Diagnostic Labs", href: "/ai-for-diagnostic-lab" },
+      { label: "Best AI Tools for Dental", href: "/best-ai-tools-for-dental-practices" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai receptionist for dental clinic",
@@ -4468,16 +4533,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "60% of salon bookings still happen by phone. Your busiest call times are your busiest service times — evenings and weekends. Every unanswered ring is a client who doesn't call back. They just book somewhere else.",
     painTitle: "The salon booking paradox: your phone rings most when you can least afford to answer it",
     painPoints: [
-      "Peak call hours (5 PM–8 PM weekdays, all day Saturday) perfectly overlap with peak service hours. Your stylists are with clients. Your receptionist — if you have one — is handling checkout and walk-ins. The phone rings and rings.",
+      "Peak call hours (5 PM to 8 PM weekdays, all day Saturday) perfectly overlap with peak service hours. Your stylists are with clients. Your receptionist — if you have one — is handling checkout and walk-ins. The phone rings and rings.",
       "A client calling for a Saturday hair color appointment will call one salon. If nobody answers, she Googles the next one. She doesn't leave a voicemail. She doesn't call back Monday. The booking is gone.",
       "You're juggling walk-ins, phone calls, online bookings, and WhatsApp messages — all at once. Even with a receptionist, appointments fall through the cracks. Double-bookings happen. Clients show up to find their slot was given away.",
     ],
     costCallout: {
       items: [
-        { label: "Average salon visit value", amount: "₹500 – ₹3,000 ($10 – $50)" },
-        { label: "Hair color / treatment value", amount: "₹2,000 – ₹15,000 ($30 – $200)" },
-        { label: "Missed calls during peak hours (busy salon)", amount: "8 – 15 per day" },
-        { label: "Client lifetime value (monthly visits × 2 years)", amount: "₹24,000 – ₹72,000 ($400 – $1,200)" },
+        { label: "Average salon visit value", amount: "₹500 to ₹3,000 ($10 to $50)" },
+        { label: "Hair color / treatment value", amount: "₹2,000 to ₹15,000 ($30 to $200)" },
+        { label: "Missed calls during peak hours (busy salon)", amount: "8 to 15 per day" },
+        { label: "Client lifetime value (monthly visits × 2 years)", amount: "₹24,000 to ₹72,000 ($400 to $1,200)" },
       ],
       total: "10 missed calls/day × 30% booking intent × ₹1,500 avg = ₹4,500/day or ₹1,35,000/month (~$1,700/month) in lost revenue",
       solvesFor: "₹1,999/month ($249/month) — every call answered, every slot filled",
@@ -4495,7 +4560,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "India's beauty and wellness market is ₹1.5 lakh crore ($19B) — and phone booking is still the default.",
-      body: "Despite the rise of online booking apps, KPMG and industry surveys consistently show that 55–65% of salon appointments in India are still booked by phone. The pattern is even stronger in tier-2 and tier-3 cities. In the UAE and UK, the phone-to-online split is roughly 50/50. Salons that answer every call — instantly, professionally — fill 20–30% more weekend slots than salons that rely on callbacks. The booking window is minutes, not hours.",
+      body: "Despite the rise of online booking apps, KPMG and industry surveys consistently show that 55 to 65% of salon appointments in India are still booked by phone. The pattern is even stronger in tier-2 and tier-3 cities. In the UAE and UK, the phone-to-online split is roughly 50/50. Salons that answer every call — instantly, professionally — fill 20 to 30% more weekend slots than salons that rely on callbacks. The booking window is minutes, not hours.",
       source: "KPMG India Beauty & Wellness Report + Agentic AI Labs salon audits, 2026",
       date: "2026",
     },
@@ -4529,7 +4594,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD YOUR AI BOOKING AGENT",
-        body: "Days 2–6 — AI booking agent built and trained on your services, stylists, availability rules, and client communication style. Hindi, English, or Arabic depending on your market.",
+        body: "Days 2 to 6 — AI booking agent built and trained on your services, stylists, availability rules, and client communication style. Hindi, English, or Arabic depending on your market.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -4541,7 +4606,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE ON YOUR SALON LINE",
-        body: "Day 8–10 — Your AI booking agent goes live. Every call answered from day one. We monitor for 30 days and optimize based on real booking patterns and client feedback.",
+        body: "Day 8 to 10 — Your AI booking agent goes live. Every call answered from day one. We monitor for 30 days and optimize based on real booking patterns and client feedback.",
         youSpend: "Zero. Your chairs fill themselves.",
       },
     ],
@@ -4553,7 +4618,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Premium Unisex Salon — South Delhi",
-      problem: "6-chair salon with 1 receptionist. During peak hours (5 PM – 8 PM weekdays, all day Saturday), 8–15 calls went unanswered daily. Owner's WhatsApp had 40+ unread booking messages by end of Saturday. Double-bookings were happening 2–3 times per week — creating client friction and stylist frustration. Weekend chairs were 70% full despite high demand.",
+      problem: "6-chair salon with 1 receptionist. During peak hours (5 PM to 8 PM weekdays, all day Saturday), 8 to 15 calls went unanswered daily. Owner's WhatsApp had 40+ unread booking messages by end of Saturday. Double-bookings were happening 2 to 3 times per week — creating client friction and stylist frustration. Weekend chairs were 70% full despite high demand.",
       system: "AI booking agent deployed on the salon's main number. Answers all calls, checks real-time stylist availability, books appointments with correct service duration, sends WhatsApp confirmations. Handles rescheduling and cancellation requests. Weekend waitlist management for high-demand slots.",
       result: "Missed calls: 62/week → 0. Double-bookings: eliminated. Weekend chair utilization: 70% → 94%. Owner stopped managing WhatsApp bookings entirely — the AI handles it.",
     },
@@ -4629,9 +4694,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll review your call patterns, peak hours, and show you exactly how many bookings you're losing — before you commit.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Receptionist for Med Spas", href: "/ai-receptionist-for-med-spa" },
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI for Gyms and Fitness", href: "/ai-for-gym-fitness" },
+      { label: "AI Receptionist for Restaurants", href: "/ai-receptionist-for-restaurant" },
+      { label: "AI Showing Coordinator for Real Estate", href: "/ai-showing-coordinator-for-real-estate" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai booking agent for salon",
@@ -4658,24 +4726,24 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-for-coaching-institute"],
     title: "AI for Coaching Institutes — Stop Losing ₹1 Lakh Enrollments to Unanswered Inquiry Calls",
     description:
-      "Admission season: 100 parents call your institute daily. Your staff handles 40. The other 60 call competing institutes. Each lost enrollment is ₹50,000–₹2,00,000 gone. We build an AI agent that handles every inquiry call — course details, fee structure, batch timings — captures contacts and books counseling sessions automatically.",
+      "Admission season: 100 parents call your institute daily. Your staff handles 40. The other 60 call competing institutes. Each lost enrollment is ₹50,000 to ₹2,00,000 gone. We build an AI agent that handles every inquiry call — course details, fee structure, batch timings — captures contacts and books counseling sessions automatically.",
     canonicalUrl: makeCanonical(["ai-for-coaching-institute"]),
     heroLabel: "Built for Coaching Institutes — JEE, NEET, UPSC & Online Coaching",
     heroHeadline: "100 parents called your institute today. Your team answered 40. The other 60 enrolled their children somewhere else.",
     heroSubheadline:
-      "During admission season, your phone lines are a bottleneck — not a sales channel. Every unanswered inquiry call is a ₹50,000–₹2,00,000 ($600–$2,500) enrollment walking to a competitor who picked up faster.",
+      "During admission season, your phone lines are a bottleneck — not a sales channel. Every unanswered inquiry call is a ₹50,000 to ₹2,00,000 ($600 to $2,500) enrollment walking to a competitor who picked up faster.",
     painTitle: "Admission season exposes your biggest revenue leak: the phone",
     painPoints: [
-      "January to March: board results. May to July: admission frenzy. During these windows, 50–100+ parents and students call daily. Your counseling team can handle 30–40. The rest hear a busy tone, wait on hold, or give up. They don't call back — they enroll at the institute that answered.",
-      "Parents have 3–5 coaching options shortlisted. They call each one. First institute to answer, explain the fee structure, share batch timings, and book a counseling session wins the enrollment. The institute that calls back 2 hours later gets 'thanks, we already enrolled at [competitor].'",
-      "Each lost enrollment is not a missed ₹500 transaction — it's ₹50,000–₹2,00,000 in annual fees. Lose 10 enrollments per admission cycle to unanswered calls and that's ₹5,00,000–₹20,00,000 ($6,000–$25,000) in revenue you never recover.",
+      "January to March: board results. May to July: admission frenzy. During these windows, 50 to 100+ parents and students call daily. Your counseling team can handle 30 to 40. The rest hear a busy tone, wait on hold, or give up. They don't call back — they enroll at the institute that answered.",
+      "Parents have 3 to 5 coaching options shortlisted. They call each one. First institute to answer, explain the fee structure, share batch timings, and book a counseling session wins the enrollment. The institute that calls back 2 hours later gets 'thanks, we already enrolled at [competitor].'",
+      "Each lost enrollment is not a missed ₹500 transaction — it's ₹50,000 to ₹2,00,000 in annual fees. Lose 10 enrollments per admission cycle to unanswered calls and that's ₹5,00,000 to ₹20,00,000 ($6,000 to $25,000) in revenue you never recover.",
     ],
     costCallout: {
       items: [
-        { label: "Annual enrollment value (JEE/NEET/UPSC)", amount: "₹50,000 – ₹2,00,000 ($600 – $2,500)" },
-        { label: "Daily inquiry calls during peak season", amount: "50 – 100+" },
-        { label: "Calls your team can actually handle", amount: "30 – 40 per day" },
-        { label: "Inquiry-to-enrollment conversion rate", amount: "15% – 25%" },
+        { label: "Annual enrollment value (JEE/NEET/UPSC)", amount: "₹50,000 to ₹2,00,000 ($600 to $2,500)" },
+        { label: "Daily inquiry calls during peak season", amount: "50 to 100+" },
+        { label: "Calls your team can actually handle", amount: "30 to 40 per day" },
+        { label: "Inquiry-to-enrollment conversion rate", amount: "15% to 25%" },
       ],
       total: "60 unanswered calls/day × 20% conversion × ₹1,00,000 avg enrollment = ₹12,00,000/day in potential revenue unattended",
       solvesFor: `${P.proDual} during admission season — every inquiry answered, every contact captured`,
@@ -4687,13 +4755,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     statusQuoTitle: "What most coaching institutes try during admission season",
     statusQuoItems: [
-      "Hiring 3–5 temporary receptionists for admission season — ₹60,000–₹1,00,000/month ($750–$1,250/month), inconsistent quality, zero product knowledge on day one.",
+      "Hiring 3 to 5 temporary receptionists for admission season — ₹60,000 to ₹1,00,000/month ($750 to $1,250/month), inconsistent quality, zero product knowledge on day one.",
       "IVR menus that route callers through 4 button presses before they reach a human — 40% of callers hang up before reaching anyone.",
       "A 'fill the form on our website' approach that loses every parent who wanted a quick answer to 'what are your batch timings for NEET 2027?'",
     ],
     industrySignal: {
       headline: "India's coaching industry is ₹58,000 crore ($7B) — and enrollment is won on the phone.",
-      body: "The Indian coaching and test prep market continues to grow at 15%+ CAGR. But despite the rise of online platforms, 70% of enrollments for premium in-person coaching (JEE, NEET, UPSC, CAT) still begin with a phone inquiry. Parents want to speak to someone before committing ₹1–2 lakh. Institutes that respond to every inquiry within 5 minutes convert at 2–3x the rate of those that call back hours later. During peak admission windows, phone responsiveness is the single largest differentiator between institutes of comparable academic quality.",
+      body: "The Indian coaching and test prep market continues to grow at 15%+ CAGR. But despite the rise of online platforms, 70% of enrollments for premium in-person coaching (JEE, NEET, UPSC, CAT) still begin with a phone inquiry. Parents want to speak to someone before committing ₹1 to 2 lakh. Institutes that respond to every inquiry within 5 minutes convert at 2 to 3x the rate of those that call back hours later. During peak admission windows, phone responsiveness is the single largest differentiator between institutes of comparable academic quality.",
       source: "IMARC Group Indian EdTech Report + Agentic AI Labs coaching institute data, 2026",
       date: "2026",
     },
@@ -4714,7 +4782,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "Books counseling sessions that actually convert to enrollments.",
-        body: "An inquiry call without a next step is a dead lead. The AI doesn't just answer questions — it books a counseling session while the parent is engaged. Date, time, parent and student names, specific questions to address in the session. WhatsApp confirmation sent immediately with center address and directions. Parents who book a session are 3–4x more likely to enroll than those who just 'inquire and we'll call back.'",
+        body: "An inquiry call without a next step is a dead lead. The AI doesn't just answer questions — it books a counseling session while the parent is engaged. Date, time, parent and student names, specific questions to address in the session. WhatsApp confirmation sent immediately with center address and directions. Parents who book a session are 3 to 4x more likely to enroll than those who just 'inquire and we'll call back.'",
       },
     ],
     howItWorks: [
@@ -4727,7 +4795,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD YOUR AI ENROLLMENT AGENT",
-        body: "Days 2–8 — AI agent trained on your courses, fees, batch schedules, common parent questions, and objection patterns ('is online as good as offline?', 'what's your NEET selection rate?', 'do you offer EMI?'). Hindi, English, or regional language.",
+        body: "Days 2 to 8 — AI agent trained on your courses, fees, batch schedules, common parent questions, and objection patterns ('is online as good as offline?', 'what's your NEET selection rate?', 'do you offer EMI?'). Hindi, English, or regional language.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -4739,21 +4807,21 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE BEFORE YOUR NEXT ADMISSION WINDOW",
-        body: "Day 10–12 — Your AI enrollment agent goes live on your inquiry number. Every call answered. Every contact captured. Every counseling session booked. We monitor for 30 days and optimize conversion rates.",
+        body: "Day 10 to 12 — Your AI enrollment agent goes live on your inquiry number. Every call answered. Every contact captured. Every counseling session booked. We monitor for 30 days and optimize conversion rates.",
         youSpend: "Zero. Your admission funnel runs without bottlenecks.",
       },
     ],
     proofTitle: "60 unanswered calls per day during admission season → zero. Every one now a captured lead.",
     proofBullets: [
       "Inquiry-to-counseling conversion increased 42% — parents who get instant answers book sessions.",
-      "After-hours inquiries (8 PM – 10 PM) captured for the first time — 15–20 warm leads per night during peak season.",
+      "After-hours inquiries (8 PM to 10 PM) captured for the first time — 15 to 20 warm leads per night during peak season.",
       "Temporary admission staff reduced from 5 to 1 — the AI handles volume, the human handles closing.",
     ],
     caseStudy: {
       client: "NEET Coaching Institute — Kota, Rajasthan",
-      problem: "Mid-size NEET coaching institute receiving 80–100 inquiry calls per day during May–July admission season. 6-person counseling team could handle 35–40 calls. Remaining 40–60 calls went unanswered or were called back hours later. Competitor institutes with faster response were winning enrollments from the same pool of parents. Temporary staff hired each season lacked product knowledge and gave inconsistent answers about fees and batch timings.",
-      system: "AI enrollment agent deployed on the institute's inquiry number during admission season. Handles all inbound calls with full course catalog knowledge — programs, fees, batch timings, faculty credentials, scholarship criteria. Captures parent/student details. Books counseling sessions. After-hours coverage 7 PM – 10 PM. WhatsApp confirmations with center address and directions.",
-      result: "Unanswered calls: 60/day → 0. Counseling session bookings increased 42%. After-hours lead capture: 0 → 15–20 warm leads per evening. Temporary staff headcount reduced from 5 to 1. Enrollment rate from AI-captured leads: 22% (in line with counselor-captured leads).",
+      problem: "Mid-size NEET coaching institute receiving 80 to 100 inquiry calls per day during May to July admission season. 6-person counseling team could handle 35 to 40 calls. Remaining 40 to 60 calls went unanswered or were called back hours later. Competitor institutes with faster response were winning enrollments from the same pool of parents. Temporary staff hired each season lacked product knowledge and gave inconsistent answers about fees and batch timings.",
+      system: "AI enrollment agent deployed on the institute's inquiry number during admission season. Handles all inbound calls with full course catalog knowledge — programs, fees, batch timings, faculty credentials, scholarship criteria. Captures parent/student details. Books counseling sessions. After-hours coverage 7 PM to 10 PM. WhatsApp confirmations with center address and directions.",
+      result: "Unanswered calls: 60/day → 0. Counseling session bookings increased 42%. After-hours lead capture: 0 → 15 to 20 warm leads per evening. Temporary staff headcount reduced from 5 to 1. Enrollment rate from AI-captured leads: 22% (in line with counselor-captured leads).",
     },
     testimonial: {
       quote: "We were hiring 5 temp staff every admission season and still missing half the calls. The AI answered every call with accurate course information — things my temp staff took 2 weeks to learn. Our counseling bookings went up 42% in the first admission cycle.",
@@ -4768,13 +4836,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       headline: "Built for coaching institutes that lose enrollments to unanswered phones during admission season.",
       forYou: [
         "You run a coaching institute (JEE, NEET, UPSC, CAT, or other competitive exams) with enrollment values ₹50,000+",
-        "Your inquiry volume spikes to 50–100+ calls per day during admission season",
+        "Your inquiry volume spikes to 50 to 100+ calls per day during admission season",
         "Your counseling team can't keep up with phone inquiries — leads are going cold or going to competitors",
         "You want every inquiry captured, every question answered, and every counseling session booked — automatically",
         "You need the system live before your next admission window",
       ],
       notForYou: [
-        "You're a solo tutor with 10–15 students — the volume doesn't justify AI at this scale",
+        "You're a solo tutor with 10 to 15 students — the volume doesn't justify AI at this scale",
         "Your enrollment is 100% walk-in or referral-based with no phone inquiry volume",
         "You want a generic chatbot on your website — we build voice agents that handle phone calls",
       ],
@@ -4827,9 +4895,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your admission volume, current bottlenecks, and show you exactly how many enrollments you're losing to unanswered calls.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Show-Up Agent for Online Coaching", href: "/ai-show-up-agent-for-online-coaching" },
-      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
+      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai for coaching institute",
@@ -4855,28 +4925,28 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-cod-confirmation-agent"],
-    title: "AI COD Confirmation Agent — Cut RTO by 30–50% With Pre-Dispatch Verification Calls",
+    title: "AI COD Confirmation Agent — Cut RTO by 30 to 50% With Pre-Dispatch Verification Calls",
     description:
-      "60–70% of Indian e-commerce orders are Cash on Delivery. 25–40% of those get returned to origin. Each RTO costs you ₹200–₹400 in wasted shipping. A single AI call before dispatch — confirming address, verifying intent, offering prepaid conversion — reduces RTO by 30–50%. We build the agent that makes that call.",
+      "60 to 70% of Indian e-commerce orders are Cash on Delivery. 25 to 40% of those get returned to origin. Each RTO costs you ₹200 to ₹400 in wasted shipping. A single AI call before dispatch — confirming address, verifying intent, offering prepaid conversion — reduces RTO by 30 to 50%. We build the agent that makes that call.",
     canonicalUrl: makeCanonical(["ai-cod-confirmation-agent"]),
     heroLabel: "Built for D2C Brands & E-Commerce — India & Southeast Asia",
-    heroHeadline: "You shipped 1,000 COD orders this month. 300 came back. That's ₹60,000–₹1,20,000 you set on fire.",
+    heroHeadline: "You shipped 1,000 COD orders this month. 300 came back. That's ₹60,000 to ₹1,20,000 you set on fire.",
     heroSubheadline:
-      "Cash on Delivery drives 60–70% of Indian e-commerce. But COD RTO rates run 25–40% — 3x higher than prepaid. Every return costs you forward shipping + return shipping + restocking + wasted packaging. One confirmation call before dispatch cuts that by a third to a half.",
+      "Cash on Delivery drives 60 to 70% of Indian e-commerce. But COD RTO rates run 25 to 40% — 3x higher than prepaid. Every return costs you forward shipping + return shipping + restocking + wasted packaging. One confirmation call before dispatch cuts that by a third to a half.",
     painTitle: "COD is your biggest sales channel — and your biggest profit leak",
     painPoints: [
-      "Customer places a COD order at 2 AM. Impulse buy. You ship it the next morning without confirming. 3 days later: 'customer refused delivery.' You eat ₹200–₹400 ($3–$5) in forward + return shipping, plus packaging and restocking. The product sat in a truck for a week for nothing.",
-      "At 1,000 COD orders per month with a 30% RTO rate, that's 300 returned orders × ₹300 average loss = ₹90,000/month ($1,100/month) burned. At 5,000 orders, it's ₹4,50,000/month ($5,500/month). This is not a rounding error — it's 15–20% of your revenue evaporating.",
+      "Customer places a COD order at 2 AM. Impulse buy. You ship it the next morning without confirming. 3 days later: 'customer refused delivery.' You eat ₹200 to ₹400 ($3 to $5) in forward + return shipping, plus packaging and restocking. The product sat in a truck for a week for nothing.",
+      "At 1,000 COD orders per month with a 30% RTO rate, that's 300 returned orders × ₹300 average loss = ₹90,000/month ($1,100/month) burned. At 5,000 orders, it's ₹4,50,000/month ($5,500/month). This is not a rounding error — it's 15 to 20% of your revenue evaporating.",
       "Fake addresses, wrong phone numbers, impulse purchases with no intent to accept — you can't tell which COD orders are real until the delivery partner is standing at the door and the customer says 'I didn't order this.' By then, you've already paid for the shipment.",
     ],
     costCallout: {
       items: [
-        { label: "Average COD RTO rate (Indian e-commerce)", amount: "25% – 40%" },
-        { label: "Cost per RTO (forward + return shipping + packaging)", amount: "₹200 – ₹400 ($3 – $5)" },
-        { label: "Monthly RTO loss at 1,000 COD orders (30% RTO)", amount: "₹60,000 – ₹1,20,000 ($750 – $1,500)" },
-        { label: "RTO reduction from pre-dispatch confirmation call", amount: "30% – 50%" },
+        { label: "Average COD RTO rate (Indian e-commerce)", amount: "25% to 40%" },
+        { label: "Cost per RTO (forward + return shipping + packaging)", amount: "₹200 to ₹400 ($3 to $5)" },
+        { label: "Monthly RTO loss at 1,000 COD orders (30% RTO)", amount: "₹60,000 to ₹1,20,000 ($750 to $1,500)" },
+        { label: "RTO reduction from pre-dispatch confirmation call", amount: "30% to 50%" },
       ],
-      total: "At 1,000 orders/month: ₹90,000/month lost to RTO. AI confirmation saves ₹27,000–₹45,000/month ($350–$550/month)",
+      total: "At 1,000 orders/month: ₹90,000/month lost to RTO. AI confirmation saves ₹27,000 to ₹45,000/month ($350 to $550/month)",
       solvesFor: "₹4,999/month ($199/month) for up to 1,000 confirmation calls — ROI positive from month one",
       source: "Shiprocket RTO benchmarks + Agentic AI Labs D2C brand data, 2026",
     },
@@ -4886,20 +4956,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     statusQuoTitle: "What most D2C brands try before production AI confirmation",
     statusQuoItems: [
-      "IVR confirmation calls — 'Press 1 to confirm your order.' Pickup rate: 15–20%. Most customers ignore robocalls. The ones who do pick up often hang up on the IVR menu.",
-      "SMS/WhatsApp confirmation — open rates are decent but action rates are 10–15%. Customers read the message and don't respond. You still don't know if they'll accept delivery.",
-      "Manual calling team — works at 500 orders but collapses at 2,000. Each caller handles 80–100 calls per day. Hiring, training, QA, and attrition make this the most expensive option per order.",
+      "IVR confirmation calls — 'Press 1 to confirm your order.' Pickup rate: 15 to 20%. Most customers ignore robocalls. The ones who do pick up often hang up on the IVR menu.",
+      "SMS/WhatsApp confirmation — open rates are decent but action rates are 10 to 15%. Customers read the message and don't respond. You still don't know if they'll accept delivery.",
+      "Manual calling team — works at 500 orders but collapses at 2,000. Each caller handles 80 to 100 calls per day. Hiring, training, QA, and attrition make this the most expensive option per order.",
     ],
     industrySignal: {
       headline: "RTO is the #1 profitability killer for Indian D2C brands — and COD isn't going away.",
-      body: "Despite the push to prepaid, COD still accounts for 60–70% of Indian e-commerce orders (Razorpay FY2026 data). In tier-2 and tier-3 cities, COD is 75%+. The RTO problem is structural — impulse purchases, fake addresses, and lack of buyer commitment are baked into the COD model. Brands that added a pre-dispatch human confirmation call saw RTO drop 25–35%. Brands using AI voice confirmation — which sounds conversational, not robotic — report 30–50% reduction at a fraction of the cost of manual teams.",
+      body: "Despite the push to prepaid, COD still accounts for 60 to 70% of Indian e-commerce orders (Razorpay FY2026 data). In tier-2 and tier-3 cities, COD is 75%+. The RTO problem is structural — impulse purchases, fake addresses, and lack of buyer commitment are baked into the COD model. Brands that added a pre-dispatch human confirmation call saw RTO drop 25 to 35%. Brands using AI voice confirmation — which sounds conversational, not robotic — report 30 to 50% reduction at a fraction of the cost of manual teams.",
       source: "Razorpay D2C Report FY2026 + Shiprocket RTO benchmarks + Agentic AI Labs D2C data, 2026",
       date: "2026",
     },
     solutionTitle: "One call before dispatch. Address confirmed. Intent verified. RTO cut in half.",
     solutionItems: [
       "AI calls every COD order within 30 minutes of placement — confirms address, verifies intent, flags fakes.",
-      "Offers prepaid conversion with an incentive discount — 10–15% of COD customers convert on the spot.",
+      "Offers prepaid conversion with an incentive discount — 10 to 15% of COD customers convert on the spot.",
       "Suspicious orders (wrong pincode, unreachable number, repeated RTO address) flagged before you waste shipping costs.",
     ],
     layers: [
@@ -4909,7 +4979,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "Converts COD to prepaid — saving you the RTO risk entirely.",
-        body: "After confirming the order, the AI offers: 'Would you like to pay online now and get a 5% discount? I can send you a payment link on WhatsApp.' 10–15% of customers accept. That's 10–15% of your COD orders that just became prepaid — zero RTO risk. The payment link is sent instantly. The discount is cheaper than the ₹300 you'd lose on an RTO.",
+        body: "After confirming the order, the AI offers: 'Would you like to pay online now and get a 5% discount? I can send you a payment link on WhatsApp.' 10 to 15% of customers accept. That's 10 to 15% of your COD orders that just became prepaid — zero RTO risk. The payment link is sent instantly. The discount is cheaper than the ₹300 you'd lose on an RTO.",
       },
       {
         title: "Flags suspicious orders before they cost you ₹300 each.",
@@ -4926,7 +4996,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD YOUR CONFIRMATION AGENT",
-        body: "Days 2–5 — AI confirmation agent built with your product names, address verification logic, prepaid conversion offer, and flagging rules. Hindi and English. Regional languages on request.",
+        body: "Days 2 to 5 — AI confirmation agent built with your product names, address verification logic, prepaid conversion offer, and flagging rules. Hindi and English. Regional languages on request.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -4938,7 +5008,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 4,
         phase: "LIVE ON EVERY COD ORDER",
-        body: "Day 7–8 — Every new COD order gets a confirmation call within 30 minutes. Confirmed orders go to dispatch. Flagged orders go to your review queue. We monitor for 30 days and optimize based on RTO reduction data.",
+        body: "Day 7 to 8 — Every new COD order gets a confirmation call within 30 minutes. Confirmed orders go to dispatch. Flagged orders go to your review queue. We monitor for 30 days and optimize based on RTO reduction data.",
         youSpend: "Zero. Watch your RTO rate drop week by week.",
       },
     ],
@@ -4993,7 +5063,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "Does the prepaid conversion actually work?",
         answer:
-          "Yes — 10–15% of COD customers convert to prepaid when offered a 5% discount on the confirmation call. The AI sends a WhatsApp payment link instantly. The customer pays while they're still engaged. The 5% discount costs less than the ₹300 you'd lose on an RTO.",
+          "Yes — 10 to 15% of COD customers convert to prepaid when offered a 5% discount on the confirmation call. The AI sends a WhatsApp payment link instantly. The customer pays while they're still engaged. The 5% discount costs less than the ₹300 you'd lose on an RTO.",
       },
       {
         question: "How does it detect fake addresses?",
@@ -5008,12 +5078,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "Does it integrate with Shopify and WooCommerce?",
         answer:
-          "Yes. Native integration with Shopify, WooCommerce, and Shiprocket. For custom platforms (Magento, custom-built), we integrate via webhook or API. Setup takes 1–2 days for standard platforms.",
+          "Yes. Native integration with Shopify, WooCommerce, and Shiprocket. For custom platforms (Magento, custom-built), we integrate via webhook or API. Setup takes 1 to 2 days for standard platforms.",
       },
       {
         question: "What's the ROI math?",
         answer:
-          "At 1,000 COD orders/month with 30% RTO: you're losing ₹90,000/month ($1,100). A 40% RTO reduction saves ₹36,000/month ($440). Add 12% prepaid conversion savings and the total monthly benefit is ₹45,000–₹55,000 ($550–$680). The AI costs ₹4,999/month ($199/month). ROI: 9–11x in month one.",
+          "At 1,000 COD orders/month with 30% RTO: you're losing ₹90,000/month ($1,100). A 40% RTO reduction saves ₹36,000/month ($440). Add 12% prepaid conversion savings and the total monthly benefit is ₹45,000 to ₹55,000 ($550 to $680). The AI costs ₹4,999/month ($199/month). ROI: 9 to 11x in month one.",
       },
       {
         question: "How much does it cost?",
@@ -5026,9 +5096,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll pull your RTO data, calculate the exact monthly savings, and show you the confirmation flow — before you commit.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Support Rep for E-Commerce", href: "/ai-support-rep-for-ecommerce" },
-      { label: "Done-for-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
-      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI Support Rep for Ecommerce", href: "/ai-support-rep-for-ecommerce" },
+      { label: "HubSpot AI Agent", href: "/ai-agent-hubspot-integration" },
+      { label: "Salesforce AI Agent", href: "/ai-agent-salesforce-integration" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     keywords: [
       "ai cod confirmation agent",
@@ -5061,7 +5133,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     heroLabel: "Built for Restaurants — India, UAE, US & UK",
     heroHeadline: "Friday night. Kitchen is on fire. Servers are drowning. A family of 8 just called for Saturday. Nobody picked up. They're eating at your competitor.",
     heroSubheadline:
-      "Restaurants get 30–60 calls a day — reservations, takeaway orders, event inquiries, 'are you open right now?' questions. Your busiest phone hours are your busiest service hours. An empty table on a Friday night is ₹5,000–₹15,000 ($80–$200) that never comes back.",
+      "Restaurants get 30 to 60 calls a day — reservations, takeaway orders, event inquiries, 'are you open right now?' questions. Your busiest phone hours are your busiest service hours. An empty table on a Friday night is ₹5,000 to ₹15,000 ($80 to $200) that never comes back.",
     painTitle: "Your phone rings most when your team can least afford to answer it",
     painPoints: [
       "Friday 7 PM — every burner is lit, every server has 4 tables, the host is seating a walk-in party. The phone rings. And rings. And rings. The family that wanted Saturday dinner for 8 gives up after 6 rings and calls the restaurant they saw on Google right below you. You never even knew they called.",
@@ -5070,10 +5142,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Average dinner cover value", amount: "₹800 – ₹3,000 ($15 – $50)" },
-        { label: "Empty table on Friday/Saturday night", amount: "₹5,000 – ₹15,000 ($80 – $200) lost" },
-        { label: "Missed calls during peak service (busy restaurant)", amount: "10 – 20 per evening" },
-        { label: "Average corporate event inquiry value", amount: "₹1,00,000 – ₹5,00,000 ($1,200 – $6,000)" },
+        { label: "Average dinner cover value", amount: "₹800 to ₹3,000 ($15 to $50)" },
+        { label: "Empty table on Friday/Saturday night", amount: "₹5,000 to ₹15,000 ($80 to $200) lost" },
+        { label: "Missed calls during peak service (busy restaurant)", amount: "10 to 20 per evening" },
+        { label: "Average corporate event inquiry value", amount: "₹1,00,000 to ₹5,00,000 ($1,200 to $6,000)" },
       ],
       total: "10 missed reservation calls/week × ₹3,000 avg cover × 4-person average = ₹1,20,000/month (~$1,500/month) in unfilled tables",
       solvesFor: `${P.starterDual} — every call answered, every table filled`,
@@ -5087,7 +5159,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "Having the host answer calls between seating guests — leads to distracted conversations, missed details, and frustrated walk-ins waiting to be seated.",
       "Online-only reservations that lose the 50%+ of customers who still prefer calling — especially older diners, families, and corporate event planners.",
-      "A dedicated phone person for Friday and Saturday nights — ₹8,000–₹15,000/month ($100–$180/month) for 8 hours of weekend coverage that still doesn't handle late-night or Monday–Thursday calls.",
+      "A dedicated phone person for Friday and Saturday nights — ₹8,000 to ₹15,000/month ($100 to $180/month) for 8 hours of weekend coverage that still doesn't handle late-night or Monday to Thursday calls.",
     ],
     industrySignal: {
       headline: "Google launched AI restaurant booking in India (April 2026) — phone-based reservations are the next frontier.",
@@ -5125,7 +5197,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         week: 2,
         phase: "BUILD YOUR AI RECEPTIONIST",
-        body: "Days 2–7 — AI receptionist trained on your menu, seating layout, reservation rules, event handling, and communication style. Hindi, English, or Arabic depending on your market.",
+        body: "Days 2 to 7 — AI receptionist trained on your menu, seating layout, reservation rules, event handling, and communication style. Hindi, English, or Arabic depending on your market.",
         youSpend: "Nothing. We build.",
       },
       {
@@ -5149,7 +5221,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     caseStudy: {
       client: "Fine Dining Restaurant — Mumbai",
-      problem: "80-cover restaurant receiving 35–50 calls per day. During dinner service (7 PM – 11 PM), the host answered calls between seating guests — leading to rushed conversations, missed details, and 3 double-bookings per month. After 11 PM calls went to voicemail. 23% of all calls were missed during peak hours. Event inquiries (corporate dinners, private celebrations) arrived via voicemail and were often followed up 2–3 days late — by which time the event organizer had already booked elsewhere.",
+      problem: "80-cover restaurant receiving 35 to 50 calls per day. During dinner service (7 PM to 11 PM), the host answered calls between seating guests — leading to rushed conversations, missed details, and 3 double-bookings per month. After 11 PM calls went to voicemail. 23% of all calls were missed during peak hours. Event inquiries (corporate dinners, private celebrations) arrived via voicemail and were often followed up 2 to 3 days late — by which time the event organizer had already booked elsewhere.",
       system: "AI receptionist deployed on the restaurant's main number. Handles reservations (party size, time, seating preference, dietary requirements, special occasions), takeaway orders, and event inquiries. WhatsApp confirmations sent for all reservations. High-value event inquiries trigger instant alert to the owner. Post-11 PM coverage for late-night callers.",
       result: "Missed calls during service: 23% → under 1%. Friday/Saturday table utilization: +18%. Double-bookings: 3/month → 0. Event leads captured after hours: 6 in the first 2 months (3 converted, worth ₹8 lakh). Host's phone handling time freed: 90+ minutes per dinner service.",
     },
@@ -5226,8 +5298,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Showing Coordinator for Real Estate", href: "/ai-showing-coordinator-for-real-estate" },
+      { label: "AI Booking for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai receptionist for restaurant",
@@ -5255,25 +5330,25 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-for-diagnostic-lab"],
     title: "AI for Diagnostic Labs — Stop Losing Bookings to a Busy Phone Line | Agentic AI Labs",
     description:
-      "Diagnostic labs lose 15–20% of bookings because the phone is always busy. We build an AI receptionist that handles test bookings, report queries, home collection requests, and WhatsApp report delivery — 24/7, in the patient's language.",
+      "Diagnostic labs lose 15 to 20% of bookings because the phone is always busy. We build an AI receptionist that handles test bookings, report queries, home collection requests, and WhatsApp report delivery — 24/7, in the patient's language.",
     canonicalUrl: makeCanonical(["ai-for-diagnostic-lab"]),
     heroLabel: "Built for Diagnostic & Pathology Labs",
     heroHeadline: "Your lab phone is busy. Your patient just booked with the lab down the road.",
     heroSubheadline:
-      "A patient calls to book a fasting blood test for tomorrow morning. Three other patients are already on hold. The call drops. The patient Googles the next lab. That ₹2,000–₹10,000 ($25–$120) full-body checkup just walked out the door — because nobody picked up.",
+      "A patient calls to book a fasting blood test for tomorrow morning. Three other patients are already on hold. The call drops. The patient Googles the next lab. That ₹2,000 to ₹10,000 ($25 to $120) full-body checkup just walked out the door — because nobody picked up.",
     painTitle: "The phone line problem that silently kills lab revenue",
     painPoints: [
-      "Patient calls to schedule a fasting blood sugar test for 7 AM tomorrow. Your phone rings and rings — two receptionists are already handling walk-ins and another caller. The patient hangs up after 30 seconds and books with the Thyrocare franchise next door. One test worth ₹500–₹5,000 ($7–$60) — gone.",
-      "30+ patients need to be told their reports are ready. Every single day. Your receptionist spends 2–3 hours making outbound calls — 'Sir, your CBC report is ready, please collect from the counter.' That's 2–3 hours not spent answering new booking calls. The phone stays busy while your team calls existing patients about ready reports.",
-      "Home collection requests spike between 6–9 AM. That's exactly when your phlebotomists are already out and your front desk is managing the morning rush. Patients who want home collection call, get no answer, and book with a lab that has an app or a faster phone line.",
+      "Patient calls to schedule a fasting blood sugar test for 7 AM tomorrow. Your phone rings and rings — two receptionists are already handling walk-ins and another caller. The patient hangs up after 30 seconds and books with the Thyrocare franchise next door. One test worth ₹500 to ₹5,000 ($7 to $60) — gone.",
+      "30+ patients need to be told their reports are ready. Every single day. Your receptionist spends 2 to 3 hours making outbound calls — 'Sir, your CBC report is ready, please collect from the counter.' That's 2 to 3 hours not spent answering new booking calls. The phone stays busy while your team calls existing patients about ready reports.",
+      "Home collection requests spike between 6 to 9 AM. That's exactly when your phlebotomists are already out and your front desk is managing the morning rush. Patients who want home collection call, get no answer, and book with a lab that has an app or a faster phone line.",
     ],
     costCallout: {
       items: [
-        { label: "Missed bookings due to busy phone (15–20% of inbound)", amount: "₹30,000–₹1,50,000 / $400–$1,800 per month" },
-        { label: "Receptionist time on report-ready calls (2–3 hrs/day)", amount: "₹8,000–₹12,000 / $100–$150 per month" },
-        { label: "Lost home collection requests (after-hours + peak hours)", amount: "₹15,000–₹50,000 / $200–$600 per month" },
+        { label: "Missed bookings due to busy phone (15 to 20% of inbound)", amount: "₹30,000 to ₹1,50,000 / $400 to $1,800 per month" },
+        { label: "Receptionist time on report-ready calls (2 to 3 hrs/day)", amount: "₹8,000 to ₹12,000 / $100 to $150 per month" },
+        { label: "Lost home collection requests (after-hours + peak hours)", amount: "₹15,000 to ₹50,000 / $200 to $600 per month" },
       ],
-      total: "₹53,000–₹2,12,000 / $700–$2,550 per month in leaked revenue and wasted receptionist time",
+      total: "₹53,000 to ₹2,12,000 / $700 to $2,550 per month in leaked revenue and wasted receptionist time",
       solvesFor: "₹4,999/month ($199/month) — every call answered, every report delivered via WhatsApp",
       source: "Agentic AI Labs diagnostic lab audits + NABL-accredited lab operator interviews, 2026",
     },
@@ -5283,13 +5358,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     statusQuoTitle: "What labs try before they fix the phone problem",
     statusQuoItems: [
-      "Add a second phone line — helps marginally, but both lines are busy during peak hours (7–11 AM). Doesn't solve the structural problem of 40–80 calls competing for 2 lines.",
+      "Add a second phone line — helps marginally, but both lines are busy during peak hours (7 to 11 AM). Doesn't solve the structural problem of 40 to 80 calls competing for 2 lines.",
       "WhatsApp broadcast for report delivery — patients don't always check WhatsApp, can't ask follow-up questions, and you still need to handle inbound calls for 'is my report ready?'",
-      "Hire another receptionist — ₹12,000–₹18,000/month ($150–$220/month) for someone who still can't handle 3 simultaneous calls and takes Sundays off.",
+      "Hire another receptionist — ₹12,000 to ₹18,000/month ($150 to $220/month) for someone who still can't handle 3 simultaneous calls and takes Sundays off.",
     ],
     industrySignal: {
       headline: "India's diagnostic lab market is ₹90,000+ crore ($11B+) — and the labs winning are the ones patients can actually reach.",
-      body: "The Indian diagnostic market is projected to grow at 12–15% CAGR through 2028. But consolidation is brutal — chains like Metropolis, Dr. Lal PathLabs, and Thyrocare are investing heavily in app-based booking and AI triage. Independent labs that can't be reached by phone are losing patients to franchises that can. The labs that modernize their patient communication survive. The ones still running on two phone lines and a register don't.",
+      body: "The Indian diagnostic market is projected to grow at 12 to 15% CAGR through 2028. But consolidation is brutal — chains like Metropolis, Dr. Lal PathLabs, and Thyrocare are investing heavily in app-based booking and AI triage. Independent labs that can't be reached by phone are losing patients to franchises that can. The labs that modernize their patient communication survive. The ones still running on two phone lines and a register don't.",
       source: "ICRA Diagnostic Sector Report + CRISIL Research, 2025",
       date: "2025",
     },
@@ -5310,7 +5385,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       },
       {
         title: "Delivers reports and clears your receptionist's entire afternoon.",
-        body: "The moment a report is approved in your LIMS, the AI calls the patient: 'Your CBC report is ready. I'm sending the download link to your WhatsApp now.' 30+ outbound calls a day — done automatically. Your receptionist stops spending 2–3 hours on report-ready calls and starts handling the work that actually needs a human. Abnormal values? The AI flags them and routes a call to your pathologist's direct line.",
+        body: "The moment a report is approved in your LIMS, the AI calls the patient: 'Your CBC report is ready. I'm sending the download link to your WhatsApp now.' 30+ outbound calls a day — done automatically. Your receptionist stops spending 2 to 3 hours on report-ready calls and starts handling the work that actually needs a human. Abnormal values? The AI flags them and routes a call to your pathologist's direct line.",
       },
     ],
     howItWorks: [
@@ -5343,7 +5418,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     proofBullets: [
       "Multi-location pathology lab: 60+ daily calls handled without a single busy signal. Home collection bookings up 35% in the first month.",
       "Single-center diagnostic lab: Receptionist reclaimed 2.5 hours/day previously spent on report-ready calls. Patient complaints about phone availability dropped to zero.",
-      "NABL-accredited lab: After-hours booking capture (6–9 PM) went from zero to 8–12 bookings/week — patients booking morning fasting tests the night before.",
+      "NABL-accredited lab: After-hours booking capture (6 to 9 PM) went from zero to 8 to 12 bookings/week — patients booking morning fasting tests the night before.",
     ],
     proofStats: [
       { stat: "0", label: "busy signals after go-live" },
@@ -5405,7 +5480,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How quickly can I go live?",
         answer:
-          "Most diagnostic lab AI systems go live in 5–7 days. Simple inbound booking agents can launch in 3 days. Report delivery automation depends on your LIS integration timeline.",
+          "Most diagnostic lab AI systems go live in 5 to 7 days. Simple inbound booking agents can launch in 3 days. Report delivery automation depends on your LIS integration timeline.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -5413,9 +5488,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll audit your missed booking rate and show you exactly how much revenue your busy phone line is costing you.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Receptionist for Med Spa", href: "/ai-receptionist-for-med-spa" },
+      { label: "Best AI Tools for Dental", href: "/best-ai-tools-for-dental-practices" },
+      { label: "AI Receptionist for Dental Clinics", href: "/ai-receptionist-for-dental-clinic" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai for diagnostic lab",
@@ -5450,32 +5527,32 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     heroLabel: "Built for Pest Control Companies",
     heroHeadline: "Termites in the bedroom at 10 PM. Your office is closed. That ₹30,000 job just called your competitor.",
     heroSubheadline:
-      "A homeowner finds termites crawling out of the wall. It's 10 PM. They call you. No answer. They call the next pest control company on Google. That termite treatment — worth ₹15,000–₹50,000 ($200–$600) — went to whoever picked up the phone. Not whoever was best. Whoever answered.",
+      "A homeowner finds termites crawling out of the wall. It's 10 PM. They call you. No answer. They call the next pest control company on Google. That termite treatment — worth ₹15,000 to ₹50,000 ($200 to $600) — went to whoever picked up the phone. Not whoever was best. Whoever answered.",
     painTitle: "The after-hours problem that bleeds pest control revenue",
     painPoints: [
-      "Customer discovers a scorpion in their child's room at 11 PM. They're panicked. They call your number. Voicemail. They call the next company. Emergency pest calls convert at 90%+ — but only if answered. You didn't answer. Your competitor did. That ₹5,000–₹15,000 ($60–$200) emergency job is gone.",
-      "Monsoon season in India. Spring in the US. Summer in Australia. Call volume spikes 3–5x. Your two-person office can't handle 40–60 calls a day when they're also running treatments in the field. Half the calls go to voicemail during your busiest — and most profitable — season.",
+      "Customer discovers a scorpion in their child's room at 11 PM. They're panicked. They call your number. Voicemail. They call the next company. Emergency pest calls convert at 90%+ — but only if answered. You didn't answer. Your competitor did. That ₹5,000 to ₹15,000 ($60 to $200) emergency job is gone.",
+      "Monsoon season in India. Spring in the US. Summer in Australia. Call volume spikes 3 to 5x. Your two-person office can't handle 40 to 60 calls a day when they're also running treatments in the field. Half the calls go to voicemail during your busiest — and most profitable — season.",
       "70% of pest control leads come from phone calls, not web forms. A homeowner doesn't fill out a contact form when there's a bee hive above their front door. They call. If you don't answer, they call the listing below yours on Google. Your ad spend just funded your competitor's booking.",
     ],
     costCallout: {
       items: [
-        { label: "Average emergency pest call value", amount: "₹5,000–₹15,000 / $60–$200" },
-        { label: "Termite treatment contract value", amount: "₹15,000–₹50,000 / $200–$600" },
-        { label: "Missed calls during peak season (est. 30–40%)", amount: "₹1,00,000–₹5,00,000 / $1,200–$6,000 per season" },
+        { label: "Average emergency pest call value", amount: "₹5,000 to ₹15,000 / $60 to $200" },
+        { label: "Termite treatment contract value", amount: "₹15,000 to ₹50,000 / $200 to $600" },
+        { label: "Missed calls during peak season (est. 30 to 40%)", amount: "₹1,00,000 to ₹5,00,000 / $1,200 to $6,000 per season" },
       ],
       total: "One peak season of missed calls costs more than a year of AI phone coverage",
       solvesFor: "₹4,999/month ($199/month) — every emergency answered, every job dispatched",
       source: "Agentic AI Labs pest control operator interviews + NPMA industry data, 2026",
     },
     practitionerQuote: {
-      text: "Last monsoon we got 50+ calls a day for three weeks. Me and one guy in the office — we missed at least half. Each missed call was a ₹3,000–₹10,000 job. I don't even want to calculate the total loss.",
+      text: "Last monsoon we got 50+ calls a day for three weeks. Me and one guy in the office — we missed at least half. Each missed call was a ₹3,000 to ₹10,000 job. I don't even want to calculate the total loss.",
       attribution: "Pest control business owner, Mumbai — Agentic AI Labs discovery call, 2026",
     },
     statusQuoTitle: "What pest control companies try before fixing the phone problem",
     statusQuoItems: [
       "Forwarding to personal mobile — you answer calls at dinner, during treatments, while driving. You sound distracted. The customer hears field noise. Not professional, not sustainable.",
       "Voicemail with callback promise — 'We'll call you back within 2 hours.' But the homeowner with roaches in the kitchen isn't waiting 2 hours. They're calling the next company right now.",
-      "Hiring seasonal phone staff — ₹10,000–₹15,000/month ($150–$200/month) per person. They need training, take sick days, and still can't handle 4 calls at once during a monsoon spike.",
+      "Hiring seasonal phone staff — ₹10,000 to ₹15,000/month ($150 to $200/month) per person. They need training, take sick days, and still can't handle 4 calls at once during a monsoon spike.",
     ],
     industrySignal: {
       headline: "The pest control company that answers the phone first wins the job. 90% of the time.",
@@ -5545,7 +5622,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       forYou: [
         "You run a pest control business and get 15+ calls per day (more during peak season)",
         "You miss after-hours calls — especially emergency pest calls that convert at 90%+",
-        "Your call volume spikes 3–5x during monsoon/spring/summer and you can't keep up",
+        "Your call volume spikes 3 to 5x during monsoon/spring/summer and you can't keep up",
         "You want every call answered and every emergency dispatched without hiring seasonal staff",
         "Your budget allows ₹4,999/month ($199/month) to never miss a call again",
       ],
@@ -5565,7 +5642,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "Can it handle my service pricing and give quotes?",
         answer:
-          "Yes. We load your full service menu with pricing ranges. General pest control: ₹2,000–₹5,000. Termite treatment: ₹15,000–₹50,000. The AI gives callers accurate ranges and books inspections for exact quotes. It doesn't guess — it uses your numbers.",
+          "Yes. We load your full service menu with pricing ranges. General pest control: ₹2,000 to ₹5,000. Termite treatment: ₹15,000 to ₹50,000. The AI gives callers accurate ranges and books inspections for exact quotes. It doesn't guess — it uses your numbers.",
       },
       {
         question: "What happens during monsoon/peak season when call volume triples?",
@@ -5585,7 +5662,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How fast can I go live?",
         answer:
-          "5–7 days from your first call with us. Emergency-only AI agents (no pricing, just capture and dispatch) can launch in 3 days.",
+          "5 to 7 days from your first call with us. Emergency-only AI agents (no pricing, just capture and dispatch) can launch in 3 days.",
       },
       {
         question: "How much does it cost?",
@@ -5604,8 +5681,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI Dispatch Agent for Home Services", href: "/ai-dispatch-agent-for-home-services" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Booking Agent for Salons", href: "/ai-booking-agent-for-salon" },
+      { label: "AI for Gyms and Fitness", href: "/ai-for-gym-fitness" },
+      { label: "AI Receptionist for Restaurants", href: "/ai-receptionist-for-restaurant" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai for pest control",
@@ -5632,25 +5712,25 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-for-immigration-consultant"],
     title: "AI for Immigration Consultants — Stop Losing ₹3L Students to a Missed Call | Agentic AI Labs",
     description:
-      "A mid-size immigration consultant handles 50–100 inquiry calls/day during peak season. Conversion from inquiry to enrollment is 8–15%. Every missed call is a student — and ₹2–5L in consulting fees — walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
+      "A mid-size immigration consultant handles 50 to 100 inquiry calls/day during peak season. Conversion from inquiry to enrollment is 8 to 15%. Every missed call is a student — and ₹2 to 5L in consulting fees — walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
     canonicalUrl: makeCanonical(["ai-for-immigration-consultant"]),
     heroLabel: "Built for Immigration & Study Abroad Consultants",
     heroHeadline: "A student's parents are ready to pay ₹3L. Your counselor is in a session. The next agency answered.",
     heroSubheadline:
-      "Peak season. January–March, July–September. 50–100 calls a day. Your counselors are in back-to-back sessions. The phone rings. A student wants to know about MS in USA admission requirements. Nobody picks up. That student — whose parents have ₹2–5L ($2,500–$6,000) ready for consulting fees — calls the next agency on Google. India's overseas education market is ₹50,000+ crore ($6B+). Your share depends on who answers the phone.",
+      "Peak season. January to March, July to September. 50 to 100 calls a day. Your counselors are in back-to-back sessions. The phone rings. A student wants to know about MS in USA admission requirements. Nobody picks up. That student — whose parents have ₹2 to 5L ($2,500 to $6,000) ready for consulting fees — calls the next agency on Google. India's overseas education market is ₹50,000+ crore ($6B+). Your share depends on who answers the phone.",
     painTitle: "The inquiry leak that peak season makes invisible",
     painPoints: [
-      "Student calls about MBA in Canada. Your senior counselor is in a session explaining UK visa documents to another family. Your junior counselor is on another call. The student hears ringing. No answer. They call the big-brand agency with a call center. You just lost ₹2–5L ($2,500–$6,000) in consulting fees — not because your counseling is worse, but because your phone was busy.",
-      "Peak season: January–March for fall intake, July–September for spring intake. Call volume jumps 3–5x. Your 3-person team handles 15 counseling sessions and 50+ phone inquiries simultaneously — which means they handle neither well. Inquiry calls get rushed. Sessions get interrupted. Conversion drops exactly when volume is highest.",
-      "Follow-up is where immigration consulting revenue lives or dies. A student who inquired 3 days ago about Australia PR hasn't been called back because your team is drowning in new inquiries. That student already paid a deposit to the agency that followed up the same day. The inquiry-to-enrollment conversion rate (8–15%) is low not because students aren't interested — it's because follow-up happens too late.",
+      "Student calls about MBA in Canada. Your senior counselor is in a session explaining UK visa documents to another family. Your junior counselor is on another call. The student hears ringing. No answer. They call the big-brand agency with a call center. You just lost ₹2 to 5L ($2,500 to $6,000) in consulting fees — not because your counseling is worse, but because your phone was busy.",
+      "Peak season: January to March for fall intake, July to September for spring intake. Call volume jumps 3 to 5x. Your 3-person team handles 15 counseling sessions and 50+ phone inquiries simultaneously — which means they handle neither well. Inquiry calls get rushed. Sessions get interrupted. Conversion drops exactly when volume is highest.",
+      "Follow-up is where immigration consulting revenue lives or dies. A student who inquired 3 days ago about Australia PR hasn't been called back because your team is drowning in new inquiries. That student already paid a deposit to the agency that followed up the same day. The inquiry-to-enrollment conversion rate (8 to 15%) is low not because students aren't interested — it's because follow-up happens too late.",
     ],
     costCallout: {
       items: [
-        { label: "Average consulting fee per student enrollment", amount: "₹2,00,000–₹5,00,000 / $2,500–$6,000" },
-        { label: "Missed inquiries during peak season (est. 30–40%)", amount: "₹20,00,000–₹50,00,000 / $25,000–$60,000 per season" },
-        { label: "Lost follow-ups (students who inquired but never heard back)", amount: "₹10,00,000–₹30,00,000 / $12,000–$36,000 per season" },
+        { label: "Average consulting fee per student enrollment", amount: "₹2,00,000 to ₹5,00,000 / $2,500 to $6,000" },
+        { label: "Missed inquiries during peak season (est. 30 to 40%)", amount: "₹20,00,000 to ₹50,00,000 / $25,000 to $60,000 per season" },
+        { label: "Lost follow-ups (students who inquired but never heard back)", amount: "₹10,00,000 to ₹30,00,000 / $12,000 to $36,000 per season" },
       ],
-      total: "₹30,00,000–₹80,00,000 / $37,000–$96,000 per peak season in leaked enrollment revenue",
+      total: "₹30,00,000 to ₹80,00,000 / $37,000 to $96,000 per peak season in leaked enrollment revenue",
       solvesFor: `${P.proDual} — every inquiry captured, every student profiled, every session booked`,
       source: "Agentic AI Labs immigration consultant audits + ICEF Monitor data, 2026",
     },
@@ -5660,7 +5740,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     statusQuoTitle: "What consultancies try before fixing the inquiry pipeline",
     statusQuoItems: [
-      "Hire seasonal receptionists — ₹12,000–₹18,000/month ($150–$220/month) per person. They can't answer questions about IELTS requirements, country-specific processes, or visa timelines. They take messages. Students want answers, not callbacks.",
+      "Hire seasonal receptionists — ₹12,000 to ₹18,000/month ($150 to $220/month) per person. They can't answer questions about IELTS requirements, country-specific processes, or visa timelines. They take messages. Students want answers, not callbacks.",
       "Google Forms and website chat — students don't fill out forms when they have urgent questions about deadlines. They call. A chatbot can't explain the difference between a student visa and a skilled worker visa.",
       "WhatsApp broadcast for follow-up — generic bulk messages that feel like spam. Students want personalized responses about their specific situation (course, country, budget, timeline), not a mass broadcast.",
     ],
@@ -5718,7 +5798,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     proofTitle: "Consultancies stop losing students the day the AI starts answering.",
     proofBullets: [
-      "Immigration consultancy (Delhi): Captured 35+ inquiries per day during Jan–Mar peak that previously went unanswered. Counselor utilization increased from 40% to 85% — more sessions with pre-profiled students.",
+      "Immigration consultancy (Delhi): Captured 35+ inquiries per day during Jan to Mar peak that previously went unanswered. Counselor utilization increased from 40% to 85% — more sessions with pre-profiled students.",
       "Study abroad agency (Mumbai): Follow-up automation reduced student drop-off by 45%. Students arrived at counseling sessions with documents ready because the AI sent the checklist in advance.",
       "Boutique UK-focused consultancy (Bangalore): Inquiry-to-enrollment conversion improved from 9% to 17% — because every inquiry was profiled and every session was prepared.",
     ],
@@ -5730,7 +5810,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     fitChecklist: {
       headline: "Built for immigration consultants drowning in peak-season inquiries.",
       forYou: [
-        "You handle 20+ inquiry calls per day (50–100+ during peak season)",
+        "You handle 20+ inquiry calls per day (50 to 100+ during peak season)",
         "Your counselors spend more time answering repeat questions than conducting actual sessions",
         "You lose students to competitors because your follow-up takes days instead of hours",
         "You want every inquiry profiled and every session pre-loaded with student context",
@@ -5767,7 +5847,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "What about peak season when I get 100+ calls a day?",
         answer:
-          "The AI handles unlimited simultaneous calls. When you go from 20 calls/day to 100 calls/day during Jan–Mar or Jul–Sep peak, every single inquiry is captured. No busy signals. No voicemail. This is exactly when the AI pays for itself — peak season is where you lose the most enrollments to missed inquiries.",
+          "The AI handles unlimited simultaneous calls. When you go from 20 calls/day to 100 calls/day during Jan to Mar or Jul to Sep peak, every single inquiry is captured. No busy signals. No voicemail. This is exactly when the AI pays for itself — peak season is where you lose the most enrollments to missed inquiries.",
       },
       {
         question: "Does it follow up with students who don't book a session?",
@@ -5782,7 +5862,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How fast can we go live — ideally before next peak season?",
         answer:
-          "7–10 days from your first call with us. Simple inquiry capture agents can launch in 5 days. Full counselor booking + follow-up automation takes the full 10 days. If your peak season starts in 3 weeks, we can have you live in time.",
+          "7 to 10 days from your first call with us. Simple inquiry capture agents can launch in 5 days. Full counselor booking + follow-up automation takes the full 10 days. If your peak season starts in 3 weeks, we can have you live in time.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -5790,9 +5870,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll audit your peak-season inquiry data and show you exactly how many students you're losing to a busy phone line.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
-      { label: "AI Interviewer for Recruiting Agencies", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
+      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
+      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
+      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai for immigration consultant",
@@ -5829,14 +5912,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "You tried a US voice AI platform. It can't understand your customer speaking Hindi. It breaks on Hinglish — 'mujhe AC repair chahiye, tomorrow morning around 9 baje.' It can't handle traffic noise in the background. Your customers feel like they're talking to a broken robot. 57% of India's internet users prefer Hindi. 60%+ of business calls in India happen in Hindi or Hinglish. If your voice AI can't handle that, it's not built for India.",
     painTitle: "Why US-built voice AI fails in India — and your customers know it",
     painPoints: [
-      "Customer calls to book an AC repair in Hindi. Your US voice AI (Vapi, Retell, Bland) hears garbled input. It asks them to repeat. Twice. The customer hangs up — convinced your business uses a broken automated system. That ₹1,500–₹5,000 ($20–$60) service call just walked to the competitor with a human receptionist.",
+      "Customer calls to book an AC repair in Hindi. Your US voice AI (Vapi, Retell, Bland) hears garbled input. It asks them to repeat. Twice. The customer hangs up — convinced your business uses a broken automated system. That ₹1,500 to ₹5,000 ($20 to $60) service call just walked to the competitor with a human receptionist.",
       "Hinglish is how India actually talks. 'Mujhe kal subah 10 baje appointment chahiye, near Koramangala.' English words. Hindi grammar. Mixed in one sentence. US voice AI models were trained on American English — they don't understand code-switching. They don't understand 'kal subah' means tomorrow morning. They don't understand 'chahiye' means 'I need.' Your callers aren't confused. Your AI is.",
       "Indian phone calls have traffic noise. Fan noise. Street vendor noise. Autorickshaw horns. The customer is calling from a busy road — not a quiet office. US voice AI breaks on background noise because it was trained in clean studio conditions. Your customer is standing at a bus stop and the AI can't hear them. They hang up. You lose the booking.",
     ],
     costCallout: {
       items: [
-        { label: "Calls where US voice AI fails to understand Hindi/Hinglish", amount: "40–60% of inbound (industry tests)" },
-        { label: "Revenue lost per failed AI interaction (customer hangs up)", amount: "₹1,500–₹50,000 / $20–$600 per call" },
+        { label: "Calls where US voice AI fails to understand Hindi/Hinglish", amount: "40 to 60% of inbound (industry tests)" },
+        { label: "Revenue lost per failed AI interaction (customer hangs up)", amount: "₹1,500 to ₹50,000 / $20 to $600 per call" },
         { label: "Customer trust lost when AI sounds like a broken robot", amount: "Permanent — they don't call back" },
       ],
       total: "A voice AI that can't speak Hindi isn't saving you money — it's actively losing you customers",
@@ -5851,7 +5934,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "US voice AI platforms (Vapi, Retell, Bland) — built for American English. They offer 'Hindi support' that's actually translated English prompts running on English-trained models. It technically 'speaks Hindi' the way Google Translate technically 'speaks Hindi.' Your customers can tell in 3 seconds.",
       "IVR menus in Hindi — 'Hindi ke liye 1 dabaiye.' Customers hate IVR. They press buttons, get stuck in loops, and hang up. A robotic menu is not a conversation. Your competitors with human receptionists are still winning because IVR feels like a wall, not a welcome.",
-      "Hire bilingual receptionists — ₹12,000–₹20,000/month ($150–$250/month) per person. Works until they're on another call, take a sick day, or quit. Doesn't scale. Doesn't handle 3 calls at once. Still not available at 10 PM.",
+      "Hire bilingual receptionists — ₹12,000 to ₹20,000/month ($150 to $250/month) per person. Works until they're on another call, take a sick day, or quit. Doesn't scale. Doesn't handle 3 calls at once. Still not available at 10 PM.",
     ],
     industrySignal: {
       headline: "57% of India's internet users prefer Hindi. Your voice AI should too.",
@@ -5971,7 +6054,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How fast can I switch from my current US voice AI?",
         answer:
-          "5–7 days. We analyze why your current system is failing (usually: Hindi comprehension, accent handling, background noise), build the Hindi-first replacement on your business context, and go live. Most businesses see the improvement in call completion rate within the first 24 hours.",
+          "5 to 7 days. We analyze why your current system is failing (usually: Hindi comprehension, accent handling, background noise), build the Hindi-first replacement on your business context, and go live. Most businesses see the improvement in call completion rate within the first 24 hours.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -5979,9 +6062,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll test your current voice AI with a Hindi call — and show you exactly where it breaks.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI for Diagnostic Labs", href: "/ai-for-diagnostic-lab" },
-      { label: "Vapi Alternative", href: "/vapi-alternative" },
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
+      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
+      { label: "AI Dispatch for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "hindi ai voice agent",
@@ -6013,7 +6098,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-for-gym-fitness"],
     title: "AI Receptionist for Gyms & Fitness Studios — Stop Losing Members to an Unanswered Phone | Agentic AI Labs",
     description:
-      "Busy gyms get 15–30 inquiry calls/day. Peak times — mornings, evenings, January — are exactly when trainers are in sessions and the front desk is swamped. Each missed inquiry could be ₹15,000–₹60,000 ($200–$800) in annual membership revenue. We build an AI receptionist that answers every call, shares pricing, books trial sessions, and sends WhatsApp with membership options.",
+      "Busy gyms get 15 to 30 inquiry calls/day. Peak times — mornings, evenings, January — are exactly when trainers are in sessions and the front desk is swamped. Each missed inquiry could be ₹15,000 to ₹60,000 ($200 to $800) in annual membership revenue. We build an AI receptionist that answers every call, shares pricing, books trial sessions, and sends WhatsApp with membership options.",
     canonicalUrl: makeCanonical(["ai-for-gym-fitness"]),
     heroLabel: "Built for Gyms, Fitness Studios & Yoga Centers",
     heroHeadline: "A potential member just called about pricing. Your front desk is handling check-ins. They walked into the gym down the street.",
@@ -6021,17 +6106,17 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "It's 7 PM. Your gym is packed. The front desk is scanning member cards. A trainer is mid-session. The phone rings — someone asking about membership pricing and class schedule. Nobody picks up. That person walks into the competitor gym 500 meters away. At ₹30,000/year ($400/year) per member, that's not a missed call — it's a year of recurring revenue that just walked out the door.",
     painTitle: "The membership inquiry problem gyms don't realize they have",
     painPoints: [
-      "January. New Year resolution season. Your phone rings 25–30 times a day with membership inquiries. Your front desk is checking in existing members, handling towel exchanges, and answering questions about class timing — while the phone rings and rings. Each unanswered call is a ₹2,000–₹8,000/month ($30–$100/month) membership. 20 missed calls in January at 25% conversion = 5 lost members = ₹1,00,000–₹4,00,000 ($1,200–$4,800) in annual revenue. Gone.",
-      "Peak inquiry times are mornings (7–10 AM) and evenings (5–8 PM) — exactly when your gym is busiest. Your trainers are running sessions. Your front desk is managing check-ins. The phone rings. Nobody answers. The irony: you're too busy serving existing members to acquire new ones. Your competitor with a receptionist (or smarter phone system) captures the inquiry you missed.",
-      "Trial session bookings are your highest-converting funnel. 20–30% of trial visitors convert to annual members. But booking a trial requires answering the phone, checking trainer availability, and confirming a time. If the inquiry call goes unanswered, the trial never happens. The membership never starts. The lifetime value of that member — 2–5 years of monthly payments — evaporates because nobody picked up at 6:30 PM on a Tuesday.",
+      "January. New Year resolution season. Your phone rings 25 to 30 times a day with membership inquiries. Your front desk is checking in existing members, handling towel exchanges, and answering questions about class timing — while the phone rings and rings. Each unanswered call is a ₹2,000 to ₹8,000/month ($30 to $100/month) membership. 20 missed calls in January at 25% conversion = 5 lost members = ₹1,00,000 to ₹4,00,000 ($1,200 to $4,800) in annual revenue. Gone.",
+      "Peak inquiry times are mornings (7 to 10 AM) and evenings (5 to 8 PM) — exactly when your gym is busiest. Your trainers are running sessions. Your front desk is managing check-ins. The phone rings. Nobody answers. The irony: you're too busy serving existing members to acquire new ones. Your competitor with a receptionist (or smarter phone system) captures the inquiry you missed.",
+      "Trial session bookings are your highest-converting funnel. 20 to 30% of trial visitors convert to annual members. But booking a trial requires answering the phone, checking trainer availability, and confirming a time. If the inquiry call goes unanswered, the trial never happens. The membership never starts. The lifetime value of that member — 2 to 5 years of monthly payments — evaporates because nobody picked up at 6:30 PM on a Tuesday.",
     ],
     costCallout: {
       items: [
-        { label: "Average annual membership value", amount: "₹15,000–₹60,000 / $200–$800" },
-        { label: "Missed inquiry calls per month (busy gym)", amount: "30–60 calls" },
-        { label: "Lost annual membership revenue (at 25% conversion)", amount: "₹1,12,500–₹9,00,000 / $1,500–$12,000 per year" },
+        { label: "Average annual membership value", amount: "₹15,000 to ₹60,000 / $200 to $800" },
+        { label: "Missed inquiry calls per month (busy gym)", amount: "30 to 60 calls" },
+        { label: "Lost annual membership revenue (at 25% conversion)", amount: "₹1,12,500 to ₹9,00,000 / $1,500 to $12,000 per year" },
       ],
-      total: "Each month of missed calls is ₹9,000–₹75,000 ($120–$1,000) in annual membership revenue you never collected",
+      total: "Each month of missed calls is ₹9,000 to ₹75,000 ($120 to $1,000) in annual membership revenue you never collected",
       solvesFor: "₹4,999/month ($199/month) — every inquiry answered, every trial booked, every membership started",
       source: "Agentic AI Labs gym & fitness studio audits + IHRSA global report data, 2026",
     },
@@ -6043,11 +6128,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     statusQuoItems: [
       "Ask trainers to answer the phone between sessions — they forget, they're sweaty, they rush through the call. The inquiry experience is terrible and the caller can tell they're an interruption, not a priority.",
       "Instagram DMs and WhatsApp — works for warm leads who already follow you, but first-time callers (the highest-intent inquiries) still call. They found you on Google, not Instagram.",
-      "Hire a dedicated receptionist — ₹12,000–₹18,000/month ($150–$220/month). They handle one call at a time, take lunch breaks, and still can't answer the phone during the evening rush when 3 inquiries come in simultaneously.",
+      "Hire a dedicated receptionist — ₹12,000 to ₹18,000/month ($150 to $220/month). They handle one call at a time, take lunch breaks, and still can't answer the phone during the evening rush when 3 inquiries come in simultaneously.",
     ],
     industrySignal: {
       headline: "India's fitness industry is projected to hit $30B by 2030 — but the gyms winning are the ones that answer the phone.",
-      body: "India's health and fitness market is growing at 30%+ CAGR (Redseer + IHRSA). But membership churn is 50–70% annually in budget gyms. The gyms that retain members and acquire new ones are the ones with excellent first-touch experience. Research from IHRSA shows that a gym's response time to an inquiry call is the strongest predictor of trial booking — ahead of pricing, location, or equipment. The gym that answers first books the trial. The one that calls back tomorrow is already forgotten.",
+      body: "India's health and fitness market is growing at 30%+ CAGR (Redseer + IHRSA). But membership churn is 50 to 70% annually in budget gyms. The gyms that retain members and acquire new ones are the ones with excellent first-touch experience. Research from IHRSA shows that a gym's response time to an inquiry call is the strongest predictor of trial booking — ahead of pricing, location, or equipment. The gym that answers first books the trial. The one that calls back tomorrow is already forgotten.",
       source: "Redseer Strategy Consultants + IHRSA Global Report, 2025",
       date: "2025",
     },
@@ -6113,7 +6198,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       forYou: [
         "You run a gym, fitness studio, yoga center, or CrossFit box getting 15+ inquiry calls per day",
         "Your peak inquiry times overlap with your busiest operational hours — and calls go unanswered",
-        "You know trial sessions convert at 20–30% but you're not booking enough trials because inquiries drop off",
+        "You know trial sessions convert at 20 to 30% but you're not booking enough trials because inquiries drop off",
         "You want every call answered with accurate pricing, schedule, and trial booking — without hiring more front desk staff",
         "Your annual membership is ₹15,000+ ($200+) — the ROI from capturing even 3 extra members pays for a year of AI",
       ],
@@ -6163,7 +6248,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       {
         question: "How fast can I go live — ideally before January?",
         answer:
-          "5–7 days from your first call with us. If January is your target, reach out in December. We've launched gym AI systems in as little as 4 days when the pricing and schedule were straightforward.",
+          "5 to 7 days from your first call with us. If January is your target, reach out in December. We've launched gym AI systems in as little as 4 days when the pricing and schedule were straightforward.",
       },
     ],
     ctaLabel: "Take Your AI Agent Live in 30 Mins",
@@ -6172,8 +6257,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
-      { label: "AI Voice Agent (Hindi)", href: "/ai-voice-agent-hindi" },
+      { label: "AI Receptionist for Restaurants", href: "/ai-receptionist-for-restaurant" },
+      { label: "AI Showing Coordinator for Real Estate", href: "/ai-showing-coordinator-for-real-estate" },
+      { label: "AI Booking for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
+      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "ai receptionist for gym",
@@ -6303,10 +6391,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We build it directly on your GoHighLevel account. You keep ownership of the workflow.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "GoHighLevel Speed to Lead", href: "/gohighlevel-speed-to-lead-automation" },
+      { label: "AI Appointment Booking Agent", href: "/ai-appointment-booking-voice-agent" },
+      { label: "GoHighLevel Cold Email Automation", href: "/gohighlevel-cold-email-automation" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
       "gohighlevel ai voice pipeline",
@@ -6459,10 +6549,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We build it on your n8n, connect your accounts, and keep it running. You keep the workflow.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "Our AI automation services", href: "/services/" },
-      { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
-      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
-      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+      { label: "Done-For-You n8n Automation", href: "/done-for-you-n8n-automation" },
+      { label: "n8n vs Zapier vs Make", href: "/n8n-vs-zapier-vs-make" },
+      { label: "Zapier Alternative for Agencies", href: "/zapier-alternative-for-agencies" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Our Services", href: "/services/" },
     ],
     keywords: [
       "n8n content automation",
@@ -6680,19 +6771,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a speed-to-lead build call",
     "ctaSupportText": "We map your GoHighLevel lead sources and show you the exact workflow that answers in seconds, qualifies, and books. No generic template, built for your pipeline.",
     "relatedLinks": [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI Appointment Booking Agent", href: "/ai-appointment-booking-voice-agent" },
+      { label: "GoHighLevel Cold Email Automation", href: "/gohighlevel-cold-email-automation" },
+      { label: "n8n + GoHighLevel Email Pipeline", href: "/n8n-gohighlevel-email-pipeline" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI voice agent for GoHighLevel",
-        "href": "/ai-voice-agent-for-gohighlevel"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
     ],
     "keywords": [
       "gohighlevel speed to lead",
@@ -6922,19 +7006,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a build call for your GoHighLevel cold email",
     "ctaSupportText": "We map your pipeline stages, wire the n8n layer, and turn on the kill switch. Reach Agentic AI Labs at aditya@tryagentikai.com.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI SDR for GHL Agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "n8n Content Automation Pipeline",
-        "href": "/n8n-content-automation-pipeline"
-      }
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "n8n + GoHighLevel Email Pipeline", href: "/n8n-gohighlevel-email-pipeline" },
+      { label: "Done-For-You GoHighLevel", href: "/done-for-you-gohighlevel-automation" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     "keywords": [
       "gohighlevel cold email automation",
@@ -7164,19 +7241,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a Facebook automation walkthrough",
     "ctaSupportText": "We map your DMs, comments, and keyword triggers to your knowledge base and GoHighLevel workflows, then show you exactly how OS.1 would answer on your page.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "AI voice agent for GoHighLevel",
-        "href": "/ai-voice-agent-for-gohighlevel"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Best AI for GoHighLevel agencies",
-        "href": "/best-ai-for-gohighlevel-agencies"
-      }
+      { label: "OS.1 Meta Automation", href: "/os1-meta-automation" },
+      { label: "GoHighLevel Instagram DM Automation", href: "/gohighlevel-instagram-dm-automation" },
+      { label: "Facebook DM Automation (Meta API)", href: "/facebook-dm-automation-meta-api" },
+      { label: "Instagram Comment Automation", href: "/instagram-comment-automation-ai" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "gohighlevel facebook automation",
@@ -7401,19 +7471,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a DM automation walkthrough",
     "ctaSupportText": "See OS.1 answer a live DM from a sample knowledge base and drop the lead into GoHighLevel, in one call.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "AI voice agent for GoHighLevel",
-        "href": "/ai-voice-agent-for-gohighlevel"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Best AI for GoHighLevel agencies",
-        "href": "/best-ai-for-gohighlevel-agencies"
-      }
+      { label: "OS.1 Meta Automation", href: "/os1-meta-automation" },
+      { label: "Facebook DM Automation (Meta API)", href: "/facebook-dm-automation-meta-api" },
+      { label: "Instagram Comment Automation", href: "/instagram-comment-automation-ai" },
+      { label: "WhatsApp GoHighLevel Automation", href: "/whatsapp-gohighlevel-automation" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "instagram dm automation ai",
@@ -7644,19 +7707,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See it answer your WhatsApp",
     "ctaSupportText": "Book a short walkthrough. We will show OS.1 answering a real WhatsApp thread, qualifying, and logging straight into GoHighLevel.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "AI voice agent for GoHighLevel",
-        "href": "/ai-voice-agent-for-gohighlevel"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Best AI for GoHighLevel agencies",
-        "href": "/best-ai-for-gohighlevel-agencies"
-      }
+      { label: "OS.1 Meta Automation", href: "/os1-meta-automation" },
+      { label: "GoHighLevel Facebook DM Automation", href: "/gohighlevel-facebook-dm-automation" },
+      { label: "GoHighLevel Instagram DM Automation", href: "/gohighlevel-instagram-dm-automation" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "whatsapp gohighlevel automation",
@@ -7874,19 +7929,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a GoHighLevel automation build call",
     "ctaSupportText": "We will map your lead paths, show you where responses are leaking, and scope a stack that answers every inquiry in seconds.",
     "relatedLinks": [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+      { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline, end to end",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI voice agent for GoHighLevel",
-        "href": "/ai-voice-agent-for-gohighlevel"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
     ],
     "keywords": [
       "done for you gohighlevel",
@@ -8111,19 +8159,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See the Vapi + GHL pipeline mapped to your funnel",
     "ctaSupportText": "We map your current form-to-follow-up flow and show exactly where leads go cold before anyone calls.",
     "relatedLinks": [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "Retell AI + GoHighLevel", href: "/retell-gohighlevel-integration" },
+      { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "GoHighLevel Speed to Lead Automation",
-        "href": "/gohighlevel-speed-to-lead-automation"
-      },
-      {
-        "label": "Vapi Alternative",
-        "href": "/vapi-alternative"
-      }
     ],
     "keywords": [
       "vapi gohighlevel integration",
@@ -8348,19 +8388,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your Retell AI GoHighLevel pipeline built",
     "ctaSupportText": "Book a call and we will map your lead sources, qualifying criteria, and GHL setup, then show you exactly how the voice pipeline will run before you commit.",
     "relatedLinks": [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
+      { label: "GoHighLevel Speed to Lead", href: "/gohighlevel-speed-to-lead-automation" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "GoHighLevel speed-to-lead automation",
-        "href": "/gohighlevel-speed-to-lead-automation"
-      },
-      {
-        "label": "Retell AI alternative",
-        "href": "/retell-ai-alternative"
-      }
     ],
     "keywords": [
       "retell ai gohighlevel integration",
@@ -8590,19 +8622,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a pipeline build call",
     "ctaSupportText": "Walk us through your GoHighLevel setup and your offer. We will map the n8n email pipeline that captures, follows up, advances, and stops on reply. Reach us at aditya@tryagentikai.com.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "n8n content automation pipeline",
-        "href": "/n8n-content-automation-pipeline"
-      },
-      {
-        "label": "AI SDR for GoHighLevel agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "Done-For-You GoHighLevel", href: "/done-for-you-gohighlevel-automation" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
+      { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     "keywords": [
       "n8n gohighlevel email pipeline",
@@ -8834,19 +8859,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your content pipeline built",
     "ctaSupportText": "We map your niche sources, voice, and posting schedule, then build the n8n pipeline with your review sheet in the loop. You show up consistently across four networks without the weekly scramble.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "n8n content automation pipeline",
-        "href": "/n8n-content-automation-pipeline"
-      },
-      {
-        "label": "Done-for-you GoHighLevel automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      },
-      {
-        "label": "AI SDR for GoHighLevel agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
+      { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+      { label: "Zoom Meeting to Proposal", href: "/zoom-meeting-proposal-automation" },
+      { label: "Make.com Zoom Automation", href: "/make-zoom-proposal-automation" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "ai social media content pipeline",
@@ -9073,19 +9090,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Automate your Facebook DMs and comments",
     "ctaSupportText": "We map your knowledge base, wire OS.1 into the Meta API, and connect it to GHL. You watch DMs and comments get answered in seconds.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI SDR for GHL Agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Done-For-You GoHighLevel Automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      }
+      { label: "OS.1 Meta Automation", href: "/os1-meta-automation" },
+      { label: "Instagram Comment Automation", href: "/instagram-comment-automation-ai" },
+      { label: "WhatsApp GoHighLevel Automation", href: "/whatsapp-gohighlevel-automation" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "facebook dm automation",
@@ -9310,19 +9319,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get Instagram comment automation built for your account",
     "ctaSupportText": "We map your posts, buying keywords, and GHL workflows, then stand up OS.1 comment automation done-for-you. You approve every reply before it goes live.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel speed-to-lead automation",
-        "href": "/gohighlevel-speed-to-lead-automation"
-      },
-      {
-        "label": "AI SDR for GoHighLevel agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Done-for-you GoHighLevel automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      }
+      { label: "OS.1 Meta Automation", href: "/os1-meta-automation" },
+      { label: "WhatsApp GoHighLevel Automation", href: "/whatsapp-gohighlevel-automation" },
+      { label: "GoHighLevel Facebook DM Automation", href: "/gohighlevel-facebook-dm-automation" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "instagram comment automation",
@@ -9553,19 +9554,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Automate your post-call proposals",
     "ctaSupportText": "Book a short call. We will map your Zoom and GoHighLevel setup and show you the pipeline running on a real transcript.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "Speed to lead automation for GoHighLevel",
-        "href": "/gohighlevel-speed-to-lead-automation"
-      },
-      {
-        "label": "Done-for-you GoHighLevel automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      }
+      { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+      { label: "Make.com Zoom Automation", href: "/make-zoom-proposal-automation" },
+      { label: "Done-For-You n8n Automation", href: "/done-for-you-n8n-automation" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "zoom meeting automation ai",
@@ -9791,19 +9784,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your post-call proposal automation built",
     "ctaSupportText": "We map your Zoom, AssemblyAI, and GoHighLevel setup, then build the Make.com scenario that sends a tailored proposal the moment each call ends.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "Done-For-You GoHighLevel Automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      },
-      {
-        "label": "AI SDR for GoHighLevel Agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
+      { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+      { label: "Done-For-You n8n Automation", href: "/done-for-you-n8n-automation" },
+      { label: "n8n vs Zapier vs Make", href: "/n8n-vs-zapier-vs-make" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "make.com zoom automation",
@@ -10029,19 +10014,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your AI booking agent built",
     "ctaSupportText": "We build, wire, and tune the whole agent into your GoHighLevel calendar for you, inbound and outbound. You just start seeing booked appointments.",
     "relatedLinks": [
+      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+      { label: "GoHighLevel Cold Email Automation", href: "/gohighlevel-cold-email-automation" },
+      { label: "n8n + GoHighLevel Email Pipeline", href: "/n8n-gohighlevel-email-pipeline" },
+      { label: "Done-For-You GoHighLevel", href: "/done-for-you-gohighlevel-automation" },
+      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "GoHighLevel speed-to-lead automation",
-        "href": "/gohighlevel-speed-to-lead-automation"
-      },
-      {
-        "label": "AI SDR for GHL agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      }
     ],
     "keywords": [
       "ai appointment booking agent",
@@ -10276,19 +10254,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Get your broken n8n workflow rebuilt",
     "ctaSupportText": "Send us the workflow that keeps breaking. We audit it, tell you whether to harden or rebuild, and turn it into an automation you can trust to run without you watching it.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "n8n Content Automation Pipeline",
-        "href": "/n8n-content-automation-pipeline"
-      },
-      {
-        "label": "Done-For-You GoHighLevel Automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      }
+      { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+      { label: "Zapier Automation Keeps Breaking", href: "/zapier-automation-keeps-breaking" },
+      { label: "AI Social Media Content Pipeline", href: "/ai-social-media-content-pipeline" },
+      { label: "Zoom Meeting to Proposal", href: "/zoom-meeting-proposal-automation" },
+      { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "n8n automation not working",
@@ -10511,19 +10482,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a pipeline build call",
     "ctaSupportText": "Bring your list and your offer. We map the outbound pipeline, show you the Bland plus GoHighLevel build, and scope a done-for-you rollout with guardrails and a kill switch from day one.",
     "relatedLinks": [
+      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Best AI Voice Agents", href: "/best-ai-voice-agents-for-business" },
+      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI SDR for GoHighLevel agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Bland AI alternative",
-        "href": "/bland-ai-alternative"
-      }
     ],
     "keywords": [
       "bland ai outbound calling",
@@ -10749,19 +10712,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "Book a build call",
     "ctaSupportText": "Bring your ElevenLabs voice. We will show you the telephony, logic, CRM writeback, and follow-up that turn it into an agent that books.",
     "relatedLinks": [
+      { label: "Vapi Alternative", href: "/vapi-alternative" },
+      { label: "Bland AI Outbound Pipeline", href: "/bland-ai-outbound-pipeline" },
+      { label: "Best AI Voice Agents", href: "/best-ai-voice-agents-for-business" },
+      { label: "Done-For-You AI Voice Agent", href: "/done-for-you-ai-voice-agent" },
+      { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-      {
-        "label": "GoHighLevel AI voice pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "Vapi alternative",
-        "href": "/vapi-alternative"
-      },
-      {
-        "label": "Retell AI alternative",
-        "href": "/retell-ai-alternative"
-      }
     ],
     "keywords": [
       "elevenlabs voice agent",
@@ -10987,19 +10943,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "ctaLabel": "See OS.1 running on your Meta accounts",
     "ctaSupportText": "We connect Facebook, Instagram, and WhatsApp to one OS.1 engine and wire every conversation into your GoHighLevel. Book a walkthrough and we will show it live on your channels.",
     "relatedLinks": [
-      { label: "Our AI automation services", href: "/services/" },
-      {
-        "label": "GoHighLevel AI Voice Pipeline",
-        "href": "/gohighlevel-ai-voice-pipeline"
-      },
-      {
-        "label": "AI SDR for GHL Agencies",
-        "href": "/ai-sdr-for-ghl-agencies"
-      },
-      {
-        "label": "Done-for-You GoHighLevel Automation",
-        "href": "/done-for-you-gohighlevel-automation"
-      }
+      { label: "GoHighLevel Facebook DM Automation", href: "/gohighlevel-facebook-dm-automation" },
+      { label: "GoHighLevel Instagram DM Automation", href: "/gohighlevel-instagram-dm-automation" },
+      { label: "Facebook DM Automation (Meta API)", href: "/facebook-dm-automation-meta-api" },
+      { label: "What Is Agentic AI?", href: "/glossary/what-is-agentic-ai" },
+      { label: "Our Services", href: "/services/" },
     ],
     "keywords": [
       "os.1 meta automation",
@@ -11229,18 +11177,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a GoHighLevel voice pipeline walkthrough",
   "ctaSupportText": "We map your speed-to-lead gap on your own GHL account and show you the pipeline we would build, before you commit to anything.",
   "relatedLinks": [
-    {
-      "label": "GoHighLevel AI Voice Pipeline",
-      "href": "/gohighlevel-ai-voice-pipeline"
-    },
-    {
-      "label": "AI SDR for GHL Agencies",
-      "href": "/ai-sdr-for-ghl-agencies"
-    },
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    }
+    { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+    { label: "Vapi + GoHighLevel", href: "/vapi-gohighlevel-integration" },
+    { label: "Retell AI + GoHighLevel", href: "/retell-gohighlevel-integration" },
+    { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "leadlock ai alternative",
@@ -11463,18 +11404,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a build call",
   "ctaSupportText": "We will map your call flow, show you exactly how the agent runs on your GoHighLevel, and tell you honestly whether the built-in add-on is enough for your case.",
   "relatedLinks": [
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    },
-    {
-      "label": "GoHighLevel AI Voice Pipeline",
-      "href": "/gohighlevel-ai-voice-pipeline"
-    },
-    {
-      "label": "AI SDR for GHL Agencies",
-      "href": "/ai-sdr-for-ghl-agencies"
-    }
+    { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
+    { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
+    { label: "Vapi + GoHighLevel", href: "/vapi-gohighlevel-integration" },
+    { label: "Retell AI + GoHighLevel", href: "/retell-gohighlevel-integration" },
+    { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "gohighlevel ai employee alternative",
@@ -11704,18 +11639,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get a Zapier-to-n8n migration plan",
   "ctaSupportText": "Send us your current Zaps and we will map the task count, project the execution cost, and show you what a maintained n8n build looks like.",
   "relatedLinks": [
-    {
-      "label": "n8n Content Automation Pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "AI SDR for GoHighLevel Agencies",
-      "href": "/ai-sdr-for-ghl-agencies"
-    },
-    {
-      "label": "Our Services",
-      "href": "/services/"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "Make.com Alternative", href: "/make-com-alternative" },
+    { label: "Lindy AI Alternative", href: "/lindy-ai-alternative" },
+    { label: "n8n Automation Keeps Breaking", href: "/n8n-automation-keeps-breaking" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "zapier alternative for agencies",
@@ -11939,18 +11868,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get a done-for-you automation build",
   "ctaSupportText": "Tell us the outcome you want. We map it, build it on the right platform, host it, and keep it running, so you never open a scenario editor.",
   "relatedLinks": [
-    {
-      "label": "n8n Content Automation Pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "Our Services",
-      "href": "/services/"
-    },
-    {
-      "label": "AI Clarity Workshop",
-      "href": "/ai-clarity-workshop/"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "Lindy AI Alternative", href: "/lindy-ai-alternative" },
+    { label: "n8n Automation Keeps Breaking", href: "/n8n-automation-keeps-breaking" },
+    { label: "Zapier Automation Keeps Breaking", href: "/zapier-automation-keeps-breaking" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "make.com alternative",
@@ -12176,18 +12099,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a build call",
   "ctaSupportText": "Tell us the workflow that keeps breaking. We will map the build and tell you honestly whether a done-for-you system beats running it yourself.",
   "relatedLinks": [
-    {
-      "label": "Our services",
-      "href": "/services/"
-    },
-    {
-      "label": "n8n content automation pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "GoHighLevel AI voice pipeline",
-      "href": "/gohighlevel-ai-voice-pipeline"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "n8n Automation Keeps Breaking", href: "/n8n-automation-keeps-breaking" },
+    { label: "Zapier Automation Keeps Breaking", href: "/zapier-automation-keeps-breaking" },
+    { label: "AI Social Media Content Pipeline", href: "/ai-social-media-content-pipeline" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "lindy ai alternative",
@@ -12411,18 +12328,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get a platform recommendation and build plan",
   "ctaSupportText": "Bring your current workflows and volume. We tell you whether n8n, Zapier, or Make fits, show the cost math, and scope the production build.",
   "relatedLinks": [
-    {
-      "label": "n8n content automation pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "Our automation services",
-      "href": "/services/"
-    },
-    {
-      "label": "Book an AI clarity workshop",
-      "href": "/ai-clarity-workshop/"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "Zapier Alternative for Agencies", href: "/zapier-alternative-for-agencies" },
+    { label: "Make.com Alternative", href: "/make-com-alternative" },
+    { label: "Lindy AI Alternative", href: "/lindy-ai-alternative" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "n8n vs zapier vs make",
@@ -12645,18 +12556,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get your broken Zaps audited",
   "ctaSupportText": "Send us the automations that keep failing. We will map where they break and show you what a production rebuild looks like, no obligation.",
   "relatedLinks": [
-    {
-      "label": "Production n8n content automation pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "What we build: services",
-      "href": "/services/"
-    },
-    {
-      "label": "Start with an AI clarity workshop",
-      "href": "/ai-clarity-workshop/"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "AI Social Media Content Pipeline", href: "/ai-social-media-content-pipeline" },
+    { label: "Zoom Meeting to Proposal", href: "/zoom-meeting-proposal-automation" },
+    { label: "Make.com Zoom Automation", href: "/make-zoom-proposal-automation" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "zapier automation not working",
@@ -12880,18 +12785,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a build call",
   "ctaSupportText": "Tell us the calls you want handled. We will map the agent end to end, from the phone ringing to the CRM record and the follow-up.",
   "relatedLinks": [
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    },
-    {
-      "label": "Our Services",
-      "href": "/services/"
-    },
-    {
-      "label": "Vapi Alternative",
-      "href": "/vapi-alternative"
-    }
+    { label: "Vapi Alternative", href: "/vapi-alternative" },
+    { label: "ElevenLabs Voice Agent in Production", href: "/elevenlabs-voice-agent-production" },
+    { label: "Bland AI Outbound Pipeline", href: "/bland-ai-outbound-pipeline" },
+    { label: "Best AI Voice Agents", href: "/best-ai-voice-agents-for-business" },
+    { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "smallest ai alternative",
@@ -13116,18 +13015,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a build call",
   "ctaSupportText": "Tell us your sales flow and preferred voice engine. We will map the pipeline and show you what a done-for-you build looks like on GoHighLevel.",
   "relatedLinks": [
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    },
-    {
-      "label": "GoHighLevel AI Voice Pipeline",
-      "href": "/gohighlevel-ai-voice-pipeline"
-    },
-    {
-      "label": "Vapi Alternative",
-      "href": "/vapi-alternative"
-    }
+    { label: "Vapi Alternative", href: "/vapi-alternative" },
+    { label: "smallest.ai Alternative", href: "/smallest-ai-alternative" },
+    { label: "ElevenLabs Voice Agent in Production", href: "/elevenlabs-voice-agent-production" },
+    { label: "Bland AI Outbound Pipeline", href: "/bland-ai-outbound-pipeline" },
+    { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "synthflow alternative",
@@ -13352,18 +13245,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get your platform pick and build plan",
   "ctaSupportText": "Tell us your call type and volume. We will name the right platform for you and map the production build, no obligation.",
   "relatedLinks": [
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    },
-    {
-      "label": "AI Clarity Workshop",
-      "href": "/ai-clarity-workshop/"
-    },
-    {
-      "label": "GoHighLevel AI Voice Pipeline",
-      "href": "/gohighlevel-ai-voice-pipeline"
-    }
+    { label: "Vapi Alternative", href: "/vapi-alternative" },
+    { label: "ElevenLabs vs Vapi", href: "/elevenlabs-vs-vapi" },
+    { label: "Synthflow Alternative", href: "/synthflow-alternative" },
+    { label: "smallest.ai Alternative", href: "/smallest-ai-alternative" },
+    { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "vapi vs retell vs bland",
@@ -13590,18 +13477,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Get a production voice agent built for you",
   "ctaSupportText": "Skip the tool comparison. Tell us the calls you want handled, and we will build the agent that answers, reasons, and books, with the right voice and platform underneath.",
   "relatedLinks": [
-    {
-      "label": "AI Voice Agent",
-      "href": "/ai-voice-agent/"
-    },
-    {
-      "label": "Vapi Alternative",
-      "href": "/vapi-alternative"
-    },
-    {
-      "label": "Our Services",
-      "href": "/services/"
-    }
+    { label: "Vapi Alternative", href: "/vapi-alternative" },
+    { label: "Synthflow Alternative", href: "/synthflow-alternative" },
+    { label: "smallest.ai Alternative", href: "/smallest-ai-alternative" },
+    { label: "ElevenLabs Voice Agent in Production", href: "/elevenlabs-voice-agent-production" },
+    { label: "What Is Production-Grade AI?", href: "/glossary/what-is-production-grade-ai" },
+    { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
   ],
   "keywords": [
     "elevenlabs vs vapi",
@@ -13819,18 +13700,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "ctaLabel": "Book a scoping call",
   "ctaSupportText": "Tell us the one workflow that keeps slipping. We will scope it, tell you honestly if n8n is the right home for it, and show you what a done-for-you build looks like.",
   "relatedLinks": [
-    {
-      "label": "n8n content automation pipeline",
-      "href": "/n8n-content-automation-pipeline"
-    },
-    {
-      "label": "All services",
-      "href": "/services/"
-    },
-    {
-      "label": "AI clarity workshop",
-      "href": "/ai-clarity-workshop/"
-    }
+    { label: "n8n Content Automation Pipeline", href: "/n8n-content-automation-pipeline" },
+    { label: "n8n vs Zapier vs Make", href: "/n8n-vs-zapier-vs-make" },
+    { label: "Zapier Alternative for Agencies", href: "/zapier-alternative-for-agencies" },
+    { label: "Make.com Alternative", href: "/make-com-alternative" },
+    { label: "AI Agent vs AI System", href: "/glossary/ai-agent-vs-ai-system" },
+    { label: "Our Services", href: "/services/" },
   ],
   "keywords": [
     "done for you n8n automation",

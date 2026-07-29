@@ -173,6 +173,25 @@ const DEFAULT_IMAGES: PageImages = {
 
 const getImages = (slug: string): PageImages => PAGE_IMAGES[slug] || DEFAULT_IMAGES;
 
+// Breadcrumbs give crawlers a second, non-boilerplate path to every page and
+// give the SERP a trail instead of a bare URL. Section is derived from page.type
+// so we never hand-maintain a slug map.
+const SECTION_BY_TYPE: Record<string, { label: string; href: string }> = {
+  persona: { label: "AI Voice Agent", href: "/ai-voice-agent/" },
+  integration: { label: "Integrations", href: "/services/" },
+  comparison: { label: "Compare", href: "/services/" },
+  directory: { label: "Compare", href: "/services/" },
+  glossary: { label: "Glossary", href: "/glossary/what-is-an-ai-voice-agent" },
+};
+
+const buildCrumbs = (page: ProgrammaticPageData): { label: string; href: string }[] => {
+  const trail = [{ label: "Home", href: "/" }];
+  const section = SECTION_BY_TYPE[page.type];
+  if (section) trail.push(section);
+  trail.push({ label: page.heroLabel, href: `/${page.pathSegments.join("/")}` });
+  return trail;
+};
+
 // ─── Template ─────────────────────────────────────────────────────────────────
 
 const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
@@ -181,13 +200,30 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
 
   // Structured data
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) };
-  const serviceSchema = { "@context": "https://schema.org", "@type": page.type === "glossary" ? "Article" : "Service", name: page.heroHeadline, headline: page.heroHeadline, description: page.description, provider: { "@type": "Organization", name: "Agentic AI Labs", url: "https://www.tryagentikai.com" }, url: page.canonicalUrl };
+  // provider points at the sitewide Organization node declared in _document.tsx
+  // by @id, so all 72 pages reinforce one entity instead of minting 72 copies.
+  const serviceSchema = { "@context": "https://schema.org", "@type": page.type === "glossary" ? "Article" : "Service", name: page.heroHeadline, headline: page.heroHeadline, description: page.description, provider: { "@id": "https://www.tryagentikai.com/#organization" }, url: page.canonicalUrl };
+
+  // Breadcrumb trail: Home > [section] > this page. Mirrors pathSegments so
+  // glossary pages get their real two-level trail instead of a flat one.
+  const crumbs = buildCrumbs(page);
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.label,
+      item: `https://www.tryagentikai.com${c.href}`,
+    })),
+  };
 
   return (
     <>
       <MetaConfig title={page.title} description={page.description} type={page.type === "glossary" ? "Article" : "Page"} url={page.canonicalUrl} canonical={page.canonicalUrl} keywords={page.keywords} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ────────────────────────────────────────────────────────────────────── */}
       {/* HERO                                                                  */}
@@ -198,6 +234,28 @@ const ProgrammaticPageTemplate: React.FC<Props> = ({ page }) => {
 
             {/* ── Left: Copy ── */}
             <div>
+              {/* Breadcrumb trail */}
+              <nav aria-label="Breadcrumb" className="mb-5">
+                <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  {crumbs.map((c, i) => (
+                    <li key={c.href} className="flex items-center gap-2">
+                      {i < crumbs.length - 1 ? (
+                        <>
+                          <Link href={c.href} className="font-alte font-normal text-[13px] text-slate-400 hover:text-[#0A1128] transition-colors tracking-[-0.04em]">
+                            {c.label}
+                          </Link>
+                          <span className="text-slate-300 text-[13px]" aria-hidden="true">/</span>
+                        </>
+                      ) : (
+                        <span aria-current="page" className="font-alte font-normal text-[13px] text-slate-500 tracking-[-0.04em]">
+                          {c.label}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+
               {/* Trust badge */}
               <div className="flex items-center gap-2 mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FCCA07]" />
