@@ -16,6 +16,8 @@ export type ProgrammaticPageData = {
   heroLabel: string;
   heroHeadline: string;
   heroSubheadline: string;
+  /** Optional stable ISO date (YYYY-MM-DD) of the page's last real content change, used for sitemap lastmod. Falls back to CONTENT_LASTMOD when unset so the sitemap never reports a live "now" timestamp. */
+  lastmod?: string;
   /** Optional: hero explainer infographic, an animated flow of the core mechanism, shown instead of a stock hero image */
   heroSteps?: Array<{ label: string; sub: string; accent?: boolean }>;
   heroExplainerCaption?: string;
@@ -13737,6 +13739,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
 },
 ];
 export const PROGRAMMATIC_SEO_PAGES = BASE_PROGRAMMATIC_SEO_PAGES;
+
+// Sitemap lastmod fallback. All programmatic pages had their copy, stats, and
+// internal links rewritten in this content pass, so this date is truthful for
+// every page that has not set its own `lastmod`. Bump it, or set a per-page
+// `lastmod`, whenever a page's real content changes. Never derive lastmod from
+// `new Date()` in the sitemap: that reports a live "now" on every crawl and
+// trains Google to ignore the signal.
+export const CONTENT_LASTMOD = "2026-08-06";
 
 export const AI_MEMORY_VARIABLE_LINKS: { label: string; href: string }[] = [];
 

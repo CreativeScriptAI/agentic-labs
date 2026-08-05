@@ -4,7 +4,7 @@ import { CONFIG } from "site.config";
 import { getServerSideSitemapLegacy, ISitemapField } from "next-sitemap";
 import { GetServerSidePropsContext } from "next";
 import { filterPosts } from "src/libs/utils/notion";
-import { PROGRAMMATIC_SEO_PAGES } from "src/data/programmaticSeoPages";
+import { PROGRAMMATIC_SEO_PAGES, CONTENT_LASTMOD } from "src/data/programmaticSeoPages";
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
@@ -13,22 +13,23 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     // Country codes for localized routes - COMMENTED OUT
     // const countries = ["en-ae", "en-au", "en-ca", "en-gb", "en-in", "en-us"];
 
-    // Static routes - with trailing slashes for SEO (matching trailingSlash: true)
+    // Static routes - with trailing slashes for SEO (matching trailingSlash: true).
+    // Each carries a stable lastmod so the sitemap never reports a live "now".
     const staticRoutes = [
-      { path: "", priority: 1.0 }, // Root doesn't need trailing slash
-      { path: "/about/", priority: 0.8 },
-      { path: "/blog/", priority: 0.8 },
-      { path: "/contact/", priority: 0.8 },
-      { path: "/services/", priority: 0.8 },
-      { path: "/ai-clarity-workshop/", priority: 0.9 },
-      { path: "/ai-memory-system/", priority: 0.9 },
-      { path: "/ai-voice-agent/", priority: 0.95 },
-      { path: "/ai-voice-agent-global/", priority: 0.9 },
-      { path: "/ai-receptionist-for-medical-clinics/", priority: 0.9 },
-      { path: "/ai-receptionist-for-dental-practices/", priority: 0.9 },
-      { path: "/indian-ai-voices/", priority: 0.8 },
-      { path: "/agents-repo/", priority: 0.7 },
-      { path: "/privacy-policy/", priority: 0.3 },
+      { path: "", priority: 1.0, lastmod: CONTENT_LASTMOD }, // Root doesn't need trailing slash
+      { path: "/about/", priority: 0.8, lastmod: "2026-06-01" },
+      { path: "/blog/", priority: 0.8, lastmod: CONTENT_LASTMOD },
+      { path: "/contact/", priority: 0.8, lastmod: "2026-07-21" },
+      { path: "/services/", priority: 0.8, lastmod: CONTENT_LASTMOD },
+      { path: "/ai-clarity-workshop/", priority: 0.9, lastmod: "2026-07-21" },
+      { path: "/ai-memory-system/", priority: 0.9, lastmod: "2026-06-01" },
+      { path: "/ai-voice-agent/", priority: 0.95, lastmod: CONTENT_LASTMOD },
+      { path: "/ai-voice-agent-global/", priority: 0.9, lastmod: "2026-06-01" },
+      { path: "/ai-receptionist-for-medical-clinics/", priority: 0.9, lastmod: "2026-06-01" },
+      { path: "/ai-receptionist-for-dental-practices/", priority: 0.9, lastmod: "2026-06-01" },
+      { path: "/indian-ai-voices/", priority: 0.8, lastmod: "2026-06-01" },
+      { path: "/agents-repo/", priority: 0.7, lastmod: "2026-06-01" },
+      { path: "/privacy-policy/", priority: 0.3, lastmod: "2026-01-15" },
     ];
 
     // Get blog posts
@@ -48,10 +49,10 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const fields: ISitemapField[] = [];
 
     // Add static routes (root level)
-    staticRoutes.forEach(({ path, priority }) => {
+    staticRoutes.forEach(({ path, priority, lastmod }) => {
       fields.push({
         loc: `${base}${path}`,
-        lastmod: new Date().toISOString(),
+        lastmod: new Date(lastmod).toISOString(),
         changefreq: "weekly" as const,
         priority,
       });
@@ -67,7 +68,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     PROGRAMMATIC_SEO_PAGES.forEach((page) => {
       fields.push({
         loc: `${base}/${page.pathSegments.join("/")}/`,
-        lastmod: new Date().toISOString(),
+        lastmod: new Date(page.lastmod || CONTENT_LASTMOD).toISOString(),
         changefreq: "weekly" as const,
         priority: pSeoPriority(page.type),
       });
