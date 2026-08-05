@@ -60,9 +60,9 @@ const CLUSTERS: { keys: string[]; links: Target[] }[] = [
   {
     keys: ["hiring", "recruit", "interview", "candidate", "staffing"],
     links: [
-      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
-      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
-      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
+      { label: "AI Hiring Agent for Staffing Agencies", href: "/ai-interviewer-for-blue-collar-hiring" },
+      { label: "AI Dispatch for Home Services", href: "/ai-dispatch-agent-for-home-services" },
+      { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
     ],
   },
   {

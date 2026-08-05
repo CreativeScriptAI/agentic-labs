@@ -303,9 +303,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
       { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
-      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
       "ai sdr for ghl agencies",
@@ -314,167 +313,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "ai system for lead qualification",
     ],
   },
-  {
-    type: "persona",
-    pathSegments: ["ai-interviewer-for-recruiting-agencies"],
-    title: "AI Interviewer for Recruiting Agencies | Agentic AI Labs",
-    description:
-      "We build AI interviewer systems for recruiting agencies that run structured screens, capture candidate context, and route top-fit candidates to recruiters.",
-    canonicalUrl: makeCanonical(["ai-interviewer-for-recruiting-agencies"]),
-    heroLabel: "Built for Recruiting Agencies",
-    heroHeadline: "AI Interviewer for Recruiting Agencies",
-    heroSubheadline:
-      "We build an AI interviewer system that handles first-round screens and gives your recruiters clean candidate signal.",
-    painTitle: "Where recruiting teams lose margin",
-    painPoints: [
-      "Recruiters spend hours on low-fit screens.",
-      "Candidate notes are inconsistent across team members.",
-      "Time-to-submit drags because first-round steps bottleneck.",
-    ],
-    costCallout: {
-      items: [
-        { label: "HR Specialist / Recruiter salary (BLS 2024 median)", amount: "$72,910 / year" },
-        { label: "Time lost to low-fit phone screens (est. 30% of work)", amount: "$19,600 / year" },
-        { label: "Missed placements from bottlenecked screening pipeline", amount: "$25,000+ / year" },
-      ],
-      total: "$110,000+ / year in screening drag per recruiter",
-      solvesFor: "$3,500 to $6,500 setup + $1,200 to $2,500 / month",
-      source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 13-1071)",
-    },
-    practitionerQuote: {
-      text: "We've all been in that situation where we begin a screening call and after 1 or 2 minutes you already know there is no way you can submit or place the candidate.",
-      attribution: "r/recruiting, 74 upvotes, July 2025",
-    },
-    statusQuoTitle: "What teams try before this",
-    statusQuoItems: [
-      "Manual phone screens with inconsistent question depth.",
-      "Simple forms that miss nuance and context.",
-      "Temporary offshore screeners with uneven quality.",
-    ],
-    industrySignal: {
-      headline: "Searches for 'AI recruiter' grew 22% in 12 months, peaking at index 100 in February 2026.",
-      body: "AI-assisted screening is moving from experiment to standard practice at mid-size agencies. Firms running AI-first first-round screens report faster time-to-shortlist and fewer misfits reaching client interviews. The agencies that adopted screening automation in 2025 now move candidates from inbound to shortlist 40% faster than those still running fully manual pipelines.",
-      source: "Google Trends, United States (12-month window)",
-      date: "February 2026",
-    },
-    solutionTitle: "Production system architecture",
-    solutionItems: [
-      "Voice screening with role-specific question trees.",
-      "Memory for candidate constraints, preferences, and timeline.",
-      "Automation into ATS and recruiter alerting for top matches.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "Runs structured first-round screens over voice, role-specific questions, disqualifier logic, and communication-style scoring. Candidates get a consistent, professional experience at any time of day. Recruiters get a clean scorecard, not a pile of notes to decipher.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "Every candidate's constraints, timeline, preferences, and soft-skill signals are stored and retrievable. When the same candidate resurfaces for a different role, the system already knows what they want. Built on Mem0, the context compounds across every interaction.",
-      },
-      {
-        title: "Layer 3: Your AI acts.",
-        body: "Top-fit candidates are routed automatically to the right recruiter with a full brief attached. ATS records are updated with transcripts, scores, and tags. Schedulers fire for next-round bookings without anyone touching a calendar.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning. We map your current screening funnel on a single call. Every role type, every question set, every ATS stage. We leave with a clear spec for what we're building.",
-        youSpend: "1 hour on a call with us.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon to Day 2. We build the AI interviewer: voice layer, role-specific question trees, disqualifier logic, candidate memory, and ATS automation.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 3. Real candidate scenarios. Strong fits, weak fits, and the in-between cases that break most systems. We run every edge case before going live.",
-        youSpend: "30 minutes reviewing outputs and giving us feedback.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 4 to 5. Your AI interviewer goes live. We monitor every screen for the first 30 days. You get a dashboard: screens completed, top-fit route rate, time reclaimed per recruiter.",
-        youSpend: "Zero. It runs without you.",
-      },
-    ],
-    proofTitle: "Expected operational wins",
-    proofBullets: [
-      "More recruiter hours spent on qualified candidates.",
-      "Cleaner handoff notes for client-facing calls.",
-      "Faster first-touch to shortlist cycle times.",
-    ],
-    caseStudy: {
-      client: "Mid-size staffing agency, technology and ops roles",
-      problem: "Three recruiters were spending 60% of their time on first-round screens. Candidate notes were inconsistent, and clients were complaining about misfit submissions going into final interviews.",
-      system: "AI voice interviewer with role-specific question trees, Mem0 candidate memory, and automated ATS routing. Transcripts and scorecards written directly into existing records.",
-      result: "Screen-to-shortlist time dropped from 5 days to 28 hours. Recruiters reclaimed 12+ hours per week. Misfit-to-client-interview rate fell 61%.",
-    },
-    testimonial: {
-      quote: "We went from drowning in phone screens to having our first shortlist ready before I finished my morning coffee. The AI is more consistent than any human screener we've had.",
-      author: "Rachel, Director of Recruiting Operations",
-    },
-    proofStats: [
-      { stat: "61%", label: "reduction in misfit candidate submissions" },
-      { stat: "12 hrs", label: "reclaimed per recruiter per week" },
-      { stat: "28 hrs", label: "average screen-to-shortlist time" },
-    ],
-    fitChecklist: {
-      headline: "Built for agencies running 50+ screens per month.",
-      forYou: [
-        "You run first-round phone screens at volume and consistency is suffering",
-        "Your recruiters are spending more than 2 hours daily on low-fit candidate calls",
-        "Candidate handoff notes are inconsistent or missing when they reach clients",
-        "You've tried forms and offshore screeners but quality has been unreliable",
-        "Your budget is $5K+ and you want a system, not another template",
-      ],
-      notForYou: [
-        "You run fewer than 20 screens per month, not enough volume for AI ROI",
-        "You want to configure and maintain the interviewer system yourself",
-        "You need a scheduling widget, not a production AI screening system",
-      ],
-    },
-    faq: [
-      {
-        question: "Can this integrate with our ATS?",
-        answer:
-          "Yes. We support ATS-first workflows and map scorecards, transcripts, and tags into your existing candidate records.",
-      },
-      {
-        question: "Does it screen for soft skills too?",
-        answer:
-          "Yes. We configure prompts and scoring rubrics per role, so communication style and practical judgment are captured, not just keyword matches.",
-      },
-      {
-        question: "How do you prevent bad-fit recommendations?",
-        answer:
-          "We use role-specific guardrails, disqualifier logic, and human review checkpoints during rollout before enabling full routing automation.",
-      },
-    ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
-    ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We will map your current screening funnel and estimate time reclaimed per recruiter.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
-      { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
-      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
-      { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-    ],
-    keywords: [
-      "ai interviewer for recruiting agencies",
-      "ai candidate screening system",
-      "recruiting agency automation",
-      "voice ai recruiting",
-    ],
-  },
+  
   {
     type: "persona",
     pathSegments: ["ai-support-rep-for-ecommerce"],
@@ -2056,14 +1895,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "directory",
     pathSegments: ["best-ai-voice-agents-for-business"],
-    title: "Best AI Voice Agents for Business (2026) | Agentic AI Labs",
+    title: "AI Voice Agent for Small Business Appointment Booking | Agentic AI Labs",
     description:
-      "Compare the best AI voice agent options for business by production readiness, memory capabilities, and workflow automation depth.",
+      "Done-for-you AI voice agent for small business appointment booking. It answers calls, books appointments, and syncs to your calendar and CRM.",
     canonicalUrl: makeCanonical(["best-ai-voice-agents-for-business"]),
-    heroLabel: "Directory Page",
-    heroHeadline: "Best AI Voice Agents for Business",
+    heroLabel: "Appointment Booking Service",
+    heroHeadline: "AI Voice Agent for Small Business Appointment Booking",
     heroSubheadline:
-      "A practical comparison framework for teams choosing AI voice solutions beyond demos.",
+      "A voice agent that answers your calls, books appointments, and writes them straight to your calendar and CRM.",
     painTitle: "Common buying mistakes",
     painPoints: [
       "Choosing by conversation quality alone.",
@@ -2132,10 +1971,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "best ai voice agents for business",
-      "best ai voice agent",
-      "voice ai tools for business",
-      "production ai voice systems",
+      "ai voice agent for small business appointment booking",
+      "small business appointment booking voice agent",
+      "ai appointment booking phone agent",
+      "voice agent that books appointments",
+      "ai receptionist for appointment scheduling",
     ],
   },
   {
@@ -2212,10 +2052,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "GoHighLevel AI Calling Alternative", href: "/gohighlevel-ai-calling-alternative" },
-      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
       { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
       "best ai for gohighlevel agencies",
@@ -2224,104 +2063,20 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "ghl ai automation",
     ],
   },
-  {
-    type: "directory",
-    pathSegments: ["best-ai-tools-for-recruiting-agencies"],
-    title: "Best AI Tools for Recruiting Agencies (2026) | Agentic AI Labs",
-    description:
-      "A focused list of the best AI tools and systems for recruiting agencies, from screening automation to memory-driven candidate workflows.",
-    canonicalUrl: makeCanonical(["best-ai-tools-for-recruiting-agencies"]),
-    heroLabel: "Directory Page",
-    heroHeadline: "Best AI Tools for Recruiting Agencies",
-    heroSubheadline:
-      "How recruiting teams should evaluate AI options for screening, coordination, and candidate experience.",
-    painTitle: "Where recruiting operations leak time",
-    painPoints: [
-      "Manual screening consumes recruiter bandwidth.",
-      "Candidate context gets fragmented across tools.",
-      "Handoff quality drops between sourcing and submission.",
-    ],
-    practitionerQuote: {
-      text: "We've all been in that situation where we begin a screening call and after 1 or 2 minutes you already know there is no way you can submit or place the candidate. That's time you'll never get back, multiplied by every recruiter on your team, every day.",
-      attribution: "r/recruiting, 74 upvotes, July 2025",
-    },
-    statusQuoTitle: "What most teams do first",
-    statusQuoItems: [
-      "Adopt one-off tools for isolated steps.",
-      "Rely on forms that miss conversation nuance.",
-      "Manage handoffs manually in ATS notes.",
-    ],
-    industrySignal: {
-      headline: "Searches for 'AI recruiter' grew 22% in 12 months and peaked at index 100 in February 2026.",
-      body: "There are approximately 901,000 HR Specialists and Recruiters employed nationally (BLS SOC 13-1071), with a median annual wage of $72,910. Agencies that automated first-round screening are compounding a durable competitive advantage: faster time-to-shortlist, more consistent candidate signal, and recruiters spending their hours on relationship work instead of low-fit calls.",
-      source: "Google Trends + U.S. Bureau of Labor Statistics, OES 2024 (SOC 13-1071)",
-      date: "February 2026",
-    },
-    solutionTitle: "Selection criteria that matter",
-    solutionItems: [
-      "Voice or chat screening quality for role-specific scenarios.",
-      "Memory for candidate preferences and constraints.",
-      "Automation into ATS workflows and recruiter routing.",
-    ],
-    proofTitle: "What to test",
-    proofBullets: [
-      "Can it improve screen-to-shortlist speed?",
-      "Can it preserve candidate context between interactions?",
-      "Can recruiters trust and audit outputs easily?",
-    ],
-    proofStats: [
-      { stat: "$72,910", label: "median annual wage for HR Specialists / Recruiters (BLS 2024)" },
-      { stat: "901K", label: "HR Specialists employed nationally, the scale of the opportunity" },
-      { stat: "22%", label: "growth in 'AI recruiter' search interest over 12 months" },
-    ],
-    faq: [
-      {
-        question: "Is AI replacing recruiters?",
-        answer:
-          "No. It removes repetitive screening load so recruiters can focus on high-value conversations and placements.",
-      },
-      {
-        question: "Can this work with our existing ATS?",
-        answer:
-          "Yes, when integrations and data model mapping are planned upfront.",
-      },
-      {
-        question: "What is the best first workflow to automate?",
-        answer:
-          "First-round qualification and scheduling are usually the highest-leverage starting points.",
-      },
-    ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
-    ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We can assess your recruiting workflow and recommend a production-first rollout plan.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
-      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
-      { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-    ],
-    keywords: [
-      "best ai tools for recruiting agencies",
-      "ai recruiting tools",
-      "ai for recruiting agencies",
-      "candidate screening ai",
-    ],
-  },
+  
 
   // ─── PAGE: ai-booking-agent-for-travel-agencies ────────────────────────────
   {
     type: "persona",
     pathSegments: ["ai-booking-agent-for-travel-agencies"],
-    title: "AI Booking Agent for Travel Agencies. Stop Losing Revenue to Missed Bookings",
+    title: "AI Receptionist for Travel Agency. Stop Losing Bookings to Missed Calls",
     description:
-      `A bus operator in Delhi NCR was losing 20 to 30 booking calls daily. We deployed an AI voice agent that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp, live in 7 days. Starts at ${P.starterINR}/mo.`,
+      `A bus operator in Delhi NCR was losing 20 to 30 booking calls daily. We deployed an AI receptionist for the travel agency that answers every call in Hindi or English, captures route + date + seats, and sends details to WhatsApp, live in 7 days. Starts at ${P.starterINR}/mo.`,
     canonicalUrl: makeCanonical(["ai-booking-agent-for-travel-agencies"]),
-    heroLabel: "Bus · Tour · Cab · Transport Operators",
-    heroHeadline: "20 booking calls missed yesterday. Your competitor answered all of them.",
+    heroLabel: "AI Receptionist · Bus, Tour, Cab & Transport Operators",
+    heroHeadline: "An AI receptionist for your travel agency answers the 20 booking calls you missed yesterday.",
     heroSubheadline:
-      "A passenger calls about a Saturday route at 8 PM. Nobody picks up. In transport, the window before they book with someone else is about 3 minutes. We build the AI agent that makes sure you never lose that window again.",
+      "A passenger calls about a Saturday route at 8 PM. Nobody picks up. In transport, the window before they book with someone else is about 3 minutes. We build the AI receptionist for your travel agency that makes sure you never lose that window again.",
     painTitle: "The 3-minute window that's bleeding your revenue",
     painPoints: [
       "A passenger calls at 8 PM about tomorrow's route. Your office closed at 7. They call the next operator on Google, booked within 3 minutes. You wake up to nothing.",
@@ -2485,32 +2240,18 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-global/" },
       { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai booking agent for travel agencies",
-      "ai voice agent for travel agency",
-      "automated booking for transport companies",
       "ai receptionist for travel agency",
-      "voice ai for bus operators",
-      "ai for travel inquiries",
-      "automated travel booking agent",
-      "voice agent for tour operators",
-      "ai for transport companies india",
-      "ai booking agent india",
+      "ai receptionist for travel agencies",
+      "ai receptionist travel agency",
       "travel agency ai receptionist",
-      "missed call solution travel agency",
-      "ai for bus travel",
-      "whatsapp ai for travel operators",
-      "ai phone agent for bus company",
-      "travel booking automation india",
-      "ai for tour operators india",
-      "bus operator missed calls solution",
-      "24/7 booking agent travel",
-      "ai receptionist bus travel",
+      "ai receptionist for tour operators",
+      "ai receptionist for bus operators",
     ],
   },
 
@@ -2699,14 +2440,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-interviewer-for-blue-collar-hiring"],
-    title: "AI Interviewer for Blue-Collar Hiring. Screen 500 Candidates/Day Automatically",
+    title: "AI Hiring Agent for Staffing Agencies. Screen 500 Candidates/Day Automatically",
     description:
-      "150 applications come in. Your team can call 50. The other 100 age out overnight, and your competitor screens them first. We build an AI first-round interviewer that calls every applicant within minutes, qualifies them in their own language, and hands you only the candidates worth your time.",
+      "150 applications come in. Your team can call 50. The other 100 age out overnight, and your competitor screens them first. We build an AI hiring agent for staffing agencies that calls every applicant within minutes, qualifies them in their own language, and hands you only the candidates worth your time.",
     canonicalUrl: makeCanonical(["ai-interviewer-for-blue-collar-hiring"]),
-    heroLabel: "Built for Blue-Collar Staffing & High-Volume Hiring",
-    heroHeadline: "150 applications came in today. Your team screened 50. The other 100 joined your competitor.",
+    heroLabel: "An AI Hiring Agent for Staffing Agencies & High-Volume Hiring",
+    heroHeadline: "An AI hiring agent for staffing agencies. 150 applications came in today. Your team screened 50. The rest joined your competitor.",
     heroSubheadline:
-      "150 applicants today. Your team calls 50. The rest go cold by morning. The AI calls all 150, in Hindi, Bhojpuri, or Marathi, and hands you only the ones who qualify.",
+      "150 applicants today. Your team calls 50. The rest go cold by morning. The AI hiring agent calls all 150, in Hindi, Bhojpuri, or Marathi, and hands your staffing agency only the ones who qualify.",
     painTitle: "The screening bottleneck that costs you placements every week",
     painPoints: [
       "Applications arrive faster than your team can call them back. The ones you don't reach first go to your competitor's pipeline.",
@@ -2855,24 +2596,16 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
       { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
-      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
-      "ai interviewer for blue collar hiring",
-      "ai candidate screening agent",
-      "automated first round interviews",
       "ai hiring agent for staffing agencies",
-      "voice ai for recruitment india",
-      "ai for blue collar staffing",
-      "automated candidate qualification",
-      "ai screening for blue collar jobs",
-      "hiring ai agent india",
-      "ai for construction hiring",
-      "ai for logistics staffing",
-      "multilingual ai hiring agent",
-      "bhojpuri hindi ai interviewer",
+      "ai hiring agent for recruitment agencies",
+      "hiring agent for staffing agencies",
+      "ai recruiting agent for staffing firms",
+      "automated hiring agent for staffing agencies",
+      "ai screening agent for staffing agencies",
     ],
   },
 
@@ -3036,10 +2769,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
-      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
-      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "Best AI Tools for Recruiting", href: "/ai-interviewer-for-blue-collar-hiring" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
       "ai show up agent for coaching businesses",
@@ -3220,7 +2952,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     relatedLinks: [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
       { label: "AI Booking for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
-      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-global/" },
       { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
@@ -3420,187 +3152,6 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "aesthetic clinic ai agent india",
       "ai for botox clinic",
       "laser clinic ai receptionist",
-    ],
-  },
-
-  // ─── PAGE: ghl-ai-chatbot-alternative ─────────────────────────────────────
-  {
-    type: "comparison",
-    pathSegments: ["ghl-ai-chatbot-alternative"],
-    title: "GHL AI Chatbot Alternative. Voice + Memory for GoHighLevel Agencies | Agentic AI Labs",
-    description:
-      "GoHighLevel's built-in AI chatbot handles text. Your leads call. We build production voice agents with persistent memory that plug into your GHL pipeline, so every call is answered, qualified, and logged without leaving GHL.",
-    canonicalUrl: makeCanonical(["ghl-ai-chatbot-alternative"]),
-    heroLabel: "Comparison Page",
-    heroHeadline: "Looking for a GHL AI Chatbot Alternative?",
-    heroSubheadline:
-      "GoHighLevel's built-in chatbot does text. Your leads pick up the phone. We build AI voice agents that plug directly into GHL, answering calls, qualifying leads, and updating your pipeline. Same CRM. New capability.",
-    painTitle: "Where GHL's built-in AI chatbot hits the wall",
-    painPoints: [
-      "GHL's AI chatbot is text-only. When a lead calls your tracking number instead of replying to a text, the chatbot can't help. The call rings out or hits voicemail, and the lead moves on.",
-      "No persistent memory. Every conversation starts fresh. Returning leads have to re-explain who they are, what they asked about, and where they left off. That's not AI, that's a form with extra steps.",
-      "GHL workflows are trigger-based and stateless. They fire sequences, but they don't make decisions. When a lead says something unexpected, the automation breaks or goes silent.",
-    ],
-    costCallout: {
-      items: [
-        { label: "Leads lost to unanswered calls (10+ missed/week)", amount: "$500 to $2,000 / week" },
-        { label: "SDR time on manual follow-up and qualification", amount: "$2,000 to $4,000 / month" },
-        { label: "Pipeline leakage from no-context callbacks", amount: "$1,000 to $3,000 / month" },
-      ],
-      total: "$5,000 to $12,000+/month in revenue lost to a text-only chatbot covering a voice-first pipeline",
-      solvesFor: "$1,500 to $3,000 / month for a full voice + memory system that plugs into GHL",
-      source: "Internal estimates based on GHL agency audits, 2025 to 2026",
-    },
-    practitionerQuote: {
-      text: "GHL is great infrastructure. The problem is the built-in chatbot only handles text. Half my leads call. They don't text. I needed something that actually picks up the phone and talks to people, and still updates my pipeline.",
-      attribution: "GHL agency operator, GoHighLevel community, 2026",
-    },
-    statusQuoTitle: "What GHL agencies try before switching",
-    statusQuoItems: [
-      "Enable the built-in AI chatbot and hope leads prefer texting. They don't, 60%+ of inbound leads in service businesses still call.",
-      "Stack a separate voice tool on top of GHL with Zapier or Make as glue. It works until webhook failures silently drop leads at scale.",
-      "Hire an SDR to answer calls manually and update GHL, adding $3,000 to $5,000/month in payroll for a problem that should be automated.",
-    ],
-    industrySignal: {
-      headline: "GHL agencies are racing to add voice AI, but the built-in chatbot isn't keeping up.",
-      body: "Interest in GoHighLevel AI has climbed sharply over the past year, and GHL's marketplace now lists 200+ AI workflow templates. But agencies consistently report the same gap: the built-in chatbot handles text conversations well, but their leads call. Voice is the channel that converts fastest, and it's the channel GHL's native AI doesn't cover. Agencies filling this gap with production voice agents are reporting 3× faster lead qualification and 40%+ reduction in SDR costs.",
-      source: "Based on GoHighLevel Marketplace listings and Agentic AI Labs agency audits, 2026",
-      date: "2026",
-    },
-    solutionTitle: "Voice. Memory. Automation. Plugged directly into your GHL pipeline.",
-    solutionItems: [
-      "AI voice agent that answers every inbound call, qualifying leads in real time, not after a text exchange.",
-      "Persistent memory so returning leads get continuity, the AI remembers their name, their objections, and their pipeline stage.",
-      "Full GHL automation: opportunity stages update, booking confirmations send, and hot leads route to closers, without leaving your CRM.",
-    ],
-    layers: [
-      {
-        title: "Layer 1: Your AI talks.",
-        body: "GHL's chatbot types. Our agent talks. Every inbound call answered in under 3 rings. Leads hear a natural voice that qualifies them on your criteria, budget, timeline, decision-maker status, specific service interest. The conversation happens live, not over a 20-minute text thread. Qualification that takes a chatbot 12 messages happens in 90 seconds on a call.",
-      },
-      {
-        title: "Layer 2: Your AI remembers.",
-        body: "GHL's chatbot has no memory layer. Every conversation starts blank. We add Mem0-based persistent memory mapped to your GHL contact records. When a lead calls back, the AI knows their name, what they asked about, what they objected to, and where they are in your pipeline. No 're-qualifying' a lead who already spoke to you last week.",
-      },
-      {
-        title: "Layer 3: Your AI acts inside GHL.",
-        body: "After every call, the AI updates your GHL pipeline automatically. Opportunity stages move. Hot leads route to closers with full context. Follow-up SMS sequences trigger. Booking confirmations send. Your GHL stays clean and current, not because someone updated it manually, but because the AI did it in real time during the call.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning. We review your current GHL setup: pipeline stages, chatbot configuration, workflow automations, and where calls are falling through. You leave with a clear gap analysis and migration plan.",
-        youSpend: "1 hour on a call. We deliver a production gap analysis.",
-      },
-      {
-        week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon to Day 3. We build the AI voice agent, connect it to your GHL account, add Mem0 memory mapped to your contacts, and wire automation for opportunity updates, routing, and confirmations.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST",
-        body: "Day 4. We run your real call scenarios: inbound inquiry, returning lead, after-hours call, objection handling. You review how the agent handles each one inside your GHL pipeline.",
-        youSpend: "30 minutes reviewing test call recordings and GHL pipeline accuracy.",
-      },
-      {
-        week: 4,
-        phase: "LIVE",
-        body: "Day 5 to 7. Live on your tracking numbers. Every call answered, every lead qualified, every pipeline stage updated automatically. We monitor for 30 days and tune on real data.",
-        youSpend: "Zero. Your GHL pipeline updates itself.",
-      },
-    ],
-    proofTitle: "Same GHL. New capability. Measurable pipeline impact.",
-    proofBullets: [
-      "Every inbound call answered and qualified, not just the leads who prefer texting.",
-      "Persistent memory across calls, returning leads get continuity, not a cold restart.",
-      "GHL pipeline accuracy that doesn't depend on manual updates.",
-    ],
-    caseStudy: {
-      client: "GHL Agency. Home Services Clients",
-      problem: "Agency running 12 GHL sub-accounts for home services clients. Built-in chatbot handled text inquiries but 60%+ of leads called. Calls went to voicemail or a shared receptionist with no GHL integration. Pipeline stages were updated manually, often 24 to 48 hours late. Leads went cold before follow-up.",
-      system: "AI voice agent deployed across all sub-accounts. Answers every inbound call, qualifies using client-specific criteria, updates GHL opportunity stages in real time. Mem0 memory layer maps to GHL contacts, returning callers get continuity. Hot leads route to closers instantly with full context.",
-      result: "Zero missed inbound calls across all sub-accounts. Pipeline stages update within 60 seconds of call completion. Client-reported lead response time dropped from 4+ hours to under 2 minutes. Agency retained 3 at-risk accounts by demonstrating measurable pipeline improvement.",
-    },
-    testimonial: {
-      quote: "The GHL chatbot was fine for text leads. But most of our clients' customers call, and those calls were going nowhere. After adding the voice agent, our pipeline accuracy went from guesswork to real-time. Three clients who were about to leave stayed because of it.",
-      author: "Jordan, GHL Agency Owner",
-    },
-    proofStats: [
-      { stat: "0", label: "missed inbound calls across 12 sub-accounts" },
-      { stat: "< 60s", label: "pipeline update after every call" },
-      { stat: "3", label: "at-risk client accounts retained" },
-    ],
-    fitChecklist: {
-      headline: "Built for GHL agencies whose leads call, not just text.",
-      forYou: [
-        "You run a GHL agency and your clients' leads call more than they text",
-        "The built-in chatbot handles text but you have no AI coverage for voice",
-        "Your pipeline stages are updated manually, hours or days after calls happen",
-        "You've tried stacking a separate voice tool with Zapier and it broke under real volume",
-        "You want voice AI that plugs into GHL natively, no migration, no new CRM",
-      ],
-      notForYou: [
-        "Your leads exclusively interact via text/chat, you genuinely don't have a voice channel problem",
-        "You want to manage and maintain the voice AI integration yourself",
-        "You're looking for a GHL snapshot you can self-configure, we build custom production systems, not templates",
-      ],
-    },
-    faq: [
-      {
-        question: "Does this replace GoHighLevel?",
-        answer:
-          "No. GHL stays exactly as it is, your CRM, your pipeline, your workflows. We add a voice layer on top that GHL doesn't have natively. The AI voice agent plugs into your existing GHL setup and updates it in real time. Nothing moves out of GHL.",
-      },
-      {
-        question: "How is this different from GHL's built-in conversational AI?",
-        answer:
-          "GHL's AI is text-based and stateless. It handles chat and SMS conversations well. Our system handles live phone calls, answering, qualifying, and routing in real time with persistent memory across interactions. Different channel, different capability. They complement each other.",
-      },
-      {
-        question: "Does it work across multiple GHL sub-accounts?",
-        answer:
-          "Yes. We deploy across sub-accounts with client-specific qualification criteria, custom voice prompts, and separate pipeline mappings. Each sub-account gets its own AI configuration while you manage everything from your agency dashboard.",
-      },
-      {
-        question: "What happens when the AI can't handle a call?",
-        answer:
-          "Calls that exceed the AI's scope, complex custom quotes, emotional complaints, VIP clients, route to your team with full context attached. The lead never feels abandoned. Your closer picks up exactly where the AI left off.",
-      },
-      {
-        question: "What does it cost?",
-        answer:
-          "GHL voice agent projects start at $3,000 to $6,000 for the initial build, with $1,500 to $2,500/month for ongoing monitoring and optimization. Multi-sub-account deployments are priced per account. We scope it clearly before you commit.",
-      },
-    ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
-    ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We'll review your current GHL setup and show exactly where voice AI fills the gap the chatbot can't.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
-      { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
-      { label: "Vapi + GoHighLevel", href: "/vapi-gohighlevel-integration" },
-      { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-    ],
-    keywords: [
-      "ghl ai chatbot alternative",
-      "gohighlevel ai chatbot alternative",
-      "ghl voice agent",
-      "gohighlevel voice ai",
-      "ai voice agent for ghl",
-      "ghl chatbot vs voice agent",
-      "gohighlevel ai voice integration",
-      "ghl ai for agencies",
-      "voice ai for gohighlevel agencies",
-      "ghl pipeline automation voice",
-      "gohighlevel ai alternative",
-      "ai phone agent for ghl",
     ],
   },
 
@@ -4268,9 +3819,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     },
     faq: [
       {
-        question: "How is this different from the existing ghl-ai-chatbot-alternative page?",
+        question: "Is this about replacing GoHighLevel's AI chatbot or its calling?",
         answer:
-          "The chatbot alternative page focuses on replacing GHL's text-based AI chatbot with voice capabilities. This page focuses specifically on AI calling, outbound qualification, appointment confirmation, and multi-day follow-up via voice. Different use case, different search intent.",
+          "Both, from one build. We replace GHL's text-based AI chatbot with a voice agent and add production AI calling: outbound qualification, appointment confirmation, and multi-day follow-up. One system covers the chat gap and the calling gap together.",
       },
       {
         question: "Does this replace GoHighLevel?",
@@ -4299,11 +3850,10 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
-      { label: "GHL AI Chatbot Alternative", href: "/ghl-ai-chatbot-alternative" },
       { label: "GoHighLevel AI Employee Alternative", href: "/gohighlevel-ai-employee-alternative" },
       { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
       "gohighlevel ai calling alternative",
@@ -4325,14 +3875,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-receptionist-for-dental-clinic"],
-    title: "AI Receptionist for Dental Clinics. Never Lose a Patient to an Unanswered Call",
+    title: "After Hours Dental Answering Service. Never Lose a Toothache Call",
     description:
-      "Your dentist is mid-procedure. The phone rings. A new patient with a toothache calls, and hangs up after 6 rings. That patient just booked with the clinic down the street. We build an AI receptionist that answers every call, captures patient details, books appointments, and sends WhatsApp confirmations, even when your staff is chairside.",
+      "It's 9 PM. A patient with a toothache calls your clinic and gets voicemail. They Google the next dentist who picks up. Our after hours dental answering service answers every evening, weekend, and mid-procedure call, captures patient details, triages urgency, books appointments, and sends WhatsApp confirmations, so no toothache call ever goes to voicemail again.",
     canonicalUrl: makeCanonical(["ai-receptionist-for-dental-clinic"]),
-    heroLabel: "Built for Dental Clinics. India & Worldwide",
-    heroHeadline: "Your dentist is elbow-deep in a root canal. The phone rings. Nobody picks up. That new patient just called the clinic next door.",
+    heroLabel: "After Hours Dental Answering Service. India & Worldwide",
+    heroHeadline: "An after hours dental answering service that picks up the 9 PM toothache call your voicemail would have lost to the clinic next door.",
     heroSubheadline:
-      "Dental clinics get 30 to 50 calls a day. 20 to 30% go unanswered during procedures. Evening toothache calls, the highest-urgency, highest-value inquiries, go straight to voicemail. First clinic to answer wins the patient.",
+      "Evening and weekend toothache calls are the highest-urgency, highest-value inquiries a dental clinic gets, and they arrive when your clinic is dark. Patients in pain don't leave voicemails. The first clinic to answer wins the patient.",
     painTitle: "Every unanswered call is a patient who books somewhere else",
     painPoints: [
       "Your hygienist is scaling, your dentist is mid-extraction, and the front desk is handling a walk-in. The phone rings 4 times and stops. That was a new patient inquiry worth ₹3,000 to ₹50,000 ($50 to $600) in procedures.",
@@ -4503,21 +4053,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai receptionist for dental clinic",
-      "dental clinic ai phone",
-      "ai appointment booking dental",
-      "ai for dentist office",
-      "dental clinic missed calls ai",
-      "ai receptionist for dentist india",
-      "dental ai voice agent",
-      "ai phone answering dental clinic",
-      "after hours dental ai receptionist",
-      "dental appointment confirmation ai",
-      "ai for dental patient booking",
-      "dentist office ai receptionist",
-      "dental clinic voice ai india",
-      "ai dental patient intake",
-      "reduce no shows dental clinic ai",
+      "after hours dental answering service",
+      "dental answering service",
+      "dental office answering service",
+      "24 hour dental answering service",
+      "dental phone answering service",
+      "emergency dental answering service",
     ],
   },
 
@@ -4525,14 +4066,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-booking-agent-for-salon"],
-    title: "AI Booking Agent for Salons. Stop Losing Saturday Appointments to Missed Calls",
+    title: "Salon No-Show Reminder Call Service. Confirm Every Appointment Before the Chair Sits Empty",
     description:
-      "Your best stylist is mid-blowout. Your receptionist is checking someone out. The phone rings, a client wants to book Saturday color. Nobody answers. She books at the salon down the road. We build an AI booking agent that answers every call, checks real-time availability, books appointments, and sends WhatsApp confirmation, so your chairs stay full.",
+      "A client booked Saturday color three weeks ago. Today she forgot. The chair sits empty, the colorist stands idle, and that slot is gone for good. Our salon no-show reminder call service calls and messages every client before their appointment, confirms they are coming, and offers no-shows' slots to your waitlist, so your chairs stay full.",
     canonicalUrl: makeCanonical(["ai-booking-agent-for-salon"]),
-    heroLabel: "Built for Salons, Beauty Parlours & Barbershops",
-    heroHeadline: "Saturday 2 PM. Every stylist has hands in someone's hair. The phone rings for the 9th time. Nobody picks up. That's 9 bookings your competitor just got.",
+    heroLabel: "No-Show Reminder Calls for Salons, Beauty Parlours & Barbershops",
+    heroHeadline: "A salon no-show reminder call service that confirms every appointment before the chair sits empty. Saturday 2 PM, and the client who booked color three weeks ago just forgot. That slot is gone.",
     heroSubheadline:
-      "60% of salon bookings still happen by phone. Your busiest call times are your busiest service times, evenings and weekends. Every unanswered ring is a client who doesn't call back. They just book somewhere else.",
+      "1 in 5 salon appointments ends in a no-show. Every empty chair is a colorist standing idle and a slot you could have given to someone on your waitlist. A reminder call the day before turns forgotten bookings into confirmed clients, or frees the slot in time to fill it.",
     painTitle: "The salon booking paradox: your phone rings most when you can least afford to answer it",
     painPoints: [
       "Peak call hours (5 PM to 8 PM weekdays, all day Saturday) perfectly overlap with peak service hours. Your stylists are with clients. Your receptionist, if you have one, is handling checkout and walk-ins. The phone rings and rings.",
@@ -4704,21 +4245,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai booking agent for salon",
-      "salon appointment ai",
-      "ai receptionist for beauty salon",
-      "salon phone booking ai",
-      "ai for salon missed calls",
-      "beauty parlour ai booking",
-      "barbershop ai receptionist",
-      "ai appointment booking salon india",
-      "salon ai voice agent",
-      "ai for hair salon booking",
-      "salon receptionist ai",
-      "ai phone answering salon",
-      "beauty salon ai agent uae",
-      "reduce salon no shows ai",
-      "salon weekend booking ai",
+      "salon no-show reminder call service",
+      "salon appointment reminder calls",
+      "salon no-show reduction service",
+      "salon confirmation call service",
+      "beauty salon appointment reminder service",
+      "reduce salon no shows",
     ],
   },
 
@@ -4726,14 +4258,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-coaching-institute"],
-    title: "AI for Coaching Institutes. Stop Losing ₹1 Lakh Enrollments to Unanswered Inquiry Calls",
+    title: "Coaching Institute Admission Calling AI. Stop Losing ₹1 Lakh Enrollments to Unanswered Calls",
     description:
-      "Admission season: 100 parents call your institute daily. Your staff handles 40. The other 60 call competing institutes. Each lost enrollment is ₹50,000 to ₹2,00,000 gone. We build an AI agent that handles every inquiry call, course details, fee structure, batch timings, captures contacts and books counseling sessions automatically.",
+      "Coaching institute admission calling AI that handles every inbound admission call. During season, 100 parents call daily. Your staff handles 40. The other 60 call competitors. Each lost enrollment is ₹50,000 to ₹2,00,000 gone. Our admission calling AI answers course details, fee structure, batch timings, captures contacts and books counseling sessions automatically.",
     canonicalUrl: makeCanonical(["ai-for-coaching-institute"]),
-    heroLabel: "Built for Coaching Institutes. JEE, NEET, UPSC & Online Coaching",
-    heroHeadline: "100 parents called your institute today. Your team answered 40. The other 60 enrolled their children somewhere else.",
+    heroLabel: "Admission Calling AI for Coaching Institutes. JEE, NEET, UPSC & Online Coaching",
+    heroHeadline: "Coaching institute admission calling AI: 100 parents called today, your team answered 40. Now every admission call gets answered.",
     heroSubheadline:
-      "During admission season, your phone lines are a bottleneck, not a sales channel. Every unanswered inquiry call is a ₹50,000 to ₹2,00,000 ($600 to $2,500) enrollment walking to a competitor who picked up faster.",
+      "During admission season, your phone lines are a bottleneck, not a sales channel. Admission calling AI answers every inquiry so no ₹50,000 to ₹2,00,000 ($600 to $2,500) enrollment walks to a competitor who picked up faster.",
     painTitle: "Admission season exposes your biggest revenue leak: the phone",
     painPoints: [
       "January to March: board results. May to July: admission frenzy. During these windows, 50 to 100+ parents and students call daily. Your counseling team can handle 30 to 40. The rest hear a busy tone, wait on hold, or give up. They don't call back, they enroll at the institute that answered.",
@@ -4897,18 +4429,17 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ctaSupportText: "We'll walk through your admission volume, current bottlenecks, and show you exactly how many enrollments you're losing to unanswered calls.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
-      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-recruiting-agencies" },
+      { label: "AI Interviewer for Recruiting", href: "/ai-interviewer-for-blue-collar-hiring" },
       { label: "AI for Immigration Consultants", href: "/ai-for-immigration-consultant" },
-      { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
-      "ai for coaching institute",
-      "ai for NEET coaching",
-      "ai enrollment calling",
-      "coaching institute ai receptionist",
-      "ai for JEE coaching admission",
+      "coaching institute admission calling ai",
+      "admission calling ai for coaching institute",
+      "coaching institute admission call ai",
+      "ai admission calling for NEET coaching",
+      "ai enrollment calling coaching institute",
       "coaching institute phone ai",
       "ai inquiry agent coaching",
       "UPSC coaching ai phone",
@@ -5128,14 +4659,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-receptionist-for-restaurant"],
-    title: "AI Receptionist for Restaurants. Fill Every Table, Answer Every Call",
+    title: "Restaurant Reservation Answering Service. Fill Every Table, Every Call",
     description:
-      "Friday 7 PM. Kitchen is slammed. Servers are running. Phone rings, a family wants a table for 8 on Saturday. Nobody can answer. They call the restaurant next door. We build an AI receptionist that answers every call, takes reservations, handles takeaway orders, and routes event inquiries, so your team stays on the floor and your tables stay full.",
+      "Friday 7 PM. Kitchen is slammed. Servers are running. Phone rings, a family wants a table for 8 on Saturday. Nobody can answer. They call the restaurant next door. Our restaurant reservation answering service answers every call, takes reservations, handles takeaway orders, and routes event inquiries, so your team stays on the floor and your tables stay full.",
     canonicalUrl: makeCanonical(["ai-receptionist-for-restaurant"]),
-    heroLabel: "Built for Restaurants. India, UAE, US & UK",
-    heroHeadline: "Friday night. Kitchen is on fire. Servers are drowning. A family of 8 just called for Saturday. Nobody picked up. They're eating at your competitor.",
+    heroLabel: "Restaurant Reservation Answering Service. India, UAE, US & UK",
+    heroHeadline: "A restaurant reservation answering service that answers when your host can't. Friday night, kitchen on fire, a family of 8 calls for Saturday, nobody picks up. They're eating at your competitor.",
     heroSubheadline:
-      "Restaurants get 30 to 60 calls a day, reservations, takeaway orders, event inquiries, 'are you open right now?' questions. Your busiest phone hours are your busiest service hours. An empty table on a Friday night is ₹5,000 to ₹15,000 ($80 to $200) that never comes back.",
+      "A restaurant reservation answering service handles the 30 to 60 calls a day you get, reservations, takeaway orders, event inquiries, 'are you open right now?' questions. Your busiest phone hours are your busiest service hours. An empty table on a Friday night is ₹5,000 to ₹15,000 ($80 to $200) that never comes back.",
     painTitle: "Your phone rings most when your team can least afford to answer it",
     painPoints: [
       "Friday 7 PM, every burner is lit, every server has 4 tables, the host is seating a walk-in party. The phone rings. And rings. And rings. The family that wanted Saturday dinner for 8 gives up after 6 rings and calls the restaurant they saw on Google right below you. You never even knew they called.",
@@ -5302,27 +4833,17 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
       { label: "AI Showing Coordinator for Real Estate", href: "/ai-showing-coordinator-for-real-estate" },
       { label: "AI Booking for Travel Agencies", href: "/ai-booking-agent-for-travel-agencies" },
-      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-hindi" },
+      { label: "Hindi AI Voice Agent", href: "/ai-voice-agent-global/" },
       { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai receptionist for restaurant",
-      "restaurant ai phone booking",
-      "ai reservation agent restaurant",
-      "restaurant phone answering ai",
-      "ai for restaurant reservations",
-      "restaurant missed calls ai",
-      "ai takeaway order restaurant",
-      "restaurant ai voice agent",
-      "ai for restaurant event booking",
-      "restaurant phone ai india",
-      "ai host for restaurant",
-      "ai for restaurant calls",
-      "restaurant booking ai agent uae",
-      "fine dining ai receptionist",
-      "ai for restaurant table management",
-      "restaurant ai phone answering service",
+      "restaurant reservation answering service",
+      "restaurant answering service",
+      "reservation answering service",
+      "restaurant phone answering service",
+      "answering service for restaurants",
+      "restaurant call answering service",
     ],
   },
 
@@ -5330,14 +4851,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-diagnostic-lab"],
-    title: "AI for Diagnostic Labs. Stop Losing Bookings to a Busy Phone Line | Agentic AI Labs",
+    title: "Diagnostic Centre AI Receptionist. Every Booking Answered, Every Report Sent | Agentic AI Labs",
     description:
-      "Diagnostic labs lose 15 to 20% of bookings because the phone is always busy. We build an AI receptionist that handles test bookings, report queries, home collection requests, and WhatsApp report delivery, 24/7, in the patient's language.",
+      "A diagnostic centre AI receptionist answers every call your busy phone line drops. It books tests, gives fasting instructions, schedules home collection, and delivers reports on WhatsApp, 24/7, in the patient's language.",
     canonicalUrl: makeCanonical(["ai-for-diagnostic-lab"]),
-    heroLabel: "Built for Diagnostic & Pathology Labs",
-    heroHeadline: "Your lab phone is busy. Your patient just booked with the lab down the road.",
+    heroLabel: "The AI Receptionist for Diagnostic Centres",
+    heroHeadline: "A diagnostic centre AI receptionist that answers every call your busy phone line drops.",
     heroSubheadline:
-      "A patient calls to book a fasting blood test for tomorrow morning. Three other patients are already on hold. The call drops. The patient Googles the next lab. That ₹2,000 to ₹10,000 ($25 to $120) full-body checkup just walked out the door, because nobody picked up.",
+      "A patient calls to book a fasting blood test for tomorrow morning. Three other patients are already on hold. The call drops. The patient Googles the next lab. That ₹2,000 to ₹10,000 ($25 to $120) full-body checkup walked out the door, because nobody picked up. A diagnostic centre AI receptionist answers all three calls at once, so it never happens again.",
     painTitle: "The phone line problem that silently kills lab revenue",
     painPoints: [
       "Patient calls to schedule a fasting blood sugar test for 7 AM tomorrow. Your phone rings and rings, two receptionists are already handling walk-ins and another caller. The patient hangs up after 30 seconds and books with the Thyrocare franchise next door. One test worth ₹500 to ₹5,000 ($7 to $60), gone.",
@@ -5497,24 +5018,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai for diagnostic lab",
+      "diagnostic centre ai receptionist",
+      "diagnostic center ai receptionist",
+      "ai receptionist for diagnostic lab",
       "pathology lab ai receptionist",
-      "ai appointment booking lab",
-      "diagnostic centre ai phone",
-      "ai for pathology lab",
-      "diagnostic lab missed calls",
-      "ai report delivery diagnostic lab",
-      "lab test booking ai",
-      "home collection booking ai",
+      "diagnostic lab ai receptionist",
       "ai receptionist diagnostic centre",
-      "diagnostic lab phone automation",
-      "ai for blood test booking",
-      "pathology lab phone agent",
-      "lims ai integration",
-      "diagnostic lab ai india",
-      "ai for lab report notification",
-      "lab receptionist ai hindi",
-      "diagnostic centre ai agent",
     ],
   },
 
@@ -5522,14 +5031,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-pest-control"],
-    title: "AI for Pest Control Companies. Never Lose an Emergency Call Again | Agentic AI Labs",
+    title: "Pest Control Answering Service That Catches Every Emergency Call | Agentic AI Labs",
     description:
-      "70% of pest control leads come from phone calls. Emergency pest calls (scorpion, snake, bee hive) convert at 90%+, but only if someone answers. We build an AI phone agent that answers every call, captures the pest type and urgency, and dispatches your on-call team instantly.",
+      "70% of pest control leads come from phone calls. Our pest control answering service answers every call, captures the pest type and urgency, and dispatches your on-call team instantly. Emergency pest calls (scorpion, snake, bee hive) convert at 90%+, but only if someone answers.",
     canonicalUrl: makeCanonical(["ai-for-pest-control"]),
-    heroLabel: "Built for Pest Control Companies",
-    heroHeadline: "Termites in the bedroom at 10 PM. Your office is closed. That ₹30,000 job just called your competitor.",
+    heroLabel: "Pest Control Answering Service",
+    heroHeadline: "A pest control answering service catches the 10 PM termite call your competitor is about to answer.",
     heroSubheadline:
-      "A homeowner finds termites crawling out of the wall. It's 10 PM. They call you. No answer. They call the next pest control company on Google. That termite treatment, worth ₹15,000 to ₹50,000 ($200 to $600), went to whoever picked up the phone. Not whoever was best. Whoever answered.",
+      "A homeowner finds termites crawling out of the wall. It's 10 PM. They call you. No answer. They call the next pest control company on Google. A pest control answering service answers every one of those calls, so the termite treatment worth ₹15,000 to ₹50,000 ($200 to $600) books with you, not whoever else picked up the phone.",
     painTitle: "The after-hours problem that bleeds pest control revenue",
     painPoints: [
       "Customer discovers a scorpion in their child's room at 11 PM. They're panicked. They call your number. Voicemail. They call the next company. Emergency pest calls convert at 90%+, but only if answered. You didn't answer. Your competitor did. That ₹5,000 to ₹15,000 ($60 to $200) emergency job is gone.",
@@ -5690,21 +5199,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
     keywords: [
-      "ai for pest control",
-      "pest control ai phone agent",
-      "ai answering service pest control",
-      "pest control missed calls",
-      "ai dispatch pest control",
-      "pest control after hours phone",
-      "ai receptionist pest control",
-      "pest control emergency call ai",
-      "ai for pest control india",
-      "pest control phone automation",
-      "termite treatment ai booking",
-      "pest control ai voice agent",
-      "pest control seasonal call handling",
-      "ai phone agent exterminator",
-      "pest control lead capture ai",
+      "pest control answering service",
+      "answering service for pest control",
+      "pest control call answering service",
+      "24/7 pest control answering service",
+      "pest control after hours answering service",
+      "pest control phone answering service",
     ],
   },
 
@@ -5712,14 +5212,14 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-immigration-consultant"],
-    title: "AI for Immigration Consultants. Stop Losing ₹3L Students to a Missed Call | Agentic AI Labs",
+    title: "Immigration Consultancy AI Receptionist. Stop Losing ₹3L Students to a Missed Call | Agentic AI Labs",
     description:
-      "A mid-size immigration consultant handles 50 to 100 inquiry calls/day during peak season. Conversion from inquiry to enrollment is 8 to 15%. Every missed call is a student, and ₹2 to 5L in consulting fees, walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
+      "An immigration consultancy AI receptionist answers every inquiry call, even when a mid-size consultancy handles 50 to 100 calls a day during peak season. Conversion from inquiry to enrollment is 8 to 15%. Every missed call is a student, and ₹2 to 5L in consulting fees, walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
     canonicalUrl: makeCanonical(["ai-for-immigration-consultant"]),
-    heroLabel: "Built for Immigration & Study Abroad Consultants",
-    heroHeadline: "A student's parents are ready to pay ₹3L. Your counselor is in a session. The next agency answered.",
+    heroLabel: "AI Receptionist for Immigration & Study Abroad Consultancies",
+    heroHeadline: "An immigration consultancy AI receptionist answers while your counselor is in a session, so the next agency doesn't.",
     heroSubheadline:
-      "Peak season. January to March, July to September. 50 to 100 calls a day. Your counselors are in back-to-back sessions. The phone rings. A student wants to know about MS in USA admission requirements. Nobody picks up. That student, whose parents have ₹2 to 5L ($2,500 to $6,000) ready for consulting fees, calls the next agency on Google. India's overseas education market is ₹50,000+ crore ($6B+). Your share depends on who answers the phone.",
+      "An immigration consultancy AI receptionist, built for peak season. January to March, July to September. 50 to 100 calls a day. Your counselors are in back-to-back sessions. The phone rings. A student wants to know about MS in USA admission requirements. Nobody picks up. That student, whose parents have ₹2 to 5L ($2,500 to $6,000) ready for consulting fees, calls the next agency on Google. India's overseas education market is ₹50,000+ crore ($6B+). Your share depends on who answers the phone.",
     painTitle: "The inquiry leak that peak season makes invisible",
     painPoints: [
       "Student calls about MBA in Canada. Your senior counselor is in a session explaining UK visa documents to another family. Your junior counselor is on another call. The student hears ringing. No answer. They call the big-brand agency with a call center. You just lost ₹2 to 5L ($2,500 to $6,000) in consulting fees, not because your counseling is worse, but because your phone was busy.",
@@ -5875,224 +5375,21 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI for Coaching Institutes", href: "/ai-for-coaching-institute" },
       { label: "AI Interviewer for Blue-Collar Hiring", href: "/ai-interviewer-for-blue-collar-hiring" },
       { label: "AI Show-Up Agent for Coaching", href: "/ai-show-up-agent-for-online-coaching" },
-      { label: "Best AI Tools for Recruiting", href: "/best-ai-tools-for-recruiting-agencies" },
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
+      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
-      "ai for immigration consultant",
-      "study abroad ai phone agent",
-      "ai for education consultant",
       "immigration consultancy ai receptionist",
-      "ai for overseas education agency",
-      "study abroad inquiry automation",
-      "ai phone agent immigration",
-      "education consultant missed calls",
-      "ai student inquiry capture",
-      "immigration consultant phone automation",
-      "ai for study abroad agency india",
-      "counseling session booking ai",
-      "ai follow up immigration consultant",
-      "ai voice agent education consultancy",
-      "overseas education ai agent",
+      "ai receptionist for immigration consultants",
+      "immigration consultant ai receptionist",
+      "study abroad consultancy ai receptionist",
+      "ai receptionist for overseas education agency",
       "immigration ai receptionist hindi",
-      "study abroad lead capture ai",
     ],
   },
 
   // ─── PAGE 9: AI Voice Agent Hindi ──────────────────────────────────────────
-  {
-    type: "persona",
-    pathSegments: ["ai-voice-agent-hindi"],
-    title: "Hindi AI Voice Agent. Voice AI That Actually Understands Hindi, Hinglish & Indian Accents | Agentic AI Labs",
-    description:
-      "US-built voice AI tools fail on Hindi, Hinglish, background noise, and Indian accents. We build voice AI that speaks Hindi natively, handles code-switching, and sounds natural to Indian callers. Not a translated English bot, a Hindi-first voice agent.",
-    canonicalUrl: makeCanonical(["ai-voice-agent-hindi"]),
-    heroLabel: "Hindi-First Voice AI",
-    heroHeadline: "Your US voice AI can't understand 'mujhe appointment chahiye.' Your customers can tell.",
-    heroSubheadline:
-      "You tried a US voice AI platform. It can't understand your customer speaking Hindi. It breaks on Hinglish, 'mujhe AC repair chahiye, tomorrow morning around 9 baje.' It can't handle traffic noise in the background. Your customers feel like they're talking to a broken robot. 38% of India's internet users prefer Hindi. 60%+ of business calls in India happen in Hindi or Hinglish. If your voice AI can't handle that, it's not built for India.",
-    painTitle: "Why US-built voice AI fails in India, and your customers know it",
-    painPoints: [
-      "Customer calls to book an AC repair in Hindi. Your US voice AI (Vapi, Retell, Bland) hears garbled input. It asks them to repeat. Twice. The customer hangs up, convinced your business uses a broken automated system. That ₹1,500 to ₹5,000 ($20 to $60) service call just walked to the competitor with a human receptionist.",
-      "Hinglish is how India actually talks. 'Mujhe kal subah 10 baje appointment chahiye, near Koramangala.' English words. Hindi grammar. Mixed in one sentence. US voice AI models were trained on American English, they don't understand code-switching. They don't understand 'kal subah' means tomorrow morning. They don't understand 'chahiye' means 'I need.' Your callers aren't confused. Your AI is.",
-      "Indian phone calls have traffic noise. Fan noise. Street vendor noise. Autorickshaw horns. The customer is calling from a busy road, not a quiet office. US voice AI breaks on background noise because it was trained in clean studio conditions. Your customer is standing at a bus stop and the AI can't hear them. They hang up. You lose the booking.",
-    ],
-    costCallout: {
-      items: [
-        { label: "Calls where US voice AI fails to understand Hindi/Hinglish", amount: "40 to 60% of inbound (industry tests)" },
-        { label: "Revenue lost per failed AI interaction (customer hangs up)", amount: "₹1,500 to ₹50,000 / $20 to $600 per call" },
-        { label: "Customer trust lost when AI sounds like a broken robot", amount: "Permanent, they don't call back" },
-      ],
-      total: "A voice AI that can't speak Hindi isn't saving you money, it's actively losing you customers",
-      solvesFor: "₹4,999/month ($199/month). Hindi-first voice AI that sounds like your best receptionist, not a Silicon Valley experiment",
-      source: "Agentic AI Labs internal benchmarks + Indian voice AI market testing, 2026",
-    },
-    practitionerQuote: {
-      text: "We tried Vapi for our clinic. The moment a patient spoke Hindi, it was over. It kept asking them to repeat, then gave a wrong response. We shut it down in two days. Patients were complaining that our 'robot' doesn't understand Hindi.",
-      attribution: "Clinic owner, Jaipur. Agentic AI Labs discovery call, 2026",
-    },
-    statusQuoTitle: "What Indian businesses try before finding Hindi-first voice AI",
-    statusQuoItems: [
-      "US voice AI platforms (Vapi, Retell, Bland), built for American English. They offer 'Hindi support' that's actually translated English prompts running on English-trained models. It technically 'speaks Hindi' the way Google Translate technically 'speaks Hindi.' Your customers can tell in 3 seconds.",
-      "IVR menus in Hindi, 'Hindi ke liye 1 dabaiye.' Customers hate IVR. They press buttons, get stuck in loops, and hang up. A robotic menu is not a conversation. Your competitors with human receptionists are still winning because IVR feels like a wall, not a welcome.",
-      "Hire bilingual receptionists, ₹12,000 to ₹20,000/month ($150 to $250/month) per person. Works until they're on another call, take a sick day, or quit. Doesn't scale. Doesn't handle 3 calls at once. Still not available at 10 PM.",
-    ],
-    industrySignal: {
-      headline: "38% of India's internet users prefer Hindi. Your voice AI should too.",
-      body: "India's vernacular internet is booming. Indian-language internet users already outnumber English users online and are growing far faster than English users (KPMG-Google). Yet most voice AI platforms are English-first with Hindi as an afterthought. Businesses deploying Hindi-native AI voice agents report 3x higher call completion rates compared to English-only or translated-Hindi AI systems. The gap is widening: as more non-English-speaking Indians come online, the businesses that speak their language win. The ones forcing English lose.",
-      source: "KPMG-Google Indian Languages Internet Report, 2017",
-      date: "2025",
-    },
-    solutionTitle: "Hindi-first. Hinglish-native. Trained on Indian accents, noise, and code-switching.",
-    solutionItems: [
-      "Voice AI that understands Hindi, Hinglish, and code-switching natively, not translated English prompts running on American models.",
-      "Trained on Indian accents (regional: Marathi-accented Hindi, South Indian English, Bhojpuri-inflected Hindi) and Indian background noise (traffic, fans, crowds).",
-      "Responds in the caller's language automatically, no 'press 1 for Hindi.' Switches between Hindi and English mid-sentence because that's how your customers talk.",
-    ],
-    layers: [
-      {
-        title: "Understands Hindi, Hinglish, and code-switching, because that's how India talks.",
-        body: "'Mujhe kal subah 9 baje AC repair chahiye, Koramangala mein.' One sentence. Three languages. Hindi grammar, English nouns, a Bangalore locality name. Our voice AI understands this natively, it doesn't try to parse it as English, fail, and ask the caller to repeat. It captures the intent (AC repair), the time (tomorrow 9 AM), and the location (Koramangala) on the first listen. Because it was built for how Indians actually speak, not how a Silicon Valley training dataset thinks they should.",
-      },
-      {
-        title: "Hears through traffic, fans, and autorickshaw horns, because that's where India calls from.",
-        body: "Your customer is calling from a busy intersection in Pune. An autorickshaw honks. A street vendor yells in the background. A ceiling fan whirs. US voice AI hears noise and fails. Our voice AI was trained on real Indian call environments, traffic, construction, fans, crowds, temple bells. It isolates the speaker's voice, understands the words, and responds correctly. Your customer doesn't need to find a quiet room to talk to your business.",
-      },
-      {
-        title: "Speaks the caller's language from the first word, no IVR, no menus, no 'press 1.'",
-        body: "Caller says 'hello', the AI responds in English. Caller says 'haan, mujhe appointment lena hai', the AI switches to Hindi. Mid-sentence switch? Handled. The caller never has to choose a language, press a button, or repeat themselves. Supported languages: Hindi, Hinglish, English, Marathi, Gujarati, Tamil, Telugu, Kannada, Bengali, Bhojpuri. Your business sounds local, personal, and accessible, in whatever language your customer thinks in.",
-      },
-    ],
-    howItWorks: [
-      {
-        week: 1,
-        phase: "AUDIT YOUR CALL LANGUAGE PATTERNS",
-        body: "We analyze your inbound call recordings (or do live test calls) to map the exact language mix: what percentage Hindi, Hinglish, English, regional language? What code-switching patterns? What background noise environments? We build the AI for how your specific customers actually talk.",
-        youSpend: "45 minutes on a call + access to sample call recordings.",
-      },
-      {
-        week: 2,
-        phase: "BUILD YOUR HINDI-FIRST VOICE AGENT",
-        body: "We build the AI on your business context, services, pricing, FAQs, booking flow, in the languages your customers use. Hindi responses sound like a fluent Hindi speaker, not a translated English script. Hinglish responses match the natural code-switching pattern of your caller base.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
-        phase: "TEST WITH REAL INDIAN CALL SCENARIOS",
-        body: "Hindi-only caller. Hinglish caller. Regional-accent caller. Caller on a noisy road. Caller switching from English to Hindi mid-sentence. We test every language scenario that your US voice AI failed on, and make sure ours handles it perfectly.",
-        youSpend: "20 minutes listening to test call recordings.",
-      },
-      {
-        week: 4,
-        phase: "LIVE. YOUR CUSTOMERS FINALLY FEEL UNDERSTOOD",
-        body: "AI goes live on your number. Hindi callers get Hindi. English callers get English. Hinglish callers get Hinglish. No one presses a button. No one repeats themselves. We monitor for 30 days and tune the language model based on your real call data.",
-        youSpend: "Zero. Listen to your customers stop complaining about the 'robot.'",
-      },
-    ],
-    proofTitle: "Businesses switch from US voice AI to Hindi-first and see immediate results.",
-    proofBullets: [
-      "Dental clinic (Jaipur): Switched from Vapi to Hindi-native AI. Call completion rate went from 35% to 92%. Patient complaints about the 'robot' dropped to zero.",
-      "Home services marketplace (Mumbai): Hindi/Hinglish callers who previously hung up on English-only AI now complete bookings. Booking rate from Hindi callers increased 3.2x.",
-      "Real estate developer (Noida): Site visit bookings from Hindi-speaking callers went from near-zero (all going to voicemail) to 18/week. The AI handles Bhojpuri-accented Hindi that their previous system couldn't parse.",
-    ],
-    proofStats: [
-      { stat: "92%", label: "call completion rate (up from 35% on US voice AI)" },
-      { stat: "3.2x", label: "booking rate increase from Hindi/Hinglish callers" },
-      { stat: "10+", label: "Indian languages and dialects supported" },
-    ],
-    fitChecklist: {
-      headline: "Built for Indian businesses whose customers speak Hindi, not Silicon Valley English.",
-      forYou: [
-        "Your customers call in Hindi, Hinglish, or a regional Indian language, and your current AI (or lack of one) can't handle it",
-        "You tried a US voice AI platform (Vapi, Retell, Bland) and it failed on Indian accents, Hindi, or background noise",
-        "You serve customers across India, not just English-speaking metros",
-        "You want your AI to sound like a fluent Hindi speaker, not a translated English chatbot",
-        "Your customer calls happen in noisy environments (traffic, markets, public spaces), not quiet offices",
-      ],
-      notForYou: [
-        "Your customer base is 100% English-speaking with no Hindi/Hinglish interactions",
-        "You operate only in the US/UK/Australia with no Indian customer base",
-        "You need a text-only chatbot, this is specifically for voice conversations",
-      ],
-      geographicNote: "Active in India, UAE, UK, Australia, and North America.",
-    },
-    faq: [
-      {
-        question: "How is this different from Vapi/Retell with Hindi language selected?",
-        answer:
-          "US platforms offer Hindi as a language option, but the underlying model was trained on American English. It's like putting a Hindi skin on an English brain. Our AI was trained on actual Hindi and Hinglish conversations, real Indian callers, real accents, real background noise. The difference is obvious within 3 seconds of a call.",
-      },
-      {
-        question: "Does it handle code-switching (Hindi + English in one sentence)?",
-        answer:
-          "Yes, this is the core differentiator. 'Mujhe kal subah 10 baje appointment chahiye near Indiranagar'. Hindi grammar, English words, a Bangalore locality. Our AI parses this natively. US voice AI treats it as corrupted English input and fails.",
-      },
-      {
-        question: "What about regional accents. Marathi, South Indian, Bhojpuri?",
-        answer:
-          "Trained on them. A Tamil speaker's Hindi sounds different from a Rajasthani's Hindi. A Maharashtrian's English has different intonation than a Punjabi's. Our models handle these accent variations because they were trained on recordings from across India, not just a standard Hindi studio voice.",
-      },
-      {
-        question: "Does it work with background noise from Indian environments?",
-        answer:
-          "Yes. Trained on Indian call environments: traffic horns, autorickshaws, ceiling fans, street markets, construction, temple music, public transport announcements. Your customer calls from a busy road in Andheri, the AI still understands them.",
-      },
-      {
-        question: "What languages beyond Hindi are supported?",
-        answer:
-          "Hindi, Hinglish, English, Marathi, Gujarati, Tamil, Telugu, Kannada, Bengali, Bhojpuri, Malayalam, and Punjabi. We're continuously adding more. The AI auto-detects the caller's language, no menu selection required.",
-      },
-      {
-        question: "Can I use this for my business outside India, for Indian diaspora customers?",
-        answer:
-          "Absolutely. Indian restaurants in the US, clinics in the UAE, service businesses in Australia, all have Hindi/Hinglish-speaking customers. The AI works globally. The language doesn't change based on geography.",
-      },
-      {
-        question: "How much does it cost compared to US voice AI platforms?",
-        answer:
-          "Hindi-first voice AI starts at ₹4,999/month ($199/month). This is comparable to or less than US platforms that don't work for Hindi callers anyway. You're not paying more, you're paying for something that actually works for your customer base.",
-      },
-      {
-        question: "How fast can I switch from my current US voice AI?",
-        answer:
-          "5 to 7 days. We analyze why your current system is failing (usually: Hindi comprehension, accent handling, background noise), build the Hindi-first replacement on your business context, and go live. Most businesses see the improvement in call completion rate within the first 24 hours.",
-      },
-    ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
-    ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We'll test your current voice AI with a Hindi call, and show you exactly where it breaks.",
-    ctaEmailFallback: "aditya@tryagentikai.com",
-    relatedLinks: [
-      { label: "AI for Missed Calls", href: "/ai-for-missed-calls" },
-      { label: "AI vs Human Receptionist", href: "/ai-vs-human-receptionist" },
-      { label: "AI Dispatch for Home Services", href: "/ai-dispatch-agent-for-home-services" },
-      { label: "What Is an AI Receptionist?", href: "/glossary/what-is-an-ai-receptionist" },
-      { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
-    ],
-    keywords: [
-      "hindi ai voice agent",
-      "ai voice agent hinglish",
-      "hindi speaking ai assistant",
-      "voice ai indian languages",
-      "ai for hindi callers",
-      "hinglish voice ai",
-      "hindi ai receptionist",
-      "voice ai india",
-      "ai voice agent indian accent",
-      "hindi phone ai agent",
-      "ai voice bot hindi",
-      "indian language voice ai",
-      "ai for hindi speaking customers",
-      "vapi hindi alternative",
-      "retell hindi alternative",
-      "voice ai code switching hindi english",
-      "ai voice agent marathi gujarati tamil",
-      "hindi ai phone automation",
-      "ai voice agent bhojpuri",
-      "indian accent voice ai agent",
-    ],
-  },
+  
 
   // ─── PAGE 10: AI for Gym & Fitness ─────────────────────────────────────────
   {

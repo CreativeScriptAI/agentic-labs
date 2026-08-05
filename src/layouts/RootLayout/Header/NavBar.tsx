@@ -82,10 +82,9 @@ const BY_INDUSTRY: LinkGroup[] = [
     ],
   },
   {
-    label: "Hiring & Recruiting",
+    label: "Hiring & Staffing",
     links: [
-      { name: "Recruiting Agencies", to: "/ai-interviewer-for-recruiting-agencies/" },
-      { name: "Blue-Collar Hiring", to: "/ai-interviewer-for-blue-collar-hiring/" },
+      { name: "Staffing Agencies", to: "/ai-interviewer-for-blue-collar-hiring/" },
     ],
   },
 ];
@@ -96,14 +95,12 @@ const COMPARE_ALTERNATIVES: NavLink[] = [
   { name: "vs Retell AI", to: "/retell-ai-alternative/" },
   { name: "vs Bland AI", to: "/bland-ai-alternative/" },
   { name: "vs GoHighLevel calling", to: "/gohighlevel-ai-calling-alternative/" },
-  { name: "vs GHL AI chatbot", to: "/ghl-ai-chatbot-alternative/" },
   { name: "AI vs human receptionist", to: "/ai-vs-human-receptionist/" },
 ];
 const COMPARE_ROUNDUPS: NavLink[] = [
   { name: "Best AI for dental practices", to: "/best-ai-tools-for-dental-practices/" },
   { name: "Best AI voice agents", to: "/best-ai-voice-agents-for-business/" },
   { name: "Best AI for GoHighLevel", to: "/best-ai-for-gohighlevel-agencies/" },
-  { name: "Best AI for recruiting", to: "/best-ai-tools-for-recruiting-agencies/" },
 ];
 
 // Resources — the authority layer.

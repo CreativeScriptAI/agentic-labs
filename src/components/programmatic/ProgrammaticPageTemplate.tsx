@@ -83,11 +83,6 @@ const PAGE_IMAGES: Record<string, PageImages> = {
     solution: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=640&q=80&auto=format&fit=crop",    // medical reception
     result: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=640&q=80&auto=format&fit=crop",      // patient care
   },
-  "ghl-ai-chatbot-alternative": {
-    hero: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=640&q=80&auto=format&fit=crop",           // team at laptops
-    solution: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640&q=80&auto=format&fit=crop",    // dashboard analytics
-    result: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",         // pipeline / charts
-  },
   "done-for-you-ai-voice-agent": {
     hero: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=640&q=80&auto=format&fit=crop",           // team at work
     solution: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&auto=format&fit=crop",    // collaborative team
@@ -147,11 +142,6 @@ const PAGE_IMAGES: Record<string, PageImages> = {
     hero: "https://images.unsplash.com/photo-1523050854058-8df90110c476?w=640&q=80&auto=format&fit=crop",        // education
     solution: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=640&q=80&auto=format&fit=crop",    // studying documents
     result: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=640&q=80&auto=format&fit=crop",      // graduation abroad
-  },
-  "ai-voice-agent-hindi": {
-    hero: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=640&q=80&auto=format&fit=crop",        // person on phone
-    solution: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=640&q=80&auto=format&fit=crop",    // diverse team
-    result: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=640&q=80&auto=format&fit=crop",      // team success
   },
   "ai-for-gym-fitness": {
     hero: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80&auto=format&fit=crop",        // gym interior

@@ -2072,7 +2072,7 @@ const AllUseCasesGrid = () => {
       accent: "#EC4899",
       avatar: "Meera",
       metric: "Zero missed calls across sub-accounts",
-      href: "/ghl-ai-chatbot-alternative",
+      href: "/gohighlevel-ai-calling-alternative",
     },
   ];
 

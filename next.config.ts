@@ -268,6 +268,28 @@ const nextConfig: NextConfig = {
         destination: "/ai-clarity-workshop",
         permanent: false,
       },
+      // Pruned pSEO pages (SERP intent broken or thin duplicates). Permanent 301s
+      // so any accrued equity flows to the surviving page and old URLs never 404.
+      {
+        source: "/ai-interviewer-for-recruiting-agencies",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/best-ai-tools-for-recruiting-agencies",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/ghl-ai-chatbot-alternative",
+        destination: "/gohighlevel-ai-calling-alternative",
+        permanent: true,
+      },
+      {
+        source: "/ai-voice-agent-hindi",
+        destination: "/ai-voice-agent-global",
+        permanent: true,
+      },
       // Pricing page → hub pricing section
       {
         source: "/ai-voice-agent-pricing",
