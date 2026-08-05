@@ -144,160 +144,184 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["ai-sdr-for-ghl-agencies"],
     title: "AI SDR for GHL Agencies | Agentic AI Labs",
     description:
-      "GHL agencies lose $60K+/yr to slow follow-up and manual CRM work. We build an AI SDR that qualifies leads, books meetings, and updates your pipeline, without a human in the loop.",
+      "How we actually build an AI SDR inside GoHighLevel: the exact Conversation AI and Appointment Booking workflow nodes, the real blended cost once LC Phone and tokens are stacked, and when you must bolt on Vapi or Retell for outbound.",
     canonicalUrl: makeCanonical(["ai-sdr-for-ghl-agencies"]),
     heroLabel: "Built for GHL Agencies",
-    heroHeadline: "AI SDR for GHL Agencies",
+    heroHeadline: "AI SDR for GoHighLevel Agencies",
     heroSubheadline:
-      "Qualifies leads in under 90 seconds. Books directly into your GHL calendar. Remembers every objection. Runs 24/7, without an SDR on the phone.",
-    painTitle: "What slow follow-up is costing your agency right now",
-    painPoints: [
-      "Leads go cold because follow-up starts hours late, not minutes.",
-      "Your SDR process breaks when volume spikes or an operator goes offline.",
-      "You close fewer retainers because prospects drop off before discovery.",
+      "The honest build-and-cost teardown no listicle shows you. The exact GHL workflow that hands a replying lead to Conversation AI, books into the right calendar, and where every one of these builds breaks in production.",
+    heroExplainerCaption: "The inbound reply-and-book flow, node by node",
+    heroSteps: [
+      { label: "Trigger: Customer Replied", sub: "Optional filter on lead source", accent: true },
+      { label: "Conversation AI action node", sub: "Bot reads full thread, chats back over SMS, DM, chat, email" },
+      { label: "Appointment Booking action", sub: "Books into a target calendar, message limit and reply timeout set" },
+      { label: "Bot exits on one of three outcomes", sub: "Booked, timed out, or could not book" },
+      { label: "Escalation branch to a human", sub: "Tag-based handoff on high intent, bot paused per contact", accent: true },
     ],
-    costCallout: {
-      items: [
-        { label: "SDR salary or contractor cost (median)", amount: "$70,000 / year" },
-        { label: "Leads lost to slow follow-up (est.)", amount: "$60,000 / year" },
-      ],
-      total: "$110,000+ / year in friction",
-      solvesFor: "$3,000 to $6,000 setup + $1,200 to $2,500 / month",
-      source: "U.S. Bureau of Labor Statistics OEWS, Sales Representatives of Services (SOC 41-3091)",
-    },
+    painTitle: "Why most GHL SDR builds look done and still lose leads",
+    painPoints: [
+      "Auto-Pilot gets flipped on before the persona and booking instructions are tuned, so the bot sends unreviewed replies to real leads on day one.",
+      "The bot books into a calendar with no buffer, no minimum scheduling notice, or the wrong timezone, offers slots that are already gone, and double-books the client.",
+      "Vapi or Retell call outcomes stay trapped in the vendor dashboard because nobody built the webhook to write them back, so the SDR's results are invisible inside the CRM the client logs into.",
+    ],
     practitionerQuote: {
-      text: "I had 3 SDRs burning 60% of their time on CRM updates and follow-up reminders. None of that was actually selling.",
-      attribution: "GHL agency owner, r/agency, January 2026",
+      text: "Everyone quotes the $97 a month and stops. Nobody tells you the LC Phone wallet runs dry mid-campaign and the calls just silently stop.",
+      attribution: "A GHL agency owner we build for",
     },
-    statusQuoTitle: "What most agencies try first",
+    statusQuoTitle: "What most agencies (and every ranking page) reach for first",
     statusQuoItems: [
-      "A stack of GHL workflows plus manual overrides that break under load.",
-      "Zapier chains that fail silently, you find out when clients complain.",
-      "A scripted rep who can't keep consistency across 50+ daily touchpoints.",
+      "A third-party bolt-on like CloseBot or Agent Frank, sold as an AI SDR, that never shows you the actual in-platform build or who owns the config.",
+      "A generic 'best AI SDR tools' roundup that treats AI SDR as one thing and never draws the line between text, voice, and outbound calling.",
+      "A single flat number ('$97/mo' or '$0.06/min') with none of the LC Phone wallet charges or LLM tokens that make up the real cost per booked appointment.",
     ],
     industrySignal: {
-      headline: "GHL agencies are moving to AI-first outreach.",
-      body: "GoHighLevel's marketplace has expanded quickly with AI-first workflow templates. In our own client deployments, agencies that automate outreach respond to inbound leads far faster than teams still relying on manual follow-up. The practices that move first keep their pipeline. The ones that wait lose to whoever picked up faster.",
-      source: "Agentic AI Labs client deployments, Q1 2026",
-      date: "January 2026",
+      headline: "The native SDR core already books at scale. Most agencies never configure it right.",
+      body: "GoHighLevel's Conversation AI has an Appointment Booking Mode that reads full thread history and books across SMS, Live Chat, Facebook and Instagram DM, WhatsApp, and email. HighLevel announced it had booked over 127,000 appointments as of August 2025. The mechanism works. The gap is that almost nobody tunes the persona, the calendar rules, and the escalation branch before going live, so it books badly instead of not at all.",
+      source: "GoHighLevel official post, HighLevel's Conversation AI Has Booked Over 127,000 Appointments",
+      date: "August 2025",
+      stat: "127,000+",
+      statLabel: "appointments booked by GHL Conversation AI since launch",
     },
-    solutionTitle: "Talk. Remember. Act. One AI SDR. Three layers.",
+    solutionTitle: "One decision boundary, three tools, no listicle filler.",
     solutionItems: [
-      "Voice + text outreach that sounds natural and stays on-script.",
-      "Memory that tracks lead context and last objections.",
-      "Automation that updates GHL, routes hot leads, and books calls.",
+      "Native Conversation AI for inbound text: cheap, reads the full thread, replies and books across every LC channel. Good enough for most inbound reply-and-book.",
+      "Voice AI (AI Employee) for inbound phone answering and outbound calls over LC Phone, with its own appointment booking.",
+      "Vapi or Retell bolted on only when you need real outbound calling at volume the native Voice AI does not cover.",
     ],
     layers: [
       {
-        title: "Layer 1: Your AI talks.",
-        body: "Calls inbound leads within 60 seconds. Handles qualification questions, objection scripts, and books directly into your GHL calendar. New leads get qualified in one call. Returning prospects get treated like they've spoken before, because the AI remembers them. 24/7, including after-hours and weekends.",
+        title: "Layer 1: Native Conversation AI (text channels).",
+        body: "Configured under Settings > Conversation AI, in two modes: Suggestive (drafts a reply a human approves) and Auto-Pilot (sends autonomously). The inbound workflow is trigger Customer Replied, an optional condition on lead source, then the Conversation AI action node hands the thread to the bot. The bot chats up to a configurable message limit and reply timeout, then exits on one of three outcomes: appointment booked, timed out, or could not book. This is the cheapest layer and covers most inbound.",
       },
       {
-        title: "Layer 2: Your AI remembers.",
-        body: "Every lead. Every objection. Every conversation. When a prospect calls back, the AI knows exactly where they are in your funnel and picks up without starting over. Built on Mem0, persistent memory that compounds with every interaction. Your best SDR never forgets. Neither does this.",
+        title: "Layer 2: Appointment Booking and Voice AI.",
+        body: "Appointment booking is its own action (Appointment Booking - Conversation AI Booking Bot) where you pick the target calendar, set the persona, add booking instructions, set the max back-and-forth message limit, and set a reply timeout. It can route across multiple calendars with intent-based matching or stick to one. Voice AI, part of the AI Employee suite, handles inbound phone answering and outbound calls over LC Phone with its own booking, at $97/month per sub-account on Unlimited or roughly $0.06/min pay-as-you-go plus token charges.",
       },
       {
-        title: "Layer 3: Your AI acts.",
-        body: "Updates opportunity stages in GHL automatically. Routes hot leads to your closers with full context attached. Triggers follow-up SMS sequences, sends booking confirmations, and fires reminders before every call. No human in the loop for routine qualification. Your team handles the conversations that need closing.",
+        title: "Layer 3: Outbound with Vapi or Retell, written back.",
+        body: "For outbound beyond native Voice AI, GHL ships a native Vapi integration with Create a Call, Create Chat, Upload File, and Find Call actions. You fire a call by mapping merge fields like {{contact.phone}} and {{contact.first_name}} into Create a Call. It queues against a default 10-concurrent-call limit, and Vapi-to-GHL triggers poll every 5 minutes, not instantly. Transcripts and outcomes live in the Vapi dashboard, so a webhook has to push results back to update the contact or opportunity. Retell integrates the same way.",
       },
     ],
     howItWorks: [
       {
         week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning. We map your outreach workflow on a single call. Every touchpoint, every pipeline stage, every follow-up rule. We leave with a clear spec for what we're building.",
+        phase: "MAP",
+        body: "We map your funnel and decide the decision boundary: which conversations native Conversation AI handles, which need Voice AI, and whether outbound at your volume justifies bolting on Vapi or Retell. We pick the trigger (Customer Replied for inbound reply-and-book, Opportunity Created or form submission for outbound speed-to-lead).",
         youSpend: "1 hour on a call with us.",
       },
       {
         week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon to Day 2. We build the AI SDR. Voice outreach, lead memory, GHL pipeline automation, all connected and tested against your specific offer and ICP.",
+        phase: "BUILD IN SUGGESTIVE",
+        body: "We build the workflow and start the bot in Suggestive mode, never Auto-Pilot. We wire the Conversation AI and Appointment Booking nodes, set the target calendar, persona, booking instructions, message limit, and reply timeout, and fix the calendar rules (buffer, minimum scheduling notice, timezone) that cause double-booking. We set wallet auto-recharge and a balance-alert workflow before anything goes live.",
         youSpend: "Nothing. We build.",
       },
       {
         week: 3,
-        phase: "TEST",
-        body: "Day 3. Real lead scenarios. Cold leads. Warm leads. Edge cases. Objections your real prospects throw. We break it on purpose so it doesn't break with your clients.",
-        youSpend: "30 minutes reviewing and giving us feedback.",
+        phase: "WATCH AND TUNE",
+        body: "We watch a few dozen real threads in Suggestive mode. We tune the persona and booking instructions until they hold up, build the tag-based escalation branch so high-intent or angry leads exit to a human, and add the Update Conversation AI Bot and Status action to pause the bot per contact. For outbound, we build and test the webhook write-back so call outcomes actually land in GHL.",
+        youSpend: "30 minutes reviewing threads with us.",
       },
       {
         week: 4,
-        phase: "LIVE",
-        body: "Day 4 to 5. Your AI SDR goes live. We monitor every interaction for the first 30 days. You get a dashboard: leads qualified, meetings booked, conversion by source.",
+        phase: "FLIP AND MONITOR",
+        body: "Only once the persona and booking instructions hold up do we flip to Auto-Pilot. We add validation (a short wait or a required-fields filter) so speed-to-lead calls never fire before the phone or first name is written and merge fields resolve empty. We monitor for the first 30 days and watch for the failure modes: stacked tools stepping on the same thread, wallet drain, and the 5-minute Vapi polling lag on anything time-sensitive.",
         youSpend: "Zero. It runs without you.",
       },
     ],
-    proofTitle: "We don't say 'trust us.' We show you what we built.",
+    proofTitle: "We have shipped this. Here is where it breaks and how we stop it.",
     proofBullets: [
-      "Faster response windows for inbound and warm outbound.",
-      "Higher show-up rates from persistent reminders.",
-      "Clear reporting on handoff quality and booked revenue.",
+      "We start every new client in Suggestive mode, watch real threads, and flip to Auto-Pilot only after the persona holds up. That single discipline prevents the day-one rogue-reply failure.",
+      "Double-booking is almost always calendar config, not the prompt. We fix buffers, minimum scheduling notice, and timezone before go-live so the bot never offers a slot that is already gone.",
+      "We set LC Phone and AI wallet auto-recharge plus a balance-alert workflow before launch, because a dry wallet silently kills outbound calls and Voice AI answering with no obvious error.",
+      "For outbound we build the webhook write-back first, so Vapi or Retell transcripts and outcomes land on the contact and opportunity instead of staying trapped in the vendor dashboard.",
+      "We build the tag-based escalation branch so Auto-Pilot exits to a human on high-intent or angry messages instead of chatting a lead who is ready to buy or ready to churn.",
     ],
-    caseStudy: {
-      client: "GHL Agency. B2B SaaS Clients",
-      problem: "Agency was losing 40% of inbound leads to slow follow-up. SDR team spent 4+ hours daily on CRM updates. Two clients had already complained about inconsistent outreach quality.",
-      system: "AI SDR with voice outreach (ElevenLabs) + lead memory (Mem0) + GHL automation. Handles qualification, books meetings, updates pipeline stages, and sends SMS confirmations automatically.",
-      result: "Response time dropped from 4 hours to under 90 seconds. 68% of booked calls now scheduled by the AI. SDR team shifted fully to closing.",
+    comparisonBars: {
+      title: "The true cost of a booked appointment is a stack, not one number",
+      bars: [
+        { label: "Voice AI minute", valueLabel: "~$0.06/min", widthPercent: 30 },
+        { label: "LC Phone outbound", valueLabel: "~$0.018/min", widthPercent: 12 },
+        { label: "LC Phone inbound", valueLabel: "~$0.0085 to $0.022/min", widthPercent: 15 },
+        { label: "LLM tokens", valueLabel: "billed on top", widthPercent: 20 },
+        { label: "Plus number rental, recording, transcription", valueLabel: "wallet charges", widthPercent: 25, accent: true },
+      ],
     },
-    testimonial: {
-      quote: "Within 48 hours they built an AI caller that doubled our booking rate. It feels like having a full-time SDR who never drops the ball.",
-      author: "Aiden, Agency Founder",
-    },
-    proofStats: [
-      { stat: "< 90s", label: "average lead response time" },
-      { stat: "68%", label: "of calls booked by AI" },
-      { stat: "1 week", label: "audit to live" },
-    ],
     fitChecklist: {
-      headline: "Built for GHL agencies that have a lead response problem.",
+      headline: "Built for GHL agencies that want the real build, not a tool subscription.",
       forYou: [
-        "You handle 50+ inbound leads per month through GoHighLevel",
-        "Your SDR process is manual and breaks when volume spikes",
-        "You're losing leads because follow-up starts too late",
-        "You've tried GHL workflows or Zapier and it broke in production",
-        "Your budget is $5K+ and you're serious about solving this properly",
+        "You run enough inbound or outbound through GoHighLevel to justify a properly tuned SDR, not a template",
+        "You want to own the workflow inside your own GHL account, not rent a black-box bolt-on",
+        "You are on or moving to the $497 Pro/SaaS plan and want to rebill AI, Voice, and LC usage to your sub-accounts",
+        "You have been burned by a bot going rogue, double-booking, or a wallet running dry mid-campaign",
+        "You want honest cost math before you commit, not a single flat number",
       ],
       notForYou: [
-        "You have fewer than 20 leads per month, not enough volume for AI ROI",
-        "You want to configure and maintain the AI system yourself",
-        "You need a $500 automation template, not a production system",
+        "You want a $47/month self-serve bot and no configuration help",
+        "You have almost no lead volume and native Conversation AI in Suggestive mode is already plenty",
+        "You want us to run outbound cold calling with no opt-in or business verification in place",
       ],
     },
     faq: [
       {
-        question: "Can this run fully inside GoHighLevel?",
+        question: "Can I build an AI SDR inside GoHighLevel without a third-party tool like CloseBot or Vapi?",
         answer:
-          "Yes. We connect directly to GoHighLevel and map your current funnel states so the AI system updates opportunities, notes, and tasks in the right pipeline stages without leaving GHL.",
+          "Yes, for inbound. Native Conversation AI under Settings > Conversation AI reads the full thread and replies across SMS, Live Chat, Facebook and Instagram DM, WhatsApp, and email, and its Appointment Booking action books into a calendar. You only bolt on Vapi or Retell when you need outbound calling at volume beyond what native Voice AI covers.",
       },
       {
-        question: "Will this replace my full sales team?",
+        question: "What is the difference between Conversation AI and Voice AI for lead qualification?",
         answer:
-          "No. It replaces repetitive top-of-funnel work, qualification, follow-up, CRM updates. Your closers still run discovery and close deals. The system makes sure qualified conversations consistently reach them.",
+          "Conversation AI is text: SMS, chat, DM, and email. It is the cheap layer and handles most inbound reply-and-book. Voice AI, part of the AI Employee suite, answers inbound phone calls and makes outbound calls over LC Phone with its own appointment booking. Text is where you start; voice is when the conversation has to happen on the phone.",
       },
       {
-        question: "How is this different from a basic GHL automation?",
+        question: "How much does a GoHighLevel AI SDR actually cost per month once you add LC Phone and tokens?",
         answer:
-          "GHL automations are trigger-based and stateless. This AI system carries conversation context, adapts to what leads say, and makes decisions, not just executes preset sequences. It handles edge cases and objections that break standard workflows.",
+          "There is no single flat number, and that is the honest answer. AI Employee with Voice AI is $97/month per sub-account on Unlimited, or roughly $0.06/min pay-as-you-go. On top of that, LC Phone bills from a prepaid wallet: about $1.15/mo for a local number, $2.15/mo toll-free, outbound around $0.018/min, inbound roughly $0.0085 to $0.022/min, plus recording, transcription, and voicemail-drop charges, plus separate LLM token charges. Your true cost per booked appointment is telephony plus the Voice AI minute plus tokens, stacked.",
       },
       {
-        question: "What happens if the AI says something off-script?",
+        question: "Can I rebill my clients for the AI SDR usage, and does that require the $497 plan?",
         answer:
-          "Every system is tested with real scenarios before going live, including edge cases, angry leads, and unusual objections. We build guardrails for topics the AI always escalates to a human. We also monitor every call for the first 30 days and adjust.",
+          "Yes. On the $497 agency (Pro/SaaS) plan you can enable rebilling and mark up AI, Voice, and LC usage to each sub-account, which is how the SDR becomes a resold product instead of a cost center. AI Employee, Voice AI, and Conversation AI carry usage charges you can mark up. Workflow AI, Content AI, Funnel AI, and Reviews AI are included.",
       },
       {
-        question: "How long does it take to go live?",
+        question: "Should my GHL SDR run in Suggestive mode or Auto-Pilot mode?",
         answer:
-          "Most builds go live in 1 week. Day 1: audit your workflow. Days 1 to 2: build the system. Day 3: test with real scenarios. Days 4 to 5: go live with monitoring.",
+          "Start in Suggestive. It drafts a reply a human approves so you can watch a few dozen real threads and see how the persona and booking instructions actually behave. Flip to Auto-Pilot, where the bot sends autonomously, only once they hold up. Flipping it on day one is the single most common way these builds send unreviewed replies to real leads.",
       },
       {
-        question: "How much does it cost?",
+        question: "How do I make the Conversation AI bot book appointments on a specific calendar?",
         answer:
-          "GHL agency AI SDR systems start at $3,000 to $6,000 for the initial build, with $1,200 to $2,500/month for ongoing monitoring and optimization. Every project is scoped based on your lead volume, tools, and workflows. We give you a clear number before you commit.",
+          "Use the Appointment Booking - Conversation AI Booking Bot action. In its config you pick the target calendar, set the persona, add booking instructions, set the max back-and-forth message limit, and set a reply timeout. It can route across multiple calendars with intent-based matching or stay on one. If it offers slots that are gone or out of hours, the culprit is almost always the calendar's buffer, minimum scheduling notice, or timezone, not the prompt.",
+      },
+      {
+        question: "What workflow trigger should I use to hand a replying lead to the AI bot?",
+        answer:
+          "For inbound reply-and-book, use the Customer Replied trigger, add an optional condition or filter on lead source, then the Conversation AI action node hands the thread to the bot. The bot chats up to your message limit and reply timeout and exits on one of three outcomes: appointment booked, timed out, or could not book.",
+      },
+      {
+        question: "How do I trigger an outbound AI call the moment a lead fills out a form?",
+        answer:
+          "Trigger on Opportunity Created or the form submission, fetch the contact, then fire a Vapi or Retell Create a Call action for instant speed-to-lead. Map merge fields like {{contact.phone}} and {{contact.first_name}} into the call. Add a short wait or a required-fields filter first, because if the call fires before the record is fully written those merge fields resolve empty and the call dies.",
+      },
+      {
+        question: "How do I get Vapi or Retell call transcripts and outcomes back into GoHighLevel?",
+        answer:
+          "You build a webhook. Vapi and Retell transcripts, recordings, and outcomes live in the vendor dashboard, not inside GHL. The Vapi-to-GHL triggers (New Call, New Assistant, New File) poll every 5 minutes, so for anything time-sensitive you push results back through a webhook or private-app path to update the contact, opportunity stage, or a tag. Without that write-back, the SDR's results are invisible in the CRM your client actually logs into.",
+      },
+      {
+        question: "How do I stop the AI bot and hand off to a human when a lead is high intent?",
+        answer:
+          "Build a tag-based escalation branch and use the Update Conversation AI Bot and Status workflow action to pause the bot per contact or switch its mode. Without a handoff branch, Auto-Pilot keeps chatting a lead who is ready to buy or ready to churn. This is a required piece of the build, not an optional one.",
+      },
+      {
+        question: "How many concurrent AI calls can GoHighLevel handle, and why did my calls suddenly stop?",
+        answer:
+          "The native Vapi integration queues outbound calls against a default limit of 10 concurrent calls. If calls suddenly stop with no obvious error, the usual cause is the LC Phone or AI wallet running dry, which silently kills outbound calling and Voice AI answering. Set auto-recharge thresholds and a wallet-balance alert workflow before go-live so you find out before the leads do.",
       },
     ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    faqStat: { stat: "127,000+", label: "appointments booked by native GHL Conversation AI since Aug 2025" },
+    ctaLabel: "Get your GHL AI SDR built",
     ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We'll map your current SDR flow and show exactly where revenue leaks.",
+    ctaSupportText: "We map your funnel, draw the Conversation AI vs Voice AI vs Vapi boundary, and show the real blended cost before you commit.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
@@ -307,9 +331,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" }
     ],
     keywords: [
+      "ai sdr for gohighlevel agencies",
       "ai sdr for ghl agencies",
       "go high level ai sdr",
-      "ai sales development for agencies",
+      "gohighlevel conversation ai appointment booking",
+      "ghl voice ai vs conversation ai",
+      "gohighlevel vapi integration outbound",
       "ai system for lead qualification",
     ],
   },
@@ -477,138 +504,188 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["ai-voice-agent-for-gohighlevel"],
-    title: "AI Voice Agent for GoHighLevel | Agentic AI Labs",
+    title: "AI Voice Agent for GoHighLevel: Native vs Vapi/Retell, Real Cost, Config Traps | Agentic AI Labs",
     description:
-      "We build production AI voice agent systems for GoHighLevel agencies with memory, pipeline updates, and resilient automations.",
+      "A vendor-neutral guide to building an AI voice agent for GoHighLevel: how native Voice AI actually works, the true two-layer cost, the outbound opt-in wall, and the exact configuration traps that break demo-good agents in week one.",
     canonicalUrl: makeCanonical(["ai-voice-agent-for-gohighlevel"]),
-    heroLabel: "Built for GoHighLevel Agencies",
+    heroLabel: "We ship both native GHL Voice AI and Vapi/Retell/n8n",
     heroHeadline: "AI Voice Agent for GoHighLevel",
     heroSubheadline:
-      "We build AI systems on top of GoHighLevel that keep context, update pipelines, and survive real call volume.",
-    painTitle: "What breaks in live GHL operations",
+      "We build voice agents on GoHighLevel's native Voice AI and, when native hits a wall, on Vapi, Retell, and n8n. This page is the honest version: where native is genuinely enough, where it breaks, and what a working production config actually looks like.",
+    heroExplainerCaption: "How a native GHL Voice AI agent is actually wired",
+    heroSteps: [
+      { label: "Create Agent under AI Agents > Voice AI", sub: "Agent Details, Settings, and Phone & Availability tabs", accent: true },
+      { label: "Add Actions in Settings", sub: "Call Transfer, Trigger Workflows, Send SMS, Update Contact Field, Appointment Booking" },
+      { label: "Bind Appointment Booking to one calendar", sub: "Respects buffers, min notice, conflicts. Real-time availability check, no double-book" },
+      { label: "Assign a number, set working hours", sub: "LC Phone or Twilio, or point Voice AI at your existing business line" },
+      { label: "Fire a workflow on call outcome", sub: "Tag plus workflow trigger is how you branch and hand humans context", accent: true },
+    ],
+    painTitle: "Where demo-good voice agents fail in week one",
     painPoints: [
-      "Webhook chains fail and nobody notices until leads complain.",
-      "Call summaries never make it into the right opportunity stage.",
-      "Automations work in demo mode but fail at scale.",
+      "The knowledge base is thin, so the agent confidently gives wrong hours, pricing, or services. This is the single most common reason a client gets embarrassed the week after launch, and the fix is unglamorous content curation, not more prompt engineering.",
+      "AI working hours are set wider than real calendar availability, so the agent answers, engages a caller, then cannot offer a single valid slot and dead-ends the call. Working hours and calendar availability are two separate settings that have to be reconciled deliberately.",
+      "Transfers are cold. The human picks up and has to ask the caller 'what's this about' because no transcript, summary, or detected intent was passed. A handoff with no context feels worse than no AI at all.",
+      "Someone sold a client on outbound cold calling, then hit the reality: native outbound is gated behind approval and can only call leads who opted in. The whole architecture has to move to Vapi or Retell mid-project.",
     ],
     practitionerQuote: {
-      text: "For years I ran my business like most founders do. I had Google Drive folders, GHL workflows, and Zapier chains. The moment volume spiked, everything fell apart and I spent weekends firefighting automations.",
-      attribution: "r/agency, February 2026",
+      text: "The demo booked appointments flawlessly. Then it went live, a caller asked about pricing on a service that wasn't in the knowledge base, and it just made something up. That one call did more damage than a week of missed ones.",
+      attribution: "Paraphrased from a GHL agency owner we build for",
     },
-    statusQuoTitle: "What most teams run first",
+    statusQuoTitle: "What the ranking setup guides leave out",
     statusQuoItems: [
-      "Starter agent builds connected to one narrow workflow.",
-      "Manual fixes when sync jobs fail.",
-      "Scripted follow-up with low context retention.",
+      "They stop at 'create agent, pick a voice, add a knowledge base, assign a number.' None show what a production config looks like after it has failed a few times.",
+      "Their cost math is one number. '$97/month' or '$0.06/min' hides that a real call is the sum of two independent billing layers: AI usage and LC Phone telephony.",
+      "They mention outbound as a casual capability without the opt-in-only restriction and approval gate that break every cold-outreach use case agency buyers actually ask about.",
     ],
-    industrySignal: {
-      headline: "Searches for 'GoHighLevel AI' grew 314% in the last 12 months, peaking at index 100 in February 2026.",
-      body: "GHL agencies are racing to bolt AI onto their existing stacks. Most start with a voice layer or a simple chatbot. What they find: demos look clean, but production breaks fast. Webhook failures, lost call summaries, and leads that fall through the cracks are the three failure modes we see most often on agency audits.",
-      source: "Google Trends, United States (12-month window)",
-      date: "February 2026",
+    statusQuoBars: {
+      title: "Where native Voice AI is genuinely enough (and where it isn't)",
+      bars: [
+        { label: "Inbound reception and FAQ", valueLabel: "Native is enough", widthPercent: 100, accent: true },
+        { label: "Appointment booking into a GHL calendar", valueLabel: "Native is enough", widthPercent: 100, accent: true },
+        { label: "Outbound cold prospecting", valueLabel: "Opt-in gated, needs Vapi/Retell", widthPercent: 18 },
+        { label: "HIPAA / SOC 2 posture", valueLabel: "Not advertised natively", widthPercent: 22 },
+      ],
     },
-    solutionTitle: "System we implement",
+    industrySignal: {
+      headline: "HighLevel moved Voice engine usage to $0.045/min effective May 20 2026, and that is still only one of two billing layers.",
+      body: "The per-minute number agencies quote clients is almost always incomplete. Layer one is the AI Employee subscription ($50/mo Growth or $97/mo Unlimited per location) plus AI usage: the Voice engine at $0.045/min, TTS stacked on top ($0.015/min on OpenAI or Cartesia, up to $0.170/min on ElevenLabs V3), and LLM tokens (GPT-5 at $1.25 in / $10.00 out per 1M, GPT-5 Mini at $0.25 in / $2.00 out). Layer two is LC Phone telephony billed from a prepaid wallet: numbers roughly $1.15/mo local and $2.15/mo toll-free, with inbound minutes and recording billed against the wallet. A single per-minute quote misses half the bill.",
+      source: "HighLevel official help portal, AI Products Pricing article",
+      date: "May 2026",
+      stat: "$0.045/min",
+      statLabel: "Voice engine usage, before TTS and LLM tokens",
+    },
+    solutionTitle: "What we actually build on GoHighLevel",
     solutionItems: [
-      "Voice layer for qualification and booking.",
-      "Memory layer so returning leads are handled with context.",
-      "Automation layer for pipeline updates, alerts, and handoffs.",
+      "A native Voice AI agent configured across all three tabs: Agent Details (voice, timezone, LLM model), Settings (instructions plus Actions), and Phone & Availability (number and working hours).",
+      "A curated per-agent knowledge base wired to trigger prompts, so the agent searches real content instead of improvising answers about your hours and pricing.",
+      "Appointment Booking bound to the right calendar with a fallback path, so intent that doesn't map to a bookable service presents options or routes instead of dead-ending.",
+      "Post-call workflows that tag on outcome and hand humans a summary before a transfer connects, so no rep picks up blind.",
+      "When native isn't enough (outbound campaigns, compliance posture, logic beyond native Actions), a Vapi or Retell build orchestrated through n8n into the same GHL calendars and workflows.",
     ],
     layers: [
       {
-        title: "Layer 1: Your AI talks.",
-        body: "AI voice agent integrated directly into GHL, qualifies inbound leads within 60 seconds, handles objection scripts, and books directly into your GHL calendar. New leads get qualified in one call. Returning leads get continuity. Runs 24/7 including evenings and weekends.",
+        title: "Layer 1: The agent and its Actions.",
+        body: "The native Voice AI agent executes a fixed set of Actions you add under Settings: Call Transfer on conditions, Trigger Workflows (one or several) after the call, Send SMS, Update Contact Field (set 'During the Call' to apply with confirmation), Appointment Booking, Custom Actions, and MCP in beta. There is no separate 'check availability' Action in the native builder, which is a real difference from external stacks where lookup and booking are split tools. We script the instruction so the agent narrows down like a receptionist: confirm a day, then a window, then book the selected slot, instead of rattling off open times and mis-booking.",
       },
       {
-        title: "Layer 2: Your AI remembers.",
-        body: "Every lead conversation, objection, and status stored in Mem0 and mapped to the correct GHL contact record. When a lead calls back, the AI already knows their pipeline stage, what they asked, and what they said no to last time. No starting over.",
+        title: "Layer 2: The knowledge the agent speaks from.",
+        body: "Knowledge Base is assigned per agent. When spoken input matches a configured trigger prompt, the agent searches the attached knowledge base and returns the matched answer. Thin or stale content is the number one driver of confident wrong answers, so most of the build work is curating that content per agent, not wiring. We also pin timezone at the agent level and have the agent reconfirm it verbally, because the native docs do not solve timezone drift for you and callers otherwise show up an hour off.",
       },
       {
-        title: "Layer 3: Your AI acts.",
-        body: "Opportunity stages update automatically after each call. Hot leads route to closers with context attached. Follow-up SMS sequences fire on schedule. Booking confirmations send without staff touching a single button. GHL stays clean and current, no manual cleanup.",
+        title: "Layer 3: What happens after the call.",
+        body: "Post-call workflow entry is controlled per agent, so tagging plus a workflow trigger is how you branch on call outcome. A transfer condition gets paired with a workflow that pushes a summary and detected intent to the human before they answer. For outbound, native is inbound-first: AI-initiated calls, the Voice AI Widget, and the Prompt Optimizer are AI Employee Plus, billed separately, and outbound requires approval and can only call opted-in leads. When a client needs real prospecting, we move that leg to Vapi or Retell and keep GHL as the CRM and calendar of record.",
       },
     ],
     howItWorks: [
       {
         week: 1,
-        phase: "AUDIT",
-        body: "Day 1 morning. We map your GHL pipeline, existing workflows, and current failure points on a single call. We leave with a clear spec for what we're hardening and building.",
-        youSpend: "1 hour on a call with us.",
+        phase: "SCOPE",
+        body: "We map the real use case first, because it decides the whole architecture. Inbound reception and booking? Native Voice AI is enough and cheaper. Outbound prospecting or a regulated vertical? We scope Vapi or Retell up front so nobody discovers the opt-in wall or the HIPAA gap mid-build. We also do the honest two-layer cost math for your expected volume so you can price clients correctly.",
+        youSpend: "1 hour walking us through the use case and calendars.",
+      },
+      {
+        week: 1,
+        phase: "BUILD",
+        body: "We create the agent, set voice, timezone, and LLM model (GPT-5 Mini is a real latency lever, not a cosmetic choice), and add the Actions the flow needs. Appointment Booking gets bound to the correct calendar and a fallback for unmatched intent. We reconcile AI working hours against actual calendar availability so the agent never engages a call it cannot book. Knowledge base gets curated from your real hours, pricing, and services.",
+        youSpend: "Nothing. We build. You send us source content.",
       },
       {
         week: 2,
-        phase: "BUILD",
-        body: "Day 1 afternoon to Day 2. We build the AI voice agent, connect it to GHL, add Mem0 lead memory, and wire automation for opportunity updates, routing, and confirmations.",
-        youSpend: "Nothing. We build.",
-      },
-      {
-        week: 3,
         phase: "TEST",
-        body: "Day 3. Live lead scenarios: inbound calls, returning leads, no-shows, objections, and webhook failure simulations. We break it on purpose before your clients see it.",
-        youSpend: "30 minutes reviewing call outputs and giving us feedback.",
+        body: "We break it on purpose before your callers do. Open-ended 'what times do you have,' callers speaking in a different timezone, questions on services deliberately left out of the knowledge base, transfer handoffs checked for whether the human actually receives context, and a dry wallet simulation so calls do not silently stop connecting. We tune voice and TTS pairing so the agent stops talking over people.",
+        youSpend: "30 minutes reviewing recordings and transcripts with us.",
       },
       {
-        week: 4,
+        week: 2,
         phase: "LIVE",
-        body: "Day 4 to 5. Your GHL AI voice system goes live. We monitor every interaction for 30 days. You get a dashboard: calls handled, meetings booked, pipeline accuracy, and alerts for anything unusual.",
-        youSpend: "Zero. It runs without you.",
+        body: "We assign the number (LC Phone or Twilio, or point Voice AI at your existing business line so all inbound hits the agent first), set the wallet auto-recharge threshold so the line never goes dark unnoticed, and turn it on. We monitor early calls, watch for hallucinations and mis-books, and keep curating the knowledge base as real caller questions surface.",
+        youSpend: "Almost nothing. It answers and books without you.",
       },
     ],
-    proofTitle: "What this improves",
+    proofTitle: "How we judge whether it's actually working",
     proofBullets: [
-      "More qualified calls booked into calendars.",
-      "Cleaner opportunity data for client reporting.",
-      "Less time spent on workflow firefighting.",
-    ],
-    caseStudy: {
-      client: "GHL agency, home services clients",
-      problem: "Agency was running AI voice campaigns for 4 home services clients. Webhook failures were silently dropping call summaries 3 to 4 times per week. Clients were complaining that their pipelines looked wrong and follow-up was inconsistent.",
-      system: "Hardened AI voice agent with dead-letter queue for failed webhooks, Mem0 lead memory mapped to GHL contacts, and automated opportunity staging with real-time sync monitoring.",
-      result: "Webhook failure rate dropped from 12% to under 0.5%. Pipeline accuracy improved to 98%+. Agency retained all 4 clients and added 2 more on referral within 90 days.",
-    },
-    testimonial: {
-      quote: "We were losing leads to broken GHL automations every week and didn't even know it. After they rebuilt the system, our pipeline accuracy went from embarrassing to something I can actually show clients.",
-      author: "Jordan, GHL Agency Owner",
-    },
-    proofStats: [
-      { stat: "0.5%", label: "webhook failure rate (was 12%)" },
-      { stat: "98%+", label: "pipeline data accuracy post-launch" },
-      { stat: "< 60s", label: "lead response time on inbound calls" },
+      "The agent books into the right calendar in the caller's confirmed timezone, and never offers a slot the calendar's buffers or minimum notice should block.",
+      "When a caller asks about a service, hours, or price, the answer comes from the curated knowledge base, not an improvisation. Unmatched intent presents options or routes rather than dead-ending.",
+      "Every human transfer arrives with a summary and detected intent, so the rep never opens with 'what's this regarding.'",
+      "The wallet has an auto-recharge threshold, so a prepaid balance running low never silently kills the phone line.",
+      "The client can see the true cost of a call, both billing layers, and rebill Voice AI usage to their own clients with numbers that hold up.",
     ],
     fitChecklist: {
-      headline: "Built for GHL agencies running live client campaigns at volume.",
+      headline: "Who this build is for, honestly.",
       forYou: [
-        "You run GHL for clients and your AI workflows are breaking under real volume",
-        "Call summaries and opportunity updates are inconsistent or missing",
-        "You've tried native GHL AI features and they're not production-ready for your use case",
-        "Your clients are noticing pipeline inaccuracies or slow follow-up",
-        "Your budget is $5K+ and you need a reliable system, not another template",
+        "You want inbound reception and appointment booking done right on GoHighLevel, and you want it to survive real call volume",
+        "You've tried the native setup and hit hallucinated answers, timezone drift, or context-less transfers you couldn't fix",
+        "You need someone vendor-neutral who will tell you when native is enough and when to move to Vapi or Retell, not sell you one wrapper",
+        "You're an agency that needs true two-layer cost math to rebill Voice AI usage to clients without losing money",
+        "Your use case includes outbound or a regulated vertical and you want it scoped correctly before you sell it to a client",
       ],
       notForYou: [
-        "You have fewer than 3 active client campaigns, not enough scale for this investment",
-        "You want a GHL snapshot you can configure yourself",
-        "You need a basic workflow template, not a production AI system",
+        "You want a plug-and-play snapshot you configure yourself in an afternoon",
+        "You expect native GHL outbound to power cold prospecting (it can't, it's opt-in gated)",
+        "You need a HIPAA or SOC 2 attested stack and want that on native Voice AI, which does not advertise it",
       ],
     },
     faq: [
       {
-        question: "Do we need to replace our existing GHL setup?",
+        question: "How much does an AI voice agent for GoHighLevel actually cost per month?",
         answer:
-          "No. We work with your current snapshots, pipelines, and triggers, then harden the automation layer around them.",
+          "There are two independent layers and the real cost is their sum. Layer one is the AI Employee subscription ($50/mo Growth or $97/mo Unlimited per location) plus AI usage: Voice engine at $0.045/min (effective May 20 2026), TTS on top at $0.015/min on OpenAI or Cartesia, $0.035/min on ElevenLabs V2.5, or $0.170/min on ElevenLabs V3, and LLM tokens (GPT-5 at $1.25 input / $10.00 output per 1M, GPT-5 Mini at $0.25 / $2.00). Layer two is LC Phone telephony from a prepaid wallet: numbers roughly $1.15/mo local and $2.15/mo toll-free, with inbound minutes and recording billed against the wallet. A single per-minute quote is misleading because it ignores one of the two layers.",
       },
       {
-        question: "Can this route to human reps when needed?",
+        question: "Can GoHighLevel Voice AI make outbound calls, or is it inbound only?",
         answer:
-          "Yes. Escalation rules route based on intent, urgency, and confidence thresholds, with full context passed to human reps.",
+          "Native Voice AI is inbound-first. Outbound (AI-initiated calls), the Voice AI Widget, and the Prompt Optimizer are classified as AI Employee Plus and billed separately. Outbound is also gated: it requires approval and, per HighLevel's own restriction, can only call leads who have opted in. That opt-in wall is exactly why agencies doing cold outreach or sales prospecting bolt on Vapi or Retell instead of using native.",
       },
       {
-        question: "How fast can this go live?",
+        question: "Do I need Vapi or Retell, or is native GoHighLevel Voice AI enough?",
         answer:
-          "Most GHL-first implementations launch in 2 to 3 weeks when baseline data quality is solid.",
+          "For inbound reception, FAQ answering, and booking into a GHL calendar, native is genuinely enough and usually cheaper. You should move to Vapi or Retell when you need real outbound prospecting (native is opt-in gated), when you need a HIPAA or SOC 2 posture native doesn't advertise, or when your call logic exceeds what the native Actions can express, in which case n8n commonly sits between the voice provider and GHL as the orchestration layer. We ship both, so the recommendation isn't tied to selling you one.",
+      },
+      {
+        question: "How does Voice AI book appointments without double-booking?",
+        answer:
+          "Appointment Booking is a single Action bound to one specific HighLevel calendar, and the AI respects that calendar's rules: availability, buffers, minimum notice, and conflict settings. It does a real-time availability check, so it will not double-book, and it can prompt for a missing email before confirming. Note there is no separate 'check availability' Action in the native builder, so we script the instruction to confirm a day, then a window, then book, rather than letting the agent list open times and mis-book.",
+      },
+      {
+        question: "Can the Voice AI transfer to a human, and does the human get context?",
+        answer:
+          "Yes, Call Transfer routes to a human on conditions you set, but it does not automatically hand over context. Native transfer conditions have to be paired with a workflow that passes the human a transcript, summary, or detected intent. Without that, the rep picks up blind and the handoff feels worse than no AI at all. We always wire the context handoff, not just the transfer.",
+      },
+      {
+        question: "How do I stop the agent from giving wrong answers about my hours or pricing?",
+        answer:
+          "Knowledge base is assigned per agent, and when spoken input matches a configured trigger prompt the agent searches that knowledge base and returns the matched answer. Thin or stale content is the number one cause of confident wrong answers. The fix is unglamorous: curate the knowledge base with your real hours, pricing, and services, and keep updating it as live caller questions surface. Most of the real build work is this content, not the wiring.",
+      },
+      {
+        question: "Can I use my existing business phone number instead of buying a new one?",
+        answer:
+          "Yes. As of 2026 you can point Voice AI at your existing business number so all inbound calls hit the agent first and it transfers to humans when needed, rather than provisioning a separate line. Numbers can also be assigned from the sub-account via LC Phone or Twilio, and multiple numbers can route to a single agent.",
+      },
+      {
+        question: "What's the difference between AI working hours and calendar availability?",
+        answer:
+          "They are two separate settings and conflating them is a common trap. AI working hours control when the agent answers and engages. Calendar availability controls what it can actually book. If working hours are wider than real availability, the agent picks up, has a conversation, then can't offer a single valid slot and dead-ends the call. We reconcile the two deliberately, and configure a fallback (present available services or route to a fallback calendar) so unmatched intent never becomes a dead end.",
+      },
+      {
+        question: "Why does my Voice AI book appointments in the wrong timezone?",
+        answer:
+          "Timezone drift happens when the agent books against the calendar's business timezone while the caller speaks in their own. The native docs do not solve this for you. The fix is to pin timezone at the agent level and have the agent reconfirm it verbally before booking, otherwise callers show up an hour off.",
+      },
+      {
+        question: "How do I trigger a GoHighLevel workflow based on what happened on the call?",
+        answer:
+          "The Trigger Workflows Action fires one or several GHL workflows after the call, and post-call workflow entry is controlled per agent. The pattern is to tag the contact based on outcome and use that tag plus a workflow trigger to branch: hot lead to a closer with context attached, no-match to a nurture sequence, booked to a confirmation flow. Combined with Update Contact Field, this is how call outcome drives everything downstream in GHL.",
+      },
+      {
+        question: "Is native Voice AI HIPAA or TCPA compliant for regulated or outbound calling?",
+        answer:
+          "Native Voice AI does not advertise a HIPAA or SOC 2 posture, which is why regulated verticals typically go to Vapi or Retell. On outbound, TCPA exposure is real, and native's own restriction limiting AI outbound to opted-in leads exists partly for that reason. Separate from the platform, you should handle AI disclosure to callers and call-recording consent, which the setup guides almost universally skip. We scope compliance up front rather than treating it as an afterthought.",
       },
     ],
-    ctaLabel: "Take Your AI Agent Live in 30 Mins",
+    faqStat: { stat: "$0.045/min", label: "native Voice engine usage, before TTS and LLM tokens (May 2026)" },
+    ctaLabel: "Get your GoHighLevel voice agent scoped",
     ctaHref: "/ai-voice-agent/#pricing",
-    ctaSupportText: "We will review your GHL automations and show where production failures are most likely.",
+    ctaSupportText: "We'll tell you straight whether native Voice AI is enough for your use case or whether it needs Vapi, Retell, or n8n, and give you the true two-layer cost before you commit.",
     ctaEmailFallback: "aditya@tryagentikai.com",
     relatedLinks: [
       { label: "GoHighLevel AI Voice Pipeline", href: "/gohighlevel-ai-voice-pipeline" },
@@ -619,10 +696,23 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     keywords: [
       "ai voice agent for gohighlevel",
-      "gohighlevel ai integration",
-      "ai automation for ghl agencies",
-      "production ai system ghl",
+      "gohighlevel voice ai",
+      "ghl voice ai setup",
+      "gohighlevel voice ai vs vapi",
+      "gohighlevel voice ai cost",
+      "gohighlevel voice ai outbound",
+      "gohighlevel voice ai appointment booking",
+      "ghl voice ai knowledge base",
+      "gohighlevel voice ai timezone",
+      "ai receptionist gohighlevel",
     ],
+    comparisonBars: {
+      title: "The two billing layers of one Voice AI call",
+      bars: [
+        { label: "AI usage: Voice engine + TTS + LLM tokens", valueLabel: "$0.045/min + TTS + tokens", widthPercent: 100, accent: true },
+        { label: "LC Phone telephony (prepaid wallet)", valueLabel: "~$1.15/mo number + minutes", widthPercent: 55 },
+      ],
+    },
   },
   {
     type: "integration",
@@ -5587,101 +5677,155 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     pathSegments: ["gohighlevel-ai-voice-pipeline"],
     title: "GoHighLevel AI Voice Pipeline: Instant Call on Every Form Submit | Agentic AI Labs",
     description:
-      "A voice pipeline built on GoHighLevel: instant AI call the second a form is submitted, automatic post-call summary, follow-up sequence, and a kill switch the moment they reply.",
+      "The implementer's build guide for a GoHighLevel AI voice pipeline: Form Submitted trigger to the native Voice AI Outbound Call action, the KYC and separate-outbound-agent prerequisites, the real cost stack, timezone and DNC safeguards, and the write-back loop that branches on call outcome.",
     canonicalUrl: makeCanonical(["gohighlevel-ai-voice-pipeline"]),
     heroLabel: "Built on GoHighLevel",
     heroHeadline: "Your form gets submitted. The call happens before the lead closes the tab.",
     heroSubheadline:
-      "A voice pipeline we built on GoHighLevel: instant AI call on form submit, automatic post-call summary, multi-step follow-up, with a kill switch the moment they reply.",
+      "A pipeline we build on GoHighLevel's native Voice AI Outbound Call action: instant call on form submit from your LC Phone number, timezone and DNC guardrails HighLevel won't enforce for you, and a write-back loop that branches on booked, voicemail, or DNC.",
     heroExplainerCaption: "The pipeline, end to end",
     heroSteps: [
-      { label: "Lead submits your form", sub: "GHL workflow fires instantly", accent: true },
-      { label: "AI voice call in under 60 seconds", sub: "Qualifies live while intent is hot" },
-      { label: "Post-call summary to CRM", sub: "Transcript and fields written back automatically" },
-      { label: "Multi-step follow-up runs", sub: "Keeps working the lead until they respond" },
-      { label: "Kill switch on reply", sub: "Every channel stops at once, not just one", accent: true },
+      { label: "Lead submits a compliant GHL form", sub: "Form Submitted trigger fires instantly", accent: true },
+      { label: "Voice AI Outbound Call action dials", sub: "Native LC Phone, separately built outbound agent" },
+      { label: "Guardrails clear before the call", sub: "8AM to 8PM local window, DNC and retry-cadence checks" },
+      { label: "Outcome writes back to the contact", sub: "Connected, voicemail, no-answer, sentiment, transcript" },
+      { label: "Workflow branches on the result", sub: "Booked, SMS fallback on voicemail, or DNC", accent: true },
     ],
-    painTitle: "What slow follow-up actually costs",
+    painTitle: "Where these builds actually break",
     painPoints: [
-      "Wait past 5 minutes and lead quality drops 80%. Most forms sit in a queue for hours, not minutes.",
-      "The average business takes 47 hours to respond to a new lead. GoHighLevel can call in under 60 seconds. Most builds still don't.",
-      "A rep keeps chasing a lead who already replied on another channel, because nothing tells the workflow to stop.",
+      "Answering a web lead within 5 minutes makes it roughly 21x more likely to qualify than waiting 30 minutes (MIT Sloan / InsideSales.com Lead Response Management study, 2007). Most GHL forms still sit until a human opens the CRM.",
+      "Teams assume the inbound Voice AI agent they already built will dial out. It won't. HighLevel requires a separately configured outbound agent that passes its own compatibility check, so the \"instant call\" silently never fires and the client thinks the automation is live.",
+      "Voicemail, no-answer, and \"not interested\" all log as \"call attempted.\" Without a branch on outcome, a hot lead that hit voicemail gets no SMS fallback and dies quietly in the pipeline.",
     ],
     costCallout: {
       items: [
-        { label: "Lead quality lost after a 5-minute delay", amount: "80% drop" },
-        { label: "Average business response time to a new lead", amount: "47 hours" },
+        { label: "Native Voice AI, per minute (voice engine + STT + TTS + LLM tokens, billed to the nearest 6 seconds, 1-minute minimum)", amount: "~$0.13/min" },
+        { label: "LC Phone number rental, per number", amount: "~$1.15 to $1.40/mo" },
+        { label: "10DLC registration for the SMS legs, per campaign", amount: "~$4 to $50/mo" },
+        { label: "Workflow AI decision steps, per execution", amount: "~$0.05" },
       ],
-      total: "First responder wins 78% of the deals",
-      solvesFor: "Sub-60-second AI call on every form submit",
-      source: "Speed-to-lead statistics roundup, leadresponse.co",
+      total: "AI Employee bundle: $97/mo per sub-account, flat",
+      solvesFor: "Unlimited Voice AI under fair use (~50,000 min); breakeven vs pay-per-use lands near 747 voice minutes/month",
+      source: "HighLevel pricing and netpartners.marketing GHL Voice AI pricing (2026), plus our GoHighLevel build notes",
     },
-    statusQuoTitle: "What most GHL builds do instead",
+    statusQuoTitle: "What most GHL voice builds get wrong",
     statusQuoItems: [
-      "A generic \"thanks, we'll call you soon\" autoresponder. No voice, no urgency.",
-      "A human callback queue that only works if someone's at their desk.",
-      "Follow-up sequences with no kill switch. The lead replies, and every channel keeps messaging anyway.",
+      "Reusing the working inbound Voice AI agent for outbound. It never attaches, because HighLevel demands a separate outbound-configured agent that passes a compatibility check.",
+      "Firing the call action straight off a Facebook or third-party lead form. Those sources usually lack the AI-disclosure and consent language, so every call becomes TCPA exposure.",
+      "No timezone guardrail on a nationwide list. HighLevel does not auto-enforce the recipient's local hours the way people assume, so an 8:30 PM Eastern lead gets dialed and you break state calling-hour rules.",
+      "Treating the call as fire-and-forget with no branch on outcome, so the whole thing is a one-shot robocall, not a pipeline.",
     ],
     statusQuoBars: {
-      title: "Channels that actually stop when a lead replies",
+      title: "What a real pipeline handles that a one-shot robocall doesn't",
       bars: [
-        { label: "Generic autoresponder", valueLabel: "0 of 3", widthPercent: 4 },
-        { label: "Human callback queue", valueLabel: "0 of 3", widthPercent: 4 },
-        { label: "No-kill-switch sequence", valueLabel: "0 of 3", widthPercent: 4 },
-        { label: "This pipeline", valueLabel: "3 of 3", widthPercent: 100, accent: true },
+        { label: "Generic \"trigger a call\" blog build", valueLabel: "1 of 4", widthPercent: 25 },
+        { label: "Third-party dialer product pitch", valueLabel: "1 of 4", widthPercent: 25 },
+        { label: "Native action with no guardrails", valueLabel: "2 of 4", widthPercent: 50 },
+        { label: "This pipeline", valueLabel: "4 of 4", widthPercent: 100, accent: true },
       ],
     },
     industrySignal: {
-      headline: "The exact pattern nobody's built a page for yet",
-      body: "Third-party vendors sell \"GoHighLevel + AI voice agent\" integrations, but the specific kill-switch-on-reply pattern, stopping every channel the instant a lead responds anywhere, has no dedicated page targeting it. Plain-English term, open search.",
-      source: "Competitive SERP review",
+      headline: "GoHighLevel now ships this natively, and most guides haven't caught up",
+      body: "Page-one results are dominated by third-party dialer vendors whose \"pipeline\" article is really a pitch for their own platform. Almost none mention that HighLevel added a native Voice AI Outbound Call action running on LC Phone, so a buyer can't tell when they actually need a third party. We build all three real paths, native, Vapi, and Retell/n8n, and pick by constraint, not by what we're selling.",
+      source: "Competitive SERP review, 2026",
       date: "2026-07",
-      stat: "0 pages",
-      statLabel: "target this exact kill-switch pattern",
+      stat: "1,000/day",
+      statLabel: "native outbound calls per location, no third-party dialer",
     },
     solutionTitle: "How the pipeline actually runs",
     solutionItems: [
-      "Form submitted → GHL workflow fires a Voice AI Outbound action within seconds.",
-      "The AI agent calls, qualifies live, and picks up the conversation naturally. Cloned or configured voice, your choice.",
-      "Post-call summary, transcript, and extracted fields write straight back to the contact record.",
-      "A multi-step follow-up sequence keeps running until the lead replies. Then the kill switch stops every channel at once, not just the one they answered on.",
+      "Form Submitted trigger wired to the native Voice AI Outbound Call action, which takes three required fields (AI Agent, From Phone Number, Action Name) and runs on LC Phone, not a third-party dialer.",
+      "A separately built outbound agent that passes HighLevel's compatibility check, because an inbound Voice AI agent will not attach to an outbound call.",
+      "Timezone, day-time, DNC, and retry-cadence filters placed before the call action, since HighLevel does not reliably enforce recipient local hours for you.",
+      "A write-back loop off the Voice AI Outbound Calling Dashboard that branches on outcome: booked, SMS fallback on voicemail or no-answer, or DNC.",
     ],
     layers: [
-      { title: "Capture", body: "The trigger fires the moment the lead hits submit. No queue, no manual entry, no waiting for someone to see a notification." },
-      { title: "Call", body: "An AI voice agent dials within seconds and qualifies the lead live, while the intent from filling out the form is still fresh." },
-      { title: "Follow-through", body: "Summary and extracted data write back automatically. The sequence keeps working the lead until they reply. Then the kill switch shuts it off everywhere." },
+      { title: "Enable and verify", body: "Outbound calling is gated. You enable it under AI Agents > Voice AI by clicking Enable Outbound Calls, accept terms, and clear KYC with a driver's license or passport. Until ID verification passes, the Voice AI Outbound Call action stays greyed out and a workflow published in anticipation just no-ops." },
+      { title: "Dial the lead", body: "A separately configured outbound agent (your inbound agent won't attach) places the call from your LC Phone number the moment the Form Submitted trigger fires, clamped to an 8AM to 8PM local window with DNC and retry-cadence guardrails we add before the action. Each number is callable up to 14 times in a rolling 14 days, so aggressive retry logic has to respect the cap or later attempts silently don't fire." },
+      { title: "Close the loop", body: "The Voice AI Outbound Calling Dashboard reports connected, voicemail, no-answer, or failed, plus sentiment and triggered-actions attribution. Native branch-on-outcome is coarse, so serious pipelines route the transcript back through the GHL API and branch on it: booked, an SMS fallback on voicemail, or DNC, instead of logging one flat \"attempted.\"" },
     ],
-    proofTitle: "Why speed wins the deal",
+    howItWorks: [
+      {
+        week: 1,
+        phase: "Enable outbound and clear KYC",
+        body: "Turn on Enable Outbound Calls under AI Agents > Voice AI, accept the terms, and submit ID verification (driver's license or passport). Nothing else can go live until this clears, because the Voice AI Outbound Call action stays greyed out until it does.",
+        youSpend: "~20 minutes: your ID and a terms acceptance",
+      },
+      {
+        week: 1,
+        phase: "Pick the build path and build the outbound agent",
+        body: "Decide across the three real paths: native Voice AI Outbound Call on LC Phone, Vapi's Create a Call action, or a Retell/n8n webhook. Vapi outbound only works on numbers purchased inside Vapi, so it can't reuse your LC Phone number. Then build a fresh outbound-configured agent, because the inbound one fails the compatibility check.",
+        youSpend: "One call to confirm your constraints and number",
+      },
+      {
+        week: 2,
+        phase: "Wire the workflow and the safeguards",
+        body: "Build the Form Submitted trigger into the Voice AI Outbound Call action with its three fields (AI Agent, From Phone Number, Action Name). Add day/time and timezone filters, a DNC check, and retry-cadence limits before the call action, and route raw Facebook or third-party leads through a compliant GHL form first so consent and AI-disclosure language exist.",
+        youSpend: "Review the qualifying script and consent copy",
+      },
+      {
+        week: 3,
+        phase: "Build the write-back loop and go live",
+        body: "Wire the dashboard outcomes back into the workflow so the contact branches: booked leads to the calendar, voicemail and no-answer to an SMS fallback, not-interested to DNC. Test end to end, confirm calls fire inside the local window, then launch.",
+        youSpend: "A live test run and sign-off",
+      },
+    ],
+    proofTitle: "The numbers that actually matter here",
     proofBullets: [
-      "Calling within 1 minute of inquiry lifts conversion 391% versus a 2-minute wait, across 3.5M analyzed leads.",
-      "Responding inside 5 minutes makes a lead 21x more likely to qualify and 100x more likely to answer at all.",
-      "The first responder wins 78% of deals. Most competitors are still sitting in the queue.",
+      "Answering a web lead within 5 minutes makes it about 21x more likely to qualify than waiting 30 minutes (MIT Sloan / InsideSales.com Lead Response Management study, 2007).",
+      "Native Voice AI Outbound handles up to 1,000 calls per location per day at up to 10 per minute, so the pipeline scales without a third-party dialer (HighLevel support docs).",
+      "In the GoHighLevel builds we ship, the difference between a pipeline and a robocall is the write-back loop: every call branches on connected, voicemail, or no-answer instead of logging one flat \"attempted.\"",
     ],
     faq: [
       {
-        question: "Do I need a developer to set this up?",
+        question: "How do I make GoHighLevel call a lead the second they submit a form?",
         answer:
-          "No. The trigger and action live inside GHL's own workflow builder, and the voice agent's settings (voice, pacing, temperature) can be generated from a plain-English prompt instead of manual configuration.",
+          "You build a workflow with a Form Submitted trigger wired to the native Voice AI Outbound Call action. That action has three required fields: the AI Agent that places the call, the From Phone Number (an LC Phone number), and the Action Name. Once the lead hits submit, the workflow fires and the agent dials, provided outbound calling is enabled and your guardrails pass.",
       },
       {
-        question: "What does this cost to run?",
+        question: "What's the difference between the native Voice AI Outbound Call action, Vapi, and Retell?",
         answer:
-          "If you're on GHL's AI Employee Unlimited add-on it's included at $97/month per location (fair use applies). Otherwise it runs pay-per-use, roughly $0.163/minute blended for voice engine plus LLM tokens.",
+          "Native Voice AI runs on HighLevel's own stack over LC Phone and reuses your existing number, so it's the simplest path. Vapi uses a workflow action literally named Create a Call and lets you map fields like {{contact.phone}} and {{contact.first_name}} into the payload, but outbound only works on numbers bought inside Vapi. Retell/n8n is a webhook build: GHL fires a webhook to n8n or the Retell API, which places the call and writes the transcript and outcome back through the GHL API. We pick by your constraints, not by what we're selling.",
       },
       {
-        question: "Is outbound calling like this compliant?",
+        question: "Do I need KYC or ID verification to turn on outbound Voice AI?",
         answer:
-          "Carrier-level verification requires the actual business owner's ID and opt-in language on the capture form before outbound calls can legally go out. An agency can't submit that verification on a client's behalf; the business owner has to.",
+          "Yes. You enable it under AI Agents > Voice AI by clicking Enable Outbound Calls, which requires accepting terms and completing KYC with a driver's license or passport. Until that ID verification clears, the Voice AI Outbound Call action stays greyed out, and a workflow published in anticipation just no-ops, so zero calls go out while the client thinks it's live.",
       },
       {
-        question: "What happens the moment a lead replies?",
+        question: "Can I use my existing LC Phone number for outbound, or do I have to buy a number in Vapi?",
         answer:
-          "The kill switch stops the automation across every channel it's running on, not just the one they replied to. No more double-messaging someone who already responded.",
+          "On the native path you use your existing LC Phone number. On the Vapi path you can't. Vapi outbound only supports phone numbers purchased inside Vapi, so choosing Vapi means a new number, a fresh 10DLC and caller-ID trust rebuild, and a spam-likely label risk on day one. That constraint alone often decides the build.",
       },
       {
-        question: "How is this different from a chatbot?",
+        question: "How much does a GoHighLevel AI voice call cost per minute in 2026?",
         answer:
-          "A chatbot waits for someone to type. This places an actual voice call inside the window where response speed still determines whether you get the deal.",
+          "Native Voice AI is billed at roughly $0.13 per minute (voice engine plus speech-to-text plus text-to-speech plus LLM tokens through LC Phone), rounded to the nearest 6 seconds with a one-minute minimum per call. Volume tiers step down to about $0.115/min at 10K to 50K minutes and $0.10/min past 50K. The full stack also includes LC Phone number rental (~$1.15 to $1.40/mo), 10DLC (~$4 to $50/mo per campaign) for the SMS legs, and Workflow AI steps at ~$0.05 per execution.",
+      },
+      {
+        question: "Is the $97 AI Employee bundle cheaper than pay-per-minute Voice AI?",
+        answer:
+          "The AI Employee bundle is $97/month per sub-account and includes unlimited Voice AI, Conversation AI, Reviews AI, Content AI, and Workflow AI steps under a fair-use ceiling (roughly 50,000 voice minutes / 200,000 messages before throttling). Against the ~$0.13/min pay-per-use rate, breakeven lands around 747 voice minutes per month. Below that, pay-per-use is cheaper; a high-volume client should be on the bundle.",
+      },
+      {
+        question: "How many outbound AI calls per day can GoHighLevel place before it throttles?",
+        answer:
+          "Per HighLevel's support doc, native Voice AI Outbound allows up to 1,000 calls per location per day and up to 10 calls per minute per location (one every 6 seconds). Each individual number is callable up to 14 times in a rolling 14-day window, and the default call window is 8:00 AM to 8:00 PM in the contact's phone-number timezone. It supports same-country domestic numbers only.",
+      },
+      {
+        question: "How do I keep outbound AI calls TCPA compliant and inside legal calling hours?",
+        answer:
+          "HighLevel does not reliably auto-detect the recipient's timezone for compliance, so a real build clamps the workflow to a safe local window with day/time filters and a DNC check before the call action. You also route raw Facebook or third-party leads through a compliant GHL form first, since those sources usually lack the AI-disclosure and consent language that keeps the call from becoming TCPA exposure.",
+      },
+      {
+        question: "Why won't my inbound Voice AI agent work for outbound calls?",
+        answer:
+          "An existing inbound Voice AI agent will not attach to the outbound action. HighLevel requires you to build a separate outbound-configured agent from scratch, and it runs a compatibility check before activation. Teams lose a day assuming their working inbound agent will just dial out; it silently won't.",
+      },
+      {
+        question: "How do I send an SMS follow-up when the call hits voicemail or no-answer?",
+        answer:
+          "You branch on the call outcome from the Voice AI Outbound Calling Dashboard, which reports connected, voicemail, no-answer, and failed. Because native branch-on-outcome is coarse, we route the outcome and transcript back through the workflow and add explicit branches, so a voicemail or no-answer triggers an SMS fallback instead of the lead quietly dying as a flat \"attempted.\"",
       },
     ],
     faqStat: { stat: "5-7 days", label: "average time from kickoff to live" },
@@ -5700,26 +5844,26 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     keywords: [
       "gohighlevel ai voice pipeline",
       "ghl voice ai integration",
-      "ai voice pipeline lead capture",
+      "voice ai outbound call gohighlevel",
+      "gohighlevel vapi create a call",
       "instant lead call automation",
       "speed to lead ai voice",
       "ai voice agent follow up sequence",
-      "ai voice agent kill switch",
-      "gohighlevel pipeline automation voice ai",
-      "ai receptionist gohighlevel",
+      "gohighlevel outbound voice ai kyc",
+      "gohighlevel voice ai pricing",
       "post-call summary ai voice",
     ],
     logos: ["gohighlevel", "vapi", "retell", "bland"],
     proofStats: [
-      { stat: "391%", label: "conversion lift on 1-min callback" },
-      { stat: "21x", label: "more likely to qualify under 5 min" },
-      { stat: "100x", label: "more likely to answer at all" },
+      { stat: "21x", label: "more likely to qualify answering within 5 min (MIT Sloan / InsideSales, 2007)" },
+      { stat: "747 min", label: "monthly volume where the $97 bundle beats pay-per-use" },
+      { stat: "1,000/day", label: "native outbound calls per location before throttling" },
     ],
     comparisonBars: {
-      title: "Response time: us vs. average business",
+      title: "Monthly Voice AI cost at 1,000 minutes",
       bars: [
-        { label: "This pipeline", valueLabel: "< 60 seconds", widthPercent: 8, accent: true },
-        { label: "Average business", valueLabel: "47 hours", widthPercent: 100 },
+        { label: "Pay-per-use at ~$0.13/min", valueLabel: "~$130", widthPercent: 100 },
+        { label: "AI Employee bundle (flat)", valueLabel: "$97/mo", widthPercent: 75, accent: true },
       ],
     },
     screenshots: [
@@ -5874,202 +6018,196 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
   },
   {
-    "type": "integration",
-    "pathSegments": [
-      "gohighlevel-speed-to-lead-automation"
+    type: "integration",
+    pathSegments: ["gohighlevel-speed-to-lead-automation"],
+    title: "GoHighLevel Speed to Lead Automation: The Real Build That Books | Agentic AI Labs",
+    description:
+      "The exact GoHighLevel speed-to-lead build: the real trigger stack, the Conversation AI Bot action that qualifies and books, the human-handoff pause, the A2P deliverability gate, and the failure modes competitors won't mention.",
+    canonicalUrl: "https://www.tryagentikai.com/gohighlevel-speed-to-lead-automation/",
+    heroLabel: "GoHighLevel Speed to Lead",
+    heroHeadline: "The lead hit submit, then waited, and a competitor's SMS landed first.",
+    heroSubheadline:
+      "Most GoHighLevel speed-to-lead setups are a single Contact Created trigger firing one canned SMS. We build the real thing: parallel triggers that catch every source, a Conversation AI Bot that actually qualifies and books, a pause so a human can grab a hot lead, and the A2P registration that makes the instant SMS deliver at all.",
+    heroExplainerCaption: "One workflow, every source, the AI takeover branch that books instead of blasting.",
+    heroSteps: [
+      { label: "Lead enters any source", sub: "Contact Created, Form Submitted, Inbound Webhook, Call Status", accent: true },
+      { label: "SMS fires with zero Wait", sub: "Placed at the top so GHL runs it in seconds, not minutes" },
+      { label: "Conversation AI Bot replies", sub: "Answers, qualifies, and branches on the outcome" },
+      { label: "Books on the live calendar", sub: "The bot sets the appointment, no back and forth" },
+      { label: "Human takeover pauses the bot", sub: "Update Bot and Status flips it off so nobody double-texts", accent: true },
     ],
-    "title": "GoHighLevel Speed to Lead Automation That Replies in Seconds | Agentic AI Labs",
-    "description": "Speed to lead automation on GoHighLevel that answers every new lead in seconds by SMS and voice, qualifies, and books before a competitor ever picks up.",
-    "heroLabel": "GoHighLevel Speed to Lead",
-    "heroHeadline": "The lead filled out your form, then waited, and someone else called first.",
-    "heroSubheadline": "We build the GoHighLevel workflow that answers the instant a lead arrives. SMS and voice fire within seconds, qualify the lead, and book the call, while your competitor is still checking their inbox.",
-    "heroExplainerCaption": "One trigger, five moves, all inside GoHighLevel. From new lead to booked call before a human would have noticed the notification.",
-    "heroSteps": [
-      {
-        "label": "Lead arrives",
-        "sub": "Form, ad, or inbound call",
-        "accent": true
-      },
-      {
-        "label": "Instant fire",
-        "sub": "SMS and voice within seconds",
-        "accent": false
-      },
-      {
-        "label": "AI qualifies",
-        "sub": "Asks intent, budget, timing",
-        "accent": false
-      },
-      {
-        "label": "Books the slot",
-        "sub": "Live calendar, no back and forth",
-        "accent": false
-      },
-      {
-        "label": "Call booked",
-        "sub": "Owner gets a warm handoff",
-        "accent": true
-      }
+    painTitle: "Why 'speed to lead' quietly fails on GoHighLevel",
+    painPoints: [
+      "The SMS action sits below a Wait step or a slow trigger filter, so the 'instant' response is really a five-minute lag and the lead has already replied to someone else.",
+      "Contact Created is the only trigger. A returning lead who resubmits a form is an existing contact, never re-enters the workflow, and gets total silence. Your warmest repeat leads are the ones that fall through.",
+      "The workflow shows the SMS firing green while carriers silently drop it, because A2P 10DLC brand and campaign registration on LC Phone was never approved.",
     ],
-    "painTitle": "Why fast leads still go cold",
-    "painPoints": [
-      "A lead is hottest the moment they hit submit, and that heat fades by the minute.",
-      "Your team is on other calls, at lunch, or asleep when the best leads come in.",
-      "The first business to respond usually wins, and right now that is rarely you."
-    ],
-    "costCallout": {
-      "items": [
-        {
-          "label": "Conversion lift from calling within 1 minute vs a 2-minute wait",
-          "amount": "391% (Velocify, 3.5M leads)"
-        },
-        {
-          "label": "Odds of qualifying a lead when you respond within 5 minutes",
-          "amount": "21x more likely (HBR/MIT)"
-        },
-        {
-          "label": "Drop in lead quality after the 5-minute mark",
-          "amount": "80% lower"
-        },
-        {
-          "label": "Average time a business actually takes to respond",
-          "amount": "47 hours"
-        }
+    costCallout: {
+      items: [
+        { label: "First-response odds: contacting a web lead within 5 minutes vs 30 minutes", amount: "about 100x higher (MIT / InsideSales, 2007)" },
+        { label: "Qualification odds in that same 5-vs-30-minute window", amount: "about 21x higher (MIT / InsideSales, 2007)" },
+        { label: "Average first-response time to a web lead across 2,241 US companies", amount: "42 hours (HBR, 2011)" },
+        { label: "Companies in that audit that never responded at all", amount: "23% (HBR, 2011)" },
       ],
-      "total": "Every slow reply is revenue handed to the first responder",
-      "solvesFor": "a lead pipeline that converts on speed instead of luck",
-      "source": "Velocify, HBR/MIT lead response studies"
+      total: "The gap between seconds and hours is the gap between reaching the lead and never hearing back",
+      solvesFor: "a GoHighLevel workflow that responds inside the window the research actually measures",
+      source: "MIT / InsideSales.com Lead Response Management Study (2007); Harvard Business Review, 'The Short Life of Online Sales Leads' (2011)",
     },
-    "statusQuoTitle": "Manual follow-up versus the automated workflow",
-    "statusQuoItems": [
-      "Manual follow-up depends on someone being free, awake, and remembering to call.",
-      "Reminders and to-do lists stretch a 5-minute window into hours or days.",
-      "The workflow responds the same way at 2pm and 2am, on every single lead."
+    statusQuoTitle: "Native Missed Call Text Back versus a real speed-to-lead workflow",
+    statusQuoItems: [
+      "GoHighLevel's native Missed Call Text Back (Settings > Business Profile) auto-texts an unanswered caller after about 15 seconds. It is the fastest one-click win, but it is dumb: it cannot branch by source, personalize, or hand off to AI.",
+      "A single Contact Created trigger firing one SMS looks like speed to lead but skips returning leads and never qualifies anyone. It is a receipt, not a conversation.",
+      "The real build replaces both with a Call Status trigger for missed calls plus parallel Form Submitted and Inbound Webhook triggers, then a Conversation AI Bot action that answers, qualifies, and books.",
     ],
-    "statusQuoBars": {
-      "title": "Time from new lead to first meaningful contact",
-      "bars": [
-        {
-          "label": "Average business",
-          "valueLabel": "about 47 hours",
-          "widthPercent": 100,
-          "accent": false
-        },
-        {
-          "label": "Busy team doing it manually",
-          "valueLabel": "minutes to hours, if at all",
-          "widthPercent": 45,
-          "accent": false
-        },
-        {
-          "label": "GoHighLevel speed to lead workflow",
-          "valueLabel": "seconds",
-          "widthPercent": 4,
-          "accent": true
-        }
-      ]
+    statusQuoBars: {
+      title: "What each setup can actually do",
+      bars: [
+        { label: "Native Missed Call Text Back", valueLabel: "texts, cannot qualify or book", widthPercent: 25, accent: false },
+        { label: "Single Contact Created + one SMS", valueLabel: "misses returning leads", widthPercent: 40, accent: false },
+        { label: "Full trigger stack + Conversation AI Bot", valueLabel: "catches every source, qualifies, books", widthPercent: 100, accent: true },
+      ],
     },
-    "industrySignal": {
-      "headline": "Speed is the deal, not a nicety",
-      "body": "Response-time research keeps landing on the same point. The lead you contact first is the lead you usually close. Most businesses know this and still respond in hours because manual follow-up cannot beat the clock. Automation is how the gap gets closed.",
-      "source": "HBR/MIT and Velocify lead response research",
-      "date": "2026",
-      "stat": "78%",
-      "statLabel": "of deals go to the first business that responds"
+    industrySignal: {
+      headline: "The number that has held up since 2007",
+      body: "The MIT / InsideSales Lead Response Management study found that reaching a web lead within five minutes instead of thirty made the odds of contacting that lead roughly 100x higher and the odds of qualifying it about 21x higher. It measured contact and qualification, not close rates, which is exactly why the honest play is to protect the first-response window, not to promise a magic conversion number. Manual follow-up cannot hold that window. A workflow can.",
+      source: "MIT / InsideSales.com Lead Response Management Study (Dr. James Oldroyd, 2007)",
+      date: "2007",
+      stat: "~100x",
+      statLabel: "higher odds of contacting a lead at 5 minutes vs 30 minutes",
     },
-    "solutionTitle": "What we build inside your GoHighLevel",
-    "solutionItems": [
-      "A single workflow triggered by every lead source: forms, paid ads, and inbound calls.",
-      "Instant multi-channel outreach that opens with SMS and escalates to an AI voice call.",
-      "Real qualification that asks intent, timing, and fit, then tags the contact accordingly.",
-      "Live calendar booking so a qualified lead lands on your calendar without a human touching it."
+    solutionTitle: "What we build inside your GoHighLevel account",
+    solutionItems: [
+      "One Workflow with a stacked trigger set: Contact Created plus parallel Form Submitted, Inbound Webhook (for site chat and Facebook Lead Ads via LeadConnector), and Call Status, so every source funnels into the same responder and nothing depends on a single trigger.",
+      "An SMS action and an Email action placed at the very top with zero Wait time, because GHL runs actions top-down and that placement is literally what makes the response fire in seconds.",
+      "A Conversation AI Bot action (the workflow action, not a standalone bot) that sends an AI reply from your trained prompt, waits for the lead, and branches the workflow on whether they engage, so the automation books the appointment instead of blasting a dead-end text.",
+      "An Update Conversation AI Bot and Status action so a human can grab a hot lead mid-conversation and the bot pauses instead of talking over them, plus a Customer Replied trigger so a lead who answers later re-enters the AI branch.",
     ],
-    "layers": [
+    layers: [
       {
-        "title": "The trigger layer",
-        "body": "Every lead source in GoHighLevel points at one workflow. A form submit, an ad lead, or a missed inbound call all fire the same instant response, so nothing slips through a gap between tools."
+        title: "The trigger stack",
+        body: "Contact Created alone silently skips any returning lead who resubmits, because they are already a contact. We add parallel Form Submitted, Inbound Webhook, and Call Status triggers and set Re-Entry rules deliberately, so a repeat lead re-enters instead of getting silence, and a missed call is caught by a Call Status trigger rather than the dumb native text-back.",
       },
       {
-        "title": "The conversation layer",
-        "body": "SMS goes out in seconds, and if there is no reply the AI voice agent calls. It qualifies in natural conversation, handles common questions, and knows when to book versus when to nurture. We build these agents on Claude Opus 4.8 and GPT Codex, so the logic is tuned per business, not a generic script."
+        title: "The AI takeover branch",
+        body: "The instant SMS opens the conversation. The Conversation AI Bot action then replies from your bot's training, waits for the lead's response, and branches on the outcome, so it can qualify and book rather than just confirm receipt. For real-time outbound voice (call the lead within seconds of opt-in), native GHL has no built-in place-the-call action, so we wire a Custom Webhook or an n8n layer out to Vapi or Retell and write the result back via inbound webhook.",
       },
       {
-        "title": "The booking and handoff layer",
-        "body": "A qualified lead is offered live open slots and books directly onto your calendar. The owner gets a clean summary and a warm handoff, so the human time goes to closing, not chasing."
-      }
+        title: "Handoff, gating, and deliverability",
+        body: "Update Conversation AI Bot and Status pauses the bot the moment a human jumps in. An If/Else on contact timezone plus a wait-until-window step means a 2am lead still gets an instant SMS while the AI voice callback waits for opening hours, so nobody gets a 3am robocall. And none of it delivers until A2P 10DLC brand and campaign registration on LC Phone is approved, which we handle before go-live.",
+      },
     ],
-    "proofTitle": "Why this wins on the numbers",
-    "proofBullets": [
-      "Contact a lead within one minute instead of waiting two, and conversion climbs sharply, so seconds are worth real money.",
-      "Respond inside five minutes and the lead is far more likely to qualify and to actually pick up, which is exactly the window the workflow protects.",
-      "The business that replies first takes most of the deals, and the workflow makes you that first responder on every lead."
-    ],
-    "proofStats": [
+    howItWorks: [
       {
-        "stat": "391%",
-        "label": "conversion lift calling within 1 minute vs 2 (Velocify)"
+        week: 1,
+        phase: "Source audit and trigger design",
+        body: "We map every place a lead can enter (forms, Facebook Lead Ads via LeadConnector, site chat webhooks, inbound calls) and design the parallel trigger stack plus Re-Entry rules so returning leads are not silently dropped. We also start A2P 10DLC brand and campaign registration on LC Phone, because that approval can take days and gates whether the SMS ever delivers.",
+        youSpend: "About an hour walking us through your lead sources and calendar setup.",
       },
       {
-        "stat": "21x / 100x",
-        "label": "more likely to qualify and to make contact within 5 min (HBR/MIT)"
+        week: 2,
+        phase: "Instant response and AI bot build",
+        body: "We place the SMS and Email at the top of the workflow with zero Wait, train and wire the Conversation AI Bot action to qualify and book on your live calendar, and add the Customer Replied restart trigger so late responders re-enter the AI branch.",
+        youSpend: "A short review of the bot's qualifying questions and booking rules.",
       },
       {
-        "stat": "78%",
-        "label": "of deals won by the first business to respond"
-      }
+        week: 3,
+        phase: "Handoff, timezone gating, and outbound voice",
+        body: "We add Update Conversation AI Bot and Status for clean human takeover, an If/Else timezone gate so overnight leads get SMS now and a voice callback in business hours, and, if you want real-time outbound AI calls, the Vapi or Retell webhook layer that native GHL cannot do on its own.",
+        youSpend: "Confirming your business hours per timezone and who takes hot handoffs.",
+      },
+      {
+        week: 4,
+        phase: "Deliverability check and go-live",
+        body: "Once A2P registration is approved, we send real test leads through every trigger, confirm carriers are actually delivering, check the sub-account wallet has headroom for a lead spike, and hunt for overlapping legacy workflows that would double-text. Then we turn it on.",
+        youSpend: "A final walkthrough and sign-off before it goes live.",
+      },
     ],
-    "comparisonBars": {
-      "title": "Likelihood of qualifying a lead by response time",
-      "bars": [
-        {
-          "label": "Reply within 5 minutes (the workflow)",
-          "valueLabel": "21x more likely",
-          "widthPercent": 100,
-          "accent": true
-        },
-        {
-          "label": "Reply after 5 minutes",
-          "valueLabel": "quality drops 80%",
-          "widthPercent": 20,
-          "accent": false
-        },
-        {
-          "label": "Reply after 47 hours (average business)",
-          "valueLabel": "mostly cold",
-          "widthPercent": 6,
-          "accent": false
-        }
-      ]
+    proofTitle: "What we tell you straight, because most pages won't",
+    proofBullets: [
+      "The A2P gate is real: if 10DLC brand and campaign registration on LC Phone is not approved, the workflow shows the SMS firing while carriers silently drop it. We register before we promise 'instant'.",
+      "Inbound Voice AI has a live limitation: it cannot trigger downstream GHL workflows off what the caller said (an open request on ideas.gohighlevel.com), so 'book if interested' logic has to run through Call Status or webhook triggers, or an external Vapi/Retell layer, not from inside the voice agent.",
+      "Cost is metered, not a poster number: AI Employee is a separate add-on from the base plan, and Voice AI and Conversation AI usage bills to the sub-account wallet along with per-segment LC Phone charges. Rates are set by HighLevel and change, so we size it against your current wallet rates rather than quoting a fixed per-minute figure.",
+    ],
+    proofStats: [
+      { stat: "~100x", label: "higher odds of contacting a lead at 5 min vs 30 min (MIT / InsideSales, 2007)" },
+      { stat: "~21x", label: "higher odds of qualifying in that same window (MIT / InsideSales, 2007)" },
+      { stat: "42 hrs", label: "average first-response time across 2,241 US companies (HBR, 2011)" },
+    ],
+    comparisonBars: {
+      title: "First-response time: the research vs the workflow",
+      bars: [
+        { label: "GoHighLevel speed-to-lead workflow", valueLabel: "seconds", widthPercent: 4, accent: true },
+        { label: "Companies audited by HBR (average)", valueLabel: "42 hours", widthPercent: 100, accent: false },
+        { label: "Companies that never responded (HBR)", valueLabel: "23% of them", widthPercent: 60, accent: false },
+      ],
     },
-    "faq": [
+    faq: [
       {
-        "question": "How fast does the workflow actually respond to a new lead?",
-        "answer": "Within seconds. The moment a form, ad, or inbound call hits GoHighLevel, the workflow fires SMS and can escalate to an AI voice call. This matters because calling within one minute instead of two has been shown to lift conversion by 391% (Velocify)."
+        question: "How do I build a speed-to-lead workflow in GoHighLevel that texts a new lead within seconds?",
+        answer:
+          "Create a Workflow, add your triggers, and place an SMS action at the very top with zero Wait time above it. GHL executes actions top-down, so that placement is what actually makes it fire in seconds. The common mistake is burying the SMS below a Wait step or a slow trigger filter, which quietly turns 'instant' into a multi-minute lag. We also add an Email action alongside it and only promise 'seconds' once A2P registration is approved so the message truly delivers.",
       },
       {
-        "question": "Does this replace my sales team?",
-        "answer": "No, it gives them leverage. The workflow handles the instant response, qualification, and booking that humans cannot do at 2am or while on another call. Your team spends its time closing qualified, booked calls instead of chasing cold leads."
+        question: "What is the difference between GoHighLevel's native Missed Call Text Back and a real speed-to-lead workflow?",
+        answer:
+          "Missed Call Text Back lives under Settings > Business Profile and auto-texts a caller whose call goes unanswered after about 15 seconds. It is one click and fast, but it cannot branch by source, personalize, or hand off to AI. A real build replaces it with a Call Status (missed or no-answer) workflow trigger sitting next to Form Submitted and Inbound Webhook triggers, then routes into a Conversation AI Bot that can qualify and book. Running both at once is a classic cause of leads getting double-texted.",
       },
       {
-        "question": "What does the AI part cost to run on GoHighLevel?",
-        "answer": "GoHighLevel's AI Employee add-on is $97 per month per location for unlimited use, or roughly $0.163 per minute pay-per-use. We build and tune the workflow on top of that. The exact fit depends on your lead volume, and we size it with you."
+        question: "Which trigger should I use for speed to lead: Contact Created, Form Submitted, or Inbound Webhook?",
+        answer:
+          "All of them, in parallel. Contact Created is the obvious one but it does not fire for an existing contact who resubmits, so returning leads silently skip the responder. We add Form Submitted to catch resubmissions, Inbound Webhook for site chat and third-party sources like Facebook Lead Ads via LeadConnector, and Call Status for missed calls. Then we set Re-Entry rules deliberately so a repeat lead actually re-enters instead of getting nothing.",
       },
       {
-        "question": "How is this built, and is it just a generic template?",
-        "answer": "It is built specifically for your lead sources and qualification logic inside your own GoHighLevel. We design the conversation logic with Claude Opus 4.8 and GPT Codex, so the agent asks the right questions for your business rather than reading a stock script."
+        question: "How do I make GoHighLevel Conversation AI reply to and qualify a new lead automatically?",
+        answer:
+          "Use the Conversation AI Bot workflow action (HighLevel documents it in support article 155000001358). It sends an AI-generated reply from your bot's prompt and training, waits for the lead's response, and branches the workflow on the outcome, which is what lets the automation qualify and book instead of just sending a canned text. Pair it with a Customer Replied trigger (with the reply channel set) so a lead who answers after the sequence ends re-enters the AI branch instead of being dropped.",
       },
       {
-        "question": "What happens if the lead does not answer the first message?",
-        "answer": "The workflow escalates. SMS opens the conversation, and if there is no reply the AI voice agent calls. Non-responders get tagged into nurture instead of being forgotten, so a slow lead still gets worked without any manual effort."
-      }
+        question: "Can GoHighLevel Voice AI call a new lead automatically the moment they opt in?",
+        answer:
+          "Not natively. GoHighLevel's Voice AI is an inbound phone agent (part of the AI Employee add-on). It answers calls, but native GHL has no built-in action that places an outbound AI voice call the instant a lead is created. For real-time outbound speed-to-lead voice, we wire a Contact Created or Inbound Webhook trigger to a Custom Webhook (or an n8n middle layer) that starts a Vapi or Retell outbound call, then writes the result back to GHL via inbound webhook.",
+      },
+      {
+        question: "How do I connect Vapi or Retell to GoHighLevel for real-time outbound AI voice?",
+        answer:
+          "A trigger in GHL (Contact Created or Inbound Webhook) fires a premium or Custom Webhook action that hits the Vapi or Retell API to start the outbound call, optionally through n8n if you want retry logic or enrichment in between. The call outcome, transcript, and any booked appointment come back into GHL through an inbound webhook that updates the contact. This exists because native GHL cannot place the call itself, and it is the honest workaround rather than pretending Voice AI does outbound.",
+      },
+      {
+        question: "Why is my GoHighLevel speed-to-lead SMS not sending or getting flagged as spam?",
+        answer:
+          "The most common cause is A2P 10DLC brand and campaign registration on LC Phone not being approved or having been rejected. When that happens the workflow shows the SMS action firing green while carriers silently drop the message, so it looks like it worked but nothing arrives. You cannot skip this. We complete registration before go-live and test with real leads to confirm carriers are actually delivering.",
+      },
+      {
+        question: "How much does GoHighLevel AI Employee cost to run for speed to lead?",
+        answer:
+          "AI Employee is a separate add-on from the base plan (the base tiers are $97, $297, and $497). Voice AI and Conversation AI usage is metered to the sub-account wallet, and there is an AI Employee Unlimited option widely sold around $97 per month per sub-account for unmetered inbound. The exact per-minute Voice AI and per-response Conversation AI rates are set by HighLevel and change, plus LC Phone bills per segment and per minute on top, so we quote against your current wallet rates rather than a hardcoded number.",
+      },
+      {
+        question: "How do I stop the GoHighLevel AI bot from texting a lead after a human takes over?",
+        answer:
+          "Use the Update Conversation AI Bot and Status action (support article 155000003821) to switch the bot off or flip the contact from bot to human mid-workflow. Without it, the Conversation AI Bot keeps replying after a rep has already jumped into the thread, and the lead gets two conflicting responders. We build the pause into the workflow so a human can grab a hot lead cleanly.",
+      },
+      {
+        question: "How do I keep the automation from calling leads in the middle of the night across timezones?",
+        answer:
+          "Add an If/Else condition on the contact's timezone plus a wait-until-window step. A lead captured at 2am still gets the instant SMS immediately, but the AI voice callback holds until opening hours in their timezone. Skipping this gate is the usual reason people end up with angry 3am robocall complaints, so it is standard in every build we ship.",
+      },
+      {
+        question: "Why aren't returning leads re-entering my GoHighLevel speed-to-lead workflow?",
+        answer:
+          "Because Contact Created does not fire for someone who is already a contact, so a returning lead who resubmits a form is invisible to a workflow that only uses that trigger. The fix is a parallel Form Submitted trigger plus deliberate Re-Entry rules on the workflow, so your best repeat leads get the same instant response as brand-new ones instead of silence.",
+      },
     ],
-    "faqStat": {
-      "stat": "47 hours",
-      "label": "average time a business takes to respond, versus seconds for this workflow"
+    faqStat: {
+      stat: "42 hours",
+      label: "average first-response time across 2,241 US companies audited by HBR, versus seconds for this workflow",
     },
-    "ctaLabel": "Book a speed-to-lead build call",
-    "ctaSupportText": "We map your GoHighLevel lead sources and show you the exact workflow that answers in seconds, qualifies, and books. No generic template, built for your pipeline.",
-    "relatedLinks": [
+    ctaLabel: "Book a speed-to-lead build call",
+    ctaHref: "/contact",
+    ctaSupportText:
+      "We map your GoHighLevel lead sources, build the real trigger stack and Conversation AI Bot branch, handle A2P registration, and show you exactly where it can break. Built for your pipeline, not a template.",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "AI Appointment Booking Agent", href: "/ai-appointment-booking-voice-agent" },
       { label: "GoHighLevel Cold Email Automation", href: "/gohighlevel-cold-email-automation" },
@@ -6077,40 +6215,25 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
-    "keywords": [
+    keywords: [
       "gohighlevel speed to lead",
       "gohighlevel speed to lead automation",
       "speed to lead automation",
-      "gohighlevel lead response automation",
-      "gohighlevel ai voice agent",
-      "instant lead follow up gohighlevel",
-      "gohighlevel sms and voice workflow",
-      "ai speed to lead software",
-      "gohighlevel automated lead booking",
-      "respond to leads in seconds"
+      "gohighlevel conversation ai bot",
+      "gohighlevel missed call text back vs workflow",
+      "gohighlevel a2p 10dlc speed to lead",
+      "gohighlevel vapi retell outbound voice",
+      "gohighlevel contact created form submitted trigger",
+      "ai speed to lead gohighlevel",
+      "respond to leads in seconds gohighlevel",
     ],
-    "canonicalUrl": "https://www.tryagentikai.com/gohighlevel-speed-to-lead-automation/",
-    "ctaHref": "/contact",
-    "ctaEmailFallback": "aditya@tryagentikai.com",
-    "logos": [
-      "gohighlevel",
-      "vapi"
+    logos: ["gohighlevel", "vapi"],
+    screenshots: [
+      { src: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", caption: "AI voice agents handle live calls, qualify leads, and book appointments for you.", photo: true },
+      { src: "/screenshots/ghl-workflow.svg", caption: "The workflow that fires the instant a lead comes in, built inside GoHighLevel." },
+      { src: "/screenshots/voice-call-ui.svg", caption: "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM." },
+      { src: "/screenshots/crm-contact.svg", caption: "Every call writes a summary, outcome, and next step back to the contact automatically." },
     ],
-    "screenshots": [
-      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
-      {
-        "src": "/screenshots/ghl-workflow.svg",
-        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
-      },
-      {
-        "src": "/screenshots/voice-call-ui.svg",
-        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
-      },
-      {
-        "src": "/screenshots/crm-contact.svg",
-        "caption": "Every call writes a summary, outcome, and next step back to the contact automatically."
-      }
-    ]
   },
   {
     "type": "integration",
@@ -7043,191 +7166,188 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ]
   },
   {
-    "type": "integration",
-    "pathSegments": [
-      "done-for-you-gohighlevel-automation"
+    type: "integration",
+    pathSegments: ["done-for-you-gohighlevel-automation"],
+    title: "Done-For-You GoHighLevel Automation, Built in the Workflow Builder | Agentic AI Labs",
+    description:
+      "Done-for-you GoHighLevel automation built with real triggers and actions, dedupe and DND handling, Conversation AI, and honest AI Employee and LC Phone usage costs.",
+    canonicalUrl: "https://www.tryagentikai.com/done-for-you-gohighlevel-automation/",
+    heroLabel: "Done-For-You GoHighLevel",
+    heroHeadline:
+      "Most done-for-you GHL builds look finished on day one, then quietly break on a duplicate contact, a re-entry loop, or a lead that went DND.",
+    heroSubheadline:
+      "We build your automation inside the GoHighLevel Workflow Builder with real triggers and actions, wire Conversation AI and voice the way they actually work, and account for the failure modes that silently stop workflows. You get a system that survives production, plus an honest breakdown of what the AI Employee, LC Phone, and Conversation AI usage will cost you every month.",
+    heroExplainerCaption:
+      "One lead event, deduped, answered by AI, and written back to the pipeline without spawning a second contact.",
+    heroSteps: [
+      { label: "Trigger fires", sub: "Form Submitted, Contact Created, or Inbound Webhook", accent: true },
+      { label: "Find or Merge Contact", sub: "Dedupe before anything writes, on E.164 phone" },
+      { label: "Conversation AI replies", sub: "Sends, waits for the reply, branches on outcome" },
+      { label: "Books and updates the opportunity", sub: "Assign to User, Create/Update Opportunity, Add Tag" },
+      { label: "DND-aware, loop-safe", sub: "No 3am sends, no runaway re-entry, no double-reply", accent: true },
     ],
-    "title": "Done-For-You GoHighLevel Automation That Runs in Production | Agentic AI Labs",
-    "description": "Done-for-you GoHighLevel automation. We build, deploy, and run your entire GHL stack across voice, SMS, email, and social DM, so it runs in production.",
-    "heroLabel": "Done-For-You GoHighLevel",
-    "heroHeadline": "A lead raises their hand at 11pm, and by the time anyone replies, they already booked with someone else.",
-    "heroSubheadline": "We build, deploy, and run your entire GoHighLevel automation stack across voice, SMS, email, and social DM. You get a system that answers every lead in production, not a folder of workflows that break the week after setup.",
-    "heroExplainerCaption": "One lead, captured on any channel, answered and booked without a human touching it.",
-    "heroSteps": [
-      {
-        "label": "Lead lands",
-        "sub": "Form, call, DM, or ad",
-        "accent": true
-      },
-      {
-        "label": "Reply fires in seconds",
-        "sub": "Voice or text, first every time"
-      },
-      {
-        "label": "AI qualifies live",
-        "sub": "Real questions, real branching"
-      },
-      {
-        "label": "Booked and routed",
-        "sub": "Calendar, pipeline, follow-up sequences"
-      },
-      {
-        "label": "You own it running",
-        "sub": "Live stack, not a template",
-        "accent": true
-      }
+    painTitle: "Why most GoHighLevel builds quietly stop working",
+    painPoints: [
+      "An agency handed you 40 workflows and left. A Create Contact step with no Find/Merge in front of it spawns a duplicate every time a phone number arrives as a local format instead of E.164, or a webhook retries.",
+      "Two workflows share the same trigger, or a workflow re-tags a contact who then re-enters on that tag. That is an infinite re-entry loop, and it burns SMS and AI spend until someone reads the execution log.",
+      "A lead unsubscribes or files a spam complaint, GoHighLevel auto-enables DND on that channel, and every downstream Send SMS and Send Email silently no-ops. You think the automation stopped working. It was suppression the whole time.",
     ],
-    "painTitle": "Why most GoHighLevel builds quietly stop working",
-    "painPoints": [
-      "You bought GoHighLevel for speed, but leads still sit for hours before anyone answers them.",
-      "An agency handed you 40 workflows, then left. One tag changes and half of them silently stop firing.",
-      "Voice, SMS, email, and DM each live in their own island, so a lead gets three disconnected messages or none at all."
-    ],
-    "costCallout": {
-      "items": [
-        {
-          "label": "GHL AI Employee Unlimited add-on",
-          "amount": "$97/mo per location"
-        },
-        {
-          "label": "Pay-per-use voice minutes",
-          "amount": "~$0.163/min"
-        },
-        {
-          "label": "Average business response time to a new inquiry",
-          "amount": "47 hours"
-        }
+    costCallout: {
+      items: [
+        { label: "AI Employee add-on (Voice AI, Conversation AI, Reviews/Content AI)", amount: "~$97/mo per sub-account" },
+        { label: "Voice AI inbound through LC Phone, US", amount: "~$0.0128/min" },
+        { label: "Voice AI outbound through LC Phone, US", amount: "~$0.0210/min" },
+        { label: "Conversation AI per short SMS response", amount: "~$0.002 to $0.005" },
       ],
-      "total": "Every hour of silence is pipeline walking to the competitor who answered first",
-      "solvesFor": "leads answered in seconds instead of days, on a stack that keeps running",
-      "source": "Velocify lead response study (3.5M leads); Harvard Business Review lead response research"
+      total: "The AI Employee add-on is not included in any base plan, and voice and Conversation AI run off a metered wallet on top of it.",
+      solvesFor: "a build scoped around real message and minute volume, with wallet alerts set up, instead of a bot switched on with no cost ceiling",
+      source: "netpartners.marketing GoHighLevel AI pricing guide (2026)",
     },
-    "statusQuoTitle": "A pile of workflows versus a system that runs",
-    "statusQuoItems": [
-      "Template builds look complete on day one, then drift out of sync as your offers and tags change.",
-      "Nobody owns the stack, so when a step breaks there is no alert and no fix, just leads quietly leaking.",
-      "Speed to lead depends on whoever happens to be at their desk, which means most inquiries wait."
+    statusQuoTitle: "A pile of workflows versus a system that runs",
+    statusQuoItems: [
+      "Template builds never name a single real trigger or action, so you cannot tell whether the shop actually knows the Workflow Builder or just resold a snapshot.",
+      "Nobody accounts for the wallet. Voice AI and Conversation AI look free in testing, then rack up per-minute LC Phone and per-response token charges at volume, and the agency or the client eats the surprise.",
+      "Nobody accounts for state: DND, duplicate records, re-entry, contact-versus-sub-account timezone. So reminders fire at 3am local, contacts get double-replied by a bot a human is already handling, and leads leak with no alert.",
     ],
-    "statusQuoBars": {
-      "title": "Speed to first response, by setup",
-      "bars": [
-        {
-          "label": "Manual follow-up (average business)",
-          "valueLabel": "47 hours",
-          "widthPercent": 100
-        },
-        {
-          "label": "DIY workflow pile",
-          "valueLabel": "breaks silently",
-          "widthPercent": 55
-        },
-        {
-          "label": "Our done-for-you GHL stack",
-          "valueLabel": "seconds",
-          "widthPercent": 6,
-          "accent": true
-        }
-      ]
+    statusQuoBars: {
+      title: "What a build actually has to handle",
+      bars: [
+        { label: "Generic template snapshot", valueLabel: "no dedupe, no DND, no wallet alerts", widthPercent: 30 },
+        { label: "Fiverr voice gig", valueLabel: "webhook fires, never writes back", widthPercent: 45 },
+        { label: "Our done-for-you build", valueLabel: "state-aware and metered", widthPercent: 100, accent: true },
+      ],
     },
-    "industrySignal": {
-      "headline": "The first minute decides the deal",
-      "body": "Velocify analyzed 3.5 million leads and found that calling within one minute of an inquiry lifts conversion by 391 percent compared with waiting just two minutes. The window closes fast, and after five minutes lead quality drops by 80 percent.",
-      "source": "Velocify Lead Response Study",
-      "date": "2026",
-      "stat": "391%",
-      "statLabel": "conversion lift from calling within 1 minute vs a 2-minute wait"
+    industrySignal: {
+      headline: "The service pages explain no mechanics, the pricing pages sell no service",
+      body: "The GHL done-for-you pages that rank list deliverables like CRM setup, funnels, and pipelines but never name a real trigger or action, and never disclose that AI Employee is a separate add-on, that Voice AI meters per minute through LC Phone, and that Conversation AI is token-billed. The pages that explain pricing well sell nothing. Nobody occupies the middle: real build detail plus honest cost of ownership.",
+      source: "Competitive review of ranking GHL done-for-you and pricing pages",
+      date: "2026",
+      stat: "$300 to $1,000",
+      statLabel: "typical one-time DFY GHL setup in the market, before any monthly AI and phone usage (deliveredsocial, 2026)",
     },
-    "solutionTitle": "What done-for-you actually means here",
-    "solutionItems": [
-      "We build the full GoHighLevel automation stack: voice agent, SMS, email, and social DM, wired to your calendars and pipelines.",
-      "We deploy it into your live account and test it against real lead paths, not a demo sub-account.",
-      "We run it in production, monitor for breaks, and fix drift before it costs you a booking.",
-      "You own the system and the account, so nothing holds your business hostage if you ever part ways with us."
+    solutionTitle: "What done-for-you actually means here",
+    solutionItems: [
+      "We build in the Workflow Builder with named triggers (Form Submitted, Contact Created, Inbound Webhook, Customer Booked Appointment, Opportunity Status Changed, Contact Tag) and named actions (Conversation AI, Send SMS, Send Email, If/Else, Wait, Assign to User, Create/Update Opportunity, Add/Remove Tag, Custom Webhook).",
+      "We put a Find or Merge Contact step in front of anything that writes, normalize phone to E.164, and set Allow Duplicate Contact deliberately, so retries and multi-integration lead events update one record instead of spawning three.",
+      "We distinguish the three Conversation AI surfaces and use the right one: the set-and-forget bot for auto-reply, the workflow action for a single AI message that branches on the reply, and the Flow Builder for structured goal-driven dialogue.",
+      "We honestly scope the metered cost, set wallet alerts, and if you run SaaS Mode we wire rebilling so the AI Employee, Voice AI minutes, and Conversation AI usage pass through to your own clients instead of coming out of your margin.",
     ],
-    "layers": [
+    layers: [
       {
-        "title": "Capture and instant response",
-        "body": "Every inbound channel feeds one intake. A form, a missed call, an ad reply, or an Instagram DM all trigger the same fast response, so no lead waits and no lead gets three conflicting messages."
+        title: "Capture and dedupe",
+        body: "Inbound Form, Webhook, or ad lead hits a trigger, then a Find/Merge Contact step runs before any write. Phone is normalized to E.164 so the lookup actually matches, which is the single most common reason a build spawns duplicates on retries and Facebook lead imports.",
       },
       {
-        "title": "Qualify, book, and route",
-        "body": "The AI voice and text agents ask your real qualifying questions, branch on the answers, book straight into the calendar, and drop the contact into the right pipeline stage with the right follow-up sequence attached."
+        title: "Answer, qualify, and route",
+        body: "The Conversation AI workflow action sends one AI message on SMS, Live Chat, Facebook, Instagram, or WhatsApp using the bot's prompt and training data, waits for the reply, and branches the workflow on the outcome. From there If/Else, Assign to User, Create/Update Opportunity, and Add Tag move the contact into the right pipeline stage with the right follow-up attached.",
       },
       {
-        "title": "Built to survive production",
-        "body": "We build the logic with frontier models, Claude Opus 4.8 and GPT Codex, then harden it for your live account with monitoring and alerts. When a tag or offer changes, the stack keeps firing instead of quietly falling apart."
-      }
+        title: "Loop-safe, DND-aware, and metered",
+        body: "We guard against shared-trigger and re-tag re-entry loops, suspend the Conversation AI bot on human handoff with the Update Conversation AI Bot and Status action so a rep and the bot do not double-reply, check DND state before Send SMS or Send Email, align contact and sub-account timezone on Wait steps, and set wallet alerts so metered usage never surprises you.",
+      },
     ],
-    "proofTitle": "Why speed to lead is the whole game",
-    "proofBullets": [
-      "Respond within five minutes and a lead is 21 times more likely to qualify than one contacted after 30 minutes, which is exactly the window our stack hits automatically.",
-      "Calling within one minute of an inquiry lifts conversion by 391 percent versus a two-minute wait, so the seconds our system saves compound into booked revenue.",
-      "The first business to respond wins 78 percent of deals, and an always-on stack means that first responder is always you."
-    ],
-    "proofStats": [
+    howItWorks: [
       {
-        "stat": "21x",
-        "label": "more likely to qualify a lead when you respond within 5 minutes (HBR/MIT)"
+        week: 1,
+        phase: "Map lead paths and audit the account",
+        body: "We walk every real inbound path (forms, missed calls, Facebook and Instagram, inbound webhooks) and audit the existing account: Allow Duplicate Contact settings, current DND state, phone formatting, and any workflows sharing a trigger. We decide which of the three Conversation AI surfaces each path needs, and whether the base plan alone is enough or the AI Employee add-on is required.",
+        youSpend: "60 to 90 minutes on a mapping call, plus read-only access to your GHL sub-account",
       },
       {
-        "stat": "391%",
-        "label": "conversion lift from a 1-minute call vs a 2-minute wait (Velocify)"
+        week: 2,
+        phase: "Build the core workflows",
+        body: "We build in the Workflow Builder: trigger, Find/Merge Contact, Conversation AI action, If/Else branches, Wait steps, Assign to User, and Create/Update Opportunity. We wire the Conversation AI bot's prompt and training data, set re-entry rules on every workflow, and add Send Internal Notification steps so a human is looped in on handoff.",
+        youSpend: "One review of the qualifying questions and pipeline stages, mostly async",
       },
       {
-        "stat": "78%",
-        "label": "of deals won by the first business to respond"
-      }
+        week: 3,
+        phase: "Voice and integrations, if in scope",
+        body: "For native inbound we configure Voice AI on LC Phone. For Vapi or Retell voice agents we wire the real architecture: an Opportunity Created or Contact Created event fires a Custom Webhook POST from a GHL Private App to n8n or Make, which calls Vapi or Retell, dials via Twilio, then writes the appointment and call summary back into GHL through the API. We verify the Private App webhook is enabled and pointed at the right URL, and confirm the return write actually lands in the calendar and pipeline.",
+        youSpend: "Confirm the Twilio number and approve the booking write-back behavior",
+      },
+      {
+        week: 4,
+        phase: "Break it on purpose, then launch",
+        body: "We test the ways these builds actually fail: submit the same lead twice in different phone formats, force a contact into DND, trigger a re-entry, and confirm the Vapi handoff writes back. We set wallet alerts on the AI Employee and LC Phone usage, and if you run SaaS Mode we turn on rebilling so usage passes through to your clients. Then we launch against live traffic and watch the execution logs.",
+        youSpend: "A final walkthrough and sign-off, then you own it running",
+      },
     ],
-    "comparisonBars": {
-      "title": "Done-for-you stack versus the usual options",
-      "bars": [
-        {
-          "label": "DIY inside GoHighLevel",
-          "valueLabel": "you maintain it",
-          "widthPercent": 35
-        },
-        {
-          "label": "One-time agency template",
-          "valueLabel": "drifts, then breaks",
-          "widthPercent": 50
-        },
-        {
-          "label": "Our built, deployed, and run stack",
-          "valueLabel": "runs in production",
-          "widthPercent": 100,
-          "accent": true
-        }
-      ]
+    proofTitle: "How we prove the build is real, not a resold template",
+    proofBullets: [
+      "Every workflow we ship names its trigger and its actions on the canvas, so you can open the builder and see exactly what fires and in what order, not a black box you cannot maintain.",
+      "In the GoHighLevel builds we ship, a Find or Merge Contact step and E.164 phone normalization sit in front of every write, because duplicate contacts from retries and mismatched phone formats are the most common way these builds quietly corrupt a database.",
+      "We hand over a cost sheet, not a promise of unlimited: the AI Employee add-on at roughly $97/month per sub-account, Voice AI metered through LC Phone at about $0.0128/min inbound and $0.0210/min outbound in the US, and Conversation AI at roughly $0.002 to $0.005 per short SMS response.",
+    ],
+    comparisonBars: {
+      title: "Done-for-you stack versus the usual options",
+      bars: [
+        { label: "Generic agency template", valueLabel: "no named triggers, no dedupe", widthPercent: 35 },
+        { label: "$30 to $100 Fiverr voice gig", valueLabel: "webhook fires, no write-back", widthPercent: 50 },
+        { label: "Our built, tested, and metered stack", valueLabel: "runs in production", widthPercent: 100, accent: true },
+      ],
     },
-    "faq": [
+    faq: [
       {
-        "question": "What does done-for-you GoHighLevel actually include?",
-        "answer": "We build, deploy, and run your full GHL automation stack: the AI voice agent, SMS, email, and social DM, all wired into your calendars and pipelines. You get a system running in production, not a set of workflows handed over untested."
+        question: "How much does a done-for-you GoHighLevel automation actually cost, including ongoing usage?",
+        answer:
+          "There are two layers. The one-time build: a done-for-you GHL setup typically runs about $300 to $1,000 in the market, with larger full builds higher (deliveredsocial, 2026), and we scope yours to the number of workflows and integrations involved. The ongoing usage, which most pages hide: the AI Employee add-on is roughly $97/month per sub-account and is not included in any base plan, Voice AI meters through LC Phone at about $0.0128/min inbound and $0.0210/min outbound in the US, and Conversation AI is token-billed at roughly $0.002 to $0.005 per short SMS response (netpartners, 2026). We give you the real monthly estimate for your volume before you commit.",
       },
       {
-        "question": "Do I own the system, or are you holding my account?",
-        "answer": "You own it. Everything lives in your GoHighLevel account under your control. If you ever stop working with us, the stack keeps running and nothing gets pulled out from under you."
+        question: "What is the difference between the Conversation AI bot, the Flow Builder, and the Conversation AI workflow action?",
+        answer:
+          "They are three separate surfaces people constantly confuse. The Conversation AI Bot is set-and-forget auto-reply attached to a contact, toggled Active or Suspended with the Update Conversation AI Bot and Status action. The Conversation AI Flow Builder is a visual node canvas for structured, goal-oriented dialogues. The Conversation AI workflow action sends one AI-generated message, waits for the contact's reply, and branches the workflow on the outcome. A real build usually uses the bot to answer, the workflow action to branch, and the Workflow Builder for the CRM side.",
       },
       {
-        "question": "How much does the AI voice piece cost to run?",
-        "answer": "GoHighLevel offers the AI Employee Unlimited add-on at $97 per month per location, or roughly $0.163 per minute on pay-per-use. We help you pick whichever model fits your call volume so you are not overpaying."
+        question: "Do I need the AI Employee add-on, or can this be built with just workflows and the base plan?",
+        answer:
+          "It depends on the build. Plain workflows (triggers, Send SMS, Send Email, If/Else, Wait, Assign to User, opportunity updates, webhooks) run on the base plan. But Conversation AI, Voice AI, and the other AI actions require the AI Employee add-on, which is roughly $97/month per sub-account and is not bundled into any base tier. We tell you up front which parts of your build need it, so you are not surprised by a required add-on halfway through.",
       },
       {
-        "question": "How is this different from an agency that just builds workflows and leaves?",
-        "answer": "A template looks finished on day one, then drifts as your tags and offers change until it breaks silently. We run the stack in production, monitor it, and fix drift before it costs you a booking."
+        question: "Can you connect Vapi or Retell AI voice agents to GoHighLevel, and how does that work?",
+        answer:
+          "Yes. The standard pattern: an Opportunity Created or Contact Created event fires a Custom Webhook POST from a GHL Private App to n8n or Make, which calls Vapi or Retell, dials through Twilio, then writes the appointment and call summary back into GHL through the API. The webhook has to be enabled inside a GHL Private App or API key. These builds break at the seams, not the model, so we verify the Private App webhook is enabled and pointed at the right URL, the Twilio number is verified, and the return write actually lands in the calendar and pipeline.",
       },
       {
-        "question": "What do you build the automation logic with?",
-        "answer": "We build the agent logic and integrations with frontier models, Claude Opus 4.8 and GPT Codex, then harden the whole thing for your live account with monitoring and alerts so it survives real production traffic."
-      }
+        question: "How do you stop GoHighLevel from creating duplicate contacts?",
+        answer:
+          "We never run a Create Contact step without a Find or Merge Contact in front of it, and we normalize phone numbers to E.164 so the lookup actually matches. Local-versus-E.164 formatting is the usual reason a lookup misses and spawns a duplicate, along with webhook retries and two integrations processing the same lead event. We also set the Allow Duplicate Contact setting deliberately rather than leaving it at whatever the snapshot came with.",
+      },
+      {
+        question: "Why did my GoHighLevel automation stop sending texts? Is DND the reason?",
+        answer:
+          "Very often, yes. DND is channel-specific in GHL (Email, SMS, Calls, Messenger, GMB, WhatsApp) and auto-enables when a contact unsubscribes or files a spam complaint. Once a channel is DND, every downstream Send SMS or Send Email on that contact quietly no-ops, so it looks like the automation broke when it is actually suppression. A production build checks DND state instead of firing Send SMS blindly, which is exactly what most template builds skip.",
+      },
+      {
+        question: "How do you prevent infinite loops and contacts re-entering the same workflow?",
+        answer:
+          "Two workflows sharing a trigger, or a workflow that re-tags a contact who then re-enters on that Contact Tag trigger, creates an infinite re-entry loop that burns SMS and AI spend until someone notices the execution log. We set re-entry rules on every workflow, keep re-tagging and trigger tags from colliding, and use Remove From Workflow and Goal Event steps so a contact exits cleanly instead of looping.",
+      },
+      {
+        question: "Will the AI booking bot write appointments back into my calendar and pipeline automatically?",
+        answer:
+          "That is the whole point, and it is also the most common place voice builds fail silently. For native Voice AI the booking writes back directly. For a Vapi or Retell agent, the appointment and call summary come back through the GHL API, and if the Private App webhook is disabled, the URL is wrong, or the return call fails, the AI books an appointment that never lands in the CRM. We test the write-back explicitly before launch rather than assuming it works because the call sounded good.",
+      },
+      {
+        question: "Can the automation be rebilled to my own clients under SaaS Mode?",
+        answer:
+          "Yes, if you are on the Agency Pro / SaaS plan (around $497/month), which adds SaaS Mode rebilling and the white-label mobile app. We wire the AI Employee, Voice AI minutes, and Conversation AI usage to pass through to your sub-accounts so the metered cost is rebilled to your clients instead of coming out of your margin. On the $297 Agency Unlimited plan you get unlimited sub-accounts and custom domains but not SaaS Mode rebilling.",
+      },
+      {
+        question: "How long does the build take from kickoff to launch?",
+        answer:
+          "For a core follow-up and booking build, roughly four weeks: week one to map lead paths and audit the account, week two to build the core workflows, week three for voice and integrations if they are in scope, and week four to deliberately break it (duplicate submissions, forced DND, re-entry, Vapi write-back) before we launch against live traffic. Simpler builds move faster. We would rather test the failure modes than hand you something that looks done and breaks the following week.",
+      },
     ],
-    "faqStat": {
-      "stat": "47 hours",
-      "label": "average time a business takes to respond to a new inquiry, the gap this stack closes to seconds"
+    faqStat: {
+      stat: "~$97/mo",
+      label: "the AI Employee add-on per sub-account, not included in any base GHL plan, on top of metered Voice AI and Conversation AI usage (netpartners, 2026)",
     },
-    "ctaLabel": "Book a GoHighLevel automation build call",
-    "ctaSupportText": "We will map your lead paths, show you where responses are leaking, and scope a stack that answers every inquiry in seconds.",
-    "relatedLinks": [
+    ctaLabel: "Book a GoHighLevel automation build call",
+    ctaSupportText:
+      "We will map your lead paths, show you where duplicates, DND, and re-entry are leaking, and scope a build with an honest monthly usage estimate up front.",
+    ctaHref: "/contact",
+    ctaEmailFallback: "aditya@tryagentikai.com",
+    relatedLinks: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
       { label: "AI SDR for GHL Agencies", href: "/ai-sdr-for-ghl-agencies" },
       { label: "Best AI for GoHighLevel Agencies", href: "/best-ai-for-gohighlevel-agencies" },
@@ -7235,42 +7355,25 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       { label: "What Is an AI Voice Agent?", href: "/glossary/what-is-an-ai-voice-agent" },
       { label: "AI Voice Agent (overview)", href: "/ai-voice-agent/" },
     ],
-    "keywords": [
+    keywords: [
       "done for you gohighlevel",
       "done for you gohighlevel automation",
       "gohighlevel automation agency",
-      "gohighlevel ai voice agent",
+      "gohighlevel workflow build service",
       "ghl automation setup service",
       "gohighlevel done for you setup",
-      "ai automation for gohighlevel",
+      "gohighlevel conversation ai setup",
       "gohighlevel ai employee setup",
-      "speed to lead automation gohighlevel",
-      "gohighlevel workflow build service"
+      "vapi retell gohighlevel integration",
+      "gohighlevel saas mode rebilling automation",
     ],
-    "canonicalUrl": "https://www.tryagentikai.com/done-for-you-gohighlevel-automation/",
-    "ctaHref": "/contact",
-    "ctaEmailFallback": "aditya@tryagentikai.com",
-    "logos": [
-      "gohighlevel",
-      "vapi",
-      "retell",
-      "n8n"
+    logos: ["gohighlevel", "vapi", "retell", "n8n"],
+    screenshots: [
+      { src: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", caption: "AI voice agents handle live calls, qualify leads, and book appointments for you.", photo: true },
+      { src: "/screenshots/ghl-workflow.svg", caption: "The workflow that fires the instant a lead comes in, built inside GoHighLevel." },
+      { src: "/screenshots/voice-call-ui.svg", caption: "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM." },
+      { src: "/screenshots/dm-thread.svg", caption: "The AI answers every message in seconds from your knowledge base, then logs the lead." },
     ],
-    "screenshots": [
-      { "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop", "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.", "photo": true },
-      {
-        "src": "/screenshots/ghl-workflow.svg",
-        "caption": "The workflow that fires the instant a lead comes in, built inside GoHighLevel."
-      },
-      {
-        "src": "/screenshots/voice-call-ui.svg",
-        "caption": "The AI agent qualifies the lead live and books straight into the calendar, synced to your CRM."
-      },
-      {
-        "src": "/screenshots/dm-thread.svg",
-        "caption": "The AI answers every message in seconds from your knowledge base, then logs the lead."
-      }
-    ]
   },
   {
     "type": "integration",
@@ -10287,194 +10390,237 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "leadlock-ai-alternative"
   ],
-  "title": "Leadlock AI Alternative: Done-For-You GoHighLevel Voice Pipeline | Agentic AI Labs",
-  "description": "Weighing Leadlock AI? We build a done-for-you GoHighLevel voice pipeline: instant call, live qualification, CRM write-back, and follow-up with a kill switch.",
+  "title": "Leadlock AI Alternative: Build It Native in GoHighLevel Instead | Agentic AI Labs",
+  "description": "Leadlock AI is a $97 to $497/mo SaaS layer on top of GoHighLevel. We do the real total-cost math and show the native Voice AI build that replaces it, plus the one case where we'd reach for Vapi or Retell.",
   "canonicalUrl": makeCanonical(["leadlock-ai-alternative"]),
   "heroLabel": "Leadlock AI Alternative",
-  "heroHeadline": "A lead fills out your form at 9:14 and by 9:41 they have already booked with someone else.",
-  "heroSubheadline": "Leadlock AI gives you a voice plug-in to wire into GoHighLevel yourself. We build and run the whole pipeline for you. The moment a lead hits your CRM, they get a live call, get qualified on the phone, and get written straight back into GHL with the follow-up already firing.",
-  "heroExplainerCaption": "How the done-for-you GoHighLevel voice pipeline runs, from form fill to booked call.",
+  "heroHeadline": "Leadlock is a second subscription stacked on the GoHighLevel Voice AI you already pay for.",
+  "heroSubheadline": "Leadlock AI is a third-party layer that sits on top of GoHighLevel, not a GHL feature. Its platform fee runs $97 to $497 a month plus a per-minute markup, on top of the AI Employee add-on and LC Phone wallet you are already billed for. This page does the total-cost math nobody else will, then walks the native Voice AI build that does the same job, and names the one case where we would still reach for Vapi or Retell.",
+  "heroExplainerCaption": "Where the money actually goes: Leadlock's stack versus building the receptionist native in GoHighLevel.",
   "heroSteps": [
     {
-      "label": "Lead hits GHL",
-      "sub": "Form, ad, or funnel fires",
+      "label": "Leadlock platform fee",
+      "sub": "$97 to $497/mo on top of GHL",
       "accent": true
     },
     {
-      "label": "Instant call places",
-      "sub": "Voice agent dials in seconds",
+      "label": "Leadlock per-minute markup",
+      "sub": "$0.12/min only on the $497 tier",
       "accent": false
     },
     {
-      "label": "Live qualification",
-      "sub": "Budget, timeline, intent captured",
+      "label": "GHL AI Employee add-on",
+      "sub": "$97/mo, includes native Voice AI",
       "accent": false
     },
     {
-      "label": "CRM write-back",
-      "sub": "Notes and tags into GHL",
+      "label": "Native Voice AI usage",
+      "sub": "$0.13/min official, no second vendor",
       "accent": false
     },
     {
-      "label": "Follow-up with kill switch",
-      "sub": "Sequence stops when they book",
+      "label": "Same result, one bill",
+      "sub": "Call transfer, booking, write-back native",
       "accent": true
     }
   ],
-  "painTitle": "Why fresh leads go cold before you ever say hello",
+  "painTitle": "What the Leadlock pitch leaves out",
   "painPoints": [
-    "A lead is hottest the second they hit submit, and every minute after that the odds of reaching them fall off a cliff.",
-    "Your team is on other calls, at lunch, or asleep when the form comes in, so the fastest anyone responds is hours later.",
-    "A plug-in you configure yourself still needs prompts written, call logic mapped, and CRM fields wired before it dials a single lead."
+    "Leadlock's headline $0.12/min only exists on the $497/mo Pro tier. On the $97/mo Starter plan the same Gemini and Grok voices are $0.18/min and OpenAI Premium is $0.39/min. The cheap rate is gated behind the expensive plan.",
+    "The platform fee stacks. Leadlock's $97 to $497/mo buys you voice only, and it sits on top of whatever you already pay GoHighLevel. GHL's own AI Employee add-on is $97/mo per sub-account and already includes unlimited Voice AI plus Conversation AI, Reviews AI, Content AI, and Workflow AI.",
+    "Leadlock's entire pitch is one number: roughly 100ms speech-to-speech versus GHL's older ~1000ms pipeline. GHL's 2026 GPT-5 Mini update pulled native latency toward sub-600ms, which is inside the range a caller does not notice for a receptionist or qualifier. The gap the pitch depends on has largely closed.",
+    "Every Leadlock comparison ranking today is Leadlock's own blog ranking itself first. There is no neutral page that scores it against what you already own. That is the page we wrote."
   ],
   "costCallout": {
     "items": [
       {
-        "label": "Buyers who choose whoever calls the lead first",
-        "amount": "50%"
+        "label": "Leadlock platform fee (buys voice only)",
+        "amount": "$97 to $497/mo"
       },
       {
-        "label": "Qualify odds responding within 5 min vs later",
-        "amount": "21x higher"
+        "label": "GHL AI Employee add-on (includes native Voice AI)",
+        "amount": "$97/mo"
       },
       {
-        "label": "Conversion lift calling within 1 min vs a 2-min wait",
-        "amount": "391%"
+        "label": "Native Voice AI usage, inbound and outbound",
+        "amount": "$0.13/min"
+      },
+      {
+        "label": "Conversation AI text response",
+        "amount": "$0.04 each"
       }
     ],
-    "total": "Every hour a new lead sits uncalled is revenue quietly walking to a faster competitor",
-    "solvesFor": "Speed to lead on GoHighLevel, without hiring a night shift or babysitting a plug-in",
-    "source": "Velocify (3.5M leads), HBR/MIT lead response study, InsideSales (first responder)"
+    "total": "Leadlock is a per-minute markup and a monthly platform fee layered on top of the add-on and wallet you already pay. Native Voice AI is one bill with no second vendor to reconcile.",
+    "solvesFor": "A receptionist or outbound qualifier built inside GoHighLevel, not bolted onto it",
+    "source": "leadlock.ai/pricing; netpartners.marketing GoHighLevel Voice AI pricing 2026"
   },
-  "statusQuoTitle": "What handling it yourself actually looks like",
+  "statusQuoTitle": "The real total cost of the Leadlock stack",
   "statusQuoItems": [
-    "You buy a voice plug-in, then spend weeks writing prompts and testing call flows before it earns a dollar.",
-    "Speed to lead depends on a human being free, so most leads wait hours for a first touch.",
-    "When a lead books, the follow-up texts keep going, so you look sloppy to the people you just won."
+    "Layer one: Leadlock's platform fee, $97/mo Starter, $297/mo Agency, or $497/mo Pro, each with a 7-day trial and 50 voice minutes included.",
+    "Layer two: Leadlock's per-minute rate on top, which only hits $0.12/min (Gemini or Grok) on the $497 Pro tier and runs $0.18 to $0.39/min on Starter depending on the voice.",
+    "Layer three, which you pay either way: the GHL side. Calls still route through LC Phone telecom (roughly $0.012/min inbound and $0.017/min outbound in the US) billed to your sub-account wallet.",
+    "Native path removes layer one and two entirely. The AI Employee add-on at $97/mo already carries Voice AI, usage bills at the official $0.13/min against the same wallet, and there is no third-party dashboard to log into."
   ],
   "statusQuoBars": {
-    "title": "Time to first contact after a form fill",
+    "title": "Monthly platform fee before a single minute is spent",
     "bars": [
       {
-        "label": "Us: instant voice pipeline",
-        "valueLabel": "Seconds",
+        "label": "Leadlock Pro (to get $0.12/min)",
+        "valueLabel": "$497/mo + GHL",
         "widthPercent": 100,
-        "accent": true
-      },
-      {
-        "label": "Plug-in you configured",
-        "valueLabel": "After setup, if it fires",
-        "widthPercent": 55,
         "accent": false
       },
       {
-        "label": "Manual team callback",
-        "valueLabel": "Hours",
+        "label": "Leadlock Agency",
+        "valueLabel": "$297/mo + GHL",
+        "widthPercent": 60,
+        "accent": false
+      },
+      {
+        "label": "Leadlock Starter",
+        "valueLabel": "$97/mo + GHL",
         "widthPercent": 20,
         "accent": false
+      },
+      {
+        "label": "Native AI Employee add-on",
+        "valueLabel": "$97/mo, no second layer",
+        "widthPercent": 20,
+        "accent": true
       }
     ]
   },
   "industrySignal": {
-    "headline": "The first business to call a new lead often wins it",
-    "body": "Lead response research found that about half of buyers choose the vendor that responds first. The gap is not talent or price. It is who dials while the lead is still holding the phone.",
-    "source": "InsideSales Lead Response Management study",
+    "headline": "The one edge Leadlock sold has mostly evaporated",
+    "body": "Leadlock's true speech-to-speech architecture markets roughly 100ms time-to-first-audio against GHL's historical three-stage STT to LLM to TTS pipeline at closer to 1000ms. The 2026 GPT-5 Mini update brought native latency toward sub-600ms. For an inbound receptionist or outbound qualifier, that is inside the range where the caller does not register the pause. Every competing page freezes the comparison at the old 1000ms number.",
+    "source": "leadlock.ai/blog Best AI Voice Agent for GoHighLevel 2026 (vendor claim)",
     "date": "2026",
-    "stat": "50%",
-    "statLabel": "of buyers choose the vendor that responds first"
+    "stat": "sub-600ms",
+    "statLabel": "native Voice AI latency after the GPT-5 Mini update"
   },
-  "solutionTitle": "What we build and run for you on GoHighLevel",
+  "solutionTitle": "The native build that replaces what Leadlock does",
   "solutionItems": [
-    "A voice agent that calls every new lead in seconds, wired directly into your existing GHL workflows.",
-    "Live phone qualification that captures budget, timeline, and intent, then routes hot leads to your calendar.",
-    "Two-way CRM write-back so every call logs notes, tags, and outcomes onto the contact in GHL automatically.",
-    "Multi-touch follow-up with a kill switch that stops the sequence the instant a lead books or replies."
+    "Create the agent inside AI Agents > Voice AI, + Create Agent, from scratch or from the Marketplace, then set Agent Name, Business Name, Voice, Timezone, LLM, and the inbound or outbound Greeting Message.",
+    "Wire the action blocks that are the actual receptionist: Call Transfer to hand off to a human on conditions, Trigger a Workflow, Send SMS during or after the call, Update Contact Field, Appointment Booking, Custom Action, and MCP (Beta).",
+    "Assign the agent to one or more numbers in the Phone and Availability tab and set working hours, so after-hours calls hit the AI while business-hours calls can still ring a human first. This is per sub-account, which is how each client build stays isolated.",
+    "Run it on LC Phone or a ported Twilio number. As of April 2026 you can point Voice AI at an existing or ported number without first buying a new GHL number, so you keep the business's known line and can test inside a trial."
   ],
   "layers": [
     {
-      "title": "The instant-call layer",
-      "body": "A GHL trigger fires the moment a lead lands, and the voice agent dials before your competitor has read their notification. No human has to be watching the pipeline."
+      "title": "Native, so there is nothing to reconcile",
+      "body": "GHL's own Voice AI already writes to the contact record with Update Contact Field, books on the calendar with the Appointment Booking action, and fires your existing automations with Trigger a Workflow. Competitor pages frame native integration as a Leadlock-only feature. It is not. There is no second vendor holding a copy of your contact data or a separate outage to chase."
     },
     {
-      "title": "The qualification and CRM layer",
-      "body": "On the call the agent asks your real qualifying questions, then writes the answers, tags, and recording back to the GHL contact so your team opens a warm, documented lead instead of a name and a number."
+      "title": "The failure modes we design around before launch",
+      "body": "We audit the number's existing workflows before pointing the agent at it, so a legacy missed-call-text-back automation does not double-text callers. We set an explicit Call Transfer failover and match Phone and Availability hours to the human's real schedule so transfers do not dump to a dead line. We turn on wallet auto-recharge and a low-balance alert so the AI never goes dark mid-month. And we branch spam and wrong-number calls out before the agent picks up, because 6-second rounding turns dozens of 8-second junk calls into real invoice minutes."
     },
     {
-      "title": "The build-spec layer",
-      "body": "We spec each agent's call logic and objection handling with Claude Opus 4.8 and GPT Codex, so the flows are tuned to your offer and reviewed before a single real lead ever hears them."
+      "title": "When we would not use either, and say so",
+      "body": "If your case is genuinely latency-bound, high-volume outbound with hard interrupt handling, the honest answer is not Leadlock. It is a Vapi or Retell agent where the speech engine lives outside GHL, wired back in through Inbound Webhook triggers so booking, contact updates, and pipeline moves still fire inside GoHighLevel. We build that too, and we will tell you plainly which of the three your use case actually needs."
     }
   ],
-  "proofTitle": "Why speed to lead is the whole game",
+  "howItWorks": [
+    {
+      "week": 1,
+      "phase": "Audit and cost model",
+      "body": "We map your current stack: whether you already pay the AI Employee add-on, what your call volume is, and what Leadlock would actually cost once its platform fee and per-minute markup stack on top. We audit each target number for existing phone-number triggers and loop workflows so the new agent does not collide with a legacy automation.",
+      "youSpend": "About 45 minutes on a call sharing GHL access and your qualifying questions."
+    },
+    {
+      "week": 1,
+      "phase": "Agent build in Voice AI",
+      "body": "We create the agent in AI Agents > Voice AI: Business Name, Voice, Timezone, LLM, and the inbound and outbound Greeting Messages. We write a scope-bounded system prompt so the agent does not hallucinate services you do not offer or quote prices it should not, then wire Call Transfer, Appointment Booking, Update Contact Field, and Trigger a Workflow to your real flows.",
+      "youSpend": "One review pass on the call logic and objection handling before anything goes live."
+    },
+    {
+      "week": 2,
+      "phase": "Telephony and guardrails",
+      "body": "We assign the agent to your number in Phone and Availability (ported or LC Phone, no new number required as of April 2026), confirm A2P 10DLC registration live so the in-call Send SMS action actually delivers, set the Call Transfer failover, and turn on wallet auto-recharge with a low-balance alert.",
+      "youSpend": "A short confirmation that working hours and the human fallback line are correct."
+    },
+    {
+      "week": 2,
+      "phase": "Live review week",
+      "body": "We keep the agent on a supervised first week, reading transcripts for prompt drift, checking that Appointment Booking is hitting a calendar with real availability windows and an assigned team member, and branching spam and wrong-number calls out before they round up to billable minutes.",
+      "youSpend": "A few minutes reviewing flagged transcripts with us before we hand it off."
+    }
+  ],
+  "proofTitle": "How we actually compare the two",
   "proofBullets": [
-    "Calling a lead inside the first minute instead of waiting two minutes lifts conversion by 391%.",
-    "Responding within five minutes makes you far likelier to qualify the lead than responding even slightly later.",
-    "When deals go to whoever gets there first, being first is not a nice-to-have, it is the strategy."
-  ],
-  "proofStats": [
-    {
-      "stat": "391%",
-      "label": "conversion lift calling within 1 min vs a 2-min wait (Velocify, 3.5M leads)"
-    },
-    {
-      "stat": "21x",
-      "label": "more likely to qualify responding within 5 minutes (HBR/MIT)"
-    },
-    {
-      "stat": "50%",
-      "label": "of buyers choose the vendor that responds first (InsideSales)"
-    }
+    "We build the native agent inside AI Agents > Voice AI using the real action blocks, Call Transfer, Trigger a Workflow, Update Contact Field, and Appointment Booking, not a marketing description of them.",
+    "We show you the line-item math: Leadlock's $97 to $497/mo platform fee plus per-minute markup, versus the AI Employee add-on at $97/mo and official Voice AI usage at $0.13/min against the same wallet.",
+    "We are honest about latency: GHL's GPT-5 Mini update pulled native toward sub-600ms, and we will tell you if your volume is the rare case that still justifies a Vapi or Retell engine wired in by webhook.",
+    "We design against the real failure modes first: number-routing collisions, dead-line transfers, a wallet that runs dry mid-month, mis-booked calendars, prompt drift, 6-second rounding, and ported-number A2P registration."
   ],
   "comparisonBars": {
-    "title": "Done-for-you pipeline vs a plug-in you configure",
+    "title": "What your monthly fee buys",
     "bars": [
       {
-        "label": "Us: built, tuned, and run for you",
-        "valueLabel": "Live in days, hands off",
+        "label": "Native AI Employee add-on",
+        "valueLabel": "Voice + Conversation + Reviews + Content + Workflow AI",
         "widthPercent": 100,
         "accent": true
       },
       {
-        "label": "Leadlock AI plug-in, self-configured",
-        "valueLabel": "You own setup and upkeep",
-        "widthPercent": 50,
-        "accent": false
-      },
-      {
-        "label": "Hire and train a call team",
-        "valueLabel": "Slow, costly, still misses nights",
-        "widthPercent": 25,
+        "label": "Leadlock platform fee",
+        "valueLabel": "Voice only, on top of your GHL bill",
+        "widthPercent": 40,
         "accent": false
       }
     ]
   },
   "faq": [
     {
-      "question": "What is Leadlock AI and how are you different?",
-      "answer": "Leadlock AI is a native voice integration for GoHighLevel: a plug-in you install and configure yourself to add AI calling to your account. We are the done-for-you alternative. Instead of handing you a tool to set up, we design, build, and run the full pipeline on your GHL, from the instant call through qualification, CRM write-back, and follow-up."
+      "question": "Is Leadlock AI worth it if I already pay for the GoHighLevel AI Employee add-on?",
+      "answer": "If you already pay the AI Employee add-on at $97/mo, you already have unlimited native Voice AI plus Conversation AI, Reviews AI, Content AI, and Workflow AI. Leadlock's $97 to $497/mo platform fee buys voice only and sits on top of that. You would be paying twice for the calling layer. The case for Leadlock is narrow: you want its specific speech-to-speech feel and you are willing to run a second subscription and a second dashboard to get it. For most receptionist and qualifier builds, the native agent does the same job on the bill you already carry."
     },
     {
-      "question": "Is Leadlock AI a good product?",
-      "answer": "It is a solid fit if you have the time and technical comfort to write your own prompts, map call logic, and maintain the setup as your offers change. Many teams do not, or they would rather that effort go into closing. That is exactly the gap we fill: you get the outcome without owning the build."
+      "question": "How much does Leadlock AI actually cost per minute compared to GoHighLevel's native $0.13/min?",
+      "answer": "Leadlock's advertised $0.12/min (Gemini or Grok) only applies on the $497/mo Pro tier. On the $97/mo Starter plan the same voices are $0.18/min and OpenAI Premium is $0.39/min. And that per-minute rate is on top of the monthly platform fee. GHL native Voice AI bills at an official $0.13/min for both inbound and outbound, rounded up to the nearest 6 seconds, against your sub-account wallet, with no separate platform fee. So the honest comparison is not $0.12 versus $0.13. It is $0.12/min plus $497/mo versus $0.13/min with no added subscription."
     },
     {
-      "question": "Do I have to leave GoHighLevel or change my stack?",
-      "answer": "No. We build directly on your existing GHL account and workflows. Your funnels, calendars, and pipelines stay where they are. The voice pipeline plugs into them, so your team keeps working in the CRM they already know."
+      "question": "Can I build a Leadlock-style AI voice receptionist directly inside GoHighLevel without a third-party tool?",
+      "answer": "Yes, and it is the same place Leadlock ultimately routes through. You go to AI Agents > Voice AI, click + Create Agent, set the Business Name, Voice, Timezone, LLM, and Greeting Message, then wire the action blocks: Call Transfer, Appointment Booking, Send SMS, Update Contact Field, Trigger a Workflow, Custom Action, and MCP (Beta). That is a full inbound receptionist or outbound qualifier with no second vendor. This is the build we ship."
     },
     {
-      "question": "How do you keep the AI calls on-brand and accurate?",
-      "answer": "We spec each agent's script, qualifying questions, and objection handling with Claude Opus 4.8 and GPT Codex, then review the flows against your real offer before any live lead hears them. You approve the call logic before it goes into production."
+      "question": "Does GoHighLevel native Voice AI integrate with my calendar and pipeline as well as Leadlock does?",
+      "answer": "It is native, so integration is not a bridge, it is the same system. The Appointment Booking action books straight into your GHL calendar, Update Contact Field writes to the contact record, and Trigger a Workflow moves the pipeline and fires your existing automations. Competitor pages describe native integration as a Leadlock advantage, but GHL's own Voice AI already does all of it with nothing to reconcile between two vendors."
     },
     {
-      "question": "What is the kill switch and why does it matter?",
-      "answer": "The kill switch stops the follow-up sequence the instant a lead books, replies, or converts. It means a won lead never gets a robotic reminder text an hour after they already talked to you, which is how automated follow-up usually makes teams look careless."
+      "question": "Is GoHighLevel's Voice AI latency good enough now, or do I really need Leadlock's speech-to-speech?",
+      "answer": "Leadlock's whole pitch was roughly 100ms speech-to-speech against GHL's older ~1000ms three-stage pipeline. GHL's 2026 GPT-5 Mini update pulled native latency toward sub-600ms, which is inside the range where a caller does not notice the pause for a receptionist or qualifier. The one place latency still genuinely bites is high-volume outbound with hard interrupt handling. If that is you, the answer still is not Leadlock, it is Vapi or Retell wired in by webhook. For everyone else, native is good enough now."
+    },
+    {
+      "question": "What are the hidden LC Phone and wallet charges on top of a Leadlock or native Voice AI setup?",
+      "answer": "Both paths route calls through LC Phone (HighLevel's Twilio-powered telephony) or a ported Twilio number, and that telecom bills to your sub-account wallet, roughly $0.012/min inbound and $0.017/min outbound in the US, separate from the AI usage. On native, Voice AI usage adds $0.13/min and Conversation AI text is $0.04 per response generated. Leadlock does not remove the LC Phone line, it adds its own layer above it. The wallet charge is the one most people forget, which is why we turn on auto-recharge and a low-balance alert on every live build so the agent never goes silent mid-month."
+    },
+    {
+      "question": "Can I use my existing business phone number with GoHighLevel Voice AI instead of buying a new one?",
+      "answer": "Yes. As of April 2026, GHL lets you point Voice AI at an existing or ported number without first buying a new LC Phone number. That removed the old blocker to testing during a trial and means a business keeps its known number. One caution we check live: a number ported into LC Phone can lose SMS or fail A2P 10DLC registration, which makes the in-call Send SMS action fail silently while voice still works. We confirm A2P registration before launch rather than assuming it."
+    },
+    {
+      "question": "Leadlock AI vs Vapi vs Retell for a GoHighLevel voice agent, which should an agency pick?",
+      "answer": "Native GHL Voice AI for most receptionist and qualifier builds, because it is one bill and writes to the CRM directly. Vapi or Retell when the case is genuinely latency-bound, high-volume outbound with hard interrupt handling, wired back to GHL through Inbound Webhook triggers so booking and contact updates still land in the CRM. Leadlock sits awkwardly between: it charges a platform fee for a speech-to-speech edge that GHL's sub-600ms update largely closed, while still depending on the same LC Phone and GHL plumbing underneath. We build all three and pick by your actual call volume, not by which vendor markets hardest."
+    },
+    {
+      "question": "How do I make my GHL Voice AI transfer calls to a human and book appointments like Leadlock?",
+      "answer": "Both are native action blocks. Call Transfer hands off to a human on the conditions you set, and it needs an explicit failover plus Phone and Availability hours that match the human's real schedule, otherwise a transfer outside working hours dumps to a dead line instead of voicemail. Appointment Booking books into your GHL calendar, but only correctly if that calendar has an assigned team member and real availability windows, or the agent will confidently book slots that do not exist. We set both up with those guardrails in place."
+    },
+    {
+      "question": "Does cancelling Leadlock AI break my GoHighLevel automations, and can I migrate the agent natively?",
+      "answer": "Because Leadlock sits on top of GHL rather than replacing it, your GHL workflows, calendars, and contact records stay put when you cancel. What you lose is Leadlock's voice layer. We migrate that into a native Voice AI agent inside AI Agents > Voice AI, rebuild the call logic with the native action blocks, reassign your number in Phone and Availability, and audit for any leftover phone-number triggers so the native agent does not collide with an old automation. The CRM side does not have to change."
+    },
+    {
+      "question": "Can one native GoHighLevel Voice AI agent handle multiple client sub-accounts the way Leadlock does?",
+      "answer": "Voice AI is configured per sub-account, and that is exactly how an agency isolates each client build. Each sub-account gets its own agent, its own Business Name, Voice, Greeting, numbers assigned in Phone and Availability, working hours, and its own wallet for usage. That isolation is a feature: one client's spam surge or dry wallet cannot silently take down another client's line. We stand up and monitor the agent per sub-account rather than sharing one across accounts."
     }
   ],
   "faqStat": {
-    "stat": "391%",
-    "label": "conversion lift calling within 1 minute vs a 2-minute wait"
+    "stat": "$97/mo",
+    "label": "AI Employee add-on already includes native Voice AI, no second platform fee"
   },
-  "ctaLabel": "Book a GoHighLevel voice pipeline walkthrough",
-  "ctaSupportText": "We map your speed-to-lead gap on your own GHL account and show you the pipeline we would build, before you commit to anything.",
+  "ctaLabel": "Get the native build and the real cost math",
+  "ctaSupportText": "We map your call volume against Leadlock's stacked platform fee and per-minute markup, then show you the native Voice AI agent we would build on your own GHL, before you commit to anything.",
   "relatedLinks": [
     { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
     { label: "Vapi + GoHighLevel", href: "/vapi-gohighlevel-integration" },
@@ -10484,15 +10630,15 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   ],
   "keywords": [
     "leadlock ai alternative",
-    "gohighlevel ai voice",
-    "ghl voice pipeline",
-    "done-for-you ai voice agent",
-    "speed to lead",
-    "ai lead qualification",
-    "crm write-back automation",
-    "ghl ai calling",
-    "instant lead callback",
-    "ai sdr for ghl"
+    "leadlock ai vs gohighlevel",
+    "gohighlevel native voice ai",
+    "ghl ai employee add-on cost",
+    "gohighlevel voice ai pricing",
+    "leadlock ai cost per minute",
+    "ghl voice ai vs leadlock",
+    "build ai receptionist gohighlevel",
+    "vapi retell gohighlevel voice",
+    "ghl voice ai latency"
   ],
   "ctaHref": "/contact",
   "ctaEmailFallback": "aditya@tryagentikai.com",
@@ -10521,187 +10667,237 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "gohighlevel-ai-employee-alternative"
   ],
-  "title": "GoHighLevel AI Employee Alternative: Done-For-You Voice Build | Agentic AI Labs",
-  "description": "Skip the generic bundled bot. We build, tune, and run a custom voice and text automation on your GoHighLevel, monitored and supported by real people.",
+  "title": "GoHighLevel AI Employee Alternative: Keep GHL, Swap the AI Layer | Agentic AI Labs",
+  "description": "You do not have to leave GoHighLevel to escape the AI Employee add-on. A mechanics-first look at native Voice AI, the seven real post-call actions, the $497 rebilling constraint, and when a Vapi or Retell build wins instead.",
   "canonicalUrl": makeCanonical(["gohighlevel-ai-employee-alternative"]),
   "heroLabel": "GoHighLevel AI Employee Alternative",
-  "heroHeadline": "A lead fills out your form at 9:47pm, and by morning they already booked with the competitor who called back first.",
-  "heroSubheadline": "GoHighLevel's built-in AI Employee gets you a bot out of the box. We build you a custom voice and text agent that runs on your GHL, tuned to how your business actually sells, watched daily, and fixed the same day when a call goes sideways.",
-  "heroExplainerCaption": "How a done-for-you agent handles one inbound lead, start to finish, on your existing GoHighLevel account.",
+  "heroHeadline": "You do not have to rip out GoHighLevel to escape the AI Employee add-on. You have to decide which layer to replace.",
+  "heroSubheadline": "AI Employee is really four products bundled together: Conversation AI, Voice AI, Reviews AI, and Content AI, for $97/month per sub-account. We build on both sides of the fence, native Voice AI and an external Vapi or Retell agent wired into GHL, so we can tell you which layer is actually worth swapping instead of selling you a rip-and-replace.",
+  "heroExplainerCaption": "One inbound call on native GHL Voice AI, from the assigned LC Phone number to the post-call write-back, the build we ship.",
   "heroSteps": [
     {
-      "label": "Lead hits your GHL form",
-      "sub": "Webhook fires in real time",
+      "label": "Caller dials the assigned number",
+      "sub": "LC Phone or a connected Twilio number",
       "accent": true
     },
     {
-      "label": "Agent calls back",
-      "sub": "Live within seconds, not minutes"
+      "label": "Voice AI answers and reasons",
+      "sub": "STT to LLM to TTS, GPT-5 Mini under the hood"
     },
     {
-      "label": "Qualifies and books",
-      "sub": "Your script, your calendar rules"
+      "label": "Reads the calendar, offers slots, books",
+      "sub": "Live availability, intent-based selection across calendars"
     },
     {
-      "label": "Logs to pipeline",
-      "sub": "Notes, tags, and next steps written"
+      "label": "Fires a post-call action",
+      "sub": "Trigger a Workflow, the bridge to real logic"
     },
     {
-      "label": "You get the warm handoff",
-      "sub": "Only real, booked conversations",
+      "label": "Workflow writes back to the contact",
+      "sub": "Tags, fields, and follow-up SMS, if the triggers match",
       "accent": true
     }
   ],
-  "painTitle": "Why the bundled bot leaves money on the table",
+  "painTitle": "Why agencies go looking past the native AI Employee",
   "painPoints": [
-    "The default AI Employee ships with generic prompts that do not know your offer, your objections, or which leads are worth a callback.",
-    "When a call misfires at 2am, there is no one watching. You find out days later from a lost deal or an angry review.",
-    "Setup, prompt tuning, and calendar logic land on you or your VA, and stay half-configured for months."
+    "You cannot mark it up until you are on the $497/month Agency Pro or SaaS Pro plan. On lower tiers you can run AI Employee, but you cannot rebill its usage to sub-accounts through the wallet, so there is no clean way to charge a client with margin. That single fact drives most of the search for an alternative.",
+    "The $97 plan flattens AI compute, not telephony. LC Phone and Twilio minutes are billed separately from AI Employee, so a flat retainer quietly eats the overage the month a client's call volume spikes.",
+    "A Voice AI agent has exactly seven native post-call levers: Call Transfer, Trigger a Workflow, Send SMS, Update Contact Field, Appointment Booking, Custom Action, and Add MCP (Beta). Anything past that has to be pushed into a GHL workflow, and it silently no-ops when the workflow's trigger filters do not match the contact the agent just updated."
   ],
   "costCallout": {
     "items": [
       {
-        "label": "Lead responded to in under 1 minute vs a 2-minute wait",
-        "amount": "391% higher conversion"
+        "label": "AI Employee Unlimited, per enabled sub-account",
+        "amount": "$97/mo"
       },
       {
-        "label": "Contact rate when you reach out inside 5 minutes",
-        "amount": "up to 100x"
+        "label": "Voice Engine on pay-per-use, on top of minutes",
+        "amount": "$0.045/min"
       },
       {
-        "label": "Buyers who choose the vendor that responds first",
-        "amount": "50%"
+        "label": "Text-to-speech, OpenAI or Cartesia up to ElevenLabs V3",
+        "amount": "$0.015 to $0.170/min"
+      },
+      {
+        "label": "Mark AI Employee up and rebill to clients",
+        "amount": "needs $497/mo Agency Pro"
       }
     ],
-    "total": "Every minute of silence is revenue walking to whoever called back first",
-    "solvesFor": "Speed-to-lead you can actually trust overnight and on weekends",
-    "source": "Velocify (3.5M leads); HBR/MIT lead response study; InsideSales Lead Response Management (first responder)"
+    "total": "The $97 is the floor, not the ceiling. Carrier minutes and LLM tokens stack on top",
+    "solvesFor": "Metering the real cost and checking your plan tier before you quote a client a flat price",
+    "source": "HighLevel Support Portal, AI Product Pricing article (help.gohighlevel.com/support/solutions/articles/155000006652)"
   },
-  "statusQuoTitle": "Running the built-in AI Employee on your own",
+  "statusQuoTitle": "What running native Voice AI actually looks like",
   "statusQuoItems": [
-    "You configure it once, then hope it keeps working while you run the business.",
-    "The bot answers, but it does not sound like your team or follow your qualifying logic.",
-    "No daily monitoring means broken calls run for days before anyone notices."
+    "You build the agent under AI Agents, Voice AI, Create Agent, and configure it across three tabs: Agent Details for voice, timezone and LLM, Settings for the Knowledge Base and post-call trigger, and Phone and Availability for the numbers and working hours.",
+    "The agent is only as smart as the attached Knowledge Base. Load a thin one and it will confidently invent hours, pricing, or policy on a recorded call, because there is no escalation trigger for out-of-scope questions unless you wire one.",
+    "Booking works well now, live calendar reads and intent-based selection across multiple calendars, but scope the calendars per agent or it double-books when a sub-account has several."
   ],
   "statusQuoBars": {
-    "title": "Speed to first live callback on an after-hours lead",
+    "title": "White-labeling the AI layer for a client, by build path",
     "bars": [
       {
-        "label": "Done-for-you agent (us)",
-        "valueLabel": "Seconds",
-        "widthPercent": 100,
+        "label": "Native AI Employee through SaaS Mode wallet",
+        "valueLabel": "Rebills, but only on $497 Agency Pro",
+        "widthPercent": 70,
         "accent": true
       },
       {
-        "label": "Generic bundled bot, well configured",
-        "valueLabel": "Minutes if set up right",
-        "widthPercent": 55
+        "label": "Vapi or Retell wired in directly",
+        "valueLabel": "No branded sub-account portal at any tier",
+        "widthPercent": 25
       },
       {
-        "label": "You or a VA calling back manually",
-        "valueLabel": "Hours to next morning",
-        "widthPercent": 18
+        "label": "Vapi or Retell behind a wrapper platform",
+        "valueLabel": "Branded, but a third bill and a connector",
+        "widthPercent": 55
       }
     ]
   },
   "industrySignal": {
-    "headline": "Response speed is the deal, not a nicety",
-    "body": "Velocify's analysis of 3.5 million leads found that calling a lead within one minute lifted conversion by 391% versus waiting just two minutes. Separate HBR and MIT research put contact rates up to 100x higher and qualification 21x higher when you respond inside five minutes. The team that answers first wins most of the business.",
-    "source": "Velocify; Harvard Business Review / MIT",
+    "headline": "Every ranking page picks a camp. Nobody maps the middle",
+    "body": "Search this and you get two kinds of page. Broad GoHighLevel alternatives listicles that tell you to replace the whole CRM with HubSpot or ActiveCampaign and never mention the AI Employee add-on at all, and single-vendor pages pitching their own product. Neither one neutrally maps the decision most agencies actually face: keep GoHighLevel, replace only the AI layer. Almost none of them even show the native build, the three-tab Voice AI setup or the seven real post-call actions, so a buyer cannot tell what they would lose by leaving.",
+    "source": "Competitive SERP review",
     "date": "2026",
-    "stat": "391%",
-    "statLabel": "conversion lift calling within 1 minute vs a 2-minute wait"
+    "stat": "0 pages",
+    "statLabel": "neutrally map keep GHL, swap only the AI layer"
   },
-  "solutionTitle": "What done-for-you actually means here",
+  "solutionTitle": "How we make the call on your build",
   "solutionItems": [
-    "We build the voice and text agent directly on your GoHighLevel, so your pipeline, calendars, and workflows stay the single source of truth.",
-    "The agent is tuned to your offer, objections, and qualifying questions, then voice-tested against real call recordings before it goes live.",
-    "We monitor calls daily, flag anything off, and fix prompts or logic the same day so a bad night does not become a bad month.",
-    "You get transcripts, booked-call reporting, and a human to call when you want a change, not a settings panel to babysit."
+    "First we check the fact that forces the decision: what agency plan are you on. If you need to rebill AI Employee to clients with markup and you are under $497/month Agency Pro, that shapes everything before we touch a prompt.",
+    "If native Voice AI covers the job, booking, multi-calendar intent selection, and a solid Knowledge Base, we build it native, tune the KB, and wire the post-call workflow so nothing silently no-ops.",
+    "If you need levers native does not have, we build an external Vapi or Retell agent and wire it into GHL through the calendar tools or a Marketplace connector, with eyes open about the connector being a new point of failure.",
+    "Either way you get an honest total cost, AI compute plus LC Phone or Twilio minutes stacked on the plan fee, not a flat number that surprises you at month end."
   ],
   "layers": [
     {
-      "title": "The build layer",
-      "body": "We spec the full call flow, qualifying logic, and objection handling, then implement it as a production build using Claude Opus 4.8 and GPT Codex so the agent behaves consistently instead of improvising."
+      "title": "Keep it native",
+      "body": "Voice AI on GHL is genuinely good now at the core jobs: reading the assigned calendar live, offering and confirming slots, intent-based selection so one agent books across multiple calendars, and answering from a Knowledge Base across SMS, the chat widget, Messenger, Instagram, and WhatsApp. When that is the job, leaving native only adds cost and a connector."
     },
     {
-      "title": "The GoHighLevel layer",
-      "body": "Everything runs on your existing GHL account. Webhooks trigger callbacks, bookings write to your calendar, and every interaction is tagged and logged in your pipeline with notes and next steps."
+      "title": "Swap the layer",
+      "body": "When you need behavior past the seven native actions, we run an external agent. Retell typically connects through a Marketplace connector, Vapi exposes official GHL calendar tools configured on the Vapi side, and booking and contact updates flow back through GHL workflows or the API. It is more capable and it breaks in a specific way: when the connector or a mapped custom field changes, bookings stop writing back with no obvious error."
     },
     {
-      "title": "The run layer",
-      "body": "We watch it after launch. Daily call review, same-day fixes, and monthly tuning against what actually converts, so the agent gets sharper as it handles more of your leads."
+      "title": "Run the layer",
+      "body": "Whichever path, the failure modes are operational, not one-time. We load a real Q and A Knowledge Base with an explicit out-of-scope escalation trigger, scope calendars per agent and test booking with live calls before go-live, tie Call Transfer to the same after-hours and high-intent conditions so urgent callers reach a human, and meter carrier minutes so the client is not surprised."
     }
   ],
-  "proofTitle": "Why speed-to-lead is the whole game",
+  "howItWorks": [
+    {
+      "week": 1,
+      "phase": "Decide which layer to replace",
+      "body": "We audit the real constraints, not the marketing: your agency plan tier and whether you can rebill AI Employee through the wallet, your call volume and carrier-minute exposure, and how many calendars each sub-account runs. That decides native versus an external agent before any building starts.",
+      "youSpend": "One 45-minute call plus access"
+    },
+    {
+      "week": 2,
+      "phase": "Build the agent",
+      "body": "On native, we configure the three Voice AI tabs, Agent Details, Settings, and Phone and Availability, load a real Knowledge Base, and set the LLM and voice. On an external build, we stand up the Vapi or Retell agent and its GHL calendar tools or connector. Either way the prompt is written to your offer and objections, not left generic.",
+      "youSpend": "Answer offer and objection questions"
+    },
+    {
+      "week": 3,
+      "phase": "Wire logic and test with live calls",
+      "body": "We connect the post-call action, usually Trigger a Workflow, and confirm the workflow's trigger filters actually match the contact the agent updates, so follow-up does not silently no-op. We scope calendars per agent to stop double-booking and tie Call Transfer to your after-hours and high-intent conditions, then place real test calls and book into a live calendar.",
+      "youSpend": "Review a few recorded test calls"
+    },
+    {
+      "week": 4,
+      "phase": "Meter, launch, and monitor",
+      "body": "We set up metering for LC Phone or Twilio minutes and AI compute so the monthly number is not a surprise, confirm rebilling is configured if you are on Agency Pro, then go live and watch the first real calls. Prompt and Knowledge Base gaps get fixed against actual transcripts.",
+      "youSpend": "Approve go-live"
+    }
+  ],
+  "proofTitle": "The facts that actually decide native versus a swap",
   "proofBullets": [
-    "Calling a fresh lead inside the first minute instead of waiting two minutes lifts conversion by 391% across millions of tracked leads.",
-    "Responding within five minutes raises your odds of qualifying a lead by 21x and contacting them by up to 100x.",
-    "Roughly half of buyers choose the vendor that responds first, which means callback speed often decides the outcome before you ever talk price."
+    "AI Employee Unlimited is $97/month per enabled sub-account for unlimited Conversation AI, Voice AI, Reviews AI, and Content AI, plus 3x included usage for Ask AI and AI Studio.",
+    "A Voice AI agent's only native post-call actions are Call Transfer, Trigger a Workflow, Send SMS, Update Contact Field, Appointment Booking, Custom Action, and Add MCP (Beta). Everything else lives in a GHL workflow.",
+    "Rebilling AI Employee usage to sub-accounts with markup requires the Agency Pro or SaaS Pro plan at $497/month. That is the single biggest constraint on productizing GHL AI as an agency."
   ],
   "proofStats": [
     {
-      "stat": "391%",
-      "label": "conversion lift, 1-minute vs 2-minute response (Velocify, 3.5M leads)"
+      "stat": "$97/mo",
+      "label": "AI Employee Unlimited, per enabled sub-account (HighLevel AI Product Pricing)"
     },
     {
-      "stat": "21x",
-      "label": "more likely to qualify a lead responding within 5 minutes (HBR/MIT)"
+      "stat": "7",
+      "label": "native Voice AI post-call actions, the only levers before you push into a workflow"
     },
     {
-      "stat": "50%",
-      "label": "of buyers choose the vendor that responds first (InsideSales)"
+      "stat": "$497/mo",
+      "label": "the Agency Pro tier you need before you can rebill AI Employee with markup"
     }
   ],
   "comparisonBars": {
-    "title": "How well the agent fits your business after 30 days live",
+    "title": "Native Voice AI vs an external agent wired into GHL",
     "bars": [
       {
-        "label": "Done-for-you build, tuned and monitored (us)",
-        "valueLabel": "Tuned to your sales motion",
+        "label": "Native Voice AI on GHL",
+        "valueLabel": "Single pane, 7 actions, $97 plan floor",
         "widthPercent": 100,
         "accent": true
       },
       {
-        "label": "Built-in AI Employee, self-managed",
-        "valueLabel": "Generic out of the box",
-        "widthPercent": 45
+        "label": "Vapi or Retell plus a connector",
+        "valueLabel": "More capable, extra bill, connector risk",
+        "widthPercent": 75
       },
       {
-        "label": "No agent, manual follow-up",
-        "valueLabel": "Whenever someone is free",
-        "widthPercent": 15
+        "label": "External agent, no connector plan",
+        "valueLabel": "Bookings do not write back to GHL",
+        "widthPercent": 20
       }
     ]
   },
   "faq": [
     {
-      "question": "Is GoHighLevel's built-in AI Employee any good?",
-      "answer": "It is a solid, convenient starting point. If you have the time to write strong prompts, wire up your calendars, and check it regularly, it can work well for straightforward use cases. The gap shows up when you want it tuned to your specific sales motion and watched so problems get caught fast. That ongoing build-and-run work is what we take off your plate."
+      "question": "Is GoHighLevel's AI Employee worth $97 a month, or should I use Vapi or Retell instead?",
+      "answer": "For the core jobs, answering from a Knowledge Base across channels and booking on your calendar, native AI Employee at $97/month per sub-account is hard to beat, because it lives inside GHL with no connector and no second bill. You reach for Vapi or Retell when you need behavior past the seven native post-call actions, or a level of conversational control native does not expose. The honest answer depends on the job, which is exactly what we scope before recommending either."
     },
     {
-      "question": "Do I have to leave GoHighLevel to use this?",
-      "answer": "No. We build on top of your existing GHL account. Your contacts, pipelines, calendars, and workflows stay exactly where they are. The agent plugs into them rather than replacing them, so you keep everything you already run in GoHighLevel."
+      "question": "Can I replace only GoHighLevel's Voice AI and keep the rest of GHL?",
+      "answer": "Yes, and that is usually the right move. AI Employee is four separate products, Conversation AI, Voice AI, Reviews AI, and Content AI. You can leave the CRM, pipelines, calendars, and workflows exactly as they are and swap just the voice layer for an external Vapi or Retell agent, wiring booking and contact updates back through GHL workflows or the API. You are replacing a layer, not the platform."
     },
     {
-      "question": "How is this different from just turning on the add-on myself?",
-      "answer": "The add-on gives you a bot and a settings panel. We give you a call flow designed around your offer and objections, voice-tested before launch, then monitored daily with same-day fixes. You are buying the build and the ongoing operation, not a toggle you configure once and hope holds up."
+      "question": "Do I need the $497 Agency Pro plan just to rebill AI Employee to my clients?",
+      "answer": "To mark up AI Employee usage and pass it to sub-accounts through the wallet, yes, that requires the Agency Pro or SaaS Pro plan at $497/month. On lower tiers you can run AI Employee, but you cannot rebill it with margin. This is the constraint that quietly drives most agencies to look at alternatives, and it is the first thing we check, because it changes the whole build."
     },
     {
-      "question": "What technology do you build the agent on?",
-      "answer": "We spec the call logic and prompts as a production build using Claude Opus 4.8 and GPT Codex, which keeps the agent consistent and predictable instead of improvising on live calls. It connects to your GHL through webhooks and the calendar API so bookings and notes land in the right place automatically."
+      "question": "What are the hidden costs of GoHighLevel Voice AI on top of the $97 plan?",
+      "answer": "The $97 flattens AI compute, but telephony is separate. Voice AI runs on the LC Phone number assigned to the agent, and those LC Phone or Twilio minutes are billed on their own. On the pay-per-use path the meter has three parts: Voice Engine at $0.045/min, text-to-speech from $0.015/min on OpenAI or Cartesia up to $0.170/min on ElevenLabs V3, plus LLM token cost. Quote a client a flat retainer without metering minutes and a high-volume month eats your margin."
     },
     {
-      "question": "How fast can it go live and what happens after?",
-      "answer": "Most builds go live in one to two weeks after we map your call flow and qualifying logic. After launch we review calls daily, fix anything that misfires the same day, and tune monthly against what actually converts, so the agent keeps improving as it handles more of your leads."
+      "question": "What post-call actions can a GoHighLevel Voice AI agent trigger?",
+      "answer": "Exactly seven: Call Transfer, Trigger a Workflow, Send SMS, Update Contact Field, Appointment Booking, Custom Action, and Add MCP (Beta). Those are the only native levers, so any logic beyond them has to be pushed into a GHL workflow using Trigger a Workflow. The common failure is that the workflow's own trigger filters do not match the contact the agent just updated, so the caller has a great conversation and then gets no follow-up. We test that bridge before go-live."
+    },
+    {
+      "question": "Can GoHighLevel Voice AI book appointments on my calendar automatically?",
+      "answer": "Yes. Appointment Booking is a first-class action. The agent reads the assigned GHL calendar in real time, offers open slots, confirms, and can fire a confirmation SMS. HighLevel also shipped intent-based selection so one agent can book across multiple calendars. The catch is scoping: if a sub-account has several calendars and the agent is not scoped, it can book into the wrong one or double-book, which is why we test booking with live calls before launch."
+    },
+    {
+      "question": "How do I connect Vapi or Retell AI to GoHighLevel for phone calls?",
+      "answer": "Neither has a first-party native integration. Retell is typically connected through a GHL Marketplace connector, and Vapi exposes official GHL calendar tools configured on the Vapi side. Calendar booking and contact updates then flow back into GHL through workflows or the API. It works well, but it trades the tidy single-pane story for a connector you now depend on, so when that connector or a mapped custom field changes, bookings can stop writing back with no obvious error."
+    },
+    {
+      "question": "Why does my GoHighLevel Voice AI agent give wrong or made-up answers on calls?",
+      "answer": "Almost always a thin Knowledge Base. The agent's answers are only as good as the Q and A you attach, and with a sparse one it will confidently invent hours, pricing, or policy on a recorded call. The fix is a real, loaded Knowledge Base plus an explicit escalation trigger for out-of-scope questions, so it hands off instead of guessing. Configuring that escalation is part of the build, not an afterthought."
+    },
+    {
+      "question": "Is GoHighLevel AI Employee the same as Conversation AI and the Workflow AI Assistant?",
+      "answer": "No, and the confusion is common. Conversation AI is one of the four products AI Employee bundles, a single bot config that attaches to SMS, the website chat widget, Messenger, Instagram DMs, and WhatsApp. The Workflow AI Assistant is a different thing entirely: a build-time tool that generates workflow steps from plain-English prompts inside the builder. It never answers a call or a message. AI Employee is the runtime layer; the Workflow AI Assistant just helps you build the automations around it."
+    },
+    {
+      "question": "How do I white-label a voice AI agent for my GoHighLevel clients?",
+      "answer": "This is where both native and external fall short in different ways. Native AI Employee rebills through GHL's SaaS Mode wallet, but only on the $497 Agency Pro tier, and it rebills the native product, not an external provider. Vapi offers no branded dashboard or sub-account portal at any tier, so agencies either route everything through GHL's wallet or put a wrapper platform in front of it, which adds a third bill and another connector. We map which of those trade-offs fits your margins before building."
     }
   ],
   "faqStat": {
-    "stat": "50%",
-    "label": "of buyers choose the vendor that responds first, so callback speed decides the outcome"
+    "stat": "$497/mo",
+    "label": "the Agency Pro tier that decides whether you can productize GHL AI with markup"
   },
   "ctaLabel": "Book a build call",
-  "ctaSupportText": "We will map your call flow, show you exactly how the agent runs on your GoHighLevel, and tell you honestly whether the built-in add-on is enough for your case.",
+  "ctaSupportText": "We will check your plan tier and call volume, show you the native three-tab Voice AI build and an external agent side by side, and tell you honestly which layer is worth replacing for your case.",
   "relatedLinks": [
     { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
     { label: "Leadlock AI Alternative", href: "/leadlock-ai-alternative" },
@@ -10714,12 +10910,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "gohighlevel ai employee alternative",
     "gohighlevel ai employee",
     "ghl ai voice agent",
-    "done for you ai voice agent",
-    "gohighlevel ai automation",
-    "custom ai agent for gohighlevel",
-    "ai speed to lead",
-    "ghl ai callback automation",
-    "managed ai voice agent"
+    "gohighlevel voice ai",
+    "gohighlevel ai employee pricing",
+    "rebill ai employee gohighlevel",
+    "vapi gohighlevel alternative",
+    "retell gohighlevel",
+    "ghl voice ai post call actions"
   ],
   "ctaHref": "/contact",
   "ctaEmailFallback": "aditya@tryagentikai.com",
