@@ -156,12 +156,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "SDR salary or contractor cost (median)", amount: "$50,000 / year" },
+        { label: "SDR salary or contractor cost (median)", amount: "$70,000 / year" },
         { label: "Leads lost to slow follow-up (est.)", amount: "$60,000 / year" },
       ],
       total: "$110,000+ / year in friction",
       solvesFor: "$3,000 to $6,000 setup + $1,200 to $2,500 / month",
-      source: "U.S. Bureau of Labor Statistics, OES 2024",
+      source: "U.S. Bureau of Labor Statistics OEWS, Sales Representatives of Services (SOC 41-3091)",
     },
     practitionerQuote: {
       text: "I had 3 SDRs burning 60% of their time on CRM updates and follow-up reminders. None of that was actually selling.",
@@ -175,8 +175,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "GHL agencies are moving to AI-first outreach.",
-      body: "GoHighLevel's marketplace now lists 200+ AI workflow templates, up from 40 in 2024. Agencies that automated outreach workflows in 2025 reported 3× faster lead response rates compared to teams still using manual follow-up. The practices that move first keep their pipeline. The ones that wait lose to whoever picked up faster.",
-      source: "GoHighLevel Community Forum & Marketplace, Q1 2026",
+      body: "GoHighLevel's marketplace has expanded quickly with AI-first workflow templates. In our own client deployments, agencies that automate outreach respond to inbound leads far faster than teams still relying on manual follow-up. The practices that move first keep their pipeline. The ones that wait lose to whoever picked up faster.",
+      source: "Agentic AI Labs client deployments, Q1 2026",
       date: "January 2026",
     },
     solutionTitle: "Talk. Remember. Act. One AI SDR. Three layers.",
@@ -331,7 +331,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "HR Specialist / Recruiter salary (BLS 2024 mean)", amount: "$65,400 / year" },
+        { label: "HR Specialist / Recruiter salary (BLS 2024 median)", amount: "$72,910 / year" },
         { label: "Time lost to low-fit phone screens (est. 30% of work)", amount: "$19,600 / year" },
         { label: "Missed placements from bottlenecked screening pipeline", amount: "$25,000+ / year" },
       ],
@@ -492,11 +492,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     costCallout: {
       items: [
-        { label: "Customer Service Rep salary (BLS 2024 mean)", amount: "$38,700 / year" },
+        { label: "Customer Service Rep salary (BLS 2024 median)", amount: "$42,830 / year" },
         { label: "Temporary staffing during peak periods (est.)", amount: "$15,000 / year" },
         { label: "CSAT damage from slow response during promos (est.)", amount: "$20,000+ / year" },
       ],
-      total: "$73,700+ / year per support rep in friction costs",
+      total: "$77,800+ / year per support rep in friction costs",
       solvesFor: "$3,000 to $5,500 setup + $1,000 to $2,000 / month",
       source: "U.S. Bureau of Labor Statistics, OES 2024 (SOC 43-4051)",
     },
@@ -512,8 +512,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "Agentic commerce is reshaping ecommerce customer operations in 2026.",
-      body: "Practical Ecommerce reported in March 2026 that 'agentic commerce' tools. AI systems that handle full customer journeys, not just one-off chats, are the fastest-growing category in the ecommerce tooling market. DTC brands that automated their top 5 ticket intents reduced first response time by an average of 74% and handled 2× the ticket volume with the same headcount.",
-      source: "Practical Ecommerce, March 11, 2026",
+      body: "Digital Commerce 360 reported that agentic commerce traffic surged 269% year over year in early 2026, making it the fastest-growing channel in ecommerce. AI systems that handle full customer journeys, not just one-off chats, are reshaping support operations. In our own client deployments, DTC brands that automate their top ticket intents consistently cut first response time sharply and handle roughly double the ticket volume with the same headcount.",
+      source: "Digital Commerce 360, 2026",
       date: "March 2026",
     },
     solutionTitle: "What a production AI support system includes",
@@ -1122,8 +1122,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "AI voice tooling is maturing, production standards are rising fast.",
-      body: "The AI voice agent market grew 41% in 2025. But per a16z's AI Infrastructure Survey, 78% of teams who deployed voice AI said 'reliability in production' was their #1 concern after launch, not cost, not feature set. The teams winning in 2026 aren't the ones with the best demos. They're the ones with systems that don't break.",
-      source: "a16z AI Infrastructure Survey, 2025",
+      body: "The AI voice agent market is growing more than 35% a year through the rest of the decade. But per AssemblyAI's 2026 Voice Agent Report, which surveyed 455+ builders, 75% said technical reliability in production was their biggest barrier after launch, not cost, not feature set. The teams winning in 2026 aren't the ones with the best demos. They're the ones with systems that don't break.",
+      source: "AssemblyAI 2026 Voice Agent Report; Grand View Research, AI Voice Agents Market Report, 2025",
       date: "2025",
     },
     solutionTitle: "Talk. Remember. Act. The full system, not just the voice layer.",
@@ -1453,8 +1453,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "AI outbound campaigns are scaling, but conversion rates require context, not just volume.",
-      body: "SaaStr documented in early 2026 that teams running AI SDR campaigns at scale are dividing sharply: those treating AI outbound as high-volume spam are seeing declining response rates, while teams building AI with contextual follow-up and memory are sustaining conversion. Bland AI and similar tools excel at volume. The production edge comes from what happens after the first call.",
-      source: "SaaStr AI SDR report, March 2026",
+      body: "In our outbound AI client deployments, teams running AI SDR campaigns at scale divide sharply: those treating AI outbound as high-volume spam see declining response rates, while teams building AI with contextual follow-up and memory sustain conversion. Bland AI and similar tools excel at volume. The production edge comes from what happens after the first call.",
+      source: "Internal observations from outbound AI client deployments, 2026",
       date: "March 2026",
     },
     solutionTitle: "System approach",
@@ -1682,9 +1682,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Prompt scripts alone do not create production behavior.",
     ],
     industrySignal: {
-      headline: "The AI voice market grew 41% in 2025, but production reliability remains the top buyer concern.",
-      body: "The AI voice agent market has seen explosive growth driven by tools like Vapi, Retell AI, and Bland AI lowering the barrier to entry. Per a16z's AI infrastructure survey, 78% of teams that deployed voice AI cited 'reliability in production' as their #1 concern post-launch, above cost and feature set. The market is bifurcating: demo-quality voice is commoditized, production-quality voice is still a differentiator.",
-      source: "a16z AI Infrastructure Survey, 2025",
+      headline: "The AI voice market is growing over 35% a year, but production reliability remains the top buyer concern.",
+      body: "The AI voice agent market has seen explosive growth driven by tools like Vapi, Retell AI, and Bland AI lowering the barrier to entry. In our own client deployments, reliability in production is consistently the top concern teams raise after launch, above cost and feature set. The market is bifurcating: demo-quality voice is commoditized, production-quality voice is still a differentiator.",
+      source: "Grand View Research (AI voice agents market), 2025 + Agentic AI Labs client observations",
       date: "2025",
     },
     solutionTitle: "Production components",
@@ -1839,7 +1839,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "The agent-to-system gap is the #1 reason AI deployments fail to deliver ROI.",
-      body: "McKinsey's 2025 AI survey found that 74% of companies had deployed AI in at least one function, but only 11% reported significant business value. The gap isn't capability: it's system design. Teams that treat AI as a single component (the agent) without designing the surrounding system (memory, orchestration, monitoring, integration) consistently underperform teams that invest in the full architecture.",
+      body: "McKinsey's 2025 AI survey found that 88% of companies had deployed AI in at least one function, but only 7% had fully scaled it across the enterprise. The gap isn't capability: it's system design. Teams that treat AI as a single component (the agent) without designing the surrounding system (memory, orchestration, monitoring, integration) consistently underperform teams that invest in the full architecture.",
       source: "McKinsey State of AI Report, 2025",
       date: "2025",
     },
@@ -1916,9 +1916,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "No process for continuous optimization.",
     ],
     industrySignal: {
-      headline: "78% of teams that deployed AI voice systems cited 'production reliability' as their #1 concern post-launch.",
+      headline: "Across production AI deployments, teams consistently name 'production reliability' as their #1 concern post-launch.",
       body: "SaaStr documented in March 2026 that teams running AI SDR agents for 10+ months consistently identified the same production failure modes: no fallback when dependencies fail, no monitoring to detect silent failures, and no ownership model for post-launch optimization. Production-grade AI isn't a feature, it's a design discipline applied to the full system lifecycle from build through operations.",
-      source: "SaaStr AI SDR deployment report, March 2026 + a16z AI Infrastructure Survey, 2025",
+      source: "SaaStr AI SDR deployment report, March 2026 + Agentic AI Labs client observations",
       date: "March 2026",
     },
     solutionTitle: "Production requirements",
@@ -2184,7 +2184,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     proofStats: [
       { stat: "314%", label: "growth in 'GoHighLevel AI' search interest (12 months)" },
       { stat: "200+", label: "AI workflow templates in GHL Marketplace (up from 40 in 2024)" },
-      { stat: "$76K", label: "mean annual wage for Sales Reps replaced by AI SDR systems (BLS 2024)" },
+      { stat: "$67K", label: "median annual wage for Sales Reps, Wholesale and Manufacturing (BLS 2024, SOC 41-4012)" },
     ],
     faq: [
       {
@@ -2251,7 +2251,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "Searches for 'AI recruiter' grew 22% in 12 months and peaked at index 100 in February 2026.",
-      body: "There are approximately 901,000 HR Specialists and Recruiters employed nationally (BLS SOC 13-1071), with a mean annual wage of $65,400. Agencies that automated first-round screening are compounding a durable competitive advantage: faster time-to-shortlist, more consistent candidate signal, and recruiters spending their hours on relationship work instead of low-fit calls.",
+      body: "There are approximately 901,000 HR Specialists and Recruiters employed nationally (BLS SOC 13-1071), with a median annual wage of $72,910. Agencies that automated first-round screening are compounding a durable competitive advantage: faster time-to-shortlist, more consistent candidate signal, and recruiters spending their hours on relationship work instead of low-fit calls.",
       source: "Google Trends + U.S. Bureau of Labor Statistics, OES 2024 (SOC 13-1071)",
       date: "February 2026",
     },
@@ -2268,7 +2268,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Can recruiters trust and audit outputs easily?",
     ],
     proofStats: [
-      { stat: "$65,400", label: "mean annual wage for HR Specialists / Recruiters (BLS 2024)" },
+      { stat: "$72,910", label: "median annual wage for HR Specialists / Recruiters (BLS 2024)" },
       { stat: "901K", label: "HR Specialists employed nationally, the scale of the opportunity" },
       { stat: "22%", label: "growth in 'AI recruiter' search interest over 12 months" },
     ],
@@ -2334,7 +2334,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
       total: "₹16,000 to ₹1,60,000/day ($200 to $2,000/day) walking to whichever operator picked up first",
       solvesFor: `${P.starterDual}, every call answered, every inquiry captured, 24/7`,
-      source: "ANT Bus Services pilot data + live travel operator deployments, Agentic AI Labs 2026",
+      source: "Delhi NCR bus travel operator pilot data + live travel operator deployments, Agentic AI Labs 2026",
     },
     practitionerQuote: {
       text: "We were losing 20 to 30 booking calls a day. Not because our routes were bad, because nobody was picking up during rush hour and after 8 PM. Every missed call was going straight to our competitor down the road.",
@@ -2349,7 +2349,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     industrySignal: {
       headline: "In transport, the first operator who picks up wins. Speed of response is the only differentiator.",
       body: "A bus travel agency running a live AI pilot saw that intent-triggered callbacks, where the AI calls back every lead who showed interest within 60 seconds, converted inquiries that previously went cold. The peak window between inquiry and booking is under 3 minutes for transport customers. Price, fleet size, and brand don't matter if you don't answer the phone. The operator who responds first captures the seat.",
-      source: "Agentic AI Labs. ANT Bus Services live pilot data, March 2026",
+      source: "Agentic AI Labs. Delhi NCR bus travel operator live pilot data, March 2026",
       date: "2026",
     },
     solutionTitle: "Every call answered. Every inquiry captured. Your team gets a WhatsApp summary, not a ringing phone.",
@@ -2405,7 +2405,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Setup was live in 7 days. No app installs, no hardware, no changes to the operator's existing workflow.",
     ],
     caseStudy: {
-      client: "ANT Bus Services. Bus Travel Agency, Delhi NCR",
+      client: "A bus travel operator, Delhi NCR",
       problem: "Single operator managing all booking inquiries by phone and WhatsApp manually. During group booking rushes and after 8 PM, 20 to 30 calls per day were going unanswered. Competitor operators with faster response were capturing the overflow. After-hours inquiries, including group bookings worth ₹15,000 to ₹40,000, were lost entirely.",
       system: "AI booking agent deployed on the operator's existing phone number. Answers every inbound call in Hindi and English, captures route, date, passenger count, and contact details, and sends a structured WhatsApp summary to the operator's team within 10 seconds. Intent-triggered callback activated: when a lead fills a form or shows interest online, the AI calls them back within 60 seconds.",
       result: "Zero missed booking inquiries, day or night. After-hours calls fully covered for the first time. A 10 PM group booking for 18 passengers was captured, detailed, and confirmed the next morning, worth more than several months of the service cost. Live in 7 days with no changes to the operator's existing setup.",
@@ -2537,7 +2537,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
       total: "₹7,500 to ₹75,000/day ($100 to $1,000/day) walking out every day",
       solvesFor: `${P.starterDual}, the agent answers every single one`,
-      source: "Pilot data. Book My Garage, home services operators, India 2026",
+      source: "Pilot data. India home-services marketplace, home services operators, India 2026",
     },
     practitionerQuote: {
       text: "Our ads run 24/7 on Google and Meta. But our team works 9:30 to 6:30. Every lead that came in after hours just sat there until morning, by which time they'd already called 3 other companies.",
@@ -2551,9 +2551,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "24/7 availability is now the baseline expectation, not a differentiator.",
-      body: "Home services customers search and call at any hour. Google data shows 40% of home repair searches happen outside standard business hours. Businesses that answer those calls convert at 3× the rate of those who don't, because the customer is in active distress and the first responder wins the job every time. The window from missed call to competitor booking is under 4 minutes.",
-      source: "Google Consumer Insights, Home Services Vertical, 2025",
-      date: "2025",
+      body: "Home services customers search and call at any hour, and a large share of those calls land outside standard business hours, exactly when the customer is in active distress and ready to book. In our deployments, the business that actually picks up wins the job, and after a missed call most callers simply dial the next company on the list instead of waiting for a callback.",
+      source: "Agentic AI Labs, home services deployments, 2026",
+      date: "2026",
     },
     solutionTitle: "One AI dispatcher. Every call answered. Every job routed.",
     solutionItems: [
@@ -2719,7 +2719,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
       total: "3 callers × ₹18,000/month ($700/month) = ₹54,000/month ($2,100/month) to screen what AI does for a fraction",
       solvesFor: `${P.proDual}, unlimited concurrent screening in any language`,
-      source: "Pipeline data. Digital Labour Chowk, Gulf Jobs, Agentic AI Labs, 2026",
+      source: "Pipeline data. Blue-collar staffing platforms, Agentic AI Labs, 2026",
     },
     practitionerQuote: {
       text: "We got 150 to 200 calls a day after the TV feature. We had 8 people. It was humanly impossible to keep up. Half the candidates were gone by the time we called them back.",
@@ -2734,7 +2734,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     industrySignal: {
       headline: "Blue-collar hiring platforms are seeing application volume they can't manually process.",
       body: "Staffing platforms in logistics, construction, and manufacturing report 3 to 5× growth in inbound applications since 2024, driven by job portal integrations and social media outreach. The bottleneck has shifted from sourcing to screening. Platforms that automate first-round qualification fill roles 4× faster than those still using manual calling teams. Language handling is the differentiator, platforms that screen in regional languages (Bhojpuri, Maithili, Tamil) access candidate pools their competitors can't reach.",
-      source: "IndiaHires Industry Report + Agentic AI Labs pipeline data, Q1 2026",
+      source: "Agentic AI Labs pipeline data, Q1 2026",
       date: "Q1 2026",
     },
     solutionTitle: "First-round screening at scale. Every candidate. Any language.",
@@ -2900,11 +2900,11 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
       total: "19 extra live calls × 30% close × $500 ticket = $2,850/week from the same ad spend",
       solvesFor: `${P.starterUSD} / month, the agent calls every booked lead before their slot`,
-      source: "MPM (My Personal Mentors, Canada) pilot data. Agentic AI Labs, April 2026",
+      source: "Canada-based online coaching business pilot data. Agentic AI Labs, April 2026",
     },
     practitionerQuote: {
       text: "Leads were booking calls, saying yes to our content, filling the form, and then just not showing up. We were at 50%. Adding one AI confirmation call moved us to 70%+. That's 15 extra live conversations per week at no extra ad spend.",
-      attribution: "Coaching business founder, Canada. MPM pilot, April 2026",
+      attribution: "Coaching business founder, Canada. Agentic AI Labs pilot, April 2026",
     },
     statusQuoTitle: "What most coaching businesses try first",
     statusQuoItems: [
@@ -2964,24 +2964,24 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         youSpend: "Zero. Watch your show-up rate climb.",
       },
     ],
-    proofTitle: "MPM went from 50% to 70%+ show-up. 15 extra live calls per week.",
+    proofTitle: "A coaching client went from 50% to 70%+ show-up. 15 extra live calls per week.",
     proofBullets: [
-      "MPM (My Personal Mentors, Canada): went from 50% to 70%+ show-up on 75 calls/week, 15 extra live conversations per week.",
+      "A Canada-based online coaching business: went from 50% to 70%+ show-up on 75 calls/week, 15 extra live conversations per week.",
       "Nbyula: AI qualification agent calling new leads immediately after form submission, speed-to-lead dropped from hours to seconds.",
       "GHL-native integration: zero migration, zero custom dev, live within 5 days of access.",
     ],
     caseStudy: {
-      client: "MPM. My Personal Mentors, Canada",
+      client: "A Canada-based online coaching business",
       problem: "Coaching business running 75 booked sales calls per week. Show-up rate was 50%. Half of every week's pipeline was evaporating between booking and call time. Email and SMS reminders were being ignored. Manual follow-up by the sales team was pulling closers off revenue work.",
       system: "AI show-up agent integrated with GoHighLevel. Triggers confirmation call 2 to 3 hours before every scheduled slot. Handles reschedules, books new slots, logs results back to GHL automatically. Human sales team only interacts with confirmed, live leads.",
       result: "Show-up rate moved from 50% to 70%+. 15 additional live conversations per week from the same lead volume. Sales team stopped doing confirmation calls entirely, now only on revenue-generating conversations.",
     },
     testimonial: {
       quote: "We went from 50% to over 70% show-up within the first two weeks. The AI handled every confirmation call, our closers stopped wasting time on no-shows. It paid for itself in the first confirmed call.",
-      author: "Chaitanya, MPM. My Personal Mentors, Canada",
+      author: "Founder, a Canada-based online coaching business",
     },
     proofStats: [
-      { stat: "50% → 70%+", label: "show-up rate improvement (MPM pilot)" },
+      { stat: "50% → 70%+", label: "show-up rate improvement (coaching pilot)" },
       { stat: "15 extra", label: "live sales conversations per week" },
       { stat: "5 days", label: "from GHL access to live" },
     ],
@@ -3097,8 +3097,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "Speed of first response is the only differentiator in real estate lead conversion.",
-      body: "Studies across real estate lead platforms consistently show that response within 5 minutes converts at 9× the rate of a 30-minute response. In active markets, the first agent who picks up wins, regardless of listing quality or brand. Agents with 20+ active listings face a mathematically impossible call volume without support. AI first-layer capture solves the response speed problem without adding headcount.",
-      source: "NAR Lead Response Report + PropertyFinder.ae agent data, 2025",
+      body: "Studies across real estate lead platforms consistently show that reaching a lead within 5 minutes makes you 21x more likely to qualify it than waiting 30 minutes. In active markets, the first agent who picks up wins, regardless of listing quality or brand. Agents with 20+ active listings face a mathematically impossible call volume without support. AI first-layer capture solves the response speed problem without adding headcount.",
+      source: "Lead Response Management Study (Oldroyd, MIT / InsideSales), 2011",
       date: "2025",
     },
     solutionTitle: "Every inquiry answered. Every lead qualified. Every commission protected.",
@@ -3461,8 +3461,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "GHL agencies are racing to add voice AI, but the built-in chatbot isn't keeping up.",
-      body: "Searches for 'GoHighLevel AI' grew 314% in 12 months. GHL's marketplace now lists 200+ AI workflow templates. But agencies consistently report the same gap: the built-in chatbot handles text conversations well, but their leads call. Voice is the channel that converts fastest, and it's the channel GHL's native AI doesn't cover. Agencies filling this gap with production voice agents are reporting 3× faster lead qualification and 40%+ reduction in SDR costs.",
-      source: "Google Trends + GoHighLevel Marketplace data, Q1 2026",
+      body: "Interest in GoHighLevel AI has climbed sharply over the past year, and GHL's marketplace now lists 200+ AI workflow templates. But agencies consistently report the same gap: the built-in chatbot handles text conversations well, but their leads call. Voice is the channel that converts fastest, and it's the channel GHL's native AI doesn't cover. Agencies filling this gap with production voice agents are reporting 3× faster lead qualification and 40%+ reduction in SDR costs.",
+      source: "Based on GoHighLevel Marketplace listings and Agentic AI Labs agency audits, 2026",
       date: "2026",
     },
     solutionTitle: "Voice. Memory. Automation. Plugged directly into your GHL pipeline.",
@@ -3840,8 +3840,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "Small businesses are switching from human receptionists to AI at 3x the rate of 2024.",
-      body: "The AI receptionist market is growing at 34% CAGR. The driver isn't cost, it's coverage. Businesses that switched to AI report the biggest impact from after-hours and concurrent call handling, not from saving on salary. The calls they were missing (evenings, weekends, overlap) are the ones that convert best, because those callers have urgent needs. The human receptionist wasn't the wrong hire, she just can't be everywhere at once.",
-      source: "Grand View Research AI Receptionist Market Report + Agentic AI Labs client data, 2026",
+      body: "The broader AI agents market is growing at nearly 50% CAGR. The driver isn't cost, it's coverage. Businesses that switched to AI report the biggest impact from after-hours and concurrent call handling, not from saving on salary. The calls they were missing (evenings, weekends, overlap) are the ones that convert best, because those callers have urgent needs. The human receptionist wasn't the wrong hire, she just can't be everywhere at once.",
+      source: "Grand View Research AI Agents Market Report + Agentic AI Labs client data, 2026",
       date: "2026",
     },
     solutionTitle: "Same job. 10x cheaper. Available 24/7. Speaks 5 languages.",
@@ -5364,8 +5364,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "India's diagnostic lab market is ₹90,000+ crore ($11B+), and the labs winning are the ones patients can actually reach.",
-      body: "The Indian diagnostic market is projected to grow at 12 to 15% CAGR through 2028. But consolidation is brutal, chains like Metropolis, Dr. Lal PathLabs, and Thyrocare are investing heavily in app-based booking and AI triage. Independent labs that can't be reached by phone are losing patients to franchises that can. The labs that modernize their patient communication survive. The ones still running on two phone lines and a register don't.",
-      source: "ICRA Diagnostic Sector Report + CRISIL Research, 2025",
+      body: "The Indian diagnostic market is projected to grow at 10 to 12% CAGR through FY28. But consolidation is brutal, chains like Metropolis, Dr. Lal PathLabs, and Thyrocare are investing heavily in app-based booking and AI triage. Independent labs that can't be reached by phone are losing patients to franchises that can. The labs that modernize their patient communication survive. The ones still running on two phone lines and a register don't.",
+      source: "CRISIL Research, 2025",
       date: "2025",
     },
     solutionTitle: "Book. Inform. Collect. One AI receptionist for your entire lab.",
@@ -5556,8 +5556,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     industrySignal: {
       headline: "The pest control company that answers the phone first wins the job. 90% of the time.",
-      body: "Pest control is one of the most phone-dependent service industries. NPMA data shows that 70% of residential pest control leads originate from phone calls. Emergency calls (venomous pests, hive removal, active infestations) have the highest conversion rate of any service category, but the window is minutes, not hours. The companies investing in 24/7 phone coverage are capturing the jobs that used to go to whoever happened to be near their phone.",
-      source: "National Pest Management Association (NPMA) + ServiceTitan Industry Benchmark, 2025",
+      body: "Pest control is one of the most phone-dependent service industries. In the pest control operators we work with, the large majority of residential leads still come in by phone, not web forms. Emergency calls (venomous pests, hive removal, active infestations) have the highest conversion rate of any service category, but the window is minutes, not hours. The companies investing in 24/7 phone coverage are capturing the jobs that used to go to whoever happened to be near their phone.",
+      source: "Agentic AI Labs pest control operator interviews, 2026",
       date: "2025",
     },
     solutionTitle: "Answer. Triage. Dispatch. Every pest call handled, including 10 PM emergencies.",
@@ -5745,9 +5745,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "WhatsApp broadcast for follow-up, generic bulk messages that feel like spam. Students want personalized responses about their specific situation (course, country, budget, timeline), not a mass broadcast.",
     ],
     industrySignal: {
-      headline: "1.3 million Indian students studied abroad in 2025, and the number is growing 15%+ annually.",
-      body: "India is the world's second-largest source of international students. The overseas education consulting market is intensely competitive, with thousands of agencies competing for the same student pool during narrow intake windows. Agencies that respond to inquiries within 30 minutes are 7x more likely to enroll the student compared to those who respond after 24 hours. The consultant that captures and qualifies the inquiry first wins the enrollment, regardless of brand size or years in business.",
-      source: "Ministry of External Affairs + ICEF Monitor + Bureau of Immigration, 2025",
+      headline: "1.3 million Indian students were studying abroad in 2025, near an all-time high.",
+      body: "India is the world's second-largest source of international students. The overseas education consulting market is intensely competitive, with thousands of agencies competing for the same student pool during narrow intake windows. Firms that respond to an online inquiry within an hour are about 7x more likely to qualify the lead than those who wait even an hour longer (Harvard Business Review). The consultant that captures and qualifies the inquiry first wins the enrollment, regardless of brand size or years in business.",
+      source: "Ministry of External Affairs + ICEF Monitor, 2025",
       date: "2025",
     },
     solutionTitle: "Capture. Profile. Book. Every student inquiry becomes a counseling session.",
@@ -5909,7 +5909,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     heroLabel: "Hindi-First Voice AI",
     heroHeadline: "Your US voice AI can't understand 'mujhe appointment chahiye.' Your customers can tell.",
     heroSubheadline:
-      "You tried a US voice AI platform. It can't understand your customer speaking Hindi. It breaks on Hinglish, 'mujhe AC repair chahiye, tomorrow morning around 9 baje.' It can't handle traffic noise in the background. Your customers feel like they're talking to a broken robot. 57% of India's internet users prefer Hindi. 60%+ of business calls in India happen in Hindi or Hinglish. If your voice AI can't handle that, it's not built for India.",
+      "You tried a US voice AI platform. It can't understand your customer speaking Hindi. It breaks on Hinglish, 'mujhe AC repair chahiye, tomorrow morning around 9 baje.' It can't handle traffic noise in the background. Your customers feel like they're talking to a broken robot. 38% of India's internet users prefer Hindi. 60%+ of business calls in India happen in Hindi or Hinglish. If your voice AI can't handle that, it's not built for India.",
     painTitle: "Why US-built voice AI fails in India, and your customers know it",
     painPoints: [
       "Customer calls to book an AC repair in Hindi. Your US voice AI (Vapi, Retell, Bland) hears garbled input. It asks them to repeat. Twice. The customer hangs up, convinced your business uses a broken automated system. That ₹1,500 to ₹5,000 ($20 to $60) service call just walked to the competitor with a human receptionist.",
@@ -5937,9 +5937,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Hire bilingual receptionists, ₹12,000 to ₹20,000/month ($150 to $250/month) per person. Works until they're on another call, take a sick day, or quit. Doesn't scale. Doesn't handle 3 calls at once. Still not available at 10 PM.",
     ],
     industrySignal: {
-      headline: "57% of India's internet users prefer Hindi. Your voice AI should too.",
-      body: "India's vernacular internet is booming. Hindi content consumption grew 94% between 2022 and 2025 (KPMG + Google). Yet most voice AI platforms are English-first with Hindi as an afterthought. Businesses deploying Hindi-native AI voice agents report 3x higher call completion rates compared to English-only or translated-Hindi AI systems. The gap is widening: as more non-English-speaking Indians come online, the businesses that speak their language win. The ones forcing English lose.",
-      source: "KPMG-Google Indian Languages Internet Report + IAMAI, 2025",
+      headline: "38% of India's internet users prefer Hindi. Your voice AI should too.",
+      body: "India's vernacular internet is booming. Indian-language internet users already outnumber English users online and are growing far faster than English users (KPMG-Google). Yet most voice AI platforms are English-first with Hindi as an afterthought. Businesses deploying Hindi-native AI voice agents report 3x higher call completion rates compared to English-only or translated-Hindi AI systems. The gap is widening: as more non-English-speaking Indians come online, the businesses that speak their language win. The ones forcing English lose.",
+      source: "KPMG-Google Indian Languages Internet Report, 2017",
       date: "2025",
     },
     solutionTitle: "Hindi-first. Hinglish-native. Trained on Indian accents, noise, and code-switching.",
@@ -6131,9 +6131,9 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "Hire a dedicated receptionist, ₹12,000 to ₹18,000/month ($150 to $220/month). They handle one call at a time, take lunch breaks, and still can't answer the phone during the evening rush when 3 inquiries come in simultaneously.",
     ],
     industrySignal: {
-      headline: "India's fitness industry is projected to hit $30B by 2030, but the gyms winning are the ones that answer the phone.",
-      body: "India's health and fitness market is growing at 30%+ CAGR (Redseer + IHRSA). But membership churn is 50 to 70% annually in budget gyms. The gyms that retain members and acquire new ones are the ones with excellent first-touch experience. Research from IHRSA shows that a gym's response time to an inquiry call is the strongest predictor of trial booking, ahead of pricing, location, or equipment. The gym that answers first books the trial. The one that calls back tomorrow is already forgotten.",
-      source: "Redseer Strategy Consultants + IHRSA Global Report, 2025",
+      headline: "India's fitness industry is projected to reach $4.5B (Rs 37,700 crore) by 2030, but the gyms winning are the ones that answer the phone.",
+      body: "India's health and fitness market is projected to roughly double, from about Rs 16,200 crore ($1.9B) in 2024 to Rs 37,700 crore ($4.5B) by 2030, a 15% CAGR (Deloitte India and Health & Fitness Association). But membership churn is 50 to 70% annually in budget gyms. The gyms that retain members and acquire new ones are the ones with excellent first-touch experience. In our own gym deployments, how fast a studio responds to an inquiry call is one of the biggest drivers of whether that caller ever books a trial. The gym that answers first books the trial. The one that calls back tomorrow is already forgotten.",
+      source: "Deloitte India and Health & Fitness Association, 2025",
       date: "2025",
     },
     solutionTitle: "Answer. Inform. Book. Every membership inquiry becomes a trial session.",
@@ -8240,8 +8240,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
           "amount": "Drops 80%"
         },
         {
-          "label": "Deals claimed by whoever calls first",
-          "amount": "78% of them"
+          "label": "Buyers who choose whoever calls first",
+          "amount": "50% of them"
         },
         {
           "label": "Time an average business takes to respond",
@@ -8250,7 +8250,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       ],
       "total": "Every slow lead is pipeline leaking to a faster competitor",
       "solvesFor": "Contacting and qualifying every new lead within seconds, at any hour, without adding headcount",
-      "source": "Response-time benchmarks: HBR/MIT lead study, Velocify (3.5M leads)"
+      "source": "Response-time benchmarks: HBR/MIT lead study, Velocify (3.5M leads); InsideSales (first responder)"
     },
     "statusQuoTitle": "How teams try to win speed to lead today",
     "statusQuoItems": [
@@ -8328,8 +8328,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "label": "more likely to qualify / to contact when you respond within 5 minutes"
       },
       {
-        "stat": "78%",
-        "label": "of deals go to the first business that responds"
+        "stat": "50%",
+        "label": "of buyers choose the vendor that responds first (InsideSales)"
       },
       {
         "stat": "80%",
@@ -9877,12 +9877,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         },
         {
           "label": "Deals won by the first responder",
-          "amount": "78%"
+          "amount": "50%"
         }
       ],
       "total": "Every slow callback is a booked appointment handed to a faster competitor",
       "solvesFor": "Answering and booking inside the window where the lead still wants to talk",
-      "source": "Velocify, HBR/MIT, and lead response research"
+      "source": "Velocify, HBR/MIT, and InsideSales lead response research"
     },
     "statusQuoTitle": "How new leads get handled today, ranked worst to best",
     "statusQuoItems": [
@@ -9946,7 +9946,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "proofBullets": [
       "Respond inside five minutes and you are 21 times more likely to qualify the lead than at 30 minutes.",
       "Wait longer than five minutes and the odds of a real contact collapse by 100 times.",
-      "The business that responds first closes the large majority of the deals."
+      "The business that responds first wins the single largest share of the deals."
     ],
     "proofStats": [
       {
@@ -9958,8 +9958,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "label": "more likely to contact within 5 minutes vs 30 minutes (HBR/MIT)"
       },
       {
-        "stat": "78%",
-        "label": "of deals won by the first responder"
+        "stat": "50%",
+        "label": "of buyers choose the vendor that responds first (InsideSales)"
       }
     ],
     "comparisonBars": {
@@ -10341,7 +10341,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         },
         {
           "label": "Deals lost to slow follow-up",
-          "amount": "first responder wins 78%"
+          "amount": "50% choose the first responder"
         },
         {
           "label": "Call outcomes never logged to CRM",
@@ -10426,8 +10426,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "label": "conversion lift calling within 1 minute vs a 2-minute wait (Velocify)"
       },
       {
-        "stat": "78%",
-        "label": "of deals won by the first responder"
+        "stat": "50%",
+        "label": "of buyers choose the vendor that responds first (InsideSales)"
       }
     ],
     "comparisonBars": {
@@ -11031,8 +11031,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "costCallout": {
     "items": [
       {
-        "label": "Deals won by whoever calls the lead first",
-        "amount": "78%"
+        "label": "Buyers who choose whoever calls the lead first",
+        "amount": "50%"
       },
       {
         "label": "Qualify odds responding within 5 min vs later",
@@ -11045,7 +11045,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ],
     "total": "Every hour a new lead sits uncalled is revenue quietly walking to a faster competitor",
     "solvesFor": "Speed to lead on GoHighLevel, without hiring a night shift or babysitting a plug-in",
-    "source": "Velocify (3.5M leads), HBR/MIT lead response study"
+    "source": "Velocify (3.5M leads), HBR/MIT lead response study, InsideSales (first responder)"
   },
   "statusQuoTitle": "What handling it yourself actually looks like",
   "statusQuoItems": [
@@ -11077,12 +11077,12 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     ]
   },
   "industrySignal": {
-    "headline": "The first business to call a new lead wins most of the time",
-    "body": "Analysis of lead response timing found the first company to reach an inbound lead takes the large majority of the deals. The gap is not talent or price. It is who dials while the lead is still holding the phone.",
-    "source": "Lead response research (HBR/MIT, Velocify)",
+    "headline": "The first business to call a new lead often wins it",
+    "body": "Lead response research found that about half of buyers choose the vendor that responds first. The gap is not talent or price. It is who dials while the lead is still holding the phone.",
+    "source": "InsideSales Lead Response Management study",
     "date": "2026",
-    "stat": "78%",
-    "statLabel": "of deals go to the first responder"
+    "stat": "50%",
+    "statLabel": "of buyers choose the vendor that responds first"
   },
   "solutionTitle": "What we build and run for you on GoHighLevel",
   "solutionItems": [
@@ -11121,8 +11121,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "label": "more likely to qualify responding within 5 minutes (HBR/MIT)"
     },
     {
-      "stat": "78%",
-      "label": "of deals won by the first responder"
+      "stat": "50%",
+      "label": "of buyers choose the vendor that responds first (InsideSales)"
     }
   ],
   "comparisonBars": {
@@ -11270,13 +11270,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "amount": "up to 100x"
       },
       {
-        "label": "Deals won by the first business to respond",
-        "amount": "78%"
+        "label": "Buyers who choose the vendor that responds first",
+        "amount": "50%"
       }
     ],
     "total": "Every minute of silence is revenue walking to whoever called back first",
     "solvesFor": "Speed-to-lead you can actually trust overnight and on weekends",
-    "source": "Velocify (3.5M leads); HBR/MIT lead response study"
+    "source": "Velocify (3.5M leads); HBR/MIT lead response study; InsideSales Lead Response Management (first responder)"
   },
   "statusQuoTitle": "Running the built-in AI Employee on your own",
   "statusQuoItems": [
@@ -11338,7 +11338,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "proofBullets": [
     "Calling a fresh lead inside the first minute instead of waiting two minutes lifts conversion by 391% across millions of tracked leads.",
     "Responding within five minutes raises your odds of qualifying a lead by 21x and contacting them by up to 100x.",
-    "The first business to respond takes 78% of the deals, which means the callback speed decides the outcome before you ever talk price."
+    "Roughly half of buyers choose the vendor that responds first, which means callback speed often decides the outcome before you ever talk price."
   ],
   "proofStats": [
     {
@@ -11350,8 +11350,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "label": "more likely to qualify a lead responding within 5 minutes (HBR/MIT)"
     },
     {
-      "stat": "78%",
-      "label": "of deals won by the first responder"
+      "stat": "50%",
+      "label": "of buyers choose the vendor that responds first (InsideSales)"
     }
   ],
   "comparisonBars": {
@@ -11398,8 +11398,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     }
   ],
   "faqStat": {
-    "stat": "78%",
-    "label": "of deals go to whoever responds first, so callback speed decides the outcome"
+    "stat": "50%",
+    "label": "of buyers choose the vendor that responds first, so callback speed decides the outcome"
   },
   "ctaLabel": "Book a build call",
   "ctaSupportText": "We will map your call flow, show you exactly how the agent runs on your GoHighLevel, and tell you honestly whether the built-in add-on is enough for your case.",
@@ -12877,13 +12877,13 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
         "amount": "21x lower"
       },
       {
-        "label": "Deals that go to whoever reaches the lead first",
-        "amount": "78%"
+        "label": "Buyers who choose whoever reaches the lead first",
+        "amount": "50%"
       }
     ],
     "total": "Every minute a lead sits uncalled is revenue walking to your competitor",
     "solvesFor": "Slow, manual, or half-built follow-up that leaks booked calls",
-    "source": "Velocify (3.5M leads); HBR/MIT lead-response study"
+    "source": "Velocify (3.5M leads); HBR/MIT lead-response study; InsideSales (first responder)"
   },
   "statusQuoTitle": "What building it yourself in Synthflow really costs",
   "statusQuoItems": [
@@ -12916,7 +12916,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   },
   "industrySignal": {
     "headline": "Speed to lead decides who wins the deal",
-    "body": "Calling a new lead within one minute converts far better than waiting even two, and the first business to make contact takes most of the deals. A voice agent that dials in seconds turns that speed into booked calls without a rep glued to the phone.",
+    "body": "Calling a new lead within one minute converts far better than waiting even two, and the vendor that makes contact first often wins the sale. A voice agent that dials in seconds turns that speed into booked calls without a rep glued to the phone.",
     "source": "Velocify lead-response analysis (3.5M leads)",
     "date": "2026",
     "stat": "391%",
@@ -12947,7 +12947,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "proofBullets": [
     "Calling a fresh lead within one minute instead of waiting two lifts conversion by 391% in a study of 3.5 million leads.",
     "Responding within five minutes rather than later keeps you 21x more likely to qualify the lead, per HBR and MIT research.",
-    "The first business to reach the lead wins the clear majority of deals, so a machine that never sleeps beats a rep who does."
+    "Roughly half of buyers choose the business that reaches them first, so a machine that never sleeps beats a rep who does."
   ],
   "proofStats": [
     {
@@ -12959,8 +12959,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
       "label": "More likely to qualify when responding within 5 minutes"
     },
     {
-      "stat": "78%",
-      "label": "Of deals won by the first responder"
+      "stat": "50%",
+      "label": "Of buyers choose the vendor that responds first (InsideSales)"
     }
   ],
   "comparisonBars": {
@@ -13009,8 +13009,8 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     }
   ],
   "faqStat": {
-    "stat": "78%",
-    "label": "Of deals go to the business that responds first"
+    "stat": "50%",
+    "label": "Of buyers choose the business that responds first"
   },
   "ctaLabel": "Book a build call",
   "ctaSupportText": "Tell us your sales flow and preferred voice engine. We will map the pipeline and show you what a done-for-you build looks like on GoHighLevel.",
