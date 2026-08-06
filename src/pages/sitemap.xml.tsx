@@ -32,20 +32,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       { path: "/privacy-policy/", priority: 0.3, lastmod: "2026-01-15" },
     ];
 
-    // Get blog posts
-    const posts = await getPosts();
-    const publicPosts = filterPosts(posts, {
-      acceptStatus: ["Public"],
-      acceptType: ["Post"],
-    });
-
-    // Get agents
-    const agents = await getAgents();
-    const publicAgents = filterPosts(agents, {
-      acceptStatus: ["Public", "PublicOnDetail"],
-      acceptType: ["Agent"],
-    });
-
     const fields: ISitemapField[] = [];
 
     // Add static routes (root level)
@@ -74,35 +60,66 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       });
     });
 
-    // Add blog posts - with trailing slashes for SEO
-    publicPosts.forEach((post) => {
-      fields.push({
-        loc: `${base}/blog/${post.slug}/`,
-        lastmod: new Date(
-          post.date?.start_date || post.createdTime
-        ).toISOString(),
-        changefreq: "weekly" as const,
-        priority: 0.7,
+    // Blog posts and agents come from Notion. Fetch them in isolated try/catch
+    // blocks so a Notion API failure only drops those URLs, it can never wipe the
+    // static and programmatic URLs already pushed above. A single Notion hiccup
+    // previously emptied the entire sitemap.
+    try {
+      const posts = await getPosts();
+      const publicPosts = filterPosts(posts, {
+        acceptStatus: ["Public"],
+        acceptType: ["Post"],
       });
-    });
+      publicPosts.forEach((post) => {
+        fields.push({
+          loc: `${base}/blog/${post.slug}/`,
+          lastmod: new Date(
+            post.date?.start_date || post.createdTime
+          ).toISOString(),
+          changefreq: "weekly" as const,
+          priority: 0.7,
+        });
+      });
+    } catch (error) {
+      console.error("Sitemap: failed to fetch blog posts from Notion:", error);
+    }
 
-    // Add agent pages - with trailing slashes for SEO
-    publicAgents.forEach((agent) => {
-      fields.push({
-        loc: `${base}/agent/${agent.slug}/`,
-        lastmod: new Date(
-          agent.date?.start_date || agent.createdTime
-        ).toISOString(),
-        changefreq: "weekly" as const,
-        priority: 0.7,
+    try {
+      const agents = await getAgents();
+      const publicAgents = filterPosts(agents, {
+        acceptStatus: ["Public", "PublicOnDetail"],
+        acceptType: ["Agent"],
       });
-    });
+      publicAgents.forEach((agent) => {
+        fields.push({
+          loc: `${base}/agent/${agent.slug}/`,
+          lastmod: new Date(
+            agent.date?.start_date || agent.createdTime
+          ).toISOString(),
+          changefreq: "weekly" as const,
+          priority: 0.7,
+        });
+      });
+    } catch (error) {
+      console.error("Sitemap: failed to fetch agents from Notion:", error);
+    }
 
     return getServerSideSitemapLegacy(ctx, fields);
   } catch (error) {
     console.error("Error generating sitemap:", error);
-    // Return empty sitemap on error
-    return getServerSideSitemapLegacy(ctx, []);
+    // Last-resort fallback: at least emit the static + programmatic URLs, which
+    // have no external dependencies, rather than an empty sitemap.
+    const base = "https://www.tryagentikai.com";
+    const fallback: ISitemapField[] = [
+      { loc: base, lastmod: CONTENT_LASTMOD, changefreq: "weekly", priority: 1.0 },
+      ...PROGRAMMATIC_SEO_PAGES.map((page) => ({
+        loc: `${base}/${page.pathSegments.join("/")}/`,
+        lastmod: new Date(page.lastmod || CONTENT_LASTMOD).toISOString(),
+        changefreq: "weekly" as const,
+        priority: 0.8,
+      })),
+    ];
+    return getServerSideSitemapLegacy(ctx, fallback);
   }
 };
 
