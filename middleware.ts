@@ -30,6 +30,34 @@ import { NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // ── Markdown via content negotiation ──────────────────────────────────────
+  // A request for any page with Accept: text/markdown is rewritten to the
+  // markdown API, which 404s gracefully for non-programmatic paths. The pretty
+  // /<slug>.md suffix is handled by a rewrite in next.config (more reliable
+  // than middleware for extension matching). Both give AI agents clean text.
+  const accept = request.headers.get("accept") || "";
+  const wantsMarkdown = accept.includes("text/markdown") && !accept.includes("text/html");
+  const isInfra =
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/~partytown") ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/robots.txt" ||
+    pathname === "/llms.txt" ||
+    pathname === "/mcp" ||
+    pathname === "/mcp/";
+
+  if (!isInfra && wantsMarkdown) {
+    const clean = pathname.replace(/^\/+|\/+$/g, "");
+    if (clean) {
+      const url = request.nextUrl.clone();
+      // trailingSlash: true means the API route only resolves at /api/md/<slug>/.
+      url.pathname = `/api/md/${clean}/`;
+      return NextResponse.rewrite(url);
+    }
+  }
+  // ──────────────────────────────────────────────────────────────────────────
+
   // ── Voice agent geo-routing ───────────────────────────────────────────────
   // India (IN) → /ai-voice-agent (India pricing)
   // Everyone else → /ai-voice-agent-global (global pricing)

@@ -336,17 +336,29 @@ const nextConfig: NextConfig = {
   },
   // Rewrites for external API calls and Partytown
   async rewrites() {
-    return [
-      {
-        source: "/api/geolocation",
-        destination: "https://ipapi.co/json/",
-      },
-      // Partytown web worker files
-      {
-        source: "/~partytown/:path*",
-        destination: "/node_modules/@builder.io/partytown/lib/:path*",
-      },
-    ];
+    return {
+      // beforeFiles runs before the filesystem, so the pretty .md suffix is
+      // caught before Next tries (and fails) to match it as a page. Serves the
+      // markdown representation of any programmatic page to AI agents. The
+      // trailing slash on the destination is required by trailingSlash: true.
+      beforeFiles: [
+        {
+          source: "/:slug*.md",
+          destination: "/api/md/:slug*/",
+        },
+      ],
+      afterFiles: [
+        {
+          source: "/api/geolocation",
+          destination: "https://ipapi.co/json/",
+        },
+        // Partytown web worker files
+        {
+          source: "/~partytown/:path*",
+          destination: "/node_modules/@builder.io/partytown/lib/:path*",
+        },
+      ],
+    };
   },
   // Modern JavaScript target
   compiler: {
