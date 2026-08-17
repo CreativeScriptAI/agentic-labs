@@ -118,9 +118,12 @@ const McpPage = ({ groups }: Props) => {
           <h2 className="font-alte text-2xl tracking-[-0.03em] mt-14 mb-4">For machines</h2>
           <ul className="space-y-2.5 text-[15px] leading-[1.6]">
             <li>
+              {/* Plain anchors: these are text/xml endpoints, not React pages, so we want a full navigation, not client-side routing. */}
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a href="/llms.txt" className="text-blue-700 underline underline-offset-2">/llms.txt</a>: curated map of the site for AI crawlers.
             </li>
             <li>
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
               <a href="/sitemap.xml" className="text-blue-700 underline underline-offset-2">/sitemap.xml</a>: all indexable URLs.
             </li>
             <li>
