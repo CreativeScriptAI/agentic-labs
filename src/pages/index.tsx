@@ -141,18 +141,18 @@ const HomePage: NextPageWithLayout<HomePageProps> = ({ agentsApiRaw }) => {
   }
 
   const meta = {
-    title: "Agentic AI Labs | AI That Answers, Qualifies & Books Your Leads",
+    title: "GTM Engineering Team for Marketing & Sales | Agentic AI Labs",
     description:
-      "We build AI that handles every call and message, qualifies leads, and books them, across every channel. Outcomes, not tools. Make AI work, so you don't have to.",
+      "You don't have a marketing problem. You need a system built to deliver results. Our engineers build and deploy the marketing and sales AI agents and automations that turn cold leads into booked customers, inside the tools you already use. Done for you.",
     type: "Website",
     url: "https://www.tryagentikai.com",
     keywords: [
-      "AI systems",
-      "voice agents",
-      "AI automation",
-      "AI memory",
-      "production AI",
-      "AI for business",
+      "ai automation agency",
+      "marketing and sales automation",
+      "ai workflow automation",
+      "lead generation",
+      "marketing automation agency",
+      "gtm engineering",
     ],
     schema: {
       "@context": "https://schema.org",
