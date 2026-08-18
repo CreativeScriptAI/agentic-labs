@@ -28,24 +28,19 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* ── Left: copy (animates in on load) ────────────────────────── */}
           <div className="text-center lg:text-left">
-            {/* Eyebrow: GTM engineering team positioning */}
-            <p className="font-geist font-normal text-[12px] sm:text-[13px] leading-[1.5] tracking-[0.01em] text-red-500 mb-5 max-w-lg mx-auto lg:mx-0">
-              A GTM engineering team that builds and deploys your marketing and sales AI agents and automations, inside your business.
-            </p>
-
             {/* Headline: opinionated hook, scramble reveal */}
             <h1 className="font-alte font-normal tracking-[-0.04em] leading-[1.08] mb-6 text-[34px] sm:text-[44px] lg:text-[52px]">
               <ScrambleText
                 as="span"
                 mode="heading"
-                text="You don't have a marketing problem."
+                text="Most AI is a demo."
                 delay={220}
                 className="block text-[#0A1128]"
               />
               <ScrambleText
                 as="span"
                 mode="heading"
-                text="You need a system built to deliver results."
+                text="We build the kind that survives a real customer."
                 delay={480}
                 className="block text-blue-600 mt-1"
               />
@@ -56,7 +51,7 @@ const HeroSection = () => {
               as="p"
               mode="body"
               delay={700}
-              text="Every customer starts cold and buys when they're ready. Our engineers build the system that gets them there, from found to booked, and own the result, not just the build."
+              text="We build the AI agents and automations that handle the repetitive work: the calls, the follow-ups, the bookings, the busywork. Then we run them for you. You get the outcome. You never touch the wires."
               className="font-alte font-normal text-slate-600 text-[15px] leading-[1.5] tracking-[-0.04em] max-w-lg mx-auto lg:mx-0"
             />
             <motion.p
@@ -65,7 +60,7 @@ const HeroSection = () => {
               transition={{ ...FADE_UP, delay: 1.0 }}
               className="font-alte font-normal text-slate-800 text-[15px] leading-[1.5] tracking-[-0.04em] max-w-lg mx-auto lg:mx-0 mt-3"
             >
-              You&apos;re hiring a team, not buying software.
+              Make AI work. So you don&apos;t have to.
             </motion.p>
 
             {/* CTAs */}
@@ -76,7 +71,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4 mt-8"
             >
               <BracketButton
-                label="Show me the customers I'm missing"
+                label="Book a free call"
                 href="/ai-clarity-workshop"
                 variant="primary"
               />
