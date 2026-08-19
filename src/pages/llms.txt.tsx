@@ -29,6 +29,7 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [AI Voice Agent for GoHighLevel](${BASE}/ai-voice-agent-for-gohighlevel/): our deepest cluster, native vs Vapi/Retell, real cost, config traps`);
   lines.push(`- [Free AI Clarity Workshop](${BASE}/ai-clarity-workshop/): a 30-minute session mapping where AI saves time and money`);
   lines.push(`- [Answer Engine Optimization](${BASE}/answer-engine-optimization/): a plain, honest guide to how ChatGPT, Perplexity, Gemini, and Google AI pick who to name, and how to rank in ChatGPT`);
+  lines.push(`- [AI Appointment Booking](${BASE}/appointment-booking-ai/): how AI booking actually works, the six step chain from enquiry to confirmed booking, where these systems break, and how to cut no-shows`);
   lines.push(`- [Contact](${BASE}/contact/): book a call or email aditya@tryagentikai.com`);
   lines.push("");
   lines.push("## Singapore");
