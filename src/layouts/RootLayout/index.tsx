@@ -75,6 +75,7 @@ const RootLayout = ({
     "/[...pseo]",
     "/ai-visibility-checker",
     "/ai-visibility-checker/report/[id]",
+    "/lead-generation-agency-singapore",
   ];
   const isFullWidth = FULL_WIDTH_ROUTES.includes(router.pathname);
 

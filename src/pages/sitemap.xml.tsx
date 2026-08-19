@@ -24,6 +24,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       { path: "/ai-clarity-workshop/", priority: 0.9, lastmod: "2026-07-21" },
       { path: "/ai-visibility-checker/", priority: 0.9, lastmod: "2026-08-19" },
       { path: "/answer-engine-optimization/", priority: 0.9, lastmod: "2026-08-19" },
+      { path: "/lead-generation-agency-singapore/", priority: 0.9, lastmod: "2026-08-20" },
       { path: "/mcp/", priority: 0.7, lastmod: CONTENT_LASTMOD },
       { path: "/ai-memory-system/", priority: 0.9, lastmod: "2026-06-01" },
       { path: "/ai-voice-agent/", priority: 0.95, lastmod: CONTENT_LASTMOD },

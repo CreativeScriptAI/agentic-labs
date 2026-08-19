@@ -26,6 +26,7 @@ const HERO = {
 // Lens A — By Outcome / job-to-be-done (PRIMARY lens). Mapped to the closest existing pages.
 const BY_OUTCOME: NavLink[] = [
   { name: "Answer, qualify & book every lead", to: "/ai-voice-agent/" },
+  { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
   { name: "Never miss a call", to: "/ai-for-missed-calls/" },
   { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
   { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },

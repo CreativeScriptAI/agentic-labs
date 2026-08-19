@@ -120,6 +120,12 @@ const FOOTER_COLUMNS: FootColumn[] = [
     ],
   },
   {
+    heading: "Singapore",
+    links: [
+      { name: "Lead Generation Agency Singapore", to: "/lead-generation-agency-singapore/" },
+    ],
+  },
+  {
     heading: "Free Tools",
     links: [
       { name: "AI Visibility Checker", to: "/ai-visibility-checker/" },
