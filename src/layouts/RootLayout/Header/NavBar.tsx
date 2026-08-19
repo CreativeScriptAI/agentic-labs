@@ -106,10 +106,15 @@ const COMPARE_ROUNDUPS: NavLink[] = [
 // Resources — the authority layer.
 const RESOURCES: NavLink[] = [
   { name: "Free AI Clarity Workshop", to: "/ai-clarity-workshop/", desc: "A free 30-minute session mapping where AI saves you time and money." },
+  { name: "Answer Engine Optimization", to: "/answer-engine-optimization/", desc: "How to get named by ChatGPT, Perplexity, Gemini, and Google AI." },
   { name: "Blog", to: "/blog/", desc: "Guides, case studies, and insights." },
   { name: "AI Agents Repo", to: "/agents-repo/", desc: "Browse our library of pre-built AI agents." },
   { name: "Why our agents remember", to: "/ai-memory-system/", desc: "The memory system behind production-grade AI." },
   { name: "Glossary: What is Agentic AI?", to: "/glossary/what-is-agentic-ai/", desc: "Plain-English definitions." },
+];
+
+const FREE_TOOLS: NavLink[] = [
+  { name: "AI Visibility Checker", to: "/ai-visibility-checker/", desc: "See if ChatGPT, Perplexity, Google AI, Gemini, Grok, and Claude name you, plus site health." },
 ];
 
 // ─── Icons ─────────────────────────────────────────────────────────────────────
@@ -131,6 +136,7 @@ const NAV = {
   SOLUTIONS: 1,
   COMPARE: 2,
   RESOURCES: 3,
+  TOOLS: 4,
 } as const;
 
 const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
@@ -288,6 +294,24 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
             )}
           </li>
 
+          {/* Free Tools */}
+          <li>
+            <button
+              onClick={() => toggleGroup(NAV.TOOLS)}
+              className="w-full flex items-center justify-between py-3 px-2 font-alte text-base font-normal tracking-[-0.04em] text-gray-700 rounded-none"
+            >
+              <span>Free Tools</span>
+              <ChevronDown open={openMobileGroup === NAV.TOOLS} />
+            </button>
+            {openMobileGroup === NAV.TOOLS && (
+              <ul className="pl-4 pb-2 space-y-1">
+                {FREE_TOOLS.map((l) => (
+                  <li key={l.to}><Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-600 hover:text-[#0062FF] rounded-none">{l.name}</Link></li>
+                ))}
+              </ul>
+            )}
+          </li>
+
           {/* Services */}
           <li>
             <Link
@@ -335,6 +359,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
   const solutionsActive = anyActive([...BY_OUTCOME, ...allIndustries, { name: "", to: HERO.to }]);
   const compareActive = anyActive([...COMPARE_ALTERNATIVES, ...COMPARE_ROUNDUPS]);
   const resourcesActive = anyActive(RESOURCES);
+  const toolsActive = anyActive(FREE_TOOLS);
 
   return (
     <nav ref={navRef} className="flex">
@@ -456,6 +481,29 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#e7e6e4] rotate-45" />
               <ul className="p-2">
                 {RESOURCES.map((l) => (
+                  <li key={l.to}>
+                    <Link href={l.to} onClick={close} className={`block px-3 py-3 rounded-none transition-colors hover:bg-[#F9F6F4] ${isActive(l.to) ? "bg-[#F9F6F4]" : ""}`}>
+                      <span className="font-alte text-[15px] font-normal tracking-[-0.04em] text-[#0A1128] block" style={{ whiteSpace: "nowrap" }}>{l.name}</span>
+                      {l.desc && <p className="font-alte text-[15px] tracking-[-0.04em] text-gray-400 leading-snug mt-0.5">{l.desc}</p>}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </li>
+
+        {/* ── Free Tools (dropdown) ── */}
+        <li className="relative">
+          <button onClick={() => toggle(NAV.TOOLS)} className={triggerClass(toolsActive, openDropdown === NAV.TOOLS)}>
+            Free Tools
+            <ChevronDown open={openDropdown === NAV.TOOLS} />
+          </button>
+          {openDropdown === NAV.TOOLS && (
+            <div className="absolute top-full left-0 mt-3 rounded-none bg-white border border-[#e7e6e4] z-50" style={{ width: "max-content", minWidth: "280px", maxWidth: "340px" }}>
+              <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white border-l border-t border-[#e7e6e4] rotate-45" />
+              <ul className="p-2">
+                {FREE_TOOLS.map((l) => (
                   <li key={l.to}>
                     <Link href={l.to} onClick={close} className={`block px-3 py-3 rounded-none transition-colors hover:bg-[#F9F6F4] ${isActive(l.to) ? "bg-[#F9F6F4]" : ""}`}>
                       <span className="font-alte text-[15px] font-normal tracking-[-0.04em] text-[#0A1128] block" style={{ whiteSpace: "nowrap" }}>{l.name}</span>

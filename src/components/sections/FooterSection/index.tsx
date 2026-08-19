@@ -120,9 +120,16 @@ const FOOTER_COLUMNS: FootColumn[] = [
     ],
   },
   {
+    heading: "Free Tools",
+    links: [
+      { name: "AI Visibility Checker", to: "/ai-visibility-checker/" },
+    ],
+  },
+  {
     heading: "Resources",
     links: [
       { name: "Blog", to: "/blog/" },
+      { name: "Answer Engine Optimization", to: "/answer-engine-optimization/" },
       { name: "AI Agents Repo", to: "/agents-repo/" },
       { name: "AI Memory System", to: "/ai-memory-system/" },
       { name: "AI Clarity Workshop", to: "/ai-clarity-workshop/" },

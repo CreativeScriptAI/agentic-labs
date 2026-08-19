@@ -69,7 +69,13 @@ const RootLayout = ({
   const hideNav = NO_NAV_ROUTES.includes(router.pathname);
 
   // Pages that need full-width treatment (no max-width / padding constraint)
-  const FULL_WIDTH_ROUTES = ["/ai-voice-agent", "/ai-voice-agent-global", "/[...pseo]"];
+  const FULL_WIDTH_ROUTES = [
+    "/ai-voice-agent",
+    "/ai-voice-agent-global",
+    "/[...pseo]",
+    "/ai-visibility-checker",
+    "/ai-visibility-checker/report/[id]",
+  ];
   const isFullWidth = FULL_WIDTH_ROUTES.includes(router.pathname);
 
   return (

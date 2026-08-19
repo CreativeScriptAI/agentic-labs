@@ -28,7 +28,13 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [Services](${BASE}/services/): the full done-for-you offering`);
   lines.push(`- [AI Voice Agent for GoHighLevel](${BASE}/ai-voice-agent-for-gohighlevel/): our deepest cluster, native vs Vapi/Retell, real cost, config traps`);
   lines.push(`- [Free AI Clarity Workshop](${BASE}/ai-clarity-workshop/): a 30-minute session mapping where AI saves time and money`);
+  lines.push(`- [Answer Engine Optimization](${BASE}/answer-engine-optimization/): a plain, honest guide to how ChatGPT, Perplexity, Gemini, and Google AI pick who to name, and how to rank in ChatGPT`);
   lines.push(`- [Contact](${BASE}/contact/): book a call or email aditya@tryagentikai.com`);
+  lines.push("");
+  lines.push("## Free tools");
+  lines.push(
+    `- [AI Visibility Checker](${BASE}/ai-visibility-checker/): see whether ChatGPT, Perplexity, Google AI, Gemini, Grok, and Claude name your business, plus a full site health audit`
+  );
   lines.push("");
 
   // Group programmatic pages by type
