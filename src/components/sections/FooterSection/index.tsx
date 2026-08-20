@@ -137,6 +137,7 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "Blog", to: "/blog/" },
       { name: "Answer Engine Optimization", to: "/answer-engine-optimization/" },
       { name: "AI Appointment Booking", to: "/appointment-booking-ai/" },
+      { name: "Lead Qualification", to: "/lead-qualification/" },
       { name: "AI Agents Repo", to: "/agents-repo/" },
       { name: "AI Memory System", to: "/ai-memory-system/" },
       { name: "AI Clarity Workshop", to: "/ai-clarity-workshop/" },
