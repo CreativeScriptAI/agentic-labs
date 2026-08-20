@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import Image from "next/image";
 
 type Shot = { src: string; caption: string; credit?: string; photo?: boolean };
 
@@ -24,7 +25,7 @@ const Card: React.FC<{ shot: Shot; index: number; wide: boolean }> = ({ shot, in
       className={`${wide ? "sm:col-span-2" : ""} rounded-none border border-[#e7e6e4] bg-white overflow-hidden`}
       style={{ opacity: 0, transform: "translateY(16px)" }}
     >
-      {/* Browser chrome bar — only on UI mockups, not real photos */}
+      {/* Browser chrome bar, only on UI mockups, not real photos */}
       {!shot.photo && (
         <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-[#e7e6e4] bg-[#F9F6F4]">
           <span className="w-2.5 h-2.5 rounded-full bg-[#e7e6e4]" />
@@ -33,8 +34,13 @@ const Card: React.FC<{ shot: Shot; index: number; wide: boolean }> = ({ shot, in
         </div>
       )}
       <div className={`relative w-full ${wide ? "h-[320px]" : "h-[240px]"} bg-[#F9F6F4]`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={shot.src} alt={shot.caption} className="w-full h-full object-cover object-top" />
+        <Image
+          src={shot.src}
+          alt={shot.caption}
+          fill
+          sizes="(max-width: 768px) 100vw, 400px"
+          className="object-cover object-top"
+        />
       </div>
       <div className="px-5 py-4 border-t border-[#e7e6e4]">
         <p className="font-alte font-normal text-[14px] text-[#0A1128] leading-[1.4] tracking-[-0.04em]">{shot.caption}</p>

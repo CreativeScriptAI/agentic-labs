@@ -1,6 +1,7 @@
 import { NextPageWithLayout } from "../../types";
 import MetaConfig from "src/components/MetaConfig";
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -205,9 +206,9 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
                                 <div className="space-y-6 pt-4">
                                     <div className="flex items-center gap-3">
                                         <div className="flex -space-x-2">
-                                            <img src="/images/avatar-1.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                                            <img src="/images/avatar-2.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                                            <img src="/images/avatar-3.png" alt="Customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                            <Image src="/images/avatar-1.png" alt="Customer" width={32} height={32} className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                            <Image src="/images/avatar-2.png" alt="Customer" width={32} height={32} className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                                            <Image src="/images/avatar-3.png" alt="Customer" width={32} height={32} className="w-8 h-8 rounded-full border-2 border-white object-cover" />
                                         </div>
                                         <p className="text-[15px] text-gray-600 font-alte font-normal tracking-[-0.04em]">
                                             Proven on <span className="text-gray-900">49,000+ minutes</span> of live calls
