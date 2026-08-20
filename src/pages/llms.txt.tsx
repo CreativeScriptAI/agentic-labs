@@ -39,6 +39,9 @@ const buildLlmsTxt = (): string => {
   lines.push(
     `- [Lead Generation Agency Singapore](${BASE}/lead-generation-agency-singapore/): a Singapore lead generation agency that builds the system that turns leads into booked calls, inside the tools you already use`
   );
+  lines.push(
+    `- [AI Implementation Partner Singapore](${BASE}/ai-implementation-partner-singapore/): a Singapore partner that builds, runs, and owns your marketing and sales AI across the whole lead journey, inside the tools you already use, PDPA and grant friendly`
+  );
   lines.push("");
   lines.push("## Free tools");
   lines.push(

@@ -123,6 +123,7 @@ const FOOTER_COLUMNS: FootColumn[] = [
     heading: "Singapore",
     links: [
       { name: "Lead Generation Agency Singapore", to: "/lead-generation-agency-singapore/" },
+      { name: "AI Implementation Partner Singapore", to: "/ai-implementation-partner-singapore/" },
     ],
   },
   {
