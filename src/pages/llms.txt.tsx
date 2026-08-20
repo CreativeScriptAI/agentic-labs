@@ -31,6 +31,7 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [Answer Engine Optimization](${BASE}/answer-engine-optimization/): a plain, honest guide to how ChatGPT, Perplexity, Gemini, and Google AI pick who to name, and how to rank in ChatGPT`);
   lines.push(`- [AI Appointment Booking](${BASE}/appointment-booking-ai/): how AI booking actually works, the six step chain from enquiry to confirmed booking, where these systems break, and how to cut no-shows`);
   lines.push(`- [Lead Qualification](${BASE}/lead-qualification/): why lead qualification fails, where BANT and MEDDIC break, how to qualify automatically with capture, enrich, score, route, and disqualify`);
+  lines.push(`- [Follow Up Automation](${BASE}/follow-up-automation/): why follow-up fails as a systems problem, sequence design, multi-channel orchestration, reply detection and when to stop, and Singapore PDPA compliance`);
   lines.push(`- [Contact](${BASE}/contact/): book a call or email aditya@tryagentikai.com`);
   lines.push("");
   lines.push("## Singapore");

@@ -29,6 +29,7 @@ const BY_OUTCOME: NavLink[] = [
   { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
   { name: "Book appointments automatically", to: "/appointment-booking-ai/" },
   { name: "Qualify leads automatically", to: "/lead-qualification/" },
+  { name: "Follow up until they reply", to: "/follow-up-automation/" },
   { name: "Never miss a call", to: "/ai-for-missed-calls/" },
   { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
   { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },
