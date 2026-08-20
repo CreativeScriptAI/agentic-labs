@@ -7,7 +7,7 @@ export const SOCIAL_COPY: ServiceCopy = {
   meta: {
     title: "Social Media Marketing Singapore | Followers Do Not Pay the Bills, Leads Do | Agentic AI Labs",
     description:
-      "A social media marketing agency in Singapore that turns social into captured, booked leads, not just followers and likes. We answer the DMs and book the calls. From S$1,000 a month, PSG eligible.",
+      "A social media marketing agency in Singapore that turns social into captured, booked leads, not just followers and likes. We answer the DMs and book the calls. Starting from S$100 a month, PSG eligible.",
     keywords: ["social media marketing agency singapore", "social media agency singapore", "social media marketing singapore", "social media management singapore"],
     url: "https://www.tryagentikai.com/social-media-marketing-singapore/",
   },
@@ -58,9 +58,9 @@ export const SOCIAL_COPY: ServiceCopy = {
   pricing: {
     eyebrow: "PRICING",
     heading: "Honest pricing, below the market",
-    price: "S$1,000",
-    unit: "per month, from",
-    market: "Singapore social packages typically start around S$1,200 a month for a basic managed plan. We priced ours below that.",
+    price: "S$100",
+    unit: "per month, starting from",
+    market: "Social packages in Singapore usually start around S$1,200 a month. We open far lower so you can start small and scale only as it works.",
     includes: [
       "Content and creative for your platforms",
       "DM and comment enquiries answered fast",
@@ -70,7 +70,7 @@ export const SOCIAL_COPY: ServiceCopy = {
       "No lock-in contract",
     ],
     grant: "PSG eligible. Qualifying Singapore SMEs may receive up to 50 percent support, subject to IMDA approval. Confirm current eligibility with Enterprise Singapore.",
-    altNote: "Scope and platforms are quoted against your goals after a short assessment. A three month term is the common starting point for social.",
+    altNote: "S$100 is a real starting point, a lean first step or a paid consultation, not the full program. We scope the actual engagement against your goals after a short call, and you only move up when it is producing leads.",
     cta: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
   },
   process: {
@@ -103,7 +103,7 @@ export const SOCIAL_COPY: ServiceCopy = {
     ],
   },
   faqs: [
-    { question: "How much does social media marketing cost in Singapore?", answer: "Basic managed packages typically start around S$800 to S$1,200 a month, rising to S$3,000 or more for fuller service with paid social. We start from S$1,000 a month, priced below the typical market, with scope quoted against your platforms and goals." },
+    { question: "How much does social media marketing cost in Singapore?", answer: "Basic managed packages typically start around S$800 to S$1,200 a month, rising to S$3,000 or more for fuller service with paid social. We open far lower, starting from S$100 a month as a lean first step, with scope quoted against your platforms and goals. You only scale as it produces leads." },
     { question: "Which platforms should my business be on?", answer: "The ones your buyers actually use, not all of them. For some that is Instagram and TikTok, for others LinkedIn. We focus effort where the enquiries come from rather than spreading thin across every platform." },
     { question: "Is social media management PSG grant eligible?", answer: "Digital marketing solutions can be PSG eligible for qualifying Singapore SMEs, commonly up to 50 percent support. We scope engagements to be grant friendly. Confirm current eligibility with Enterprise Singapore." },
     { question: "Followers or leads, what do you actually deliver?", answer: "Leads. Followers and likes are easy to grow and do not pay the bills. We measure and report on captured enquiries and booked calls, and we treat the DMs and comments where buyers actually raise their hand as the main event." },

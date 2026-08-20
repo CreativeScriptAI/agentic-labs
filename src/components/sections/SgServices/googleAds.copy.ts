@@ -8,7 +8,7 @@ export const GOOGLE_ADS_COPY: ServiceCopy = {
   meta: {
     title: "Google Ads Agency Singapore | We Own What Happens After the Click | Agentic AI Labs",
     description:
-      "A Google Ads and SEM agency in Singapore that owns what happens after the click: instant follow up and booked calls, not leads left waiting in a form. From S$850 a month, PSG eligible.",
+      "A Google Ads and SEM agency in Singapore that owns what happens after the click: instant follow up and booked calls, not leads left waiting in a form. Starting from S$100 a month, PSG eligible.",
     keywords: ["sem agency singapore", "google ads agency singapore", "google ads singapore", "ppc agency singapore", "google ads management singapore"],
     url: "https://www.tryagentikai.com/google-ads-agency-singapore/",
   },
@@ -59,9 +59,9 @@ export const GOOGLE_ADS_COPY: ServiceCopy = {
   pricing: {
     eyebrow: "PRICING",
     heading: "Honest pricing, below the market",
-    price: "S$850",
-    unit: "per month management fee, from",
-    market: "Singapore agencies typically charge a flat fee from around S$1,000 a month, or 15 to 20 percent of ad spend. We priced ours below that.",
+    price: "S$100",
+    unit: "per month, starting from",
+    market: "Ad management in Singapore usually start around S$1,000 a month. We open far lower so you can start small and scale only as it works.",
     includes: [
       "Google Ads plus Meta and LinkedIn management",
       "Wasted spend control and bid discipline",
@@ -71,7 +71,7 @@ export const GOOGLE_ADS_COPY: ServiceCopy = {
       "No lock-in contract",
     ],
     grant: "PSG eligible. Qualifying Singapore SMEs may receive up to 50 percent support, subject to IMDA approval. Confirm current eligibility with Enterprise Singapore.",
-    altNote: "On larger accounts we can work at 12 percent of ad spend instead of a flat fee. A minimum ad budget of around S$1,500 a month is the market norm to get real data.",
+    altNote: "S$100 is a real starting point, a lean first step or a paid consultation, not the full program. We scope the actual engagement against your goals after a short call, and you only move up when it is producing leads. On larger accounts we can work at 12 percent of ad spend, with a market-norm minimum budget of around S$1,500 a month.",
     cta: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
   },
   process: {
@@ -105,7 +105,7 @@ export const GOOGLE_ADS_COPY: ServiceCopy = {
   },
   faqs: [
     { question: "How much should I budget for Google Ads in Singapore?", answer: "A common starting point is around S$1,500 a month in ad spend to gather real data, on top of a management fee. Competitive industries need more. We scope a realistic budget against your market and margins rather than pushing you to spend more." },
-    { question: "What is a typical Google Ads management fee in Singapore?", answer: "Agencies usually charge a flat fee from around S$1,000 a month, or 15 to 20 percent of ad spend. We start from S$850 a month, or 12 percent of spend on larger accounts, priced below the typical market." },
+    { question: "What is a typical Google Ads management fee in Singapore?", answer: "Agencies usually charge a flat fee from around S$1,000 a month, or 15 to 20 percent of ad spend. We open far lower, starting from S$100 a month, or 12 percent of spend on larger accounts. It is a starting point that scales as the ads produce booked calls." },
     { question: "Google Ads or SEO, which should I do first?", answer: "Ads buy immediate visibility while SEO compounds over months, so ads are usually the faster path to leads today and SEO the cheaper path over time. Many businesses run both. Either way, the win is booked calls, which is what we connect the traffic to." },
     { question: "How fast will I see results from Google Ads?", answer: "Clicks start immediately, and with speed to lead wired in, booked calls can follow within days. The first weeks are about cutting wasted spend and finding what converts, then scaling it." },
     { question: "Do you run Meta and LinkedIn ads too?", answer: "Yes. We run paid social alongside Google from the same system, so a lead from any channel is answered and booked the same way, with nothing falling between platforms." },

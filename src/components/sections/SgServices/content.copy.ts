@@ -7,7 +7,7 @@ export const CONTENT_COPY: ServiceCopy = {
   meta: {
     title: "Content Marketing Singapore | Content That Converts and Gets Cited by AI | Agentic AI Labs",
     description:
-      "A content marketing agency in Singapore that engineers content to get cited by AI answers and drive leads, not just fill a calendar. Built and run for you, from S$1,700 a month, PSG eligible.",
+      "A content marketing agency in Singapore that engineers content to get cited by AI answers and drive leads, not just fill a calendar. Built and run for you, starting from S$100 a month, PSG eligible.",
     keywords: ["content marketing agency singapore", "content marketing singapore", "content writing services singapore", "copywriting services singapore"],
     url: "https://www.tryagentikai.com/content-marketing-singapore/",
   },
@@ -58,9 +58,9 @@ export const CONTENT_COPY: ServiceCopy = {
   pricing: {
     eyebrow: "PRICING",
     heading: "Honest pricing, below the market",
-    price: "S$1,700",
-    unit: "per month, from",
-    market: "Singapore content retainers typically start around S$2,000 a month. We priced ours below that.",
+    price: "S$100",
+    unit: "per month, starting from",
+    market: "Content programs in Singapore usually start around S$2,000 a month. We open far lower so you can start small and scale only as it works.",
     includes: [
       "Content strategy mapped to buyer questions",
       "Answer-first pieces built to rank and get cited by AI",
@@ -70,7 +70,7 @@ export const CONTENT_COPY: ServiceCopy = {
       "No lock-in contract",
     ],
     grant: "PSG eligible. Qualifying Singapore SMEs may receive up to 50 percent support, subject to IMDA approval. Confirm current eligibility with Enterprise Singapore.",
-    altNote: "Prefer to pay per piece? From S$300 an article. Monthly scope is quoted against your goals after a short assessment.",
+    altNote: "S$100 is a real starting point, a lean first step or a paid consultation, not the full program. We scope the actual engagement against your goals after a short call, and you only move up when it is producing leads. Prefer per piece? That starts low too.",
     cta: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
   },
   process: {
@@ -104,7 +104,7 @@ export const CONTENT_COPY: ServiceCopy = {
   },
   faqs: [
     { question: "What does a content marketing agency actually do?", answer: "It plans, produces, and distributes the content that attracts and converts buyers, articles, guides, landing pages, and the social and email that carry them. Done well it is engineered so the content ranks in search, gets cited by AI answers, and captures the reader as a lead." },
-    { question: "How much does content marketing cost in Singapore?", answer: "Per article commonly runs S$200 to S$500, and monthly retainers typically start around S$2,000 for a handful of pieces. We start from S$1,700 a month, or S$300 an article, priced below the typical market, with scope quoted against your goals." },
+    { question: "How much does content marketing cost in Singapore?", answer: "Per article commonly runs S$200 to S$500, and monthly retainers typically start around S$2,000 for a handful of pieces. We open far lower, starting from S$100 a month as a lean first step, with scope quoted against your goals. You only scale as it produces leads." },
     { question: "Is content marketing PSG grant eligible?", answer: "Digital marketing solutions can be PSG eligible for qualifying Singapore SMEs, commonly up to 50 percent support. We scope engagements to be grant friendly. Confirm current eligibility with Enterprise Singapore, since caps and rules change." },
     { question: "How is this different from just hiring a copywriter?", answer: "A copywriter writes what you brief. We build the strategy, engineer each piece to rank and get cited by AI, wire in the lead capture, and run it as a system. The writing is one part of a machine, not the whole deliverable." },
     { question: "Will my content get cited by AI like ChatGPT and Google AI Overviews?", answer: "That is exactly what we engineer for. Getting named in AI answers uses different signals than a classic ranking, clear answers, real sourcing, and authority, and most content agencies do not build for it. We do." },

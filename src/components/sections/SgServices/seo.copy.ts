@@ -7,7 +7,7 @@ export const SEO_COPY: ServiceCopy = {
   meta: {
     title: "SEO Agency Singapore | Rankings That Turn Into Booked Leads | Agentic AI Labs",
     description:
-      "An SEO agency in Singapore that connects rankings to booked leads, not just a monthly traffic report. Built and run for you, priced from S$1,280 a month, PSG eligible.",
+      "An SEO agency in Singapore that connects rankings to booked leads, not just a monthly traffic report. Built and run for you, starting from S$100 a month, PSG eligible.",
     keywords: ["seo agency singapore", "seo services singapore", "seo company singapore", "seo consultant singapore", "seo singapore"],
     url: "https://www.tryagentikai.com/seo-agency-singapore/",
   },
@@ -58,9 +58,9 @@ export const SEO_COPY: ServiceCopy = {
   pricing: {
     eyebrow: "PRICING",
     heading: "Honest pricing, below the market",
-    price: "S$1,280",
-    unit: "per month, from",
-    market: "Singapore agencies typically charge from S$1,500. We priced ours below that.",
+    price: "S$100",
+    unit: "per month, starting from",
+    market: "SEO retainers in Singapore usually start around S$1,500 a month. We open far lower so you can start small and scale only as it works.",
     includes: [
       "Technical, on-page, off-page, and local SEO",
       "AI answer engine visibility work",
@@ -70,7 +70,7 @@ export const SEO_COPY: ServiceCopy = {
       "No lock-in contract",
     ],
     grant: "PSG eligible. Qualifying Singapore SMEs may receive up to 50 percent support, subject to IMDA approval. Confirm current eligibility with Enterprise Singapore.",
-    altNote: "Scope is quoted against your site after a short paid assessment. This is the honest starting point, not a bait price.",
+    altNote: "S$100 is a real starting point, a lean first step or a paid consultation, not the full program. We scope the actual engagement against your goals after a short call, and you only move up when it is producing leads.",
     cta: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
   },
   process: {
@@ -103,7 +103,7 @@ export const SEO_COPY: ServiceCopy = {
     ],
   },
   faqs: [
-    { question: "How much does SEO cost in Singapore?", answer: "Singapore SEO retainers commonly run from about S$800 for a basic package to S$3,000 or more for serious work, with a typical serious entry around S$1,500. We start from S$1,280 a month, priced below the typical market, and scope the exact figure against your site after a short paid audit." },
+    { question: "How much does SEO cost in Singapore?", answer: "Singapore SEO retainers commonly run from about S$800 for a basic package to S$3,000 or more for serious work, with a typical serious entry around S$1,500. We open far lower than that, starting from S$100 a month as a lean first step, and scope the right figure against your site after a short paid audit. You only scale as it produces leads." },
     { question: "Is SEO worth it for a Singapore SME?", answer: "Yes, if it converts. More than nine in ten Singapore searches happen on Google (StatCounter, 2026), so ranking puts you in front of buyers with intent. The mistake is paying for rankings that never turn into enquiries, which is why we connect the traffic to booked calls rather than stopping at a report." },
     { question: "Can I use the PSG grant for SEO?", answer: "Digital marketing solutions can be PSG eligible for qualifying Singapore SMEs, commonly up to 50 percent support, and we scope engagements to be grant friendly. Eligibility and caps change, so confirm the current position with Enterprise Singapore before you rely on it." },
     { question: "How long until I see SEO results?", answer: "Technical fixes and better-converting pages can move things in weeks. Ranking competitive terms and building authority takes months. We are honest about the timeline for your specific market after the audit rather than promising page one by a date." },

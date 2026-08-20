@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { animate, useInView } from "framer-motion";
+import { animate } from "framer-motion";
 import type { EngineStatus } from "src/lib/runVisibilityScan";
 
 export const Container = ({
@@ -74,44 +74,57 @@ export const FadeUp = ({
   delay?: number;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
 
   useEffect(() => {
-    if (!isInView || !ref.current) return;
     const el = ref.current;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-      return;
-    }
-    const oc = animate(0, 1, {
-      duration: 0.45,
-      delay,
-      ease: "easeOut",
-      onUpdate: (v) => {
-        el.style.opacity = `${v}`;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Content renders visible in the SSR HTML so first paint never waits on JS
+    // (good LCP, and safe if JS is slow on mobile). We only hide-then-animate
+    // blocks that are still below the fold when this mounts, which is where the
+    // scroll reveal actually reads.
+    const rect = el.getBoundingClientRect();
+    const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    if (alreadyVisible) return;
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(14px)";
+    let oc: ReturnType<typeof animate> | null = null;
+    let yc: ReturnType<typeof animate> | null = null;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        oc = animate(0, 1, {
+          duration: 0.45,
+          delay,
+          ease: "easeOut",
+          onUpdate: (v) => {
+            el.style.opacity = `${v}`;
+          },
+        });
+        yc = animate(14, 0, {
+          duration: 0.45,
+          delay,
+          ease: "easeOut",
+          onUpdate: (v) => {
+            el.style.transform = `translateY(${v}px)`;
+          },
+        });
       },
-    });
-    const yc = animate(14, 0, {
-      duration: 0.45,
-      delay,
-      ease: "easeOut",
-      onUpdate: (v) => {
-        el.style.transform = `translateY(${v}px)`;
-      },
-    });
+      { rootMargin: "-40px" }
+    );
+    io.observe(el);
     return () => {
-      oc.stop();
-      yc.stop();
+      io.disconnect();
+      oc?.stop();
+      yc?.stop();
     };
-  }, [isInView, delay]);
+  }, [delay]);
 
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{ opacity: 0, transform: "translateY(14px)" }}
-    >
+    <div ref={ref} className={className}>
       {children}
     </div>
   );
