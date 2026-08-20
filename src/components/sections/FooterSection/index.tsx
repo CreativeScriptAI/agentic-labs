@@ -139,6 +139,7 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "AI Appointment Booking", to: "/appointment-booking-ai/" },
       { name: "Lead Qualification", to: "/lead-qualification/" },
       { name: "Follow Up Automation", to: "/follow-up-automation/" },
+      { name: "Forward Deployed Engineers", to: "/forward-deployed-engineers/" },
       { name: "AI Agents Repo", to: "/agents-repo/" },
       { name: "AI Memory System", to: "/ai-memory-system/" },
       { name: "AI Clarity Workshop", to: "/ai-clarity-workshop/" },

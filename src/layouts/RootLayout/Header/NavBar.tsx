@@ -111,6 +111,7 @@ const COMPARE_ROUNDUPS: NavLink[] = [
 const RESOURCES: NavLink[] = [
   { name: "Free AI Clarity Workshop", to: "/ai-clarity-workshop/", desc: "A free 30-minute session mapping where AI saves you time and money." },
   { name: "Answer Engine Optimization", to: "/answer-engine-optimization/", desc: "How to get named by ChatGPT, Perplexity, Gemini, and Google AI." },
+  { name: "Forward Deployed Engineers", to: "/forward-deployed-engineers/", desc: "How we build your marketing and sales AI inside your business, and own whether it works." },
   { name: "Blog", to: "/blog/", desc: "Guides, case studies, and insights." },
   { name: "AI Agents Repo", to: "/agents-repo/", desc: "Browse our library of pre-built AI agents." },
   { name: "Why our agents remember", to: "/ai-memory-system/", desc: "The memory system behind production-grade AI." },
