@@ -23,6 +23,20 @@ const HERO = {
   tagline: "One system across every channel that answers, qualifies, and books every inbound lead.",
 };
 
+// Hybrid flagship: a free tool people can use right now (top), then the agents
+// and tools below. Live items link; the rest show a "soon" tag (no broken links).
+const FLAGSHIP_TOOL = {
+  name: "AI Visibility Checker",
+  to: "/ai-visibility-checker/",
+  tagline: "See if ChatGPT, Gemini, and Google AI name your business.",
+};
+const FLAGSHIP_MORE: { name: string; to?: string }[] = [
+  { name: "AI Sales Agent, voice", to: "/ai-voice-agent/" },
+  { name: "Social media agent" },
+  { name: "Content agent" },
+  { name: "Cost of Lost Leads calculator" },
+];
+
 // Lens A — By Outcome, grouped along the lead journey (capture, qualify, follow up, book).
 // The flagship "answer, qualify & book" hero is the card on the left, so it is not
 // duplicated here. Each stage leads with its pillar page, then its tactical spokes.
@@ -424,17 +438,37 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
               >
                 <div className="flex">
                   {/* Featured hero — left rail */}
-                  <div className="w-[260px] shrink-0 bg-[#0A1128] p-8 flex flex-col justify-between">
-                    <div>
-                      <span className="inline-block font-geist text-[12px] tracking-[0.02em] uppercase bg-[#FCCA07] text-[#0A1128] px-2.5 py-1 rounded-none mb-5">FLAGSHIP</span>
-                      <Link href={HERO.to} onClick={close} className="block font-alte text-2xl font-normal tracking-[-0.04em] text-white leading-tight hover:text-[#FCCA07] transition-colors">
-                        {HERO.name}
-                      </Link>
-                      <p className="font-alte text-[15px] tracking-[-0.04em] text-gray-300/90 mt-3 leading-relaxed">{HERO.tagline}</p>
-                    </div>
-                    <Link href={HERO.to} onClick={close} className="mt-8 inline-flex items-center gap-1.5 font-alte text-[15px] font-normal tracking-[-0.04em] text-[#FCCA07] hover:gap-2.5 transition-all">
-                      See the agent →
+                  <div className="w-[280px] shrink-0 bg-[#0A1128] p-7 flex flex-col">
+                    <span className="inline-block self-start font-geist text-[12px] tracking-[0.02em] uppercase bg-[#FCCA07] text-[#0A1128] px-2.5 py-1 rounded-none mb-6">FLAGSHIP</span>
+                    {/* Free tool, usable right now */}
+                    <p className="font-geist text-[11px] tracking-[0.08em] uppercase text-[#FCCA07] mb-2">Free · no signup</p>
+                    <Link href={FLAGSHIP_TOOL.to} onClick={close} className="block font-alte text-2xl font-normal tracking-[-0.04em] text-white leading-tight hover:text-[#FCCA07] transition-colors">
+                      {FLAGSHIP_TOOL.name}
                     </Link>
+                    <p className="font-alte text-[14px] tracking-[-0.04em] text-gray-300/90 mt-2.5 leading-relaxed">{FLAGSHIP_TOOL.tagline}</p>
+                    <Link href={FLAGSHIP_TOOL.to} onClick={close} className="mt-4 inline-flex items-center gap-1.5 font-alte text-[15px] tracking-[-0.04em] text-[#FCCA07] hover:gap-2.5 transition-all">
+                      Try it free →
+                    </Link>
+                    {/* Agents & tools */}
+                    <div className="border-t border-white/10 my-6" />
+                    <p className="font-geist text-[11px] tracking-[0.08em] uppercase text-gray-400 mb-3">Agents &amp; tools</p>
+                    <ul className="space-y-2.5">
+                      {FLAGSHIP_MORE.map((m) =>
+                        m.to ? (
+                          <li key={m.name}>
+                            <Link href={m.to} onClick={close} className="group inline-flex items-center gap-1.5 font-alte text-[14px] tracking-[-0.04em] text-gray-200 hover:text-white transition-colors">
+                              {m.name}
+                              <span className="text-[#FCCA07] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                            </Link>
+                          </li>
+                        ) : (
+                          <li key={m.name} className="flex items-center gap-2">
+                            <span className="font-alte text-[14px] tracking-[-0.04em] text-gray-400">{m.name}</span>
+                            <span className="font-geist text-[10px] tracking-[0.06em] uppercase text-gray-500 border border-white/15 px-1.5 py-0.5">soon</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
                   </div>
 
                   {/* Right content — two clean lenses, big type, generous spacing */}
