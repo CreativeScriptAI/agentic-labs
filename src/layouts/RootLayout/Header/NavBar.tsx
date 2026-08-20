@@ -20,21 +20,43 @@ type LinkGroup = { label: string; links: NavLink[] };
 const HERO = {
   name: "AI Sales Agent",
   to: "/ai-voice-agent/",
-  tagline: "One system, every channel — answers, qualifies & books every inbound lead.",
+  tagline: "One system across every channel that answers, qualifies, and books every inbound lead.",
 };
 
-// Lens A — By Outcome / job-to-be-done (PRIMARY lens). Mapped to the closest existing pages.
-const BY_OUTCOME: NavLink[] = [
-  { name: "Answer, qualify & book every lead", to: "/ai-voice-agent/" },
-  { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
-  { name: "Book appointments automatically", to: "/appointment-booking-ai/" },
-  { name: "Qualify leads automatically", to: "/lead-qualification/" },
-  { name: "Follow up until they reply", to: "/follow-up-automation/" },
-  { name: "Never miss a call", to: "/ai-for-missed-calls/" },
-  { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
-  { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },
-  { name: "Done-for-you setup", to: "/done-for-you-ai-voice-agent/" },
+// Lens A — By Outcome, grouped along the lead journey (capture, qualify, follow up, book).
+// The flagship "answer, qualify & book" hero is the card on the left, so it is not
+// duplicated here. Each stage leads with its pillar page, then its tactical spokes.
+const BY_JOURNEY: LinkGroup[] = [
+  {
+    label: "1 · Get found & capture",
+    links: [
+      { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
+    ],
+  },
+  {
+    label: "2 · Qualify",
+    links: [
+      { name: "Qualify leads automatically", to: "/lead-qualification/" },
+    ],
+  },
+  {
+    label: "3 · Follow up",
+    links: [
+      { name: "Follow up until they reply", to: "/follow-up-automation/" },
+      { name: "Never miss a call", to: "/ai-for-missed-calls/" },
+      { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
+    ],
+  },
+  {
+    label: "4 · Book & convert",
+    links: [
+      { name: "Book appointments automatically", to: "/appointment-booking-ai/" },
+      { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },
+      { name: "Done-for-you setup", to: "/done-for-you-ai-voice-agent/" },
+    ],
+  },
 ];
+const journeyLinks = BY_JOURNEY.flatMap((g) => g.links);
 
 // Lens B — By Industry (the role-hats of the one hero).
 const BY_INDUSTRY: LinkGroup[] = [
@@ -224,16 +246,23 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
                   <span className="block font-alte text-[15px] tracking-[-0.04em] text-gray-300/90 mt-1.5 leading-relaxed">{HERO.tagline}</span>
                 </Link>
 
-                {/* By Outcome */}
+                {/* By Outcome — grouped along the lead journey */}
                 <div>
                   <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-2 px-2">By Outcome</p>
-                  <ul className="space-y-0.5">
-                    {BY_OUTCOME.map((l) => (
-                      <li key={l.name}>
-                        <Link href={l.to} onClick={onLinkClick} className="block py-2.5 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-800 hover:text-[#0062FF] rounded-none">{l.name}</Link>
-                      </li>
+                  <div className="space-y-3">
+                    {BY_JOURNEY.map((g) => (
+                      <div key={g.label}>
+                        <p className="font-geist text-[10px] text-[#c79a00] uppercase tracking-[0.02em] mb-1 px-2">{g.label}</p>
+                        <ul className="space-y-0.5">
+                          {g.links.map((l) => (
+                            <li key={l.to}>
+                              <Link href={l.to} onClick={onLinkClick} className="block py-2 px-2 font-alte text-[15px] font-normal tracking-[-0.04em] text-gray-800 hover:text-[#0062FF] rounded-none">{l.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
                 {/* By Industry — flat list, no nested accordions */}
@@ -362,7 +391,7 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
     allIndustries.slice(industryColSize),
   ];
 
-  const solutionsActive = anyActive([...BY_OUTCOME, ...allIndustries, { name: "", to: HERO.to }]);
+  const solutionsActive = anyActive([...journeyLinks, ...allIndustries, { name: "", to: HERO.to }]);
   const compareActive = anyActive([...COMPARE_ALTERNATIVES, ...COMPARE_ROUNDUPS]);
   const resourcesActive = anyActive(RESOURCES);
   const toolsActive = anyActive(FREE_TOOLS);
@@ -409,16 +438,23 @@ const NavBar: React.FC<Props> = ({ isMobile = false, onLinkClick }) => {
 
                   {/* Right content — two clean lenses, big type, generous spacing */}
                   <div className="flex-1 flex gap-10 p-9">
-                    {/* By Outcome */}
+                    {/* By Outcome — grouped along the lead journey */}
                     <div className="shrink-0">
                       <p className="font-geist text-[12px] text-gray-400 uppercase tracking-[0.02em] mb-5">By Outcome</p>
-                      <ul className="space-y-4">
-                        {BY_OUTCOME.map((l) => (
-                          <li key={l.name}>
-                            <Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-800 hover:text-[#0062FF]"}`}>{l.name}</Link>
-                          </li>
+                      <div className="space-y-5">
+                        {BY_JOURNEY.map((g) => (
+                          <div key={g.label}>
+                            <p className="font-geist text-[10px] text-[#c79a00] uppercase tracking-[0.02em] mb-2">{g.label}</p>
+                            <ul className="space-y-2.5">
+                              {g.links.map((l) => (
+                                <li key={l.to}>
+                                  <Link href={l.to} onClick={close} className={`font-alte text-[15px] font-normal tracking-[-0.04em] leading-snug block transition-colors ${isActive(l.to) ? "text-[#0062FF]" : "text-gray-800 hover:text-[#0062FF]"}`}>{l.name}</Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
 
                     {/* By Industry — flat two-column list, no sub-headers */}
