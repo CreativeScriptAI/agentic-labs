@@ -1,0 +1,256 @@
+{
+  "version": "0.1.20260806",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1359 sec.",
+  "cost": 0.0162,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "08201032-1833-0392-0000-8f71e98e5043",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1034 sec.",
+      "cost": 0.0162,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "bulk_keyword_difficulty",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "bulk_keyword_difficulty",
+        "se_type": "google",
+        "location_code": 2702,
+        "language_code": "en",
+        "keywords": [
+          "seo agency singapore",
+          "seo services singapore",
+          "seo company singapore",
+          "seo singapore",
+          "seo consultant singapore",
+          "seo expert singapore",
+          "best seo agency singapore",
+          "affordable seo singapore",
+          "content marketing singapore",
+          "content marketing agency singapore",
+          "content writing services singapore",
+          "content marketing services singapore",
+          "content agency singapore",
+          "copywriting services singapore",
+          "content writer singapore",
+          "content strategy singapore",
+          "google ads singapore",
+          "sem agency singapore",
+          "ppc agency singapore",
+          "google ads management singapore",
+          "sem singapore",
+          "google ads agency singapore",
+          "ppc singapore",
+          "google ads management services singapore",
+          "adwords agency singapore",
+          "paid search agency singapore",
+          "social media marketing singapore",
+          "social media agency singapore",
+          "social media management singapore",
+          "social media marketing agency singapore",
+          "smm singapore",
+          "social media marketing services singapore",
+          "social media management services singapore",
+          "instagram marketing singapore",
+          "tiktok marketing singapore"
+        ]
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "location_code": 2702,
+          "language_code": "en",
+          "total_count": 35,
+          "items_count": 35,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword": "adwords agency singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "affordable seo singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "best seo agency singapore",
+              "keyword_difficulty": 20
+            },
+            {
+              "se_type": "google",
+              "keyword": "content agency singapore",
+              "keyword_difficulty": 41
+            },
+            {
+              "se_type": "google",
+              "keyword": "content marketing agency singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "content marketing services singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "content marketing singapore",
+              "keyword_difficulty": 6
+            },
+            {
+              "se_type": "google",
+              "keyword": "content writer singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "content writing services singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "copywriting services singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "google ads agency singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "google ads singapore",
+              "keyword_difficulty": 11
+            },
+            {
+              "se_type": "google",
+              "keyword": "instagram marketing singapore",
+              "keyword_difficulty": 36
+            },
+            {
+              "se_type": "google",
+              "keyword": "ppc agency singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "ppc singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "sem agency singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "sem singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo agency singapore",
+              "keyword_difficulty": 17
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo company singapore",
+              "keyword_difficulty": 29
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo consultant singapore",
+              "keyword_difficulty": 18
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo expert singapore",
+              "keyword_difficulty": 16
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo services singapore",
+              "keyword_difficulty": 23
+            },
+            {
+              "se_type": "google",
+              "keyword": "seo singapore",
+              "keyword_difficulty": 19
+            },
+            {
+              "se_type": "google",
+              "keyword": "smm singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media agency singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media management singapore",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media marketing agency singapore",
+              "keyword_difficulty": 12
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media marketing singapore",
+              "keyword_difficulty": 3
+            },
+            {
+              "se_type": "google",
+              "keyword": "tiktok marketing singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media marketing services singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "content strategy singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "google ads management singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "google ads management services singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "paid search agency singapore",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "social media management services singapore",
+              "keyword_difficulty": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

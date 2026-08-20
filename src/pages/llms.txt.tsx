@@ -43,6 +43,12 @@ const buildLlmsTxt = (): string => {
     `- [AI Implementation Partner Singapore](${BASE}/ai-implementation-partner-singapore/): a Singapore partner that builds, runs, and owns your marketing and sales AI across the whole lead journey, inside the tools you already use, PDPA and grant friendly`
   );
   lines.push("");
+  lines.push("## Marketing services (Singapore)");
+  lines.push(`- [SEO Agency Singapore](${BASE}/seo-agency-singapore/): SEO that connects rankings to booked leads and gets you named in AI answers, from S$1,280 per month, PSG eligible`);
+  lines.push(`- [Content Marketing Singapore](${BASE}/content-marketing-singapore/): content engineered to rank, get cited by AI, and convert, from S$1,700 per month, PSG eligible`);
+  lines.push(`- [Google Ads Agency Singapore](${BASE}/google-ads-agency-singapore/): paid search that owns what happens after the click, speed to lead and booked calls, from S$850 per month, PSG eligible`);
+  lines.push(`- [Social Media Marketing Singapore](${BASE}/social-media-marketing-singapore/): social turned into captured, booked leads by answering the DMs, from S$1,000 per month, PSG eligible`);
+  lines.push("");
   lines.push("## Free tools");
   lines.push(
     `- [AI Visibility Checker](${BASE}/ai-visibility-checker/): see whether ChatGPT, Perplexity, Google AI, Gemini, Grok, and Claude name your business, plus a full site health audit`

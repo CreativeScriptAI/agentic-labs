@@ -120,6 +120,15 @@ const FOOTER_COLUMNS: FootColumn[] = [
     ],
   },
   {
+    heading: "Marketing Services",
+    links: [
+      { name: "SEO Agency Singapore", to: "/seo-agency-singapore/" },
+      { name: "Content Marketing Singapore", to: "/content-marketing-singapore/" },
+      { name: "Google Ads Agency Singapore", to: "/google-ads-agency-singapore/" },
+      { name: "Social Media Marketing Singapore", to: "/social-media-marketing-singapore/" },
+    ],
+  },
+  {
     heading: "Singapore",
     links: [
       { name: "Lead Generation Agency Singapore", to: "/lead-generation-agency-singapore/" },
