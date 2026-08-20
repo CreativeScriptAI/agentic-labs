@@ -259,7 +259,7 @@ export const EXPLORE = {
     {
       label: "SEO and AI visibility",
       href: "/seo-agency-singapore/",
-      live: false,
+      live: true,
     },
     {
       label: "Google Ads and SEM",

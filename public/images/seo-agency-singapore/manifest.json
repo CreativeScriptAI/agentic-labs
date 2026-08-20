@@ -1,0 +1,79 @@
+[
+  {
+    "file": "singapore-cbd-business-district.webp",
+    "publicPath": "/images/seo-agency-singapore/singapore-cbd-business-district.webp",
+    "alt": "Singapore CBD financial district skyline with high-rise office towers under a clear daytime sky",
+    "sourcePage": "https://www.pexels.com/photo/iconic-singapore-skyline-with-skyscrapers-33416439/",
+    "photographer": "Keat007",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 1200,
+    "orientation": "landscape"
+  },
+  {
+    "file": "singapore-shophouse-street.webp",
+    "publicPath": "/images/seo-agency-singapore/singapore-shophouse-street.webp",
+    "alt": "Colorful heritage shophouses along a Singapore street in a historical district",
+    "sourcePage": "https://www.pexels.com/photo/vibrant-shophouses-in-historical-district-34821401/",
+    "photographer": "Keat007",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 1067,
+    "orientation": "landscape"
+  },
+  {
+    "file": "seo-analytics-dashboard.webp",
+    "publicPath": "/images/seo-agency-singapore/seo-analytics-dashboard.webp",
+    "alt": "Laptop screen displaying an analytics dashboard with charts and graphs for tracking SEO performance data",
+    "sourcePage": "https://www.pexels.com/photo/close-up-shot-of-a-laptop-computer-12969403/",
+    "photographer": "Freestockpro",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 1067,
+    "orientation": "landscape"
+  },
+  {
+    "file": "singapore-business-team-meeting.webp",
+    "publicPath": "/images/seo-agency-singapore/singapore-business-team-meeting.webp",
+    "alt": "Small business team collaborating in a group discussion around a desk in a modern office",
+    "sourcePage": "https://www.pexels.com/photo/man-and-woman-sitting-at-the-table-5961076/",
+    "photographer": "Thirdman",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 1067,
+    "orientation": "landscape"
+  },
+  {
+    "file": "google-search-mobile-phone.webp",
+    "publicPath": "/images/seo-agency-singapore/google-search-mobile-phone.webp",
+    "alt": "Hand holding a smartphone with the Google search engine open on the screen",
+    "sourcePage": "https://www.pexels.com/photo/men-typing-in-the-google-search-engine-from-realme-6-pro-google-is-the-number-one-search-web-16629436/",
+    "photographer": "Sanketgraphy",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 1067,
+    "orientation": "landscape"
+  },
+  {
+    "file": "singapore-skyline-wide.webp",
+    "publicPath": "/images/seo-agency-singapore/singapore-skyline-wide.webp",
+    "alt": "Wide view of the modern Singapore city skyline with reflective skyscrapers against a blue sky",
+    "sourcePage": "https://www.pexels.com/photo/view-of-the-modern-singapore-skyline-20768136/",
+    "photographer": "Anita Kieseler",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1600,
+    "height": 900,
+    "orientation": "landscape"
+  },
+  {
+    "file": "singapore-marina-bay-skyline.webp",
+    "publicPath": "/images/seo-agency-singapore/singapore-marina-bay-skyline.webp",
+    "alt": "Singapore Marina Bay skyline with iconic waterfront architecture and city towers",
+    "sourcePage": "https://www.pexels.com/search/singapore%20marina%20bay/",
+    "photographer": "Unknown (pre-existing asset in folder)",
+    "license": "Pexels License (free, commercial, no attribution required)",
+    "width": 1400,
+    "height": 1867,
+    "orientation": "portrait"
+  }
+]

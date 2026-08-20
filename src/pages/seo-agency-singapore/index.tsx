@@ -1,25 +1,22 @@
 import MetaConfig from "src/components/MetaConfig";
-import ServicePage from "src/components/sections/SgServices/ServicePage";
-import SeoGraphic from "src/components/sections/SgServices/SeoGraphic";
-import { SEO_COPY } from "src/components/sections/SgServices/seo.copy";
-
-const copy = SEO_COPY;
+import SeoAgencySingaporePage from "src/components/sections/SeoAgencySingapore";
+import { FAQS, META } from "src/components/sections/SeoAgencySingapore/copy";
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: copy.schemaName,
-  description: copy.meta.description,
-  url: copy.meta.url,
+  name: "SEO",
+  description: META.description,
+  url: META.url,
   provider: { "@id": "https://www.tryagentikai.com/#organization" },
   areaServed: "Singapore",
-  serviceType: copy.schemaName,
+  serviceType: "Search Engine Optimization",
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: copy.faqs.map((item) => ({
+  mainEntity: FAQS.map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -30,18 +27,44 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tryagentikai.com/" },
-    { "@type": "ListItem", position: 2, name: copy.breadcrumb, item: copy.meta.url },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.tryagentikai.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "SEO Agency Singapore",
+      item: META.url,
+    },
   ],
 };
 
 const Page = () => (
   <>
-    <MetaConfig title={copy.meta.title} description={copy.meta.description} type="Page" url={copy.meta.url} canonical={copy.meta.url} keywords={copy.meta.keywords} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-    <ServicePage copy={copy} Graphic={SeoGraphic} />
+    <MetaConfig
+      title={META.title}
+      description={META.description}
+      type="Page"
+      url={META.url}
+      canonical={META.url}
+      keywords={META.keywords}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
+    <SeoAgencySingaporePage />
   </>
 );
 

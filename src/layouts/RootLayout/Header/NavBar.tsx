@@ -31,6 +31,7 @@ const BY_JOURNEY: LinkGroup[] = [
     label: "1 · Get found & capture",
     links: [
       { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
+      { name: "SEO agency in Singapore", to: "/seo-agency-singapore/" },
     ],
   },
   {
