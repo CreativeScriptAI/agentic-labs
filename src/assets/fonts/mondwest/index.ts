@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 export const mondwest = localFont({
   src: [
     {
-      path: "./ppmondwest-regular.otf",
+      path: "./ppmondwest-regular.woff2",
       weight: "400",
       style: "normal",
     },
@@ -17,7 +17,7 @@ export const mondwest = localFont({
 export const neuebit = localFont({
   src: [
     {
-      path: "./ppneuebit-bold.otf",
+      path: "./ppneuebit-bold.woff2",
       weight: "700",
       style: "normal",
     },

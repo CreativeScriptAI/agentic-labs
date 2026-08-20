@@ -6,7 +6,7 @@ import { Geist_Mono } from "next/font/google";
 export const alteHaas = localFont({
   src: [
     {
-      path: "./AlteHaasGroteskRegular.ttf",
+      path: "./AlteHaasGroteskRegular.woff2",
       weight: "400",
       style: "normal",
     },
