@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { usePerformanceMonitor } from "../hooks/usePerformanceMonitor";
 import PerformanceDashboard from "../components/PerformanceDashboard";
 import Head from "next/head";
-import Script from "next/script";
 import "../styles/globals.css";
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
@@ -58,15 +57,38 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Load Hotjar only after the first user interaction (or a long idle
-  // fallback). This keeps its script work out of the initial load and the
-  // Total Blocking Time window while still capturing engaged sessions.
+  // Load ALL third-party analytics (Google Ads gtag, GA4, GTM, Hotjar) only
+  // after the first user interaction, with a 6s idle fallback so no-interaction
+  // sessions are still tracked. This keeps every third-party script out of the
+  // initial load and the Total Blocking Time window.
   useEffect(() => {
     let done = false;
+    const inject = (src: string) => {
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = src;
+      document.head.appendChild(s);
+    };
     const load = () => {
       if (done) return;
       done = true;
       cleanup();
+
+      // Google tag (gtag.js) - Google Ads (AW-17453709032) + GA4 (G-PW19164HWX)
+      const w = window as unknown as { dataLayer?: unknown[] };
+      w.dataLayer = w.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        w.dataLayer!.push(args);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17453709032");
+      gtag("config", "G-PW19164HWX");
+      inject("https://www.googletagmanager.com/gtag/js?id=AW-17453709032");
+
+      // Google Tag Manager (GTM-N8HPKS8Z)
+      inject("https://www.googletagmanager.com/gtm.js?id=GTM-N8HPKS8Z");
+
+      // Hotjar (hjid 6592201)
       const h = window as unknown as {
         hj?: ((...args: unknown[]) => void) & { q?: unknown[] };
         _hjSettings?: { hjid: number; hjsv: number };
@@ -77,10 +99,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
           (h.hj!.q = h.hj!.q || []).push(args);
         };
       h._hjSettings = { hjid: 6592201, hjsv: 6 };
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = `https://static.hotjar.com/c/hotjar-${h._hjSettings.hjid}.js?sv=${h._hjSettings.hjsv}`;
-      document.head.appendChild(s);
+      inject(
+        `https://static.hotjar.com/c/hotjar-${h._hjSettings.hjid}.js?sv=${h._hjSettings.hjsv}`
+      );
     };
     const events: Array<keyof WindowEventMap> = [
       "scroll",
@@ -115,40 +136,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         </QueryClientProvider>
         {process.env.NODE_ENV === "development" && <PerformanceDashboard />}
       </div>
-
-      {/* Third-party analytics loaded after the page is interactive and idle */}
-      {/* (lazyOnload) so they stay outside the Total Blocking Time window. */}
-
-      {/* Google tag (gtag.js) loader - covers Google Ads and GA4 */}
-      <Script
-        id="gtag-loader"
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17453709032"
-        strategy="lazyOnload"
-      />
-      <Script id="gtag-init" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17453709032');
-          gtag('config', 'G-PW19164HWX');
-        `}
-      </Script>
-
-      {/* Google Tag Manager */}
-      <Script id="gtm" strategy="lazyOnload">
-        {`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-N8HPKS8Z');
-        `}
-      </Script>
-
-      {/* Hotjar is loaded on first user interaction (or after idle) by the
-          effect below, so its ~300ms of script work stays out of the initial
-          load and Total Blocking Time window. */}
+      {/* All third-party analytics (gtag, GA4, GTM, Hotjar) are injected by the
+          interaction/idle-gated effect above, so none of them run in the
+          initial load or Total Blocking Time window. */}
     </>
   );
 }
