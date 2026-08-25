@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import {
   buildMockScan,
   engineTeaserLine,
@@ -32,7 +33,7 @@ const EngineCard = ({
   useEffect(() => {
     if (!isInView || !ref.current) return;
     const el = ref.current;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.opacity = "1";
       el.style.transform = "none";
       return;
@@ -121,7 +122,7 @@ const ShareOfVoice = ({
     if (!isInView || !barRef.current) return;
     const el = barRef.current;
     const target = youPct / 100;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.transform = `scaleX(${target})`;
       return;
     }

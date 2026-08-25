@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
+import { motionOff } from "src/lib/motionOff";
 
 // The shared "vanity metric vs booked lead" engine behind all four service hero
 // graphics. Vanity metrics tick up (ink), a Leads row stays at 0 (the pain),
@@ -28,10 +29,7 @@ const MetricGapCard = ({ config, className = "" }: { config: GapConfig; classNam
   const interval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
+    if (motionOff()) {
       setReduced(true);
       setStep(6);
       return;

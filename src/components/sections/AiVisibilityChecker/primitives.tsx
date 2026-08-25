@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import type { EngineStatus } from "src/lib/runVisibilityScan";
 
 export const Container = ({
@@ -78,7 +79,7 @@ export const FadeUp = ({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (motionOff()) return;
 
     // Content renders visible in the SSR HTML so first paint never waits on JS
     // (good LCP, and safe if JS is slow on mobile). We only hide-then-animate

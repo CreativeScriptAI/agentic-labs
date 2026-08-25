@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import Link from "next/link";
 import BracketButton from "src/components/BracketButton";
 import { Container, Eyebrow, FadeUp } from "../AiVisibilityChecker/primitives";
@@ -45,7 +46,7 @@ const CountUp = ({ value, className = "" }: { value: string; className?: string 
   useEffect(() => {
     if (!inView || !ref.current || !match) return;
     const el = ref.current;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.textContent = value;
       return;
     }

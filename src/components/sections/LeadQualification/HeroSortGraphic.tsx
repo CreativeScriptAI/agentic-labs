@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motionOff } from "src/lib/motionOff";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
 
 type Outcome = "qualified" | "nurture" | "disqualified";
@@ -71,10 +72,7 @@ export default function HeroSortGraphic({
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
+    if (motionOff()) {
       setReduced(true);
       setSorted(LEADS.length);
       return;

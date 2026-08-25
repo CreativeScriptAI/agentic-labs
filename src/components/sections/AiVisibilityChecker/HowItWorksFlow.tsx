@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { CATEGORIES, ENGINES, HOW } from "./copy";
 import { EngineLogo } from "./EngineLogos";
 
@@ -79,7 +80,7 @@ const Node = ({
   useEffect(() => {
     if (!inView || !ref.current) return;
     const el = ref.current;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.opacity = "1";
       el.style.transform = "none";
       return;
@@ -140,9 +141,7 @@ const HowItWorksFlow = () => {
 
   useEffect(() => {
     if (!isInView) return;
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const reduced = motionOff();
     const run = (el: HTMLDivElement | null, axis: "x" | "y") => {
       if (!el) return;
       if (reduced) {

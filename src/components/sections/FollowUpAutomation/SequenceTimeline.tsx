@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { SEQUENCE } from "./copy";
 
 type Channel = "Email" | "SMS" | "WhatsApp" | "Voice";
@@ -117,15 +118,12 @@ const SequenceTimeline = ({ className = "" }: { className?: string }) => {
 
   useEffect(() => {
     if (!inView) return;
-    const reduce = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
 
     const nodes = nodeRefs.current.filter(
       (n): n is HTMLElement => n !== null
     );
 
-    if (reduce) {
+    if (motionOff()) {
       if (vSpine.current) vSpine.current.style.transform = "scaleY(1)";
       if (hSpine.current) hSpine.current.style.transform = "scaleX(1)";
       nodes.forEach((n) => {

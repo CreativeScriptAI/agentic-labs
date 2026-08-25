@@ -40,10 +40,10 @@ export const Hero = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: copy */}
-          <div className="lg:col-span-6 text-center lg:text-left">
+          <div className="lg:col-span-6 text-left">
             <FadeUp>
               <nav aria-label="Breadcrumb" className="mb-5">
-                <ol className="flex flex-wrap items-center justify-center lg:justify-start gap-x-2 gap-y-1">
+                <ol className="flex flex-wrap items-center justify-start gap-x-2 gap-y-1">
                   <li className="flex items-center gap-2">
                     <Link
                       href="/"
@@ -65,20 +65,20 @@ export const Hero = () => {
                   </li>
                 </ol>
               </nav>
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-start">
                 <Eyebrow text={HERO.eyebrow} />
               </div>
               <h1 className="font-alte font-normal text-[1.9rem] sm:text-[2.3rem] lg:text-[2.5rem] leading-[1.06] tracking-[-0.04em] text-balance mb-5">
                 <span className="text-[#0A1128] block">{HERO.headline1}</span>
                 <span className="text-blue-600 block">{HERO.headline2}</span>
               </h1>
-              <p className="font-alte text-[15px] sm:text-[16px] text-slate-600 leading-[1.55] tracking-[-0.04em] max-w-md mx-auto lg:mx-0 mb-5">
+              <p className="font-alte text-[15px] sm:text-[16px] text-slate-600 leading-[1.55] tracking-[-0.04em] max-w-md lg:mx-0 mb-5">
                 {HERO.sub}
               </p>
-              <p className="font-alte text-[13px] text-slate-500 tracking-[-0.04em] leading-[1.5] max-w-md mx-auto lg:mx-0 mb-8">
+              <p className="hidden lg:block font-alte text-[13px] text-slate-500 tracking-[-0.04em] leading-[1.5] max-w-md lg:mx-0 mb-8">
                 {HERO.support}
               </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+              <div className="flex flex-col sm:flex-row justify-start gap-3">
                 <BracketButton label={HERO.ctaPrimary} href={HERO.hrefPrimary} />
                 <BracketButton
                   label={HERO.ctaSecondary}

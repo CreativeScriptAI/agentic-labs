@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
+import { motionOff } from "src/lib/motionOff";
 
 type Row = {
   title: string;
@@ -161,7 +162,7 @@ export default function ContentGraphic({
   const rafRef = useRef<number>(0);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setVisibleRows(ROWS.length);
       setCitedStage(2);
       setConverting(true);

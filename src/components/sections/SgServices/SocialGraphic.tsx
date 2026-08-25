@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
+import { motionOff } from "src/lib/motionOff";
 
 // Phase model for the ~7.5s loop:
 // 0 = reset. vanity metrics low, leads 0, chip muted "FOLLOWERS UP"
@@ -87,7 +88,7 @@ export default function SocialGraphic({
   useEffect(() => {
     if (!inView) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setReduced(true);
       setPhase(5);
       setCounter(followersRef.current, FOLLOWERS, true, true);

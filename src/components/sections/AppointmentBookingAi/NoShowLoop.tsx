@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
 import { NOSHOW } from "./copy";
+import { motionOff } from "src/lib/motionOff";
 
 /* ---------- ring geometry (desktop) ---------- */
 
@@ -85,10 +86,7 @@ export default function NoShowLoop({ className = "" }: { className?: string }) {
     const rail = railRef.current;
     const railArrow = railArrowRef.current;
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)")
-      .matches;
-
-    if (reduced) {
+    if (motionOff()) {
       arcs.forEach((el) => {
         if (el) el.style.strokeDashoffset = "0";
       });

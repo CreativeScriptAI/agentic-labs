@@ -20,7 +20,7 @@ export const HERO = {
   eyebrow: "SEO AGENCY, SINGAPORE",
   headline1: "A ranking report is not a result.",
   headline2: "We build the SEO system that books the call.",
-  sub: "Most SEO agencies in Singapore send you a dashboard full of traffic and keywords, then leave you to wonder where the customers are. We build and run the system that turns search into booked calls, on Google and in the AI answers your buyers now trust.",
+  sub: "We build and run the SEO system that turns search into booked calls, on Google and in the AI answers your buyers now trust.",
   support: "You're hiring a team paid on your pipeline, not a monthly report.",
   ctaPrimary: "Check where you are invisible",
   hrefPrimary: "/ai-visibility-checker/",

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
 
 type Stage = {
@@ -61,7 +62,7 @@ export default function SystemGraphic({
   useEffect(() => {
     if (!inView) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setReduced(true);
       setPhase(6);
       return;
@@ -222,11 +223,13 @@ export default function SystemGraphic({
                       >
                         {stage.name}
                       </span>
-                      {booked && (
-                        <span className="font-geist text-[10px] uppercase tracking-[0.02em] text-[#0A1128] sm:text-center">
-                          Booked
-                        </span>
-                      )}
+                      <span
+                        aria-hidden={!booked}
+                        className="font-geist text-[10px] uppercase tracking-[0.02em] text-[#0A1128] sm:text-center transition-opacity duration-500"
+                        style={{ opacity: booked ? 1 : 0 }}
+                      >
+                        Booked
+                      </span>
                     </span>
                   </li>
                 );

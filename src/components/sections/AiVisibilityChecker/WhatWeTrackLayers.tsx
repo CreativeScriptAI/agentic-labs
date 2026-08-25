@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import {
   buildMockScan,
   type EngineStatus,
@@ -19,7 +20,7 @@ const MiniMeter = ({ score, delay }: { score: number; delay: number }) => {
     if (!isInView || !ref.current) return;
     const el = ref.current;
     const target = score / 100;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.transform = `scaleX(${target})`;
       return;
     }
@@ -66,7 +67,7 @@ const ShareMeter = ({ shownIn, outOf }: { shownIn: number; outOf: number }) => {
   useEffect(() => {
     if (!isInView || !barRef.current) return;
     const el = barRef.current;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.transform = `scaleX(${youPct})`;
       return;
     }
@@ -114,9 +115,7 @@ const OrbitalDesktop = ({ engines }: { engines: VisibilityEngine[] }) => {
 
   useEffect(() => {
     if (!isInView) return;
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const reduced = motionOff();
     lineRefs.current.forEach((line, i) => {
       if (!line) return;
       const target = Number(line.dataset.opacity || "1");

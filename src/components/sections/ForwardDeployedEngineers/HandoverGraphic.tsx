@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motionOff } from "src/lib/motionOff";
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
 
 const KeySvg = ({ className = "w-3.5 h-3.5" }: { className?: string }) => (
@@ -46,10 +47,7 @@ export default function HandoverGraphic({
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    const reduce = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (reduce) {
+    if (motionOff()) {
       setStep(FINAL_STEP);
       return;
     }

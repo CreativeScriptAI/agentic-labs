@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { EmptySeat } from "./primitives";
 
 const NAMES = ["A local firm", "A known competitor", "A third name"] as const;
@@ -15,7 +16,7 @@ const OldVsNewSearch = () => {
 
   useEffect(() => {
     if (!isInView) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setRecede(true);
       setVisibleNames(3);
       setShowSeat(true);
@@ -35,7 +36,7 @@ const OldVsNewSearch = () => {
     if (!oldRef.current) return;
     const el = oldRef.current;
     if (!recede) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.opacity = "0.4";
       el.style.transform = "scale(0.96)";
       return;

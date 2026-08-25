@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import BracketButton from "src/components/BracketButton";
+import { motionOff } from "src/lib/motionOff";
 import {
   normalizeDomain,
   runVisibilityScan,
@@ -40,6 +41,10 @@ const ToolFlow = ({ initialResult, startInReport = false }: Props) => {
 
   useEffect(() => {
     if (phase !== "scanning") return;
+    if (motionOff()) {
+      setScanLine(SCAN_LINES.length - 1);
+      return;
+    }
     setScanLine(0);
     const id = setInterval(() => {
       setScanLine((prev) => {

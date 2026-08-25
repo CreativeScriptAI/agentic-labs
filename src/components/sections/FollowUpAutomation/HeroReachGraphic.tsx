@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motionOff } from "src/lib/motionOff";
 import { CheckSvg, ExampleChip } from "../AiVisibilityChecker/primitives";
 
 type Touch = {
@@ -81,11 +82,7 @@ export default function HeroReachGraphic({ className = "" }: { className?: strin
   const [phase, setPhase] = useState(0);
 
   useEffect(() => {
-    const reduced =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (reduced) {
+    if (motionOff()) {
       setPhase(6);
       return;
     }

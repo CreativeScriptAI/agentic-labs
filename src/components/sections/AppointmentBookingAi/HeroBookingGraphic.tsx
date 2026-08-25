@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { ExampleChip } from "../AiVisibilityChecker/primitives";
+import { motionOff } from "src/lib/motionOff";
 
 type Row = {
   time: string;
@@ -66,8 +67,7 @@ export default function HeroBookingGraphic({
   const timeouts = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
+    if (motionOff()) {
       setMounted(true);
       setStep(ROWS.length);
       return;

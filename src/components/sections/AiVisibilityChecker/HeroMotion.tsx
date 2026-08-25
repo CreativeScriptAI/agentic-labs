@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { animate } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { HERO, HERO_ENGINE_CYCLE } from "./copy";
 import { EmptySeat } from "./primitives";
 import { EngineBadge } from "./EngineLogos";
@@ -11,7 +12,7 @@ export const useRotatingEngine = () => {
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setIndex(0);
       return;
     }
@@ -45,7 +46,7 @@ export const RotatingEngineWord = ({
       el.textContent = engine;
       return;
     }
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.textContent = engine;
       shown.current = engine;
       return;
@@ -105,7 +106,7 @@ export const HeroAnswerGraphic = ({ engine }: { engine: string }) => {
   const [showSeat, setShowSeat] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       setVisibleNames(3);
       setShowSeat(true);
       return;

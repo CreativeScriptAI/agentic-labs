@@ -18,7 +18,7 @@ export const HERO = {
   eyebrow: "LEAD GENERATION AGENCY, SINGAPORE",
   headline1: "You don't need more leads.",
   headline2: "You need the system that turns them into booked calls.",
-  sub: "Most of the leads you already paid for are sitting there, waiting for a follow-up that never comes. We build the system that catches every one, qualifies it, calls it in seconds, and books the meeting. Inside the tools you already use.",
+  sub: "We build the system that catches every lead, qualifies it, calls it in seconds, and books the meeting. Inside the tools you already use.",
   support: "You're hiring a team that owns the booked calls, not buying another list.",
   ctaPrimary: "Show me where I'm losing leads",
   hrefPrimary: "/ai-clarity-workshop/",

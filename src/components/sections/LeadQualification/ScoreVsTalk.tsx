@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { SCOREVSTALK } from "./copy";
 
 // Decorative meter fills for the scoring lane. They encode the idea that a
@@ -43,11 +44,7 @@ export default function ScoreVsTalk({ className = "" }: { className?: string }) 
     const node = root.querySelector<SVGElement>("[data-node]");
     const close = root.querySelector<HTMLElement>("[data-close]");
 
-    const reduce = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (reduce) {
+    if (motionOff()) {
       items.forEach((el) => {
         el.style.opacity = "1";
         el.style.transform = "none";

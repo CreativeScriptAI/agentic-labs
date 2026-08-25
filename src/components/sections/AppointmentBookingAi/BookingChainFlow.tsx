@@ -3,13 +3,10 @@
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
 import { HOW } from "./copy";
+import { motionOff } from "src/lib/motionOff";
 
 const FOCAL_INDEX = 3;
 const FOCAL_TAG = "The step most systems skip";
-
-const prefersReducedMotion = () =>
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 type Axis = "x" | "y";
 
@@ -37,7 +34,7 @@ const Segment = ({
     if (!inView || !ref.current) return;
     const el = ref.current;
     const done = axis === "x" ? "scaleX(1)" : "scaleY(1)";
-    if (prefersReducedMotion()) {
+    if (motionOff()) {
       el.style.transform = done;
       return;
     }
@@ -75,7 +72,7 @@ const StepNode = ({ index, inView, compact = false }: NodeProps) => {
   useEffect(() => {
     if (!inView || !ref.current) return;
     const el = ref.current;
-    if (prefersReducedMotion()) {
+    if (motionOff()) {
       el.style.opacity = "1";
       el.style.transform = "none";
       return;

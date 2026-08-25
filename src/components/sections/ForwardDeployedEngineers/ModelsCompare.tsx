@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import { COMPARE } from "./copy";
 
 type OptionKey = "software" | "agency" | "inhouse" | "fde";
@@ -21,10 +22,6 @@ const OPTIONS: OptionMeta[] = [
   { key: "fde", header: COMPARE.columns[4], note: "Built to hand over", focal: true },
 ];
 
-const prefersReducedMotion = () =>
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 function useReveal(index: number) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
@@ -33,7 +30,7 @@ function useReveal(index: number) {
     const el = ref.current;
     if (!inView || !el) return;
 
-    if (prefersReducedMotion()) {
+    if (motionOff()) {
       el.style.opacity = "1";
       el.style.transform = "none";
       return;

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { animate, useInView } from "framer-motion";
+import { motionOff } from "src/lib/motionOff";
 import {
   domainToReportId,
   type SiteIssue,
@@ -33,9 +34,7 @@ export const ScoreRing = ({
 
   useEffect(() => {
     if (!isInView) return;
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const reduced = motionOff();
     if (reduced) {
       if (circleRef.current) {
         circleRef.current.style.strokeDashoffset = `${c * (1 - score / 100)}`;
@@ -158,7 +157,7 @@ const CategoryBar = ({
     if (!isInView || !ref.current) return;
     const el = ref.current;
     const target = score / 100;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (motionOff()) {
       el.style.transform = `scaleX(${target})`;
       return;
     }
