@@ -246,9 +246,11 @@ const FooterSection = () => {
               href={`https://github.com/${CONFIG.profile.github}`}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
+                aria-hidden="true"
                 className="w-5 h-5 sm:w-6 sm:h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -263,9 +265,11 @@ const FooterSection = () => {
               href="https://x.com/tryagentikai"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="X (Twitter)"
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
+                aria-hidden="true"
                 className="w-5 h-5 sm:w-6 sm:h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -280,9 +284,11 @@ const FooterSection = () => {
               href="https://www.youtube.com/@agentailabs/shorts"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="YouTube"
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
+                aria-hidden="true"
                 className="w-5 h-5 sm:w-6 sm:h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -297,9 +303,11 @@ const FooterSection = () => {
               href="https://www.linkedin.com/company/creativescript/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200 p-2 rounded-none hover:bg-[#efece9]"
             >
               <svg
+                aria-hidden="true"
                 className="w-5 h-5 sm:w-6 sm:h-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
