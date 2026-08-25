@@ -48,6 +48,11 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [Content Marketing Singapore](${BASE}/content-marketing-singapore/): content engineered to rank, get cited by AI, and convert, from S$1,700 per month, PSG eligible`);
   lines.push(`- [Google Ads Agency Singapore](${BASE}/google-ads-agency-singapore/): paid search that owns what happens after the click, speed to lead and booked calls, from S$850 per month, PSG eligible`);
   lines.push(`- [Social Media Marketing Singapore](${BASE}/social-media-marketing-singapore/): social turned into captured, booked leads by answering the DMs, from S$1,000 per month, PSG eligible`);
+  lines.push(`- [B2B Lead Generation Singapore](${BASE}/b2b-lead-generation-singapore/): a forward-deployed B2B lead gen team that finds, qualifies, and books meetings, paid on pipeline, from S$100 per month, PSG eligible`);
+  lines.push(`- [Appointment Setting Singapore](${BASE}/appointment-setting-singapore/): outbound B2B appointment setting that replaces telemarketing, qualified meetings booked onto your sales calendar, from S$100 per month, PSG eligible`);
+  lines.push(`- [AI Receptionist Singapore](${BASE}/ai-receptionist-singapore/): an AI voice receptionist that answers every call 24/7, qualifies, and books, so no lead is lost to a missed call, from S$100 per month, PSG eligible`);
+  lines.push(`- [WhatsApp Business API Singapore](${BASE}/whatsapp-business-api-singapore/): WhatsApp Business API set up and run for instant replies, qualification, booking, and follow up inside WhatsApp, from S$100 per month, PSG eligible`);
+  lines.push(`- [AI Automation Singapore](${BASE}/ai-automation-singapore/): a forward-deployed partner that builds and runs AI automation inside your stack across the whole lead journey, from S$100 per month, PSG eligible`);
   lines.push("");
   lines.push("## Free tools");
   lines.push(

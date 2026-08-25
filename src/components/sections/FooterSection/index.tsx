@@ -133,6 +133,11 @@ const FOOTER_COLUMNS: FootColumn[] = [
     links: [
       { name: "Lead Generation Agency Singapore", to: "/lead-generation-agency-singapore/" },
       { name: "AI Implementation Partner Singapore", to: "/ai-implementation-partner-singapore/" },
+      { name: "B2B Lead Generation Singapore", to: "/b2b-lead-generation-singapore/" },
+      { name: "Appointment Setting Singapore", to: "/appointment-setting-singapore/" },
+      { name: "AI Receptionist Singapore", to: "/ai-receptionist-singapore/" },
+      { name: "WhatsApp Business API Singapore", to: "/whatsapp-business-api-singapore/" },
+      { name: "AI Automation Singapore", to: "/ai-automation-singapore/" },
     ],
   },
   {

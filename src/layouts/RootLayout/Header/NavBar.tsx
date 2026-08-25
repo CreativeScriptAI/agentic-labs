@@ -46,6 +46,9 @@ const BY_JOURNEY: LinkGroup[] = [
     links: [
       { name: "Lead generation in Singapore", to: "/lead-generation-agency-singapore/" },
       { name: "SEO agency in Singapore", to: "/seo-agency-singapore/" },
+      { name: "B2B lead generation", to: "/b2b-lead-generation-singapore/" },
+      { name: "Appointment setting", to: "/appointment-setting-singapore/" },
+      { name: "AI automation partner", to: "/ai-automation-singapore/" },
     ],
   },
   {
@@ -60,6 +63,7 @@ const BY_JOURNEY: LinkGroup[] = [
       { name: "Follow up until they reply", to: "/follow-up-automation/" },
       { name: "Never miss a call", to: "/ai-for-missed-calls/" },
       { name: "Recover no-shows & remind", to: "/ai-show-up-agent-for-online-coaching/" },
+      { name: "WhatsApp Business API", to: "/whatsapp-business-api-singapore/" },
     ],
   },
   {
@@ -68,6 +72,7 @@ const BY_JOURNEY: LinkGroup[] = [
       { name: "Book appointments automatically", to: "/appointment-booking-ai/" },
       { name: "Confirm COD orders", to: "/ai-cod-confirmation-agent/" },
       { name: "Done-for-you setup", to: "/done-for-you-ai-voice-agent/" },
+      { name: "AI receptionist", to: "/ai-receptionist-singapore/" },
     ],
   },
 ];
