@@ -49,6 +49,8 @@ const BY_JOURNEY: LinkGroup[] = [
       { name: "B2B lead generation", to: "/b2b-lead-generation-singapore/" },
       { name: "Appointment setting", to: "/appointment-setting-singapore/" },
       { name: "AI automation partner", to: "/ai-automation-singapore/" },
+      { name: "SEO packages & pricing", to: "/seo-packages-singapore/" },
+      { name: "Local SEO services", to: "/local-seo-services-singapore/" },
     ],
   },
   {

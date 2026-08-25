@@ -53,6 +53,12 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [AI Receptionist Singapore](${BASE}/ai-receptionist-singapore/): an AI voice receptionist that answers every call 24/7, qualifies, and books, so no lead is lost to a missed call, from S$100 per month, PSG eligible`);
   lines.push(`- [WhatsApp Business API Singapore](${BASE}/whatsapp-business-api-singapore/): WhatsApp Business API set up and run for instant replies, qualification, booking, and follow up inside WhatsApp, from S$100 per month, PSG eligible`);
   lines.push(`- [AI Automation Singapore](${BASE}/ai-automation-singapore/): a forward-deployed partner that builds and runs AI automation inside your stack across the whole lead journey, from S$100 per month, PSG eligible`);
+  lines.push(`- [SEO Packages Singapore](${BASE}/seo-packages-singapore/): transparent SEO packages tied to booked calls not ranking reports, honest starting price, no lock-in, from S$100 per month, PSG eligible`);
+  lines.push(`- [Local SEO Services Singapore](${BASE}/local-seo-services-singapore/): local SEO, Google Business Profile, and map pack ranking so nearby buyers find and book you, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Aesthetic Clinics Singapore](${BASE}/lead-generation-for-aesthetic-clinics-singapore/): fill aesthetic clinic consult calendars by answering every enquiry in seconds and booking it, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Law Firms Singapore](${BASE}/lead-generation-for-law-firms-singapore/): turn legal enquiries into booked consultations with fast compliant follow up, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Renovation Contractors Singapore](${BASE}/lead-generation-for-renovation-contractors-singapore/): win renovation and interior design projects with speed to lead and follow up, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for B2B SaaS Singapore](${BASE}/lead-generation-for-b2b-saas-singapore/): more demos and product qualified leads booked from your pipeline, from S$100 per month, PSG eligible`);
   lines.push("");
   lines.push("## Free tools");
   lines.push(

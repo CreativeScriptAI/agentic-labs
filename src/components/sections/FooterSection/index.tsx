@@ -126,6 +126,8 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "Content Marketing Singapore", to: "/content-marketing-singapore/" },
       { name: "Google Ads Agency Singapore", to: "/google-ads-agency-singapore/" },
       { name: "Social Media Marketing Singapore", to: "/social-media-marketing-singapore/" },
+      { name: "SEO Packages Singapore", to: "/seo-packages-singapore/" },
+      { name: "Local SEO Services Singapore", to: "/local-seo-services-singapore/" },
     ],
   },
   {
@@ -138,6 +140,10 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "AI Receptionist Singapore", to: "/ai-receptionist-singapore/" },
       { name: "WhatsApp Business API Singapore", to: "/whatsapp-business-api-singapore/" },
       { name: "AI Automation Singapore", to: "/ai-automation-singapore/" },
+      { name: "Aesthetic Clinic Lead Generation", to: "/lead-generation-for-aesthetic-clinics-singapore/" },
+      { name: "Law Firm Lead Generation", to: "/lead-generation-for-law-firms-singapore/" },
+      { name: "Renovation Contractor Lead Generation", to: "/lead-generation-for-renovation-contractors-singapore/" },
+      { name: "B2B SaaS Lead Generation", to: "/lead-generation-for-b2b-saas-singapore/" },
     ],
   },
   {
