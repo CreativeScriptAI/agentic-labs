@@ -45,7 +45,12 @@ const nextConfig: NextConfig = {
   // Performance optimizations
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ["framer-motion", "lucide-react", "react-icons"],
+    optimizePackageImports: [
+      "framer-motion",
+      "lucide-react",
+      "react-icons",
+      "recharts",
+    ],
   },
   // Security and performance headers
   async headers() {
@@ -362,7 +367,12 @@ const nextConfig: NextConfig = {
   },
   // Modern JavaScript target
   compiler: {
-    removeConsole: isProduction,
+    // Strip console.* from the client bundle in production builds while keeping
+    // error/warn for observability. Reduces shipped JS and mobile TBT.
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? { exclude: ["error", "warn"] }
+        : false,
   },
 };
 
