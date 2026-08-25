@@ -58,6 +58,47 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Load Hotjar only after the first user interaction (or a long idle
+  // fallback). This keeps its script work out of the initial load and the
+  // Total Blocking Time window while still capturing engaged sessions.
+  useEffect(() => {
+    let done = false;
+    const load = () => {
+      if (done) return;
+      done = true;
+      cleanup();
+      const h = window as unknown as {
+        hj?: ((...args: unknown[]) => void) & { q?: unknown[] };
+        _hjSettings?: { hjid: number; hjsv: number };
+      };
+      h.hj =
+        h.hj ||
+        function (...args: unknown[]) {
+          (h.hj!.q = h.hj!.q || []).push(args);
+        };
+      h._hjSettings = { hjid: 6592201, hjsv: 6 };
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = `https://static.hotjar.com/c/hotjar-${h._hjSettings.hjid}.js?sv=${h._hjSettings.hjsv}`;
+      document.head.appendChild(s);
+    };
+    const events: Array<keyof WindowEventMap> = [
+      "scroll",
+      "pointerdown",
+      "keydown",
+      "touchstart",
+    ];
+    const cleanup = () => {
+      events.forEach((e) => window.removeEventListener(e, load));
+      window.clearTimeout(timer);
+    };
+    events.forEach((e) =>
+      window.addEventListener(e, load, { once: true, passive: true })
+    );
+    const timer = window.setTimeout(load, 6000);
+    return cleanup;
+  }, []);
+
   return (
     <>
       <Head>
@@ -105,19 +146,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         `}
       </Script>
 
-      {/* Hotjar Tracking Code for https://tryagentikai.com */}
-      <Script id="hotjar" strategy="lazyOnload">
-        {`
-          (function(h,o,t,j,a,r){
-              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-              h._hjSettings={hjid:6592201,hjsv:6};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
-          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        `}
-      </Script>
+      {/* Hotjar is loaded on first user interaction (or after idle) by the
+          effect below, so its ~300ms of script work stays out of the initial
+          load and Total Blocking Time window. */}
     </>
   );
 }
