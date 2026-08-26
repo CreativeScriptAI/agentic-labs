@@ -59,6 +59,14 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [Lead Generation for Law Firms Singapore](${BASE}/lead-generation-for-law-firms-singapore/): turn legal enquiries into booked consultations with fast compliant follow up, from S$100 per month, PSG eligible`);
   lines.push(`- [Lead Generation for Renovation Contractors Singapore](${BASE}/lead-generation-for-renovation-contractors-singapore/): win renovation and interior design projects with speed to lead and follow up, from S$100 per month, PSG eligible`);
   lines.push(`- [Lead Generation for B2B SaaS Singapore](${BASE}/lead-generation-for-b2b-saas-singapore/): more demos and product qualified leads booked from your pipeline, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Dental Clinics Singapore](${BASE}/lead-generation-for-dental-clinics-singapore/): fill dental consult calendars by answering every enquiry in seconds and booking it, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Property Agents Singapore](${BASE}/lead-generation-for-property-agents-singapore/): win listings and buyers with speed to lead on portal and ad enquiries, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Tuition Centres Singapore](${BASE}/lead-generation-for-tuition-centres-singapore/): turn parent enquiries into booked trial classes and enrolments, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Logistics Companies Singapore](${BASE}/lead-generation-for-logistics-singapore/): book qualified RFQ conversations for freight and 3PL sales teams, from S$100 per month, PSG eligible`);
+  lines.push(`- [Lead Generation for Fitness Studios Singapore](${BASE}/lead-generation-for-fitness-studios-singapore/): more trials and memberships booked from gym and studio enquiries, from S$100 per month, PSG eligible`);
+  lines.push(`- [High Converting Landing Pages Singapore](${BASE}/high-converting-landing-pages-singapore/): landing pages and CRO that turn ad clicks into booked leads, wired to instant follow up, from S$100 per month, PSG eligible`);
+  lines.push(`- [Affordable Web Design Singapore](${BASE}/affordable-web-design-singapore/): fast, mobile first, SEO ready websites built to capture and convert leads, from S$100 per month, PSG eligible`);
+  lines.push(`- [Ecommerce Marketing Singapore](${BASE}/ecommerce-marketing-singapore/): ecommerce marketing measured on revenue, with cart recovery and repeat purchase, from S$100 per month, PSG eligible`);
   lines.push("");
   lines.push("## Free tools");
   lines.push(

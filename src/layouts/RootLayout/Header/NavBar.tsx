@@ -51,6 +51,9 @@ const BY_JOURNEY: LinkGroup[] = [
       { name: "AI automation partner", to: "/ai-automation-singapore/" },
       { name: "SEO packages & pricing", to: "/seo-packages-singapore/" },
       { name: "Local SEO services", to: "/local-seo-services-singapore/" },
+      { name: "High converting landing pages", to: "/high-converting-landing-pages-singapore/" },
+      { name: "Affordable web design", to: "/affordable-web-design-singapore/" },
+      { name: "Ecommerce marketing", to: "/ecommerce-marketing-singapore/" },
     ],
   },
   {

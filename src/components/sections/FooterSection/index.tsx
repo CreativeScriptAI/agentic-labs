@@ -128,6 +128,9 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "Social Media Marketing Singapore", to: "/social-media-marketing-singapore/" },
       { name: "SEO Packages Singapore", to: "/seo-packages-singapore/" },
       { name: "Local SEO Services Singapore", to: "/local-seo-services-singapore/" },
+      { name: "High Converting Landing Pages", to: "/high-converting-landing-pages-singapore/" },
+      { name: "Affordable Web Design Singapore", to: "/affordable-web-design-singapore/" },
+      { name: "Ecommerce Marketing Singapore", to: "/ecommerce-marketing-singapore/" },
     ],
   },
   {
@@ -144,6 +147,11 @@ const FOOTER_COLUMNS: FootColumn[] = [
       { name: "Law Firm Lead Generation", to: "/lead-generation-for-law-firms-singapore/" },
       { name: "Renovation Contractor Lead Generation", to: "/lead-generation-for-renovation-contractors-singapore/" },
       { name: "B2B SaaS Lead Generation", to: "/lead-generation-for-b2b-saas-singapore/" },
+      { name: "Dental Clinic Lead Generation", to: "/lead-generation-for-dental-clinics-singapore/" },
+      { name: "Property Agent Lead Generation", to: "/lead-generation-for-property-agents-singapore/" },
+      { name: "Tuition Centre Lead Generation", to: "/lead-generation-for-tuition-centres-singapore/" },
+      { name: "Logistics Lead Generation", to: "/lead-generation-for-logistics-singapore/" },
+      { name: "Fitness Studio Lead Generation", to: "/lead-generation-for-fitness-studios-singapore/" },
     ],
   },
   {
