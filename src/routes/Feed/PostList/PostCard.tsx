@@ -21,13 +21,13 @@ const PostCard: React.FC<Props> = ({ data }) => {
       className="group flex flex-col sm:flex-row items-stretch mb-4 border border-[#e7e6e4] bg-white rounded-none overflow-hidden transition-colors duration-200 hover:border-[#FCCA07]"
     >
       {data.thumbnail && (
-        <div className="relative w-full sm:w-[290px] lg:w-[320px] sm:flex-shrink-0 aspect-[16/9] sm:aspect-auto sm:self-stretch bg-[#efeee9] border-b sm:border-b-0 sm:border-r border-[#e7e6e4] overflow-hidden">
+        <div className="relative w-full sm:w-[300px] lg:w-[330px] sm:flex-shrink-0 aspect-[1200/630] sm:aspect-auto sm:self-stretch bg-[#F9F6F4] border-b sm:border-b-0 sm:border-r border-[#e7e6e4] overflow-hidden">
           <Image
             src={data.thumbnail}
             fill
             alt={data.title}
-            sizes="(max-width: 640px) 100vw, 320px"
-            className="object-cover"
+            sizes="(max-width: 640px) 100vw, 330px"
+            className="object-contain"
             unoptimized
           />
         </div>
