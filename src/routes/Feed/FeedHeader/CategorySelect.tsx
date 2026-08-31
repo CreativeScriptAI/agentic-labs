@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import React from "react";
 import { MdExpandMore } from "react-icons/md";
 import { DEFAULT_CATEGORY } from "src/constants";
-import styled from "@emotion/styled";
 import { useCategoriesQuery } from "src/hooks/useCategoriesQuery";
 
 type Props = Record<string, never>;
@@ -24,15 +23,19 @@ const CategorySelect: React.FC<Props> = () => {
     });
   };
   return (
-    <StyledWrapper>
-      <div ref={dropdownRef} className="wrapper" onClick={handleOpen}>
-        {currentCategory} Posts <MdExpandMore />
+    <div className="relative">
+      <div
+        ref={dropdownRef}
+        onClick={handleOpen}
+        className="flex items-center gap-1 my-2 cursor-pointer font-alte text-[22px] sm:text-[26px] tracking-[-0.04em] text-[#0A1128]"
+      >
+        {currentCategory.replace(/^[^\p{L}\p{N}]+/u, "")} Posts <MdExpandMore />
       </div>
       {opened && (
-        <div className="content">
+        <div className="absolute z-40 mt-1 p-1 bg-white border border-[#e7e6e4] rounded-none shadow-[0_10px_30px_-12px_rgba(10,17,40,0.25)]">
           {Object.keys(data).map((key, idx) => (
             <div
-              className="item"
+              className="px-3 py-1.5 rounded-none whitespace-nowrap cursor-pointer font-geist text-[12px] uppercase tracking-[0.02em] text-slate-600 hover:bg-[#F9F6F4] hover:text-[#0A1128]"
               key={idx}
               onClick={() => handleOptionClick(key)}
             >
@@ -41,47 +44,8 @@ const CategorySelect: React.FC<Props> = () => {
           ))}
         </div>
       )}
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default CategorySelect;
-
-const StyledWrapper = styled.div`
-  position: relative;
-  > .wrapper {
-    display: flex;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    gap: 0.25rem;
-    align-items: center;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  > .content {
-    position: absolute;
-    z-index: 40;
-    padding: 0.25rem;
-    border-radius: 0.75rem;
-    background-color: ${({ theme }) => theme.colors.gray2};
-    color: ${({ theme }) => theme.colors.gray10};
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    > .item {
-      padding: 0.25rem;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      border-radius: 0.75rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      white-space: nowrap;
-      cursor: pointer;
-
-      :hover {
-        background-color: ${({ theme }) => theme.colors.gray4};
-      }
-    }
-  }
-`;

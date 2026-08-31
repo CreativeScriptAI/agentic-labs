@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -19,39 +18,26 @@ const OrderButtons: React.FC<Props> = () => {
       },
     });
   };
+
+  const base =
+    "cursor-pointer font-geist text-[11px] uppercase tracking-[0.02em] pb-0.5 border-b-2 transition-colors";
   return (
-    <StyledWrapper>
-      <a
-        data-active={currentOrder === "desc"}
-        onClick={() => handleClickOrderBy("desc")}
-      >
-        Desc
-      </a>
-      <a
-        data-active={currentOrder === "asc"}
-        onClick={() => handleClickOrderBy("asc")}
-      >
-        Asc
-      </a>
-    </StyledWrapper>
+    <div className="flex gap-4">
+      {(["desc", "asc"] as TOrder[]).map((v) => (
+        <a
+          key={v}
+          onClick={() => handleClickOrderBy(v)}
+          className={`${base} ${
+            currentOrder === v
+              ? "text-[#0A1128] border-[#FCCA07]"
+              : "text-slate-400 border-transparent hover:text-[#0A1128]"
+          }`}
+        >
+          {v === "desc" ? "Newest" : "Oldest"}
+        </a>
+      ))}
+    </div>
   );
 };
 
 export default OrderButtons;
-
-const StyledWrapper = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  a {
-    cursor: pointer;
-    color: ${({ theme }) => theme.colors.gray10};
-
-    &[data-active="true"] {
-      font-weight: 700;
-
-      color: ${({ theme }) => theme.colors.gray12};
-    }
-  }
-`;

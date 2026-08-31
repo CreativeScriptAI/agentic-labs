@@ -1,25 +1,16 @@
 import React from "react";
 import CategorySelect from "./CategorySelect";
 import OrderButtons from "./OrderButtons";
-import styled from "@emotion/styled";
 
 type Props = Record<string, never>;
 
 const FeedHeader: React.FC<Props> = () => {
   return (
-    <StyledWrapper>
+    <div className="flex justify-between items-center mb-6 pb-4 border-b border-[#e7e6e4]">
       <CategorySelect />
       <OrderButtons />
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default FeedHeader;
-
-const StyledWrapper = styled.div`
-  display: flex;
-  margin-bottom: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
-`;

@@ -1,25 +1,13 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { COLOR_SET } from "./constants";
-
-export const getColorClassByName = (name: string): string => {
-  try {
-    let sum = 0;
-    name.split("").forEach((alphabet) => (sum = sum + alphabet.charCodeAt(0)));
-    const colorKey = sum
-      .toString(16)
-      ?.[sum.toString(16).length - 1].toUpperCase();
-    return COLOR_SET[colorKey];
-  } catch {
-    return COLOR_SET[0];
-  }
-};
 
 type Props = {
   children: string;
   readOnly?: boolean;
 };
 
+// Brand eyebrow-style category chip: yellow dot + uppercase geist label on a
+// white, sharp-cornered chip. Matches the site's Eyebrow component.
 const Category: React.FC<Props> = ({ readOnly = false, children }) => {
   const router = useRouter();
 
@@ -28,17 +16,15 @@ const Category: React.FC<Props> = ({ readOnly = false, children }) => {
     router.push(`/?category=${value}`);
   };
   return (
-    <div
+    <span
       onClick={() => handleClick(children)}
-      className={`py-1 px-2 rounded-none w-fit font-geist uppercase tracking-[0.02em] font-normal text-[12px] opacity-90 text-gray-100 ${
+      className={`inline-flex items-center gap-1.5 py-1 px-2.5 rounded-none w-fit border border-[#e7e6e4] bg-white font-geist uppercase tracking-[0.02em] text-[11px] text-[#0A1128] ${
         readOnly ? "cursor-default" : "cursor-pointer"
       }`}
-      style={{
-        backgroundColor: getColorClassByName(children),
-      }}
     >
+      <span className="w-1.5 h-1.5 rounded-full bg-[#FCCA07] flex-shrink-0" />
       {children}
-    </div>
+    </span>
   );
 };
 

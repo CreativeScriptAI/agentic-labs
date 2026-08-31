@@ -1,7 +1,5 @@
-import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import React from "react";
-import { Emoji } from "src/components/Emoji";
 import { useTagsQuery } from "src/hooks/useTagsQuery";
 
 type Props = Record<string, never>;
@@ -12,101 +10,39 @@ const TagList: React.FC<Props> = () => {
   const data = useTagsQuery();
 
   const handleClickTag = (value: string) => {
-    // delete
     if (currentTag === value) {
-      router.push({
-        query: {
-          ...router.query,
-          tag: undefined,
-        },
-      });
-    }
-    // add
-    else {
-      router.push({
-        query: {
-          ...router.query,
-          tag: value,
-        },
-      });
+      router.push({ query: { ...router.query, tag: undefined } });
+    } else {
+      router.push({ query: { ...router.query, tag: value } });
     }
   };
 
   return (
-    <StyledWrapper>
-      <div className="top">
-        <Emoji>🏷️</Emoji> Tags
+    <div>
+      <p className="hidden lg:flex items-center gap-2 mb-4 font-geist text-[11px] uppercase tracking-[0.02em] text-slate-400">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#FCCA07] flex-shrink-0" />
+        Tags
+      </p>
+      <div className="flex lg:block gap-2 mb-6 overflow-x-auto lg:overflow-visible [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        {Object.keys(data).map((key) => {
+          const active = key === currentTag;
+          return (
+            <a
+              key={key}
+              onClick={() => handleClickTag(key)}
+              className={`flex-shrink-0 block lg:mb-1.5 px-3 py-1.5 rounded-none border cursor-pointer font-geist text-[12px] uppercase tracking-[0.02em] transition-colors ${
+                active
+                  ? "bg-[#0A1128] text-white border-[#0A1128]"
+                  : "bg-white text-slate-500 border-[#e7e6e4] hover:border-[#FCCA07] hover:text-[#0A1128]"
+              }`}
+            >
+              {key}
+            </a>
+          );
+        })}
       </div>
-      <div className="list">
-        {Object.keys(data).map((key) => (
-          <a
-            key={key}
-            data-active={key === currentTag}
-            onClick={() => handleClickTag(key)}
-          >
-            {key}
-          </a>
-        ))}
-      </div>
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default TagList;
-
-const StyledWrapper = styled.div`
-  .top {
-    display: none;
-    padding: 0.25rem;
-    margin-bottom: 0.75rem;
-
-    @media (min-width: 1024px) {
-      display: block;
-    }
-  }
-
-  .list {
-    display: flex;
-    margin-bottom: 1.5rem;
-    gap: 0.25rem;
-    overflow: scroll;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    ::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
-
-    @media (min-width: 1024px) {
-      display: block;
-    }
-
-    a {
-      display: block;
-      padding: 0.25rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-top: 0.25rem;
-      margin-bottom: 0.25rem;
-      border-radius: 0.75rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      color: ${({ theme }) => theme.colors.gray10};
-      flex-shrink: 0;
-      cursor: pointer;
-
-      :hover {
-        background-color: ${({ theme }) => theme.colors.gray4};
-      }
-      &[data-active="true"] {
-        color: ${({ theme }) => theme.colors.gray12};
-        background-color: ${({ theme }) => theme.colors.gray4};
-
-        :hover {
-          background-color: ${({ theme }) => theme.colors.gray4};
-        }
-      }
-    }
-  }
-`;
