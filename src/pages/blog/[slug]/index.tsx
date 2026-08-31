@@ -10,7 +10,7 @@ import { GetStaticProps } from "next";
 import { queryClient } from "src/libs/react-query";
 import { queryKey } from "src/constants/queryKey";
 import { dehydrate } from "@tanstack/react-query";
-import usePostQuery from "src/hooks/usePostQuery";
+import usePostQuery, { PostSlugContext } from "src/hooks/usePostQuery";
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts";
 import { useRouter } from "next/router";
 
@@ -77,6 +77,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       return {
         props: {
           dehydratedState: dehydrate(queryClient),
+          slug: normalizedSlug,
         },
         revalidate: CONFIG.revalidateTime,
       };
@@ -103,6 +104,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       return {
         props: {
           dehydratedState: dehydrate(queryClient),
+          slug: normalizedSlug,
         },
         revalidate: CONFIG.revalidateTime,
       };
@@ -117,14 +119,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-const DetailPage: NextPageWithLayout = () => {
+const DetailPage: NextPageWithLayout = ({ slug }: { slug?: string }) => {
   const router = useRouter();
-  const post = usePostQuery();
+  // Pass the slug from getStaticProps params so the post resolves during SSR
+  // (router.query.slug is empty at static generation time). This keeps the
+  // title, meta, Article schema, and body in the server HTML for crawlers.
+  const post = usePostQuery(slug);
 
-  // Wait for the router to be ready so router.query.slug is populated
-  // before the usePostQuery hook can find the correct cache entry.
-  // Without this, it looks up ["post", "undefined"] and returns null → CustomError.
-  if (!router.isReady || router.isFallback) return null;
+  // Only the fallback (not-yet-generated) state has no data; render nothing then.
+  if (router.isFallback) return null;
 
   if (!post) return <CustomError />;
 
@@ -177,11 +180,11 @@ const DetailPage: NextPageWithLayout = () => {
   };
 
   return (
-    <>
+    <PostSlugContext.Provider value={post.slug ?? slug}>
       <MetaConfig {...meta} />
       <StructuredData type="article" data={articleSchema} />
       <Detail />
-    </>
+    </PostSlugContext.Provider>
   );
 };
 
