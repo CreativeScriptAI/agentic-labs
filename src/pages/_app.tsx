@@ -102,6 +102,22 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
       inject(
         `https://static.hotjar.com/c/hotjar-${h._hjSettings.hjid}.js?sv=${h._hjSettings.hjsv}`
       );
+
+      // Microsoft Clarity (heatmaps + session recordings + analytics).
+      // Set CLARITY_PROJECT_ID to the 10-char project id from clarity.microsoft.com.
+      // Left empty = Clarity does not load, so this is inert until the id is set.
+      const CLARITY_PROJECT_ID = "yb1e18vsqg";
+      if (CLARITY_PROJECT_ID) {
+        const c = window as unknown as {
+          clarity?: ((...args: unknown[]) => void) & { q?: unknown[] };
+        };
+        c.clarity =
+          c.clarity ||
+          function (...args: unknown[]) {
+            (c.clarity!.q = c.clarity!.q || []).push(args);
+          };
+        inject(`https://www.clarity.ms/tag/${CLARITY_PROJECT_ID}`);
+      }
     };
     const events: Array<keyof WindowEventMap> = [
       "scroll",
