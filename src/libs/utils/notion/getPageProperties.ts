@@ -1,3 +1,4 @@
+import { NOTION_KY_OPTIONS } from "src/apis/notion-client/ua";
 import { getTextContent, getDateValue } from "notion-utils";
 import { NotionAPI } from "notion-client";
 import { BlockMap, CollectionPropertySchemaMap } from "notion-types";
@@ -8,7 +9,7 @@ async function getPageProperties(
   block: BlockMap,
   schema: CollectionPropertySchemaMap
 ) {
-  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: { mode: undefined as any } });
+  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: NOTION_KY_OPTIONS });
   const rawProperties = Object.entries((block?.[id] as any)?.value?.value?.properties || []);
   const excludeProperties = [
     "date",

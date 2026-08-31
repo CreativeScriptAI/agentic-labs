@@ -1,3 +1,4 @@
+import { NOTION_KY_OPTIONS } from "./ua";
 import { NotionAPI } from "notion-client";
 import { idToUuid } from "notion-utils";
 
@@ -11,7 +12,7 @@ import { TPosts } from "src/types";
 export const getAgents = async () => {
   // Hardcoded page ID for the agents directory
   let id = "20eb34d6b4d480dfa876f581b273b88d";
-  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: { mode: undefined as any } });
+  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: NOTION_KY_OPTIONS });
 
   try {
     const response = await api.getPage(id);

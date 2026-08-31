@@ -1,3 +1,4 @@
+import { NOTION_KY_OPTIONS } from "./ua";
 import { NotionAPI } from "notion-client";
 
 /**
@@ -44,7 +45,7 @@ function normalizeRecordMap(recordMap: any) {
 }
 
 export const getRecordMap = async (pageId: string) => {
-  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: { mode: undefined as any } });
+  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN, kyOptions: NOTION_KY_OPTIONS });
 
   try {
     const rawRecordMap = await api.getPage(pageId);

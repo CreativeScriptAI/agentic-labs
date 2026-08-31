@@ -1,5 +1,6 @@
 import { CONFIG } from "site.config";
 import { NotionAPI } from "notion-client";
+import { NOTION_KY_OPTIONS } from "./ua";
 import { idToUuid } from "notion-utils";
 
 import getPageProperties from "src/libs/utils/notion/getPageProperties";
@@ -7,7 +8,7 @@ import { TPosts } from "src/types";
 
 const NOTION_API_OPTIONS = {
   authToken: process.env.NOTION_TOKEN,
-  kyOptions: { mode: undefined as any },
+  kyOptions: NOTION_KY_OPTIONS,
 };
 
 export const getPosts = async (): Promise<TPosts> => {
