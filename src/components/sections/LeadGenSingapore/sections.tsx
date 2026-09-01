@@ -320,6 +320,14 @@ export const Comparison = () => (
       <p className="font-alte text-[16px] text-slate-600 tracking-[-0.04em] leading-[1.5] mt-8 max-w-3xl">
         {COMPARE.line}
       </p>
+      <p className="font-alte text-[16px] text-slate-600 tracking-[-0.04em] leading-[1.5] mt-4 max-w-3xl">
+        And because more buyers now ask an AI who to hire before they ever reach
+        your form, it pays to{" "}
+        <Link href="/answer-engine-optimization/" className="text-blue-600 hover:underline">
+          get named in AI answers
+        </Link>{" "}
+        as well.
+      </p>
     </Container>
   </section>
 );

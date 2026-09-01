@@ -31,6 +31,12 @@ export const AESTHETIC_CLINIC_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for an aesthetic clinic in Singapore is not really a traffic problem. Your ads and Reels already generate the enquiry, the DM, the WhatsApp, the form fill, the missed call. The problem is what happens next. Aesthetic buyers message three to five clinics at once, usually in the evening or on the weekend, and the first clinic to reply credibly and offer a consult slot tends to win. We build and run the system that answers every enquiry in seconds across every channel, qualifies it, and books a consult straight into your calendar, all inside your own tools, so the enquiry you paid for becomes a patient in the chair instead of a thread that goes cold.",
+  relatedProse: [
+    { before: "This page is the aesthetic clinic view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns enquiries into booked consults." },
+    { before: "Most aesthetic enquiries come in on chat, so we run instant, compliant replies through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " and use the same channel for consult reminders." },
+    { before: "When the clinic phone rings and nobody can answer, the ", anchor: "AI receptionist for Singapore clinics", to: "/ai-receptionist-singapore/", after: " picks it up so the enquiry is not lost to voicemail." },
+    { before: "Once a lead is qualified, ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " drops it straight into your calendar for the right treatment slot." },
+  ],
   gap: {
     eyebrow: "WHERE THE BOOKING LEAKS",
     heading: "The enquiry lands, then it waits, then it is gone",

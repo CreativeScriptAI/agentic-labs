@@ -87,21 +87,25 @@ export const WHYNOW = {
       stat: "8%",
       label: "of visits get a click when Google shows an AI summary, against 15 percent without one",
       source: "Pew Research Center, 2025",
+      sourceHref: "https://www.pewresearch.org",
     },
     {
       stat: "1%",
       label: "of visits click a source listed inside the AI summary itself",
       source: "Pew Research Center, 2025",
+      sourceHref: "https://www.pewresearch.org",
     },
     {
       stat: "25%",
       label: "projected drop in traditional search engine volume by 2026 as buyers shift to AI",
       source: "Gartner, 2024",
+      sourceHref: "https://www.gartner.com",
     },
     {
       stat: "800M",
       label: "weekly ChatGPT users as of its October 2025 announcement",
       source: "OpenAI",
+      sourceHref: "",
     },
   ],
   body:

@@ -26,6 +26,12 @@ export const FITNESS_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a fitness studio in Singapore means turning enquiries into booked, attended trials and then into members. The problem is not usually reach. It is the minutes after the enquiry. Someone asks about a beginner reformer class while you are on the floor, and two hours later they are gone. We answer every enquiry in seconds across Instagram, WhatsApp, your website, and Google, guide them straight onto a real class slot, remind them so they actually show, and follow up after the trial to close the membership, all inside your own tools, so an enquiry becomes a member instead of a missed DM.",
+  relatedProse: [
+    { before: "This page is the fitness studio view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns enquiries into booked, attended trials." },
+    { before: "Studio enquiries mostly land on chat, so we run instant replies and class reminders through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " while your coaches stay on the floor." },
+    { before: "When the studio line rings during a class, the ", anchor: "AI receptionist for Singapore studios", to: "/ai-receptionist-singapore/", after: " answers so a trial enquiry is not lost to voicemail." },
+    { before: "After a trial, ", anchor: "follow-up automation", to: "/follow-up-automation/", after: " keeps the conversation going until a good trial becomes a paying membership." },
+  ],
   gap: {
     eyebrow: "WHERE THE LEADS LEAK",
     heading: "The enquiry arrives, and the owner is teaching a class",

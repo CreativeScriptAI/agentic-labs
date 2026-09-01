@@ -95,6 +95,24 @@ const ServicePage = ({
             {copy.answerFirst}
           </p>
         </FadeUp>
+        {copy.relatedProse && copy.relatedProse.length > 0 ? (
+          <FadeUp delay={0.06}>
+            <p className="font-alte text-[16px] sm:text-[17px] tracking-[-0.02em] leading-[1.6] text-slate-600 max-w-3xl mt-6">
+              {copy.relatedProse.map((s, i) => (
+                <span key={i}>
+                  {s.before}
+                  <Link
+                    href={s.to}
+                    className="text-blue-600 underline underline-offset-2 hover:text-[#0A1128]"
+                  >
+                    {s.anchor}
+                  </Link>
+                  {s.after}{" "}
+                </span>
+              ))}
+            </p>
+          </FadeUp>
+        ) : null}
       </Container>
     </section>
 

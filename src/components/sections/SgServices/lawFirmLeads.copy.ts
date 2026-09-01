@@ -34,6 +34,12 @@ export const LAW_FIRM_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a Singapore law firm is meant to turn enquiries into booked consultations and retained matters. The problem is rarely getting the enquiry. It is what happens next. A web form, a phone call, or a WhatsApp message lands while the fee-earner who must respond is billing, so it sits for hours or overnight, and the anxious client who was quietly comparing three or four firms retains whoever answered first, credibly and professionally. We run the system that owns that gap. Every enquiry is answered in seconds on the channel the client used, qualified against your practice areas, captured as clean intake, and booked into a consult, with compliant follow-up for the ones who do not book on the first touch. You get booked consultations, not an inbox of cold enquiries.",
+  relatedProse: [
+    { before: "This page is the law firm view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns enquiries into booked, retained matters." },
+    { before: "Firms chasing corporate and commercial clients also lean on our ", anchor: "B2B lead generation in Singapore", to: "/b2b-lead-generation-singapore/", after: " to start conversations with the accounts they want, not just the ones who happen to call." },
+    { before: "Every qualified enquiry moves into ", anchor: "appointment setting in Singapore", to: "/appointment-setting-singapore/", after: " so a fee-earner walks into a booked consult instead of a callback list." },
+    { before: "Before it reaches a partner, each enquiry passes through ", anchor: "lead qualification", to: "/lead-qualification/", after: " against your practice areas, so time only goes to matters worth taking." },
+  ],
   gap: {
     eyebrow: "WHERE MOST LEGAL MARKETING STOPS",
     heading: "The enquiry is where they finish and where the fees leak",

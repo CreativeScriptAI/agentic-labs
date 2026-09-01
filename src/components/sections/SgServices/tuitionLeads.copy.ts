@@ -35,6 +35,12 @@ export const TUITION_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a tuition or enrichment centre in Singapore is not really a traffic problem. You already get enquiries from Meta and Google ads, flyers near the MRT and schools, and word of mouth, arriving through WhatsApp, a website form, IG and Facebook DMs, and phone calls. The problem is that they arrive when the front desk is teaching, closed, or drowning on a Saturday morning, so the fastest centre wins the booked trial and the rest go cold. We answer every enquiry in seconds with the right level, subject, and next open slot, book the trial class or assessment on your calendar, and follow up so a good trial turns into a term enrolment, all inside the WhatsApp number and tools you already use.",
+  relatedProse: [
+    { before: "This page is the tuition centre view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns enquiries into booked trials and term enrolments." },
+    { before: "Parents almost always enquire on chat, so we run instant replies and trial reminders through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " on the number you already use." },
+    { before: "When the centre line rings while the front desk is teaching, the ", anchor: "AI receptionist for Singapore centres", to: "/ai-receptionist-singapore/", after: " answers so a keen parent is not lost to voicemail." },
+    { before: "Once level and subject are matched, ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " puts the trial class or assessment straight onto your calendar." },
+  ],
   gap: {
     eyebrow: "WHERE THE ENQUIRY LEAKS",
     heading: "You are not short of enquiries, you are short of time to answer them",

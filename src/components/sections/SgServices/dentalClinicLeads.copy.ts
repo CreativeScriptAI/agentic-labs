@@ -31,6 +31,12 @@ export const DENTAL_CLINIC_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a dental clinic in Singapore is not about buying a list of names. Your high-value cases, Invisalign, implants, veneers, are considered purchases where the enquiry-to-consult gap is where the money leaks. The buyer messages several clinics at once, and the first to reply credibly and get them booked usually wins the case. Most providers stop at the form fill and hand you a lead to chase. We run and route the demand for the treatments that pay, then own the moment after the enquiry: answered in seconds across form, call, WhatsApp, and IG DM, screened for treatment interest and catchment, and booked straight into your calendar. Done inside your own tools, so the system and the data stay with the clinic.",
+  relatedProse: [
+    { before: "This page is one industry view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the same system that turns enquiries into booked calls across every vertical we serve." },
+    { before: "For clinics the biggest leak is the phone, which is why the ", anchor: "AI receptionist for Singapore clinics", to: "/ai-receptionist-singapore/", after: " catches the calls reception misses while the dentist is chairside." },
+    { before: "Most dental enquiries arrive on chat, so we run instant, compliant replies through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " and use it for consult reminders too." },
+    { before: "Once an enquiry is qualified, ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " puts it straight onto the right chair and consult type in your calendar." },
+  ],
   gap: {
     eyebrow: "WHERE THE ENQUIRY DIES",
     heading: "The enquiry is where they finish and where the case leaks",

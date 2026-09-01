@@ -23,6 +23,12 @@ export const CONTENT_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A content marketing agency in Singapore creates the articles, guides, and pages that attract buyers and build trust. The problem with most of it is volume for its own sake: content that publishes, ranks for nothing, gets cited by no one, and converts no one. We engineer content around the questions your buyers actually ask, so it ranks in Google, gets named in AI answers like ChatGPT and Google AI Overviews, and is wired to capture the lead it earns.",
+  relatedProse: [
+    { before: "Content and search are one job, so every piece is built alongside ", anchor: "SEO that ranks and gets you cited by AI", to: "/seo-agency-singapore/", after: ", not written in isolation." },
+    { before: "One strong article becomes the ", anchor: "social media marketing in Singapore", to: "/social-media-marketing-singapore/", after: " that carries it further into the feed." },
+    { before: "When you need traffic today rather than in a few months, we pair the content with ", anchor: "Google Ads and SEM in Singapore", to: "/google-ads-agency-singapore/", after: " so paid and organic reinforce each other." },
+    { before: "And because a reader is only worth what it books, the content plugs into our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: "." },
+  ],
   gap: {
     eyebrow: "WHERE MOST CONTENT STOPS",
     heading: "Published is not the same as read",

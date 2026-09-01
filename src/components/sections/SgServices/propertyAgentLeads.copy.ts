@@ -32,6 +32,12 @@ export const PROPERTY_AGENT_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for property agents in Singapore usually means buying enquiries from portals and running your own ads. The problem is not the volume, it is what happens next. The same lead is sold to or chased by several agents, so whoever replies first gets the viewing, and yours pings while your phone is in your pocket at a closing. We do not resell you portal leads. We build the system that converts the enquiries you already pay for: every portal, ad, and web enquiry is answered in seconds by WhatsApp, SMS, or voice, qualified on intent and timeline, and booked onto your calendar, including evenings and weekends when property enquiries actually land.",
+  relatedProse: [
+    { before: "This page is the property agent view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that converts the enquiries you already pay for into viewings." },
+    { before: "Buyer and seller enquiries come in on chat, so we run instant replies through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " so you answer first even when your phone is in your pocket." },
+    { before: "Every portal and ad enquiry passes through ", anchor: "lead qualification", to: "/lead-qualification/", after: " on intent and timeline before it reaches you, so you chase viewings worth having." },
+    { before: "Qualified buyers move into ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " that drops the viewing straight onto your calendar, evenings and weekends included." },
+  ],
   gap: {
     eyebrow: "WHERE THE LISTINGS LEAK",
     heading: "You pay for the lead, then lose it to a faster reply",

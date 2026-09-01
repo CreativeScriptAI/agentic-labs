@@ -168,6 +168,23 @@ export const WhatWeDo = () => (
           </FadeUp>
         ))}
       </div>
+      <FadeUp>
+        <p className="font-alte text-[16px] sm:text-[17px] text-slate-600 tracking-[-0.04em] leading-[1.5] max-w-3xl mt-8">
+          It runs on the same fundamentals we use everywhere else:{" "}
+          <Link href="/content-marketing-singapore/" className="text-blue-600 hover:underline">
+            content marketing
+          </Link>{" "}
+          that answers what your buyers actually search,{" "}
+          <Link href="/social-media-marketing-singapore/" className="text-blue-600 hover:underline">
+            social media marketing
+          </Link>{" "}
+          that keeps your name in front of them between searches, and{" "}
+          <Link href="/answer-engine-optimization/" className="text-blue-600 hover:underline">
+            answer engine optimization
+          </Link>{" "}
+          so the AI engines your buyers now ask name you too.
+        </p>
+      </FadeUp>
     </Container>
   </section>
 );

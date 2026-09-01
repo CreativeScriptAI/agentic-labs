@@ -23,6 +23,12 @@ export const SOCIAL_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A social media marketing agency in Singapore manages your presence across platforms like Instagram, Facebook, TikTok, and LinkedIn. Most sell activity: posts, followers, and likes. The problem is that followers are not revenue, and the real leads, the DMs asking is this available and the comments asking how much, go unanswered while the agency reports engagement. We run the content, then answer those enquiries in seconds, qualify them, and book the call, so social becomes a lead channel instead of a vanity dashboard.",
+  relatedProse: [
+    { before: "Social carries further when there is something worth sharing, which is why we back it with ", anchor: "content marketing in Singapore", to: "/content-marketing-singapore/", after: " that is built to be found." },
+    { before: "Organic reach and search pull in the same direction, so social sits alongside ", anchor: "SEO that ranks and gets you cited by AI", to: "/seo-agency-singapore/", after: "." },
+    { before: "When you want budget behind your best posts, we run ", anchor: "Google Ads and SEM in Singapore", to: "/google-ads-agency-singapore/", after: " from the same system that books the calls." },
+    { before: "Every DM and comment enquiry flows into our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so attention turns into booked calls." },
+  ],
   gap: {
     eyebrow: "WHERE MOST SOCIAL STOPS",
     heading: "Engagement is not revenue",

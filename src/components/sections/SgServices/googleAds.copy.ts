@@ -24,6 +24,12 @@ export const GOOGLE_ADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A Google Ads agency in Singapore manages your paid search and SEM campaigns to bring in clicks. The problem is that most stop at the click. You pay for the visit, the lead fills in a form, and then it sits, because the fastest credible response wins and nobody was watching. We run the ads and own the next step: the lead is answered in seconds, qualified, and booked, so your ad spend turns into meetings instead of a full inbox.",
+  relatedProse: [
+    { before: "Paid clicks convert best when the pages and articles behind them do real work, which is why we pair campaigns with ", anchor: "content marketing in Singapore", to: "/content-marketing-singapore/", after: " that answers the questions buyers arrive with." },
+    { before: "We run the same booking system across paid social, so ", anchor: "social media marketing in Singapore", to: "/social-media-marketing-singapore/", after: " feeds the same pipeline as search." },
+    { before: "Ads buy visibility today while ", anchor: "SEO that ranks and gets you cited by AI", to: "/seo-agency-singapore/", after: " compounds the cheaper way over the following months." },
+    { before: "More buyers now open a chatbot before a search box, so we also work to ", anchor: "get named in AI answers", to: "/answer-engine-optimization/", after: ", not just win the Google auction." },
+  ],
   gap: {
     eyebrow: "WHERE MOST ADS STOP",
     heading: "The click is where they finish and where the money leaks",

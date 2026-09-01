@@ -220,7 +220,18 @@ export const WhyNow = () => (
                 {s.label}
               </p>
               <p className="font-geist text-[10px] uppercase tracking-[0.02em] text-slate-400 mt-3">
-                {s.source}
+                {s.sourceHref ? (
+                  <a
+                    href={s.sourceHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#0A1128] hover:underline"
+                  >
+                    {s.source}
+                  </a>
+                ) : (
+                  s.source
+                )}
               </p>
             </div>
           </FadeUp>
@@ -228,7 +239,28 @@ export const WhyNow = () => (
       </div>
       <FadeUp delay={0.1}>
         <p className="font-alte text-[16px] sm:text-[18px] tracking-[-0.02em] leading-[1.55] text-slate-600 mt-8 max-w-2xl">
-          {WHYNOW.body}
+          <a
+            href="https://www.pewresearch.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Pew Research Center
+          </a>{" "}
+          found that when an AI summary appears, people click a normal result far
+          less often, and almost never click a source inside the summary.{" "}
+          <a
+            href="https://sparktoro.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            SparkToro
+          </a>
+          &apos;s analysis of US search put the share of searches ending with no
+          click at roughly 58 percent even before AI answers spread. The buyer
+          reads the answer and stops. The only way to be in that answer is to be
+          named in it.
         </p>
       </FadeUp>
       <FadeUp delay={0.12}>
@@ -373,6 +405,17 @@ export const Fix = () => (
             {p}
           </p>
         ))}
+        <p className="font-alte text-[17px] sm:text-[19px] tracking-[-0.02em] leading-[1.55] text-slate-600 mt-4">
+          That work runs alongside our{" "}
+          <Link href="/content-marketing-singapore/" className="text-blue-600 hover:underline">
+            content marketing in Singapore
+          </Link>
+          , and if you want to see where you stand first, you can{" "}
+          <Link href="/ai-visibility-checker/" className="text-blue-600 hover:underline">
+            check whether AI names your business
+          </Link>{" "}
+          in about a minute.
+        </p>
         <div className="flex flex-wrap items-center gap-4 mt-8">
           <BracketButton label={FIX.cta.label} href={FIX.cta.to} variant="primary" />
           <span className="font-alte text-[15px] tracking-[-0.02em] text-slate-500">{FIX.support}</span>

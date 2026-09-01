@@ -32,6 +32,12 @@ export const RENOVATION_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a renovation contractor or ID firm in Singapore is not really about getting more enquiries. Homeowners already broadcast the same request to five to ten firms at once, usually after work or on a weekend when your designers cannot reply. The problem is the multi-quote race: the first two or three firms to answer credibly get the meeting, and a quote sent the next morning is already too late. We build and run the reply, the qualification, and the booking inside your own tools, so every enquiry gets a credible WhatsApp reply in seconds, gets qualified by property type and budget and timeline, and lands a confirmed consultation in your calendar.",
+  relatedProse: [
+    { before: "This page is the renovation and ID view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that wins the multi-quote race with a credible reply first." },
+    { before: "Homeowners broadcast the same request on chat, so we run instant replies through the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " while your designers are on site or off the clock." },
+    { before: "Every enquiry passes through ", anchor: "lead qualification", to: "/lead-qualification/", after: " on property type, budget, and timeline, so your team meets the projects worth quoting." },
+    { before: "Qualified homeowners move into ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " that lands a confirmed consultation straight in your calendar." },
+  ],
   gap: {
     eyebrow: "WHERE THE LEADS LEAK",
     heading: "You are not short of enquiries. You are short of time to answer them",

@@ -42,6 +42,9 @@ export type ServiceCopy = {
   process: { eyebrow: string; heading: string; steps: { n: string; title: string; body: string }[] };
   trust: { eyebrow: string; heading: string; items: { title: string; body: string }[] };
   crossLinks: { eyebrow: string; heading: string; intro: string; links: Link[] };
+  // In-prose contextual links rendered as a body paragraph under the answer.
+  // Each entry is a sentence with one descriptive inline link.
+  relatedProse?: { before: string; anchor: string; to: string; after: string }[];
   faqs: { question: string; answer: string }[];
   final: { eyebrow: string; heading: string; sub: string; ctaA: { label: string; to: string }; ctaB: { label: string; to: string } };
 };

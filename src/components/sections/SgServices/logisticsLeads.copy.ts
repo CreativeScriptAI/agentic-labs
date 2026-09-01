@@ -26,6 +26,12 @@ export const LOGISTICS_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a logistics company in Singapore means finding shippers who actually move freight on lanes you cover, starting a conversation before they issue an RFQ, and getting a qualified quote request in front of your sales team fast enough to win it. The problem is that most forwarders only react to inbound RFQs and depend on referrals, so pipeline is lumpy and a lost anchor account leaves nothing behind it. We build target-shipper lists by lane and vertical, run consent-respecting outreach that starts new lane conversations, answer and qualify every enquiry on freight reality, and book RFQ conversations straight into your calendar and CRM, so you stop depending on referrals and reactive quoting.",
+  relatedProse: [
+    { before: "This page is the logistics view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns lane conversations into booked RFQ meetings." },
+    { before: "Freight is a considered, multi-stakeholder sale, so it runs on our ", anchor: "B2B lead generation in Singapore", to: "/b2b-lead-generation-singapore/", after: " playbook of target-shipper lists and signal-based outreach by lane and vertical." },
+    { before: "Every new lane conversation moves into ", anchor: "appointment setting in Singapore", to: "/appointment-setting-singapore/", after: " so your sales team walks into a booked RFQ discussion, not a cold list." },
+    { before: "Before a rep spends time on it, each enquiry passes through ", anchor: "lead qualification", to: "/lead-qualification/", after: " on freight reality, lanes, volumes, and timelines you actually cover." },
+  ],
   gap: {
     eyebrow: "WHERE FORWARDER PIPELINE LEAKS",
     heading: "You compete in bake-offs you were invited into, on price",

@@ -32,6 +32,12 @@ export const B2B_SAAS_LEADS_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Lead generation for a B2B SaaS company in Singapore is not about buying a list or counting ebook downloads. It is about turning trials, sign-ups, and demo requests into booked demos and product-qualified leads your reps can actually close. We define your ICP and what counts as a PQL, meet every new trial the moment intent is highest, answer inbound demo requests in seconds, and run signal-based outbound to the accounts you want, all wired into your product usage data and your CRM. The result is pipeline measured in held demos and activated trials, not a volume metric that looks fine while the funnel stays empty.",
+  relatedProse: [
+    { before: "This page is the SaaS view of our ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: " work, the system that turns trials and demo requests into held demos and PQLs." },
+    { before: "Signal-based outbound to the accounts you want runs on our ", anchor: "B2B lead generation in Singapore", to: "/b2b-lead-generation-singapore/", after: " playbook, built around your ICP rather than a bought list." },
+    { before: "Inbound demo requests move into ", anchor: "appointment setting in Singapore", to: "/appointment-setting-singapore/", after: " so a rep meets a booked, briefed prospect instead of a callback queue." },
+    { before: "Every trial and enquiry passes through ", anchor: "lead qualification", to: "/lead-qualification/", after: " against what counts as a PQL, so reps spend time on accounts they can close." },
+  ],
   gap: {
     eyebrow: "WHERE THE FUNNEL LEAKS",
     heading: "The sign-up arrives and then goes quiet",
