@@ -147,7 +147,7 @@ const AiReceptionistMedicalPage: NextPageWithLayout = () => {
     }, []);
 
     const meta = {
-        title: "AI Receptionist for Medical Clinics | Agentic AI Labs",
+        title: "AI Receptionist for Medical Clinics",
         description:
             "Medical clinics lose $73K+/yr to a $38,500/yr front desk and missed after-hours calls. We build an AI receptionist that answers every call, books into your EMR, and remembers every patient — 24/7.",
         type: "Page",

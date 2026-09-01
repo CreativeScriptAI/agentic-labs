@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // into their business. Forward-deployed, built inside your stack, accountable.
 export const AI_AUTOMATION_COPY: ServiceCopy = {
   meta: {
-    title: "AI Automation Singapore | We Build It Into Your Business and Own the Outcome | Agentic AI Labs",
+    title: "AI Automation Singapore | We Build It Into Your Business and Own the Outcome",
     description:
       "AI automation in Singapore, built and run inside your own tools by a forward-deployed engineering team. Lead capture, instant response, booking, and back-office workflows, accountable for the outcome. Starting from S$100 a month, PSG eligible.",
     keywords: ["ai automation", "ai and automation", "ai automation agency singapore", "business automation singapore", "ai for automation"],

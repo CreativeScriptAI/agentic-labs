@@ -5,7 +5,7 @@ import type { ServiceCopy } from "./types";
 // leads, and cover AI answer engines. Pricing from research, 15% below market.
 export const SEO_COPY: ServiceCopy = {
   meta: {
-    title: "SEO Agency Singapore | Rankings That Turn Into Booked Leads | Agentic AI Labs",
+    title: "SEO Agency Singapore | Rankings That Turn Into Booked Leads",
     description:
       "An SEO agency in Singapore that connects rankings to booked leads, not just a monthly traffic report. Built and run for you, starting from S$100 a month, PSG eligible.",
     keywords: ["seo agency singapore", "seo services singapore", "seo company singapore", "seo consultant singapore", "seo singapore"],

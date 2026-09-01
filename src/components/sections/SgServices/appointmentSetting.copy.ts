@@ -14,7 +14,7 @@ import type { ServiceCopy } from "./types";
 // outreach, then check the site and LinkedIn before they engage.
 export const APPOINTMENT_SETTING_COPY: ServiceCopy = {
   meta: {
-    title: "Appointment Setting Singapore | Booked Meetings, Not Dials | Agentic AI Labs",
+    title: "Appointment Setting Singapore | Booked Meetings, Not Dials",
     description:
       "AI-powered B2B appointment setting in Singapore that replaces slow telemarketing and telesales. We find and qualify your buyers, follow up across voice, SMS, and WhatsApp, and book meetings straight onto your sales team's calendar. Starting from S$100 a month, PSG eligible.",
     keywords: ["appointment setting singapore", "appointment setting services singapore", "b2b appointment setting singapore", "lead generation appointment setting", "telemarketing singapore"],

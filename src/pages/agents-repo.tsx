@@ -27,7 +27,7 @@ export default function AgentsRepoPage({ agentsApiRaw }: Props) {
   return (
     <>
       <MetaConfig
-        title="AI Agents Repo | Agentic AI Labs"
+        title="AI Agents Repo"
         description="Explore live AI agents deployed by Agentic AI Labs. Browse capabilities, categories, and test production-ready agents."
         type="Website"
         url="https://www.tryagentikai.com/agents-repo"

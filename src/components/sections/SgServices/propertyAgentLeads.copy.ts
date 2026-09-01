@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // starting-point pattern. CTA to the AI clarity workshop.
 export const PROPERTY_AGENT_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Property Agents Singapore | Own the Moment After the Enquiry | Agentic AI Labs",
+    title: "Lead Generation for Property Agents Singapore | Own the Moment After the Enquiry",
     description:
       "Lead generation for property agents in Singapore that owns what happens after the enquiry: answered in seconds, qualified, and booked, so you are first to the viewing. Built inside your own tools. From S$100 a month, PSG eligible.",
     keywords: [

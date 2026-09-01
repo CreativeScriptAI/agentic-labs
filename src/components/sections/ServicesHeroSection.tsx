@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import EllipseBackground from "src/assets/images/EllipseBackground";
 
 const ServicesHeroSection: React.FC = () => {
@@ -32,7 +33,10 @@ const ServicesHeroSection: React.FC = () => {
                 build it around your business
               </span>
               . Either way you get AI that works on real customers, not a demo
-              that breaks the moment one shows up.
+              that breaks the moment one shows up. When we build it around your
+              business, our{" "}
+              <Link href="/forward-deployed-engineers/" className="text-blue-600 underline">forward-deployed engineering team</Link>{" "}
+              writes and runs the system inside the tools you already use.
             </p>
           </div>
         </div>

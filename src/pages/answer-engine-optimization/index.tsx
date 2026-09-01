@@ -1,6 +1,6 @@
 import MetaConfig from "src/components/MetaConfig";
 import AnswerEngineOptimizationPage from "src/components/sections/AnswerEngineOptimization";
-import { FAQS, META } from "src/components/sections/AnswerEngineOptimization/copy";
+import { META } from "src/components/sections/AnswerEngineOptimization/copy";
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -13,16 +13,6 @@ const articleSchema = {
   publisher: { "@id": "https://www.tryagentikai.com/#organization" },
   datePublished: "2026-08-19",
   dateModified: "2026-08-19",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
 };
 
 const breadcrumbSchema = {
@@ -57,10 +47,6 @@ const Page = () => (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-    />
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
     />
     <script
       type="application/ld+json"

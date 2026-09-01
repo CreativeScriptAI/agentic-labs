@@ -52,7 +52,7 @@ export default function IndianAIVoicesPage() {
     return (
         <>
             <Head>
-                <title>Indian AI Voices Library | Agentic AI Labs</title>
+                <title>Indian AI Voices Library</title>
                 <meta name="description" content="Explore our library of premium, production-grade AI voices designed for the Indian market." />
             </Head>
 

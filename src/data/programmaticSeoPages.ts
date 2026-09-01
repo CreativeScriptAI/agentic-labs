@@ -142,7 +142,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-sdr-for-ghl-agencies"],
-    title: "AI SDR for GHL Agencies | Agentic AI Labs",
+    title: "AI SDR for GHL Agencies",
     description:
       "How we actually build an AI SDR inside GoHighLevel: the exact Conversation AI and Appointment Booking workflow nodes, the real blended cost once LC Phone and tokens are stacked, and when you must bolt on Vapi or Retell for outbound.",
     canonicalUrl: makeCanonical(["ai-sdr-for-ghl-agencies"]),
@@ -344,7 +344,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-support-rep-for-ecommerce"],
-    title: "AI Support Rep for Ecommerce | Agentic AI Labs",
+    title: "AI Support Rep for Ecommerce",
     description:
       "We build AI support systems for ecommerce teams that resolve repetitive tickets, remember buyer context, and escalate edge cases with full history.",
     canonicalUrl: makeCanonical(["ai-support-rep-for-ecommerce"]),
@@ -504,7 +504,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["ai-voice-agent-for-gohighlevel"],
-    title: "AI Voice Agent for GoHighLevel: Native vs Vapi/Retell, Real Cost, Config Traps | Agentic AI Labs",
+    title: "AI Voice Agent for GoHighLevel: Native vs Vapi/Retell, Real Cost, Config Traps",
     description:
       "A vendor-neutral guide to building an AI voice agent for GoHighLevel: how native Voice AI actually works, the true two-layer cost, the outbound opt-in wall, and the exact configuration traps that break demo-good agents in week one.",
     canonicalUrl: makeCanonical(["ai-voice-agent-for-gohighlevel"]),
@@ -717,7 +717,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["ai-agent-hubspot-integration"],
-    title: "AI Agent HubSpot Integration | Agentic AI Labs",
+    title: "AI Agent HubSpot Integration",
     description:
       "We build AI systems integrated with HubSpot that qualify leads, retain context across conversations, and automate sales workflows.",
     canonicalUrl: makeCanonical(["ai-agent-hubspot-integration"]),
@@ -867,7 +867,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["ai-agent-salesforce-integration"],
-    title: "AI Agent Salesforce Integration | Agentic AI Labs",
+    title: "AI Agent Salesforce Integration",
     description:
       "We build AI systems integrated with Salesforce for qualification, context retention, and automation across sales operations.",
     canonicalUrl: makeCanonical(["ai-agent-salesforce-integration"]),
@@ -1017,7 +1017,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "comparison",
     pathSegments: ["vapi-alternative"],
-    title: "Vapi Alternative for Production Systems | Agentic AI Labs",
+    title: "Vapi Alternative for Production Systems",
     description:
       "Vapi is strong for prototyping. We build production AI voice systems with memory, automation, and monitoring for teams that need reliability when it counts.",
     canonicalUrl: makeCanonical(["vapi-alternative"]),
@@ -1187,7 +1187,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "comparison",
     pathSegments: ["retell-ai-alternative"],
-    title: "Retell AI Alternative for Production Systems | Agentic AI Labs",
+    title: "Retell AI Alternative for Production Systems",
     description:
       "Retell AI can ship quick voice experiences. We build production AI systems with memory and automation for full operational workflows.",
     canonicalUrl: makeCanonical(["retell-ai-alternative"]),
@@ -1348,7 +1348,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "comparison",
     pathSegments: ["bland-ai-alternative"],
-    title: "Bland AI Alternative for Production Systems | Agentic AI Labs",
+    title: "Bland AI Alternative for Production Systems",
     description:
       "Bland AI can run outbound voice quickly. We build production AI systems that combine voice, memory, and business workflow automation.",
     canonicalUrl: makeCanonical(["bland-ai-alternative"]),
@@ -1509,7 +1509,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "glossary",
     pathSegments: ["glossary", "what-is-an-ai-receptionist"],
-    title: "What Is an AI Receptionist? | Agentic AI Labs Glossary",
+    title: "What Is an AI Receptionist? Glossary",
     description:
       "An AI receptionist answers calls, captures intent, books appointments, and routes follow-up tasks. Learn how it works in production environments.",
     canonicalUrl: makeCanonical(["glossary", "what-is-an-ai-receptionist"]),
@@ -1588,7 +1588,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "glossary",
     pathSegments: ["glossary", "what-is-an-ai-voice-agent"],
-    title: "What Is an AI Voice Agent? | Agentic AI Labs Glossary",
+    title: "What Is an AI Voice Agent? Glossary",
     description:
       "An AI voice agent handles spoken conversations with users and can trigger workflows. Learn what separates demos from production systems.",
     canonicalUrl: makeCanonical(["glossary", "what-is-an-ai-voice-agent"]),
@@ -1666,7 +1666,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "glossary",
     pathSegments: ["glossary", "what-is-agentic-ai"],
-    title: "What Is Agentic AI? | Agentic AI Labs Glossary",
+    title: "What Is Agentic AI? Glossary",
     description:
       "Agentic AI describes systems that can decide and act across multi-step workflows. Learn what it means in practical business terms.",
     canonicalUrl: makeCanonical(["glossary", "what-is-agentic-ai"]),
@@ -1744,7 +1744,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "glossary",
     pathSegments: ["glossary", "ai-agent-vs-ai-system"],
-    title: "AI Agent vs AI System: What Is the Difference? | Agentic AI Labs",
+    title: "AI Agent vs AI System: What Is the Difference?",
     description:
       "Understand the difference between an AI agent and an AI system, and why system-level design matters for production reliability.",
     canonicalUrl: makeCanonical(["glossary", "ai-agent-vs-ai-system"]),
@@ -1822,7 +1822,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "glossary",
     pathSegments: ["glossary", "what-is-production-grade-ai"],
-    title: "What Is Production-Grade AI? | Agentic AI Labs Glossary",
+    title: "What Is Production-Grade AI? Glossary",
     description:
       "Production-grade AI is AI that performs reliably in live operations with monitoring, controls, and measurable outcomes.",
     canonicalUrl: makeCanonical(["glossary", "what-is-production-grade-ai"]),
@@ -1900,7 +1900,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "directory",
     pathSegments: ["best-ai-tools-for-dental-practices"],
-    title: "Best AI Tools for Dental Practices (2026) | Agentic AI Labs",
+    title: "Best AI Tools for Dental Practices (2026)",
     description:
       "A practical guide to the best AI tools and systems for dental practices, including voice reception, memory, scheduling automation, and patient follow-up.",
     canonicalUrl: makeCanonical(["best-ai-tools-for-dental-practices"]),
@@ -1985,7 +1985,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "directory",
     pathSegments: ["best-ai-voice-agents-for-business"],
-    title: "AI Voice Agent for Small Business Appointment Booking | Agentic AI Labs",
+    title: "AI Voice Agent for Small Business Appointment Booking",
     description:
       "Done-for-you AI voice agent for small business appointment booking. It answers calls, books appointments, and syncs to your calendar and CRM.",
     canonicalUrl: makeCanonical(["best-ai-voice-agents-for-business"]),
@@ -2071,7 +2071,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "directory",
     pathSegments: ["best-ai-for-gohighlevel-agencies"],
-    title: "Best AI for GoHighLevel Agencies (2026) | Agentic AI Labs",
+    title: "Best AI for GoHighLevel Agencies (2026)",
     description:
       "A practical guide to the best AI stack options for GoHighLevel agencies, including voice systems, memory layers, and automation orchestration.",
     canonicalUrl: makeCanonical(["best-ai-for-gohighlevel-agencies"]),
@@ -4941,7 +4941,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-diagnostic-lab"],
-    title: "Diagnostic Centre AI Receptionist. Every Booking Answered, Every Report Sent | Agentic AI Labs",
+    title: "Diagnostic Centre AI Receptionist. Every Booking Answered, Every Report Sent",
     description:
       "A diagnostic centre AI receptionist answers every call your busy phone line drops. It books tests, gives fasting instructions, schedules home collection, and delivers reports on WhatsApp, 24/7, in the patient's language.",
     canonicalUrl: makeCanonical(["ai-for-diagnostic-lab"]),
@@ -5121,7 +5121,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-pest-control"],
-    title: "Pest Control Answering Service That Catches Every Emergency Call | Agentic AI Labs",
+    title: "Pest Control Answering Service That Catches Every Emergency Call",
     description:
       "70% of pest control leads come from phone calls. Our pest control answering service answers every call, captures the pest type and urgency, and dispatches your on-call team instantly. Emergency pest calls (scorpion, snake, bee hive) convert at 90%+, but only if someone answers.",
     canonicalUrl: makeCanonical(["ai-for-pest-control"]),
@@ -5302,7 +5302,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-immigration-consultant"],
-    title: "Immigration Consultancy AI Receptionist. Stop Losing ₹3L Students to a Missed Call | Agentic AI Labs",
+    title: "Immigration Consultancy AI Receptionist. Stop Losing ₹3L Students to a Missed Call",
     description:
       "An immigration consultancy AI receptionist answers every inquiry call, even when a mid-size consultancy handles 50 to 100 calls a day during peak season. Conversion from inquiry to enrollment is 8 to 15%. Every missed call is a student, and ₹2 to 5L in consulting fees, walking to the agency that picked up first. We build an AI phone agent that handles the initial inquiry, captures the student profile, and books counseling sessions.",
     canonicalUrl: makeCanonical(["ai-for-immigration-consultant"]),
@@ -5485,7 +5485,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "persona",
     pathSegments: ["ai-for-gym-fitness"],
-    title: "AI Receptionist for Gyms & Fitness Studios. Stop Losing Members to an Unanswered Phone | Agentic AI Labs",
+    title: "AI Receptionist for Gyms & Fitness Studios. Stop Losing Members to an Unanswered Phone",
     description:
       "Busy gyms get 15 to 30 inquiry calls/day. Peak times, mornings, evenings, January, are exactly when trainers are in sessions and the front desk is swamped. Each missed inquiry could be ₹15,000 to ₹60,000 ($200 to $800) in annual membership revenue. We build an AI receptionist that answers every call, shares pricing, books trial sessions, and sends WhatsApp with membership options.",
     canonicalUrl: makeCanonical(["ai-for-gym-fitness"]),
@@ -5675,7 +5675,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["gohighlevel-ai-voice-pipeline"],
-    title: "GoHighLevel AI Voice Pipeline: Instant Call on Every Form Submit | Agentic AI Labs",
+    title: "GoHighLevel AI Voice Pipeline: Instant Call on Every Form Submit",
     description:
       "The implementer's build guide for a GoHighLevel AI voice pipeline: Form Submitted trigger to the native Voice AI Outbound Call action, the KYC and separate-outbound-agent prerequisites, the real cost stack, timezone and DNC safeguards, and the write-back loop that branches on call outcome.",
     canonicalUrl: makeCanonical(["gohighlevel-ai-voice-pipeline"]),
@@ -5876,7 +5876,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["n8n-content-automation-pipeline"],
-    title: "n8n Content Automation Pipeline: News to Auto-Posted Social, Done For You | Agentic AI Labs",
+    title: "n8n Content Automation Pipeline: News to Auto-Posted Social, Done For You",
     description:
       "A content pipeline built on n8n that curates the news in your niche, writes posts with AI, and auto-publishes to Facebook, Instagram, LinkedIn, and Threads. Done for you.",
     canonicalUrl: makeCanonical(["n8n-content-automation-pipeline"]),
@@ -6020,7 +6020,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["gohighlevel-speed-to-lead-automation"],
-    title: "GoHighLevel Speed to Lead Automation: The Real Build That Books | Agentic AI Labs",
+    title: "GoHighLevel Speed to Lead Automation: The Real Build That Books",
     description:
       "The exact GoHighLevel speed-to-lead build: the real trigger stack, the Conversation AI Bot action that qualifies and books, the human-handoff pause, the A2P deliverability gate, and the failure modes competitors won't mention.",
     canonicalUrl: "https://www.tryagentikai.com/gohighlevel-speed-to-lead-automation/",
@@ -6240,7 +6240,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "gohighlevel-cold-email-automation"
     ],
-    "title": "GoHighLevel Cold Email Automation That Stops When They Reply | Agentic AI Labs",
+    "title": "GoHighLevel Cold Email Automation That Stops When They Reply",
     "description": "EmailPipeline turns GoHighLevel plus n8n into a cold-email engine that writes personalized follow-ups, moves contacts through pipeline stages, and kills the sequence on reply.",
     "heroLabel": "GoHighLevel Cold Email Automation",
     "heroHeadline": "A lead replied three days ago. Your sequence is still emailing them.",
@@ -6475,7 +6475,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "gohighlevel-facebook-dm-automation"
     ],
-    "title": "GoHighLevel Facebook Automation: AI DM and Comment Replies | Agentic AI Labs",
+    "title": "GoHighLevel Facebook Automation: AI DM and Comment Replies",
     "description": "GoHighLevel Facebook automation that answers DMs and comments with AI from your knowledge base, delivers links on keyword triggers, and syncs every lead into GHL.",
     "heroLabel": "GoHighLevel Facebook Automation",
     "heroHeadline": "A prospect messaged your page at midnight, and your reply landed the next afternoon",
@@ -6705,7 +6705,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "gohighlevel-instagram-dm-automation"
     ],
-    "title": "Instagram DM Automation AI on GoHighLevel | Agentic AI Labs",
+    "title": "Instagram DM Automation AI on GoHighLevel",
     "description": "Turn every Instagram DM and comment into a booked conversation. OS.1 answers from your knowledge base, fires keyword replies, and syncs leads into GoHighLevel.",
     "heroLabel": "Instagram DM Automation AI, powered by OS.1",
     "heroHeadline": "Someone asked your price at 11pm. Your reply landed at 9am.",
@@ -6935,7 +6935,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "whatsapp-gohighlevel-automation"
     ],
-    "title": "WhatsApp GoHighLevel Automation: AI That Answers 24/7 | Agentic AI Labs",
+    "title": "WhatsApp GoHighLevel Automation: AI That Answers 24/7",
     "description": "WhatsApp GoHighLevel automation that answers every message 24/7, qualifies leads, books calls, and logs it all to your CRM. Powered by OS.1 on the Meta API.",
     "heroLabel": "WhatsApp GoHighLevel Automation",
     "heroHeadline": "A lead messages your WhatsApp at 11pm and nobody replies until morning.",
@@ -7168,7 +7168,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   {
     type: "integration",
     pathSegments: ["done-for-you-gohighlevel-automation"],
-    title: "Done-For-You GoHighLevel Automation, Built in the Workflow Builder | Agentic AI Labs",
+    title: "Done-For-You GoHighLevel Automation, Built in the Workflow Builder",
     description:
       "Done-for-you GoHighLevel automation built with real triggers and actions, dedupe and DND handling, Conversation AI, and honest AI Employee and LC Phone usage costs.",
     canonicalUrl: "https://www.tryagentikai.com/done-for-you-gohighlevel-automation/",
@@ -7380,7 +7380,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "vapi-gohighlevel-integration"
     ],
-    "title": "Vapi GoHighLevel Integration | Agentic AI Labs",
+    "title": "Vapi GoHighLevel Integration",
     "description": "We build a production Vapi and GoHighLevel voice pipeline: form triggers an instant AI call, live conversation, summary written back to the contact, follow-up that stops on reply.",
     "heroLabel": "Vapi + GoHighLevel, Built Live",
     "heroHeadline": "A lead just hit submit. Right now nobody is calling them back.",
@@ -7596,7 +7596,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "retell-gohighlevel-integration"
     ],
-    "title": "Retell AI GoHighLevel Integration: Voice That Calls Leads in Seconds | Agentic AI Labs",
+    "title": "Retell AI GoHighLevel Integration: Voice That Calls Leads in Seconds",
     "description": "A production Retell AI GoHighLevel integration that calls every new lead in seconds, qualifies live on the phone, writes fields back to GHL, then follows up on autopilot.",
     "heroLabel": "Retell AI + GoHighLevel",
     "heroHeadline": "Your best lead just filled out the form and nobody picked up the phone.",
@@ -7836,7 +7836,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "n8n-gohighlevel-email-pipeline"
     ],
-    "title": "n8n GoHighLevel Email Pipeline: AI Follow-Ups That Stop on Reply | Agentic AI Labs",
+    "title": "n8n GoHighLevel Email Pipeline: AI Follow-Ups That Stop on Reply",
     "description": "We build a cold-email drip on GoHighLevel plus n8n: capture leads, send AI-written follow-ups, advance pipeline stages, and stop the moment they reply.",
     "heroLabel": "GoHighLevel plus n8n email automation",
     "heroHeadline": "The lead replied three days ago. Your drip kept emailing them anyway.",
@@ -8067,7 +8067,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "ai-social-media-content-pipeline"
     ],
-    "title": "AI Social Media Content Pipeline: Curate, Draft, Auto-Publish | Agentic AI Labs",
+    "title": "AI Social Media Content Pipeline: Curate, Draft, Auto-Publish",
     "description": "An AI social media content pipeline that curates niche news, drafts posts in your voice, and auto-publishes to Facebook, Instagram, LinkedIn, and Threads on schedule.",
     "heroLabel": "AI Social Media Content Pipeline",
     "heroHeadline": "It is Tuesday again and your feed has been silent since last month.",
@@ -8304,7 +8304,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "facebook-dm-automation-meta-api"
     ],
-    "title": "Facebook DM Automation with the Meta API | Agentic AI Labs",
+    "title": "Facebook DM Automation with the Meta API",
     "description": "Facebook DM and comment automation on the Meta API. AI answers DMs and comments from your knowledge base, with keyword triggers and instant link delivery.",
     "heroLabel": "Facebook DM Automation",
     "heroHeadline": "A comment lands at 11pm and the buyer is gone by morning.",
@@ -8533,7 +8533,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "instagram-comment-automation-ai"
     ],
-    "title": "Instagram Comment Automation with AI | Agentic AI Labs",
+    "title": "Instagram Comment Automation with AI",
     "description": "AI watches your Instagram posts, replies to comments from your knowledge base, and moves keyword commenters into DMs and your CRM. Powered by OS.1.",
     "heroLabel": "Instagram Comment Automation",
     "heroHeadline": "A post goes viral overnight and the comments sit unanswered until noon.",
@@ -8762,7 +8762,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "zoom-meeting-proposal-automation"
     ],
-    "title": "Zoom Meeting Proposal Automation with AI | Agentic AI Labs",
+    "title": "Zoom Meeting Proposal Automation with AI",
     "description": "Turn every Zoom call into a tailored proposal sent before the prospect leaves the tab. AI transcribes, drafts, and emails it through GoHighLevel automatically.",
     "heroLabel": "Zoom meeting automation ai",
     "heroHeadline": "The call went great, and then the proposal sat in your drafts for four days.",
@@ -8998,7 +8998,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "make-zoom-proposal-automation"
     ],
-    "title": "Make.com Zoom Automation: Auto-Send Proposals After Every Call | Agentic AI Labs",
+    "title": "Make.com Zoom Automation: Auto-Send Proposals After Every Call",
     "description": "Make.com Zoom automation that transcribes the call, drafts the proposal, and emails it through GoHighLevel the moment your meeting ends. Done-for-you build.",
     "heroLabel": "Make.com Zoom Automation",
     "heroHeadline": "The call ended an hour ago and the proposal is still a blank page.",
@@ -9228,7 +9228,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "ai-appointment-booking-voice-agent"
     ],
-    "title": "AI Appointment Booking Agent That Answers and Books While You Sleep | Agentic AI Labs",
+    "title": "AI Appointment Booking Agent That Answers and Books While You Sleep",
     "description": "An AI voice agent answers, qualifies, and books appointments into your GoHighLevel calendar 24/7, then confirms and reminds to cut no-shows. Inbound and outbound.",
     "heroLabel": "AI Appointment Booking Voice Agent",
     "heroHeadline": "The lead called at 9:47pm and nobody picked up.",
@@ -9464,7 +9464,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "n8n-automation-keeps-breaking"
     ],
-    "title": "Your n8n Automation Keeps Breaking. We Rebuild It Production-Grade | Agentic AI Labs",
+    "title": "Your n8n Automation Keeps Breaking. We Rebuild It Production-Grade",
     "description": "Your self-built n8n automation keeps breaking: token expiry, silent failures, rate limits, API changes. We rebuild it production-grade with monitoring, alerts, and support.",
     "heroLabel": "n8n Rebuild and Rescue",
     "heroHeadline": "The workflow ran fine for weeks, then quietly stopped, and nobody noticed until a client did.",
@@ -9696,7 +9696,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "bland-ai-outbound-pipeline"
     ],
-    "title": "Bland AI Outbound Calling Pipeline for GoHighLevel | Agentic AI Labs",
+    "title": "Bland AI Outbound Calling Pipeline for GoHighLevel",
     "description": "We build Bland AI outbound calling pipelines wired into GoHighLevel: dials your lists, qualifies live, books meetings, logs every outcome to the CRM.",
     "heroLabel": "Bland AI Outbound Calling",
     "heroHeadline": "Your list has 800 leads and one person to call them.",
@@ -9926,7 +9926,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "elevenlabs-voice-agent-production"
     ],
-    "title": "ElevenLabs Voice Agent in Production: The System Around the Voice | Agentic AI Labs",
+    "title": "ElevenLabs Voice Agent in Production: The System Around the Voice",
     "description": "ElevenLabs gives you a lifelike voice. We build the production system around it: telephony, conversation logic, CRM writeback, and follow-up that actually books.",
     "heroLabel": "ElevenLabs Voice Agent, Productionized",
     "heroHeadline": "The demo sounded perfect. Then a real caller went off script.",
@@ -10157,7 +10157,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
     "pathSegments": [
       "os1-meta-automation"
     ],
-    "title": "OS.1 Meta Automation: One Engine for FB, IG and WhatsApp | Agentic AI Labs",
+    "title": "OS.1 Meta Automation: One Engine for FB, IG and WhatsApp",
     "description": "OS.1 is our in-house engine that answers Facebook, Instagram and WhatsApp messages from one shared knowledge base and logs every conversation into GoHighLevel.",
     "heroLabel": "OS.1 Meta Automation Engine",
     "heroHeadline": "A buyer messaged your Instagram at 11pm and got silence.",
@@ -10390,7 +10390,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "leadlock-ai-alternative"
   ],
-  "title": "Leadlock AI Alternative: Build It Native in GoHighLevel Instead | Agentic AI Labs",
+  "title": "Leadlock AI Alternative: Build It Native in GoHighLevel Instead",
   "description": "Leadlock AI is a $97 to $497/mo SaaS layer on top of GoHighLevel. We do the real total-cost math and show the native Voice AI build that replaces it, plus the one case where we'd reach for Vapi or Retell.",
   "canonicalUrl": makeCanonical(["leadlock-ai-alternative"]),
   "heroLabel": "Leadlock AI Alternative",
@@ -10667,7 +10667,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "gohighlevel-ai-employee-alternative"
   ],
-  "title": "GoHighLevel AI Employee Alternative: Keep GHL, Swap the AI Layer | Agentic AI Labs",
+  "title": "GoHighLevel AI Employee Alternative: Keep GHL, Swap the AI Layer",
   "description": "You do not have to leave GoHighLevel to escape the AI Employee add-on. A mechanics-first look at native Voice AI, the seven real post-call actions, the $497 rebilling constraint, and when a Vapi or Retell build wins instead.",
   "canonicalUrl": makeCanonical(["gohighlevel-ai-employee-alternative"]),
   "heroLabel": "GoHighLevel AI Employee Alternative",
@@ -10945,7 +10945,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "zapier-alternative-for-agencies"
   ],
-  "title": "Zapier Alternative for Agencies: Done-For-You n8n Builds | Agentic AI Labs",
+  "title": "Zapier Alternative for Agencies: Done-For-You n8n Builds",
   "description": "Stop paying Zapier per task. We build and maintain your automations on n8n (per-execution billing, self-hostable, any API) so agencies stop babysitting broken Zaps.",
   "canonicalUrl": makeCanonical(["zapier-alternative-for-agencies"]),
   "heroLabel": "Zapier Alternative for Agencies",
@@ -11174,7 +11174,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "make-com-alternative"
   ],
-  "title": "Make.com Alternative: Done-For-You Automation Build | Agentic AI Labs",
+  "title": "Make.com Alternative: Done-For-You Automation Build",
   "description": "Skip the scenario editor. We design, host, and maintain your automations (often on n8n) so you get the outcome without learning Make.com or fixing silent fails.",
   "canonicalUrl": makeCanonical(["make-com-alternative"]),
   "heroLabel": "Make.com Alternative",
@@ -11405,7 +11405,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "lindy-ai-alternative"
   ],
-  "title": "Lindy AI Alternative: Done-For-You Automation Builds | Agentic AI Labs",
+  "title": "Lindy AI Alternative: Done-For-You Automation Builds",
   "description": "A done-for-you Lindy AI alternative. We build and maintain production-grade automations on n8n and GoHighLevel that plug into your real stack. Book a call.",
   "canonicalUrl": makeCanonical(["lindy-ai-alternative"]),
   "heroLabel": "Lindy AI Alternative",
@@ -11634,7 +11634,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "n8n-vs-zapier-vs-make"
   ],
-  "title": "n8n vs Zapier vs Make: An Honest Comparison | Agentic AI Labs",
+  "title": "n8n vs Zapier vs Make: An Honest Comparison",
   "description": "n8n vs Zapier vs Make compared on billing, integrations, learning curve, and self-hosting. See which fits your business, then we build the production automation.",
   "canonicalUrl": makeCanonical(["n8n-vs-zapier-vs-make"]),
   "heroLabel": "Automation Platform Comparison",
@@ -11865,7 +11865,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "zapier-automation-keeps-breaking"
   ],
-  "title": "Zapier Automation Not Working? We Rebuild Broken Zaps | Agentic AI Labs",
+  "title": "Zapier Automation Not Working? We Rebuild Broken Zaps",
   "description": "Your Zapier automations keep breaking on silent errors, task limits, and API changes. We rebuild them production-grade on n8n with monitoring, alerts, and support.",
   "canonicalUrl": makeCanonical(["zapier-automation-keeps-breaking"]),
   "heroLabel": "Broken automation rescue",
@@ -12091,7 +12091,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "smallest-ai-alternative"
   ],
-  "title": "smallest.ai Alternative: Done-for-You Production Voice Agents | Agentic AI Labs",
+  "title": "smallest.ai Alternative: Done-for-You Production Voice Agents",
   "description": "Evaluating smallest.ai for voice? We build your full production voice agent: telephony, conversation logic, CRM write-back, and automated follow-up included.",
   "canonicalUrl": makeCanonical(["smallest-ai-alternative"]),
   "heroLabel": "A smallest.ai alternative for teams that need a working system",
@@ -12321,7 +12321,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "synthflow-alternative"
   ],
-  "title": "Synthflow Alternative: Done-For-You Voice Agent Build | Agentic AI Labs",
+  "title": "Synthflow Alternative: Done-For-You Voice Agent Build",
   "description": "Skip the Synthflow builder. We design, deploy, and run your voice pipeline on GoHighLevel with your choice of voice engine, then maintain it end to end.",
   "canonicalUrl": makeCanonical(["synthflow-alternative"]),
   "heroLabel": "Synthflow Alternative",
@@ -12551,7 +12551,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "vapi-vs-retell-vs-bland"
   ],
-  "title": "Vapi vs Retell vs Bland: Which AI Voice Platform Wins | Agentic AI Labs",
+  "title": "Vapi vs Retell vs Bland: Which AI Voice Platform Wins",
   "description": "Vapi vs Retell vs Bland compared honestly on dev flexibility, time to production, and outbound cost at scale. See which fits you, then we build it into your CRM.",
   "canonicalUrl": makeCanonical(["vapi-vs-retell-vs-bland"]),
   "heroLabel": "AI Voice Platform Comparison",
@@ -12787,7 +12787,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "elevenlabs-vs-vapi"
   ],
-  "title": "ElevenLabs vs Vapi: Voice Layer or Agent Platform? | Agentic AI Labs",
+  "title": "ElevenLabs vs Vapi: Voice Layer or Agent Platform?",
   "description": "ElevenLabs is a voice layer and Vapi runs the agent. See where each fits, which suits you, and how we build the production voice agent around both.",
   "canonicalUrl": makeCanonical(["elevenlabs-vs-vapi"]),
   "heroLabel": "ElevenLabs vs Vapi",
@@ -13012,7 +13012,7 @@ const BASE_PROGRAMMATIC_SEO_PAGES: ProgrammaticPageData[] = [
   "pathSegments": [
     "done-for-you-n8n-automation"
   ],
-  "title": "Done-For-You n8n Automation: We Scope, Build, Host, and Maintain | Agentic AI Labs",
+  "title": "Done-For-You n8n Automation: We Scope, Build, Host, and Maintain",
   "description": "Done-for-you n8n automation. We scope, build, host, and maintain workflows for lead capture, content, follow-up, and data sync, with monitoring and support.",
   "canonicalUrl": makeCanonical(["done-for-you-n8n-automation"]),
   "heroLabel": "Done-For-You n8n Automation",

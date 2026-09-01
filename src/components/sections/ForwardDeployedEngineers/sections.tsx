@@ -84,6 +84,12 @@ export const Hero = () => (
               <span className="block text-[#0A1128]">{HERO.h1a}</span>
               <span className="block text-blue-600">{HERO.h1b}</span>
             </h1>
+            <div className="border-l-2 border-[#FCCA07] pl-4 sm:pl-5 mb-5 max-w-xl">
+              <p className="font-alte font-medium text-[16px] sm:text-[18px] text-[#0A1128] tracking-[-0.02em] leading-[1.5]">
+                Our engineers embed with your team to build and ship the AI
+                agents your business runs on, then hand you a system you own.
+              </p>
+            </div>
           </FadeUp>
           <FadeUp delay={0.08}>
             <p className="font-alte text-[15px] sm:text-[17px] text-slate-600 leading-[1.55] tracking-[-0.04em] max-w-xl mb-8">

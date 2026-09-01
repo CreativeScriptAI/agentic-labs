@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // account cannot see. The leak is usually after the click.
 export const ECOMMERCE_COPY: ServiceCopy = {
   meta: {
-    title: "Ecommerce Marketing Singapore | We Own the Revenue, Not the Clicks | Agentic AI Labs",
+    title: "Ecommerce Marketing Singapore | We Own the Revenue, Not the Clicks",
     description:
       "An ecommerce marketing team in Singapore accountable for revenue in the bank, not platform-attributed ROAS. We fix the store, the recovery flows, and the tracking your ad account cannot see. Starting from S$100 a month, PSG eligible.",
     keywords: ["ecommerce marketing singapore", "ecommerce seo singapore", "shopify marketing singapore", "ecommerce agency singapore", "online store marketing singapore"],

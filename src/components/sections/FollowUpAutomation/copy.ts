@@ -9,7 +9,7 @@
 // framed as what the rules require, not legal advice, no invented specifics.
 
 export const META = {
-  title: "Follow Up Automation: The System That Chases Every Lead | Agentic AI Labs",
+  title: "Follow Up Automation: The System That Chases Every Lead",
   description:
     "Follow up automation is the system that reaches every lead, on the right channel, until they reply or book, then stops. An honest guide to why follow-up fails, sequence design, reply detection, and staying compliant.",
   keywords: [

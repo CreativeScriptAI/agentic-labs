@@ -12,7 +12,7 @@
 // outcome as a slogan) as hero language.
 
 export const META = {
-  title: "Forward Deployed Engineers for Marketing and Sales | Agentic AI Labs",
+  title: "Forward Deployed Engineers for Marketing and Sales",
   description:
     "Most AI you buy becomes your problem to run. A forward deployed team writes the code inside your business, ships a working marketing and sales system, and hands it back documented. You keep it.",
   keywords: [

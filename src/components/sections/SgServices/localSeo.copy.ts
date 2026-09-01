@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // from S$100/mo, lean starting point, scope after a paid consultation.
 export const LOCAL_SEO_COPY: ServiceCopy = {
   meta: {
-    title: "Local SEO Services Singapore | Get Into the Google Map Pack | Agentic AI Labs",
+    title: "Local SEO Services Singapore | Get Into the Google Map Pack",
     description:
       "Local SEO services in Singapore that work the Google Business Profile, citations, reviews, and local signals that move the map pack, tied to calls and directions, not a ranking PDF. From S$100 a month, PSG eligible.",
     keywords: [

@@ -73,6 +73,12 @@ export const Hero = () => {
                 <span className="text-[#0A1128] block">{HERO.headline1}</span>
                 <span className="text-blue-600 block">{HERO.headline2}</span>
               </h1>
+              <div className="border-l-2 border-[#FCCA07] pl-4 sm:pl-5 mb-5 max-w-md lg:mx-0">
+                <p className="font-alte font-medium text-[16px] sm:text-[18px] text-[#0A1128] tracking-[-0.02em] leading-[1.5]">
+                  We build and run the system that turns the leads you already
+                  get into booked calls, inside your own CRM and phone.
+                </p>
+              </div>
               <p className="font-alte text-[15px] sm:text-[16px] text-slate-600 leading-[1.55] tracking-[-0.04em] max-w-md lg:mx-0 mb-5">
                 {HERO.sub}
               </p>

@@ -2009,7 +2009,7 @@ const AiVoiceAgentGlobalPage: NextPageWithLayout = () => {
   return (
     <>
       <MetaConfig
-        title="Loop: AI Voice Agent for Global Businesses | tryagentic.ai"
+        title="Loop: AI Voice Agent for Global Businesses"
         description="Loop answers every call and follows up on text, automatically, in any language, 24/7. Vox handles voice. Relay handles the message. Built for dental clinics, real estate agencies, and hiring teams worldwide."
         type="Website"
         url={CANONICAL_URL}

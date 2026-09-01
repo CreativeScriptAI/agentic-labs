@@ -9,7 +9,7 @@
 // vendor blogs with no methodology.
 
 export const META = {
-  title: "AI Lead Qualification: Stop Wasting Sales Time on Junk Leads | Agentic AI Labs",
+  title: "AI Lead Qualification: Stop Wasting Sales Time on Junk Leads",
   description:
     "Lead qualification decides, before a rep spends time, whether a lead can become revenue. An honest guide to why qualification fails, where the frameworks break, and how to qualify automatically without producing junk faster.",
   keywords: [

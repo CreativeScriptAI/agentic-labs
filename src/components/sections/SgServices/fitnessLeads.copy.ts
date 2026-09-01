@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // done inside the studio's own tools, accountable for booked, attended trials.
 export const FITNESS_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Fitness Studios Singapore | Booked, Attended Trials | Agentic AI Labs",
+    title: "Lead Generation for Fitness Studios Singapore | Booked, Attended Trials",
     description:
       "Lead generation for fitness studios in Singapore that owns what happens after the enquiry: instant reply, a booked trial, reminders that cut no-shows, and the post-trial close. Starting from S$100 a month, PSG eligible.",
     keywords: ["lead generation for fitness studios singapore", "gym marketing singapore", "fitness studio leads", "personal trainer leads singapore", "boutique studio marketing singapore"],

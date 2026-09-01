@@ -2189,13 +2189,17 @@ const WhyDifferentSection = () => {
               <span className="text-gray-400">We start with your business.</span>
             </h2>
             <p className="font-alte font-normal text-lg text-gray-500 mb-8 leading-relaxed">
-              Most Voice AI breaks the moment it goes live in an Indian business. The accent is wrong, the background noise is too high, or the follow-up never happens.
+              Most Voice AI breaks the moment it goes live in an Indian business. The accent is wrong, the background noise is too high, or the follow-up never happens. You can{" "}
+              <Link href="/indian-ai-voices" className="text-blue-600 hover:underline font-normal">browse our Indian AI voices library</Link>{" "}
+              to hear how Dhvani handles Hindi, English, and Hinglish before you go live.
             </p>
 
             <div className="p-6 rounded-none bg-[#0A1128] text-white">
               <p className="font-geist text-[12px] font-normal text-[#FCCA07] uppercase tracking-[0.02em] mb-2">The Guftugu Promise</p>
               <p className="font-alte text-xs text-white/60 leading-relaxed mb-4">
-                We don&apos;t just sell software. We provide the headcount. Guftugu is your digital receptionist that actually works in the real world.
+                We don&apos;t just sell software. We provide the headcount. Guftugu is your digital receptionist that actually works in the real world, and teams outside India can set up an{" "}
+                <Link href="/ai-receptionist-singapore" className="text-blue-400 hover:underline font-normal">AI receptionist in Singapore</Link>{" "}
+                for the same always-on call coverage.
               </p>
               <div className="flex items-center gap-2 font-geist text-[12px] font-normal tracking-[0.02em] uppercase text-white/30">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -3169,7 +3173,7 @@ const AiVoiceAgentPage: NextPageWithLayout = () => {
   return (
     <>
       <MetaConfig
-        title="Guftugu, AI Voice Agent for Indian Businesses | tryagentic.ai"
+        title="Guftugu, AI Voice Agent for Indian Businesses"
         description="Guftugu answers every call and follows up on WhatsApp. Automatically. In Hindi or English. 24/7. Dhvani handles voice. Sandesh handles the message. Built for dental clinics, real estate agencies, and hiring teams."
         type="Website"
         url={CANONICAL_URL}

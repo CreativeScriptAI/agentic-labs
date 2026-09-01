@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // Links UP to /seo-agency-singapore/ for the full method.
 export const SEO_PACKAGES_COPY: ServiceCopy = {
   meta: {
-    title: "SEO Packages Singapore | Honest Pricing, Judged on Booked Calls | Agentic AI Labs",
+    title: "SEO Packages Singapore | Honest Pricing, Judged on Booked Calls",
     description:
       "SEO packages in Singapore with a published starting price and no lock-in, scoped on a call and measured on booked calls, not ranking reports. Starting from S$100 a month, PSG eligible.",
     keywords: ["seo packages singapore", "seo pricing singapore", "seo plans singapore", "affordable seo singapore", "seo packages price singapore"],

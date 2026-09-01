@@ -16,7 +16,7 @@ import type { ServiceCopy } from "./types";
 // the site and the individual lawyer's LinkedIn before they enquire.
 export const LAW_FIRM_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Law Firms Singapore | Booked Consults, Not Lost Enquiries | Agentic AI Labs",
+    title: "Lead Generation for Law Firms Singapore | Booked Consults, Not Lost Enquiries",
     description:
       "Lead generation for law firms in Singapore that owns what happens after the enquiry: instant response, practice-area routing, structured intake, and a booked consultation, run inside your own tools. Starting from S$100 a month, PSG eligible.",
     keywords: ["lead generation for law firms singapore", "legal marketing singapore", "law firm marketing singapore", "lawyer leads singapore", "law firm lead generation"],

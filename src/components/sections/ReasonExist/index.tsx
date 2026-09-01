@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const ReasonExist: React.FC = () => {
   return (
@@ -26,8 +27,10 @@ const ReasonExist: React.FC = () => {
             Almost nobody has the time or the skill to get there, so they buy
             another tool, then another, and mistake the motion for progress. We
             exist to end that. You don&apos;t need more tools. You need the
-            outcome. We build the AI that delivers it, and we own whether it
-            actually works.
+            outcome. As a{" "}
+            <Link href="/forward-deployed-engineers/" className="text-[#0A1128] underline hover:text-blue-600 transition-colors">forward-deployed engineering team</Link>
+            , we build the AI that delivers it inside your own systems, and we
+            own whether it actually works.
           </span>
         </p>
       </div>

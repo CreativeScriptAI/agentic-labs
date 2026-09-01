@@ -5,7 +5,7 @@ import type { ServiceCopy } from "./types";
 // captured, booked leads. Pricing from S$1,000/mo, ~17% below market.
 export const SOCIAL_COPY: ServiceCopy = {
   meta: {
-    title: "Social Media Marketing Singapore | Followers Do Not Pay the Bills, Leads Do | Agentic AI Labs",
+    title: "Social Media Marketing Singapore | Followers Do Not Pay the Bills, Leads Do",
     description:
       "A social media marketing agency in Singapore that turns social into captured, booked leads, not just followers and likes. We answer the DMs and book the calls. Starting from S$100 a month, PSG eligible.",
     keywords: ["social media marketing agency singapore", "social media agency singapore", "social media marketing singapore", "social media management singapore"],

@@ -6,7 +6,7 @@
 
 export const META = {
   title:
-    "Answer Engine Optimization (AEO): How to Get Named by AI | Agentic AI Labs",
+    "Answer Engine Optimization (AEO): How to Get Named by AI",
   description:
     "Answer engine optimization is how you get your business named when buyers ask ChatGPT, Perplexity, Gemini, and Google AI. A plain, honest guide to how it works, what to fix, and how to rank in ChatGPT.",
   keywords: [

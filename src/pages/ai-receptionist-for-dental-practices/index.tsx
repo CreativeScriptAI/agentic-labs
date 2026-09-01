@@ -147,7 +147,7 @@ const AiReceptionistDentalPage: NextPageWithLayout = () => {
     }, []);
 
     const meta = {
-        title: "AI Receptionist for Dental Practices | Agentic AI Labs",
+        title: "AI Receptionist for Dental Practices",
         description:
             "Dental practices lose $67K+/yr to a $37,230/yr front desk and missed after-hours calls. We build an AI receptionist that answers every call, books into Dentrix, and remembers every patient — 24/7.",
         type: "Page",

@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // inside your own CRM. Honest S$100 pricing pattern. Primary CTA to workshop.
 export const LOGISTICS_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Logistics Companies Singapore | Booked RFQ Conversations, Not Referrals | Agentic AI Labs",
+    title: "Lead Generation for Logistics Companies Singapore | Booked RFQ Conversations, Not Referrals",
     description:
       "Lead generation for Singapore freight forwarders, 3PLs, and logistics firms. We originate and qualify RFQ conversations with real shippers on lanes you cover, booked into your CRM. Starting from S$100 a month, PSG eligible.",
     keywords: ["lead generation for logistics singapore", "freight forwarding leads singapore", "3pl marketing singapore", "logistics b2b leads", "freight forwarder lead generation singapore"],

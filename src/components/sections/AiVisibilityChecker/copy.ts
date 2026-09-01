@@ -1,6 +1,6 @@
 export const META = {
   title:
-    "AI Visibility Checker: See If AI Recommends Your Business | Agentic AI Labs",
+    "AI Visibility Checker: See If AI Recommends Your Business",
   description:
     "Your buyers ask ChatGPT, Gemini, Perplexity, Grok, and Claude who to hire before they ever call you. Check for free whether you show up, get a full site health audit, and get the team that makes you show up, not just a score.",
   keywords: [

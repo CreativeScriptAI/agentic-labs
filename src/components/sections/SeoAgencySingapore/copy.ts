@@ -2,7 +2,7 @@ import type { IconName } from "../LeadGenSingapore/Icons";
 
 export const META = {
   title:
-    "SEO Agency Singapore | Rankings That Book Calls, Not Reports | Agentic AI Labs",
+    "SEO Agency Singapore | Rankings That Book Calls, Not Reports",
   description:
     "A Singapore SEO agency that builds and runs the system turning search rankings into booked calls. Technical, local, and content SEO, plus getting you named by ChatGPT and Google AI. Measured on leads, not vanity metrics. Paid on pipeline.",
   keywords: [

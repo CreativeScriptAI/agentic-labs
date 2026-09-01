@@ -7,7 +7,7 @@
 
 export const META = {
   title:
-    "AI Appointment Booking: How It Actually Works | Agentic AI Labs",
+    "AI Appointment Booking: How It Actually Works",
   description:
     "AI appointment booking answers the enquiry, qualifies it, checks real availability, and writes the booking into your calendar. An honest guide to how it works, where it breaks, and how to cut no-shows.",
   keywords: [

@@ -183,6 +183,12 @@ const ToolFlow = ({ initialResult, startInReport = false }: Props) => {
             </span>
             <span className="text-[#0A1128] block">{HERO.headline2}</span>
           </h1>
+          <div className="border-l-2 border-[#FCCA07] pl-4 sm:pl-5 mb-6 max-w-xl mx-auto text-left">
+            <p className="font-alte font-medium text-[16px] sm:text-[18px] text-[#0A1128] tracking-[-0.02em] leading-[1.5]">
+              See in 30 seconds whether ChatGPT, Perplexity and Gemini name your
+              business, and why they don&apos;t.
+            </p>
+          </div>
           <p className="font-alte text-[15px] sm:text-base text-slate-600 leading-[1.5] tracking-[-0.04em] mb-7 max-w-xl mx-auto">
             {HERO.sub}
           </p>

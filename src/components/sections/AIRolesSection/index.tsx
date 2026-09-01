@@ -133,7 +133,9 @@ const AIRolesSection = () => {
         >
           Every business is different. The agent we build for a clinic looks
           nothing like the one we build for a recruiter. The engine is the same:
-          agents and automations, working as one.
+          agents and automations, working as one, built and run by our{" "}
+          <Link href="/forward-deployed-engineers/" className="text-blue-600 hover:text-blue-700 underline transition-colors">forward-deployed engineering team</Link>{" "}
+          inside the tools you already use.
         </motion.p>
 
         {/* Role Cards — compact uniform grid, light surfaces */}

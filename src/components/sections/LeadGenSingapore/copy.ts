@@ -1,6 +1,6 @@
 export const META = {
   title:
-    "Lead Generation Agency Singapore | Booked Calls, Not Lists | Agentic AI Labs",
+    "Lead Generation Agency Singapore | Booked Calls, Not Lists",
   description:
     "A Singapore lead generation agency that builds the system that turns your leads into booked calls, inside the CRM, phone and inbox you already use. We find and qualify leads, call them in seconds, follow up like your best salesperson, and stay on the hook for the result. Not a list. A system.",
   keywords: [

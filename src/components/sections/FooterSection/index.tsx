@@ -340,15 +340,7 @@ const FooterSection = () => {
           {/* Attribution */}
           <div className="text-center">
             <p className="font-alte font-normal text-gray-500 text-[12px] tracking-[-0.04em]">
-              Crafted by{" "}
-              <Link
-                href="https://creativescript.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-900 transition-colors duration-200"
-              >
-                creativescript.org
-              </Link>
+              Crafted by Aditya Pandey, Agentic AI Labs
             </p>
             <p className="font-alte font-normal text-gray-500 text-[12px] tracking-[-0.04em] mt-1">
               © 2026 Agentic AI Labs. All rights reserved.

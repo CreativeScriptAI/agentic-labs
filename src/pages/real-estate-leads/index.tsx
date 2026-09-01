@@ -31,7 +31,7 @@ const RealEstateLeadsPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>AI Lead Nurturing for Real Estate | Agentic AI Labs</title>
+        <title>AI Lead Nurturing for Real Estate</title>
         <meta
           name="description"
           content="Stop losing real estate leads to slow follow-up. Our AI system contacts, qualifies, and nurtures every lead automatically."

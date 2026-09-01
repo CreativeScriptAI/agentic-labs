@@ -70,7 +70,7 @@ const AIMemorySystemPage: NextPageWithLayout = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     const meta = {
-        title: "AI Memory System: Build AI That Actually Remembers Your Customers | Agentic AI Labs",
+        title: "AI Memory System: Build AI That Actually Remembers Your Customers",
         description: "You spent $50K on an AI receptionist. Your customer called twice. The AI asked for their name both times. You just paid for a parrot with a phone line.",
         type: "Article",
         url: "https://www.tryagentikai.com/ai-memory-system",
