@@ -1,129 +1,74 @@
-import { CONFIG } from "site.config"
-import Tag from "src/components/Tag"
-import { TPost } from "src/types"
-import { formatDate } from "src/libs/utils"
-import Image from "next/image"
-import React from "react"
-import styled from "@emotion/styled"
+import { CONFIG } from "site.config";
+import Tag from "src/components/Tag";
+import { TPost } from "src/types";
+import { formatDate } from "src/libs/utils";
+import Image from "next/image";
+import React from "react";
 
 type Props = {
-  data: TPost
-}
+  data: TPost;
+};
 
+// Editorial post header matching the site theme: AlteHaas title, geist meta,
+// brand tag chips, and a sharp-cornered cover that shows the full motif.
 const PostHeader: React.FC<Props> = ({ data }) => {
   return (
-    <StyledWrapper>
-      <h1 className="title">{data.title}</h1>
+    <div>
+      <h1 className="font-alte font-normal text-[28px] sm:text-[40px] leading-[1.1] tracking-[-0.04em] text-[#0A1128]">
+        {data.title}
+      </h1>
       {data.type[0] !== "Paper" && (
-        <nav>
-          <div className="top">
+        <div className="mt-5">
+          <div className="flex items-center gap-3 flex-wrap">
             {data.author && data.author[0] && data.author[0].name && (
               <>
-                <div className="author">
+                <div className="flex items-center gap-2">
                   <Image
-                    css={{ borderRadius: "50%" }}
+                    className="rounded-full"
                     src={data.author[0].profile_photo || CONFIG.profile.image}
-                    alt="profile_photo"
-                    width={24}
-                    height={24}
+                    alt={data.author[0].name}
+                    width={26}
+                    height={26}
                   />
-                  <div className="">{data.author[0].name}</div>
+                  <span className="font-geist text-[12px] uppercase tracking-[0.02em] text-[#0A1128]">
+                    {data.author[0].name}
+                  </span>
                 </div>
-                <div className="hr"></div>
+                <span className="w-1 h-1 rounded-full bg-slate-300" />
               </>
             )}
-            <div className="date">
+            <span className="font-geist text-[12px] uppercase tracking-[0.02em] text-slate-400">
               {formatDate(
                 data?.date?.start_date || data.createdTime,
                 CONFIG.lang
               )}
+            </span>
+          </div>
+
+          {data.tags && data.tags.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {data.tags.map((tag: string) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
             </div>
-          </div>
-          <div className="mid">
-            {data.tags && (
-              <div className="tags">
-                {data.tags.map((tag: string) => (
-                  <Tag key={tag}>{tag}</Tag>
-                ))}
-              </div>
-            )}
-          </div>
+          )}
+
           {data.thumbnail && (
-            <div className="thumbnail">
+            <div className="relative w-full aspect-[1200/750] mt-8 bg-[#F9F6F4] border border-[#e7e6e4] rounded-none overflow-hidden">
               <Image
                 src={data.thumbnail}
-                css={{ objectFit: "cover" }}
+                className="object-contain"
                 fill
+                sizes="(max-width: 768px) 100vw, 720px"
                 alt={data.title}
+                unoptimized
               />
             </div>
           )}
-        </nav>
+        </div>
       )}
-    </StyledWrapper>
-  )
-}
+    </div>
+  );
+};
 
-export default PostHeader
-
-const StyledWrapper = styled.div`
-  .title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  nav {
-    margin-top: 1.5rem;
-    color: ${({ theme }) => theme.colors.gray11};
-    > .top {
-      display: flex;
-      margin-bottom: 0.75rem;
-      gap: 0.75rem;
-      align-items: center;
-      .author {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-      }
-      .hr {
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-        align-self: stretch;
-        width: 1px;
-        background-color: ${({ theme }) => theme.colors.gray10};
-      }
-      .date {
-        margin-right: 0.5rem;
-
-        @media (min-width: 768px) {
-          margin-left: 0;
-        }
-      }
-    }
-    > .mid {
-      display: flex;
-      margin-bottom: 1rem;
-      align-items: center;
-      .tags {
-        display: flex;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        gap: 0.5rem;
-        max-width: 100%;
-      }
-    }
-    .thumbnail {
-      overflow: hidden;
-      position: relative;
-      margin-bottom: 1.75rem;
-      border-radius: 1.5rem;
-      width: 100%;
-      background-color: ${({ theme }) => theme.colors.gray4};
-      padding-bottom: 66%;
-
-      @media (min-width: 1024px) {
-        padding-bottom: 50%;
-      }
-    }
-  }
-`
+export default PostHeader;
