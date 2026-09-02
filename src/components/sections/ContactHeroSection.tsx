@@ -7,13 +7,18 @@ const CAL_LINK = "https://cal.com/ai-aditya/30min";
 
 interface ContactHeroSectionProps {
   noPadding?: boolean;
+  // Heading level for the hero title. Defaults to h1 (this is the main hero on
+  // /contact and /ai-clarity-workshop). Pages that embed it as a secondary CTA
+  // section, e.g. /services, pass "h2" so the page keeps a single h1.
+  headingTag?: "h1" | "h2";
 }
 
 const CheckSvg = () => (
   <svg className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" /></svg>
 );
 
-const ContactHeroSection = ({ noPadding = false }: ContactHeroSectionProps) => {
+const ContactHeroSection = ({ noPadding = false, headingTag = "h1" }: ContactHeroSectionProps) => {
+  const Heading = headingTag;
   const expectations = [
     { title: "A clear roadmap", description: "Tailored to your business, not a generic template." },
     { title: "Technical feasibility check", description: "Find out if your idea can actually work, before you spend." },
@@ -41,9 +46,9 @@ const ContactHeroSection = ({ noPadding = false }: ContactHeroSectionProps) => {
               </span>
             </div>
 
-            <h1 className="text-[2.5rem] sm:text-5xl lg:text-[3.4rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
+            <Heading className="text-[2.5rem] sm:text-5xl lg:text-[3.4rem] font-alte font-normal text-[#0A1128] leading-[1.2] tracking-[-0.04em] mb-6">
               Get a clear plan for AI in your business. In 30 minutes.
-            </h1>
+            </Heading>
 
             <p className="font-alte font-normal text-[15px] sm:text-base text-slate-600 max-w-xl mb-8 leading-[1.5] tracking-[-0.04em]">
               No pitch, no jargon. We look at where you actually lose time and money, then hand you a roadmap you can act on, whether you build it with us or not.
