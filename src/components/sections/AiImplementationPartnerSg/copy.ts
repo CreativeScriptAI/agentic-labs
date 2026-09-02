@@ -7,7 +7,7 @@
 // Grant and PDPA framed as what exists, not advice. No fabricated clients.
 
 export const META = {
-  title: "AI Implementation Partner in Singapore | Built and Run for You",
+  title: "AI Implementation Partner Singapore | Built for You",
   description:
     "An AI implementation partner builds, deploys, and runs your marketing and sales AI, rather than only advising. Built inside the tools you already use, for Singapore businesses, with the outcome owned.",
   keywords: [

@@ -12,7 +12,7 @@ import type { ServiceCopy } from "./types";
 // and fast response, never promised grades or enrolment numbers.
 export const TUITION_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Tuition Centres Singapore | Booked Trials, Not Missed WhatsApps",
+    title: "Lead Generation for Tuition Centres Singapore",
     description:
       "Lead generation for tuition and enrichment centres in Singapore that answers every WhatsApp enquiry in seconds and books the trial class, even during class hours and on Saturday mornings. Starting from S$100 a month, PSG eligible.",
     keywords: [

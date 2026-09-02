@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // PQL, built and run inside the client's own SaaS stack.
 export const B2B_SAAS_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for B2B SaaS Singapore | Demos Booked, PQLs Routed",
+    title: "Lead Generation for B2B SaaS Singapore | Demos Booked",
     description:
       "Lead generation for B2B SaaS in Singapore. We turn trials, sign-ups, and demo requests into booked demos and product-qualified leads, built and run inside your own stack. From S$100 a month, PSG eligible.",
     keywords: [

@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // WhatsApp. Pricing uses the honest S$100 pattern from the gold template.
 export const RENOVATION_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Renovation Contractors Singapore | Win the Multi-Quote Race",
+    title: "Lead Generation for Renovation Contractors Singapore",
     description:
       "Lead generation for renovation contractors and ID firms in Singapore. We own the reply, the qualification, and the booking on WhatsApp, so the enquiries you already get turn into consultations. Starting from S$100 a month, PSG eligible.",
     keywords: [

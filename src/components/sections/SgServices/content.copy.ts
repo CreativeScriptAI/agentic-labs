@@ -5,7 +5,7 @@ import type { ServiceCopy } from "./types";
 // cited by AI and drives leads. Pricing from S$1,700/mo, 15% below market.
 export const CONTENT_COPY: ServiceCopy = {
   meta: {
-    title: "Content Marketing Singapore | Content That Converts and Gets Cited by AI",
+    title: "Content Marketing Singapore | Ranks and Cited by AI",
     description:
       "A content marketing agency in Singapore that engineers content to get cited by AI answers and drive leads, not just fill a calendar. Built and run for you, starting from S$100 a month, PSG eligible.",
     keywords: ["content marketing agency singapore", "content marketing singapore", "content writing services singapore", "copywriting services singapore"],

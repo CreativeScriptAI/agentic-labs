@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // eligible, no lock-in. Forward-deployed, built inside the client's stack.
 export const WHATSAPP_API_COPY: ServiceCopy = {
   meta: {
-    title: "WhatsApp Business API Singapore | Answer Every Enquiry in Seconds",
+    title: "WhatsApp Business API Singapore | Replies in Seconds",
     description:
       "We set up and run the WhatsApp Business API for Singapore businesses: instant replies, qualification, and booked appointments inside WhatsApp, wired into your CRM. Starting from S$100 a month, PSG eligible.",
     keywords: [

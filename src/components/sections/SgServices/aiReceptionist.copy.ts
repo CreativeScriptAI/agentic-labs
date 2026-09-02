@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // books. Pricing follows the honest S$100 starting point pattern.
 export const AI_RECEPTIONIST_COPY: ServiceCopy = {
   meta: {
-    title: "AI Receptionist Singapore | Every Call Answered and Booked, 24/7",
+    title: "AI Receptionist Singapore | Every Call Answered 24/7",
     description:
       "An AI receptionist for Singapore businesses that answers every call 24/7, including after hours, qualifies the caller, and books the appointment. Starting from S$100 a month, PSG eligible.",
     keywords: ["ai receptionist singapore", "virtual receptionist singapore", "ai phone answering service singapore", "24/7 receptionist singapore", "ai call answering singapore"],

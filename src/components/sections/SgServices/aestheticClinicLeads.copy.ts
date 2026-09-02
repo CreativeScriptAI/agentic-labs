@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // HSA, PDPA/DNC) because doctor-buyers silently vet the site before engaging.
 export const AESTHETIC_CLINIC_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Aesthetic Clinics Singapore | We Turn the DM Into a Booked Consult",
+    title: "Lead Generation for Aesthetic Clinics Singapore",
     description:
       "Lead generation for aesthetic clinics in Singapore. You already pay to generate the Instagram DM and WhatsApp enquiry. We make sure it becomes a booked, qualified consult, inside your own tools. Starting from S$100 a month, PSG eligible.",
     keywords: [

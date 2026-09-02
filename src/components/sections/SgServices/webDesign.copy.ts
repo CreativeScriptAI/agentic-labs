@@ -7,7 +7,7 @@ import type { ServiceCopy } from "./types";
 // you own the whole thing. Pricing from S$100/mo, honest lean starting point.
 export const WEB_DESIGN_COPY: ServiceCopy = {
   meta: {
-    title: "Affordable Web Design Singapore | A Website That Books Meetings, Not One That Just Sits There",
+    title: "Affordable Web Design Singapore | Built to Book Leads",
     description:
       "Affordable web design in Singapore built by our in-house design studio: fast, mobile-first, SEO-ready, and wired to capture and follow up leads from day one. Starting from S$100 a month, PSG eligible, and you own it.",
     keywords: ["affordable web design singapore", "web design singapore", "website design singapore", "web design agency singapore", "cheap web design singapore"],

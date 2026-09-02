@@ -10,7 +10,7 @@ import type { ServiceCopy } from "./types";
 // silent credibility check by SG B2B buyers who read outbound but do not reply.
 export const B2B_LEAD_GEN_COPY: ServiceCopy = {
   meta: {
-    title: "B2B Lead Generation Singapore | Booked Meetings, Not Lead Lists",
+    title: "B2B Lead Generation Singapore | Booked Meetings",
     description:
       "A B2B lead generation team in Singapore that is paid on pipeline and accountable for booked meetings, not a lead list or a report. An AI-SDR system built inside your stack. Starting from S$100 a month, PSG eligible.",
     keywords: ["b2b lead generation singapore", "b2b marketing agency singapore", "b2b marketing company singapore", "b2b marketing firm singapore", "appointment setting singapore"],

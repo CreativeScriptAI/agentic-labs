@@ -6,7 +6,7 @@ import type { ServiceCopy } from "./types";
 // Pricing from S$850/mo or 12% of spend, min S$1,500 spend.
 export const GOOGLE_ADS_COPY: ServiceCopy = {
   meta: {
-    title: "Google Ads Agency Singapore | We Own What Happens After the Click",
+    title: "Google Ads Agency Singapore | Beyond the Click",
     description:
       "A Google Ads and SEM agency in Singapore that owns what happens after the click: instant follow up and booked calls, not leads left waiting in a form. Starting from S$100 a month, PSG eligible.",
     keywords: ["sem agency singapore", "google ads agency singapore", "google ads singapore", "ppc agency singapore", "google ads management singapore"],

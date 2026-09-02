@@ -8,7 +8,7 @@ import type { ServiceCopy } from "./types";
 // Pricing: S$100/mo starting from, PSG eligible, no lock-in.
 export const DENTAL_CLINIC_LEADS_COPY: ServiceCopy = {
   meta: {
-    title: "Lead Generation for Dental Clinics Singapore | Booked Consults, Not Unanswered DMs",
+    title: "Lead Generation for Dental Clinics Singapore",
     description:
       "Lead generation for dental clinics in Singapore that owns the moment after the enquiry: instant response, treatment-aware qualification, and booked consults for Invisalign, implants, and veneers. From S$100 a month, PSG eligible.",
     keywords: [

@@ -7,7 +7,7 @@ import type { ServiceCopy } from "./types";
 // design studio. Pricing from S$100/mo, honest starting point, PSG eligible.
 export const LANDING_PAGES_COPY: ServiceCopy = {
   meta: {
-    title: "High Converting Landing Pages Singapore | From the Click to the Booked Call",
+    title: "High Converting Landing Pages Singapore | Clicks to Calls",
     description:
       "A landing page agency in Singapore that owns the whole path from the click to the booked call: conversion-first design, fast mobile build, and instant follow-up wired into your own tools. From S$100 a month, PSG eligible.",
     keywords: ["high converting landing pages singapore", "landing page design singapore", "conversion rate optimization singapore", "cro singapore", "landing page agency singapore"],
