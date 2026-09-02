@@ -4,6 +4,7 @@ import FooterSection from "src/components/sections/FooterSection";
 import {
   AnswerFirst,
   Compare,
+  DeepDive,
   Faq,
   FinalCta,
   Hero,
@@ -28,6 +29,7 @@ const ForwardDeployedEngineersPage = () => (
     <Compare />
     <Proof />
     <Start />
+    <DeepDive />
     <Faq />
     <FinalCta />
     <FooterSection />

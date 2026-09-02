@@ -3,6 +3,7 @@
 import FooterSection from "src/components/sections/FooterSection";
 import {
   AnswerFirst,
+  DeepDive,
   Faq,
   FinalCta,
   Gap,
@@ -26,6 +27,7 @@ const AiImplementationPartnerSgPage = () => (
     <Own />
     <Trust />
     <Proof />
+    <DeepDive />
     <Faq />
     <FinalCta />
     <FooterSection />

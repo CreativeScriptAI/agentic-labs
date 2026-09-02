@@ -5,6 +5,7 @@ import {
   Breaks,
   Channels,
   Choose,
+  DeepDive,
   Faq,
   FinalCta,
   Fix,
@@ -28,6 +29,7 @@ const AppointmentBookingAiPage = () => (
     <Channels />
     <Choose />
     <Fix />
+    <DeepDive />
     <Faq />
     <FinalCta />
     <FooterSection />

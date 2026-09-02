@@ -3,6 +3,7 @@
 import FooterSection from "src/components/sections/FooterSection";
 import {
   AnswerFirst,
+  DeepDive,
   Definitions,
   Fails,
   Faq,
@@ -30,6 +31,7 @@ const LeadQualificationPage = () => (
     <Limits />
     <Measure />
     <Fix />
+    <DeepDive />
     <Faq />
     <FinalCta />
     <FooterSection />

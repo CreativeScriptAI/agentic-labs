@@ -345,6 +345,73 @@ export const FAQS = [
   },
 ];
 
+type DeepDivePara =
+  | string
+  | { pre: string; link: { href: string; label: string }; post: string };
+
+export const DEEP_DIVE: {
+  eyebrow: string;
+  heading: string;
+  sections: { h2: string; body: DeepDivePara[] }[];
+} = {
+  eyebrow: "THE LONGER ANSWER",
+  heading: "A plain guide to lead qualification, scoring, and the frameworks",
+  sections: [
+    {
+      h2: "What is lead qualification, and why does it decide whether sales time gets wasted?",
+      body: [
+        "Lead qualification is the work of deciding which of the people who raised a hand are worth a salesperson's time, and in what order. Every inbound channel produces a mix: a few buyers with a real problem and a budget, a larger group who are curious but months away, and a tail of tyre kickers, students, and competitors. Without a filter, all of them land in the same queue, and your closers spend their best hours on the ones least likely to buy.",
+        "The reason this matters is math, not tidiness. A rep who talks to twenty leads a day converts far more when the fifteen worst are removed before the call than when they are discovered mid conversation. Qualification is how you protect the scarce, expensive resource in the whole funnel, which is human selling attention. Everything upstream of it, the ads and the content and the forms, only pays off if the sorting at this step is honest.",
+        {
+          pre: "Qualification is also not the same as generation. Filling the top of the funnel is a different job with different tools, and if the raw volume is not there yet, sorting harder will not save you. When the problem is quantity rather than quality, the fix lives further up, in ",
+          link: { href: "/lead-generation-agency-singapore/", label: "how you generate demand in the first place" },
+          post: ". Qualification assumes leads exist and asks which ones deserve the next step.",
+        },
+      ],
+    },
+    {
+      h2: "What is the difference between an MQL, an SQL, and a PQL?",
+      body: [
+        "These three labels describe the same lead at different stages of belief, and confusing them is the most common reason marketing and sales end up at war. An MQL, a marketing qualified lead, is someone whose behaviour and fit suggest they are worth a closer look: they match your target profile and they did something, downloaded, requested, replied. It is a hypothesis, not a promise. An SQL, a sales qualified lead, is one a salesperson has looked at and agreed is worth pursuing, which means a human took ownership of the risk.",
+        "A PQL, a product qualified lead, is newer and only applies if people can try before they buy. It is a lead who has used the product, hit a limit or a moment of value, and shown intent through action rather than a form fill. For a free trial or freemium motion a PQL is usually the strongest of the three, because using something is a louder signal than clicking on it. For a services business with no self serve product, PQL may not apply at all, and that is fine.",
+        "The honest caution is that none of these terms has a fixed, industry wide definition. One company's MQL is another company's cold list. Benchmarks that compare your MQL to SQL conversion against a published average are mostly noise, because you are comparing your definition to a hundred others. The only version that matters is the one you and your sales team write down together and agree to defend.",
+      ],
+    },
+    {
+      h2: "What is the BANT framework, and does it still work for inbound leads?",
+      body: [
+        "BANT stands for Budget, Authority, Need, and Timeline, and it came out of IBM as a checklist for reps to confirm before spending time on an opportunity. Does the prospect have money to spend, are we talking to someone who can decide, is there a real need our product meets, and is there a timeframe for buying. As a memory aid for what a serious buyer looks like, it has aged well, and most qualification frameworks that followed are variations on the same four questions.",
+        "Where BANT strains is with modern inbound. A buyer who found you through search and read three articles often will not disclose budget on a first touch, may be a researcher rather than the decision maker, and may have a real need but no fixed timeline yet. Treating BANT as a rigid gate disqualifies good early stage leads for failing to answer questions they are not ready to answer. Directional research on how buyers now self educate before talking to sales supports using it as a guide, not a bouncer.",
+        "The practical move is to treat need and fit as the hard filters and treat budget, authority, and timeline as things you learn across the relationship rather than extract on contact. Qualification is not a single yes or no at the door. It is a confidence level that rises as you gather signal, which is exactly why speed and structured follow up matter more than a perfect first conversation.",
+      ],
+    },
+    {
+      h2: "How do you qualify leads automatically without losing the human read?",
+      body: [
+        "Automatic qualification usually means two things working together: lead scoring and routing. Scoring assigns points for fit attributes, industry, company size, role, region, and for behaviour, pages viewed, replies, meetings booked, then uses the total to sort leads into tiers. Routing takes those tiers and sends each one somewhere sensible, the hottest to a rep in minutes, the warm to nurture, the unqualified to a polite decline with a reason attached. Done well, this happens before a human has read a single form.",
+        {
+          pre: "The trap is thinking automation replaces judgement. A score is only as good as the definition behind it, and a model that was never taught what a good customer looks like will confidently mis-sort at scale. The reliable pattern is to let software handle speed and consistency, instant response, no lead left overnight, every lead scored the same way, and let people handle the reads a rule cannot make. Pairing scoring with fast, structured ",
+          link: { href: "/follow-up-automation/", label: "follow up automation" },
+          post: " is what turns a score into a booked conversation instead of a number in a dashboard.",
+        },
+        "Before automating anything, check that the inputs exist. If half your CRM fields are blank and nobody has written down the fit criteria, automation will apply that vagueness faster rather than fix it. Clean the data and agree the definition first, then let the system enforce it consistently. The value of automatic qualification is not cleverness, it is that it never gets tired, never plays favourites, and never lets a hot lead sit for a day.",
+      ],
+    },
+    {
+      h2: "What lead qualification questions actually separate a buyer from a browser?",
+      body: [
+        "The best qualification questions surface need and fit early and leave budget and timing for later. Useful openers ask what pushed them to look now, what they have already tried, what happens if they do nothing, and who else is affected by the problem. A person with a real, current problem answers these easily and specifically. A browser gives vague, hypothetical answers, and that difference tells you more than any single demographic field.",
+        "Notice that none of these are yes or no. Questions that invite a story reveal intent, urgency, and whether you are even talking to the right person, all at once. Rigid scorecards that only capture checkboxes miss the tone underneath, which is often where the real signal is. This is why a short conversation, human or a well built assistant, frequently qualifies better than a longer form nobody wants to fill.",
+        {
+          pre: "Once a lead answers well and clears the bar, the next failure point is friction. A qualified buyer who has to wait, or chase a reply, or navigate a clumsy hand off will cool fast. Getting them straight into ",
+          link: { href: "/appointment-setting-singapore/", label: "a booked appointment" },
+          post: " while the intent is still warm protects the work qualification just did. Qualifying well and then stalling on the follow through wastes both the lead and the effort spent sorting it.",
+        },
+      ],
+    },
+  ],
+};
+
 export const FINAL = {
   eyebrow: "STOP PAYING FOR LEADS NOBODY SORTS",
   heading: "Your team should only see the leads worth their time.",

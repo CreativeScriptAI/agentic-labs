@@ -5,6 +5,7 @@ import {
   AnswerFirst,
   Channels,
   Compliance,
+  DeepDive,
   Fails,
   Faq,
   FinalCta,
@@ -32,6 +33,7 @@ const FollowUpAutomationPage = () => (
     <HowItWorks />
     <Measure />
     <Fix />
+    <DeepDive />
     <Faq />
     <FinalCta />
     <FooterSection />

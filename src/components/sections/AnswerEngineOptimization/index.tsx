@@ -4,6 +4,7 @@ import FooterSection from "src/components/sections/FooterSection";
 import {
   Checklist,
   Compare,
+  DeepDive,
   Definition,
   Faq,
   FinalCta,
@@ -26,6 +27,7 @@ const AnswerEngineOptimizationPage = () => (
     <RankChatGPT />
     <Measure />
     <Fix />
+    <DeepDive />
     <Faq />
     <FinalCta />
     {/* Internal links live in nav (Resources), footer, llms.txt, and the CTAs

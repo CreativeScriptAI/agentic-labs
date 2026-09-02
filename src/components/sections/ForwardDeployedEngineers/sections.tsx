@@ -11,6 +11,7 @@ import ModelsCompare from "./ModelsCompare";
 import {
   ANSWER_FIRST,
   COMPARE,
+  DEEP_DIVE,
   FAQS,
   FINAL,
   HERO,
@@ -22,6 +23,30 @@ import {
   START,
   WHATITIS,
 } from "./copy";
+
+// Parse [label](/path/) markers in deep-dive prose into in-line Links.
+const renderProse = (text: string): React.ReactNode[] => {
+  const nodes: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let key = 0;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    nodes.push(
+      <Link
+        key={key++}
+        href={m[2]}
+        className="text-blue-600 underline underline-offset-2 hover:text-[#0A1128]"
+      >
+        {m[1]}
+      </Link>
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+};
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="font-alte text-[28px] sm:text-[38px] leading-[1.05] tracking-[-0.04em] text-[#0A1128] text-balance">
@@ -295,6 +320,39 @@ export const Start = () => (
           <span className="font-alte text-[15px] tracking-[-0.02em] text-slate-500">{START.support}</span>
         </div>
       </FadeUp>
+    </Container>
+  </section>
+);
+
+/* 10b. DEEP DIVE */
+export const DeepDive = () => (
+  <section className="bg-[#F9F6F4] py-16 sm:py-24 border-b border-[#e7e6e4]">
+    <Container size="md">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <H2>{DEEP_DIVE.heading}</H2>
+      </FadeUp>
+      <div className="mt-10 sm:mt-12 flex flex-col gap-10 sm:gap-12 max-w-2xl">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-l-2 border-[#e7e6e4] pl-5 sm:pl-6">
+              <h2 className="font-alte text-[20px] sm:text-[23px] tracking-[-0.03em] leading-[1.2] text-[#0A1128]">
+                {item.h2}
+              </h2>
+              <div className="mt-4 flex flex-col gap-4">
+                {item.body.map((para, j) => (
+                  <p
+                    key={j}
+                    className="font-alte text-[15px] sm:text-[16px] tracking-[-0.02em] leading-[1.6] text-slate-600"
+                  >
+                    {renderProse(para)}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
+      </div>
     </Container>
   </section>
 );

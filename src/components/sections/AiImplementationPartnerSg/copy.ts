@@ -177,6 +177,74 @@ export const FAQS = [
   },
 ];
 
+// A paragraph is either a plain string, or a sequence of text and inline
+// links. This lets the deep dive carry a few in-prose internal links while
+// staying a plain data file. The DeepDive component renders both shapes.
+export type DeepDivePart = string | { text: string; to: string };
+export type DeepDivePara = string | DeepDivePart[];
+
+export const DEEP_DIVE: {
+  eyebrow: string;
+  heading: string;
+  sections: { h2: string; body: DeepDivePara[] }[];
+} = {
+  eyebrow: "THE LONGER ANSWER",
+  heading: "What to weigh before you pick an AI implementation partner in Singapore",
+  sections: [
+    {
+      h2: "What does an AI implementation partner in Singapore actually do?",
+      body: [
+        "The label gets stretched to cover very different things, so it is worth being precise. An AI consultant in Singapore sells you thinking: a strategy, a roadmap, maybe a vendor shortlist. A dev shop sells you software and a handover. An AI implementation partner sits between and beyond both. The work is to build the system inside the tools you already run, connect it to your real data, put it live, and stay on the hook for whether it produces the outcome you scoped it for.",
+        "For a marketing and sales team that outcome is usually concrete: more captured leads, faster qualification, follow-up that does not drop, and meetings on the calendar. The partner is measured against that working system, not against a slide deck or a monthly subscription. That is the practical test when you are comparing providers. Ask who operates the thing after it ships, and who is accountable if the leads do not come.",
+        [
+          "This is the model we run as a forward-deployed team. We build in your stack, work alongside your people, and hand back code and runbooks so nothing stays locked to us. If you want the mechanics of that engagement, our ",
+          { text: "forward-deployed engineering", to: "/forward-deployed-engineers/" },
+          " page walks through how the team plugs in.",
+        ],
+      ],
+    },
+    {
+      h2: "How much does AI implementation cost in Singapore, and what drives the price?",
+      body: [
+        "There is no honest single number, and any partner quoting one before they have seen your funnel is guessing. What you pay tracks the size of the job, not a fixed menu. The first driver is scope: a single follow-up agent wired into one CRM is a smaller build than a connected system that captures, qualifies, follows up across channels, and books. The second is the state of your tools. Clean data and a tidy CRM shorten the work; scattered spreadsheets and half-configured platforms lengthen it, because the integration is where most of the real hours go.",
+        "The third driver is how much you run in-house afterward versus leaving with us. A build-and-hand-over engagement front-loads documentation so your team can operate it; an ongoing run arrangement spreads cost differently. This is why we start with a paid scoping step rather than a package price. It puts the maths on the table before you commit, and you keep the plan whether or not you continue.",
+        [
+          "One more thing that changes the real cost: grants. Many Singapore SMEs fund digital and AI adoption through Enterprise Singapore schemes such as the Productivity Solutions Grant and the Enterprise Development Grant, and we scope engagements to be grant friendly. Eligibility and support levels change, so confirm the current position directly with Enterprise Singapore rather than taking any vendor's word for it.",
+        ],
+      ],
+    },
+    {
+      h2: "Should an SME build its own AI or buy off-the-shelf tools?",
+      body: [
+        "The build versus buy question trips up most small teams because it is framed as either-or, when the useful answer is almost always both. Off-the-shelf tools are the right call for solved, standard problems: a scheduling widget, a transcription service, a general chatbot. Building from scratch only pays off when the work is specific to how your business wins, and when no product on the market fits without heavy bending.",
+        "The trap the IMDA data points to is buying tools and calling it done. A subscription that nobody configures, connects, or operates is a cost, not a system. For most Singapore SMEs the sensible middle is to buy the commodity pieces and have someone integrate them into one working flow against your data and your rules. That integration layer, not the individual tools, is where the value actually shows up.",
+        [
+          "That is the layer an implementation partner owns. If you are earlier in the journey and mostly want existing tools stitched together and running, our ",
+          { text: "AI automation in Singapore", to: "/ai-automation-singapore/" },
+          " page covers that scope, and the paid ",
+          { text: "AI clarity workshop", to: "/ai-clarity-workshop/" },
+          " is where we map which parts to buy, which to build, and what to leave alone for now.",
+        ],
+      ],
+    },
+    {
+      h2: "What does PDPA mean for using AI in a Singapore business?",
+      body: [
+        "Singapore's Personal Data Protection Act governs how organisations collect, use, and disclose personal data, and it applies to AI systems exactly as it applies to anything else that touches customer information. In practice that means the usual obligations still hold: you need a lawful basis such as consent for how you handle the data, you should only use it for the purposes a reasonable person would expect, you are expected to protect it with reasonable security, and people retain rights to access and correct what you hold. None of that is waived because a model is involved.",
+        "Two areas matter most for marketing and sales AI. First, consent and purpose: if you feed enquiry data into an AI system, the way you collected it needs to cover that use. Second, outreach: marketing calls and texts to Singapore numbers must be checked against the national Do Not Call Registry before they send, unless a valid exemption applies. We build consent capture, data handling, and DNC checks into the system rather than bolting them on later.",
+        "To be clear, this describes what the rules require in general terms and is not legal advice. The PDPC publishes guidance on data protection, and there is separate model guidance on the responsible use of AI. For your specific situation, confirm your obligations with the PDPC or a qualified adviser before you go live.",
+      ],
+    },
+    {
+      h2: "How do you tell a real AI integration partner from a reseller with a demo?",
+      body: [
+        "The tell is what happens after the impressive demo. Anyone can wire a slick prototype that works on stage. The harder, less glamorous work is making it hold up against your messy real data, your edge cases, and your team's actual workflow, then keeping it working as those change. A partner that only shows you the demo and disappears at handover has quietly left the hard part to you.",
+        "Three questions cut through it. Ask who operates the system after it ships and who is accountable if it underperforms. Ask what you walk away with if you stop working together, and make sure the answer is your code, your integrations, and documentation an ordinary team member can follow, not a dependency on their platform. And ask them to show a system they built and run rather than one they resell. If the answers are vague, or the contract locks you in while putting nobody on the hook for the outcome, you have learned what you needed to know.",
+      ],
+    },
+  ],
+};
+
 export const FINAL = {
   eyebrow: "STOP COLLECTING TOOLS",
   heading: "Get a system that runs, built for Singapore.",

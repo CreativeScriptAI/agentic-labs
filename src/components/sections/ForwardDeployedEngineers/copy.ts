@@ -192,6 +192,56 @@ export const START = {
   support: "You are hiring a team, not buying software.",
 };
 
+// Long-form deep dive. Buyer voice, problem first, question-style H2s.
+// In-prose internal links use [label](/path/) and are parsed in the render.
+// No dashes anywhere. No fabricated stats, names, or testimonials.
+export const DEEP_DIVE = {
+  eyebrow: "THE LONGER ANSWER",
+  heading: "Forward deployed engineering, explained for the person paying for it",
+  sections: [
+    {
+      h2: "What does a forward deployed engineer actually do day to day?",
+      body: [
+        "A forward deployed engineer is not a strategist who visits, presents a deck, and leaves. The day to day is building. They sit inside your stack, read how your leads actually move, and write the code that ties your CRM, your inbox, and your automation tools into one working system. The word forward is the point: the engineer is deployed to where the work happens, your business, not kept back at a vendor's office shipping generic features for everyone at once.",
+        "In practice an embedded AI engineer spends the first days mapping reality rather than the ideal. Which form feeds which list, where a reply gets dropped, which follow up never goes out. Then they build against that map, test it on your real traffic, and adjust while you watch it take shape. Nothing gets thrown over a wall for you to reverse engineer later.",
+        "The difference you feel is accountability. Because the engineer is measured against a system that has to run in your environment, the edge cases are their problem, not a footnote in a report. That is the core of forward deployed engineering, and it is why the model has spread from where Palantir named it out to the largest AI vendors.",
+      ],
+    },
+    {
+      h2: "Why do so many AI pilots fail to reach production?",
+      body: [
+        "Most AI pilots do not fail because the model is weak. They fail at the last mile, the unglamorous work of wiring a demo into the systems a business actually runs on. A pilot that dazzles in a sandbox still has to survive real data, real volume, and the messy exceptions that never appear in a demo. When nobody owns that last mile, the pilot stalls in a slide deck and quietly gets written off.",
+        "The second reason is that a pilot often loses its owner once the excitement fades. The person who championed it moves on, the one who understood it leaves, and there is no documentation for anyone else to pick it up. A working demo with no runbook is not a production system. It is a liability waiting for month four.",
+        "Forward deployed engineering exists to close that gap on purpose. The whole job is to build past the pilot into something live, documented, and handed over, so the very thing that makes most AI pilots fail to reach production, an unowned last mile, is the thing this model was built to carry. The demo is never the deliverable. The running system is.",
+      ],
+    },
+    {
+      h2: "Done for you AI implementation, or a SaaS tool you run yourself?",
+      body: [
+        "A SaaS tool sells you capability and hands you the operating manual. That is a fair trade when you have the team and the time to configure it, maintain it, and carry the one person who understands it. The catch is that the tool never promised to run itself, so the work of turning a login into results quietly becomes yours the day the trial ends.",
+        "Done for you AI implementation flips who holds that work. Instead of a blank canvas you get a system built inside the tools you already pay for, running against your real pipeline, with the build owned by the team that shipped it. The honest way to frame the choice of an AI implementation partner vs a SaaS tool is this: one sells you software and wishes you luck, the other builds the working system and stays on the hook for whether it performs.",
+        "Neither is universally right. If you have the in house capacity, software is the cheaper answer over time. If you do not, a done for you build gets you to a working marketing and sales system faster, and you can read how we structure that on our [AI implementation partner](/ai-implementation-partner-singapore/) page.",
+      ],
+    },
+    {
+      h2: "How is an embedded AI engineer different from an agency?",
+      body: [
+        "An agency usually sells advice priced against time. You get a strategy, an audit, a roadmap, and someone else still has to build it. Good agencies exist, but the retainer model rewards continued advising rather than a finished system, so the incentive quietly points away from done.",
+        "An embedded AI engineer is priced against a working system instead of hours logged. They write production code in your environment, and the deliverable is something running, not something recommended. If the leads do not move, that is their problem to fix, not a green arrow in next month's report. It is also why forward deployed work pairs so naturally with the rest of a pipeline, from the build itself to the [lead generation](/lead-generation-agency-singapore/) that has to fill it.",
+        "The narrow honest caveat is that some agencies genuinely own outcomes, and the structure matters more than the label. Ask who operates the system when you are done, who owns the code, and what happens when it breaks. The answers tell you which model you are really buying, whatever it is called on the invoice.",
+      ],
+    },
+    {
+      h2: "How do you keep forward deployed engineering from becoming a dependency you cannot leave?",
+      body: [
+        "It is a fair worry. A team that builds inside your business could, in principle, make itself impossible to remove. The fix is to design the exit from the start. Everything is built in tools you already own, the repository is assigned to your account, and the documentation is written for a person who was not in the room when it was made.",
+        "The goal of a good engagement is that you stop needing the engineer. The training wheels come off. A dependency you cannot exit is a failure of the model, not a feature of it, and any partner who arranges things so you can never leave has quietly sold you the same lock in that software and agencies get criticised for.",
+        "So the test is simple. When the work is done, can your own team run the system, and could you walk away with everything if you chose to. If the answer to both is yes, forward deployed engineering did its job. If not, you bought a dependency with a nicer name on it.",
+      ],
+    },
+  ],
+};
+
 export const FAQS = [
   {
     question: "What is a forward deployed engineer, and where did the term come from?",

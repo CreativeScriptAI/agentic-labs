@@ -12,6 +12,7 @@ import {
   ANSWER_FIRST,
   CHANNELS,
   COMPLIANCE,
+  DEEP_DIVE,
   FAILS,
   FAQS,
   FINAL,
@@ -358,6 +359,53 @@ export const Fix = () => (
           <span className="font-alte text-[15px] tracking-[-0.02em] text-slate-500">{FIX.support}</span>
         </div>
       </FadeUp>
+    </Container>
+  </section>
+);
+
+/* 12b. DEEP DIVE (long-form, keyword-rich) */
+export const DeepDive = () => (
+  <section className="bg-white py-16 sm:py-24 border-b border-[#e7e6e4]">
+    <Container size="md">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <H2>{DEEP_DIVE.heading}</H2>
+      </FadeUp>
+      <div className="flex flex-col gap-12 sm:gap-14 mt-12 max-w-3xl">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-l-2 border-[#e7e6e4] pl-5 sm:pl-6">
+              <h2 className="font-alte text-[20px] sm:text-[24px] tracking-[-0.04em] leading-[1.2] text-[#0A1128] mb-4">
+                {item.h2}
+              </h2>
+              <div className="flex flex-col gap-4">
+                {item.body.map((para, pi) => (
+                  <p
+                    key={pi}
+                    className="font-alte text-[15px] sm:text-[16px] tracking-[-0.02em] leading-[1.6] text-slate-600"
+                  >
+                    {typeof para === "string"
+                      ? para
+                      : para.map((seg, si) =>
+                          typeof seg === "string" ? (
+                            <span key={si}>{seg}</span>
+                          ) : (
+                            <Link
+                              key={si}
+                              href={seg.href}
+                              className="text-blue-600 hover:underline"
+                            >
+                              {seg.text}
+                            </Link>
+                          )
+                        )}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
+      </div>
     </Container>
   </section>
 );

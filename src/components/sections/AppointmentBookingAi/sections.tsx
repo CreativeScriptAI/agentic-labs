@@ -14,6 +14,7 @@ import {
   BREAKS,
   CHANNELS,
   CHOOSE,
+  DEEP_DIVE,
   FAQS,
   FINAL,
   FIX,
@@ -413,6 +414,38 @@ export const Fix = () => (
           <span className="font-alte text-[15px] tracking-[-0.02em] text-slate-500">{FIX.support}</span>
         </div>
       </FadeUp>
+    </Container>
+  </section>
+);
+
+/* 10b. DEEP DIVE (long-form) */
+export const DeepDive = () => (
+  <section className="bg-white py-16 sm:py-24 border-b border-[#e7e6e4]">
+    <Container size="md">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <H2>{DEEP_DIVE.heading}</H2>
+      </FadeUp>
+      <div className="flex flex-col gap-12 sm:gap-14 mt-12 max-w-3xl">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-l-2 border-[#e7e6e4] pl-5 sm:pl-6">
+              <h2 className="font-alte text-[19px] sm:text-[22px] text-[#0A1128] tracking-[-0.04em] leading-[1.25] mb-4">
+                {item.h2}
+              </h2>
+              <div className="flex flex-col gap-4">
+                {item.body.map((para) => (
+                  <p
+                    key={para}
+                    className="font-alte text-[15px] sm:text-[16px] text-slate-600 tracking-[-0.02em] leading-[1.6] [&_a]:text-blue-600 [&_a]:underline hover:[&_a]:text-[#0A1128]"
+                    dangerouslySetInnerHTML={{ __html: para }}
+                  />
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
+      </div>
     </Container>
   </section>
 );

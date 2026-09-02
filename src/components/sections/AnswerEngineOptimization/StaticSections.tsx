@@ -17,6 +17,7 @@ import {
   CHATGPT,
   CHECKLIST,
   COMPARE,
+  DEEP_DIVE,
   DEFINITION,
   FAQS,
   FINAL,
@@ -426,6 +427,49 @@ export const Fix = () => (
           {FIX.proof}
         </p>
       </FadeUp>
+    </Container>
+  </section>
+);
+
+/* 9b. DEEP DIVE (long-form Q&A, keyword-rich) */
+export const DeepDive = () => (
+  <section className="bg-white py-16 sm:py-24 border-b border-[#e7e6e4]">
+    <Container size="md">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <H2>{DEEP_DIVE.heading}</H2>
+        <Lead>{DEEP_DIVE.intro}</Lead>
+      </FadeUp>
+      <div className="flex flex-col gap-12 sm:gap-14 mt-12 max-w-3xl">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-l-2 border-[#e7e6e4] pl-5 sm:pl-6">
+              <h2 className="font-alte text-[20px] sm:text-[24px] tracking-[-0.04em] leading-[1.2] text-[#0A1128] mb-4">
+                {item.h2}
+              </h2>
+              <div className="flex flex-col gap-4">
+                {item.body.map((para) => (
+                  <p
+                    key={para}
+                    className="font-alte text-[15px] sm:text-[16px] tracking-[-0.02em] leading-[1.65] text-slate-600"
+                  >
+                    {para}
+                  </p>
+                ))}
+                {item.link && (
+                  <p className="font-alte text-[15px] sm:text-[16px] tracking-[-0.02em] leading-[1.65] text-slate-600">
+                    {item.link.pre}{" "}
+                    <Link href={item.link.href} className="text-blue-600 hover:underline">
+                      {item.link.label}
+                    </Link>{" "}
+                    {item.link.post}
+                  </p>
+                )}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
+      </div>
     </Container>
   </section>
 );
