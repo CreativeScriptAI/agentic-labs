@@ -168,6 +168,7 @@ const RESOURCES: NavLink[] = [
 
 const FREE_TOOLS: NavLink[] = [
   { name: "AI Visibility Checker", to: "/ai-visibility-checker/", desc: "See if ChatGPT, Perplexity, Google AI, Gemini, Grok, and Claude name you, plus site health." },
+  { name: "Cost of Lost Leads Calculator", to: "/cost-of-lost-leads-calculator/", desc: "Work out the revenue you lose to slow lead follow-up, from your own numbers." },
 ];
 
 // ─── Icons ─────────────────────────────────────────────────────────────────────

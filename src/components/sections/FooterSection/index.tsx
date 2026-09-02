@@ -158,6 +158,7 @@ const FOOTER_COLUMNS: FootColumn[] = [
     heading: "Free Tools",
     links: [
       { name: "AI Visibility Checker", to: "/ai-visibility-checker/" },
+      { name: "Cost of Lost Leads Calculator", to: "/cost-of-lost-leads-calculator/" },
     ],
   },
   {

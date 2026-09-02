@@ -72,6 +72,9 @@ const buildLlmsTxt = (): string => {
   lines.push(
     `- [AI Visibility Checker](${BASE}/ai-visibility-checker/): see whether ChatGPT, Perplexity, Google AI, Gemini, Grok, and Claude name your business, plus a full site health audit`
   );
+  lines.push(
+    `- [Cost of Lost Leads Calculator](${BASE}/cost-of-lost-leads-calculator/): work out the revenue a Singapore business loses to slow lead follow-up, from your own lead volume, close rate, and deal value`
+  );
   lines.push("");
 
   // Group programmatic pages by type
