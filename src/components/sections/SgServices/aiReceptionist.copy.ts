@@ -26,6 +26,12 @@ export const AI_RECEPTIONIST_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "An AI receptionist in Singapore is an AI voice agent that answers your phone and enquiries around the clock, including after hours and when your team is busy or on another call. It greets the caller, answers common questions, qualifies the enquiry, and books the appointment straight into your calendar. Because the fastest credible response wins, every call is picked up in seconds instead of going to voicemail, so a clinic, salon, home services firm, or professional practice never loses a lead to a missed call. We build and run it inside your own tools, your GoHighLevel, CRM, and calendar, forward-deployed and accountable, not a self-serve bot you set up alone.",
+  relatedProse: [
+    { before: "A receptionist that never misses a call is one part of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we tie it to how those enquiries turn into booked work." },
+    { before: "Most calls should end on the calendar, which is why we connect ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " straight into the conversation." },
+    { before: "For buyers who message instead of call, the same system runs the ", anchor: "WhatsApp Business API in Singapore", to: "/whatsapp-business-api-singapore/", after: " so no channel goes unanswered." },
+    { before: "Anyone who cannot be reached first time is caught by ", anchor: "follow up automation", to: "/follow-up-automation/", after: " that keeps trying until they reply." },
+  ],
   gap: {
     eyebrow: "WHERE THE LEADS LEAK",
     heading: "The call you miss is the customer your competitor books",

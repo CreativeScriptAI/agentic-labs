@@ -26,6 +26,12 @@ export const ECOMMERCE_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "An ecommerce marketing team in Singapore grows the revenue of your Shopify or WooCommerce store, not just the traffic to it. The problem with most is that they stop at the ad platform, optimise the click, and report a return on ad spend your bank deposit does not match. We work end to end: we fix the product page and checkout so the traffic you already pay for converts, build the abandoned-cart and repeat-purchase flows that recover leaking revenue, wire tracking so the numbers finally reconcile, and run acquisition against the money that lands, not the clicks a dashboard claims.",
+  relatedProse: [
+    { before: "Store growth is one part of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", and the same discipline of owning revenue, not clicks, runs through all of it." },
+    { before: "Paid traffic is usually the fastest lever, so we run ", anchor: "Google Ads in Singapore", to: "/google-ads-agency-singapore/", after: " against return on ad spend and orders that actually land." },
+    { before: "To lower the cost of every order over time, we pair the ads with ", anchor: "SEO that ranks and gets you cited by AI", to: "/seo-agency-singapore/", after: "." },
+    { before: "Carts and enquiries that stall get picked back up with ", anchor: "follow up automation", to: "/follow-up-automation/", after: ", so revenue that would leak is recovered." },
+  ],
   gap: {
     eyebrow: "WHERE THE MONEY LEAKS",
     heading: "The leak is after the click, and that is where nobody works",

@@ -106,6 +106,9 @@ const buildLlmsTxt = (): string => {
   lines.push(`- [lead-qualification-vs-lead-scoring](${BASE}/glossary/lead-qualification-vs-lead-scoring/): lead qualification vs lead scoring`);
   lines.push(`- [what-is-pdpa](${BASE}/glossary/what-is-pdpa/): what the PDPA is in Singapore`);
   lines.push(`- [what-is-the-psg-grant](${BASE}/glossary/what-is-the-psg-grant/): what the PSG grant is in Singapore`);
+  lines.push(`- [how-to-rank-in-chatgpt](${BASE}/glossary/how-to-rank-in-chatgpt/): how to get your business cited in ChatGPT answers`);
+  lines.push(`- [how-to-get-cited-by-perplexity](${BASE}/glossary/how-to-get-cited-by-perplexity/): how to get cited by Perplexity`);
+  lines.push(`- [does-llms-txt-help](${BASE}/glossary/does-llms-txt-help/): whether llms.txt helps with AI search`);
   lines.push("");
   lines.push("## Machine-readable");
   lines.push(`- [Sitemap](${BASE}/sitemap.xml): all indexable URLs`);

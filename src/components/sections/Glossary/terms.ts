@@ -205,4 +205,60 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
       { anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/" },
     ],
   },
+  {
+    slug: "how-to-rank-in-chatgpt",
+    term: "Ranking in ChatGPT",
+    title: "How Do I Rank in ChatGPT?",
+    description:
+      "ChatGPT search retrieves from the Bing index, so a page Bing has not indexed cannot be cited. Get indexed, answer the exact question up top, and earn trusted mentions.",
+    question: "How do I rank in ChatGPT?",
+    definition:
+      "ChatGPT search retrieves candidate pages from the Bing index, so the first requirement is that Bing has indexed your key pages. A page Bing has not indexed cannot be cited by ChatGPT search.",
+    body: [
+      "After indexing, answer the exact questions buyers ask, with the answer at the top of the page, and earn mentions on sources ChatGPT already trusts.",
+      "Under the hood, ChatGPT runs a search, retrieves candidates from Bing, reranks them, and writes an answer grounded in what it retrieved, with citations. The exact ranking weights are not published, so be wary of any guide that quotes specific percentages.",
+      "This is the on-page half of answer engine optimization. The foundation underneath it is ordinary SEO, since AI answers overwhelmingly cite pages that already rank in normal search.",
+    ],
+    related: [
+      { anchor: "answer engine optimization", to: "/answer-engine-optimization/" },
+      { anchor: "check whether AI names your business", to: "/ai-visibility-checker/" },
+    ],
+  },
+  {
+    slug: "how-to-get-cited-by-perplexity",
+    term: "Getting Cited by Perplexity",
+    title: "How Do I Get Cited by Perplexity?",
+    description:
+      "Perplexity retrieves live from the web and generates answers with citations. Clear, current, on-topic pages that directly answer the query tend to surface.",
+    question: "How do I get cited by Perplexity?",
+    definition:
+      "Perplexity retrieves live from the web on almost every query and generates answers with citations built in. Clear, current, on-topic pages that directly answer the query tend to surface. It does not publish its exact ranking formula.",
+    body: [
+      "Because Perplexity fetches live rather than relying only on a stored index, freshness and a direct answer to the exact question matter. A page that states the answer plainly, near the top, is easier to lift into a cited response.",
+      "The same groundwork that helps you get cited by ChatGPT and Google AI helps here: be indexable, answer real buyer questions directly, and build the third-party mentions that make your source trusted.",
+      "Measure it the same way you measure any AI visibility: put the questions a buyer would ask to Perplexity once a month and record whether you are named, mentioned, or absent.",
+    ],
+    related: [
+      { anchor: "answer engine optimization", to: "/answer-engine-optimization/" },
+      { anchor: "check whether AI names your business", to: "/ai-visibility-checker/" },
+    ],
+  },
+  {
+    slug: "does-llms-txt-help",
+    term: "Does llms.txt Help?",
+    title: "Does llms.txt Help With AI Search?",
+    description:
+      "As of early 2026, no major AI engine confirms using llms.txt, and Google says Search does not read it. It is low cost to add but should not be expected to lift AI rankings.",
+    question: "Does llms.txt actually help with AI search?",
+    definition:
+      "As of early 2026, no major AI engine confirms using llms.txt, and Google has stated plainly that Search does not read it. It is low cost to add but should not be expected to improve your AI rankings.",
+    body: [
+      "llms.txt is a proposed file that lists a site's key content for language models. The idea is reasonable, but adoption by the engines that matter is unconfirmed, so treat it as a low-cost, low-certainty addition rather than a ranking lever.",
+      "What actually moves AI visibility is being indexable, answering the exact questions buyers ask, and earning trusted mentions. Spend your effort there first.",
+    ],
+    related: [
+      { anchor: "answer engine optimization", to: "/answer-engine-optimization/" },
+      { anchor: "check whether AI names your business", to: "/ai-visibility-checker/" },
+    ],
+  },
 ];

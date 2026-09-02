@@ -32,6 +32,12 @@ export const WHATSAPP_API_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "The WhatsApp Business API lets a business send and receive WhatsApp messages at scale through automation and a CRM, instead of one person tapping replies on a phone. In Singapore, where WhatsApp is the default way buyers reach a business, that matters because the fastest credible reply wins and enquiries that wait go cold. We set up the API, wire it into your CRM or GoHighLevel, and run it: every enquiry answered in seconds, qualified, and booked, with follow up sequences that run until they reply. Not a self-serve tool you have to learn, a system we build inside your stack and stay accountable for.",
+  relatedProse: [
+    { before: "WhatsApp is one channel inside a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we wire it to feed the same booked-call pipeline as every other source." },
+    { before: "The value shows up in the sequences behind it, which is really ", anchor: "follow up automation", to: "/follow-up-automation/", after: " that runs until the buyer replies or books." },
+    { before: "Most conversations should end on the calendar, so we connect ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " straight into the chat." },
+    { before: "For businesses that also live on the phone, the same system runs an ", anchor: "AI receptionist in Singapore", to: "/ai-receptionist-singapore/", after: " so no call or message is missed." },
+  ],
   gap: {
     eyebrow: "WHERE THE ENQUIRIES LEAK",
     heading: "The message arrives, and then it waits",

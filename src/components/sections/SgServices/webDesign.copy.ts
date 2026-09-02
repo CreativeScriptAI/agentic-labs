@@ -25,6 +25,12 @@ export const WEB_DESIGN_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A web design agency in Singapore builds your website. The problem is that most stop when the site goes live and looks nice. You pay for a good-looking brochure, a visitor lands on it, and then nothing happens, because there is no clear path to enquire and no one watching the ones that do. We design the site, then own the part that makes money: every page has an obvious way to enquire, the enquiry is answered in seconds, and the lead flows into follow up inside your own tools. So the site produces booked conversations, not a full inbox and not silence.",
+  relatedProse: [
+    { before: "A site that books leads is one part of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we build the pages to feed that system, not to sit and look nice." },
+    { before: "When a campaign needs its own focused page, we build ", anchor: "high converting landing pages in Singapore", to: "/high-converting-landing-pages-singapore/", after: " that match the ad and push one clear action." },
+    { before: "A new site earns more traffic when it is built to rank, which is why we pair the build with ", anchor: "SEO that ranks and gets you cited by AI", to: "/seo-agency-singapore/", after: "." },
+    { before: "For a business that serves a nearby area, we add ", anchor: "local SEO services in Singapore", to: "/local-seo-services-singapore/", after: " so the site shows up in the map pack for searches close by." },
+  ],
   gap: {
     eyebrow: "WHERE MOST WEBSITES STOP",
     heading: "The site goes live, looks nice, and the money leaks",

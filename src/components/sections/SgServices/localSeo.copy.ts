@@ -32,6 +32,12 @@ export const LOCAL_SEO_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "Local SEO in Singapore is the work that gets a physically-located business into the Google map pack, the three results with the map, for the nearby-intent searches that drive calls and directions. It is a different job from general SEO: instead of chasing island-wide blue-link rankings and backlinks, it fixes and optimises your Google Business Profile, cleans up your Name, Address, and Phone across the web, builds a compliant review flow, and adds local signals to your own site. We do that work done-for-you inside your own profile and website, and tie it to calls and direction requests so you can see what is actually producing contacts.",
+  relatedProse: [
+    { before: "Getting found nearby is one part of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we tie map-pack visibility to calls and direction requests, not rankings alone." },
+    { before: "When you also want island-wide reach, local work sits alongside our broader ", anchor: "SEO agency", to: "/seo-agency-singapore/", after: " that chases the blue-link results too." },
+    { before: "If you want to know the cost before committing, our ", anchor: "SEO packages in Singapore", to: "/seo-packages-singapore/", after: " publish a starting point and scope the rest on a call." },
+    { before: "More buyers now ask an AI assistant for a local recommendation, so we also work to ", anchor: "get named in AI answers", to: "/answer-engine-optimization/", after: "." },
+  ],
   gap: {
     eyebrow: "WHERE MOST LOCAL SEARCH LEAKS",
     heading: "You rank for your brand name and are invisible for the search that pays",

@@ -28,6 +28,12 @@ export const B2B_LEAD_GEN_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A B2B lead generation agency in Singapore is meant to fill your sales team's calendar with qualified meetings. The problem is that most sell you a lead list or a monthly report and call it done, so the work of contacting, chasing, and qualifying still lands on your team, and it goes cold. We work differently. We are a forward-deployed engineering team paid on pipeline: we find and enrich your B2B buyers, run an AI-SDR that answers in seconds, qualifies against your real criteria, and books the meeting, all inside your own CRM and tools. You get booked calls, not a spreadsheet.",
+  relatedProse: [
+    { before: "B2B outreach is one engine inside a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we build it to hand your team booked calls, not lists." },
+    { before: "The meetings are set through ", anchor: "appointment setting in Singapore", to: "/appointment-setting-singapore/", after: ", so a qualified reply becomes a slot on the calendar." },
+    { before: "Before anything is booked, every prospect runs through ", anchor: "lead qualification", to: "/lead-qualification/", after: " against your real fit and intent criteria." },
+    { before: "No reply is left to go cold, because ", anchor: "follow up automation", to: "/follow-up-automation/", after: " keeps chasing on a cadence until they answer or opt out." },
+  ],
   gap: {
     eyebrow: "WHERE MOST LEAD GEN STOPS",
     heading: "A list is where they finish and where the pipeline leaks",

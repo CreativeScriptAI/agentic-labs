@@ -32,6 +32,12 @@ export const APPOINTMENT_SETTING_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "B2B appointment setting in Singapore is meant to fill your sales team's calendar with qualified meetings. The old way is telemarketing and telesales: a dialer, a script, and a team that is slow to hire, expensive to keep, and easy to distract, so most prospects are contacted once and never followed up. We replace that with an AI-powered system. It finds and qualifies prospects that match your best customers, reaches out and follows up across voice, SMS, and WhatsApp, responds in seconds, and books the meeting straight onto your calendar. You get booked meetings, not a call log.",
+  relatedProse: [
+    { before: "Appointment setting is the closing step of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we connect it to how leads are found and qualified upstream." },
+    { before: "For teams selling to other businesses, this pairs with ", anchor: "B2B lead generation in Singapore", to: "/b2b-lead-generation-singapore/", after: " that fills the top of the same pipeline." },
+    { before: "The meeting itself lands through ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: ", so a qualified prospect goes straight onto your calendar." },
+    { before: "Every touch in between is handled by ", anchor: "follow up automation", to: "/follow-up-automation/", after: " that keeps chasing until the prospect books or opts out." },
+  ],
   gap: {
     eyebrow: "WHERE MOST APPOINTMENT SETTING STOPS",
     heading: "The dial is where they finish and where the pipeline leaks",

@@ -25,6 +25,12 @@ export const LANDING_PAGES_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "A high converting landing page in Singapore is a dedicated page built around one offer and one action, matched to the ad or keyword that brought the visitor, fast on mobile, and wired to instant follow-up. Most pages leak because they load slow on a phone, ask for too much, offer ten links instead of one decision, or drop the enquiry into an inbox where it goes cold. Our design studio builds the page and our team connects it to your tools, so a paid or organic click turns into a booked call instead of a bounce. We cannot promise a conversion number, no honest provider can, but we can promise the page is built right and wired to follow-up, and that we improve it on evidence.",
+  relatedProse: [
+    { before: "A landing page is one part of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we build it to turn a click into a booked call, not just a nicer page." },
+    { before: "The traffic usually comes from paid search, which is why the page pairs with ", anchor: "Google Ads in Singapore", to: "/google-ads-agency-singapore/", after: " so the ad and the page make the same promise." },
+    { before: "Every enquiry the page captures is answered by ", anchor: "follow up automation", to: "/follow-up-automation/", after: " in seconds, before the visitor moves on." },
+    { before: "When the offer is a meeting, we wire the page to ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: " so the click ends on a booked slot." },
+  ],
   gap: {
     eyebrow: "WHERE THE SPEND LEAKS",
     heading: "The page is where the money is won or lost, and most stop at handover",

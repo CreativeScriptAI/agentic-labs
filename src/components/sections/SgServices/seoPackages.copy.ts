@@ -26,6 +26,12 @@ export const SEO_PACKAGES_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "SEO packages in Singapore commonly run from around S$800 to S$3,000 or more a month, and almost every provider hides the number behind a request a quote form. That is the frustration you are here for: five agency tabs open, Basic, Standard, and Premium tiers that no two vendors define the same way, and no way to tell what you actually get for the money. We publish a starting point of S$100 a month so you can start small, then scope the real package against your market and margins on a call. The full method, how we tie rankings to booked calls, lives on our SEO agency page. This page is the money question: what it costs, what is genuinely inside, and why the phone should ring.",
+  relatedProse: [
+    { before: "SEO is one lever inside a larger ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", which is why we scope a package around booked calls rather than rankings alone." },
+    { before: "The full method behind these packages, and how we tie rankings to enquiries, lives on our ", anchor: "SEO agency page", to: "/seo-agency-singapore/", after: "." },
+    { before: "If most of your customers are nearby, a package often starts with ", anchor: "local SEO services in Singapore", to: "/local-seo-services-singapore/", after: " so you show up in the map pack first." },
+    { before: "More buyers now ask an AI assistant before they open Google, so we also work to ", anchor: "get named in AI answers", to: "/answer-engine-optimization/", after: ", not just win the blue links." },
+  ],
   gap: {
     eyebrow: "WHY THE PRICE IS HIDDEN",
     heading: "A quote gate and a ranking report are not a package",

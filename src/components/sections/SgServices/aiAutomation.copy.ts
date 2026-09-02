@@ -26,6 +26,12 @@ export const AI_AUTOMATION_COPY: ServiceCopy = {
   ctaSecondary: { label: "See how it works", to: "#" },
   answerFirst:
     "AI automation means using AI to run the repetitive work in your business without a person driving each step: capturing and enriching leads, answering enquiries in seconds, qualifying and booking, chasing follow ups, and moving data between your tools. Most options are a self-serve product you still have to set up and run. We are different. We embed as your implementation partner, build the automation inside your existing stack, GoHighLevel, n8n, your CRM, WhatsApp, and stay accountable for the result: booked calls, hours saved, faster response. Done for you, not another dashboard to manage.",
+  relatedProse: [
+    { before: "Automation is the engine room of a wider ", anchor: "lead generation agency, Singapore", to: "/lead-generation-agency-singapore/", after: ", so we build it to feed booked calls, not just to move data around." },
+    { before: "When the work spans more than one system, we step in as your ", anchor: "AI implementation partner in Singapore", to: "/ai-implementation-partner-singapore/", after: " and build it inside the tools you already run." },
+    { before: "The most common first automation is ", anchor: "follow up that answers every enquiry in seconds", to: "/follow-up-automation/", after: ", because a lead that waits goes cold." },
+    { before: "Once replies are handled, we let the system handle the calendar too, with ", anchor: "AI appointment booking", to: "/appointment-booking-ai/", after: ", so a conversation ends on a booked slot." },
+  ],
   gap: {
     eyebrow: "WHERE MOST AI AUTOMATION STOPS",
     heading: "A product you have to operate is not automation off your plate",
