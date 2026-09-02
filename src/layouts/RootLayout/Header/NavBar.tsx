@@ -163,7 +163,7 @@ const RESOURCES: NavLink[] = [
   { name: "Blog", to: "/blog/", desc: "Guides, case studies, and insights." },
   { name: "AI Agents Repo", to: "/agents-repo/", desc: "Browse our library of pre-built AI agents." },
   { name: "Why our agents remember", to: "/ai-memory-system/", desc: "The memory system behind production-grade AI." },
-  { name: "Glossary: What is Agentic AI?", to: "/glossary/what-is-agentic-ai/", desc: "Plain-English definitions." },
+  { name: "Glossary", to: "/glossary/", desc: "Plain-English definitions of AI, lead, and marketing terms." },
 ];
 
 const FREE_TOOLS: NavLink[] = [

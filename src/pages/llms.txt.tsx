@@ -94,6 +94,19 @@ const buildLlmsTxt = (): string => {
     lines.push("");
   });
 
+  lines.push("## Glossary");
+  lines.push(`- [Glossary](${BASE}/glossary/): plain-English definitions of AI search, lead, and Singapore marketing terms`);
+  lines.push(`- [what-is-aeo](${BASE}/glossary/what-is-aeo/): what answer engine optimization (AEO) is`);
+  lines.push(`- [aeo-vs-geo-vs-seo](${BASE}/glossary/aeo-vs-geo-vs-seo/): the difference between AEO, GEO, and SEO`);
+  lines.push(`- [what-is-speed-to-lead](${BASE}/glossary/what-is-speed-to-lead/): what speed to lead means`);
+  lines.push(`- [what-is-lead-qualification](${BASE}/glossary/what-is-lead-qualification/): what lead qualification is`);
+  lines.push(`- [mql-vs-sql](${BASE}/glossary/mql-vs-sql/): the difference between an MQL and an SQL`);
+  lines.push(`- [what-is-a-product-qualified-lead](${BASE}/glossary/what-is-a-product-qualified-lead/): what a product qualified lead (PQL) is`);
+  lines.push(`- [what-is-bant](${BASE}/glossary/what-is-bant/): what BANT means`);
+  lines.push(`- [lead-qualification-vs-lead-scoring](${BASE}/glossary/lead-qualification-vs-lead-scoring/): lead qualification vs lead scoring`);
+  lines.push(`- [what-is-pdpa](${BASE}/glossary/what-is-pdpa/): what the PDPA is in Singapore`);
+  lines.push(`- [what-is-the-psg-grant](${BASE}/glossary/what-is-the-psg-grant/): what the PSG grant is in Singapore`);
+  lines.push("");
   lines.push("## Machine-readable");
   lines.push(`- [Sitemap](${BASE}/sitemap.xml): all indexable URLs`);
   lines.push(`- Any page above returns markdown when requested with the Accept: text/markdown header or a .md suffix.`);
