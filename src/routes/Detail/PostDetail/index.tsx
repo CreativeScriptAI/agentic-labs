@@ -7,6 +7,7 @@ import styled from "@emotion/styled";
 import NotionRenderer from "../components/NotionRenderer";
 import usePostQuery from "src/hooks/usePostQuery";
 import RelatedServices from "src/components/blog/RelatedServices";
+import RelatedPosts from "src/components/blog/RelatedPosts";
 
 type Props = Record<string, never>;
 
@@ -34,6 +35,7 @@ const PostDetail: React.FC<Props> = () => {
         {data.type[0] === "Post" && (
           <>
             <RelatedServices title={data.title} category={category} />
+            <RelatedPosts />
             <Footer />
             {/* <CommentBox data={data} /> */}
           </>

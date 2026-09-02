@@ -19,6 +19,52 @@ const filter: FilterPostsOptions = {
   acceptType: ["Paper", "Post", "Page"],
 };
 
+type FaqItem = { question: string; answer: string };
+
+// Pull the "Common questions" Q/A pairs out of the Notion recordMap so the post
+// can emit FAQPage schema (helps AEO). Posts follow the convention: an H2 titled
+// "Common questions", then H3 questions each followed by paragraph answers.
+const blockText = (block: any): string =>
+  (block?.value?.properties?.title || [])
+    .map((seg: any[]) => seg?.[0] || "")
+    .join("")
+    .trim();
+
+const extractFaqFromRecordMap = (
+  recordMap: any,
+  pageId: string
+): FaqItem[] => {
+  try {
+    const blocks = recordMap?.block || {};
+    const order: string[] = blocks?.[pageId]?.value?.content || [];
+    const items: FaqItem[] = [];
+    let inFaq = false;
+    let current: FaqItem | null = null;
+    for (const id of order) {
+      const b = blocks[id];
+      const type = b?.value?.type;
+      if (!type) continue;
+      const text = blockText(b);
+      if (type === "sub_header") {
+        if (inFaq) break; // next H2 ends the FAQ section
+        if (/^common questions$/i.test(text)) inFaq = true;
+        continue;
+      }
+      if (!inFaq) continue;
+      if (type === "sub_sub_header") {
+        if (current?.question && current.answer) items.push(current);
+        current = { question: text, answer: "" };
+      } else if (type === "text" && current) {
+        current.answer = current.answer ? `${current.answer} ${text}` : text;
+      }
+    }
+    if (current?.question && current.answer) items.push(current);
+    return items.filter((i) => i.question && i.answer);
+  } catch {
+    return [];
+  }
+};
+
 export const getStaticPaths = async () => {
   try {
     const posts = await getPosts();
@@ -65,6 +111,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     try {
       const recordMap = await getRecordMap(postDetail.id);
+      const faqItems = extractFaqFromRecordMap(recordMap, postDetail.id);
 
       await queryClient.prefetchQuery({
         queryKey: queryKey.post(`${slug}`),
@@ -78,6 +125,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         props: {
           dehydratedState: dehydrate(queryClient),
           slug: normalizedSlug,
+          faqItems,
         },
         revalidate: CONFIG.revalidateTime,
       };
@@ -105,6 +153,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         props: {
           dehydratedState: dehydrate(queryClient),
           slug: normalizedSlug,
+          faqItems: [],
         },
         revalidate: CONFIG.revalidateTime,
       };
@@ -119,7 +168,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 };
 
-const DetailPage: NextPageWithLayout = ({ slug }: { slug?: string }) => {
+const DetailPage: NextPageWithLayout = ({
+  slug,
+  faqItems = [],
+}: {
+  slug?: string;
+  faqItems?: FaqItem[];
+}) => {
   const router = useRouter();
   // Pass the slug from getStaticProps params so the post resolves during SSR
   // (router.query.slug is empty at static generation time). This keeps the
@@ -183,6 +238,9 @@ const DetailPage: NextPageWithLayout = ({ slug }: { slug?: string }) => {
     <PostSlugContext.Provider value={post.slug ?? slug}>
       <MetaConfig {...meta} />
       <StructuredData type="article" data={articleSchema} />
+      {faqItems && faqItems.length > 0 ? (
+        <StructuredData type="faq" data={{ faqs: faqItems }} />
+      ) : null}
       <Detail />
     </PostSlugContext.Provider>
   );

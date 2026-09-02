@@ -10,6 +10,46 @@ type Target = { label: string; href: string };
 
 const CLUSTERS: { keys: string[]; links: Target[] }[] = [
   {
+    keys: ["cold email", "cold calling", "pdpa", "dnc", "do not call", "outbound", "appointment setting", "telemarketing", "b2b lead"],
+    links: [
+      { label: "B2B Lead Generation Singapore", href: "/b2b-lead-generation-singapore/" },
+      { label: "Appointment Setting Singapore", href: "/appointment-setting-singapore/" },
+      { label: "Lead Generation Agency Singapore", href: "/lead-generation-agency-singapore/" },
+    ],
+  },
+  {
+    keys: ["speed to lead", "follow-up", "follow up", "missed call", "paid leads", "enquiries", "booked call", "lead response", "leaking"],
+    links: [
+      { label: "Follow-Up Automation", href: "/follow-up-automation/" },
+      { label: "Lead Generation Agency Singapore", href: "/lead-generation-agency-singapore/" },
+      { label: "AI Appointment Booking", href: "/appointment-booking-ai/" },
+    ],
+  },
+  {
+    keys: ["chatgpt", "perplexity", "answer engine", "named by", "ai search", "aeo", "gemini", "ai answers"],
+    links: [
+      { label: "Answer Engine Optimization", href: "/answer-engine-optimization/" },
+      { label: "AI Visibility Checker", href: "/ai-visibility-checker/" },
+      { label: "SEO Agency Singapore", href: "/seo-agency-singapore/" },
+    ],
+  },
+  {
+    keys: ["whatsapp business", "whatsapp buyers", "whatsapp api", "singapore buyers reply"],
+    links: [
+      { label: "WhatsApp Business API Singapore", href: "/whatsapp-business-api-singapore/" },
+      { label: "Follow-Up Automation", href: "/follow-up-automation/" },
+      { label: "AI Receptionist Singapore", href: "/ai-receptionist-singapore/" },
+    ],
+  },
+  {
+    keys: ["cheap seo", "seo package", "seo report", "rankings", "google ads", "ppc", "sem", "clicks are not customers", "traffic but no enquiries", "what a lead is worth"],
+    links: [
+      { label: "SEO Agency Singapore", href: "/seo-agency-singapore/" },
+      { label: "SEO Packages Singapore", href: "/seo-packages-singapore/" },
+      { label: "Google Ads Agency Singapore", href: "/google-ads-agency-singapore/" },
+    ],
+  },
+  {
     keys: ["gohighlevel", "ghl", "highlevel", "crm", "agency", "pipeline"],
     links: [
       { label: "AI Voice Agent for GoHighLevel", href: "/ai-voice-agent-for-gohighlevel" },
