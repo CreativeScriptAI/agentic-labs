@@ -14,6 +14,7 @@ import JourneyStrip from "./JourneyStrip";
 import SpeedToLeadCard from "./SpeedToLeadCard";
 import {
   COMPARE,
+  DEEP_DIVE,
   DO,
   EXPLORE,
   FAQS,
@@ -364,6 +365,40 @@ export const BuiltForSingapore = () => (
           {SG.line}
         </p>
       </FadeUp>
+    </Container>
+  </section>
+);
+
+export const DeepDive = () => (
+  <section className="bg-white py-16 sm:py-24 border-t border-[#e7e6e4]">
+    <Container size="md">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <h2 className="font-alte text-[26px] sm:text-[34px] text-[#0A1128] tracking-[-0.04em] leading-[1.1] max-w-3xl">
+          {DEEP_DIVE.heading}
+        </h2>
+      </FadeUp>
+      <div className="mt-10 space-y-10 sm:space-y-12">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-t border-[#e7e6e4] pt-8 first:border-t-0 first:pt-0">
+              <h2 className="font-alte text-[20px] sm:text-[24px] text-[#0A1128] tracking-[-0.04em] leading-[1.2] mb-4 max-w-3xl">
+                {item.h2}
+              </h2>
+              <div className="space-y-4 max-w-3xl">
+                {item.body.map((para, j) => (
+                  <p
+                    key={j}
+                    className="font-alte text-[15px] sm:text-[16px] text-slate-600 tracking-[-0.04em] leading-[1.6]"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
+      </div>
     </Container>
   </section>
 );

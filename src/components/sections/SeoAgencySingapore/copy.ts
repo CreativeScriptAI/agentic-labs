@@ -194,6 +194,42 @@ export const EXPLORE = {
   ],
 };
 
+export const DEEP_DIVE = {
+  eyebrow: "THE LONGER ANSWER",
+  heading: "What to know before you hire an SEO agency in Singapore",
+  sections: [
+    {
+      h2: "How much does SEO cost in Singapore, and what actually drives the price?",
+      body: [
+        "There is no single rate, and any agency quoting one before it has seen your site is guessing. What you pay tracks the size of the job, not a fixed menu. The first driver is how competitive your keywords are. Ranking a neighbourhood clinic for its own suburb is a smaller job than ranking a law firm for terms every firm in the CBD is fighting over, so the second needs more content, more authority, and more months of work.",
+        "The second driver is the state of your site right now. A site with clean structure and a few years of decent content needs tuning. A site that was never built for search, or was hurt by a previous agency, needs the foundation fixed before anything ranks, and that is real hours. The third is how much new content and how many links the gap actually calls for, which depends on how far ahead your competitors already are.",
+        "The reason cheap fixed packages disappoint is that they ignore all three. A set monthly fee with a set task list is priced for the agency's convenience, not your funnel. We scope to what winning your buyers back is worth and put the maths on the table first, which is the same logic behind our approach to SEO pricing on the rest of this page.",
+      ],
+    },
+    {
+      h2: "How long before SEO shows results in Singapore?",
+      body: [
+        "Google's own guidance is that changes can take months to show, and that is honest. SEO is not a switch. In the first month or two the work is mostly under the surface: fixing what stops Google and the AI engines from reading your site, and building the pages your buyers actually search for. You often see movement here before you see leads, which is why a vendor who only shows you traffic in month one is showing you the easy half.",
+        "For most Singapore businesses, rank and lead movement starts to land around 60 to 90 days, and competitive fields like legal, medical, and finance usually need four to six months of steady technical, content, and authority work before the pipeline holds. Anyone promising page one in a fortnight is either buying links that get you penalised later or counting terms nobody searches. Ask what the number will be measured on, and make sure the answer is booked calls, not a rankings screenshot.",
+      ],
+    },
+    {
+      h2: "SEO or Google Ads: which is right for a Singapore business?",
+      body: [
+        "They solve different problems, and the honest answer is often both, in sequence. Google Ads buys you the top of the page today. The moment you stop paying, you vanish, and in expensive Singapore verticals the cost per click adds up fast. It is the right tool when you need leads this week, when you are testing whether a market wants what you sell, or when a launch needs traffic before your pages have had time to rank.",
+        "SEO is the asset you own. It takes longer to build, but the calls it books do not stop the day the budget does, and it reaches the buyers who research before they ever click an ad. The two work well together: ads carry you while SEO matures, and the keyword and conversion data from your ad account tells you which pages are worth ranking for. If you want the paid side handled too, our team runs both under one roof so they are not fighting each other for the same budget.",
+      ],
+    },
+    {
+      h2: "How do you tell good SEO from a vendor that just reports rankings?",
+      body: [
+        "The tell is what the agency counts as a win. A ranking report is easy to make look good. Push a handful of low-competition terms up the page, colour the arrows green, and the dashboard says progress while your phone stays quiet. Rankings and traffic are inputs, not outcomes, and a vendor that reports only those has quietly chosen the metrics it can move without moving your business.",
+        "Good SEO ties its work to booked calls and leads, and can show you the line from one to the other. Ask a prospective agency three things: what does a monthly report show me beyond rankings, who is accountable if the leads do not come, and can you point to a page you built and the enquiries it now brings in. If the answers are vague, or the contract locks you in while putting nobody on the hook for the result, you have your answer. This is the same distinction we draw across the rest of this page, and it is why we are paid on pipeline instead of on reports.",
+      ],
+    },
+  ],
+};
+
 export const FAQS: { question: string; answer: string }[] = [
   {
     question: "How long does SEO take to work in Singapore?",

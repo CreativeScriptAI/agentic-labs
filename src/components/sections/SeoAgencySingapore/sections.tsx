@@ -13,6 +13,7 @@ import CompareTable from "./CompareTable";
 import SeoRankCard from "./SeoRankCard";
 import {
   COMPARE,
+  DEEP_DIVE,
   DO,
   EXPLORE,
   FAQS,
@@ -369,6 +370,40 @@ export const Proof = () => (
           />
         </div>
       </FadeUp>
+      </div>
+    </Container>
+  </section>
+);
+
+export const DeepDive = () => (
+  <section className="bg-white py-16 sm:py-24 border-t border-[#e7e6e4]">
+    <Container size="lg">
+      <FadeUp>
+        <Eyebrow text={DEEP_DIVE.eyebrow} />
+        <h2 className="font-alte text-[26px] sm:text-[34px] text-[#0A1128] tracking-[-0.04em] leading-[1.1] mb-12 max-w-3xl">
+          {DEEP_DIVE.heading}
+        </h2>
+      </FadeUp>
+      <div className="flex flex-col gap-12 sm:gap-14 max-w-3xl">
+        {DEEP_DIVE.sections.map((item, i) => (
+          <FadeUp key={item.h2} delay={i * 0.05}>
+            <div className="border-l-2 border-[#e7e6e4] pl-5 sm:pl-6">
+              <h2 className="font-alte text-[19px] sm:text-[22px] text-[#0A1128] tracking-[-0.04em] leading-[1.25] mb-4">
+                {item.h2}
+              </h2>
+              <div className="flex flex-col gap-4">
+                {item.body.map((para) => (
+                  <p
+                    key={para}
+                    className="font-alte text-[15px] sm:text-[16px] text-slate-600 tracking-[-0.04em] leading-[1.6]"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+        ))}
       </div>
     </Container>
   </section>

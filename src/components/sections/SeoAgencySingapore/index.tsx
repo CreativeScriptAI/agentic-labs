@@ -3,6 +3,7 @@
 import FooterSection from "src/components/sections/FooterSection";
 import {
   Comparison,
+  DeepDive,
   Explore,
   Faq,
   FinalCta,
@@ -27,6 +28,7 @@ const SeoAgencySingaporePage = () => {
       <Pricing />
       <Comparison />
       <Proof />
+      <DeepDive />
       <WhoThisIsFor />
       <Explore />
       <Faq />

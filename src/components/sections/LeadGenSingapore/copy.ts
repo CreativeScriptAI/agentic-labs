@@ -323,6 +323,45 @@ export const FAQS: { question: string; answer: string }[] = [
   },
 ];
 
+export const DEEP_DIVE = {
+  eyebrow: "BEFORE YOU BRIEF AN AGENCY",
+  heading: "What to know before you pay for lead generation in Singapore",
+  sections: [
+    {
+      h2: "What does lead generation cost in Singapore, and how do the pricing models work?",
+      body: [
+        "There is no single price, because you are not buying one thing. A one-off list of contacts is cheap and often close to worthless, since nobody chases it. A self-serve tool is a monthly subscription plus the hours your team spends running it. A done-for-you system that finds, calls, and books costs more up front but is meant to pay for itself in booked calls, not seats or send volume.",
+        "Most Singapore lead generation pricing falls into a few models. Pay per lead sounds safe until you realise a lead is just a name, not a conversation. Pay per appointment ties the price to a booked call, which is closer to what you actually want. A retainer buys a team and a system for a fixed monthly fee. Performance or pipeline-based pricing ties what you pay to the meetings or revenue produced. The model matters less than one question: when you pay, do you get a contact, or do you get a call on your calendar?",
+        "Before you sign anything, ask for the cost per booked call, not the cost per lead. A thousand cheap leads that never pick up cost you more than a handful that turn into meetings. We put that maths on the table before you commit, so you can see what winning back the leads you already get is worth against what it costs to do it.",
+      ],
+    },
+    {
+      h2: "How long before a lead generation system starts booking meetings?",
+      body: [
+        "Faster than most people expect for the leads you already have, and slower than most agencies promise for cold ones. If you already get enquiries and simply lose them to slow follow-up, the fix shows up quickly. Turning on speed to lead so every new enquiry gets a call or text in seconds can move your booked-call rate within the first few weeks, because the leads are warm and the only thing missing was someone answering fast.",
+        "Cold outreach takes longer. Building a list, warming up sending domains so email actually lands, and testing what gets a reply is a matter of months, not days. Anyone who promises a flood of qualified meetings in week one is selling volume, not results. A realistic path is early wins from your existing pipeline, then a steadier stream as the cold channels mature and the follow-up sequences get tuned on real replies.",
+        "The honest answer depends on how many leads you already get and how badly they leak today. That is exactly what the workshop is for: we look at how leads move through your business and show you where the quickest wins are before you spend anything.",
+      ],
+    },
+    {
+      h2: "Is cold outreach allowed in Singapore under the PDPA and Do Not Call rules?",
+      body: [
+        "Cold outreach is allowed, but it is not a free-for-all. Singapore's Personal Data Protection Act (PDPA), administered by the Personal Data Protection Commission (PDPC), governs how you collect, use, and store personal data, and the Do Not Call (DNC) Registry governs marketing messages sent to Singapore phone numbers by call, text, or fax. In practice that means checking numbers against the DNC Registry before you send marketing messages, having a clear basis for using someone's data, identifying yourself, and giving an easy way to opt out.",
+        "Business-to-business outreach and existing-customer relationships have their own carve-outs, and the rules for calls, texts, and email are not identical. This is why spray-and-pray outreach is a brand risk, not just an annoyance. The point is to build outreach that respects consent and keeps records, so your pipeline is not sitting on a compliance problem.",
+        "None of this is legal advice, and the rules change. Check the current requirements with the PDPC directly or with your own advisor before you launch a campaign. What we do is build the outreach so that consent, opt-out, and record-keeping are handled by default rather than bolted on after a complaint.",
+      ],
+    },
+    {
+      h2: "How are leads qualified before your sales team spends time on them?",
+      body: [
+        "Qualifying a lead means deciding whether it is worth a human's time before that human picks up the phone. Without it, your best salespeople burn their day on tyre-kickers, wrong-fit enquiries, and people who filled in a form by accident. The goal is simple: your team should only talk to leads that match who you actually sell to and are ready to have a conversation.",
+        "A system does the first pass so people do not have to. It scores each lead against the traits of your best customers, fills in missing details, and asks the qualifying questions up front over text or a call. A lead that does not fit gets a polite path out. A lead that fits gets fast-tracked to a booked call. Your team walks into conversations that are already warm and already sorted.",
+        "This is the difference between measuring form fills and measuring booked calls. A form fill tells you someone was curious. A qualified, booked call tells you someone worth your time is ready to talk. When you brief a lead generation partner, ask how they qualify before your team's time is spent, and ask to be measured on the second number, not the first.",
+      ],
+    },
+  ],
+};
+
 export const FINAL = {
   headline: "Find out where you are losing leads.",
   sub: "A short look at how leads move through your business. We show you where they slip and what winning them back is worth, before you commit to anything.",

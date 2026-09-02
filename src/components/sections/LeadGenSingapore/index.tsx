@@ -4,6 +4,7 @@ import FooterSection from "src/components/sections/FooterSection";
 import {
   BuiltForSingapore,
   Comparison,
+  DeepDive,
   Explore,
   Faq,
   FinalCta,
@@ -28,6 +29,7 @@ const LeadGenSingaporePage = () => {
       <BuiltForSingapore />
       <Proof />
       <WhoThisIsFor />
+      <DeepDive />
       <Explore />
       <Faq />
       <FinalCta />
