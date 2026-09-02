@@ -111,6 +111,47 @@ export const SEO_PACKAGES_COPY: ServiceCopy = {
       { name: "Follow Up Automation", to: "/follow-up-automation/", desc: "Answer every SEO enquiry in seconds, so ranking turns into meetings." },
     ],
   },
+  deepDive: {
+    eyebrow: "THE BUYER'S DUE DILIGENCE",
+    heading: "What to check before you pick an SEO package in Singapore",
+    sections: [
+      {
+        h2: "what actually decides how much an SEO package costs in Singapore?",
+        body: [
+          "The word package hides very different amounts of work, so two quotes at the same figure can mean opposite things. One vendor is planning a handful of blog posts and a monthly report. Another is fixing your site, writing pages that convert, and earning links. The price tracks the effort and the difficulty of the job, not a fixed menu everyone shares.",
+          "A few things move the number more than anything else. How competitive your keywords are is the biggest one, a term a Tanjong Pagar law firm wants to rank for is a harder, dearer fight than a niche B2B service phrase almost nobody else is chasing. How much technical debt your current site carries matters too, because a slow, badly structured site has to be fixed before new content can rank at all. Then there is how many pages and how much fresh content the plan needs each month, whether that content is genuinely written for your market or spun cheaply to fill a calendar, and whether real, earned links are part of the work or quietly left out.",
+          "Who does the work also moves the figure. A Singapore based team writing for a Singapore buyer costs more than offshore output, and the difference shows in whether the pages actually read like your market and convert. Cheap words are cheap for a reason.",
+          "So do not compare packages on the monthly figure alone. Compare what sits behind the figure. A higher price with named, real work is often cheaper per booked call than a cheap package that produces nothing you can bank. This is why we scope against your market and margins on a call instead of selling a fixed tier off a page.",
+        ],
+      },
+      {
+        h2: "how do you read an SEO proposal and spot the red flags?",
+        body: [
+          "A guarantee of a number one ranking is the clearest warning sign. Rankings depend on Google's system, which no vendor controls, so a promised position is a sales line, not a deliverable anyone can hand you. Google itself says no one can guarantee a top ranking and warns against anyone who claims they can, which is worth remembering when a proposal leads with a promise like that.",
+          "Vague deliverables are the next flag. A proposal that says we will do SEO, or points to a proprietary secret method with no named tasks, gives you nothing to hold the vendor to. A real proposal names the work, the specific pages, the technical fixes, the content cadence, and what the reporting will show. Backlink count promises are a related trap, a line like one hundred backlinks a month signals bought or low quality links, the cheap and fragile route that risks a penalty rather than a durable position.",
+          "Watch who owns the accounts and the work. If the proposal keeps your Google Business Profile, Search Console, analytics, or the content itself under the agency's ownership, then leaving is designed to hurt. You should keep the accounts, the content, and the data, so a bad fit stays a decision rather than a hostage situation.",
+          "Look hard at reporting and structure. A report that promises only rankings, traffic, and impressions is measuring inputs, so ask what business outcome it will show before you sign. And a large upfront fee tied to a long commitment with no early review point is a structure built to protect the agency, not you.",
+        ],
+      },
+      {
+        h2: "how do I make an SEO package accountable to booked calls, not just rankings?",
+        body: [
+          "Agree what counts as a lead before any work starts. A qualified enquiry from a Singapore buyer in your market is not the same thing as any form fill, so write the definition down while everyone is still being honest about it. That one sentence is what every later claim gets measured against.",
+          "Ask for the tracking to be set up properly, call tracking on the phone number, form and WhatsApp enquiry tracking, and a way to see which enquiries came in from search rather than elsewhere. Without this, any booked calls claim is a guess dressed up as a number. Set a baseline at the same time, because if you do not record where enquiries stand today, you cannot tell in month four whether SEO actually moved them or the season did.",
+          "Insist the monthly report shows enquiries and meetings, sitting right next to the ranking and traffic figures, so you can see whether traffic is turning into pipeline or just climbing on its own. Then agree a review cadence and a decision point, what you expect to see by when, and what happens if it is not there. That is your protection whether or not there is a lock in.",
+          "Speed to lead belongs in this conversation too. An enquiry that sits waiting in a form is a booked call quietly lost, so answering fast is part of making the package pay, not a separate job for later. The ranking is only worth what the follow up converts.",
+        ],
+      },
+      {
+        h2: "can I actually use the PSG grant for an SEO package, and how does it work?",
+        body: [
+          "The Productivity Solutions Grant supports pre approved digital solutions for qualifying Singapore SMEs, and digital marketing is one of the supported categories, commonly up to 50 percent of the cost. For a smaller business that can meaningfully lower the real price of the work, which is why it is worth checking rather than waving away.",
+          "The part buyers get wrong is the mechanics. PSG funds pre scoped packages bought through approved vendors and solutions and claimed through the government channel, not any open ended retainer you happen to like. So the way a package is scoped affects whether it fits the grant at all. Eligibility also carries conditions, Singapore registration, local shareholding, and similar SME criteria, and the support levels and approved lists change over time, so today's percentage is not a promise for next quarter.",
+          "Treat the grant as something to confirm, not assume. Scope the engagement to be grant friendly from the start, then verify the current eligibility, caps, and approved vendor position with the official source before you rely on it. PSG is administered through Enterprise Singapore and GoBusiness, and that is where the current position lives, not on any vendor's sales page. Qualifying can lower your real cost, so it is worth the check, we just frame it as what the scheme requires rather than advice.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "How much do SEO packages cost in Singapore?", answer: "SEO packages here commonly run from around S$800 a month for a basic package to S$3,000 or more for serious work. The range is wide because the label package hides very different amounts of real work, from a few blog posts to full technical, content, and authority work. We publish a starting point of S$100 a month as a lean first step and scope the right figure against your site and market on a call, so you can start small and scale only as it produces leads." },
     { question: "Why do most SEO agencies hide their pricing?", answer: "Because a hidden price forces a sales call before you know if you can afford them, which lets them anchor high and pitch. We understand the frustration, so we publish a starting point instead. You see a real number first, then we scope the actual package in the open against your market and margins." },

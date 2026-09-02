@@ -119,6 +119,44 @@ export const APPOINTMENT_SETTING_COPY: ServiceCopy = {
       { name: "Follow Up Automation", to: "/follow-up-automation/", desc: "Answer every reply in seconds, until they book or opt out." },
     ],
   },
+  deepDive: {
+    eyebrow: "THE DETAIL BUYERS ASK ABOUT",
+    heading: "What a booked meeting actually means, and what to expect",
+    sections: [
+      {
+        h2: "what counts as a qualified appointment, not just a booking",
+        body: [
+          "The number that matters is not meetings booked. It is meetings that were with the right person, who had a real reason to talk, and who actually showed up. So the first thing to settle, before anyone dials or sends a message, is what a qualified appointment means for your business. Get that written down and agreed on both sides, and you both know exactly what you are paying for.",
+          "In concrete terms, a qualified meeting usually means four things line up. The prospect is in your target industry and company size. The person on the call is a decision maker or a genuine influencer, not an intern who happened to pick up. There is a live problem or a trigger that gives them a reason to meet now. And they agreed to a specific date and time, not a vague promise to email you later. A soft booking is different: someone said yes to get off the phone. A qualified one holds up when your salesperson opens the calendar. That gap is the difference between a full week of real conversations and a week of wasted sales hours.",
+          "A clear definition also protects you. If the standard is written down, a no-show or a meeting that was clearly the wrong fit can be flagged and replaced, rather than quietly counted as a win on someone else's report. This matters more in Singapore than people expect. B2B buyers here are cautious and slow to commit, so a yes on a first touch is rarely a firm yes. That is exactly why the qualification bar and the follow up have to work together, so an early nod turns into a meeting that actually happens.",
+        ],
+      },
+      {
+        h2: "pay per meeting or monthly retainer, which is better for us",
+        body: [
+          "There are two common ways to pay for this. A retainer is a fixed monthly fee for the activity and the capacity, whatever number of meetings lands that month. Pay per meeting, sometimes called pay per appointment or performance-based, means you pay for each qualified meeting that actually gets set. Both are normal, and both have a catch worth understanding before you sign.",
+          "With a retainer, your cost is predictable, which finance teams like. The trade is that you carry the risk when volume is low, and the incentive can quietly drift toward reporting activity rather than booking meetings, because the fee arrives either way. With pay per meeting, you only pay for outcomes and the incentive is aligned with yours. The catch is that the definition of a qualified meeting has to be airtight, or you end up paying for weak bookings someone rushed to hit a number. On a single meeting the cost can also look high, even when the pipeline math across a quarter works out fine.",
+          "For most Singapore SMEs, the honest answer is to start small and outcome-linked, so you are not committing thousands of dollars before you have seen a single meeting land. Once you can see what the work produces, you move to whichever model the numbers actually support. Whichever way you go, check the same handful of things before signing: what precisely counts as a billable meeting, who owns the no-show risk, whether there is a minimum monthly commitment, and whether there is any lock-in. Cost per appointment varies widely by industry and deal size, so treat any headline figure with caution and hold the vendor to the definition, not the price tag.",
+        ],
+      },
+      {
+        h2: "how many meetings can we realistically expect a month",
+        body: [
+          "The honest answer is that it depends, and any vendor who promises a fixed number of qualified meetings before they understand your list, your offer, and your deal size is guessing. A real answer comes after someone has looked at who you sell to and what you are offering them, not before.",
+          "The variables are ones you already feel in your own sales. How tightly defined and how large your target market is in Singapore matters a lot, because a niche B2B segment here is genuinely small and you can exhaust the good names quickly. So does the strength of your offer and whether there is a clear reason to meet, your deal size and sales cycle, how many channels you can reach people on, and how fast you respond the moment someone engages. There is also a trade between quantity and quality. You can always book more meetings by lowering the bar, but the count that matters is the qualified one, and a smaller number of good meetings beats a long list of no-shows every time.",
+          "Expect a ramp rather than full volume on day one. The early weeks are for finding the messaging and the channels that land with your buyers, so the numbers climb as the system is tuned. The right way to judge it is to track qualified meetings and what share of them turn into real opportunities, not raw dials, and to give it enough time to read the trend before you decide whether it is working.",
+        ],
+      },
+      {
+        h2: "how do you handle no-shows and improve show-up rates",
+        body: [
+          "A booked meeting that no-shows is worse than one that was never booked. It costs your salesperson a prepared hour and a slot someone else could have used, which is why show-up rate is part of what qualified has to mean. A calendar full of meetings that do not happen is not a full calendar.",
+          "The levers here are practical. Confirm the meeting at the point of booking, while the person is still engaged. Send reminders on the channel the prospect actually uses, which is often SMS or WhatsApp rather than an email they will never open. Make rescheduling one tap instead of a dead end, so a clash becomes a new time rather than a lost meeting. And re-engage a no-show quickly rather than writing them off, because a missed slot is often a bad day, not a lost buyer. This ties back to speed and qualification without repeating them: a prospect booked while the interest is still warm, and reminded where they will see it, shows up far more reliably than one booked cold and nudged by an ignored email.",
+          "There is a commercial side to settle too. Agree upfront how no-shows are treated, and whether a no-show meeting is replaced or re-booked rather than counted, so you are never paying for empty calendar slots. That single line in the agreement keeps the incentive pointed at meetings that happen, not meetings that were technically set.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What does a B2B appointment setting service in Singapore actually do?", answer: "It is meant to fill your sales team's calendar with qualified meetings. The old way is telemarketing: a team making dials and reporting activity, with most prospects contacted once and never followed up. We replace that with an AI-powered system that finds and qualifies your buyers, follows up across voice, SMS, and WhatsApp, and books the meeting straight onto your calendar." },
     { question: "How is this different from telemarketing or telesales?", answer: "Telemarketing is a dialer and a team that is slow to hire, expensive to keep, and easy to distract, so the follow up gets forgotten. Our system responds in seconds, never forgets a second touch, and is accountable on meetings set rather than calls made. You are paying for booked meetings, not call volume." },

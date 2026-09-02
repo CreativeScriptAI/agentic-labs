@@ -110,6 +110,48 @@ export const LANDING_PAGES_COPY: ServiceCopy = {
       { name: "SEO Agency Singapore", to: "/seo-agency-singapore/", desc: "Organic traffic that also needs a page that converts." },
     ],
   },
+  deepDive: {
+    eyebrow: "LANDING PAGES AND CRO, IN PLAIN TERMS",
+    heading: "What actually moves the needle on a Singapore landing page",
+    sections: [
+      {
+        h2: "landing page vs website: which one do i actually need?",
+        body: [
+          "A website is for people who already know you and want to look around. They came to browse your services, read the about page, check careers, maybe find your address. It has many doors and many exits, because a visitor who knows you might want any of ten things. A landing page is the opposite. It is built for a stranger who just clicked one ad or one search result, and it has one job: get that specific person to take one specific action before they leave.",
+          "The common mistake is sending paid clicks to the homepage. The homepage is trying to answer ten questions for ten kinds of visitor at once, so it answers none of them fast enough for someone who arrived for one thing. That is the leak. The person clicked because of a single promise in the ad, and the homepage makes them hunt for it among menus, sliders, and links to everything else you offer. Most of them do not hunt. They bounce, and you paid for that click either way.",
+          "You do not need a new website to fix this. A dedicated page can sit alongside the site you already have, on your own domain, with the campaign pointed straight at it. That is usually cheaper and faster than a redesign, which is exactly why the fix keeps getting delayed. A redesign feels like a big project, so it waits, and the ads keep running against a page that leaks in the meantime.",
+          "The rule of thumb in plain terms is one campaign, one offer, one page. If you are running three different offers, that is three pages, not three sections of the homepage that a visitor has to scroll past to find the one that matches their click. Each page stays focused on the single promise that brought that visitor, and nothing on it competes for the decision.",
+        ],
+      },
+      {
+        h2: "how many fields should my lead form have?",
+        body: [
+          "Every field on a form is a reason to leave. On a phone especially, a long form feels like work, and you are asking for that work before the visitor has any real reason to trust you. The honest starting question is not how much you would like to know, it is how little you need to make the next contact. Usually that is a name and one way to reach them. Everything else you can qualify on the call or in the follow-up, not on the form itself.",
+          "Company, budget, headcount, dropdowns, how did you hear about us, these all belong later in the conversation, not on the page. Each one you remove is friction gone. Friction is not only about the number of fields either. A form kept near the top of the page beats one buried at the bottom. A phone field that brings up the number keypad is easier than one that does not. No forced account creation, and no double opt-in on the page itself, because each extra step is another moment the visitor can decide it is not worth it.",
+          "There is a real trade-off to name plainly. A shorter form gets you more leads, but some will be lower intent. A longer form gets you fewer leads, but the ones who finish tend to be more qualified. For most SME paid traffic in Singapore the bottleneck is volume and speed of reply, not sorting through too many enquiries, so the sensible default is to start short and qualify in the follow-up. You can always add a field later if you are genuinely drowning in unqualified leads, which is rarer than it feels.",
+          "Several vendor studies on conversion, from the kind of reports HubSpot and Unbounce publish, generally point the same way, that fewer fields tend to convert better. Treat that as directional, not a law. Those numbers come from each vendor's own customer base and their own definition of a conversion, so they are a nudge in a direction, not a benchmark to hold your page against. The safe reading is simple: ask for less, and only add friction when you can prove it earns you better leads.",
+        ],
+      },
+      {
+        h2: "should the call to action be a form or a whatsapp button?",
+        body: [
+          "In Singapore a lot of buyers would rather tap WhatsApp than fill in a form. It feels lighter, it is the channel they already use all day, and it lets them ask a real question in their own words instead of committing to a structured enquiry. So the CTA question is not really form or WhatsApp in the abstract. It is which one suits the visitor in front of you, and whether you can handle what happens after they tap.",
+          "WhatsApp lowers the barrier to that first message, but it moves the work to your side. Someone has to reply fast, or the chat goes cold the same way an unanswered inbox does. A WhatsApp button that links to a number nobody is watching is not lighter, it is just a slower way to lose the lead. That is why the button has to be wired to the same speed-to-lead follow-up as the form, so the first reply happens in seconds and not whenever someone next checks the phone.",
+          "In practice, offer both where it fits. A form for the person who wants to book a slot and is ready to hand over their details, and a WhatsApp tap for the person who wants to ask a question first. Use a click-to-chat link with a pre-filled message so that when the chat opens you already know which page and which offer they came from, which saves the first two messages and tells you what they were looking at.",
+          "There is a consent point worth being careful about, framed as what the rules require and not as legal advice. A WhatsApp enquiry that the customer starts is them contacting you, which is fine. But if you then add that person to marketing sequences, you still need consent for that, and you still respect the Do Not Call Registry for phone and SMS outreach. Keep the consent line clear at the form, and be deliberate before you move a WhatsApp lead into any automated marketing, because starting a chat is not the same as agreeing to be marketed to.",
+        ],
+      },
+      {
+        h2: "how do i know if my landing page is actually working?",
+        body: [
+          "The number that matters is not visits. It is the clicks that turned into a booked call or a real enquiry. To see that clearly you track the whole path, not just the total: page view, form start, form submit, and the booked meeting. When you can see each step, you can see which one leaks, and the fix is different depending on where the drop is.",
+          "Watch where people fall off. If a lot of visitors start the form but few finish, the form is the problem, and you shorten it or move it up. If few even scroll past the first screen, the offer or the message match is the problem, and no amount of form tuning will save it. Same page, very different fixes, and you only know which one you have by watching the steps rather than the final total.",
+          "Test honestly, which mostly means changing one thing at a time and giving it enough traffic and time before you call it. The catch for most SME pages is that they do not get enough traffic to prove a small tweak quickly. So test big swings, a genuinely different offer or a different headline promise, not the colour of a button. A small change on low traffic will look like noise for weeks, and you will end up trusting a result that was never really there. And beware vanity wins: a spike in low-intent form fills is not progress if none of them book, so judge the page on booked calls and qualified replies rather than raw submissions.",
+          "Set a baseline before you touch anything. You cannot tell whether a change helped if you never measured the page as it was, so note where it stands now and compare against that. On the speed of reply, the widely cited Lead Response Management study by James Oldroyd, drawing on InsideSales and MIT data and often referenced through the Harvard Business Review piece on the short life of online sales leads, found that the odds of qualifying a lead fall sharply after the first few minutes. Read that as directional support for replying fast, not a hard multiplier to promise, and it is the reason tracking the booked meeting matters as much as tracking the submit.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "Why is my landing page not converting even though my ads get clicks?", answer: "Usually it is message mismatch, a slow mobile load, too many choices on the page, or no fast follow-up, not the button colour. The click is paid for, then the page loads slow or asks for too much and the visitor leaves. We find the real leak and fix the page around one clear action." },
     { question: "Can you improve my existing page, or do I need a whole new website?", answer: "Often it is a single dedicated page or a targeted fix, not a full redesign. Fixing a landing page rarely needs a new website, which is exactly why it never gets done and the ads keep running against a broken page. We scope it after a look at your page and traffic." },

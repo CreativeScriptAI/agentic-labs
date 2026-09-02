@@ -272,6 +272,37 @@ const ServicePage = ({
       </Container>
     </section>
 
+    {/* DEEP DIVE */}
+    {copy.deepDive ? (
+      <section className="bg-white py-16 sm:py-24 border-b border-[#e7e6e4]">
+        <Container size="md">
+          <FadeUp>
+            <Eyebrow text={copy.deepDive.eyebrow} />
+            <H2>{copy.deepDive.heading}</H2>
+          </FadeUp>
+          <div className="mt-10 space-y-10 max-w-3xl">
+            {copy.deepDive.sections.map((s, i) => (
+              <FadeUp key={s.h2} delay={Math.min(i * 0.04, 0.2)}>
+                <h2 className="font-alte text-[22px] sm:text-[26px] leading-[1.15] tracking-[-0.04em] text-[#0A1128]">
+                  {s.h2}
+                </h2>
+                <div className="mt-4 space-y-4">
+                  {s.body.map((p, j) => (
+                    <p
+                      key={j}
+                      className="font-alte text-[16px] sm:text-[17px] tracking-[-0.02em] leading-[1.6] text-slate-600"
+                    >
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </Container>
+      </section>
+    ) : null}
+
     {/* CROSS LINKS */}
     <section className="bg-white py-16 sm:py-24 border-b border-[#e7e6e4]">
       <Container size="md">

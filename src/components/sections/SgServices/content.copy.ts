@@ -108,6 +108,48 @@ export const CONTENT_COPY: ServiceCopy = {
       { name: "Lead Generation Singapore", to: "/lead-generation-agency-singapore/", desc: "The system that turns readers into booked calls." },
     ],
   },
+  deepDive: {
+    eyebrow: "CONTENT THAT EARNS LEADS",
+    heading: "What content marketing actually looks like for a Singapore B2B buyer",
+    sections: [
+      {
+        h2: "how long does content marketing take to show results in Singapore?",
+        body: [
+          "There are really two questions hiding inside this one, and buyers tend to blend them together. A single page that answers a live, high-intent question, something like a specific provider in Singapore or how much a service costs, can book a call within weeks if the capture is wired in, because the person reading it was already looking to buy. The slower part is building enough authority that a whole topic ranks broadly and starts getting named in AI answers. That is the work that takes months, and it is worth being clear about which one you are asking about before anyone quotes you a timeline.",
+          "The honest shape looks roughly like this, without pretending it is a guarantee. The first weeks are mostly indexing, with the odd early win on a low-competition question nobody else answered well. The middle stretch is where rankings and citations start to compound, because each new piece reinforces the ones around it and the topic begins to look authoritative rather than thin. The real payoff comes later: a library of pieces that keeps pulling in leads long after you stop paying for each one. That is the part ads cannot match, since paid traffic stops the day the budget does.",
+          "What speeds this up or slows it down is specific to the market you are in. A narrow niche with little competing content ranks faster than a crowded category like insurance or property, where everyone has already published heavily. An established domain with some history moves faster than a brand-new one that Google has barely met. And publishing at a steady pace beats a burst of ten pieces followed by six months of silence, because consistency is part of how authority gets read.",
+          "This is also why a sensible engagement starts small and scales only as it produces, rather than asking you to commit to a twelve-month bet up front. You should be able to see early pieces earning their place before you widen the program, not fund a year of output on faith.",
+        ],
+      },
+      {
+        h2: "what content should a B2B company in Singapore actually publish?",
+        body: [
+          "Start from the questions your buyers are already typing, not from a calendar of trending topics. The pieces that earn leads are the ones someone searches when they are close to deciding: what a service costs, how to choose between providers, whether something is eligible for a grant, how one option compares to another, and what the compliance rules actually require. Content pinned to a real buying decision pulls its weight. Content pinned to curiosity mostly sits there.",
+          "A few formats tend to work in this market specifically. Honest pricing pages that answer how much something costs in Singapore win the click and the trust at once, because most competitors hide the number and the one that does not looks like the straight shooter. PSG and grant-eligibility explainers matter because so many SME buyers search that first, before they even shortlist a provider. Comparison and best-in-Singapore pieces catch people mid-decision. And plain how-to guides for the exact problem your product solves bring in the buyers who are trying to fix it themselves and quietly discovering they would rather hire someone.",
+          "Localise on purpose. Reference Singapore rules, schemes, and context by name, so the piece reads as written for this market rather than lifted from a US blog and lightly reworded. Buyers can tell, and so can the AI answers that increasingly summarise the web; both reward the version that is genuinely specific to here.",
+          "Fewer, deeper pieces that fully answer one question beat a wide spread of thin posts that half-answer many. There is a useful, if dated, reference point here: Ahrefs ran a large-scale study of around a billion pages and found that the overwhelming majority get little or no organic search traffic. Treat that as directional and several years old rather than a live benchmark, but it makes the point concretely, most published content just sits there. The way you avoid being in that pile is to point the writer at the buyer's decision, not their curiosity.",
+        ],
+      },
+      {
+        h2: "content marketing or Google Ads: which brings in leads faster?",
+        body: [
+          "The straight answer is that ads bring you leads today and content brings you leads that keep coming. Ads are rented attention: the moment you stop paying, the flow stops. Content is an asset you own that keeps working after the spend ends. Neither of those is a criticism of the other, they just behave differently, and a lot of confusion comes from expecting one to act like the other.",
+          "The cost shape is different too. With ads you pay per click every time, and in competitive Singapore categories that click gets expensive fast. With content the cost is mostly upfront, and the cost per lead tends to fall the longer a ranking piece keeps pulling people in without further spend. One is a meter that runs the whole time; the other is a build that pays back slowly.",
+          "For most SME buyers the honest answer is not either-or. Use ads to buy leads while the content is still maturing, then lean on content as it starts to rank and get cited, so you are not renting every single lead forever. That sequencing gives you leads now and a cheaper base of leads later, instead of forcing a choice between the two.",
+          "Content also does one thing ads simply cannot. It is what gets you named in an AI answer, and what earns a buyer's trust before they ever fill in a form. An ad can win the click, but it cannot be the thing a chatbot cites or the guide that convinced someone you know what you are doing. So treat this as sequencing rather than a religious war, and note that both plug into the same lead-capture system, which is how you can actually see which one booked the call.",
+        ],
+      },
+      {
+        h2: "how do you know if your content is actually bringing in leads?",
+        body: [
+          "The common trap is reporting traffic, impressions, and posts published, because those numbers always go up and tell you almost nothing about revenue. Ask any agency which specific piece booked a call last month, and most cannot answer. That gap is the whole problem: a report that only ever trends upward is a report designed to look good rather than to tell you anything.",
+          "What is worth tracking instead is narrower and more useful: which page a lead first landed on, which piece they read before they enquired, and which questions the booked calls actually came from, traced back to the content that answered them. That is the chain that connects a paragraph you wrote to a meeting on the calendar, and it is the only version of measurement that survives contact with a finance conversation.",
+          "None of that works unless capture is part of the piece from the start. Content can only be measured on leads if it had a next step wired in to begin with, which is why capture belongs inside every piece rather than bolted on afterwards. A brilliant guide with no way to raise a hand is invisible to your reporting, no matter how many people read it.",
+          "There is a compliance side to this too, framed as what the rules require rather than legal advice. If a page collects an email or a number, PDPA expects clear consent for how you will use it, and the Do Not Call rules apply before you follow up by call or SMS. Measuring content on leads means capturing those leads the way the rules require, so the follow-up is clean rather than a liability. Keep the expectations qualitative here: the point is the mechanism, not a promised conversion rate or lead volume nobody can honestly forecast up front.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What does a content marketing agency actually do?", answer: "It plans, produces, and distributes the content that attracts and converts buyers, articles, guides, landing pages, and the social and email that carry them. Done well it is engineered so the content ranks in search, gets cited by AI answers, and captures the reader as a lead." },
     { question: "How much does content marketing cost in Singapore?", answer: "Per article commonly runs S$200 to S$500, and monthly retainers typically start around S$2,000 for a handful of pieces. We open far lower, starting from S$100 a month as a lean first step, with scope quoted against your goals. You only scale as it produces leads." },

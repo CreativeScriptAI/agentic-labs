@@ -112,6 +112,48 @@ export const AI_RECEPTIONIST_COPY: ServiceCopy = {
       { name: "Follow Up Automation", to: "/follow-up-automation/", desc: "Answer every enquiry in seconds, until they reply or book." },
     ],
   },
+  deepDive: {
+    eyebrow: "THE DETAIL BUYERS ASK ABOUT",
+    heading: "What an AI receptionist actually does on a live call",
+    sections: [
+      {
+        h2: "What can an AI receptionist handle, and what should still go to a person?",
+        body: [
+          "The everyday questions are the ones it answers best, because they are the same ones your front desk repeats all day. Opening hours, where you are and where to park, what you charge, whether you take walk-ins, whether you do a particular service, whether there is a slot free this week. It takes a caller's name and number and the reason they are calling, and it books or reschedules the appointment. These are the calls that clog a phone line during the day and go to voicemail after hours, and they are exactly what it clears.",
+          "Where it earns its place is the call that would otherwise be lost. When your line is busy or it is eleven at night, it still picks up, gets the details, and books the slot, instead of the caller hanging up and dialling the next name on the list. The caller does not know or care that your team is with someone else or has gone home. They get an answer and a booking.",
+          "The line you keep with a person is drawn on purpose. A clinical judgement call, a pricing exception, an upset customer who wants a manager, anything legal or medical that needs a real human, all of that is handed off rather than guessed at. The receptionist is built to recognise these moments, say it will get the right person on it, and take a clear message with full context, not to bluff its way through.",
+          "It works from the answers you give it about your own business, so it does not invent prices or make promises you did not authorise. If it does not know something, it says so and takes a message. A caller asking a dental clinic whether you do Medisave claims for wisdom tooth surgery gets either the answer you loaded or a clean handoff to your team, never a made up figure that you then have to walk back.",
+        ],
+      },
+      {
+        h2: "How does the AI receptionist book into my calendar without double-booking?",
+        body: [
+          "It reads your real availability at the moment of the call. That is the part that stops double-booking. Rather than working off a copy or a list that drifts out of date, it checks what is genuinely open right then and only offers those slots, so it cannot promise a time that is already taken.",
+          "The booking is written back into the same calendar your team already uses, whether that is Google Calendar, your GoHighLevel calendar, or your practice or salon system. There is no second list to reconcile at the end of the day. The moment a caller confirms, the slot shows up for your staff with the name, number, and reason captured on the call, and the caller gets their own confirmation.",
+          "Rescheduling and cancellations can run the same way, so a caller can move an appointment at nine at night without waiting for your front desk to open in the morning. It respects the buffers and working hours you set, which means it will not drop a consult over your lunch break or squeeze one in after your last slot of the day.",
+          "The honest boundary is what happens when two callers reach for the last slot at the same moment. It holds to real availability rather than overbooking to please everyone. One caller gets the slot, and the other is routed to the next open time or offered a callback, so your diary stays true to what your team can actually deliver.",
+        ],
+      },
+      {
+        h2: "How long does it take to set up an AI receptionist, and what do you need from me?",
+        body: [
+          "What you hand over is knowledge, not a project plan. Your common questions and the answers to them, your prices or price ranges, the services you offer, your opening hours and your quiet hours, and access to the calendar and the phone number you want it to work with. Think of it as a short handover of how your front desk already talks to callers, not a build you have to manage.",
+          "You do not write scripts or configure a bot yourself. The build and the wiring are done for you, which is the whole point of a team that deploys into your tools rather than handing you software. You supply the knowledge about your business, and the receptionist is built around it.",
+          "Before it answers a single real customer, there is a listen and test step. You hear how it handles your kind of calls, catch anything that sounds off, and correct it while no live caller is on the line. Only once it sounds right on your calls does it start answering them.",
+          "Setup is measured in days to a couple of weeks, depending on how many questions, services, and integrations are involved. A simple single-calendar front desk goes live faster than a multi-location clinic with several booking systems and a long list of services. Through all of it you keep your existing phone number, so you are not asking your customers to call something new or reprint anything.",
+        ],
+      },
+      {
+        h2: "Is an AI receptionist cheaper than hiring a receptionist in Singapore?",
+        body: [
+          "A full-time front desk hire in Singapore is a monthly salary plus CPF, and then leave, MC days, training, and the cost of replacing them when they move on. Even with all of that, one person covers office hours on one line at a time. A human answering service is usually billed per call or per minute, which climbs with your volume and often still does not cover nights and public holidays.",
+          "The honest way to frame it is not a replacement for your team but a way to stop losing the calls they cannot get to. Your front desk keeps the relationship work, the regulars, the judgement calls, the walk-ins. The receptionist catches the overflow when every line is busy and the after-hours calls that were quietly going to voicemail. An owner who values a good human receptionist is not choosing between the two.",
+          "So the real comparison is not a salary against a hundred dollars. It is the cost of the leads you currently lose to voicemail against the cost of answering them. For a high-value service like dental, aesthetics, or home repair, one recovered booking a month often covers the whole thing, and the after-hours calls are frequently the higher-intent ones. The pricing section on this page carries the number; the point here is what sits on the other side of it.",
+          "This is why the fastest credible response matters. Research on online sales leads, including the widely cited Lead Response Management study associated with James Oldroyd and the related Harvard Business Review work on the short life of online leads, found that answering within about five minutes made a lead far likelier to qualify than waiting longer. That is US B2B online-lead data, directional support for answering fast rather than a Singapore phone benchmark, but the direction holds. A call answered now is worth more than the same call returned tomorrow.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What is an AI receptionist?", answer: "An AI receptionist is an AI voice agent that answers your phone and enquiries, greets the caller, answers common questions, qualifies them, and books the appointment into your calendar. It works around the clock, so calls are picked up in seconds instead of going to voicemail." },
     { question: "How is this different from a normal virtual receptionist in Singapore?", answer: "A human virtual receptionist answers during set hours and costs more per call. An AI receptionist answers every call 24/7, including after hours and public holidays, at a lower cost, and books straight into your calendar. We build and run it inside your own tools rather than handing you a bot to set up alone." },

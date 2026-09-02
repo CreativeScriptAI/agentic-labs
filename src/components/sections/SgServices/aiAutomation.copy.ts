@@ -113,6 +113,48 @@ export const AI_AUTOMATION_COPY: ServiceCopy = {
       { name: "AI Implementation Partner", to: "/ai-implementation-partner-singapore/", desc: "We build and run the whole thing, inside your tools." },
     ],
   },
+  deepDive: {
+    eyebrow: "HOW A BUILD ACTUALLY WORKS",
+    heading: "What to expect when you automate a workflow",
+    sections: [
+      {
+        h2: "what should a small business in Singapore automate first?",
+        body: [
+          "The first thing to automate is rarely the one that would impress anyone. It is the task that is repetitive, follows clear rules, and happens many times a day. If a person on your team does it the same way every time and it does not really need judgement, it is a candidate. Anything that changes with the situation and needs someone to weigh things up is the wrong place to begin.",
+          "For a typical Singapore SME the early wins sit in the plumbing of the business. Sending quotes and invoices, then chasing the ones that go unpaid. Replying to WhatsApp enquiries that come in after hours. Reconciling bookings that live in a calendar and a spreadsheet that never quite agree. Moving a new customer's details out of a form and into the CRM and the accounting tool so nobody retypes them. Sending appointment reminders so fewer people forget to turn up. None of these are glamorous, and that is exactly why they are worth automating.",
+          "You can run the test yourself before you call anyone. Ask how many times a week the task happens, how long each one takes, and whether it quietly gets dropped when the team is busy. High frequency, low judgement, and a real cost when it slips is the combination that says automate this first. A task that happens twice a month can wait, however annoying it feels.",
+          "The common mistake is to point at the messy, exception-heavy process everyone complains about and try to automate that first. It usually fails, because the rules are not stable enough to hand over. Start where the rules are clear and predictable, bank the hours you free up, and move up to the harder work once the simple wins are running on their own.",
+        ],
+      },
+      {
+        h2: "should I build my own automation or hire someone to build it?",
+        body: [
+          "Most Singapore SMEs weigh three real options. Build it yourself inside a no-code tool, hire a full-time person to own automation, or bring in a partner who builds it and hands it back to you. Each one makes sense in a different situation, and the cheapest on paper is not always the cheapest once you count everyone's time.",
+          "Doing it yourself looks cheapest until you add up the hours. The owner or the ops manager has to learn the tool, wire the connections between apps, and fix the whole thing every time one of those apps pushes an update. The build might be a weekend. The maintenance is forever, and it lands on the person who can least afford the interruption.",
+          "Hiring in-house only pays off once there is a steady stream of automations to build and look after. For one or two workflows it is an expensive way to solve the problem, and if that person leaves, the knowledge of how everything is wired together walks out the door with them.",
+          "The middle path is a partner who scopes one workflow, builds it inside the tools you already use, and leaves it with you. You are not buying software you then have to run, and you are not carrying a salary for work that is not full-time yet. To be fair about it, DIY is genuinely the right call when the job is a single simple trigger between two apps that rarely changes. The line gets crossed when a workflow touches three or more systems, has branching rules, or has money or compliance riding on it being right every single time.",
+        ],
+      },
+      {
+        h2: "how do you connect automation to the tools we already use?",
+        body: [
+          "Most Singapore SMEs already run a mix of tools that mostly works. A CRM or a well-worn spreadsheet, WhatsApp Business, an email inbox, a booking or POS system, and Xero or QuickBooks for the accounts. Automation has to sit on top of that mix and make it talk, not ask you to throw it out and start again.",
+          "The mechanics are simpler than the jargon suggests. Two tools connect in one of two ways. Either the app publishes a proper integration built for this, or a middle layer sits between them, watches for something to happen in one tool, and writes the result into the other. You do not need to know which method is used under the hood. What matters is that the data ends up in the right place without anyone retyping it.",
+          "The honest snag is that some local or older tools have no clean way in. When that happens we use a lighter-weight bridge or a scheduled sync that moves the data across on a regular basis instead of the instant a change occurs. The point is that this gets checked and scoped up front, so it is a known part of the plan rather than a surprise that surfaces halfway through.",
+          "Through all of this the records stay where they already live. The automation reads from and writes back into the tools the business already owns, so your data sits in one place and the team carries on working where they are used to working. Nobody has to learn a new home for the information they rely on.",
+        ],
+      },
+      {
+        h2: "how long does it take to build an automation, and where does a person stay involved?",
+        body: [
+          "A single, clearly-scoped workflow is usually live in a small number of weeks, not months. That is because it is built into the tools you already have rather than from scratch, so there is far less to stand up. A first version goes live, and then it gets tuned against what real enquiries and real data actually throw at it, which is always a bit messier than any plan.",
+          "The ramp is deliberate. For the first week or two the automation runs alongside the manual process, so nothing is trusted blind and you can see it making the same calls a person would. Once it has proven itself on real cases, the manual step is retired and the automation takes over properly.",
+          "Human-in-the-loop is the part buyers worry about most, and the line is worth drawing clearly. Reversible, low-risk steps run fully automated, capturing a lead, sending a reminder, moving a record from one tool to another. Anything customer-facing and hard to undo, or anything involving money or a commitment, waits for a person to approve it before it goes out. Automation does not mean nobody checks anything, it means people stop checking the things that never needed checking.",
+          "The failure case is handled the same careful way. When the automation is unsure, or hits something outside the rules it was given, it hands off to a person with the full context attached instead of guessing. The team picks up an exception to deal with, which is a normal part of the work, rather than a silent mistake that only shows up later when a customer complains.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What does AI automation actually mean for my business?", answer: "It means using AI to run the repetitive work that normally needs a person: capturing and enriching leads, answering enquiries in seconds, qualifying and booking, chasing follow ups, and moving data between your tools. Done well, it saves hours and stops leads going cold, without you having to operate it yourself." },
     { question: "How is this different from an AI automation tool I can just sign up for?", answer: "A tool gives you a login and leaves the setup, connection, and upkeep to you. We are a forward-deployed engineering team. We build the automation into the tools you already use, run it, and stay accountable for the outcome. You get the result, not another dashboard to manage." },

@@ -42,6 +42,13 @@ export type ServiceCopy = {
   process: { eyebrow: string; heading: string; steps: { n: string; title: string; body: string }[] };
   trust: { eyebrow: string; heading: string; items: { title: string; body: string }[] };
   crossLinks: { eyebrow: string; heading: string; intro: string; links: Link[] };
+  // Deep-dive body: substantive H2 sections answering the buyer sub-questions,
+  // rendered as long-form content to give the page real depth and more H2s.
+  deepDive?: {
+    eyebrow: string;
+    heading: string;
+    sections: { h2: string; body: string[] }[];
+  };
   // In-prose contextual links rendered as a body paragraph under the answer.
   // Each entry is a sentence with one descriptive inline link.
   relatedProse?: { before: string; anchor: string; to: string; after: string }[];

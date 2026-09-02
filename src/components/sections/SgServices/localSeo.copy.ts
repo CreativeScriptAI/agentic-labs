@@ -118,6 +118,44 @@ export const LOCAL_SEO_COPY: ServiceCopy = {
       { name: "AI Implementation Partner", to: "/ai-implementation-partner-singapore/", desc: "We build and run it inside your own stack, done-for-you." },
     ],
   },
+  deepDive: {
+    eyebrow: "THE LOCAL SEO PLAYBOOK",
+    heading: "How local search actually works in Singapore, in plain terms",
+    sections: [
+      {
+        h2: "how do I optimise my google business profile in singapore?",
+        body: [
+          "Start with the primary category, because it is the single biggest lever on the profile and the one most Singapore businesses get wrong. Owners pick something too broad, \"restaurant\" instead of \"nasi padang restaurant\", or \"clinic\" instead of \"dental clinic\", and the profile then never surfaces for the specific search a nearby customer actually types. Studies of local ranking factors, like the annual Local Search Ranking Factors work from Whitespark and BrightLocal, consistently put the primary category near the top of what influences the map pack. That is directional, not a Google-published ranking weight, but it matches what we see: change a vague category to the precise one and the profile starts appearing for searches it was invisible for.",
+          "After the primary category, the fields owners skip are the ones a nearby searcher filters on. Secondary categories, the services list, and the \"from the business\" attributes, halal, wheelchair access, dine-in, delivery, are what a customer taps to narrow results, so leaving them blank drops you out of that filtered view. Photos and the products and services list are not decoration either. A profile that adds fresh photos and keeps hours accurate, including public holiday hours over Chinese New Year, Hari Raya, and Deepavali, reads as live to both the searcher and to Google, while one with an old photo and wrong festive hours reads as neglected.",
+          "Two owner-controlled fields sit almost always empty: Google Posts and the questions and answers section. Seeding the real questions customers ask, where to park, the nearest MRT, whether you take walk-ins or need a booking, fills them with useful answers before a competitor's customer posts something there first. One quiet detail specific to Singapore addresses is worth a check: a unit number or building name entered inconsistently, \"#01-23\" on the profile, \"01-23\" on your website, \"Blk 123\" in a directory, is a common source of the name, address, and phone mismatch that splits your signals. Pick one exact format and use it everywhere.",
+        ],
+      },
+      {
+        h2: "how do I get more google reviews for my singapore business?",
+        body: [
+          "The review request that works is the one sent at the right moment: right after the good experience, when the job is finished, the meal is done, or the keys are handed over, not weeks later in a batch when the feeling has faded. Timing does most of the work. The second thing that matters is friction. Make it one tap. A short link or a QR code at the counter, printed on the invoice, or dropped into the job-done SMS lands the customer straight on the review box, instead of leaving them to search for your listing and give up halfway.",
+          "The star average is not the whole story. Volume and recency both count for how the profile reads. A business with a steady trickle of recent reviews looks open and busy, while one whose most recent review is from 2022 looks closed to a customer scanning results, even at 4.9 stars. So the goal is a small, continuous flow rather than one burst and then silence. Responding to every review is part of getting more, including the one-star ones, because the reply is what the next customer reads, and a present, level-headed response to a complaint often reassures a reader more than the complaint worries them.",
+          "Keep the replies human and in the customer's language. Singapore reviews often mix English, Mandarin, and Malay, and a reply in kind lands better than a templated line pasted under every review. On the guardrail, the short version: no incentives, no discounts for stars, no buying ratings, since platform rules prohibit it. The trust section on this page carries the full compliance treatment, so there is no need to repeat it here beyond that one line.",
+        ],
+      },
+      {
+        h2: "how do I measure if local seo is actually working?",
+        body: [
+          "The numbers that matter live inside the Google Business Profile performance report, not in a ranking screenshot. It shows calls, messages, bookings, and direction requests, plus the searches, the actual queries, that made your profile appear. Those map to walk-ins and phone calls in a way a position on a map does not. This is a real, current feature of the profile, so any owner can open it and read these numbers directly.",
+          "The first cut to make is branded versus discovery searches. If most of your profile views come from people typing your business name, local SEO has not started working yet, because those customers already knew you. The win is views and contacts from category and \"near me\" searches, the people who did not know your name and found you anyway. Within the contact metrics, direction requests are the closest free proxy for a physical visit, someone asking for directions is planning to come, so a rising direction-request line is often the earliest sign the map pack work is landing, ahead of any change you would notice in rankings.",
+          "Call tracking per outlet, which this page already includes, lets you see which branch and which keyword produced each call, so budget can follow what actually converts rather than a blended guess. The trap to avoid is vanity metrics. Total profile views and a climbing star count feel like progress, but neither is a contact. Ask for calls and direction requests by month and by branch, and judge the work on those.",
+        ],
+      },
+      {
+        h2: "how long does local seo take to work in singapore?",
+        body: [
+          "It helps to break the timeline into phases you will actually feel, rather than a single \"it depends\". Profile fixes and duplicate or suspension resolution can show in the map pack within a few weeks, because they remove a block rather than build authority, you are clearing something that was keeping the real listing down. Citation consistency and the first bit of review momentum tend to show over the first one to three months, as the corrected listings settle and fresh reviews start arriving.",
+          "Moving up in a genuinely crowded Singapore category, aircon servicing, dental, tuition, or F&B in a mall cluster, is a longer build measured in months, because you are passing competitors who are also active and adding reviews of their own. Seasonality shifts the picture too. A category with festive or monsoon-season spikes will look different month to month, so read the trend across several months rather than reacting to a single week.",
+          "The honest expectation is that no one can promise a specific map-pack position or a date, and anyone who does is guessing. Tie your read of progress to what the owner should watch instead of positions: first calls and direction requests appearing for non-brand searches are the early signal that the work is landing, and they usually show up before any ranking screenshot looks impressive.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What is the difference between local SEO and regular SEO, and which do I need?", answer: "Regular SEO chases island-wide, blue-link rankings and backlinks for broad or informational searches. Local SEO wins the map pack, the three results with the map, for nearby-intent searches like \"dentist near me\" or \"physio Novena\", where a physical business gets its calls and directions. If you serve a catchment and live on walk-ins and calls, you need local SEO. For broader organic reach, see our SEO Agency Singapore page, and many businesses do both." },
     { question: "How do I get my business into the Google map pack?", answer: "The map pack rewards a complete, verified Google Business Profile with the right categories, relevance to the search, proximity to the searcher, and prominence from reviews and consistent listings. In practice that means fixing the profile, correcting your Name, Address, and Phone across the web, removing duplicates, building genuine reviews, and adding local signals to your own site. That is the work we do, tied to calls and directions rather than a ranking report." },

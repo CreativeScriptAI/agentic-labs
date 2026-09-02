@@ -118,6 +118,47 @@ export const WHATSAPP_API_COPY: ServiceCopy = {
       { name: "AI Implementation Partner", to: "/ai-implementation-partner-singapore/", desc: "We build and run the whole thing, inside your tools." },
     ],
   },
+  deepDive: {
+    eyebrow: "HOW WHATSAPP BUSINESS API ACTUALLY WORKS",
+    heading: "What Singapore businesses should know before switching on the API",
+    sections: [
+      {
+        h2: "how do meta's whatsapp conversation charges actually work?",
+        body: [
+          "There are two separate costs when you run on the API, and it helps to keep them apart. One is what we charge to build the system and run it for you. The other is what Meta charges to carry your messages. We do not control Meta's side, and it sits on top of our fee, so the honest picture is two lines on the bill, not one.",
+          "Meta's charge depends on the type of message, not just the count. When your business starts a conversation with a template, a promo, a booking reminder, a one time passcode, that message is billed. When a customer messages you first and you reply inside the window that opens, those replies are treated differently and are often free. So the same number of messages can cost very different amounts depending on who started the conversation and why.",
+          "The practical takeaway is simple. A customer reaching out to you is the cheaper path than you reaching out cold, so answering fast is not only better for the sale, it keeps the Meta bill lower. We set the system up so most conversations start from the customer and get answered while the window is open, and we watch the mix of message types so the cost stays predictable rather than creeping up quietly.",
+          "One real fact worth stating plainly: Meta moved the WhatsApp Business Platform to a per message pricing model, away from the older per conversation model. The rates vary by country and by message category and they change over time. Those rates are set by Meta, not by us, so we manage the setup to keep your spend sensible rather than quoting you a fixed number that Meta can move.",
+        ],
+      },
+      {
+        h2: "what is the 24-hour window, and why do i need approved templates?",
+        body: [
+          "Once a customer messages you, WhatsApp opens a 24 hour window in which you can reply freely, in your own words, like a normal chat. Outside that window, or any time you want to start a conversation cold, WhatsApp does not let you type freely. It only lets you send message templates that have been approved in advance. This is how WhatsApp works for every business on the API, not a rule we invented.",
+          "That is why templates exist and why they need approval before they can send. Meta reviews the wording of anything your business initiates. For you it means the booking reminders, the follow up you send the next day, and any first touch outreach all run on templates we get approved up front. Set up this way, a follow up two days after the first message goes out cleanly instead of silently failing because the window has closed.",
+          "Templates fall into a few plain categories. Some promote, a campaign or an offer, which count as marketing. Some are transactional, a booking confirmation or an appointment reminder, which count as utility. Some carry a one time passcode, which count as authentication. Marketing templates are the ones most tied to opt in consent and to cost, so we are careful about how and when those go out.",
+          "The 24 hour window is also why speed matters operationally, not just for the sale. Reply inside the window and the conversation stays open and natural. Let it lapse and you are back to a stiffer approved template to reopen contact. Keeping conversations answered while they are live is what keeps the whole thing feeling like a real chat rather than a broadcast.",
+        ],
+      },
+      {
+        h2: "will my whatsapp number get flagged or blocked for sending too much?",
+        body: [
+          "This is a fair worry, and worth addressing head on. Businesses hold back from automating WhatsApp because they are afraid the number will get banned. Meta does govern numbers actively, but it governs them in ways you can stay on the right side of, so the fix is to send well rather than to send timidly.",
+          "WhatsApp tracks how people react to your messages, which shows up as a quality rating on your number. If a lot of recipients block or report you, your standing drops and Meta can limit how much you are allowed to send. Messaging people who actually opted in, at sensible hours, keeps that rating healthy. The compliance habits that protect the customer are the same ones that protect the number.",
+          "There are also messaging limits that work in your favour if you respect them. A new number starts with a cap on how many people you can message in a day, and that cap rises as you build a track record of good sending. So we do not blast a fresh number on day one. We warm it up, let the good standing accumulate, and let the limit climb on its own.",
+          "Two more things set expectations correctly. The business name shown in your chats has to be approved by Meta, and there is an optional verified badge on top of that. The badge is Meta's to grant and is not guaranteed, so we do not promise a green tick we cannot control. All of this ties back to opt in and quiet hours, which are not only compliance boxes. They are the practical thing that keeps your number sending.",
+        ],
+      },
+      {
+        h2: "how long does it take to set up the whatsapp business api in singapore?",
+        body: [
+          "The honest sequence is this. We verify your business with Meta, get the display name and your templates approved, and connect the number and CRM. Each of those has a review step that Meta controls, so the timeline is partly out of anyone's hands, and it would be dishonest to hand you a hard guarantee on it.",
+          "The slow part is almost always Meta's own approvals, business verification and template review, rather than the build on our side. One thing that can add a step at the start is a number already tangled up in a personal or Business app account, which has to be untangled before it can move onto the API. That is worth checking early so it does not surprise you halfway through.",
+          "The split of work is clear. You confirm the business details and the number you want to use. We handle provisioning, verification, template submission, and the wiring into your stack. You are not left waiting alone in a Meta dashboard trying to read rejection notices. We manage and chase the reviews, and we get the templates and follow ups approved up front so nothing stalls once you are live.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "What is the WhatsApp Business API, and how is it different from the WhatsApp Business app?", answer: "The free WhatsApp Business app is one person replying on a phone. The WhatsApp Business API lets a business send and receive messages at scale through automation and a CRM, with multiple people and systems on one number. It is what you need once enquiry volume outgrows tapping replies by hand." },
     { question: "Do I need a new phone number for the WhatsApp Business API?", answer: "You can use an existing number as long as it is not already active on a personal or Business app account, or you can dedicate a new one. We handle the provisioning and verification either way and advise on what fits your setup." },

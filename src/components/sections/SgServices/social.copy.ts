@@ -108,6 +108,45 @@ export const SOCIAL_COPY: ServiceCopy = {
       { name: "AI Implementation Partner", to: "/ai-implementation-partner-singapore/", desc: "We build and run the whole thing, inside your tools." },
     ],
   },
+  deepDive: {
+    eyebrow: "SOCIAL, IN PLAIN TERMS",
+    heading: "How social actually turns into enquiries in Singapore",
+    sections: [
+      {
+        h2: "which social media platform is best for B2B in Singapore?",
+        body: [
+          "For a Singapore B2B seller, the honest answer is not a list of four platforms, it is a decision. LinkedIn is usually where your decision makers and procurement contacts already spend their working day, and it doubles as the profile people check before they reply to you. Instagram and TikTok are good at building familiarity and getting you seen, but the actual buying conversation tends to move off those apps and onto LinkedIn, WhatsApp, or a call. So you can post well on the visual platforms and still find that the deal gets done somewhere else.",
+          "Do not write off Facebook just because it feels dated. For local SME audiences, community groups, and older buyers, it still carries real weight in Singapore, and a group or a page can be exactly where your customers gather. If you want directional context on where people actually spend their time, the DataReportal Digital 2025 Singapore report from We Are Social and Meltwater publishes usage data worth a look, though treat it as a picture of attention, not a benchmark for how B2B buying decisions get made.",
+          "The rule that saves most owners money is to pick one or two platforms your buyers genuinely open and be consistently good there, rather than posting thin across every app. A dead LinkedIn page with three posts from last year costs you deals when a serious prospect checks you out mid consideration. One well kept profile beats four neglected ones.",
+          "Plan for the handoff to WhatsApp, because that is the real platform a lot of Singapore enquiries end up on. The social post starts the interest, and the conversation finishes in WhatsApp or WhatsApp Business. Build for that instead of pretending the whole thing happens in app, because wherever the enquiry lands, it still has to be answered and booked or the attention was wasted.",
+        ],
+      },
+      {
+        h2: "organic social or paid social, where should my budget go?",
+        body: [
+          "This is the question every owner asks eventually: do I keep posting for free reach, or do I put money behind it? The answer is both, but in an order. Organic proves what your audience actually responds to, and paid buys reach for the posts that have already earned replies. Boosting a weak post just buys you more silence, so let the organic result tell you what is worth spending on before you spend.",
+          "Organic reach on most platforms has quietly shrunk, so treating we post regularly as a strategy stops working without anyone announcing it. A small, steady paid budget behind proven content is often the thing that makes social show up as enquiries rather than as a chart that flatlines. Paid social in Singapore is comparatively cheap to test, and you can learn what message pulls enquiries for a few hundred dollars before you commit to more.",
+          "None of that changes the part that decides whether the money worked. Whether a lead comes from an organic reel or a paid ad, it still has to be answered and booked, or the spend is gone. Paid only changes how many DMs arrive at your door. It does not change who is there to answer them, which is why more budget on top of a slow reply just wastes more efficiently.",
+        ],
+      },
+      {
+        h2: "how often should a Singapore business post on social media?",
+        body: [
+          "There is no magic number, and chasing one is how most content plans die. Consistency your audience can rely on beats a burst followed by silence. A cadence you can genuinely sustain for a year is worth more than a heavy month you abandon in week three, because the audience learns whether you are reliable long before they learn whether you are good.",
+          "What you post matters more than how much. Content that answers a real buyer question, shows the actual work, or handles a common objection earns saved posts and enquiries. Filler and reposted quotes train both the algorithm and your audience to scroll past you. Short form video, meaning Reels and TikTok, is doing the reach heavy lifting on most platforms now, so a sustainable plan usually mixes a few simple short videos with plainer posts rather than one polished piece a week that drains everyone.",
+          "The trap to name out loud is a big content calendar with no one watching the comments and the DMs. Cadence without a person answering enquiries is just noise on a schedule. Volume is the easy half of social and the half agencies love to sell, because a calendar looks like work. The reply is the half that produces revenue, and it is the half that quietly goes missing when the plan is all about how many times a week you post.",
+        ],
+      },
+      {
+        h2: "how do I measure whether social media is actually working?",
+        body: [
+          "Measure enquiries, not applause. The numbers that matter are DMs and comment enquiries received, questions answered, calls booked, and eventually deals closed. Reach can triple while enquiries stay at zero, and that is a failing account dressed up as a good one. If your report leads with follower growth, it is answering a question your bank account never asked.",
+          "Make the counting concrete by tagging where each enquiry came from, which post, organic or paid, and which platform, so you can see which content actually produced a conversation instead of just which post got likes. Most Singapore SMEs never connect a booked call back to the post that started it, so they cannot tell what to make more of and end up guessing forever. Reach and saves still have one honest use here, as early signals that a piece of content is landing and a hint about what is worth boosting, but they are leading indicators, never the scoreboard.",
+          "There is a compliance edge to the enquiry handoff that the trust section does not cover, and it is worth handling cleanly. When you capture a DM or a public comment enquiry and follow up, Singapore's PDPA and the Do Not Call provisions expect you to have consent for how you contact someone, especially once you move them from a public comment to a phone number or marketing messages. Treat the jump from a public comment to a private follow up as a moment where consent has to be real rather than assumed. This is what the rules require, not legal advice, and getting it right is also just how you keep the trust that made someone enquire in the first place.",
+        ],
+      },
+    ],
+  },
   faqs: [
     { question: "How much does social media marketing cost in Singapore?", answer: "Basic managed packages typically start around S$800 to S$1,200 a month, rising to S$3,000 or more for fuller service with paid social. We open far lower, starting from S$100 a month as a lean first step, with scope quoted against your platforms and goals. You only scale as it produces leads." },
     { question: "Which platforms should my business be on?", answer: "The ones your buyers actually use, not all of them. For some that is Instagram and TikTok, for others LinkedIn. We focus effort where the enquiries come from rather than spreading thin across every platform." },
