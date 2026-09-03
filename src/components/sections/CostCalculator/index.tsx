@@ -15,6 +15,52 @@ import { Container, Eyebrow, FadeUp } from "src/components/sections/AiVisibility
 const money = (n: number) =>
   "S$" + Math.round(n).toLocaleString("en-SG");
 
+/* Custom range slider styling: a visible rail, a yellow value fill, and a
+ * navy-ringed thumb so the control never reads as a floating dot. */
+const RANGE_CSS = `
+.cc-range{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9999px;outline:none;cursor:pointer;}
+.cc-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:9999px;background:#FCCA07;border:2px solid #0A1128;box-shadow:0 1px 3px rgba(10,17,40,.25);cursor:pointer;margin-top:-7px;}
+.cc-range::-moz-range-thumb{width:20px;height:20px;border-radius:9999px;background:#FCCA07;border:2px solid #0A1128;box-shadow:0 1px 3px rgba(10,17,40,.25);cursor:pointer;}
+.cc-range::-webkit-slider-runnable-track{height:6px;border-radius:9999px;}
+.cc-range::-moz-range-track{height:6px;border-radius:9999px;}
+.cc-range:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px rgba(252,202,7,.35);}
+.cc-range:focus-visible::-moz-range-thumb{box-shadow:0 0 0 4px rgba(252,202,7,.35);}
+`;
+
+const Range = ({
+  value,
+  min,
+  max,
+  step,
+  ariaLabel,
+  onChange,
+}: {
+  value: number;
+  min: number;
+  max: number;
+  step: number;
+  ariaLabel: string;
+  onChange: (n: number) => void;
+}) => {
+  const pct = max > min ? ((value - min) / (max - min)) * 100 : 0;
+  const clamped = Math.max(0, Math.min(100, pct));
+  return (
+    <input
+      type="range"
+      aria-label={ariaLabel}
+      min={min}
+      max={max}
+      step={step}
+      value={value}
+      onChange={(e) => onChange(Number(e.target.value))}
+      className="cc-range"
+      style={{
+        background: `linear-gradient(to right, #FCCA07 0%, #FCCA07 ${clamped}%, #e7e6e4 ${clamped}%, #e7e6e4 100%)`,
+      }}
+    />
+  );
+};
+
 type FieldProps = {
   id: string;
   label: string;
@@ -80,16 +126,20 @@ const Field = ({
           </span>
         ) : null}
       </div>
-      <input
-        type="range"
-        aria-label={`${label} slider`}
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(clamp(Number(e.target.value)))}
-        className="w-full mt-4 accent-[#FCCA07] cursor-pointer"
-      />
+      <div className="mt-4">
+        <Range
+          value={value}
+          min={min}
+          max={max}
+          step={step}
+          ariaLabel={`${label} slider`}
+          onChange={(n) => onChange(clamp(n))}
+        />
+        <div className="flex justify-between font-geist text-[11px] text-slate-400 mt-2 tabular-nums">
+          <span>{prefix ?? ""}{min.toLocaleString("en-SG")}{suffix ?? ""}</span>
+          <span>{prefix ?? ""}{max.toLocaleString("en-SG")}{suffix ?? ""}</span>
+        </div>
+      </div>
     </div>
   );
 };
@@ -110,7 +160,7 @@ const StatCard = ({
         : "border-[#e7e6e4] bg-white"
     }`}
   >
-    <div className="font-alte text-[30px] sm:text-[38px] text-[#0A1128] tracking-[-0.04em] leading-[1.05]">
+    <div className="font-alte text-[24px] sm:text-[30px] text-[#0A1128] tracking-[-0.04em] leading-[1.1] tabular-nums [overflow-wrap:anywhere]">
       {value}
     </div>
     <p className="font-geist text-[12px] uppercase tracking-[0.02em] text-slate-500 mt-3 leading-[1.4]">
@@ -242,16 +292,13 @@ const Calculator = () => {
             of the rate of one replied to within the hour. Drag to match your
             own experience. Lower means slow replies cost you more.
           </p>
-          <input
-            id="slowFactor"
-            type="range"
-            aria-label="Slow-reply conversion factor slider"
+          <Range
+            value={slowConversionPct}
             min={0}
             max={100}
             step={5}
-            value={slowConversionPct}
-            onChange={(e) => setSlowConversionPct(Number(e.target.value))}
-            className="w-full accent-[#FCCA07] cursor-pointer"
+            ariaLabel="Slow-reply conversion factor slider"
+            onChange={setSlowConversionPct}
           />
           <div className="flex justify-between font-geist text-[11px] text-slate-400 mt-2">
             <span>0% (slow leads never convert)</span>
@@ -382,6 +429,7 @@ const WhatToDo = () => (
 
 const CostCalculatorPage = () => (
   <div className="min-h-screen bg-[#F9F6F4] [&_*]:box-border">
+    <style dangerouslySetInnerHTML={{ __html: RANGE_CSS }} />
     <Hero />
     <CalculatorSection />
     <HowCalculated />
