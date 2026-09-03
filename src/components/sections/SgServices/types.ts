@@ -47,7 +47,9 @@ export type ServiceCopy = {
   deepDive?: {
     eyebrow: string;
     heading: string;
-    sections: { h2: string; body: string[] }[];
+    // A body paragraph is either a plain string, or an array of inline segments
+    // so a citation can wrap a phrase in an outbound (href) or internal (to) link.
+    sections: { h2: string; body: (string | DeepDiveSegment[])[] }[];
   };
   // In-prose contextual links rendered as a body paragraph under the answer.
   // Each entry is a sentence with one descriptive inline link.
@@ -55,3 +57,8 @@ export type ServiceCopy = {
   faqs: { question: string; answer: string }[];
   final: { eyebrow: string; heading: string; sub: string; ctaA: { label: string; to: string }; ctaB: { label: string; to: string } };
 };
+
+// One inline run of a deep-dive paragraph. Plain text unless it carries a link:
+// `href` is an external citation (opens in a new tab, dofollow); `to` is an
+// internal route rendered via next/link.
+export type DeepDiveSegment = { text: string; href?: string; to?: string };

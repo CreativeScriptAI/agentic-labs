@@ -230,8 +230,16 @@ export const DEEP_DIVE: {
     {
       h2: "What does PDPA mean for using AI in a Singapore business?",
       body: [
-        "Singapore's Personal Data Protection Act governs how organisations collect, use, and disclose personal data, and it applies to AI systems exactly as it applies to anything else that touches customer information. In practice that means the usual obligations still hold: you need a lawful basis such as consent for how you handle the data, you should only use it for the purposes a reasonable person would expect, you are expected to protect it with reasonable security, and people retain rights to access and correct what you hold. None of that is waived because a model is involved.",
-        "Two areas matter most for marketing and sales AI. First, consent and purpose: if you feed enquiry data into an AI system, the way you collected it needs to cover that use. Second, outreach: marketing calls and texts to Singapore numbers must be checked against the national Do Not Call Registry before they send, unless a valid exemption applies. We build consent capture, data handling, and DNC checks into the system rather than bolting them on later.",
+        [
+          "Singapore's ",
+          { text: "Personal Data Protection Act", to: "https://www.pdpc.gov.sg/" },
+          " governs how organisations collect, use, and disclose personal data, and it applies to AI systems exactly as it applies to anything else that touches customer information. In practice that means the usual obligations still hold: you need a lawful basis such as consent for how you handle the data, you should only use it for the purposes a reasonable person would expect, you are expected to protect it with reasonable security, and people retain rights to access and correct what you hold. None of that is waived because a model is involved.",
+        ],
+        [
+          "Two areas matter most for marketing and sales AI. First, consent and purpose: if you feed enquiry data into an AI system, the way you collected it needs to cover that use. Second, outreach: marketing calls and texts to Singapore numbers must be checked against the ",
+          { text: "national Do Not Call Registry", to: "https://www.pdpc.gov.sg/overview-of-pdpa/do-not-call-registry" },
+          " before they send, unless a valid exemption applies. We build consent capture, data handling, and DNC checks into the system rather than bolting them on later.",
+        ],
         "To be clear, this describes what the rules require in general terms and is not legal advice. The PDPC publishes guidance on data protection, and there is separate model guidance on the responsible use of AI. For your specific situation, confirm your obligations with the PDPC or a qualified adviser before you go live.",
       ],
     },

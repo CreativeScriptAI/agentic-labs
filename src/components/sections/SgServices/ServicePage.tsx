@@ -292,7 +292,31 @@ const ServicePage = ({
                       key={j}
                       className="font-alte text-[16px] sm:text-[17px] tracking-[-0.02em] leading-[1.6] text-slate-600"
                     >
-                      {p}
+                      {typeof p === "string"
+                        ? p
+                        : p.map((seg, k) =>
+                            seg.href ? (
+                              <a
+                                key={k}
+                                href={seg.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline decoration-[#FCCA07] decoration-2 underline-offset-2 hover:text-blue-600"
+                              >
+                                {seg.text}
+                              </a>
+                            ) : seg.to ? (
+                              <Link
+                                key={k}
+                                href={seg.to}
+                                className="underline decoration-[#FCCA07] decoration-2 underline-offset-2 hover:text-blue-600"
+                              >
+                                {seg.text}
+                              </Link>
+                            ) : (
+                              <span key={k}>{seg.text}</span>
+                            )
+                          )}
                     </p>
                   ))}
                 </div>
