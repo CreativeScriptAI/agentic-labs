@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "src/components/sections/FooterSection";
+import Sources from "src/components/sections/Sources";
 import {
   AnswerFirst,
   DeepDive,
@@ -29,6 +30,14 @@ const AiImplementationPartnerSgPage = () => (
     <Proof />
     <DeepDive />
     <Faq />
+    <Sources
+      sources={[
+        {
+          label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry",
+          href: "https://www.pdpc.gov.sg/",
+        },
+      ]}
+    />
     <FinalCta />
     <FooterSection />
   </div>

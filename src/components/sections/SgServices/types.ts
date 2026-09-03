@@ -56,6 +56,9 @@ export type ServiceCopy = {
   relatedProse?: { before: string; anchor: string; to: string; after: string }[];
   faqs: { question: string; answer: string }[];
   final: { eyebrow: string; heading: string; sub: string; ctaA: { label: string; to: string }; ctaB: { label: string; to: string } };
+  // Authoritative outbound citations shown in a Sources section. Only real
+  // sources the page actually draws on; omit if none.
+  sources?: { label: string; href: string }[];
 };
 
 // One inline run of a deep-dive paragraph. Plain text unless it carries a link:

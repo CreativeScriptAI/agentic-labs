@@ -137,4 +137,7 @@ export const LAW_FIRM_LEADS_COPY: ServiceCopy = {
     ctaA: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
     ctaB: { label: "See appointment setting", to: "/appointment-setting-singapore/" },
   },
+  sources: [
+    { label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry", href: "https://www.pdpc.gov.sg/" },
+  ],
 };

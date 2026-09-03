@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "src/components/sections/FooterSection";
+import Sources from "src/components/sections/Sources";
 import {
   Breaks,
   Channels,
@@ -31,6 +32,14 @@ const AppointmentBookingAiPage = () => (
     <Fix />
     <DeepDive />
     <Faq />
+    <Sources
+      sources={[
+        {
+          label: "Harvard Business Review: The Short Life of Online Sales Leads (2011)",
+          href: "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+        },
+      ]}
+    />
     <FinalCta />
     <FooterSection />
   </div>

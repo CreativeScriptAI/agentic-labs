@@ -174,4 +174,7 @@ export const APPOINTMENT_SETTING_COPY: ServiceCopy = {
     ctaA: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
     ctaB: { label: "See B2B lead generation", to: "/b2b-lead-generation-singapore/" },
   },
+  sources: [
+    { label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry", href: "https://www.pdpc.gov.sg/" },
+  ],
 };

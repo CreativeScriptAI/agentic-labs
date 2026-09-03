@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "src/components/sections/FooterSection";
+import Sources from "src/components/sections/Sources";
 import {
   Comparison,
   DeepDive,
@@ -32,6 +33,14 @@ const SeoAgencySingaporePage = () => {
       <WhoThisIsFor />
       <Explore />
       <Faq />
+      <Sources
+        sources={[
+          {
+            label: "Google Search Central: SEO documentation",
+            href: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+          },
+        ]}
+      />
       <FinalCta />
       <FooterSection />
     </div>

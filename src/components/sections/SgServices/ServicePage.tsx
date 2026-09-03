@@ -5,6 +5,7 @@ import type { ComponentType } from "react";
 import Link from "next/link";
 import BracketButton from "src/components/BracketButton";
 import FooterSection from "src/components/sections/FooterSection";
+import Sources from "src/components/sections/Sources";
 import { Container, Eyebrow, FadeUp } from "../AiVisibilityChecker/primitives";
 import type { ServiceCopy } from "./types";
 
@@ -359,6 +360,8 @@ const ServicePage = ({
         <Faq faqs={copy.faqs} />
       </Container>
     </section>
+
+    {copy.sources ? <Sources sources={copy.sources} /> : null}
 
     {/* FINAL CTA */}
     <section className="bg-[#0A1128] py-16 sm:py-24">

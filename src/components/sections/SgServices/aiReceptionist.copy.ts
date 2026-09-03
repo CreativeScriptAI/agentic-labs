@@ -175,4 +175,8 @@ export const AI_RECEPTIONIST_COPY: ServiceCopy = {
     ctaA: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
     ctaB: { label: "See appointment booking", to: "/appointment-booking-ai/" },
   },
+  sources: [
+    { label: "Harvard Business Review: The Short Life of Online Sales Leads (2011)", href: "https://hbr.org/2011/03/the-short-life-of-online-sales-leads" },
+    { label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry", href: "https://www.pdpc.gov.sg/" },
+  ],
 };

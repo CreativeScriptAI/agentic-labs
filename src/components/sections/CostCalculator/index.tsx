@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import BracketButton from "src/components/BracketButton";
 import FooterSection from "src/components/sections/FooterSection";
+import Sources from "src/components/sections/Sources";
 import { Container, Eyebrow, FadeUp } from "src/components/sections/AiVisibilityChecker/primitives";
 
 /* ─────────────────────────────────────────────────────────
@@ -434,6 +435,14 @@ const CostCalculatorPage = () => (
     <CalculatorSection />
     <HowCalculated />
     <WhatToDo />
+    <Sources
+      sources={[
+        {
+          label: "Harvard Business Review: The Short Life of Online Sales Leads (2011)",
+          href: "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+        },
+      ]}
+    />
     <FooterSection />
   </div>
 );

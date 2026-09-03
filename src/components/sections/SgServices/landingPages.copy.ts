@@ -173,4 +173,8 @@ export const LANDING_PAGES_COPY: ServiceCopy = {
     ctaA: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
     ctaB: { label: "See lead generation", to: "/lead-generation-agency-singapore/" },
   },
+  sources: [
+    { label: "Harvard Business Review: The Short Life of Online Sales Leads (2011)", href: "https://hbr.org/2011/03/the-short-life-of-online-sales-leads" },
+    { label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry", href: "https://www.pdpc.gov.sg/" },
+  ],
 };

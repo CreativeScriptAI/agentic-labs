@@ -137,4 +137,7 @@ export const TUITION_LEADS_COPY: ServiceCopy = {
     ctaA: { label: "Book a scoping call", to: "/ai-clarity-workshop/" },
     ctaB: { label: "See follow up automation", to: "/follow-up-automation/" },
   },
+  sources: [
+    { label: "Personal Data Protection Commission: PDPA and the Do Not Call Registry", href: "https://www.pdpc.gov.sg/" },
+  ],
 };
