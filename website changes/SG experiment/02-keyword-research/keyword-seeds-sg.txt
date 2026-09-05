@@ -1,0 +1,77 @@
+# SG keyword seeds for DataForSEO Phase 0 (location: Singapore, language: English)
+# Bucket A: category
+forward deployed engineers
+forward deployed engineering team
+forward deployed ai
+ai deployment company singapore
+deploy ai agents singapore
+on premise ai deployment singapore
+ai deployment services singapore
+# Bucket B: geo service head terms
+ai agency singapore
+ai automation agency singapore
+ai consulting singapore
+ai consultant singapore
+ai agents singapore
+ai agent development singapore
+ai agent developer singapore
+ai solutions singapore
+ai solutions for sme singapore
+ai implementation partner singapore
+ai integration services singapore
+custom ai development singapore
+automation agency singapore
+# Bucket C: marketing and sales problems x SG
+lead generation agency singapore
+ai lead generation singapore
+lead generation services singapore
+ai sdr singapore
+sales automation singapore
+marketing automation agency singapore
+cold email agency singapore
+cold outreach services singapore
+lead qualification automation singapore
+ai appointment setting singapore
+appointment setting services singapore
+crm automation singapore
+outbound automation singapore
+lead enrichment services singapore
+b2b lead generation singapore
+ai marketing agency singapore
+# Bucket D: channel x SG
+whatsapp automation singapore
+whatsapp business api singapore
+whatsapp chatbot singapore
+whatsapp marketing singapore
+ai voice agent singapore
+ai receptionist singapore
+ai phone answering singapore
+ai call answering service singapore
+voice ai singapore
+instagram dm automation singapore
+instagram automation singapore
+chatbot development singapore
+gohighlevel agency singapore
+gohighlevel expert singapore
+n8n developer singapore
+zapier expert singapore
+# Bucket E: grants and procurement
+psg grant ai
+edg grant automation
+imda pre approved ai solutions
+sme go digital ai
+ai grant singapore
+psg grant chatbot
+enterprise development grant ai
+# Bucket F: verticals x SG
+ai for real estate agents singapore
+ai for property agents singapore
+ai for clinics singapore
+ai receptionist for clinics singapore
+ai for recruitment agencies singapore
+ai for f&b singapore
+ai for restaurants singapore
+ai for insurance agents singapore
+ai for financial advisors singapore
+ai for law firms singapore
+ai for accounting firms singapore

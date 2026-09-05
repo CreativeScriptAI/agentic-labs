@@ -1,0 +1,225 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "facebook-dm-automation-meta-api"
+  ],
+  "title": "Facebook DM Automation with the Meta API | Agentic AI Labs",
+  "description": "Facebook DM and comment automation on the Meta API. AI answers DMs and comments from your knowledge base, with keyword triggers and instant link delivery.",
+  "heroLabel": "Facebook DM Automation",
+  "heroHeadline": "A comment lands at 11pm and the buyer is gone by morning.",
+  "heroSubheadline": "People message your page ready to buy, then they wait. We wire Facebook into the Meta API so AI reads every DM and comment, answers from your own knowledge base, and drops the link before the intent cools.",
+  "heroExplainerCaption": "How a DM or comment becomes an answered, linked reply",
+  "heroSteps": [
+    {
+      "label": "DM or comment arrives",
+      "sub": "Meta API captures the event",
+      "accent": true
+    },
+    {
+      "label": "OS.1 reads the intent",
+      "sub": "Matches it to your knowledge base",
+      "accent": false
+    },
+    {
+      "label": "Keyword trigger fires",
+      "sub": "Chosen words unlock the reply",
+      "accent": false
+    },
+    {
+      "label": "AI writes the answer",
+      "sub": "In your voice, on brand",
+      "accent": false
+    },
+    {
+      "label": "Reply and link delivered",
+      "sub": "Logged into GHL",
+      "accent": true
+    }
+  ],
+  "painTitle": "Where page conversations go to die",
+  "painPoints": [
+    "Someone comments \"price\" on a post and nobody sees it for hours, so the buying moment quietly passes.",
+    "Your inbox fills with the same three questions, and answering each one by hand eats the time you should spend closing.",
+    "Nights and weekends are dead zones, so every DM that lands after you clock out sits unread until you are back."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "DMs answered next business day",
+        "amount": "intent gone cold"
+      },
+      {
+        "label": "Buy-signal comments left unseen",
+        "amount": "silent drop-off"
+      },
+      {
+        "label": "Repeat questions handled by hand",
+        "amount": "hours per week"
+      }
+    ],
+    "total": "Revenue leaking through an unwatched inbox",
+    "solvesFor": "Every DM and comment answered fast, straight from your knowledge base",
+    "source": "Common friction pattern across SMB and agency Facebook pages"
+  },
+  "statusQuoTitle": "How pages handle DMs today",
+  "statusQuoItems": [
+    "A human checks the inbox between other tasks, so replies land whenever someone remembers.",
+    "Basic auto-responders send one canned line that ignores what the person actually asked.",
+    "Comment sections go unmonitored, so the highest-intent questions never get a reply at all."
+  ],
+  "statusQuoBars": {
+    "title": "Time from message to real answer",
+    "bars": [
+      {
+        "label": "Manual inbox checking",
+        "valueLabel": "hours, if seen",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "Canned auto-reply",
+        "valueLabel": "instant but wrong",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "OS.1 on the Meta API",
+        "valueLabel": "answered in seconds",
+        "widthPercent": 18,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Messaging is where buyers now expect to reach a business",
+    "body": "Meta has pushed conversations off the feed and into DMs and comments, and buyers increasingly expect an answer there in minutes, not the next business day. Pages that respond in the moment capture intent the rest let go cold.",
+    "source": "Meta business messaging trends",
+    "date": "2025",
+    "stat": "In minutes",
+    "statLabel": "The window buyers now expect a reply in"
+  },
+  "solutionTitle": "What we build on the Meta API",
+  "solutionItems": [
+    "AI answers incoming DMs directly from a knowledge base you upload, so replies match your real pricing, policies, and offers.",
+    "Comment automation watches your posts and responds to the people asking to buy, publicly or in DM.",
+    "Keyword-triggered replies let a word like \"guide\" or \"price\" fire a specific answer and deliver the exact link.",
+    "Every conversation flows into GHL as a contact and workflow, so nothing lives only inside Facebook."
+  ],
+  "layers": [
+    {
+      "title": "OS.1, the automation engine",
+      "body": "OS.1 is our in-house tool that powers all Meta and text automation. It connects to the Meta API, reads each DM and comment, matches intent against your uploaded knowledge base, and decides whether to answer, trigger a keyword flow, or hand off. It is the brain behind every reply on this page."
+    },
+    {
+      "title": "The knowledge base and reply models",
+      "body": "You upload what your business actually knows: offers, pricing, FAQs, objections. We build the reasoning with Claude Opus 4.8 and GPT Codex so answers stay accurate and in your voice, and we tune keyword triggers so specific words deliver specific links every time."
+    },
+    {
+      "title": "GHL as the CRM and workflow layer",
+      "body": "OS.1 plugs into GoHighLevel. Every answered DM or comment becomes a contact, a tag, and a workflow step, so a Facebook conversation turns into a tracked lead you can nurture, route, and follow up on outside the platform."
+    }
+  ],
+  "proofTitle": "Why this holds up in the real world",
+  "proofBullets": [
+    "Because OS.1 answers from a knowledge base you control, replies stay accurate instead of hallucinating offers you do not run.",
+    "Because it runs on the official Meta API, DMs and comments are handled inside Facebook's own rules, not a fragile browser hack.",
+    "Because everything lands in GHL, the automation is measurable and every conversation is a contact you own."
+  ],
+  "proofStats": [
+    {
+      "stat": "Your KB",
+      "label": "Answers come from your uploaded knowledge, not guesses"
+    },
+    {
+      "stat": "Meta API",
+      "label": "Official integration, not a scraper that breaks"
+    },
+    {
+      "stat": "Into GHL",
+      "label": "Every conversation becomes a tracked contact"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Coverage of incoming page conversations",
+    "bars": [
+      {
+        "label": "You checking manually",
+        "valueLabel": "misses off hours",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Generic chatbot plugin",
+        "valueLabel": "DMs only, canned",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "OS.1 DM and comment automation",
+        "valueLabel": "DMs and comments, 24/7",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Does this use the official Meta API or a workaround?",
+      "answer": "The official Meta API. OS.1 connects through Facebook's approved integration, so your DM and comment automation runs inside Meta's rules instead of a browser trick that breaks on the next update."
+    },
+    {
+      "question": "How does the AI know what to say?",
+      "answer": "It answers from a knowledge base you upload: your offers, pricing, FAQs, and policies. We build the reasoning with Claude Opus 4.8 and GPT Codex so replies stay accurate and sound like you, not a generic bot."
+    },
+    {
+      "question": "What are keyword-triggered replies?",
+      "answer": "You pick words, like \"price\" or \"guide\", that a commenter or DMer might send. When that word appears, OS.1 fires a specific reply and delivers the exact link you want, automatically."
+    },
+    {
+      "question": "Can it reply to comments on posts, not just DMs?",
+      "answer": "Yes. Comment automation watches your posts and responds to high-intent commenters, either publicly or by moving them into DM, so the buying question in your comment section never goes unanswered."
+    },
+    {
+      "question": "Where do the conversations end up?",
+      "answer": "In GoHighLevel. OS.1 plugs into GHL as the CRM and workflow layer, so every DM and comment becomes a contact, a tag, and a follow-up workflow you own outside Facebook."
+    }
+  ],
+  "faqStat": {
+    "stat": "24/7",
+    "label": "DMs and comments answered, including nights and weekends"
+  },
+  "ctaLabel": "Automate your Facebook DMs and comments",
+  "ctaSupportText": "We map your knowledge base, wire OS.1 into the Meta API, and connect it to GHL. You watch DMs and comments get answered in seconds.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "AI SDR for GHL Agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    },
+    {
+      "label": "Done-For-You GoHighLevel Automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    }
+  ],
+  "keywords": [
+    "facebook dm automation",
+    "facebook messenger automation",
+    "meta api dm automation",
+    "facebook comment automation",
+    "auto reply facebook comments",
+    "facebook lead automation",
+    "keyword triggered facebook replies",
+    "ai facebook dm assistant",
+    "facebook automation for agencies",
+    "gohighlevel facebook integration"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/facebook-dm-automation-meta-api/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel"
+  ]
+}

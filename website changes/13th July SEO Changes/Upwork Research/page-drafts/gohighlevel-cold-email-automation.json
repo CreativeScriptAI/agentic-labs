@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "gohighlevel-cold-email-automation"
+  ],
+  "title": "GoHighLevel Cold Email Automation That Stops When They Reply | Agentic AI Labs",
+  "description": "EmailPipeline turns GoHighLevel plus n8n into a cold-email engine that writes personalized follow-ups, moves contacts through pipeline stages, and kills the sequence on reply.",
+  "heroLabel": "GoHighLevel Cold Email Automation",
+  "heroHeadline": "A lead replied three days ago. Your sequence is still emailing them.",
+  "heroSubheadline": "EmailPipeline runs cold email inside GoHighLevel with an n8n brain. It captures the lead, writes the follow-up, advances the stage, and shuts the sequence off the moment someone answers.",
+  "heroExplainerCaption": "One lead, start to reply. Every step runs without you touching GoHighLevel.",
+  "heroSteps": [
+    {
+      "label": "Lead lands in GoHighLevel",
+      "sub": "Form, ad, or import captured",
+      "accent": true
+    },
+    {
+      "label": "n8n enriches and drafts",
+      "sub": "Context pulled, message written",
+      "accent": false
+    },
+    {
+      "label": "AI follow-up sends",
+      "sub": "Personalized, not a mail merge",
+      "accent": false
+    },
+    {
+      "label": "Contact advances a stage",
+      "sub": "Pipeline moves on its own",
+      "accent": false
+    },
+    {
+      "label": "Reply detected, sequence stops",
+      "sub": "Kill switch fires instantly",
+      "accent": true
+    }
+  ],
+  "painTitle": "The follow-up is where deals quietly die",
+  "painPoints": [
+    "You send one cold email, get busy, and the second touch never goes out.",
+    "A prospect replies with interest, but the automated drip keeps hitting their inbox.",
+    "Every follow-up sounds identical because writing a fresh one per lead does not scale."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Leads that go cold after touch one",
+        "amount": "most of the list"
+      },
+      {
+        "label": "Warm replies buried under scheduled sends",
+        "amount": "the ones worth money"
+      },
+      {
+        "label": "Hours spent hand-writing follow-ups",
+        "amount": "your best selling time"
+      }
+    ],
+    "total": "Your pipeline leaks at the exact moment interest is highest",
+    "solvesFor": "consistent, personalized follow-up that knows when to stop",
+    "source": "EmailPipeline, built by Agentic AI Labs on GoHighLevel plus n8n"
+  },
+  "statusQuoTitle": "Native GoHighLevel drips versus EmailPipeline",
+  "statusQuoItems": [
+    "Stock GHL sequences fire on a fixed timer whether or not the person already answered you.",
+    "Every contact gets the same templated body, so personalization stops at the first name token.",
+    "Moving a contact to the next stage is a manual drag, or a brittle workflow you babysit."
+  ],
+  "statusQuoBars": {
+    "title": "How the follow-up actually behaves",
+    "bars": [
+      {
+        "label": "Native GHL timer drip",
+        "valueLabel": "keeps sending after reply",
+        "widthPercent": 85,
+        "accent": false
+      },
+      {
+        "label": "Generic template merge",
+        "valueLabel": "same body for everyone",
+        "widthPercent": 70,
+        "accent": false
+      },
+      {
+        "label": "EmailPipeline",
+        "valueLabel": "personalized, stops on reply",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Buyers reward the reply, not the volume",
+    "body": "The teams winning cold outreach are not the ones sending more. They are the ones who follow up personally and get out of the way the second a human responds. That is a workflow problem, and it is exactly what an event-driven pipeline solves.",
+    "source": "Agentic AI Labs field notes",
+    "date": "2026",
+    "stat": "Reply-aware",
+    "statLabel": "the sequence reacts to behavior, not a calendar"
+  },
+  "solutionTitle": "What EmailPipeline actually does",
+  "solutionItems": [
+    "Captures every lead into GoHighLevel from your forms, ads, and imports automatically.",
+    "Uses n8n to enrich each contact and draft a follow-up written for that person, not a template.",
+    "Progresses contacts through your pipeline stages as they engage, no manual dragging.",
+    "Watches for any reply and trips a kill switch that halts the sequence instantly."
+  ],
+  "layers": [
+    {
+      "title": "Capture and orchestration",
+      "body": "GoHighLevel stays your system of record for contacts, pipelines, and sending. n8n sits alongside it as the orchestration layer, triggering on new leads and reply events so the whole flow is event-driven instead of timer-driven."
+    },
+    {
+      "title": "AI copy layer",
+      "body": "Each follow-up is drafted per contact using frontier models (we build with Claude Opus 4.8 and GPT Codex), grounded in the lead's own context. You review the tone and guardrails once, then it writes at scale without sounding like a mail merge."
+    },
+    {
+      "title": "The kill switch",
+      "body": "A reply from a prospect is the single most important signal in cold email. EmailPipeline listens for it and stops the sequence the instant it lands, so a warm human never gets machine-gunned by a scheduled drip."
+    }
+  ],
+  "proofTitle": "Why this holds up in production",
+  "proofBullets": [
+    "It is built on GoHighLevel, so it lives inside the CRM your agency already runs, not a bolt-on inbox.",
+    "The n8n layer is event-driven, so follow-ups and stage moves react to real behavior instead of a fixed clock.",
+    "The reply kill switch means no prospect keeps getting drip emails after they have already answered you."
+  ],
+  "proofStats": [
+    {
+      "stat": "GHL-native",
+      "label": "runs inside your existing CRM and pipelines"
+    },
+    {
+      "stat": "Event-driven",
+      "label": "n8n triggers on leads and replies, not timers"
+    },
+    {
+      "stat": "Auto-stop",
+      "label": "kill switch halts the sequence on reply"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Where your follow-up effort goes",
+    "bars": [
+      {
+        "label": "Manual follow-up by hand",
+        "valueLabel": "you write every one",
+        "widthPercent": 95,
+        "accent": false
+      },
+      {
+        "label": "Basic GHL automation",
+        "valueLabel": "sends but never listens",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "EmailPipeline",
+        "valueLabel": "writes, moves, and stops itself",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Does this replace GoHighLevel or run on top of it?",
+      "answer": "It runs on top of it. GoHighLevel stays your CRM, sender, and pipeline. EmailPipeline adds an n8n orchestration layer plus an AI copy layer so your existing setup does more without being ripped out."
+    },
+    {
+      "question": "How is the follow-up copy actually personalized?",
+      "answer": "n8n enriches each contact, then a frontier model (we build with Claude Opus 4.8 and GPT Codex) drafts a message grounded in that lead's context. You set the tone and guardrails once, and it writes per contact rather than reusing one template."
+    },
+    {
+      "question": "What exactly is the kill switch?",
+      "answer": "It is a reply detector. The moment a prospect responds, EmailPipeline stops their sequence so no automated follow-up goes out to someone who is already talking to you. It prevents the classic bad look of drips landing after a live conversation started."
+    },
+    {
+      "question": "Will it move contacts through my pipeline stages?",
+      "answer": "Yes. As a contact engages, EmailPipeline advances them through the GoHighLevel stages you define, so the board reflects reality without anyone dragging cards manually."
+    },
+    {
+      "question": "Can you build it around my existing GoHighLevel account?",
+      "answer": "Yes. Agentic AI Labs builds EmailPipeline into your current GoHighLevel workspace and pipelines. Reach us at aditya@tryagentikai.com to scope your sequences and stages."
+    }
+  ],
+  "faqStat": {
+    "stat": "Reply-aware",
+    "label": "the sequence stops itself the moment a human answers"
+  },
+  "ctaLabel": "Book a build call for your GoHighLevel cold email",
+  "ctaSupportText": "We map your pipeline stages, wire the n8n layer, and turn on the kill switch. Reach Agentic AI Labs at aditya@tryagentikai.com.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "AI SDR for GHL Agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    },
+    {
+      "label": "n8n Content Automation Pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    }
+  ],
+  "keywords": [
+    "gohighlevel cold email automation",
+    "gohighlevel cold email sequence",
+    "ghl cold email follow up automation",
+    "gohighlevel n8n integration",
+    "ai cold email for gohighlevel",
+    "gohighlevel email drip automation",
+    "automated follow up gohighlevel",
+    "ai sdr gohighlevel",
+    "cold email kill switch on reply",
+    "gohighlevel pipeline automation"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/gohighlevel-cold-email-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "n8n"
+  ]
+}

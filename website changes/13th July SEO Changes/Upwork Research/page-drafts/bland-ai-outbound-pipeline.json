@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "bland-ai-outbound-pipeline"
+  ],
+  "title": "Bland AI Outbound Calling Pipeline for GoHighLevel | Agentic AI Labs",
+  "description": "We build Bland AI outbound calling pipelines wired into GoHighLevel: dials your lists, qualifies live, books meetings, logs every outcome to the CRM.",
+  "heroLabel": "Bland AI Outbound Calling",
+  "heroHeadline": "Your list has 800 leads and one person to call them.",
+  "heroSubheadline": "We build a Bland AI outbound pipeline that dials the whole list, qualifies live on the phone, books the ready ones, and writes every outcome back to GoHighLevel. You get scale without hiring a floor of dialers.",
+  "heroExplainerCaption": "List to booked meeting, fully logged in your CRM, with a kill switch you control.",
+  "heroSteps": [
+    {
+      "label": "Pull the list",
+      "sub": "Segment loads from GoHighLevel",
+      "accent": true
+    },
+    {
+      "label": "Dial at scale",
+      "sub": "Bland places concurrent outbound calls",
+      "accent": false
+    },
+    {
+      "label": "Qualify live",
+      "sub": "Agent asks, listens, branches",
+      "accent": false
+    },
+    {
+      "label": "Book or route",
+      "sub": "Calendar slot or human handoff",
+      "accent": false
+    },
+    {
+      "label": "Log every outcome",
+      "sub": "Result written to the CRM",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why your outbound stalls at the same ceiling",
+  "painPoints": [
+    "A rep can hold maybe 60 real conversations a day, so the bottom of your list never gets a first dial.",
+    "Speed decides the deal, and a list worked over three days is cold by the time anyone picks up.",
+    "Outcomes live in a rep's head and sticky notes, so your CRM never reflects what actually happened on the calls."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Leads that never get a first dial",
+        "amount": "bottom of the list"
+      },
+      {
+        "label": "Deals lost to slow follow-up",
+        "amount": "first responder wins 78%"
+      },
+      {
+        "label": "Call outcomes never logged to CRM",
+        "amount": "pipeline you cannot see"
+      }
+    ],
+    "total": "A paid list that ages faster than one team can work it",
+    "solvesFor": "every lead dialed fast, qualified, and logged before it goes cold",
+    "source": "HBR/MIT lead response study"
+  },
+  "statusQuoTitle": "The usual ways to scale outbound, and where they break",
+  "statusQuoItems": [
+    "Hiring more dialers raises payroll and management load before it raises connect rates, and quality drifts by the week.",
+    "Cheap offshore call centers read a script but cannot branch on what the prospect actually says.",
+    "DIY power dialers still cap out at one human per call, so the list still ages faster than you can work it."
+  ],
+  "statusQuoBars": {
+    "title": "Coverage on an 800-lead list, first pass",
+    "bars": [
+      {
+        "label": "One rep, manual dialing",
+        "valueLabel": "never finishes",
+        "widthPercent": 25,
+        "accent": false
+      },
+      {
+        "label": "Offshore call center",
+        "valueLabel": "reads script, cannot branch",
+        "widthPercent": 45,
+        "accent": false
+      },
+      {
+        "label": "Bland pipeline into GoHighLevel",
+        "valueLabel": "whole list, same day",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Speed to first contact is the single biggest lever in outbound",
+    "body": "Analysis of 3.5 million leads found calling within one minute lifted conversion by 391% against a two-minute wait. Yet the average business takes 47 hours to respond, and lead quality drops 80% after the first five minutes. An always-on dialer is the only way to hold that window at volume.",
+    "source": "Velocify (3.5M leads); HBR/MIT lead response study",
+    "date": "2026",
+    "stat": "391%",
+    "statLabel": "conversion lift calling within 1 minute vs a 2-minute wait"
+  },
+  "solutionTitle": "What we actually build",
+  "solutionItems": [
+    "A Bland AI outbound agent that dials your GoHighLevel segments at volume and holds a real qualifying conversation, not a recording.",
+    "Live branching so the agent asks, listens, and routes based on the answer: book, disqualify, or hand to a human.",
+    "Two-way CRM sync that writes call outcome, transcript, and next step to the GoHighLevel contact on every dial.",
+    "Guardrails and a kill switch: call caps, quiet hours, retry limits, and a one-click stop you control."
+  ],
+  "layers": [
+    {
+      "title": "The dialer",
+      "body": "Bland AI runs the outbound calls. We picked it because it is the cheapest option at outbound scale, so cost per dial stays low even when you are working thousands of contacts. Concurrency means the whole list gets a first call the same day it loads, while speed still matters most."
+    },
+    {
+      "title": "The brain",
+      "body": "We design and test the conversation logic against real objections, then compile the agent prompts and branching with Claude Opus 4.8 and GPT Codex. That is what lets the agent qualify live, handle a curveball answer, and know when to book versus hand off, instead of dead-reading a script."
+    },
+    {
+      "title": "The system of record",
+      "body": "GoHighLevel stays the source of truth. Every call writes outcome, transcript, and next action back to the contact, and booked meetings drop straight onto the calendar. You manage one CRM, not a pile of call logs, and you can see the pipeline the pipeline is building."
+    }
+  ],
+  "proofTitle": "Why speed-to-lead is the whole game",
+  "proofBullets": [
+    "Responding inside five minutes makes a lead 21 times more likely to qualify, so an always-on dialer beats a rep who gets to the list tomorrow.",
+    "Get to leads within one minute instead of waiting two and conversion climbs 391%, which is exactly the window a pipeline can hold and a human cannot.",
+    "Whoever calls first takes most of the business, and a pipeline that never sleeps is first far more often than a team that clocks out."
+  ],
+  "proofStats": [
+    {
+      "stat": "21x",
+      "label": "more likely to qualify when you respond within 5 minutes (HBR/MIT)"
+    },
+    {
+      "stat": "391%",
+      "label": "conversion lift calling within 1 minute vs a 2-minute wait (Velocify)"
+    },
+    {
+      "stat": "78%",
+      "label": "of deals won by the first responder"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Time from lead landing to first live call",
+    "bars": [
+      {
+        "label": "Average business response",
+        "valueLabel": "47 hours",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Busy human rep, good day",
+        "valueLabel": "hours, if the list is short",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Bland pipeline, always on",
+        "valueLabel": "inside the 5-minute window",
+        "widthPercent": 8,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Why Bland AI instead of Vapi or Retell for outbound?",
+      "answer": "For high-volume outbound specifically, Bland is the cheapest per dial at scale, and cost per call is what decides whether working a big list is profitable. We also build on Vapi and Retell when a use case fits them better, so we pick the dialer for the job rather than forcing one platform."
+    },
+    {
+      "question": "Will it actually qualify leads, or just read a script?",
+      "answer": "It qualifies. The conversation logic branches on what the prospect says, so the agent can ask a follow-up, handle an objection, disqualify, or book. We design and compile that logic with Claude Opus 4.8 and GPT Codex, then test it against your real objections before it ever dials a live lead."
+    },
+    {
+      "question": "How does it connect to GoHighLevel?",
+      "answer": "It runs two-way. The pipeline pulls the segment to dial from your GoHighLevel account and writes the outcome, transcript, and next step back to each contact after the call. Booked meetings land on your calendar automatically, so the CRM stays the single source of truth."
+    },
+    {
+      "question": "What stops it from calling at the wrong time or too often?",
+      "answer": "Guardrails. We set call caps, quiet hours, per-contact retry limits, and a one-click kill switch that stops the whole pipeline instantly. You stay in control of pace and compliance, and nothing runs that you have not approved."
+    },
+    {
+      "question": "Do you build the whole thing for us or hand us a template?",
+      "answer": "We build and run it done-for-you: the Bland agent, the GoHighLevel wiring, the guardrails, and the outcome logging. You bring the list and the offer. We deliver a working pipeline and tune the conversation logic against real call results after launch."
+    }
+  ],
+  "faqStat": {
+    "stat": "47 hrs",
+    "label": "average business response time to a new lead, versus minutes for an always-on pipeline"
+  },
+  "ctaLabel": "Book a pipeline build call",
+  "ctaSupportText": "Bring your list and your offer. We map the outbound pipeline, show you the Bland plus GoHighLevel build, and scope a done-for-you rollout with guardrails and a kill switch from day one.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI voice pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "AI SDR for GoHighLevel agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    },
+    {
+      "label": "Bland AI alternative",
+      "href": "/bland-ai-alternative"
+    }
+  ],
+  "keywords": [
+    "bland ai outbound calling",
+    "bland ai gohighlevel",
+    "outbound calling pipeline",
+    "ai outbound dialer",
+    "bland ai lead qualification",
+    "high volume outbound ai calls",
+    "ai cold calling automation",
+    "gohighlevel outbound automation",
+    "bland ai crm integration",
+    "done for you outbound ai calling"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/bland-ai-outbound-pipeline/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "bland"
+  ]
+}

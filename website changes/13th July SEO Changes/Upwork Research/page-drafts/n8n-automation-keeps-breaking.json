@@ -1,0 +1,231 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "n8n-automation-keeps-breaking"
+  ],
+  "title": "Your n8n Automation Keeps Breaking. We Rebuild It Production-Grade | Agentic AI Labs",
+  "description": "Your self-built n8n automation keeps breaking: token expiry, silent failures, rate limits, API changes. We rebuild it production-grade with monitoring, alerts, and support.",
+  "heroLabel": "n8n Rebuild and Rescue",
+  "heroHeadline": "The workflow ran fine for weeks, then quietly stopped, and nobody noticed until a client did.",
+  "heroSubheadline": "You built an n8n automation that worked in testing. In production it breaks on token expiry, silent errors, and rate limits. We rebuild it to run unattended, tell you the moment something fails, and stay fixed.",
+  "heroExplainerCaption": "We take your fragile workflow and make it production-grade. Same job, but it recovers from failures, alerts you the moment it cannot, and does not die when an API changes underneath it.",
+  "heroSteps": [
+    {
+      "label": "Audit your workflow",
+      "sub": "Find every silent failure point",
+      "accent": true
+    },
+    {
+      "label": "Rebuild the logic",
+      "sub": "Retries, auth refresh, error branches",
+      "accent": false
+    },
+    {
+      "label": "Add monitoring",
+      "sub": "Every run watched, not assumed",
+      "accent": false
+    },
+    {
+      "label": "Wire up alerts",
+      "sub": "You hear about it first",
+      "accent": false
+    },
+    {
+      "label": "Ongoing support",
+      "sub": "We fix it when APIs shift",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why a working automation keeps dying in production",
+  "painPoints": [
+    "An OAuth token expires and the whole workflow stops, but nothing tells you it stopped.",
+    "A rate limit or a timeout throws once, the run fails silently, and the data just never arrives.",
+    "A platform ships an API change overnight, and a node that worked yesterday now returns an error."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Records that silently never synced while the workflow sat broken",
+        "amount": "unknown until a client flags it"
+      },
+      {
+        "label": "Time lost re-checking a workflow you cannot trust to run itself",
+        "amount": "a recurring tax on your week"
+      },
+      {
+        "label": "Trust cost when a customer finds the failure before you do",
+        "amount": "hard to win back"
+      },
+      {
+        "label": "Nights and weekends spent patching nodes instead of running the business",
+        "amount": "your own hours"
+      }
+    ],
+    "total": "Every silent failure is work you thought was done, quietly undone",
+    "solvesFor": "an automation you can trust to run without you watching it",
+    "source": "Common failure patterns in self-built n8n workflows"
+  },
+  "statusQuoTitle": "Your DIY workflow versus a production-grade rebuild",
+  "statusQuoItems": [
+    "A DIY workflow assumes the happy path, so one expired token or timeout takes the whole thing down.",
+    "When it fails, it fails quietly, and you find out hours or days later from someone else.",
+    "A production build expects failure: it retries, refreshes auth, isolates errors, and alerts you when it truly cannot recover."
+  ],
+  "statusQuoBars": {
+    "title": "What happens when a node fails mid-run",
+    "bars": [
+      {
+        "label": "Self-built happy-path workflow",
+        "valueLabel": "breaks silently, stops running",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Workflow with a bit of error handling bolted on",
+        "valueLabel": "sometimes recovers, still misses failures",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Production-grade rebuild",
+        "valueLabel": "retries, recovers, alerts you if not",
+        "widthPercent": 18,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "The gap is not n8n, it is production engineering",
+    "body": "n8n is powerful enough to run a real business process. The reason self-built workflows break is that they are built for the demo, not for production. No retries, no auth refresh, no monitoring, no alerting. The tool did not fail. The workflow was never hardened for the conditions it actually runs in.",
+    "source": "Observed patterns across self-built automation rescues",
+    "date": "2026",
+    "stat": "Silent",
+    "statLabel": "failures are the ones that cost you most, because you do not see them coming"
+  },
+  "solutionTitle": "What we build when we rebuild your workflow",
+  "solutionItems": [
+    "A full audit of your existing workflow that names every point where it can fail silently.",
+    "A rebuild with real error handling: retries with backoff, automatic auth and token refresh, and isolated error branches so one bad node does not kill the run.",
+    "Monitoring on every execution, so a failed or stalled run is caught by the system, not by a client.",
+    "Alerts that reach you the moment something needs a human, plus ongoing support when a platform changes its API."
+  ],
+  "layers": [
+    {
+      "title": "The resilience layer",
+      "body": "We rebuild the workflow to expect failure. Every external call gets retries with backoff, timeouts are handled instead of ignored, and OAuth tokens refresh automatically before they expire. Error branches isolate a failing node so the rest of the run still completes instead of collapsing."
+    },
+    {
+      "title": "The visibility layer",
+      "body": "Every execution is monitored. When a run fails, stalls, or returns something unexpected, the system catches it and alerts you through the channel you actually watch. You stop finding out about breakages from customers, because you find out first, with the context to know what broke."
+    },
+    {
+      "title": "The support layer",
+      "body": "Platform APIs change and rate limits shift, so a production automation needs an owner. We build the logic on Claude Opus 4.8 and GPT Codex, keep the workflow documented, and stay on to fix it when something upstream moves. Your automation gets maintained instead of quietly rotting."
+    }
+  ],
+  "proofTitle": "Why the rebuild holds up where the DIY version did not",
+  "proofBullets": [
+    "We assume every external service will fail eventually, so the workflow is built to recover from token expiry, rate limits, and timeouts instead of dying on them.",
+    "You never depend on manually checking whether it ran, because monitoring watches every execution and alerts you only when a human is genuinely needed.",
+    "When a platform changes its API, you have someone who owns the fix, so a breaking change becomes a quick patch instead of a dead pipeline."
+  ],
+  "proofStats": [
+    {
+      "stat": "Built to fail safely",
+      "label": "retries, auth refresh, and error branches on every fragile call"
+    },
+    {
+      "stat": "Watched, not assumed",
+      "label": "monitoring and alerts on every single run"
+    },
+    {
+      "stat": "Owned, not abandoned",
+      "label": "ongoing support when platform APIs change"
+    }
+  ],
+  "comparisonBars": {
+    "title": "How each version handles a token that expired overnight",
+    "bars": [
+      {
+        "label": "Original DIY workflow",
+        "valueLabel": "stops, stays broken until noticed",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Workflow with manual checks",
+        "valueLabel": "caught only if someone looks",
+        "widthPercent": 50,
+        "accent": false
+      },
+      {
+        "label": "Our production-grade rebuild",
+        "valueLabel": "refreshes auth or alerts you fast",
+        "widthPercent": 15,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "My n8n automation not working anymore, can you fix it instead of rebuilding it?",
+      "answer": "We start with an audit. If your existing workflow is close to sound, we harden it in place with retries, auth refresh, monitoring, and alerts. If it was built happy-path only, a clean rebuild is usually faster and cheaper than patching around problems that will keep resurfacing. We tell you which one your workflow needs before any work starts."
+    },
+    {
+      "question": "Why does my workflow keep failing silently when it tested fine?",
+      "answer": "Testing runs once, under ideal conditions. Production runs repeatedly, against services that expire tokens, throttle requests, time out, and change their APIs. A workflow built only for the happy path has nothing to catch those events, so it stops without telling anyone. Production hardening is exactly the layer that was missing."
+    },
+    {
+      "question": "Do I have to move off n8n?",
+      "answer": "No. n8n is a capable platform and we keep you on it. The problem is almost never the tool, it is that the workflow was never engineered for the conditions it runs in. We rebuild inside your existing n8n so you keep ownership and avoid a migration."
+    },
+    {
+      "question": "How will I know if something breaks after the rebuild?",
+      "answer": "That is the point of the monitoring and alert layer. Every execution is watched, and when a run fails or stalls in a way that needs a human, you get an alert through the channel you actually check. You hear about problems first, with enough context to know what happened, instead of hearing about them from a client."
+    },
+    {
+      "question": "What happens when a platform changes its API and breaks a node?",
+      "answer": "That is what the support layer is for. API changes and shifting rate limits are normal, so a production automation needs an owner. When something upstream moves, we patch the workflow. Because it is documented and built on Claude Opus 4.8 and GPT Codex, the fix is quick instead of a rebuild from scratch."
+    }
+  ],
+  "faqStat": {
+    "stat": "Silent",
+    "label": "failures are the costliest, because you find out last. We make sure you find out first."
+  },
+  "ctaLabel": "Get your broken n8n workflow rebuilt",
+  "ctaSupportText": "Send us the workflow that keeps breaking. We audit it, tell you whether to harden or rebuild, and turn it into an automation you can trust to run without you watching it.",
+  "relatedLinks": [
+    {
+      "label": "n8n Content Automation Pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "Done-For-You GoHighLevel Automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    },
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    }
+  ],
+  "keywords": [
+    "n8n automation not working",
+    "n8n automation keeps breaking",
+    "n8n workflow failing silently",
+    "fix broken n8n automation",
+    "n8n production monitoring",
+    "n8n error handling and alerts",
+    "n8n token expiry fix",
+    "n8n rate limit errors",
+    "production-grade n8n workflow",
+    "n8n workflow rescue service"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/n8n-automation-keeps-breaking/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "n8n",
+    "make",
+    "zapier"
+  ]
+}

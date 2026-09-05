@@ -1,0 +1,233 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "elevenlabs-vs-vapi"
+  ],
+  "title": "ElevenLabs vs Vapi: Voice Layer or Agent Platform? | Agentic AI Labs",
+  "description": "ElevenLabs is a voice layer and Vapi runs the agent. See where each fits, which suits you, and how we build the production voice agent around both.",
+  "canonicalUrl": {
+    "__CANONICAL__": "elevenlabs-vs-vapi"
+  },
+  "heroLabel": "ElevenLabs vs Vapi",
+  "heroHeadline": "You spent the weekend picking a tool, and the phone still is not getting answered",
+  "heroSubheadline": "The comparison has a wrong assumption baked in. ElevenLabs makes voices sound human. Vapi runs the live conversation and its logic. One is a layer, one is a platform, and a working agent usually needs both. We build the production pipeline that puts each in its right place.",
+  "heroExplainerCaption": "How a real call moves from a ringing phone to a booked outcome.",
+  "heroSteps": [
+    {
+      "label": "Call connects",
+      "sub": "Caller reaches your number",
+      "accent": true
+    },
+    {
+      "label": "Vapi orchestrates",
+      "sub": "Turn taking and call state",
+      "accent": false
+    },
+    {
+      "label": "Model reasons",
+      "sub": "Intent, answer, next step",
+      "accent": false
+    },
+    {
+      "label": "Voice renders",
+      "sub": "ElevenLabs speaks the reply",
+      "accent": false
+    },
+    {
+      "label": "Outcome logged",
+      "sub": "Booking or CRM update",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why the \"which one\" question keeps stalling",
+  "painPoints": [
+    "You are comparing a text to speech engine against a full agent platform, so every feature chart contradicts itself.",
+    "A demo voice sounds flawless in isolation, then breaks the moment it has to handle interruptions, tools, and real caller logic.",
+    "Nobody owns the middle: wiring the voice, the reasoning, the calendar, and the CRM into one call that actually closes."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Missed inbound calls",
+        "amount": "Lost bookings"
+      },
+      {
+        "label": "Weeks spent evaluating tools",
+        "amount": "Delayed launch"
+      },
+      {
+        "label": "Half-built prototype",
+        "amount": "Sunk effort"
+      }
+    ],
+    "total": "Every unanswered call is revenue walking to a competitor who picked up",
+    "solvesFor": "A live agent that answers, reasons, and books on the first ring",
+    "source": "Common friction patterns we see with SMB owners and agencies"
+  },
+  "statusQuoTitle": "What the DIY route usually looks like",
+  "statusQuoItems": [
+    "You sign up for both tools, stitch a demo together, and it works until a caller talks over it.",
+    "Voice quality, latency, and call logic all live in different dashboards with no single owner.",
+    "The prototype never crosses into production because handling edge cases is the real work."
+  ],
+  "statusQuoBars": {
+    "title": "Effort to reach a call that reliably books",
+    "bars": [
+      {
+        "label": "ElevenLabs alone",
+        "valueLabel": "Voice only, no call logic",
+        "widthPercent": 35
+      },
+      {
+        "label": "Vapi alone, self-assembled",
+        "valueLabel": "Platform, you build the rest",
+        "widthPercent": 60
+      },
+      {
+        "label": "Done-for-you production build",
+        "valueLabel": "Live and answering",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Voice agents split into layers and orchestration",
+    "body": "The market has settled into distinct roles: speech engines that render lifelike audio, and orchestration platforms that manage the live call, tools, and reasoning. Picking one as if it replaces the other is the most common early mistake teams make.",
+    "source": "Agentic AI Labs field notes",
+    "date": "2026",
+    "stat": "2 layers",
+    "statLabel": "voice and orchestration, not one choice"
+  },
+  "solutionTitle": "What we actually build for you",
+  "solutionItems": [
+    "A production voice agent on Vapi that manages turn taking, tools, and call state end to end.",
+    "The right voice layer selected per use case, with ElevenLabs where its quality earns its place.",
+    "Live integrations into your calendar, CRM, and booking flow so calls end in real outcomes.",
+    "Guardrails, fallbacks, and monitoring so the agent holds up on messy real-world calls."
+  ],
+  "layers": [
+    {
+      "title": "Voice layer",
+      "body": "ElevenLabs (or the best fit for your budget and language) renders replies that sound human, so callers stay on the line and trust the conversation."
+    },
+    {
+      "title": "Orchestration layer",
+      "body": "Vapi runs the live call: interruptions, turn taking, tool calls, and routing. This is the platform your agent actually lives inside."
+    },
+    {
+      "title": "Reasoning and build spec",
+      "body": "We architect the agent's logic against a model like Claude Opus 4.8, defining intents, escalation paths, and CRM actions so each call moves toward a booking."
+    }
+  ],
+  "proofTitle": "Why teams hand this to us instead of assembling it",
+  "proofBullets": [
+    "We ship the full call pipeline, not a demo, so the agent survives real callers on day one.",
+    "You get one team owning voice, logic, and integrations, instead of three dashboards and no accountability.",
+    "We match the voice and platform choice to your use case rather than defaulting to whatever the tutorial used."
+  ],
+  "proofStats": [
+    {
+      "stat": "End to end",
+      "label": "call pipeline, not a prototype"
+    },
+    {
+      "stat": "One owner",
+      "label": "voice, logic, and integrations"
+    },
+    {
+      "stat": "Fit first",
+      "label": "tools chosen per use case"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Where each option gets you",
+    "bars": [
+      {
+        "label": "ElevenLabs by itself",
+        "valueLabel": "Great voice, no agent",
+        "widthPercent": 30
+      },
+      {
+        "label": "Vapi by itself",
+        "valueLabel": "Platform, build-it-yourself",
+        "widthPercent": 55
+      },
+      {
+        "label": "Our production build on Vapi",
+        "valueLabel": "Answering and booking live",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is it ElevenLabs versus Vapi, or do I need both?",
+      "answer": "They solve different problems. ElevenLabs is a voice (text to speech) layer that makes replies sound human. Vapi is an orchestration platform that runs the live call: turn taking, interruptions, tool calls, and routing. A production agent usually uses a voice layer inside a platform, so it is rarely an either-or choice."
+    },
+    {
+      "question": "What is ElevenLabs actually good at?",
+      "answer": "Voice quality. Its speech sounds natural across many languages and styles, which keeps callers engaged and builds trust. Where audio realism matters most, it is a strong choice for the voice layer of your agent."
+    },
+    {
+      "question": "What is Vapi actually good at?",
+      "answer": "Running the conversation. Vapi handles the real-time mechanics of a phone call: detecting speech, managing turns, calling your tools, and holding call state. It is the platform your agent runs on, and it can use different voice providers underneath, including ElevenLabs."
+    },
+    {
+      "question": "Which one should I pick if I only want one?",
+      "answer": "If you want a working phone agent, start from the orchestration platform (Vapi) and choose a voice layer inside it. ElevenLabs alone will not answer calls or book appointments. The platform is the foundation, the voice is a component within it."
+    },
+    {
+      "question": "Do you build the whole thing or just advise?",
+      "answer": "We build it. We architect the agent logic (using a model like Claude Opus 4.8 as the build spec), stand it up on Vapi, wire in the right voice layer, and connect your calendar and CRM so calls end in booked outcomes. You get a live agent, not a comparison chart."
+    }
+  ],
+  "faqStat": {
+    "stat": "2 layers",
+    "label": "voice and orchestration work together, not against each other"
+  },
+  "ctaLabel": "Get a production voice agent built for you",
+  "ctaSupportText": "Skip the tool comparison. Tell us the calls you want handled, and we will build the agent that answers, reasons, and books, with the right voice and platform underneath.",
+  "relatedLinks": [
+    {
+      "label": "AI Voice Agent",
+      "href": "/ai-voice-agent/"
+    },
+    {
+      "label": "Vapi Alternative",
+      "href": "/vapi-alternative"
+    },
+    {
+      "label": "Our Services",
+      "href": "/services/"
+    }
+  ],
+  "keywords": [
+    "elevenlabs vs vapi",
+    "elevenlabs vs vapi comparison",
+    "vapi voice agent",
+    "elevenlabs voice layer",
+    "voice agent orchestration",
+    "ai voice agent build",
+    "vapi vs elevenlabs which to use",
+    "done for you voice agent",
+    "text to speech vs voice platform"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "vapi"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop",
+      "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/voice-call-ui.svg",
+      "caption": "The agent platform in action, handling the conversation logic ElevenLabs alone does not."
+    }
+  ]
+}

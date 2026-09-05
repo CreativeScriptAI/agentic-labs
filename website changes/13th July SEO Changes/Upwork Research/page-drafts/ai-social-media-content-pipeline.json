@@ -1,0 +1,233 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "ai-social-media-content-pipeline"
+  ],
+  "title": "AI Social Media Content Pipeline: Curate, Draft, Auto-Publish | Agentic AI Labs",
+  "description": "An AI social media content pipeline that curates niche news, drafts posts in your voice, and auto-publishes to Facebook, Instagram, LinkedIn, and Threads on schedule.",
+  "heroLabel": "AI Social Media Content Pipeline",
+  "heroHeadline": "It is Tuesday again and your feed has been silent since last month.",
+  "heroSubheadline": "You know posting consistently builds trust and pipeline. You also know it never survives contact with a real workday. This is a pipeline that reads your niche, drafts the posts, waits for your yes, and ships to four networks on a schedule. You stay the voice. The busywork disappears.",
+  "heroExplainerCaption": "One n8n workflow: niche news in, approved posts out to four networks.",
+  "heroSteps": [
+    {
+      "label": "Curate niche news",
+      "sub": "Pulls fresh sources you choose",
+      "accent": true
+    },
+    {
+      "label": "Draft with AI",
+      "sub": "Posts written in your voice",
+      "accent": false
+    },
+    {
+      "label": "Review sheet",
+      "sub": "You approve or edit first",
+      "accent": false
+    },
+    {
+      "label": "Schedule slots",
+      "sub": "Queued to your posting calendar",
+      "accent": false
+    },
+    {
+      "label": "Auto-publish",
+      "sub": "Four networks, one click gone",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why the calendar keeps winning",
+  "painPoints": [
+    "You open the app to post, then a client call swallows the afternoon and the idea is gone.",
+    "Four networks each want a slightly different format, so one post quietly becomes an hour of reformatting.",
+    "The weeks you go quiet are the weeks referrals forget you exist."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Time lost per post across sourcing, writing, and reformatting",
+        "amount": "the better part of an hour"
+      },
+      {
+        "label": "Networks left dark when the week gets busy",
+        "amount": "usually most of them"
+      },
+      {
+        "label": "Warm audience attention decaying between posts",
+        "amount": "compounds downward"
+      }
+    ],
+    "total": "quiet weeks that quietly cost you top-of-mind trust",
+    "solvesFor": "consistent presence across four networks without stealing your working hours",
+    "source": "Common pattern reported by the SMB owners and agency operators we build for"
+  },
+  "statusQuoTitle": "How teams try to stay consistent today",
+  "statusQuoItems": [
+    "Posting by hand means it happens on good weeks and vanishes on busy ones.",
+    "Generic scheduling tools queue what you already wrote, but they never source ideas or draft for you.",
+    "A hired contractor adds coordination, briefs, and a bill, and still needs your review anyway."
+  ],
+  "statusQuoBars": {
+    "title": "What actually holds up week after week",
+    "bars": [
+      {
+        "label": "Manual posting when you remember",
+        "valueLabel": "breaks on busy weeks",
+        "widthPercent": 30,
+        "accent": false
+      },
+      {
+        "label": "Scheduler that only queues your drafts",
+        "valueLabel": "you still write everything",
+        "widthPercent": 45,
+        "accent": false
+      },
+      {
+        "label": "Freelancer or agency retainer",
+        "valueLabel": "cost plus coordination",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "This pipeline: curate, draft, approve, publish",
+        "valueLabel": "runs on schedule",
+        "widthPercent": 95,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Consistency, not volume, is what compounds on social",
+    "body": "Across networks, accounts that show up on a steady cadence stay in front of their audience and keep surfacing in feeds. The hard part was never knowing that. It was doing it every week without a system that removes the manual steps between idea and published post.",
+    "source": "Agentic AI Labs field observation",
+    "date": "2026",
+    "stat": "4 networks",
+    "statLabel": "published from one approval step"
+  },
+  "solutionTitle": "What we actually built for you",
+  "solutionItems": [
+    "A curation step that watches the news sources and topics in your niche, so drafts start from what is current, not from a blank page.",
+    "AI drafting that writes each post in your voice and adapts the format per network, so Instagram and LinkedIn do not get the same block of text.",
+    "A review sheet approval step where you skim, edit, or approve in one place before anything goes live, so nothing publishes without your yes.",
+    "Scheduled auto-publishing to Facebook, Instagram, LinkedIn, and Threads, so approved posts ship in your chosen slots while you do other work."
+  ],
+  "layers": [
+    {
+      "title": "Curation and drafting layer",
+      "body": "n8n pulls from the sources you pick, then the drafting runs on frontier models (Claude Opus 4.8 and GPT Codex) tuned to your voice and offers. You get posts grounded in current niche news, not recycled filler."
+    },
+    {
+      "title": "Human approval layer",
+      "body": "Every draft lands in a review sheet before it can publish. You approve, edit, or reject in one pass. This is the guardrail that keeps automation from ever posting something off-brand in your name."
+    },
+    {
+      "title": "Multi-network publishing layer",
+      "body": "Approved posts are queued and auto-published to Facebook, Instagram, LinkedIn, and Threads on your schedule, each formatted for its network. One approval becomes four consistent presences."
+    }
+  ],
+  "proofTitle": "Why this holds up in a real business",
+  "proofBullets": [
+    "Nothing reaches your audience without passing through the review sheet, so the automation extends your judgment instead of replacing it.",
+    "The whole pipeline runs on n8n, so the logic is visible, owned by you, and editable as your niche and networks change.",
+    "We draft on Claude Opus 4.8 and GPT Codex, so the writing quality is closer to your own hand than to obvious template output."
+  ],
+  "proofStats": [
+    {
+      "stat": "Human-in-loop",
+      "label": "approval before every publish"
+    },
+    {
+      "stat": "n8n",
+      "label": "transparent, owned workflow"
+    },
+    {
+      "stat": "Opus 4.8 + Codex",
+      "label": "drafting engine"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Effort per week to stay visible on four networks",
+    "bars": [
+      {
+        "label": "Doing it yourself, end to end",
+        "valueLabel": "hours you rarely have",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "Scheduler tool plus your own writing",
+        "valueLabel": "still hours of drafting",
+        "widthPercent": 65,
+        "accent": false
+      },
+      {
+        "label": "This pipeline: you just review and approve",
+        "valueLabel": "minutes to skim and ship",
+        "widthPercent": 20,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Which networks does the pipeline publish to?",
+      "answer": "Facebook, Instagram, LinkedIn, and Threads. Approved posts are formatted per network and published to each on the schedule you set, from one approval step."
+    },
+    {
+      "question": "Does anything post without my review?",
+      "answer": "No. Every draft stops at a review sheet first. You approve, edit, or reject before it can publish. The approval step is a permanent part of the pipeline, not an option we can skip."
+    },
+    {
+      "question": "Where do the post ideas come from?",
+      "answer": "From curation. The pipeline watches the news sources and topics in your niche that you choose, so drafts start from what is current in your space rather than from a blank prompt."
+    },
+    {
+      "question": "What is it built on, and can I own it?",
+      "answer": "It runs on n8n, so the full workflow is transparent and yours to keep and edit. The drafting itself runs on frontier models, Claude Opus 4.8 and GPT Codex, tuned to your voice."
+    },
+    {
+      "question": "Will the posts actually sound like me?",
+      "answer": "That is the point of the drafting layer and the review sheet together. We tune the model to your voice and past posts, and you get final say on every draft before it ships."
+    }
+  ],
+  "faqStat": {
+    "stat": "4 networks",
+    "label": "from a single approval step"
+  },
+  "ctaLabel": "Get your content pipeline built",
+  "ctaSupportText": "We map your niche sources, voice, and posting schedule, then build the n8n pipeline with your review sheet in the loop. You show up consistently across four networks without the weekly scramble.",
+  "relatedLinks": [
+    {
+      "label": "n8n content automation pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "Done-for-you GoHighLevel automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    },
+    {
+      "label": "AI SDR for GoHighLevel agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    }
+  ],
+  "keywords": [
+    "ai social media content pipeline",
+    "ai content pipeline for social media",
+    "automate social media posting with ai",
+    "n8n social media automation",
+    "ai post scheduling facebook instagram linkedin threads",
+    "ai content curation and drafting",
+    "auto publish social media posts",
+    "social media automation for agencies",
+    "ai social media workflow n8n",
+    "done for you social media automation"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/ai-social-media-content-pipeline/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "n8n",
+    "make",
+    "zapier"
+  ]
+}

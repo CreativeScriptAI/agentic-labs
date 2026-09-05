@@ -1,0 +1,225 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "gohighlevel-instagram-dm-automation"
+  ],
+  "title": "Instagram DM Automation AI on GoHighLevel | Agentic AI Labs",
+  "description": "Turn every Instagram DM and comment into a booked conversation. OS.1 answers from your knowledge base, fires keyword replies, and syncs leads into GoHighLevel.",
+  "heroLabel": "Instagram DM Automation AI, powered by OS.1",
+  "heroHeadline": "Someone asked your price at 11pm. Your reply landed at 9am.",
+  "heroSubheadline": "By morning that buyer already messaged three of your competitors. OS.1 answers the second the DM lands, replies to comments the same way, and drops the lead into GoHighLevel so nothing waits on you.",
+  "heroExplainerCaption": "How a DM becomes a booked lead, end to end.",
+  "heroSteps": [
+    {
+      "label": "DM or comment lands",
+      "sub": "On any post, story, or inbox",
+      "accent": true
+    },
+    {
+      "label": "OS.1 reads intent",
+      "sub": "Question, price, or objection",
+      "accent": false
+    },
+    {
+      "label": "Answer from your knowledge base",
+      "sub": "Your words, your offers",
+      "accent": false
+    },
+    {
+      "label": "Keyword fires the right reply",
+      "sub": "Trigger word, instant response",
+      "accent": false
+    },
+    {
+      "label": "Lead syncs into GoHighLevel",
+      "sub": "Tagged, routed, ready to close",
+      "accent": true
+    }
+  ],
+  "painTitle": "The gap between the message and your reply is where the sale dies",
+  "painPoints": [
+    "A prospect comments \"price?\" on your best post and hears nothing back for hours.",
+    "Your team copies and pastes the same three answers into DMs all day.",
+    "Buyers who message after hours assume you are closed and move on."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "DMs left unread past the buying moment",
+        "amount": "cold by morning"
+      },
+      {
+        "label": "Comments with buying intent, no reply",
+        "amount": "scrolled past"
+      },
+      {
+        "label": "Owner hours spent answering the same questions",
+        "amount": "unbillable"
+      }
+    ],
+    "total": "Every slow reply is revenue quietly walking to a competitor",
+    "solvesFor": "Instant, on-brand answers on every DM and comment, day or night",
+    "source": "Composite of SMB and agency Instagram inbox patterns we automate"
+  },
+  "statusQuoTitle": "Manual inbox versus OS.1 on autopilot",
+  "statusQuoItems": [
+    "Manual replies depend on someone being awake and free.",
+    "Off-the-shelf DM bots send rigid flows that read like a robot.",
+    "Neither one puts the lead into your CRM where the follow-up lives."
+  ],
+  "statusQuoBars": {
+    "title": "Speed from message to on-brand reply",
+    "bars": [
+      {
+        "label": "You, replying by hand",
+        "valueLabel": "whenever you see it",
+        "widthPercent": 30,
+        "accent": false
+      },
+      {
+        "label": "Generic DM flow tool",
+        "valueLabel": "fast but robotic",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "OS.1 on GoHighLevel",
+        "valueLabel": "instant, in your voice",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Instagram is now a primary inbox for buying, not just browsing",
+    "body": "Buyers increasingly open a DM or drop a comment instead of filling out a form. The account that answers first, in a real voice, wins the conversation. Speed and tone are the whole game.",
+    "source": "Agentic AI Labs field observations across client accounts",
+    "date": "July 2026",
+    "stat": "First reply",
+    "statLabel": "decides who gets the sale"
+  },
+  "solutionTitle": "What OS.1 actually runs on your Instagram",
+  "solutionItems": [
+    "OS.1 answers every incoming DM straight from a knowledge base you upload, in your brand voice.",
+    "Keyword triggers on posts and DMs fire the exact reply you set, automatically.",
+    "Comment automation turns public replies into private DM conversations.",
+    "Qualified leads flow into GoHighLevel, tagged and routed for follow-up."
+  ],
+  "layers": [
+    {
+      "title": "OS.1, the automation engine",
+      "body": "OS.1 is our in-house tool built for Meta and text-based automation. It reads each message, decides intent, and answers from your uploaded knowledge base. It is the engine behind every DM and comment reply on this page."
+    },
+    {
+      "title": "GoHighLevel, the CRM and workflow layer",
+      "body": "OS.1 plugs into GoHighLevel as the system of record. Every conversation becomes a contact with tags, pipeline stage, and workflow triggers, so the same lead your DM caught can be nurtured, booked, and closed without leaving your CRM."
+    },
+    {
+      "title": "Built on frontier models",
+      "body": "The reasoning behind OS.1 is built with Claude Opus 4.8 and GPT Codex, so replies understand nuance, handle objections, and stay on-brand instead of dumping a canned script."
+    }
+  ],
+  "proofTitle": "Why this holds up in a real inbox",
+  "proofBullets": [
+    "Answers come from a knowledge base you control, so the AI never freelances facts about your offers.",
+    "Keyword triggers mean the right response fires every time, whether it is a comment or a DM.",
+    "Because it lives on GoHighLevel, every captured lead is already in your follow-up system."
+  ],
+  "proofStats": [
+    {
+      "stat": "Your KB",
+      "label": "is the single source of every answer"
+    },
+    {
+      "stat": "Keyword",
+      "label": "triggered replies on posts and DMs"
+    },
+    {
+      "stat": "Native",
+      "label": "GoHighLevel contact and workflow sync"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Coverage of the full DM-to-CRM journey",
+    "bars": [
+      {
+        "label": "Manual team",
+        "valueLabel": "gaps after hours",
+        "widthPercent": 35,
+        "accent": false
+      },
+      {
+        "label": "Standalone DM bot",
+        "valueLabel": "replies only, no CRM",
+        "widthPercent": 50,
+        "accent": false
+      },
+      {
+        "label": "OS.1 plus GoHighLevel",
+        "valueLabel": "reply plus capture plus follow-up",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "How does the AI know what to say in a DM?",
+      "answer": "You upload a knowledge base with your offers, pricing rules, FAQs, and tone. OS.1 answers only from that source, so it stays accurate and on-brand instead of making things up."
+    },
+    {
+      "question": "Can it reply to comments on my posts, not just DMs?",
+      "answer": "Yes. You set keyword triggers on posts and OS.1 fires the reply you defined, then can move the conversation into a private DM to keep qualifying the lead."
+    },
+    {
+      "question": "Where do the leads go after the conversation?",
+      "answer": "Every qualified conversation syncs into GoHighLevel as a contact with tags and pipeline placement, so your existing workflows and follow-up sequences pick it up automatically."
+    },
+    {
+      "question": "Will it sound like a robot?",
+      "answer": "No. OS.1 is built with Claude Opus 4.8 and GPT Codex, so it reads intent and answers in your voice. It handles questions and objections rather than pushing a rigid button flow."
+    },
+    {
+      "question": "What do I need to have in place to start?",
+      "answer": "An Instagram business account, a GoHighLevel account, and the raw material for your knowledge base. We handle the OS.1 setup, keyword mapping, and the GoHighLevel integration."
+    }
+  ],
+  "faqStat": {
+    "stat": "OS.1",
+    "label": "powers every reply, GoHighLevel holds the lead"
+  },
+  "ctaLabel": "Book a DM automation walkthrough",
+  "ctaSupportText": "See OS.1 answer a live DM from a sample knowledge base and drop the lead into GoHighLevel, in one call.",
+  "relatedLinks": [
+    {
+      "label": "AI voice agent for GoHighLevel",
+      "href": "/ai-voice-agent-for-gohighlevel"
+    },
+    {
+      "label": "AI SDR for GHL agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    },
+    {
+      "label": "Best AI for GoHighLevel agencies",
+      "href": "/best-ai-for-gohighlevel-agencies"
+    }
+  ],
+  "keywords": [
+    "instagram dm automation ai",
+    "gohighlevel instagram dm automation",
+    "instagram comment automation",
+    "ai instagram dm bot",
+    "automate instagram dms gohighlevel",
+    "instagram lead capture ai",
+    "keyword trigger dm automation",
+    "ai dm replies from knowledge base",
+    "gohighlevel instagram integration",
+    "instagram automation for agencies"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/gohighlevel-instagram-dm-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel"
+  ]
+}

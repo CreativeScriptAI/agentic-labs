@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "make-zoom-proposal-automation"
+  ],
+  "title": "Make.com Zoom Automation: Auto-Send Proposals After Every Call | Agentic AI Labs",
+  "description": "Make.com Zoom automation that transcribes the call, drafts the proposal, and emails it through GoHighLevel the moment your meeting ends. Done-for-you build.",
+  "heroLabel": "Make.com Zoom Automation",
+  "heroHeadline": "The call ended an hour ago and the proposal is still a blank page.",
+  "heroSubheadline": "You just ran a sharp discovery call. Now the follow-up sits in a tab while the prospect's interest quietly cools. We wire Make.com into Zoom so the proposal writes itself and lands in their inbox the moment you hang up.",
+  "heroExplainerCaption": "One Make.com scenario carries the meeting from Zoom recording to a sent proposal, with no manual hand-off anywhere in the middle.",
+  "heroSteps": [
+    {
+      "label": "Zoom meeting ends",
+      "sub": "Recording fires the Make scenario",
+      "accent": true
+    },
+    {
+      "label": "AssemblyAI transcribes",
+      "sub": "Full call becomes clean text",
+      "accent": false
+    },
+    {
+      "label": "LLM drafts the proposal",
+      "sub": "Scope and price from the conversation",
+      "accent": false
+    },
+    {
+      "label": "GoHighLevel matches contact",
+      "sub": "Proposal attached to the right record",
+      "accent": false
+    },
+    {
+      "label": "Email sends itself",
+      "sub": "Prospect reads it while warm",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why strong calls still go cold",
+  "painPoints": [
+    "The best moment to send a proposal is right after the call, which is exactly when you are drained and already pulled toward the next thing.",
+    "Rebuilding scope and pricing from memory lets details drift, and a rushed document reads like a rushed document.",
+    "By the time the follow-up finally goes out that evening, the prospect has cooled and is weighing whoever replied first."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Discovery calls where the follow-up slips past same-day",
+        "amount": "momentum bleeds out"
+      },
+      {
+        "label": "Proposals written from memory instead of the transcript",
+        "amount": "scope gaps and pricing drift"
+      },
+      {
+        "label": "Warm prospects left waiting on the document",
+        "amount": "attention lost to faster competitors"
+      }
+    ],
+    "total": "Won deals that quietly turn into ghosted threads",
+    "solvesFor": "Every call turned into a same-minute proposal, while the prospect is still leaning in",
+    "source": "Common pattern across SMB and agency sales desks we build for"
+  },
+  "statusQuoTitle": "How teams handle post-call proposals today",
+  "statusQuoItems": [
+    "Manual write-ups depend on the rep having energy left and remembering the details, so quality swings call to call.",
+    "Template-only tools spit out generic documents that ignore what was actually said on the call.",
+    "Our Make.com build reads the real transcript and sends a tailored proposal before the rep opens their laptop."
+  ],
+  "statusQuoBars": {
+    "title": "Time from hang-up to proposal in the prospect's inbox",
+    "bars": [
+      {
+        "label": "Write it yourself later",
+        "valueLabel": "hours to next day",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "Generic proposal template",
+        "valueLabel": "fast but off-target",
+        "widthPercent": 50,
+        "accent": false
+      },
+      {
+        "label": "Make.com Zoom automation (us)",
+        "valueLabel": "minutes, tailored",
+        "widthPercent": 12,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Speed to follow-up is now the deciding factor in competitive deals",
+    "body": "Buyers increasingly reward whoever responds first while the conversation is fresh. When a tailored proposal arrives within minutes of the call, you set the anchor before anyone else replies. When it arrives the next day, you are one of several tabs the prospect forgot to open.",
+    "source": "Aggregated B2B sales response-time research",
+    "date": "2026",
+    "stat": "First to respond",
+    "statLabel": "tends to win the deal"
+  },
+  "solutionTitle": "What we actually build into your Make.com scenario",
+  "solutionItems": [
+    "A Zoom trigger that fires the moment the recording is ready, so nothing waits on a human clicking a button.",
+    "AssemblyAI transcription that turns the full call into clean, structured text the model can reason over.",
+    "An LLM step that drafts the proposal from what was said: scope, deliverables, and pricing grounded in the actual conversation.",
+    "A GoHighLevel step that finds the right contact, logs the proposal, and sends the email under your brand automatically."
+  ],
+  "layers": [
+    {
+      "title": "Capture and transcribe",
+      "body": "The Zoom recording triggers the Make.com scenario and AssemblyAI transcribes the call end to end. No copy-paste, no waiting for a human to kick things off. The transcript becomes the single source of truth for everything downstream."
+    },
+    {
+      "title": "Draft with a frontier model",
+      "body": "We generate the proposal with Claude Opus 4.8, with GPT Codex handling the scenario logic and edge-case wiring. The model pulls scope, deliverables, and pricing signals from the transcript so the document reflects the real conversation, not a generic template."
+    },
+    {
+      "title": "Match and send through GoHighLevel",
+      "body": "The scenario locates the contact in GoHighLevel, attaches the proposal to their record, and sends the email under your domain and branding. The rep sees a sent, logged follow-up before they have even closed the Zoom window."
+    }
+  ],
+  "proofTitle": "Why this build holds up in production",
+  "proofBullets": [
+    "It runs on the tools you already pay for, so there is no new platform for your team to learn or maintain.",
+    "The proposal is grounded in the transcript, so it references what the prospect actually asked for instead of boilerplate.",
+    "Every run is logged in GoHighLevel, so you can see exactly what went out, to whom, and when."
+  ],
+  "proofStats": [
+    {
+      "stat": "Your stack",
+      "label": "Make.com, Zoom, AssemblyAI, GoHighLevel"
+    },
+    {
+      "stat": "Transcript-grounded",
+      "label": "proposals reflect the real call"
+    },
+    {
+      "stat": "Fully logged",
+      "label": "every send tracked in your CRM"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Where the follow-up effort actually lands",
+    "bars": [
+      {
+        "label": "Manual post-call workflow",
+        "valueLabel": "rep does all of it",
+        "widthPercent": 95,
+        "accent": false
+      },
+      {
+        "label": "Virtual assistant writes it up",
+        "valueLabel": "faster but still hours",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Make.com automation (us)",
+        "valueLabel": "runs itself",
+        "widthPercent": 8,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Does this work with my existing Zoom and GoHighLevel accounts?",
+      "answer": "Yes. We build the scenario on top of the accounts you already have. Zoom provides the recording trigger, GoHighLevel holds your contacts and sends the email, and Make.com orchestrates the flow between them. No migration required."
+    },
+    {
+      "question": "How accurate is the transcription and proposal?",
+      "answer": "AssemblyAI handles the transcription and performs well on real sales calls. The proposal is drafted by Claude Opus 4.8, with GPT Codex used to build and harden the scenario logic. Because the draft is grounded in the actual transcript, it references what was discussed rather than generic filler."
+    },
+    {
+      "question": "Can I review the proposal before it sends?",
+      "answer": "Yes. We can add a review-and-approve step so a draft lands in front of you first, or run it fully automatic for speed. Most teams start with a review gate and switch to auto-send once they trust the output."
+    },
+    {
+      "question": "What happens on calls where no proposal makes sense?",
+      "answer": "We add guardrails so the scenario only generates and sends when the call qualifies, for example when a real scope was discussed. Internal syncs and unqualified calls are skipped so your prospects never get an irrelevant document."
+    },
+    {
+      "question": "How long does it take you to build this for us?",
+      "answer": "It is a done-for-you build. We handle the Make.com scenario, the AssemblyAI and GoHighLevel connections, the prompt design, and testing against your real call recordings before it goes live. Timeline depends on your setup, and we scope it clearly up front."
+    }
+  ],
+  "faqStat": {
+    "stat": "Done for you",
+    "label": "we build, test, and hand over the working scenario"
+  },
+  "ctaLabel": "Get your post-call proposal automation built",
+  "ctaSupportText": "We map your Zoom, AssemblyAI, and GoHighLevel setup, then build the Make.com scenario that sends a tailored proposal the moment each call ends.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "Done-For-You GoHighLevel Automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    },
+    {
+      "label": "AI SDR for GoHighLevel Agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    }
+  ],
+  "keywords": [
+    "make.com zoom automation",
+    "make.com zoom proposal automation",
+    "automate proposals after zoom calls",
+    "zoom transcript to proposal",
+    "assemblyai make.com integration",
+    "gohighlevel proposal automation",
+    "post-meeting follow-up automation",
+    "make.com sales automation",
+    "auto send proposal after meeting",
+    "zoom gohighlevel automation"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/make-zoom-proposal-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "make",
+    "gohighlevel"
+  ]
+}

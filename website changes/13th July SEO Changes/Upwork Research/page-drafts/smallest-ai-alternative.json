@@ -1,0 +1,238 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "smallest-ai-alternative"
+  ],
+  "title": "smallest.ai Alternative: Done-for-You Production Voice Agents | Agentic AI Labs",
+  "description": "Evaluating smallest.ai for voice? We build your full production voice agent: telephony, conversation logic, CRM write-back, and automated follow-up included.",
+  "canonicalUrl": {
+    "__CANONICAL__": "smallest-ai-alternative"
+  },
+  "heroLabel": "A smallest.ai alternative for teams that need a working system",
+  "heroHeadline": "A perfect voice in the demo does not answer your phones.",
+  "heroSubheadline": "smallest.ai gives you a fast, natural voice model behind an API. We take that quality and wire it into a live agent that answers calls, runs the conversation, writes every detail to your CRM, and follows up on its own. You get a working system, not a TTS integration project sitting half-finished on a branch.",
+  "heroExplainerCaption": "How we take you from a voice model to booked appointments.",
+  "heroSteps": [
+    {
+      "label": "Telephony connected",
+      "sub": "Numbers, SIP, call routing live",
+      "accent": true
+    },
+    {
+      "label": "Conversation logic",
+      "sub": "Intents, objections, guardrails scripted",
+      "accent": false
+    },
+    {
+      "label": "Voice engine matched",
+      "sub": "Best-fit model per use case",
+      "accent": false
+    },
+    {
+      "label": "CRM write-back",
+      "sub": "Every call logged where you work",
+      "accent": false
+    },
+    {
+      "label": "Follow-up fires",
+      "sub": "Texts and callbacks sent automatically",
+      "accent": true
+    }
+  ],
+  "painTitle": "The voice was never the hard part",
+  "painPoints": [
+    "You have a great-sounding sample from the sandbox, but the phone number, the call routing, and the barge-in handling are still yours to figure out.",
+    "The model returns audio. It does not know your booking rules, your objection handling, or what counts as a qualified lead.",
+    "When the call ends, nothing lands in your CRM and no follow-up goes out, so the conversation evaporates the moment the caller hangs up."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Engineering time to wire telephony and the voice API into one flow",
+        "amount": "Weeks of dev"
+      },
+      {
+        "label": "Calls missed or abandoned while the build drags on",
+        "amount": "Lost bookings"
+      },
+      {
+        "label": "Rework each time the model, prompt, or CRM schema changes",
+        "amount": "Ongoing"
+      }
+    ],
+    "total": "Every call your half-built system cannot answer is a booking that goes to a competitor.",
+    "solvesFor": "the real cost of wiring a voice API into a production system yourself",
+    "source": "Agentic AI Labs"
+  },
+  "statusQuoTitle": "What \"just use the API\" actually looks like",
+  "statusQuoItems": [
+    "You start with a clean sandbox call, then spend the next month on telephony plumbing, retries, and edge cases nobody warned you about.",
+    "Your team becomes the maintenance crew for a system that has to stay up while real customers are calling.",
+    "Every new use case (booking, qualifying, rescheduling) means another round of prompt and integration work before it earns anything."
+  ],
+  "statusQuoBars": {
+    "title": "Time to a live agent that books and logs calls",
+    "bars": [
+      {
+        "label": "Wiring smallest.ai yourself",
+        "valueLabel": "Slow, DIY",
+        "widthPercent": 38,
+        "accent": false
+      },
+      {
+        "label": "Generic dev shop",
+        "valueLabel": "Faster, still yours to run",
+        "widthPercent": 62,
+        "accent": false
+      },
+      {
+        "label": "Agentic AI Labs",
+        "valueLabel": "Done for you",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "The gap teams hit with voice is the last mile, not the model",
+    "body": "Voice model quality has become good enough that the demo rarely fails. Where projects stall is everything after the audio: connecting real phone numbers, handling interruptions, deciding what a good outcome is, and getting the result into the CRM before the caller forgets they called. That work does not show up in a sandbox test, so it gets scoped last and shipped late.",
+    "source": "Agentic AI Labs field notes",
+    "date": "2026",
+    "stat": "Last mile",
+    "statLabel": "Where voice projects stall"
+  },
+  "solutionTitle": "We build the whole agent, not the audio call",
+  "solutionItems": [
+    "Telephony, call routing, and interruption handling set up on real numbers your customers can dial today.",
+    "Conversation logic scripted around your booking rules, your objections, and your definition of a qualified lead.",
+    "A best-fit voice engine chosen for your use case, so you are not locked to one vendor if a better fit exists.",
+    "CRM write-back and automated follow-up wired in, so every call turns into a record and a next step."
+  ],
+  "layers": [
+    {
+      "title": "Voice layer",
+      "body": "We pick the voice engine that fits your call type, language mix, and latency needs. smallest.ai can be that engine when it is the right call. You get the quality without betting the whole system on a single API."
+    },
+    {
+      "title": "Conversation layer",
+      "body": "The agent runs your actual workflow: it qualifies, books, reschedules, and hands off cleanly. Guardrails keep it on-script, and it knows when to stop talking and let a human take over."
+    },
+    {
+      "title": "Reliability layer",
+      "body": "We spec the conversation logic and integrations with build tools like Claude Opus 4.8 and GPT Codex, then test against messy real calls before launch, so the agent holds up when a customer talks over it or goes off-script."
+    }
+  ],
+  "proofTitle": "Why teams hand this to us instead of building it",
+  "proofBullets": [
+    "You get a full working agent, from the phone ringing to the CRM record, not a code sample you still have to productionize.",
+    "We stay engine-agnostic, so the voice model is a choice we make for your use case rather than a constraint you inherit.",
+    "Every call ends in your system with a follow-up already moving, so leads do not slip through the gap after the conversation."
+  ],
+  "proofStats": [
+    {
+      "stat": "End to end",
+      "label": "Telephony through follow-up"
+    },
+    {
+      "stat": "Best-fit",
+      "label": "Voice engine per use case"
+    },
+    {
+      "stat": "In your CRM",
+      "label": "Every call logged and actioned"
+    }
+  ],
+  "comparisonBars": {
+    "title": "What you actually ship on day one",
+    "bars": [
+      {
+        "label": "smallest.ai API on its own",
+        "valueLabel": "A voice model",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Freelancer wiring it up",
+        "valueLabel": "A partial build",
+        "widthPercent": 66,
+        "accent": false
+      },
+      {
+        "label": "Agentic AI Labs",
+        "valueLabel": "A live, booking agent",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is this a replacement for smallest.ai?",
+      "answer": "Not exactly. smallest.ai is a strong voice model provider, and we are happy to use it as the engine when it fits your use case. What we replace is the do-it-yourself integration work: we build the telephony, conversation logic, CRM write-back, and follow-up into one system you can actually run."
+    },
+    {
+      "question": "What is smallest.ai genuinely good at?",
+      "answer": "It is a fast, low-latency text-to-speech and voice API with natural-sounding output and a developer-friendly interface. If your team has the engineering capacity to build and maintain the surrounding system, it is a solid building block. Our clients usually want the finished system instead."
+    },
+    {
+      "question": "Do I have to use smallest.ai as the voice engine?",
+      "answer": "No. We stay engine-agnostic and choose the best fit for your call type, languages, and latency. smallest.ai is one option we consider. That way the voice model serves your use case rather than dictating it."
+    },
+    {
+      "question": "How do you make sure the agent holds up on real calls?",
+      "answer": "We spec the conversation logic and integrations with build tools like Claude Opus 4.8 and GPT Codex, then test against messy, real-world calls: interruptions, off-script questions, and bad audio. We tune before launch so the agent stays reliable when a live customer is on the line."
+    },
+    {
+      "question": "What do I actually receive at the end?",
+      "answer": "A working voice agent on your own phone numbers that answers calls, runs your workflow, writes every call to your CRM, and triggers follow-up texts or callbacks. You get the running system and documentation, not a pile of API calls to assemble."
+    }
+  ],
+  "faqStat": {
+    "stat": "End to end",
+    "label": "What we hand you"
+  },
+  "ctaLabel": "Book a build call",
+  "ctaSupportText": "Tell us the calls you want handled. We will map the agent end to end, from the phone ringing to the CRM record and the follow-up.",
+  "relatedLinks": [
+    {
+      "label": "AI Voice Agent",
+      "href": "/ai-voice-agent/"
+    },
+    {
+      "label": "Our Services",
+      "href": "/services/"
+    },
+    {
+      "label": "Vapi Alternative",
+      "href": "/vapi-alternative"
+    }
+  ],
+  "keywords": [
+    "smallest ai alternative",
+    "smallest.ai alternative",
+    "done-for-you voice agent",
+    "production voice agent",
+    "voice ai for smb",
+    "ai voice agent agency",
+    "crm voice automation",
+    "telephony voice ai",
+    "best smallest.ai alternative"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "vapi",
+    "retell"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop",
+      "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/voice-call-ui.svg",
+      "caption": "A production voice agent handling a live call end to end."
+    }
+  ]
+}

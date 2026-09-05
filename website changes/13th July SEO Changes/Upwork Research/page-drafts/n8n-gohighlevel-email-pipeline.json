@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "n8n-gohighlevel-email-pipeline"
+  ],
+  "title": "n8n GoHighLevel Email Pipeline: AI Follow-Ups That Stop on Reply | Agentic AI Labs",
+  "description": "We build a cold-email drip on GoHighLevel plus n8n: capture leads, send AI-written follow-ups, advance pipeline stages, and stop the moment they reply.",
+  "heroLabel": "GoHighLevel plus n8n email automation",
+  "heroHeadline": "The lead replied three days ago. Your drip kept emailing them anyway.",
+  "heroSubheadline": "Most email sequences do not listen. They fire on a timer, ignore replies, and quietly torch your best leads. We build a GoHighLevel plus n8n pipeline that writes personalized follow-ups, moves contacts through your stages, and shuts off the second someone answers.",
+  "heroExplainerCaption": "How one lead moves through the pipeline, from opt-in to reply.",
+  "heroSteps": [
+    {
+      "label": "Lead lands in GoHighLevel",
+      "sub": "Form, ad, or import captures contact",
+      "accent": true
+    },
+    {
+      "label": "n8n picks up the trigger",
+      "sub": "Fires on new contact or stage change",
+      "accent": false
+    },
+    {
+      "label": "AI writes the next follow-up",
+      "sub": "Personalized to that contact",
+      "accent": false
+    },
+    {
+      "label": "Contact advances a pipeline stage",
+      "sub": "Opportunity moves automatically",
+      "accent": false
+    },
+    {
+      "label": "Reply detected, drip stops",
+      "sub": "No more emails, handoff to you",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why your current sequence is costing you the reply",
+  "painPoints": [
+    "A lead answers your first email, and the automation keeps sending the next three anyway. You look like you never read their message.",
+    "Every contact gets the exact same template, so the follow-ups read like a broadcast and land like one too.",
+    "Someone has to remember to drag opportunities between pipeline stages by hand, and on a busy week nobody does."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Leads you paid to acquire",
+        "amount": "already in the pipeline"
+      },
+      {
+        "label": "The follow-up that never fired",
+        "amount": "or fired after they replied"
+      },
+      {
+        "label": "Manual stage updates",
+        "amount": "skipped on busy days"
+      }
+    ],
+    "total": "Warm leads going cold in the gap between reply and response",
+    "solvesFor": "Every captured lead gets a timely, relevant follow-up until they answer, then the system steps back",
+    "source": "Based on the GoHighLevel plus n8n pipelines we build for SMBs and agencies"
+  },
+  "statusQuoTitle": "How teams run cold email today",
+  "statusQuoItems": [
+    "Native drips blast on a fixed timer and cannot tell that a lead already replied.",
+    "Virtual assistants copy, paste, and personalize by hand until volume outgrows them.",
+    "Heavy sending platforms charge per contact or per seat, so scaling up quietly scales your bill."
+  ],
+  "statusQuoBars": {
+    "title": "What happens when a lead replies mid-sequence",
+    "bars": [
+      {
+        "label": "Native timer drip",
+        "valueLabel": "keeps sending anyway",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "Manual VA process",
+        "valueLabel": "catches it if awake",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "GoHighLevel plus n8n pipeline",
+        "valueLabel": "stops on reply",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Buyers punish the follow-up that ignores their reply",
+    "body": "Prospects increasingly judge a company by whether its outreach feels aware. A sequence that keeps firing after someone has already answered reads as spam and burns the goodwill your first email earned. Reply-aware automation is becoming table stakes, not a nicety.",
+    "source": "Agentic AI Labs, from client cold-email pipelines",
+    "date": "2026",
+    "stat": "Reply-aware",
+    "statLabel": "the new baseline for outbound"
+  },
+  "solutionTitle": "What we actually build on GoHighLevel plus n8n",
+  "solutionItems": [
+    "Lead capture wired into GoHighLevel, so every form, ad, and import lands as a real contact with an opportunity.",
+    "n8n workflows that trigger on new contacts and stage changes, billing per execution instead of per contact.",
+    "AI-written follow-ups personalized to each contact, drafted fresh rather than pulled from one static template.",
+    "Reply detection that halts the drip and hands the conversation back to you the moment a lead answers."
+  ],
+  "layers": [
+    {
+      "title": "Capture and orchestrate",
+      "body": "GoHighLevel holds the contacts, opportunities, and pipeline stages. n8n sits alongside as the automation brain, listening for triggers and running the logic GoHighLevel workflows cannot express on their own."
+    },
+    {
+      "title": "Write and personalize",
+      "body": "Each follow-up is generated by a large language model we wire in, built with Claude Opus 4.8 and GPT Codex, so the copy speaks to that specific contact instead of reusing one template across your whole list."
+    },
+    {
+      "title": "Advance and stop",
+      "body": "As contacts engage, n8n moves their opportunity through your pipeline stages automatically. When a reply arrives, the sequence stops and the lead is flagged for a human, so no one gets emailed after they have already answered."
+    }
+  ],
+  "proofTitle": "Why this holds up at volume",
+  "proofBullets": [
+    "Because n8n bills per execution rather than per contact, adding more leads does not multiply a per-seat or per-contact subscription.",
+    "Because reply detection is built into the flow, the drip stops itself instead of relying on someone to notice and pause it.",
+    "Because we build on your existing GoHighLevel account, the pipeline, contacts, and reporting stay in the tool your team already uses."
+  ],
+  "proofStats": [
+    {
+      "stat": "Per execution",
+      "label": "how n8n bills, so cost tracks work not list size"
+    },
+    {
+      "stat": "Stops on reply",
+      "label": "the drip halts itself, no manual pausing"
+    },
+    {
+      "stat": "Your GoHighLevel",
+      "label": "built on the CRM you already run"
+    }
+  ],
+  "comparisonBars": {
+    "title": "What drives your cost as you scale",
+    "bars": [
+      {
+        "label": "Per-contact sending platform",
+        "valueLabel": "cost climbs with list size",
+        "widthPercent": 95,
+        "accent": false
+      },
+      {
+        "label": "Per-seat outbound tool",
+        "valueLabel": "cost climbs with headcount",
+        "widthPercent": 70,
+        "accent": false
+      },
+      {
+        "label": "n8n per-execution pipeline",
+        "valueLabel": "cost tracks actual work",
+        "widthPercent": 35,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need to leave GoHighLevel to use this?",
+      "answer": "No. We build on top of your existing GoHighLevel account. Your contacts, opportunities, and pipeline stages stay where they are. n8n runs alongside GoHighLevel and handles the automation logic and AI follow-up writing that native workflows cannot do on their own."
+    },
+    {
+      "question": "What actually happens when a lead replies?",
+      "answer": "The moment a reply is detected, n8n stops the drip for that contact so no further automated emails go out. The lead is flagged and handed back to you or your team for a real conversation. That is the whole point: the system emails until someone answers, then steps back."
+    },
+    {
+      "question": "Why n8n instead of a dedicated cold-email tool?",
+      "answer": "n8n bills per execution rather than per contact or per seat, so your cost tracks the work being done instead of the size of your list. It also lets us wire in AI follow-up writing and custom pipeline logic that off-the-shelf senders keep behind rigid templates."
+    },
+    {
+      "question": "How are the follow-ups personalized?",
+      "answer": "Each follow-up is generated by a large language model we wire into the workflow, built with Claude Opus 4.8 and GPT Codex. Instead of one static template sent to everyone, the copy is drafted for that specific contact using the data captured in GoHighLevel."
+    },
+    {
+      "question": "Is this done for me or do I have to build it?",
+      "answer": "We build and wire the full pipeline for you: lead capture, the n8n workflows, the AI follow-up writing, the pipeline stage automation, and the reply-detection stop. You bring your GoHighLevel account and your offer. We build the machine around it and hand it over running."
+    }
+  ],
+  "faqStat": {
+    "stat": "Reply, then stop",
+    "label": "the behavior every sequence should have but most lack"
+  },
+  "ctaLabel": "Book a pipeline build call",
+  "ctaSupportText": "Walk us through your GoHighLevel setup and your offer. We will map the n8n email pipeline that captures, follows up, advances, and stops on reply. Reach us at aditya@tryagentikai.com.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI voice pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "n8n content automation pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "AI SDR for GoHighLevel agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    }
+  ],
+  "keywords": [
+    "n8n gohighlevel email pipeline",
+    "gohighlevel n8n automation",
+    "n8n cold email automation",
+    "gohighlevel email drip automation",
+    "ai cold email follow up",
+    "gohighlevel pipeline automation",
+    "n8n email sequence workflow",
+    "reply detection email automation",
+    "done for you gohighlevel automation",
+    "ai sdr gohighlevel"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/n8n-gohighlevel-email-pipeline/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "n8n"
+  ]
+}

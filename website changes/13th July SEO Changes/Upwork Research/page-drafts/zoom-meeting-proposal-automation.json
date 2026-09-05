@@ -1,0 +1,232 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "zoom-meeting-proposal-automation"
+  ],
+  "title": "Zoom Meeting Proposal Automation with AI | Agentic AI Labs",
+  "description": "Turn every Zoom call into a tailored proposal sent before the prospect leaves the tab. AI transcribes, drafts, and emails it through GoHighLevel automatically.",
+  "heroLabel": "Zoom meeting automation ai",
+  "heroHeadline": "The call went great, and then the proposal sat in your drafts for four days.",
+  "heroSubheadline": "The moment a prospect says yes is the moment they start cooling off. We wire your Zoom calls so a tailored proposal, built from what was actually said, lands in their inbox before they close the tab.",
+  "heroExplainerCaption": "One pipeline, from spoken call to sent proposal, with nobody touching a keyboard.",
+  "heroSteps": [
+    {
+      "label": "Zoom call ends",
+      "sub": "Recording closes, webhook fires",
+      "accent": true
+    },
+    {
+      "label": "Transcript generated",
+      "sub": "Full call transcribed automatically",
+      "accent": false
+    },
+    {
+      "label": "AI reads the intent",
+      "sub": "Pain, scope, budget, next step",
+      "accent": false
+    },
+    {
+      "label": "Proposal drafted",
+      "sub": "Tailored to their exact words",
+      "accent": false
+    },
+    {
+      "label": "Emailed via GoHighLevel",
+      "sub": "In their inbox, contact tagged",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why warm calls quietly go cold",
+  "painPoints": [
+    "You finish a strong discovery call, then push the follow-up to tomorrow because three more calls are waiting today.",
+    "By the time you sit down to write the proposal, you are reconstructing what they said from half a page of scribbled notes.",
+    "The prospect who was ready on the call has already heard back from two competitors who followed up the same hour."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Hot prospect goes quiet",
+        "amount": "follow-up window closes"
+      },
+      {
+        "label": "Manual proposal writing",
+        "amount": "30 to 60 min per call"
+      },
+      {
+        "label": "Details lost from memory",
+        "amount": "generic, off-target quotes"
+      }
+    ],
+    "total": "Every hour of delay leaks signed revenue out of a deal you already won on the call",
+    "solvesFor": "Turning meeting momentum into a sent proposal while the prospect is still leaning in",
+    "source": "TryAgentik post-meeting automation pipeline"
+  },
+  "statusQuoTitle": "What most teams do after the call ends",
+  "statusQuoItems": [
+    "A virtual assistant retypes the notes and drafts a proposal by hand, hours later.",
+    "A generic template goes out with the prospect name swapped in and nothing else changed.",
+    "The rep means to follow up, gets pulled into the next call, and the thread dies."
+  ],
+  "statusQuoBars": {
+    "title": "Time from call end to proposal in inbox",
+    "bars": [
+      {
+        "label": "Manual write-up next day",
+        "valueLabel": "often 1 to 3 days",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "VA turnaround",
+        "valueLabel": "a few hours, if free",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Template blast",
+        "valueLabel": "fast but off-target",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Automated pipeline",
+        "valueLabel": "minutes after hangup",
+        "widthPercent": 8,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Speed of follow-up is the strongest signal a buyer feels",
+    "body": "When two vendors are close on fit, the one whose proposal arrives while the conversation is still fresh reads as more serious and more capable. Buyers rarely wait for the slower reply; they move with whoever shows up first with something specific to what they said.",
+    "source": "Sales response-time research, widely replicated across B2B studies",
+    "date": "2026",
+    "stat": "First",
+    "statLabel": "specific reply usually wins the frame"
+  },
+  "solutionTitle": "What we actually build for you",
+  "solutionItems": [
+    "Automatic Zoom transcription that triggers the moment your call recording closes, no upload step and no button to remember.",
+    "An AI drafting layer that reads the full transcript and pulls out the prospect pain, the scope discussed, the objections raised, and the agreed next step.",
+    "A tailored proposal written from those exact points, in your voice and structure, not a name-swapped template.",
+    "Delivery straight through GoHighLevel: the proposal is emailed to the contact and the record is tagged and updated for your pipeline."
+  ],
+  "layers": [
+    {
+      "title": "Capture layer",
+      "body": "A Zoom webhook fires the instant the meeting recording finalizes. We pull the transcript automatically, so the pipeline starts with zero manual steps from your rep. No forwarding, no copy-paste, no waiting on a nightly export."
+    },
+    {
+      "title": "Reasoning layer",
+      "body": "The transcript is read by Claude Opus 4.8, with GPT Codex handling the structured extraction and formatting logic. It separates what the prospect needs from small talk, and drafts a proposal scoped to what was genuinely agreed, so the quote matches the conversation instead of a template."
+    },
+    {
+      "title": "Delivery layer",
+      "body": "The finished proposal is routed into GoHighLevel and emailed to the contact from your domain. The contact record is tagged, the opportunity stage moves, and your team sees a clean trail. You can set it to auto-send or to pause for a one-click human review first."
+    }
+  ],
+  "proofTitle": "Why this holds up in real pipelines",
+  "proofBullets": [
+    "The proposal quotes the prospect's own words, so it reads as written for them and not pulled from a folder.",
+    "It runs inside GoHighLevel, the CRM your agency and clients already live in, so nothing new to log into.",
+    "You stay in control: run it fully automatic, or gate every send behind a fast human approval."
+  ],
+  "proofStats": [
+    {
+      "stat": "Transcript-based",
+      "label": "drafted from the actual call, not a guess"
+    },
+    {
+      "stat": "Native GHL",
+      "label": "sent and tracked inside GoHighLevel"
+    },
+    {
+      "stat": "Auto or review",
+      "label": "you choose the send mode"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Proposal quality against a name-swapped template",
+    "bars": [
+      {
+        "label": "Generic template blast",
+        "valueLabel": "ignores what was said",
+        "widthPercent": 30,
+        "accent": false
+      },
+      {
+        "label": "Rushed manual draft",
+        "valueLabel": "misses half the notes",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Transcript-tailored draft",
+        "valueLabel": "matches the real call",
+        "widthPercent": 95,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Does this work with my existing Zoom and GoHighLevel setup?",
+      "answer": "Yes. It hooks into your current Zoom account and your GoHighLevel sub-account or agency. We connect to the tools you already run, so there is no new platform for your team to learn and no migration."
+    },
+    {
+      "question": "Will the proposal actually sound like us, or like a robot?",
+      "answer": "Like you. We build the draft against your own proposal structure, tone, and offer language. The AI fills it with points from the specific call, so it reads as a human on your team wrote it right after hanging up."
+    },
+    {
+      "question": "What models power the drafting?",
+      "answer": "We build the reasoning with Claude Opus 4.8 for reading and writing the proposal, and GPT Codex for the structured extraction and formatting logic. That pairing is what keeps the output tailored to each transcript rather than generic."
+    },
+    {
+      "question": "Can I review a proposal before it goes out?",
+      "answer": "Absolutely. You choose the mode. Fully automatic sends the moment the draft is ready, or a review gate holds it for a one-click human approval before it reaches the contact. Many teams start in review mode and switch to auto once they trust it."
+    },
+    {
+      "question": "What happens on a call where nothing was really agreed?",
+      "answer": "You set the rules. The pipeline can require a clear next step or a scope discussion before it drafts, so unqualified or exploratory calls do not trigger a proposal. It only fires when the conversation earned one."
+    }
+  ],
+  "faqStat": {
+    "stat": "Minutes",
+    "label": "from call end to a proposal in the inbox"
+  },
+  "ctaLabel": "Automate your post-call proposals",
+  "ctaSupportText": "Book a short call. We will map your Zoom and GoHighLevel setup and show you the pipeline running on a real transcript.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI voice pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "Speed to lead automation for GoHighLevel",
+      "href": "/gohighlevel-speed-to-lead-automation"
+    },
+    {
+      "label": "Done-for-you GoHighLevel automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    }
+  ],
+  "keywords": [
+    "zoom meeting automation ai",
+    "zoom meeting proposal automation",
+    "automated proposal from zoom transcript",
+    "ai proposal generator from meeting",
+    "gohighlevel proposal automation",
+    "post meeting follow up automation",
+    "zoom transcript to proposal ai",
+    "ai sales follow up automation",
+    "automated meeting follow up gohighlevel",
+    "ai meeting to proposal pipeline"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/zoom-meeting-proposal-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "make"
+  ]
+}

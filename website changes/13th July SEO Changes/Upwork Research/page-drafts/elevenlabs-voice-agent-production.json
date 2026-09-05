@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "elevenlabs-voice-agent-production"
+  ],
+  "title": "ElevenLabs Voice Agent in Production: The System Around the Voice | Agentic AI Labs",
+  "description": "ElevenLabs gives you a lifelike voice. We build the production system around it: telephony, conversation logic, CRM writeback, and follow-up that actually books.",
+  "heroLabel": "ElevenLabs Voice Agent, Productionized",
+  "heroHeadline": "The demo sounded perfect. Then a real caller went off script.",
+  "heroSubheadline": "ElevenLabs gives you a voice that sounds human. A voice is not a system. We wrap it in telephony, conversation logic, CRM writeback, and follow-up so the call turns into a booked appointment, not a lost lead.",
+  "heroExplainerCaption": "ElevenLabs is the voice layer. Everything around it is the agent.",
+  "heroSteps": [
+    {
+      "label": "Call connects on your number",
+      "sub": "Telephony routes to the agent",
+      "accent": true
+    },
+    {
+      "label": "ElevenLabs speaks the response",
+      "sub": "Lifelike voice, low latency",
+      "accent": false
+    },
+    {
+      "label": "Logic decides the next move",
+      "sub": "Qualify, answer, or route",
+      "accent": false
+    },
+    {
+      "label": "CRM writeback fires live",
+      "sub": "Contact, notes, tags updated",
+      "accent": false
+    },
+    {
+      "label": "Follow-up sends automatically",
+      "sub": "Booking link or callback",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why a great voice alone still loses the lead",
+  "painPoints": [
+    "The voice sounds amazing in the demo, then a caller asks something the script never planned for and the call stalls.",
+    "The conversation happens, but nothing lands in your CRM, so nobody knows the lead called and nobody follows up.",
+    "The agent takes the call but cannot book anything, so the caller hangs up and dials the competitor who picks up."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Missed and abandoned calls",
+        "amount": "Leads you paid for, gone"
+      },
+      {
+        "label": "No CRM record of the call",
+        "amount": "Follow-up never happens"
+      },
+      {
+        "label": "Voice with no booking path",
+        "amount": "Interest with no outcome"
+      }
+    ],
+    "total": "Every unbooked call is revenue at risk",
+    "solvesFor": "Turning answered calls into booked, tracked, followed-up appointments",
+    "source": "Composite of common SMB and agency inbound-call gaps"
+  },
+  "statusQuoTitle": "How teams try to ship an ElevenLabs agent today",
+  "statusQuoItems": [
+    "Wire ElevenLabs straight to a phone number and hope the caller stays on the happy path.",
+    "Bolt a chatbot script onto the voice and watch it break the moment someone interrupts.",
+    "Ship the voice, skip the CRM and follow-up, then wonder why booked calls do not go up."
+  ],
+  "statusQuoBars": {
+    "title": "What happens when the caller goes off script",
+    "bars": [
+      {
+        "label": "Voice-only, no system",
+        "valueLabel": "stalls and hangs up",
+        "widthPercent": 30,
+        "accent": false
+      },
+      {
+        "label": "Chatbot script bolted on",
+        "valueLabel": "breaks on interrupt",
+        "widthPercent": 45,
+        "accent": false
+      },
+      {
+        "label": "Full production agent (us)",
+        "valueLabel": "recovers and books",
+        "widthPercent": 95,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Realistic voice raised the bar, so the system behind it is now what wins",
+    "body": "Lifelike synthesis is close to solved. The gap that decides whether a call converts is everything around the voice: catching the call, holding the conversation when it wanders, recording it, and following up. That is where most voice agent projects quietly fall apart.",
+    "source": "Agentic AI Labs field observation",
+    "date": "2026",
+    "stat": "Voice",
+    "statLabel": "is one layer, not the whole agent"
+  },
+  "solutionTitle": "What we actually build around ElevenLabs",
+  "solutionItems": [
+    "Telephony that answers on your number, handles hold, transfer, and voicemail like a real receptionist.",
+    "Conversation logic that qualifies, answers real questions, and recovers when the caller goes off script.",
+    "Live CRM writeback so every call becomes a contact, a note, and a tag the moment it ends.",
+    "Automatic follow-up: a booking link, a callback, or a text so interest never sits idle."
+  ],
+  "layers": [
+    {
+      "title": "Voice layer: ElevenLabs",
+      "body": "ElevenLabs handles what it is best at: a natural, low-latency voice that does not sound robotic. We treat it as the mouth of the system, not the brain. It speaks; the logic layer decides what to say."
+    },
+    {
+      "title": "Brain layer: conversation logic",
+      "body": "The reasoning runs on frontier models (Claude Opus 4.8 and GPT Codex) tuned to your intake. It qualifies, answers off-script questions, and knows when to book, route to a human, or take a message instead of guessing."
+    },
+    {
+      "title": "System layer: telephony, CRM, follow-up",
+      "body": "Telephony carries the call, CRM writeback records it live (contact, transcript, tags), and follow-up fires the instant the call ends. This is the layer that turns a good conversation into a booked, tracked outcome."
+    }
+  ],
+  "proofTitle": "Why this holds up on real calls, not just demos",
+  "proofBullets": [
+    "We build the conversation logic on frontier models (Claude Opus 4.8 and GPT Codex), so the agent handles the questions no script anticipated instead of freezing.",
+    "Every call writes back to your CRM in real time, so the record exists whether or not a human ever listens to it.",
+    "Follow-up is wired into the same flow, so an answered call becomes a booking link or callback without anyone lifting a finger."
+  ],
+  "proofStats": [
+    {
+      "stat": "Opus 4.8 + Codex",
+      "label": "power the conversation logic"
+    },
+    {
+      "stat": "Live writeback",
+      "label": "every call, into your CRM"
+    },
+    {
+      "stat": "Auto follow-up",
+      "label": "fires the moment the call ends"
+    }
+  ],
+  "comparisonBars": {
+    "title": "ElevenLabs voice alone vs. the full production agent",
+    "bars": [
+      {
+        "label": "ElevenLabs voice, wired to a number",
+        "valueLabel": "sounds great, drops the ball",
+        "widthPercent": 35,
+        "accent": false
+      },
+      {
+        "label": "Voice plus a rigid script",
+        "valueLabel": "handles the happy path only",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Production agent we build",
+        "valueLabel": "holds, records, and books",
+        "widthPercent": 95,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do you replace ElevenLabs or work with it?",
+      "answer": "We work with it. ElevenLabs stays as your voice layer because the voice quality is excellent. We build the telephony, conversation logic, CRM writeback, and follow-up around it so the voice becomes a working agent."
+    },
+    {
+      "question": "What actually powers the conversation, if not ElevenLabs?",
+      "answer": "ElevenLabs speaks, but the decisions come from the logic layer. We build that on frontier models (Claude Opus 4.8 and GPT Codex), tuned to your intake so the agent qualifies, answers real questions, and knows when to book or route to a human."
+    },
+    {
+      "question": "Will it write into my CRM?",
+      "answer": "Yes. Every call writes back live: a contact, the transcript or notes, and tags. This works with GoHighLevel and similar CRMs, so the call becomes a record and a follow-up trigger the moment it ends."
+    },
+    {
+      "question": "What happens when a caller goes off script?",
+      "answer": "That is the whole point of the system layer. The logic recovers, answers the question, and continues instead of stalling. If it hits something it should not handle, it routes to a human or takes a message rather than guessing."
+    },
+    {
+      "question": "Is this for SMB owners or agencies?",
+      "answer": "Both. Owners get a receptionist that never misses a call and always follows up. Agencies get a production voice agent they can deploy for clients without stitching the telephony, logic, and CRM together themselves."
+    }
+  ],
+  "faqStat": {
+    "stat": "4 layers",
+    "label": "telephony, logic, CRM, follow-up, around one voice"
+  },
+  "ctaLabel": "Book a build call",
+  "ctaSupportText": "Bring your ElevenLabs voice. We will show you the telephony, logic, CRM writeback, and follow-up that turn it into an agent that books.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI voice pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "Vapi alternative",
+      "href": "/vapi-alternative"
+    },
+    {
+      "label": "Retell AI alternative",
+      "href": "/retell-ai-alternative"
+    }
+  ],
+  "keywords": [
+    "elevenlabs voice agent",
+    "elevenlabs voice agent production",
+    "elevenlabs phone agent",
+    "production voice ai agent",
+    "elevenlabs telephony integration",
+    "voice agent with crm writeback",
+    "elevenlabs ai receptionist",
+    "voice ai for smb",
+    "ai voice agent for agencies",
+    "elevenlabs conversation logic"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/elevenlabs-voice-agent-production/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "vapi"
+  ]
+}

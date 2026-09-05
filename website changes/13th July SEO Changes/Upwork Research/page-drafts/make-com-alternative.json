@@ -1,0 +1,239 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "make-com-alternative"
+  ],
+  "title": "Make.com Alternative: Done-For-You Automation Build | Agentic AI Labs",
+  "description": "Skip the scenario editor. We design, host, and maintain your automations (often on n8n) so you get the outcome without learning Make.com or fixing silent fails.",
+  "canonicalUrl": {
+    "__CANONICAL__": "make-com-alternative"
+  },
+  "heroLabel": "Make.com Alternative",
+  "heroHeadline": "The automation you built six months ago failed quietly, and nobody noticed for three days.",
+  "heroSubheadline": "Make.com is a capable builder if you enjoy living inside the scenario editor. Most owners do not. We design, host, and maintain the automation for you, usually on n8n for cost and control, so you keep the result and skip the tinkering.",
+  "heroExplainerCaption": "How a done-for-you automation build runs, from your first described problem to a system that quietly works.",
+  "heroSteps": [
+    {
+      "label": "You describe the outcome",
+      "sub": "The result you want, plainly",
+      "accent": true
+    },
+    {
+      "label": "We map the workflow",
+      "sub": "Triggers, steps, edge cases",
+      "accent": false
+    },
+    {
+      "label": "We build and host it",
+      "sub": "Often on n8n we run",
+      "accent": false
+    },
+    {
+      "label": "We add monitoring",
+      "sub": "Alerts catch failures early",
+      "accent": false
+    },
+    {
+      "label": "You get the result",
+      "sub": "No editor, no upkeep",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why DIY automation quietly costs more than it saves",
+  "painPoints": [
+    "You wire up a scenario over a weekend, then spend the next month debugging why one module keeps timing out on a field you cannot see.",
+    "A silent failure breaks a lead handoff, and you find out when a customer asks why nobody ever called them back.",
+    "Every price tier, every new integration, and every reroute becomes your problem to learn, test, and babysit forever."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Owner hours lost learning the scenario editor",
+        "amount": "20 to 40 hrs"
+      },
+      {
+        "label": "Leads dropped during a silent failure window",
+        "amount": "days of gaps"
+      },
+      {
+        "label": "Operations-tier subscription that scales with volume",
+        "amount": "$29 to $299+/mo"
+      }
+    ],
+    "total": "Revenue leaking through automations nobody is watching",
+    "solvesFor": "Getting the automation outcome without owning the build, the hosting, or the debugging",
+    "source": "Make.com published pricing tiers and common SMB build experience"
+  },
+  "statusQuoTitle": "What building it yourself really looks like",
+  "statusQuoItems": [
+    "The scenario runs until an API changes, then it fails without telling you, and the ops work quietly stops.",
+    "You are the only person who knows how it is wired, so every fix waits until you have a free evening.",
+    "Costs climb as you add operations, and you are locked into whatever the platform charges to keep it running."
+  ],
+  "statusQuoBars": {
+    "title": "Where your automation time actually goes",
+    "bars": [
+      {
+        "label": "Learning the editor and mapping modules",
+        "valueLabel": "High",
+        "widthPercent": 85,
+        "accent": false
+      },
+      {
+        "label": "Debugging silent failures month after month",
+        "valueLabel": "High",
+        "widthPercent": 75,
+        "accent": false
+      },
+      {
+        "label": "Your time with a done-for-you build",
+        "valueLabel": "Near zero",
+        "widthPercent": 12,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Execution-based billing is reshaping automation costs",
+    "body": "n8n bills per workflow execution, not per task. A single ten-step run counts as one execution, where a per-task tool would count ten. One cited team moved a workflow off Zapier and cut a $3,000 per month bill to $80 per month after re-platforming.",
+    "source": "n8n execution-based pricing model and cited migration case",
+    "date": "2026",
+    "stat": "$3,000 to $80",
+    "statLabel": "Cited monthly bill after re-platforming"
+  },
+  "solutionTitle": "A done-for-you production build, not another tool to learn",
+  "solutionItems": [
+    "We interview you once, map the full workflow, and hand back a system that produces the outcome you asked for.",
+    "We host and run it, usually on n8n, so execution-based billing keeps costs flat as your volume grows.",
+    "We wire in monitoring and alerting so a broken step reaches us before it reaches your customers.",
+    "We own maintenance: when an API changes or you want a new branch, you send a note, not a support ticket to yourself."
+  ],
+  "layers": [
+    {
+      "title": "Design layer: your workflow, mapped honestly",
+      "body": "We start from the outcome and work backward to triggers, data, and every edge case that would otherwise become a 2am silent failure. You approve the plan in plain language before a single node is built."
+    },
+    {
+      "title": "Build layer: n8n for cost and control",
+      "body": "We build on n8n so you get execution-based billing and full ownership of the logic. Its roughly 1,000 native integrations are extended by the HTTP node, so anything with an API is reachable, not just the pre-packaged connectors."
+    },
+    {
+      "title": "Spec layer: reviewed by Claude Opus 4.8",
+      "body": "Complex logic and prompt steps are drafted and stress-tested against Claude Opus 4.8 as a build spec, so the automation handles messy real inputs instead of only the happy path you tested on Friday."
+    }
+  ],
+  "proofTitle": "Why this beats owning the build yourself",
+  "proofBullets": [
+    "Execution-based billing means a ten-step workflow costs one execution, not ten task charges, so your bill tracks real runs instead of step count.",
+    "Re-platforming off per-task tools has produced dramatic savings for teams running high-volume workflows.",
+    "You reach a broad integration surface without being capped at a fixed connector list, because the HTTP node covers anything with an API."
+  ],
+  "proofStats": [
+    {
+      "stat": "1 execution",
+      "label": "A 10-step n8n run, vs 10 Zapier tasks"
+    },
+    {
+      "stat": "$3,000 to $80",
+      "label": "Cited monthly bill cut after re-platforming"
+    },
+    {
+      "stat": "~1,000 + HTTP",
+      "label": "n8n native integrations, extended by any API"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Integration reach across platforms",
+    "bars": [
+      {
+        "label": "Zapier native integrations",
+        "valueLabel": "6,000+",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Make native integrations",
+        "valueLabel": "~1,500",
+        "widthPercent": 48,
+        "accent": false
+      },
+      {
+        "label": "n8n native, we run it for you",
+        "valueLabel": "~1,000 + HTTP node",
+        "accent": true,
+        "widthPercent": 40
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is n8n actually a Make.com alternative, or something different?",
+      "answer": "Both are visual automation platforms with the same core job: connect apps and move data on triggers. Make.com has more native connectors (around 1,500 vs roughly 1,000 for n8n), but n8n's HTTP node reaches any service with an API, and it bills per workflow execution instead of per task. We pick the platform that fits your workflow, then build and run it for you."
+    },
+    {
+      "question": "Why not just build it on Make.com myself?",
+      "answer": "You can, and for a simple two-step scenario that is reasonable. The cost shows up later: learning the editor, catching silent failures, and re-testing every time an integration changes. We take on the build, the hosting, and the ongoing maintenance so the outcome is yours without the upkeep."
+    },
+    {
+      "question": "How does the billing difference save money?",
+      "answer": "Per-task tools charge for every step in a run, so a ten-step automation costs ten task credits each time it fires. n8n counts that same run as one execution. One cited team cut a workflow bill from $3,000 per month to $80 per month after moving off per-task pricing. Your savings depend on volume and step count."
+    },
+    {
+      "question": "Do I lose control by having you host it?",
+      "answer": "No. The logic lives in n8n, which is open and portable, so you are never locked into a proprietary black box. You own the workflow definition. We handle running it, monitoring it, and fixing it, and you can take it in-house whenever you want."
+    },
+    {
+      "question": "What happens when an integration breaks?",
+      "answer": "Monitoring alerts us when a step fails, often before you would have noticed. Because we maintain the build, a broken API or a changed endpoint is our job to fix, not a debugging night for you. You send a note describing any new branch you want, and we ship it."
+    }
+  ],
+  "faqStat": {
+    "stat": "1 execution",
+    "label": "What a 10-step n8n run costs, vs 10 per-task charges"
+  },
+  "ctaLabel": "Get a done-for-you automation build",
+  "ctaSupportText": "Tell us the outcome you want. We map it, build it on the right platform, host it, and keep it running, so you never open a scenario editor.",
+  "relatedLinks": [
+    {
+      "label": "n8n Content Automation Pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "Our Services",
+      "href": "/services/"
+    },
+    {
+      "label": "AI Clarity Workshop",
+      "href": "/ai-clarity-workshop/"
+    }
+  ],
+  "keywords": [
+    "make.com alternative",
+    "make.com alternatives",
+    "done-for-you automation",
+    "n8n automation agency",
+    "workflow automation service",
+    "managed n8n hosting",
+    "automation without the scenario editor",
+    "make.com vs n8n",
+    "business process automation",
+    "managed workflow automation"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "make",
+    "n8n"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop",
+      "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/n8n-canvas.svg",
+      "caption": "A production automation build, hosted and monitored instead of self-managed."
+    }
+  ]
+}

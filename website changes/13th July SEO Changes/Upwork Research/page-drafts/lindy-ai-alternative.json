@@ -1,0 +1,237 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "lindy-ai-alternative"
+  ],
+  "title": "Lindy AI Alternative: Done-For-You Automation Builds | Agentic AI Labs",
+  "description": "A done-for-you Lindy AI alternative. We build and maintain production-grade automations on n8n and GoHighLevel that plug into your real stack. Book a call.",
+  "canonicalUrl": {
+    "__CANONICAL__": "lindy-ai-alternative"
+  },
+  "heroLabel": "Lindy AI Alternative",
+  "heroHeadline": "The agent you built last month is quietly failing at 2am, and nobody notices until a lead goes cold.",
+  "heroSubheadline": "Lindy hands you a builder and a login. We hand you a finished system. TryAgentik designs, wires, and maintains custom automations on n8n and GoHighLevel that run against your real CRM, calendar, and phone lines, so you own the outcome instead of babysitting the tool.",
+  "heroExplainerCaption": "How a done-for-you build reaches production, start to finish.",
+  "heroSteps": [
+    {
+      "label": "Map your workflow",
+      "sub": "We trace every real handoff",
+      "accent": true
+    },
+    {
+      "label": "Write the build spec",
+      "sub": "Logic, triggers, fallbacks on paper",
+      "accent": false
+    },
+    {
+      "label": "Wire your live stack",
+      "sub": "CRM, calendar, phone, inbox",
+      "accent": false
+    },
+    {
+      "label": "Test the edge cases",
+      "sub": "Bad data, no-shows, retries",
+      "accent": false
+    },
+    {
+      "label": "Run and maintain for you",
+      "sub": "We watch it, you don't",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why the self-serve agent never quite ships",
+  "painPoints": [
+    "You built the first version in an afternoon, then spent three weeks fighting edge cases nobody warned you about.",
+    "The agent works in the demo and breaks the moment it touches your messy real data, your actual CRM fields, your odd booking rules.",
+    "When it silently stops firing, you become the on-call engineer, the debugger, and the person explaining to a client why the follow-up never went out."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Leads going cold while a broken agent sits unnoticed",
+        "amount": "Silent pipeline leak"
+      },
+      {
+        "label": "Owner hours spent debugging instead of closing",
+        "amount": "Your most expensive time"
+      },
+      {
+        "label": "Client trust lost when an automation misfires",
+        "amount": "Hard to win back"
+      }
+    ],
+    "total": "Every unwatched agent is revenue leaking through a gap you cannot see",
+    "solvesFor": "A maintained system that someone else keeps running and fixes before you feel it.",
+    "source": "Based on common patterns we see when SMBs and agencies adopt self-serve agent builders."
+  },
+  "statusQuoTitle": "What running Lindy yourself actually looks like",
+  "statusQuoItems": [
+    "You are the builder, the tester, and the support desk, all in the hours you meant to spend on clients.",
+    "Every new integration or edge case is another evening of trial and error inside the builder.",
+    "Nobody is watching the automation at night, so failures surface as angry customers, not alerts."
+  ],
+  "statusQuoBars": {
+    "title": "Who carries the work after go-live",
+    "bars": [
+      {
+        "label": "Self-serve agent builder",
+        "valueLabel": "You own all of it",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Hire an in-house automation engineer",
+        "valueLabel": "Costly, slow to fill",
+        "widthPercent": 65,
+        "accent": false
+      },
+      {
+        "label": "TryAgentik done-for-you build",
+        "valueLabel": "We carry the build and upkeep",
+        "widthPercent": 20,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Agent builders made starting easy and finishing hard",
+    "body": "The market filled with self-serve tools that spin up an agent in minutes. The gap shows up later, in the unglamorous work of wiring real systems, handling bad data, and keeping the thing alive once it matters. That maintenance layer is where most self-built automations quietly stall.",
+    "source": "Agentic AI Labs field observations",
+    "date": "2026",
+    "stat": "Build fast",
+    "statLabel": "Maintain forever"
+  },
+  "solutionTitle": "What TryAgentik does instead",
+  "solutionItems": [
+    "We build the automation for you on n8n and GoHighLevel, tuned to how your business actually runs.",
+    "We connect it to your live CRM, calendar, phone lines, and inbox, not a sandbox.",
+    "We test against the ugly cases first: bad data, no-shows, duplicate leads, silent retries.",
+    "We monitor and maintain it, so a break gets caught and fixed before it costs you a customer."
+  ],
+  "layers": [
+    {
+      "title": "The build layer",
+      "body": "Custom workflows on n8n and GoHighLevel, mapped to your real handoffs. No generic template you bend to fit. We write a plain-language build spec first, so you know exactly what fires when, and what happens when something goes wrong."
+    },
+    {
+      "title": "The reasoning layer",
+      "body": "Where a step needs judgment (classifying an inbound lead, drafting a reply, deciding a route), we wire in a model like Claude Opus 4.8 against a tight build spec, with guardrails and fallbacks so it behaves the same on a Tuesday as it did in testing."
+    },
+    {
+      "title": "The maintenance layer",
+      "body": "We watch the automation in production, catch failures before you do, and adjust as your stack and offers change. You get a system that keeps working, not a login and a wish of luck."
+    }
+  ],
+  "proofTitle": "Why the done-for-you approach holds up",
+  "proofBullets": [
+    "We build on n8n and GoHighLevel, the same open tools you could run yourself, so nothing is locked inside a black box you cannot leave.",
+    "Every build ships with a written spec of its logic, triggers, and fallbacks, so you always know what the system does and why.",
+    "You keep working on your business while we handle the wiring, testing, and upkeep that usually eats an owner's evenings."
+  ],
+  "proofStats": [
+    {
+      "stat": "n8n + GHL",
+      "label": "Open, portable foundation you own"
+    },
+    {
+      "stat": "Spec-first",
+      "label": "Every build documented before launch"
+    },
+    {
+      "stat": "Maintained",
+      "label": "We keep it running post-launch"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Time from idea to a system you trust in production",
+    "bars": [
+      {
+        "label": "DIY inside a self-serve agent builder",
+        "valueLabel": "Weeks of your own trial and error",
+        "widthPercent": 90,
+        "accent": false
+      },
+      {
+        "label": "Hire and onboard an automation engineer",
+        "valueLabel": "Months before first output",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "TryAgentik done-for-you build",
+        "valueLabel": "A focused build, then we maintain",
+        "widthPercent": 30,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is this just Lindy with extra steps?",
+      "answer": "No. Lindy is a self-serve builder you operate yourself, and it is genuinely good for quick, standalone agents you want to own end to end. We are the opposite model: a done-for-you service. We build the automation on n8n and GoHighLevel, connect it to your real stack, and maintain it, so the work of shipping and keeping it alive is ours, not yours."
+    },
+    {
+      "question": "Why n8n and GoHighLevel instead of a single agent platform?",
+      "answer": "Because they are open and portable. Your workflows live in tools you can inspect, export, and keep, rather than locked inside one vendor's agent format. GoHighLevel also handles the CRM, calendar, and phone pieces most SMBs and agencies already run on, so the automation plugs into where your work actually happens."
+    },
+    {
+      "question": "How do the AI parts stay reliable?",
+      "answer": "For steps that need judgment, we wire in a model such as Claude Opus 4.8 or a Codex-class model against a tight, written build spec, with guardrails and fallbacks. The model handles the reasoning; the deterministic workflow handles everything else, so behavior stays predictable in production."
+    },
+    {
+      "question": "What if I already started building in Lindy?",
+      "answer": "That is useful. It means you have mapped the workflow you want, which is half the work. Bring us what you built and where it stalled, and we will rebuild it as a maintained production system on n8n and GoHighLevel wired to your live tools."
+    },
+    {
+      "question": "Who is this a bad fit for?",
+      "answer": "If you want to build and tinker with agents entirely yourself and enjoy operating the tool, a self-serve builder like Lindy fits better. We are for owners and agencies who want the outcome without becoming the automation team behind it."
+    }
+  ],
+  "faqStat": {
+    "stat": "Done for you",
+    "label": "Built, wired, and maintained on your behalf"
+  },
+  "ctaLabel": "Book a build call",
+  "ctaSupportText": "Tell us the workflow that keeps breaking. We will map the build and tell you honestly whether a done-for-you system beats running it yourself.",
+  "relatedLinks": [
+    {
+      "label": "Our services",
+      "href": "/services/"
+    },
+    {
+      "label": "n8n content automation pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "GoHighLevel AI voice pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    }
+  ],
+  "keywords": [
+    "lindy ai alternative",
+    "lindy alternative",
+    "done-for-you automation agency",
+    "n8n automation service",
+    "gohighlevel automation",
+    "ai agent alternative",
+    "custom workflow automation",
+    "managed ai automation",
+    "ai automation for agencies"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "n8n"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop",
+      "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/n8n-canvas.svg",
+      "caption": "The automation running behind the scenes, built and maintained for you."
+    }
+  ]
+}

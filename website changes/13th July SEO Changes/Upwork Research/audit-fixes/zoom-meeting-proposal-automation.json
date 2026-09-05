@@ -1,0 +1,1 @@
+{"slug":"zoom-meeting-proposal-automation","summary":"Fixed one vague-attribution tell in the industrySignal source (unnamed \"B2B studies\"); rest of the copy was clean.","fixes":[{"find":"Sales response-time research, widely replicated across B2B studies","replace":"Patterns from our own B2B sales follow-up work","tell":"vague attribution to unnamed studies"}]}

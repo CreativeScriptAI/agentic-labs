@@ -1,0 +1,244 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "vapi-vs-retell-vs-bland"
+  ],
+  "title": "Vapi vs Retell vs Bland: Which AI Voice Platform Wins | Agentic AI Labs",
+  "description": "Vapi vs Retell vs Bland compared honestly on dev flexibility, time to production, and outbound cost at scale. See which fits you, then we build it into your CRM.",
+  "canonicalUrl": {
+    "__CANONICAL__": "vapi-vs-retell-vs-bland"
+  },
+  "heroLabel": "AI Voice Platform Comparison",
+  "heroHeadline": "You have picked a voice platform three times and shipped zero live agents",
+  "heroSubheadline": "Vapi, Retell, and Bland each demo beautifully in ten minutes and then quietly stall the day you need real calls, real transfers, and real records written back to your CRM. The platform is rarely the reason a voice project dies. The missing production build is. Here is the honest breakdown of who wins where, and how we ship the one that fits you.",
+  "heroExplainerCaption": "How we take you from platform choice to live, CRM-connected calls",
+  "heroSteps": [
+    {
+      "label": "Map your call flow",
+      "sub": "Intents, transfers, data captured",
+      "accent": true
+    },
+    {
+      "label": "Pick the right platform",
+      "sub": "Matched to your real constraints",
+      "accent": false
+    },
+    {
+      "label": "Build the agent",
+      "sub": "Prompts, tools, guardrails, fallbacks",
+      "accent": false
+    },
+    {
+      "label": "Wire your CRM",
+      "sub": "Every call logged and routed",
+      "accent": false
+    },
+    {
+      "label": "Tune on live calls",
+      "sub": "Weekly, until numbers hold",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why the third platform switch still did not get you live",
+  "painPoints": [
+    "The demo agent answers one clean question, then falls apart on interruptions, accents, and the messy way people actually talk on the phone.",
+    "Nothing writes back to your CRM, so calls happen in a vacuum and your team still copies notes by hand after every conversation.",
+    "Outbound cost per minute looks fine on the pricing page and then balloons once you run real volume with retries, voicemail detection, and warm transfers."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Weeks lost re-evaluating platforms instead of shipping",
+        "amount": "Stalled pipeline"
+      },
+      {
+        "label": "Leads called late or never because no agent is live",
+        "amount": "Missed revenue"
+      },
+      {
+        "label": "Staff hours spent manually logging call outcomes",
+        "amount": "Wasted payroll"
+      }
+    ],
+    "total": "Every week without a live agent is booked calls you never took",
+    "solvesFor": "A production voice agent on the right platform, connected to your CRM",
+    "source": "Based on typical SMB and agency voice deployments"
+  },
+  "statusQuoTitle": "What choosing on the pricing page alone actually costs you",
+  "statusQuoItems": [
+    "You optimize for the cheapest per-minute rate and inherit a platform your call flow does not fit.",
+    "You pick the easiest dashboard and hit a wall the first time you need a custom tool call or a mid-call transfer.",
+    "You commit to the most flexible SDK and then need a developer on payroll just to keep the agent running."
+  ],
+  "statusQuoBars": {
+    "title": "Where teams stall on each path",
+    "bars": [
+      {
+        "label": "Cheapest per-minute, wrong fit",
+        "valueLabel": "Rebuild later",
+        "widthPercent": 45,
+        "accent": false
+      },
+      {
+        "label": "Easiest dashboard, hits a wall",
+        "valueLabel": "Blocked on custom logic",
+        "widthPercent": 60,
+        "accent": false
+      },
+      {
+        "label": "Right platform, built for production",
+        "valueLabel": "Live and logging",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Voice AI buyers are shifting from platform shopping to production outcomes",
+    "body": "The gap between a voice demo and a voice agent that survives real call volume has become the deciding factor for SMBs and agencies. Teams increasingly want the platform decision made for them and the pipeline built, tuned, and connected to their CRM, rather than another tool to evaluate.",
+    "source": "Agentic AI Labs field observations",
+    "date": "July 2026",
+    "stat": "3 platforms",
+    "statLabel": "commonly trialed before a team gets one agent live"
+  },
+  "solutionTitle": "The honest read: what each one is genuinely good at",
+  "solutionItems": [
+    "Vapi is the developer's platform. Deep control over models, tools, and call logic through its SDK, so if you have engineering muscle and want to shape every turn of the conversation, it gives you the most room.",
+    "Retell wins on time to a natural-sounding production agent. Low-latency conversation handling and a cleaner path from build to live calls make it the fastest way to a solid inbound or support agent without heavy engineering.",
+    "Bland is built for outbound at scale. Its infrastructure and pricing model are aimed at high-volume calling, so for large outbound campaigns the cost math often lands in its favor.",
+    "There is no universal winner. The right pick depends on your call type, your volume, and whether you have developers, which is exactly the decision we make with you before a single line of the build starts."
+  ],
+  "layers": [
+    {
+      "title": "Fit layer: platform matched to your reality",
+      "body": "We map your actual call flow, volume, and team before choosing. Developer-heavy and highly custom leans Vapi. Fast, natural inbound leans Retell. High-volume outbound leans Bland. The choice is defensible, not fashionable."
+    },
+    {
+      "title": "Build layer: an agent that survives real calls",
+      "body": "System prompts specced against Claude Opus 4.8 and GPT Codex for reasoning quality, plus interruption handling, transfer logic, voicemail detection, retries, and fallbacks. This is the work that separates a demo from a deployment."
+    },
+    {
+      "title": "Connect layer: your CRM is the source of truth",
+      "body": "Every call is transcribed, summarized, outcome-tagged, and written back to your CRM. Bookings, disqualifications, and callbacks route automatically, so your team acts on results instead of transcribing them."
+    }
+  ],
+  "proofTitle": "Why the done-for-you build beats another platform trial",
+  "proofBullets": [
+    "We commit to a platform recommendation you can defend to your team, tied to your call type and volume rather than whichever tool trended this month.",
+    "We build the parts that break in production first: interruptions, transfers, voicemail, and retries, so your agent holds up on real calls instead of clean demos.",
+    "We wire the agent into your CRM so every conversation lands as a record and a routed action, ending the manual note-copying your team does today."
+  ],
+  "proofStats": [
+    {
+      "stat": "1 pick",
+      "label": "platform chosen against your real constraints, not hype"
+    },
+    {
+      "stat": "Production",
+      "label": "first, edge cases handled before launch"
+    },
+    {
+      "stat": "CRM-native",
+      "label": "every call logged and routed automatically"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Trial another platform vs a built production pipeline",
+    "bars": [
+      {
+        "label": "Keep trialing platforms yourself",
+        "valueLabel": "Still no live agent",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Hire and manage an in-house dev",
+        "valueLabel": "Slow and costly",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "Done-for-you build on the right platform",
+        "valueLabel": "Live and connected",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "So which one should I actually use: Vapi, Retell, or Bland?",
+      "answer": "It depends on your call type and team. If you have developers and want deep control, Vapi. If you want a natural inbound or support agent live fast without heavy engineering, Retell. If you are running high-volume outbound and cost per minute at scale is the priority, Bland. We make this call with you based on your real numbers, then build on it."
+    },
+    {
+      "question": "Can you build on the platform I already started with?",
+      "answer": "Yes. If you already have credits or a partial build on one of the three, we can assess whether it fits your goals and continue there, or tell you honestly if switching will save you money and headaches over the next year."
+    },
+    {
+      "question": "What actually makes the outbound cost balloon at scale?",
+      "answer": "Retries on no-answers, voicemail detection, warm transfers, and longer real conversations all add minutes the pricing-page estimate ignores. We model your true cost per booked outcome, not per minute, so the platform choice reflects what you will actually pay."
+    },
+    {
+      "question": "Which models power the agents you build?",
+      "answer": "We spec the conversation and reasoning logic against frontier models like Claude Opus 4.8 and GPT Codex, then run them on whichever the chosen platform supports best. The goal is an agent that reasons well under pressure and stays in character across a full call."
+    },
+    {
+      "question": "How do you connect the agent to my CRM?",
+      "answer": "We integrate directly with your CRM so every call is transcribed, summarized, and tagged with an outcome, then routed. Bookings, disqualified leads, and callbacks update the right records automatically, so your team works from clean data instead of manual notes."
+    }
+  ],
+  "faqStat": {
+    "stat": "3 to 1",
+    "label": "platforms trialed before a single agent goes live, on average for teams we meet"
+  },
+  "ctaLabel": "Get your platform pick and build plan",
+  "ctaSupportText": "Tell us your call type and volume. We will name the right platform for you and map the production build, no obligation.",
+  "relatedLinks": [
+    {
+      "label": "AI Voice Agent",
+      "href": "/ai-voice-agent/"
+    },
+    {
+      "label": "AI Clarity Workshop",
+      "href": "/ai-clarity-workshop/"
+    },
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    }
+  ],
+  "keywords": [
+    "vapi vs retell vs bland",
+    "ai voice agent platform",
+    "vapi vs retell",
+    "bland ai outbound",
+    "retell ai comparison",
+    "ai voice agent for crm",
+    "best ai voice platform",
+    "voice ai for agencies",
+    "done for you voice agent",
+    "outbound voice ai cost"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "vapi",
+    "retell",
+    "bland"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&q=75&auto=format&fit=crop",
+      "caption": "AI voice agents handle live calls, qualify leads, and book appointments for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/voice-call-ui.svg",
+      "caption": "The voice agent handling a live call, whichever platform it is built on."
+    },
+    {
+      "src": "/screenshots/crm-contact.svg",
+      "caption": "Every call written back to the CRM, regardless of the underlying platform."
+    }
+  ]
+}

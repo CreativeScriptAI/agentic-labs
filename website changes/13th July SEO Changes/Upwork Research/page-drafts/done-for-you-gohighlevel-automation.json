@@ -1,0 +1,221 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "done-for-you-gohighlevel-automation"
+  ],
+  "title": "Done-For-You GoHighLevel Automation That Runs in Production | Agentic AI Labs",
+  "description": "Done-for-you GoHighLevel automation. We build, deploy, and run your entire GHL stack across voice, SMS, email, and social DM, so it runs in production.",
+  "heroLabel": "Done-For-You GoHighLevel",
+  "heroHeadline": "A lead raises their hand at 11pm, and by the time anyone replies, they already booked with someone else.",
+  "heroSubheadline": "We build, deploy, and run your entire GoHighLevel automation stack across voice, SMS, email, and social DM. You get a system that answers every lead in production, not a folder of workflows that break the week after setup.",
+  "heroExplainerCaption": "One lead, captured on any channel, answered and booked without a human touching it.",
+  "heroSteps": [
+    {
+      "label": "Lead lands",
+      "sub": "Form, call, DM, or ad",
+      "accent": true
+    },
+    {
+      "label": "Reply fires in seconds",
+      "sub": "Voice or text, first every time"
+    },
+    {
+      "label": "AI qualifies live",
+      "sub": "Real questions, real branching"
+    },
+    {
+      "label": "Booked and routed",
+      "sub": "Calendar, pipeline, follow-up sequences"
+    },
+    {
+      "label": "You own it running",
+      "sub": "Live stack, not a template",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why most GoHighLevel builds quietly stop working",
+  "painPoints": [
+    "You bought GoHighLevel for speed, but leads still sit for hours before anyone answers them.",
+    "An agency handed you 40 workflows, then left. One tag changes and half of them silently stop firing.",
+    "Voice, SMS, email, and DM each live in their own island, so a lead gets three disconnected messages or none at all."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "GHL AI Employee Unlimited add-on",
+        "amount": "$97/mo per location"
+      },
+      {
+        "label": "Pay-per-use voice minutes",
+        "amount": "~$0.163/min"
+      },
+      {
+        "label": "Average business response time to a new inquiry",
+        "amount": "47 hours"
+      }
+    ],
+    "total": "Every hour of silence is pipeline walking to the competitor who answered first",
+    "solvesFor": "leads answered in seconds instead of days, on a stack that keeps running",
+    "source": "Velocify lead response study (3.5M leads); Harvard Business Review lead response research"
+  },
+  "statusQuoTitle": "A pile of workflows versus a system that runs",
+  "statusQuoItems": [
+    "Template builds look complete on day one, then drift out of sync as your offers and tags change.",
+    "Nobody owns the stack, so when a step breaks there is no alert and no fix, just leads quietly leaking.",
+    "Speed to lead depends on whoever happens to be at their desk, which means most inquiries wait."
+  ],
+  "statusQuoBars": {
+    "title": "Speed to first response, by setup",
+    "bars": [
+      {
+        "label": "Manual follow-up (average business)",
+        "valueLabel": "47 hours",
+        "widthPercent": 100
+      },
+      {
+        "label": "DIY workflow pile",
+        "valueLabel": "breaks silently",
+        "widthPercent": 55
+      },
+      {
+        "label": "Our done-for-you GHL stack",
+        "valueLabel": "seconds",
+        "widthPercent": 6,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "The first minute decides the deal",
+    "body": "Velocify analyzed 3.5 million leads and found that calling within one minute of an inquiry lifts conversion by 391 percent compared with waiting just two minutes. The window closes fast, and after five minutes lead quality drops by 80 percent.",
+    "source": "Velocify Lead Response Study",
+    "date": "2026",
+    "stat": "391%",
+    "statLabel": "conversion lift from calling within 1 minute vs a 2-minute wait"
+  },
+  "solutionTitle": "What done-for-you actually means here",
+  "solutionItems": [
+    "We build the full GoHighLevel automation stack: voice agent, SMS, email, and social DM, wired to your calendars and pipelines.",
+    "We deploy it into your live account and test it against real lead paths, not a demo sub-account.",
+    "We run it in production, monitor for breaks, and fix drift before it costs you a booking.",
+    "You own the system and the account, so nothing holds your business hostage if you ever part ways with us."
+  ],
+  "layers": [
+    {
+      "title": "Capture and instant response",
+      "body": "Every inbound channel feeds one intake. A form, a missed call, an ad reply, or an Instagram DM all trigger the same fast response, so no lead waits and no lead gets three conflicting messages."
+    },
+    {
+      "title": "Qualify, book, and route",
+      "body": "The AI voice and text agents ask your real qualifying questions, branch on the answers, book straight into the calendar, and drop the contact into the right pipeline stage with the right follow-up sequence attached."
+    },
+    {
+      "title": "Built to survive production",
+      "body": "We build the logic with frontier models, Claude Opus 4.8 and GPT Codex, then harden it for your live account with monitoring and alerts. When a tag or offer changes, the stack keeps firing instead of quietly falling apart."
+    }
+  ],
+  "proofTitle": "Why speed to lead is the whole game",
+  "proofBullets": [
+    "Respond within five minutes and a lead is 21 times more likely to qualify than one contacted after 30 minutes, which is exactly the window our stack hits automatically.",
+    "Calling within one minute of an inquiry lifts conversion by 391 percent versus a two-minute wait, so the seconds our system saves compound into booked revenue.",
+    "The first business to respond wins 78 percent of deals, and an always-on stack means that first responder is always you."
+  ],
+  "proofStats": [
+    {
+      "stat": "21x",
+      "label": "more likely to qualify a lead when you respond within 5 minutes (HBR/MIT)"
+    },
+    {
+      "stat": "391%",
+      "label": "conversion lift from a 1-minute call vs a 2-minute wait (Velocify)"
+    },
+    {
+      "stat": "78%",
+      "label": "of deals won by the first business to respond"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Done-for-you stack versus the usual options",
+    "bars": [
+      {
+        "label": "DIY inside GoHighLevel",
+        "valueLabel": "you maintain it",
+        "widthPercent": 35
+      },
+      {
+        "label": "One-time agency template",
+        "valueLabel": "drifts, then breaks",
+        "widthPercent": 50
+      },
+      {
+        "label": "Our built, deployed, and run stack",
+        "valueLabel": "runs in production",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "What does done-for-you GoHighLevel actually include?",
+      "answer": "We build, deploy, and run your full GHL automation stack: the AI voice agent, SMS, email, and social DM, all wired into your calendars and pipelines. You get a system running in production, not a set of workflows handed over untested."
+    },
+    {
+      "question": "Do I own the system, or are you holding my account?",
+      "answer": "You own it. Everything lives in your GoHighLevel account under your control. If you ever stop working with us, the stack keeps running and nothing gets pulled out from under you."
+    },
+    {
+      "question": "How much does the AI voice piece cost to run?",
+      "answer": "GoHighLevel offers the AI Employee Unlimited add-on at $97 per month per location, or roughly $0.163 per minute on pay-per-use. We help you pick whichever model fits your call volume so you are not overpaying."
+    },
+    {
+      "question": "How is this different from an agency that just builds workflows and leaves?",
+      "answer": "A template looks finished on day one, then drifts as your tags and offers change until it breaks silently. We run the stack in production, monitor it, and fix drift before it costs you a booking."
+    },
+    {
+      "question": "What do you build the automation logic with?",
+      "answer": "We build the agent logic and integrations with frontier models, Claude Opus 4.8 and GPT Codex, then harden the whole thing for your live account with monitoring and alerts so it survives real production traffic."
+    }
+  ],
+  "faqStat": {
+    "stat": "47 hours",
+    "label": "average time a business takes to respond to a new inquiry, the gap this stack closes to seconds"
+  },
+  "ctaLabel": "Book a GoHighLevel automation build call",
+  "ctaSupportText": "We will map your lead paths, show you where responses are leaking, and scope a stack that answers every inquiry in seconds.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI voice pipeline, end to end",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "AI voice agent for GoHighLevel",
+      "href": "/ai-voice-agent-for-gohighlevel"
+    },
+    {
+      "label": "AI SDR for GHL agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    }
+  ],
+  "keywords": [
+    "done for you gohighlevel",
+    "done for you gohighlevel automation",
+    "gohighlevel automation agency",
+    "gohighlevel ai voice agent",
+    "ghl automation setup service",
+    "gohighlevel done for you setup",
+    "ai automation for gohighlevel",
+    "gohighlevel ai employee setup",
+    "speed to lead automation gohighlevel",
+    "gohighlevel workflow build service"
+  ],
+  "canonicalUrl": "https://www.tryagentikai.com/done-for-you-gohighlevel-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel",
+    "vapi",
+    "retell",
+    "n8n"
+  ]
+}

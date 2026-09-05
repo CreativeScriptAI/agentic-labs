@@ -1,0 +1,239 @@
+{
+  "type": "comparison",
+  "pathSegments": [
+    "n8n-vs-zapier-vs-make"
+  ],
+  "title": "n8n vs Zapier vs Make: An Honest Comparison | Agentic AI Labs",
+  "description": "n8n vs Zapier vs Make compared on billing, integrations, learning curve, and self-hosting. See which fits your business, then we build the production automation.",
+  "canonicalUrl": {
+    "__CANONICAL__": "n8n-vs-zapier-vs-make"
+  },
+  "heroLabel": "Automation Platform Comparison",
+  "heroHeadline": "Your automation bill grew faster than the work it does",
+  "heroSubheadline": "n8n, Zapier, and Make all connect your apps, but they charge in very different ways and reward different skills. We compare them honestly, tell you which one fits your business, then build the production automation on it for you.",
+  "heroExplainerCaption": "How we pick the right platform and ship a working automation on it.",
+  "heroSteps": [
+    {
+      "label": "Map your workflows",
+      "sub": "Triggers, steps, real volume",
+      "accent": true
+    },
+    {
+      "label": "Match the billing model",
+      "sub": "Per task or per execution",
+      "accent": false
+    },
+    {
+      "label": "Check integration coverage",
+      "sub": "Native connectors plus HTTP",
+      "accent": false
+    },
+    {
+      "label": "Build on the right platform",
+      "sub": "n8n, Zapier, or Make",
+      "accent": false
+    },
+    {
+      "label": "Ship and monitor",
+      "sub": "Tested, logged, handed off",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why picking the wrong tool gets expensive",
+  "painPoints": [
+    "You chose the easiest tool to start, and now a single multi-step run burns a fistful of billable tasks every time it fires.",
+    "The platform everyone recommended is missing the one connector you actually need, and nobody flagged it before you committed.",
+    "Your automations run fine until they quietly break, and you hear about it from an angry customer instead of an alert."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Zapier bill before switching platforms",
+        "amount": "$3,000/mo"
+      },
+      {
+        "label": "Same workflows rebuilt on n8n",
+        "amount": "$80/mo"
+      },
+      {
+        "label": "Kept in the business every month",
+        "amount": "$2,920/mo"
+      }
+    ],
+    "total": "Thousands a month paid to the wrong billing model",
+    "solvesFor": "Choosing the platform whose pricing matches how your workflows actually run",
+    "source": "Published n8n migration case study"
+  },
+  "statusQuoTitle": "How teams usually decide, and why it backfires",
+  "statusQuoItems": [
+    "Pick Zapier because it has the most integrations, then watch task counts multiply as workflows get longer.",
+    "Pick n8n for the low bill, then stall on the learning curve and self-hosting setup.",
+    "Pick whatever a forum post recommended, without mapping volume or the connectors the business relies on."
+  ],
+  "statusQuoBars": {
+    "title": "Cost of the same multi-step workflows per month",
+    "bars": [
+      {
+        "label": "Zapier (per task)",
+        "valueLabel": "$3,000/mo",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Make (per operation)",
+        "valueLabel": "lower, still per-step",
+        "widthPercent": 45,
+        "accent": false
+      },
+      {
+        "label": "n8n (per execution)",
+        "valueLabel": "$80/mo",
+        "widthPercent": 6,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "The billing model, not the logo, drives your bill",
+    "body": "n8n bills per workflow execution, so a 10-step run counts as one execution. On Zapier that same run counts as 10 tasks. One documented migration cut a Zapier bill from $3,000 a month to $80 a month by moving the same workflows to n8n, where execution-based pricing matched how the automations actually ran.",
+    "source": "Published n8n migration case study",
+    "date": "2026",
+    "stat": "$3,000 to $80",
+    "statLabel": "Monthly bill after moving the same workflows to n8n"
+  },
+  "solutionTitle": "What each platform is genuinely good at",
+  "solutionItems": [
+    "Zapier: the widest connector library at 6,000+ native integrations, and the fastest path for a non-technical owner to ship a simple two-app automation.",
+    "Make: a visual canvas with around 1,500 integrations, strong for branching flows you want to see laid out step by step.",
+    "n8n: execution-based billing that stays flat as workflows grow, self-hosting for full data control, and an HTTP node that reaches any API its ~1,000 native integrations miss.",
+    "Us: we map your real volume and connectors, pick the platform that fits, and build the automation as a production system rather than a fragile draft."
+  ],
+  "layers": [
+    {
+      "title": "Fit assessment",
+      "body": "We map your triggers, steps, monthly volume, and required connectors. If most of your logic lives in longer multi-step runs, per-execution billing on n8n usually wins. If you need one obscure SaaS connector and low volume, Zapier can be the right call. We tell you which, with the math."
+    },
+    {
+      "title": "Production build",
+      "body": "We build on the platform that fits: n8n self-hosted or cloud, Zapier, or Make. Where a native connector is missing on n8n, we use the HTTP node to reach the API directly, so a gap in the integration list never blocks the automation."
+    },
+    {
+      "title": "Reliability layer",
+      "body": "We add error handling, retries, logging, and alerts so failures surface to you, not to your customers. For steps that need reasoning, we wire in Claude Opus 4.8 or GPT Codex as a build-spec node with tested prompts, not a black box bolted on at the end."
+    }
+  ],
+  "proofTitle": "Why the platform choice is the whole game",
+  "proofBullets": [
+    "Billing model decides your bill more than the price page does, because a per-task tool charges every step while a per-execution tool charges once per run.",
+    "Integration count is a starting point, not the verdict, since an HTTP node closes most of the gap between the libraries.",
+    "The right platform picked up front saves a painful re-platforming later, once volume and task counts have already ballooned."
+  ],
+  "proofStats": [
+    {
+      "stat": "1 vs 10",
+      "label": "n8n executions vs Zapier tasks for one 10-step run"
+    },
+    {
+      "stat": "~1,000",
+      "label": "n8n native integrations, extended by its HTTP node"
+    },
+    {
+      "stat": "$3,000 to $80",
+      "label": "One documented monthly bill after switching to n8n"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Cost per 10-step workflow run",
+    "bars": [
+      {
+        "label": "Zapier",
+        "valueLabel": "10 tasks billed",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Make",
+        "valueLabel": "per-operation billed",
+        "widthPercent": 60,
+        "accent": false
+      },
+      {
+        "label": "n8n",
+        "valueLabel": "1 execution billed",
+        "widthPercent": 10,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is n8n always cheaper than Zapier?",
+      "answer": "Not always, but often, and it depends on shape. n8n bills per workflow execution, so a 10-step run counts as one execution where Zapier counts 10 tasks. The longer and higher-volume your workflows, the bigger the gap. One documented migration cut a Zapier bill from $3,000 a month to $80 a month on the same workflows. For a handful of simple two-step Zaps at low volume, the difference is small and Zapier's ease can win."
+    },
+    {
+      "question": "Doesn't Zapier win on integrations with 6,000+ connectors?",
+      "answer": "On raw count, yes. Zapier lists 6,000+ native integrations, Make around 1,500, and n8n roughly 1,000. But n8n's HTTP node can call any service with an API, which closes most of the gap. The real question is whether the specific connectors you depend on are covered well on the platform you pick, which is what we check during the fit assessment."
+    },
+    {
+      "question": "Which one should I actually choose?",
+      "answer": "If you run longer multi-step workflows at real volume and want a flat bill, n8n usually fits, especially self-hosted for data control. If you need the widest connector library and a non-technical owner shipping simple automations fast, Zapier fits. If you want a visual branching canvas in between, Make fits. We map your volume and connectors and tell you which, with the numbers behind it."
+    },
+    {
+      "question": "What about self-hosting and data control?",
+      "answer": "n8n can be self-hosted, so your automation data and credentials stay on infrastructure you control, which matters for regulated or privacy-sensitive work. Zapier and Make are cloud only. If self-hosting matters to you but you do not want to run the servers, we handle the hosting, updates, and monitoring as part of the build."
+    },
+    {
+      "question": "Where does AI fit into these automations?",
+      "answer": "Where a step needs real reasoning, such as classifying a message, drafting a reply, or extracting fields from messy text, we wire in a model like Claude Opus 4.8 or GPT Codex as a build-spec node with tested prompts and guardrails. The automation stays deterministic where it should be, and only calls the model for the parts that genuinely need judgment."
+    }
+  ],
+  "faqStat": {
+    "stat": "1 vs 10",
+    "label": "One 10-step run: n8n executions vs Zapier tasks"
+  },
+  "ctaLabel": "Get a platform recommendation and build plan",
+  "ctaSupportText": "Bring your current workflows and volume. We tell you whether n8n, Zapier, or Make fits, show the cost math, and scope the production build.",
+  "relatedLinks": [
+    {
+      "label": "n8n content automation pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "Our automation services",
+      "href": "/services/"
+    },
+    {
+      "label": "Book an AI clarity workshop",
+      "href": "/ai-clarity-workshop/"
+    }
+  ],
+  "keywords": [
+    "n8n vs zapier vs make",
+    "n8n vs zapier",
+    "zapier vs make",
+    "n8n pricing",
+    "n8n self-hosting",
+    "workflow automation platform",
+    "zapier alternative",
+    "automation agency",
+    "per execution billing"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "n8n",
+    "zapier",
+    "make"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop",
+      "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/n8n-canvas.svg",
+      "caption": "The n8n canvas view, one of the three platforms compared on this page."
+    }
+  ]
+}

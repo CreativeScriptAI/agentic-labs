@@ -1,0 +1,226 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "os1-meta-automation"
+  ],
+  "title": "OS.1 Meta Automation: One Engine for FB, IG and WhatsApp | Agentic AI Labs",
+  "description": "OS.1 is our in-house engine that answers Facebook, Instagram and WhatsApp messages from one shared knowledge base and logs every conversation into GoHighLevel.",
+  "heroLabel": "OS.1 Meta Automation Engine",
+  "heroHeadline": "A buyer messaged your Instagram at 11pm and got silence.",
+  "heroSubheadline": "OS.1 is our in-house engine for Meta and text automation. It answers Facebook DMs, Instagram DMs and comments, and WhatsApp from one shared knowledge base. Every conversation lands in GoHighLevel, so nothing sits unread and no lead falls between three separate inboxes.",
+  "heroExplainerCaption": "One message from any Meta channel, answered on brand and logged as a contact in GoHighLevel.",
+  "heroSteps": [
+    {
+      "label": "Message lands",
+      "sub": "FB DM, IG DM, comment, or WhatsApp",
+      "accent": true
+    },
+    {
+      "label": "OS.1 reads intent",
+      "sub": "Understands the question in context",
+      "accent": false
+    },
+    {
+      "label": "Pulls shared knowledge",
+      "sub": "One brain for every channel",
+      "accent": false
+    },
+    {
+      "label": "Replies in thread",
+      "sub": "On-brand answer in seconds",
+      "accent": false
+    },
+    {
+      "label": "Logs to GoHighLevel",
+      "sub": "Contact, thread, and tags saved",
+      "accent": true
+    }
+  ],
+  "painTitle": "Three inboxes, one team, and messages slipping through all of them",
+  "painPoints": [
+    "A comment on your Instagram post asks about pricing and sits for hours while you are on a call.",
+    "Facebook, Instagram, and WhatsApp each answer differently because a different person happens to reply.",
+    "The person who messaged never makes it into your CRM, so no follow up ever happens."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "After-hours DMs",
+        "amount": "answered too late"
+      },
+      {
+        "label": "IG comments with buying intent",
+        "amount": "lost in the noise"
+      },
+      {
+        "label": "WhatsApp threads",
+        "amount": "never logged to CRM"
+      }
+    ],
+    "total": "Warm buyers going cold in unwatched inboxes",
+    "solvesFor": "every Meta message answered and captured in one place",
+    "source": "Common gaps we see across SMB and agency Meta accounts"
+  },
+  "statusQuoTitle": "How most teams handle Meta messages today",
+  "statusQuoItems": [
+    "Someone keeps three apps open and refreshes them between other tasks.",
+    "Bolt-on chatbots answer FAQs but cannot see WhatsApp or log to your CRM.",
+    "Replies get copied into the CRM by hand later, if anyone remembers."
+  ],
+  "statusQuoBars": {
+    "title": "Coverage across your Meta channels",
+    "bars": [
+      {
+        "label": "Manual inbox checking",
+        "valueLabel": "gaps after hours",
+        "widthPercent": 35,
+        "accent": false
+      },
+      {
+        "label": "Single-channel chatbot",
+        "valueLabel": "IG and FB only",
+        "widthPercent": 55,
+        "accent": false
+      },
+      {
+        "label": "OS.1 unified engine",
+        "valueLabel": "all channels, one brain",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Buyers now expect a reply in the same channel they messaged",
+    "body": "More first-touch conversations start in a DM or a comment than on a contact form. When those threads live in separate apps with no shared memory, answers get slow and inconsistent, and the lead is never recorded anywhere you can follow up from.",
+    "source": "Agentic AI Labs field observations",
+    "date": "2026",
+    "stat": "3 channels",
+    "statLabel": "unified into one system by OS.1"
+  },
+  "solutionTitle": "What OS.1 actually does",
+  "solutionItems": [
+    "Handles Facebook DMs, Instagram DMs and comments, and WhatsApp from one engine.",
+    "Answers from a single shared knowledge base, so every channel says the same thing.",
+    "Logs each conversation as a contact and thread inside GoHighLevel automatically.",
+    "Replies in the original thread in your brand voice, then hands off to a human when needed."
+  ],
+  "layers": [
+    {
+      "title": "One shared knowledge base",
+      "body": "You update your offers, pricing, and answers in one place. OS.1 uses that same brain whether the question comes from a Facebook DM, an Instagram comment, or a WhatsApp thread, so nobody gets a different story depending on where they message."
+    },
+    {
+      "title": "Reasoning built on frontier models",
+      "body": "OS.1 is built with Claude Opus 4.8 and GPT Codex for intent understanding and drafting. That is why it reads a vague comment or a multi-part question and still replies in context instead of firing a canned FAQ block."
+    },
+    {
+      "title": "Everything logged in GoHighLevel",
+      "body": "Every thread becomes a contact and a conversation record in GoHighLevel, tagged by channel and intent. Your pipeline, automations, and follow ups run on real data instead of screenshots someone forgot to save."
+    }
+  ],
+  "proofTitle": "Why teams put OS.1 on their Meta accounts",
+  "proofBullets": [
+    "OS.1 covers Facebook, Instagram, and WhatsApp in one engine, so there is no channel left watching itself.",
+    "Because every channel reads the same knowledge base, a customer gets the same answer no matter where they ask.",
+    "Every conversation is written into GoHighLevel, so follow up runs on your CRM instead of memory."
+  ],
+  "proofStats": [
+    {
+      "stat": "3-in-1",
+      "label": "FB, IG, and WhatsApp on one engine"
+    },
+    {
+      "stat": "1 brain",
+      "label": "shared knowledge base for all channels"
+    },
+    {
+      "stat": "100%",
+      "label": "of handled threads logged to GoHighLevel"
+    }
+  ],
+  "comparisonBars": {
+    "title": "OS.1 versus a bolt-on chatbot",
+    "bars": [
+      {
+        "label": "Generic FAQ chatbot",
+        "valueLabel": "single channel, no CRM",
+        "widthPercent": 40,
+        "accent": false
+      },
+      {
+        "label": "Manual multi-inbox",
+        "valueLabel": "breaks silently after hours",
+        "widthPercent": 30,
+        "accent": false
+      },
+      {
+        "label": "OS.1 by Agentic AI Labs",
+        "valueLabel": "all channels, logged to GHL",
+        "widthPercent": 100,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "What exactly is OS.1?",
+      "answer": "OS.1 is our in-house engine for Meta and text-based automation. One system handles Facebook DMs, Instagram DMs and comments, and WhatsApp from a shared knowledge base, and logs every conversation into GoHighLevel."
+    },
+    {
+      "question": "Does it really cover comments, not just DMs?",
+      "answer": "Yes. OS.1 reads and replies to Instagram comments as well as DMs, so a buying-intent comment on a post gets answered instead of buried under the rest of the thread."
+    },
+    {
+      "question": "How does OS.1 stay on brand and accurate?",
+      "answer": "It answers only from the shared knowledge base you control, and its reasoning is built with Claude Opus 4.8 and GPT Codex. You update the brain in one place and every channel reflects it."
+    },
+    {
+      "question": "How does it connect to GoHighLevel?",
+      "answer": "Each conversation becomes a contact and a threaded record in GoHighLevel, tagged by channel and intent, so your existing pipelines, automations, and follow ups run on it directly."
+    },
+    {
+      "question": "Can a human still take over a conversation?",
+      "answer": "Yes. OS.1 handles the first response and routine questions, then hands off to your team inside GoHighLevel when a thread needs a person, with the full history attached."
+    }
+  ],
+  "faqStat": {
+    "stat": "1 system",
+    "label": "replacing three separate Meta inboxes"
+  },
+  "ctaLabel": "See OS.1 running on your Meta accounts",
+  "ctaSupportText": "We connect Facebook, Instagram, and WhatsApp to one OS.1 engine and wire every conversation into your GoHighLevel. Book a walkthrough and we will show it live on your channels.",
+  "relatedLinks": [
+    {
+      "label": "GoHighLevel AI Voice Pipeline",
+      "href": "/gohighlevel-ai-voice-pipeline"
+    },
+    {
+      "label": "AI SDR for GHL Agencies",
+      "href": "/ai-sdr-for-ghl-agencies"
+    },
+    {
+      "label": "Done-for-You GoHighLevel Automation",
+      "href": "/done-for-you-gohighlevel-automation"
+    }
+  ],
+  "keywords": [
+    "os.1 meta automation",
+    "meta automation engine",
+    "facebook instagram whatsapp automation",
+    "instagram dm automation",
+    "whatsapp automation gohighlevel",
+    "facebook messenger automation for business",
+    "instagram comment automation",
+    "gohighlevel meta integration",
+    "unified social inbox automation",
+    "ai dm automation for agencies"
+  ],
+  "painPoints2": "",
+  "canonicalUrl": "https://www.tryagentikai.com/os1-meta-automation/",
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "gohighlevel"
+  ]
+}

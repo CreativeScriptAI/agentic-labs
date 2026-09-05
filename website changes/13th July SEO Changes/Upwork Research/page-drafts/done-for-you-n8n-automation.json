@@ -1,0 +1,231 @@
+{
+  "type": "integration",
+  "pathSegments": [
+    "done-for-you-n8n-automation"
+  ],
+  "title": "Done-For-You n8n Automation: We Scope, Build, Host, and Maintain | Agentic AI Labs",
+  "description": "Done-for-you n8n automation. We scope, build, host, and maintain workflows for lead capture, content, follow-up, and data sync, with monitoring and support.",
+  "canonicalUrl": {
+    "__CANONICAL__": "done-for-you-n8n-automation"
+  },
+  "heroLabel": "Done-For-You n8n Automation",
+  "heroHeadline": "You have 14 browser tabs open and three of them are workflows you swore you would finish last quarter",
+  "heroSubheadline": "We scope, build, host, and maintain your n8n workflows for lead capture, content, follow-up, and data sync. You own automations running in production, not half-built templates parked in a tab.",
+  "heroExplainerCaption": "How a done-for-you n8n build goes from your bottleneck to a workflow running in production.",
+  "heroSteps": [
+    {
+      "label": "Scope the bottleneck",
+      "sub": "We map the process worth automating",
+      "accent": true
+    },
+    {
+      "label": "Build the workflow",
+      "sub": "Nodes wired, tested against real data",
+      "accent": false
+    },
+    {
+      "label": "Host it",
+      "sub": "Deployed on infrastructure you own",
+      "accent": false
+    },
+    {
+      "label": "Monitor in production",
+      "sub": "Alerts on failed runs, not silence",
+      "accent": false
+    },
+    {
+      "label": "Maintain and support",
+      "sub": "We fix breaks, you keep running",
+      "accent": true
+    }
+  ],
+  "painTitle": "Why the automation never shipped",
+  "painPoints": [
+    "You watched a tutorial, wired half a workflow, then a client fire pulled you away and it has sat at 60 percent ever since.",
+    "The template you imported assumed integrations you do not have, so it errors on the third node and you have no idea why.",
+    "Even the flows that run break quietly, and you only find out when a lead complains they never heard back."
+  ],
+  "costCallout": {
+    "items": [
+      {
+        "label": "Leads that arrive after hours and go cold before anyone replies",
+        "amount": "lost pipeline"
+      },
+      {
+        "label": "Hours you spend copy-pasting between tools that should sync themselves",
+        "amount": "6+ hrs/week"
+      },
+      {
+        "label": "Follow-up sequences that never send because the workflow silently failed",
+        "amount": "missed revenue"
+      }
+    ],
+    "total": "Revenue leaking through the gaps your half-built automations were supposed to close",
+    "solvesFor": "A production workflow that captures, syncs, and follows up without you touching it",
+    "source": "Based on common SMB and agency workflow gaps we scope before every build"
+  },
+  "statusQuoTitle": "The three ways teams try to get there",
+  "statusQuoItems": [
+    "Build it yourself: you learn n8n between client calls, and the workflow competes with billable work every single time.",
+    "Hire a freelancer for a one-off build: it ships, they leave, and the first time an API changes nobody owns the fix.",
+    "Stack per-task tools like Zapier: it works until volume climbs and the monthly bill quietly outruns the value."
+  ],
+  "statusQuoBars": {
+    "title": "Billing model: how the meter runs on a 10-step workflow",
+    "bars": [
+      {
+        "label": "n8n (per execution)",
+        "valueLabel": "1 execution per run",
+        "widthPercent": 15,
+        "accent": true
+      },
+      {
+        "label": "Per-task tools (Zapier model)",
+        "valueLabel": "10 tasks per run",
+        "widthPercent": 100,
+        "accent": false
+      }
+    ]
+  },
+  "industrySignal": {
+    "headline": "Per-execution billing is why teams move heavy workflows to n8n",
+    "body": "n8n bills per workflow execution, not per task, so a 10-step run counts as one execution instead of ten. One documented migration cut a monthly Zapier bill from $3,000 to $80 after moving the same automations to n8n.",
+    "source": "Reported n8n vs Zapier cost migration",
+    "date": "2025",
+    "stat": "$3,000 to $80",
+    "statLabel": "Monthly bill after moving to n8n"
+  },
+  "solutionTitle": "What done-for-you actually covers",
+  "solutionItems": [
+    "Scoping that starts with your bottleneck, not a template, so we build the flow your business actually runs on.",
+    "Full builds for lead capture, content pipelines, follow-up sequences, and data sync across the tools you already use.",
+    "Hosting on infrastructure you own, so the workflows and the credentials stay yours if we ever part ways.",
+    "Monitoring plus support: we get alerted when a run fails and fix it, instead of you discovering it from an angry customer."
+  ],
+  "layers": [
+    {
+      "title": "Scope and build",
+      "body": "We map the process, agree on what a successful run looks like, then wire and test the workflow against your real data before it ever touches production. n8n covers roughly 1,000 native integrations, and its HTTP node reaches anything with an API, so a missing connector is not a dead end."
+    },
+    {
+      "title": "Build spec with frontier models",
+      "body": "Where a workflow needs judgment (routing a lead, drafting a reply, classifying an inbound message) we build the logic against models like Claude Opus 4.8 or GPT Codex, with the prompt and fallback behavior specified so the output stays predictable in production."
+    },
+    {
+      "title": "Host, monitor, maintain",
+      "body": "The workflow runs on infrastructure you own with monitoring on every execution. When an API changes or a run fails, we are alerted and we fix it. You get support instead of a broken flow and a login you forgot you had."
+    }
+  ],
+  "proofTitle": "Why this holds up in production",
+  "proofBullets": [
+    "The per-execution model means cost tracks workflow runs, not step count, so adding logic to a flow does not multiply your bill.",
+    "One documented migration moved the same automations off a per-task tool and cut the monthly bill by more than 97 percent.",
+    "A smaller native library is not a ceiling, because the HTTP node connects to any service with an API when no prebuilt node exists."
+  ],
+  "proofStats": [
+    {
+      "stat": "1 execution",
+      "label": "A 10-step n8n run bills as one execution, not 10 tasks"
+    },
+    {
+      "stat": "$3,000 to $80",
+      "label": "Documented monthly bill after moving to n8n"
+    },
+    {
+      "stat": "~1,000 + HTTP",
+      "label": "Native n8n integrations, plus any API via the HTTP node"
+    }
+  ],
+  "comparisonBars": {
+    "title": "Native integrations available out of the box",
+    "bars": [
+      {
+        "label": "Zapier",
+        "valueLabel": "6,000+",
+        "widthPercent": 100,
+        "accent": false
+      },
+      {
+        "label": "Make",
+        "valueLabel": "~1,500",
+        "widthPercent": 25,
+        "accent": false
+      },
+      {
+        "label": "n8n (plus HTTP node for the rest)",
+        "valueLabel": "~1,000",
+        "widthPercent": 17,
+        "accent": true
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "What does done-for-you actually mean here?",
+      "answer": "We handle the whole path: scoping the process worth automating, building and testing the workflow, hosting it, and maintaining it after launch. You end up with automations running in production instead of a half-built template you have to babysit. You stay in the loop on decisions, but you do not have to learn n8n to get a working system."
+    },
+    {
+      "question": "Do I own the automations, or are they locked to you?",
+      "answer": "You own them. We host on infrastructure you control, and the workflows and credentials stay yours. If we ever stop working together, your automations keep running and you can hand them to anyone. Nothing is trapped behind a login only we hold."
+    },
+    {
+      "question": "Why n8n instead of Zapier or Make?",
+      "answer": "Zapier has the largest native library at 6,000 plus integrations and Make sits around 1,500, so both are strong for simple, low-volume connections. n8n bills per workflow execution rather than per task, which matters once volume climbs: a 10-step run is one execution, not ten tasks. One documented migration cut a monthly bill from $3,000 to $80. n8n has around 1,000 native integrations, and its HTTP node reaches anything else with an API."
+    },
+    {
+      "question": "What kinds of workflows do you build?",
+      "answer": "The common ones are lead capture (form or inbound to CRM with routing), content pipelines (drafting, formatting, publishing), follow-up sequences (multi-step outreach that fires on triggers), and data sync (keeping records consistent across tools). If a step needs judgment, we build it against a model like Claude Opus 4.8 with the behavior specified so it stays predictable."
+    },
+    {
+      "question": "What happens when an integration breaks or an API changes?",
+      "answer": "We monitor every execution, so a failed run alerts us rather than sitting silent until a customer complains. When an API changes, fixing it is part of the maintenance and support you are paying for. That is the difference between a one-off freelancer build and an automation that keeps running."
+    }
+  ],
+  "faqStat": {
+    "stat": "1 execution = 1 run",
+    "label": "n8n bills per workflow execution, not per step"
+  },
+  "ctaLabel": "Book a scoping call",
+  "ctaSupportText": "Tell us the one workflow that keeps slipping. We will scope it, tell you honestly if n8n is the right home for it, and show you what a done-for-you build looks like.",
+  "relatedLinks": [
+    {
+      "label": "n8n content automation pipeline",
+      "href": "/n8n-content-automation-pipeline"
+    },
+    {
+      "label": "All services",
+      "href": "/services/"
+    },
+    {
+      "label": "AI clarity workshop",
+      "href": "/ai-clarity-workshop/"
+    }
+  ],
+  "keywords": [
+    "done for you n8n automation",
+    "n8n automation agency",
+    "n8n workflow build",
+    "n8n hosting and maintenance",
+    "lead capture automation",
+    "n8n vs zapier cost",
+    "data sync automation",
+    "follow-up automation",
+    "managed n8n workflows"
+  ],
+  "ctaHref": "/contact",
+  "ctaEmailFallback": "aditya@tryagentikai.com",
+  "logos": [
+    "n8n"
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&auto=format&fit=crop",
+      "caption": "Automation pipelines run your busywork end to end, monitored and maintained for you.",
+      "photo": true
+    },
+    {
+      "src": "/screenshots/n8n-canvas.svg",
+      "caption": "The n8n build we scope, ship, host, and maintain end to end."
+    }
+  ]
+}
