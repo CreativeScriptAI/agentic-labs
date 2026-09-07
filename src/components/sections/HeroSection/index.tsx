@@ -87,6 +87,31 @@ const HeroSection = () => {
               Quietly running work for businesses across travel, home services,
               hiring, and coaching.
             </motion.p>
+
+            {/* Product Hunt launch badge (auto-updates to live rank on 15 Sep) */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.45 }}
+              className="mt-6 flex justify-center lg:justify-start"
+            >
+              <a
+                href="https://www.producthunt.com/posts/ai-visibility-checker-7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AI Visibility Checker on Product Hunt"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1243414&theme=light"
+                  alt="AI Visibility Checker on Product Hunt"
+                  width={250}
+                  height={54}
+                  style={{ width: 250, height: 54 }}
+                  loading="lazy"
+                />
+              </a>
+            </motion.div>
           </div>
 
           {/* ── Right: tools → us → outcome (animated, the bridge we are) ── */}
