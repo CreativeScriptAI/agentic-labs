@@ -1,6 +1,7 @@
 "use client";
 
 import FooterSection from "src/components/sections/FooterSection";
+import ProductHuntBadge from "src/components/sections/ProductHuntBadge";
 import type { VisibilityScanResult } from "src/lib/runVisibilityScan";
 import {
   Faq,
@@ -26,6 +27,7 @@ const AiVisibilityCheckerPage = ({ initialResult }: Props) => {
       <WhyItMatters />
       <TheFix />
       <Proof />
+      <ProductHuntBadge />
       <Faq />
       <FinalCta />
       {/*
