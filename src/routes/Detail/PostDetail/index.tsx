@@ -12,10 +12,15 @@ import ReelBand from "src/components/blog/ReelBand";
 
 type Props = Record<string, never>;
 
-// Posts that show the author's original Instagram reel alongside the article.
-const REELS: Record<string, string> = {
-  "seo-playbook-that-actually-works":
-    "https://www.instagram.com/reel/Dcy2_C3zbka/",
+// Posts that show a "Watch the reel" band below the TL;DR.
+// reelUrl embeds the live reel; profileUrl links out when it isn't posted yet.
+const REEL_BANDS: Record<string, { reelUrl?: string; profileUrl?: string }> = {
+  "seo-playbook-that-actually-works": {
+    reelUrl: "https://www.instagram.com/reel/Dcy2_C3zbka/",
+  },
+  "why-founders-quit-before-it-works": {
+    profileUrl: "https://www.instagram.com/adibuildz/",
+  },
 };
 
 const PostDetail: React.FC<Props> = () => {
@@ -24,7 +29,7 @@ const PostDetail: React.FC<Props> = () => {
   if (!data) return null;
 
   const category = (data.category && data.category?.[0]) || undefined;
-  const reelUrl = data.slug ? REELS[data.slug] : undefined;
+  const band = data.slug ? REEL_BANDS[data.slug] : undefined;
 
   return (
     <StyledWrapper>
@@ -40,7 +45,9 @@ const PostDetail: React.FC<Props> = () => {
         <div className="mt-10 pt-8 border-t border-[#e7e6e4]">
           <NotionRenderer recordMap={data.recordMap} />
         </div>
-        {reelUrl && <ReelBand url={reelUrl} />}
+        {band && (
+          <ReelBand reelUrl={band.reelUrl} profileUrl={band.profileUrl} />
+        )}
         {data.type[0] === "Post" && (
           <>
             <RelatedServices title={data.title} category={category} />
