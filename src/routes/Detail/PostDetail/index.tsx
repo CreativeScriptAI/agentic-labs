@@ -19,7 +19,7 @@ const REEL_BANDS: Record<string, { reelUrl?: string; profileUrl?: string }> = {
     reelUrl: "https://www.instagram.com/reel/Dcy2_C3zbka/",
   },
   "why-founders-quit-before-it-works": {
-    profileUrl: "https://www.instagram.com/adibuildz/",
+    reelUrl: "https://www.instagram.com/reel/DdB-tjgIaLQ/",
   },
 };
 
