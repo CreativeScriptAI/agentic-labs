@@ -157,7 +157,7 @@ const ProofSection = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <BracketButton
                 label="Try PatientlyAI"
-                href="/agent/patientlyai"
+                href="/agent/689b540eeeab03d6cdeab527"
                 variant="primary"
               />
             </div>

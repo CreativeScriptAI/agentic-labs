@@ -30,7 +30,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "@type": "ContactPoint",
             telephone: "+1-XXX-XXX-XXXX",
             contactType: "customer service",
-            email: "contact@tryagentikai.com",
+            email: "aditya@tryagentikai.com",
           },
           sameAs: [
             "https://x.com/tryagentikai",

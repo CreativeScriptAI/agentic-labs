@@ -306,6 +306,27 @@ const nextConfig: NextConfig = {
         destination: "/ai-voice-agent/#pricing",
         permanent: false,
       },
+      // Deprecated AI-memory persona pages -> surviving pillar page (preserve link equity)
+      {
+        source: "/ai-memory-for-ai-receptionists/",
+        destination: "/ai-memory-system/",
+        permanent: true,
+      },
+      {
+        source: "/ai-memory-for-hr-automation/",
+        destination: "/ai-memory-system/",
+        permanent: true,
+      },
+      {
+        source: "/ai-memory-for-ai-sdr-agents/",
+        destination: "/ai-memory-system/",
+        permanent: true,
+      },
+      {
+        source: "/ai-memory-for-dental-clinics/",
+        destination: "/ai-memory-system/",
+        permanent: true,
+      },
       // Localized routes redirects to global
       {
         source: "/en-in/:path*",
