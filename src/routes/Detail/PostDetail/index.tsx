@@ -13,13 +13,28 @@ import ReelBand from "src/components/blog/ReelBand";
 type Props = Record<string, never>;
 
 // Posts that show a "Watch the reel" band below the TL;DR.
-// reelUrl embeds the live reel; profileUrl links out when it isn't posted yet.
-const REEL_BANDS: Record<string, { reelUrl?: string; profileUrl?: string }> = {
+// youtubeUrl embeds a YouTube video; reelUrl embeds an Instagram reel;
+// profileUrl links out when nothing is embedded.
+const REEL_BANDS: Record<
+  string,
+  {
+    reelUrl?: string;
+    youtubeUrl?: string;
+    igUrl?: string;
+    ytUrl?: string;
+    profileUrl?: string;
+  }
+> = {
   "seo-playbook-that-actually-works": {
     reelUrl: "https://www.instagram.com/reel/Dcy2_C3zbka/",
   },
   "why-founders-quit-before-it-works": {
     reelUrl: "https://www.instagram.com/reel/DdB-tjgIaLQ/",
+  },
+  "build-easy-sell-hard-demand-first": {
+    youtubeUrl: "https://youtu.be/RNEhwjiItps",
+    ytUrl: "https://youtu.be/RNEhwjiItps",
+    igUrl: "https://www.instagram.com/adibuildz/",
   },
 };
 
@@ -46,7 +61,13 @@ const PostDetail: React.FC<Props> = () => {
           <NotionRenderer recordMap={data.recordMap} />
         </div>
         {band && (
-          <ReelBand reelUrl={band.reelUrl} profileUrl={band.profileUrl} />
+          <ReelBand
+            reelUrl={band.reelUrl}
+            youtubeUrl={band.youtubeUrl}
+            igUrl={band.igUrl}
+            ytUrl={band.ytUrl}
+            profileUrl={band.profileUrl}
+          />
         )}
         {data.type[0] === "Post" && (
           <>
