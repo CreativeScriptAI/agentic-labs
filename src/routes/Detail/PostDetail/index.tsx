@@ -9,6 +9,7 @@ import usePostQuery from "src/hooks/usePostQuery";
 import RelatedServices from "src/components/blog/RelatedServices";
 import RelatedPosts from "src/components/blog/RelatedPosts";
 import ReelBand from "src/components/blog/ReelBand";
+import ClarityCTA from "src/components/blog/ClarityCTA";
 
 type Props = Record<string, never>;
 
@@ -60,6 +61,7 @@ const PostDetail: React.FC<Props> = () => {
           </div>
         )}
         {data.type[0] === "Post" && <PostHeader data={data} />}
+        {data.type[0] === "Post" && <ClarityCTA />}
         <div className="mt-10 pt-8 border-t border-[#e7e6e4]">
           <NotionRenderer recordMap={data.recordMap} />
         </div>
