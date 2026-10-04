@@ -36,6 +36,9 @@ const REEL_BANDS: Record<
     ytUrl: "https://youtu.be/RNEhwjiItps",
     igUrl: "https://www.instagram.com/adibuildz/",
   },
+  "tldr-crawler-chrome-extension-one-prompt": {
+    reelUrl: "https://www.instagram.com/reel/DeBf9bjICe5/",
+  },
 };
 
 const PostDetail: React.FC<Props> = () => {
