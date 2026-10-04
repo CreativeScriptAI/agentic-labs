@@ -11,7 +11,8 @@ const NOTION_API_OPTIONS = {
   kyOptions: NOTION_KY_OPTIONS,
 };
 
-export const getPosts = async (): Promise<TPosts> => {
+const fetchPosts = async (): Promise<{ posts: TPosts; complete: boolean }> => {
+  let skipped = 0;
   try {
     const rawId = CONFIG.notionConfig.pageId as string;
     console.log(`[getPosts] Fetching posts from Notion pageId: ${rawId}`);
@@ -25,7 +26,7 @@ export const getPosts = async (): Promise<TPosts> => {
 
     if (!collectionId || !collectionViewId) {
       console.warn(`[getPosts] Missing collectionId or viewId`);
-      return [];
+      return { posts: [], complete: false };
     }
 
     // Correct paths: schema lives at .value.value.schema (double-nested)
@@ -35,7 +36,7 @@ export const getPosts = async (): Promise<TPosts> => {
 
     if (!schema) {
       console.warn(`[getPosts] No schema found`);
-      return [];
+      return { posts: [], complete: false };
     }
 
     console.log(`[getPosts] collectionId=${collectionId} viewId=${collectionViewId} schema keys=${Object.keys(schema).length}`);
@@ -59,7 +60,7 @@ export const getPosts = async (): Promise<TPosts> => {
 
     if (blockIds.length === 0) {
       console.warn(`[getPosts] 0 block IDs returned`);
-      return [];
+      return { posts: [], complete: false };
     }
 
     // Merge blocks from both responses
@@ -80,6 +81,7 @@ export const getPosts = async (): Promise<TPosts> => {
           data.push(properties);
         }
       } catch (error) {
+        skipped++;
         console.warn(`[getPosts] Skipping page ${id}:`, error);
         continue;
       }
@@ -93,9 +95,32 @@ export const getPosts = async (): Promise<TPosts> => {
       return dateB - dateA;
     });
 
-    return data as TPosts;
+    return { posts: data as TPosts, complete: skipped === 0 };
   } catch (error) {
     console.error("[getPosts] Error in getPosts:", error);
-    return [];
+    return { posts: [], complete: false };
   }
+};
+
+// Every page (each post, the listing, sitemap, feeds) calls getPosts. Without
+// this, a build re-fetched the whole list once per page and Notion answered
+// 429, which silently dropped older posts and baked in 404s. Share one fetch
+// per process for a short window; never cache a partial or failed list.
+const POSTS_TTL_MS = 60_000;
+let cached: { at: number; posts: TPosts } | null = null;
+let inflight: Promise<TPosts> | null = null;
+
+export const getPosts = async (): Promise<TPosts> => {
+  if (cached && Date.now() - cached.at < POSTS_TTL_MS) return cached.posts;
+  if (!inflight) {
+    inflight = fetchPosts()
+      .then(({ posts, complete }) => {
+        if (complete && posts.length) cached = { at: Date.now(), posts };
+        return posts;
+      })
+      .finally(() => {
+        inflight = null;
+      });
+  }
+  return inflight;
 };

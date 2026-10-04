@@ -106,6 +106,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     if (!postDetail?.id) {
       return {
         notFound: true,
+        // retry on the next regeneration instead of a 404 stuck until redeploy
+        revalidate: CONFIG.revalidateTime,
       };
     }
 
@@ -164,6 +166,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // If everything fails, return not found
     return {
       notFound: true,
+      revalidate: CONFIG.revalidateTime,
     };
   }
 };

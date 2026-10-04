@@ -4,6 +4,21 @@ import { NotionAPI } from "notion-client";
 import { BlockMap, CollectionPropertySchemaMap } from "notion-types";
 import { customMapImageUrl } from "./customMapImageUrl";
 
+// Every post shares the same author, so look each user up once per process
+// instead of once per post (that per-post call is what tripped Notion's 429).
+const userCache = new Map<string, Promise<any>>();
+const getUserCached = (api: NotionAPI, userId: any) => {
+  const key = String(userId[1]);
+  if (!userCache.has(key)) {
+    const p = api.getUsers(userId).catch((e: unknown) => {
+      userCache.delete(key);
+      throw e;
+    });
+    userCache.set(key, p);
+  }
+  return userCache.get(key)!;
+};
+
 async function getPageProperties(
   id: string,
   block: BlockMap,
@@ -66,7 +81,7 @@ async function getPageProperties(
           for (let i = 0; i < rawUsers.length; i++) {
             if (rawUsers[i][0][1]) {
               const userId = rawUsers[i][0];
-              const res = (await api.getUsers(userId)) as any;
+              const res = (await getUserCached(api, userId)) as any;
               const resValue =
                 res?.recordMapWithRoles?.notion_user?.[userId[1]]?.value;
               const user = {
