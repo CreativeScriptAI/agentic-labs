@@ -47,7 +47,8 @@ const CONFIG = {
   googleSearchConsole: {
     enable: true,
     config: {
-      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+      // GSC URL-prefix verification for https://www.tryagentikai.com/ under signalovernoise7@gmail.com (public token). tech@ uses a separate DNS-verified domain property.
+      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "IeHxTgOoJwpJEZrbvBv8QoLZixtBbaYTLJVTj9NF8WU",
     },
   },
   // naverSearchAdvisor: {
