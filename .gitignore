@@ -45,3 +45,4 @@ docs/
 docs/*
 # Local-only working docs and SOPs (never push to GitHub)
 website changes/
+automation/blog/private-src/

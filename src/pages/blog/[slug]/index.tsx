@@ -15,7 +15,11 @@ import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts";
 import { useRouter } from "next/router";
 
 const filter: FilterPostsOptions = {
-  acceptStatus: ["Public", "PublicOnDetail"],
+  // Local dev also renders Private drafts so automation output can be reviewed before it goes Public.
+  acceptStatus:
+    process.env.NODE_ENV === "development"
+      ? ["Public", "PublicOnDetail", "Private"]
+      : ["Public", "PublicOnDetail"],
   acceptType: ["Paper", "Post", "Page"],
 };
 
