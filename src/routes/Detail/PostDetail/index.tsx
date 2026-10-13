@@ -43,6 +43,9 @@ const REEL_BANDS: Record<
   "how-to-build-an-offer-that-sells": {
     profileUrl: "https://www.instagram.com/adibuildz/",
   },
+  "how-to-do-seo-with-ai-agents": {
+    profileUrl: "https://www.instagram.com/adibuildz/",
+  },
 };
 
 const PostDetail: React.FC<Props> = () => {
