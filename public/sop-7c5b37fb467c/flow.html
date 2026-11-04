@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>How we do it · Main Street OS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --bg:#f7f7f5; --ink:#1d1d1f; --muted:#6b6b70; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; background:var(--bg); color:var(--ink); }
+  header { position:sticky; top:0; z-index:5; background:#fff; border-bottom:1px solid #e5e5e8; padding:12px 20px; }
+  header h1 { font-size:16px; margin:0; }
+  header p { margin:4px 0 0; font-size:12.5px; color:var(--muted); }
+  header button { margin-top:8px; border:1px solid #d8d8dd; background:#fff; border-radius:8px; padding:5px 10px; font-size:12px; cursor:pointer; }
+  .wrap { display:flex; align-items:flex-start; }
+  main { flex:1; min-width:0; padding:16px 20px 60px; overflow-x:auto; position:relative; }
+  /* root banner */
+  .root { background:#1d1d1f; color:#fff; border-radius:14px; padding:12px 16px; cursor:pointer; margin-bottom:14px; }
+  .root b { font-size:14px; } .root span { display:block; font-size:12px; opacity:.85; margin-top:2px; }
+  /* phase strip */
+  .flow { display:grid; grid-template-columns:repeat(5, minmax(210px,1fr)); gap:34px; position:relative; min-width:1200px; }
+  .col { display:flex; flex-direction:column; gap:8px; position:relative; }
+  .phase { color:#fff; border-radius:12px; padding:10px 12px; cursor:pointer; position:relative; }
+  .phase b { font-size:14px; } .phase span { display:block; font-size:11.5px; opacity:.9; margin-top:3px; line-height:1.3; }
+  .phase:after { content:"➜"; position:absolute; right:-27px; top:50%; transform:translateY(-50%); color:#9a9aa2; font-size:18px; }
+  .col:last-child .phase:after { content:""; }
+  .block { background:#fff; border:1.5px solid #e2e2e7; border-left-width:5px; border-radius:10px; padding:7px 10px; cursor:pointer; transition:all .15s; position:relative; }
+  .block:hover { box-shadow:0 3px 12px rgba(0,0,0,.08); }
+  .block .n { font-size:10px; font-weight:700; color:var(--muted); }
+  .block .t { font-size:12.8px; font-weight:650; }
+  .block .s { font-size:11px; color:var(--muted); line-height:1.3; margin-top:1px; }
+  .block .more { font-size:10.5px; color:var(--muted); margin-top:3px; }
+  .block.sel { box-shadow:0 0 0 3px rgba(0,0,0,.2); }
+  .block.rel { box-shadow:0 0 0 3px #f59e0b; }
+  .flow.dim .block:not(.sel):not(.rel) { opacity:.35; }
+  .sub { margin:4px 0 2px 10px; display:flex; flex-direction:column; gap:5px; }
+  .sub .block { border-left-width:3px; padding:5px 8px; }
+  .step-arrow { text-align:center; color:#c4c4ca; font-size:11px; line-height:1; margin:-3px 0; }
+  .loop { margin-top:18px; min-width:1200px; border:2px dashed #db2777; border-top:none; border-radius:0 0 18px 18px; height:26px; position:relative; }
+  .loop span { position:absolute; left:50%; transform:translateX(-50%); bottom:-10px; background:var(--bg); padding:0 8px; font-size:12px; color:#db2777; font-weight:600; white-space:nowrap; }
+  .loop:before { content:"▲"; position:absolute; left:-8px; top:-12px; color:#db2777; font-size:13px; }
+  svg#wires { position:absolute; left:0; top:0; pointer-events:none; overflow:visible; }
+  svg#wires path { fill:none; stroke:#f59e0b; stroke-width:2; stroke-dasharray:5 4; }
+  svg#wires text { font-size:10.5px; fill:#b45309; font-weight:600; }
+  aside { width:380px; flex:none; position:sticky; top:96px; height:calc(100vh - 96px); overflow:auto; background:#fff; border-left:1px solid #e5e5e8; padding:16px 20px 40px; }
+  aside h2 { font-size:18px; margin:4px 0; } aside .sum { color:var(--muted); font-size:13px; margin-bottom:10px; }
+  aside h3 { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:14px 0 5px; }
+  aside p, aside li { font-size:13.5px; line-height:1.5; } aside ul { padding-left:18px; margin:4px 0; }
+  aside .pill { display:inline-block; font-size:11.5px; padding:3px 9px; border-radius:99px; background:#fef3c7; margin:2px 4px 2px 0; cursor:pointer; }
+  aside .crumbs { font-size:11.5px; color:var(--muted); }
+  @media (max-width: 1100px) { .wrap { flex-direction:column; } aside { width:auto; position:static; height:auto; border-left:none; border-top:1px solid #e5e5e8; } }
+  aside .viz { background:#fafafa; border:1px solid #ececf0; border-radius:12px; padding:8px; margin:6px 0 4px; }
+  aside .viz svg { width:100%; height:auto; display:block; font-family:inherit; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🗺️ How we do it: the machine</h1>
+  <p>Read it like a sentence: phases go left → right, steps inside a phase go top → bottom, and the pink line loops Scale back to Listen. Click any step to read it; orange lines show what it connects to in other phases.</p>
+  <button onclick="openAll(true)">Open every detail</button> <button onclick="openAll(false)">Close details</button> <a href="map.html" style="font-size:12.5px;color:#4f46e5;margin-left:8px">← Tree view</a>
+</header>
+<div class="wrap">
+  <main id="main"></main>
+  <aside id="panel"></aside>
+</div>
+
+<script>
+/* Shared data for BOTH views:
+   02-🗺️-how-we-do-it-map.html (click-to-expand tree)
+   02b-🔀-how-we-do-it-flow.html (linear flow)
+   Edit here once; refresh either page. */
+/* ================================================================
+   EDIT HERE. The whole map is this one object.
+   Level 1 kids = the PHASES, shown left → right in this order.
+   Level 2 = the BLOCKS inside a phase, shown top → bottom in order (step 1, 2, 3…).
+   Level 3 = optional details, opened inline by clicking the block.
+   Each node: label, emoji, sum (one line), optional d:{what, why, how:[], eg, who, out, proof, guard}, optional kids:[...].
+   ================================================================ */
+const DATA = {
+  label:"How we grow a business", emoji:"🏪", c:"#1d1d1f",
+  sum:"One topic at a time: signal → topic card → page + content → result → new signal",
+  d:{
+    what:"A loop of 5 phases. The unit of work is one TOPIC: a real question a real buyer has. Every topic moves through the same line, and what we learn feeds the next round. The method is generic for any business; examples are labelled by business type (legal, laundry, solar, real estate, gifts, salon, design studio).",
+    why:"So we never guess. We build only what buyers already ask for, in their words, skip what we can't win, and keep only what the numbers prove.",
+    how:["👂 Listen: catch signals","🧭 Decide: turn signals into topic cards","🏗️ Build: hubs, spokes, content packages","▶️ Run: ship, distribute, measure","📈 Scale: keep winners, cut the rest, loop back"],
+    who:"🤖 Agents do the volume · 🧑 humans + validators gate quality · 📒 ledgers remember every topic",
+    proof:"advonpandey: 28-day Google clicks 1,668 → 10,550 (Aug → Nov 2026). Guldasta: clicks ×24 in a month, 12 WhatsApp leads + 2 orders in Oct. unsafe.design: indexed 120 → 167.",
+    guard:"No client result yet (EdgeGrid, H&B just started). Missing everywhere: off-page authority (links, reviews) and an automatic loop from comments/DMs back to Listen."
+  },
+  kids:[
+  /* ---------------- 1 LISTEN ---------------- */
+  /* Each source: sum = WHY we pick this channel → WHAT we get. Mark untried ones with "🆕 not tried yet" in d.status. */
+  { label:"1 · LISTEN", emoji:"👂", c:"#4f46e5", sum:"Catch signals in 3 places: the market, the client, the competitors",
+    d:{ what:"A SIGNAL is any evidence of what buyers want, ask or fear: a phrase in their own words, a complaint, a near-miss search, a lead's question. It is NOT a keyword yet; it becomes one in Decide when we measure it. We listen in three places: the MARKET (online + offline), the CLIENT (what only the business owns), and the COMPETITORS (who else sells to the same buyer).",
+        why:"Signals tell us WHAT to build and IN WHICH WORDS before we spend a rupee. Keyword lists alone miss new ideas nobody searches for yet, and sound like \"spray and pray\" to a client.",
+        how:["🌐 Market: online + offline sources","🏪 Client-owned: their data + their customers' voice","🥊 Competitors: what they publish, what their customers say, how strong they are","The source list is modular: add new channels as we find them"],
+        who:"🤖 Agents collect (scouts, scrapers, APIs) · 🧑 Aditya approves any paid data pull",
+        out:"Raw phrase list + research file, every fact tagged client-said / data-shows / assumed",
+        guard:"Light scan of 1 hour or less before the client call; deep listening only after the call (desk research gets overturned)." },
+    kids:[
+      { label:"Market signals", emoji:"🌐", sum:"The outside world: online + offline",
+        d:{ what:"Everything buyers do outside the client's business: what they search, say, compare and where they live.", why:"Shows the size of the demand and the buyer's own words, independent of what the client believes." },
+        kids:[
+          { label:"Online", emoji:"💻", sum:"Search, social, directories, marketplaces, news, AI answers",
+            d:{ what:"Where buyers type, scroll, compare and ask." },
+            kids:[
+              { label:"Google Search", emoji:"🔎", sum:"People type their real need → demand size + their exact words",
+                d:{ how:["Keyword volume (city / state)","Autocomplete, People also ask, related searches"], eg:"Laundry: ~5,500 local searches/mo in Navi Mumbai. Legal: weekly keyword ideas per practice area." } },
+              { label:"Google Trends", emoji:"📈", sum:"Interest moves over time → seasons, peaks, rising topics",
+                d:{ eg:"Nail salon: nails peak Oct–Feb, pedicure Apr–Jun. Laundry: festive peaks checked against local data." } },
+              { label:"Search Console", emoji:"🎯", sum:"Once a site is live → searches we almost rank for (position 4–20)",
+                d:{ eg:"Legal (advonpandey): the weekly topic queue is built from these near-misses." } },
+              { label:"AI search", emoji:"🤖", sum:"Buyers now ask ChatGPT / Perplexity / AI Overviews → who AI recommends, which questions, are we cited",
+                d:{ status:"🆕 not tried yet", why:"A growing share of 'which X should I choose' questions never reach a search results page." } },
+              { label:"YouTube + Shorts", emoji:"▶️", sum:"Views show appetite search can't → interest, hooks, local-language phrasing",
+                d:{ eg:"Solar: Telugu bill videos at 6–13 lakh views while search volume was tiny." } },
+              { label:"Instagram", emoji:"📸", sum:"Where local buyers scroll → what they react to, what they ask in comments",
+                d:{ eg:"Real estate (Kura): 3,676 comments read, 25% ask price / location / number." } },
+              { label:"Reddit · Quora · forums", emoji:"🗣️", sum:"Honest, unfiltered questions → real objections and fears",
+                d:{ eg:"Laundry: a Reddit thread ranks #1 for 'dry cleaners kharghar'." } },
+              { label:"Facebook + community groups", emoji:"👪", sum:"Neighbourhood and society groups → who locals recommend and why",
+                d:{ status:"🆕 not tried yet", why:"Local services are chosen on word of mouth; these groups are where it's written down." } },
+              { label:"LinkedIn", emoji:"💼", sum:"B2B buyers post and move jobs → triggers, decision makers, what they care about",
+                d:{ status:"🆕 not tried yet", why:"For B2B (ingredients, wholesale), credibility and timing beat keywords." } },
+              { label:"Directories", emoji:"📒", sum:"Justdial, magicpin, Sulekha, IndiaMART → where locals compare, ratings, categories",
+                d:{ eg:"Laundry: H&B was missing from Justdial and magicpin." } },
+              { label:"Marketplaces + portals", emoji:"🛒", sum:"Amazon, property portals, aggregator apps → buyer filters, price bands, review themes",
+                d:{ eg:"TruMart: 90% of demand comes via Amazon. Real estate: portal listings and prices." } },
+              { label:"Google Business Q&A", emoji:"❓", sum:"Questions asked right on Maps listings → last-step doubts before visiting",
+                d:{ status:"🆕 not tried yet" } },
+              { label:"News · regulators · RSS", emoji:"📰", sum:"Rule, price and industry changes → timely hooks, facts that change the offer",
+                d:{ eg:"Solar: tariff and regulation orders. Agency content: News Scout across 8 sources." } },
+              { label:"Social methods", emoji:"🧪", sum:"How we read social sources",
+                d:{ how:["Post scraping (titles, captions, views, dates)","Comment mining (what people ask and complain about)","Thematic analysis: code comments by pain, desire, fear","View counts as a measure of appetite","Hook and title analysis (what makes people stop)","Keyword comments vs views (are the RIGHT people engaging?)","Audience check: share of commenters who are real buyers"],
+                    eg:"Personal brand: a viral post had 45.5K views but only 3.3% of commenters were business owners." } }
+            ]},
+          { label:"Offline", emoji:"🏙️", sum:"The physical market: who is where, how big, how fast it grows",
+            d:{ what:"Signals from the real world around the business." },
+            kids:[
+              { label:"Google Maps census", emoji:"🗺️", sum:"Count who sells this within 1–5 km → real local supply",
+                d:{ eg:"Nail salon: 102 salons within 5 km. Laundry: ~120 laundries within 3 km." } },
+              { label:"Maps geo-grid", emoji:"🎯", sum:"Rank from every point around the shop → where it is visible and where it isn't",
+                d:{ eg:"Nail salon: outside the top 100 from ~70% of a 7×7 grid. Laundry: #1 only at its own door." } },
+              { label:"Night lights (satellite)", emoji:"🛰️", sum:"Brightness over years → is the area growing, and in which direction",
+                d:{ eg:"Nail salon: core area +2.1%/yr. Laundry: +70–80% brighter since 2020.", guard:"A proxy for growth, not for demand in the category." } },
+              { label:"Population + households", emoji:"🏘️", sum:"OpenStreetMap, census, property portals → how big the buyer pool really is",
+                d:{ eg:"Laundry: ~105K people within 1–2 km vs the founder's guess of 40K." } },
+              { label:"Market registrations + economics", emoji:"🧾", sum:"Registrations, tariffs, price data → category size and money",
+                d:{ eg:"Real estate: ~300 buyers/month in the area. Solar: the export rate per unit." } },
+              { label:"Field checks", emoji:"🚶", sum:"Walk the area → what only someone on the ground can count",
+                d:{ eg:"Laundry: local ironing stalls could only be counted on the ground." } },
+              { label:"Outdoor ads + signage", emoji:"🪧", sum:"Hoardings, flyers, shop boards → who spends offline and with what message",
+                d:{ status:"🆕 not tried yet", eg:"Real estate: claimed hoardings left no trace online, so only a field check can confirm them." } },
+              { label:"Events + trade shows", emoji:"🎪", sum:"Where buyers gather in person → B2B buyers, wedding / festive demand",
+                d:{ status:"🆕 not tried yet", why:"B2B ingredient and wholesale buyers shortlist vendors at trade shows." } },
+              { label:"Partners on the ground", emoji:"🤝", sum:"Venues, installers, societies, referral doctors → who already has the buyer",
+                d:{ eg:"Nail salon: 72 banquet halls and 391 jewellers mapped as partners (plan)." } }
+            ]}
+        ]},
+      { label:"Client-owned signals", emoji:"🏪", sum:"Inside the business: their data + their customers' voice",
+        d:{ what:"What only the business has. The most authentic signal, and it overturns desk research.",
+            why:"Laundry: research said laundry, the books said 70–85% dry cleaning. Real estate: the call said ₹3L/month ads, the export said ₹26.8K in 4 months.",
+            guard:"Always ask how many bookings / sales happen. It's the question we keep forgetting." },
+        kids:[
+          { label:"Business data", emoji:"📊", sum:"Numbers the business already records",
+            kids:[
+              { label:"Sales + bookings", emoji:"🧾", sum:"What actually sells and how often → the real money products and repeat rate", d:{ status:"Asked every time; often missing" } },
+              { label:"Revenue mix", emoji:"🥧", sum:"Share of each product / service → which hub to build first", d:{ eg:"Laundry: dry cleaning, then shoes, then curtains." } },
+              { label:"Leads list + CRM", emoji:"📇", sum:"Who enquired and what happened → where the funnel leaks", d:{ eg:"Coach: ~40 of 147 leads never contacted." } },
+              { label:"Ad account exports", emoji:"💳", sum:"Spend, cost per lead, best ads → what already works with money behind it", d:{ eg:"Real estate: ₹26.8K → ~387 leads; testimonial ads at ₹27–43 per lead." } },
+              { label:"Analytics (GA4, Search Console)", emoji:"📉", sum:"What the site already gets → baseline and near-misses", d:{ eg:"Several client sites had no analytics at all." } },
+              { label:"Customer list", emoji:"👥", sum:"Who already bought → the cheapest growth (repeat + referral)", d:{ eg:"Real estate: 550 owners. Solar: 69K-home list." } }
+            ]},
+          { label:"Voice of customer", emoji:"🗨️", sum:"What their customers actually say",
+            kids:[
+              { label:"Their own reviews", emoji:"⭐", sum:"Why happy customers chose them → the words that sell", d:{ eg:"Nail salon: reviews name the artists and the exact inspo." } },
+              { label:"WhatsApp chats + DMs", emoji:"💬", sum:"Real questions before buying → objections and price questions", d:{ eg:"Gifts (Guldasta): 12 WhatsApp leads in Oct, read for what they asked." } },
+              { label:"Call recordings", emoji:"📞", sum:"How sales conversations really go → where deals stall", d:{ status:"🆕 rarely available yet" } },
+              { label:"\"How did you hear?\"", emoji:"🔍", sum:"First question on every enquiry → which channel really brings buyers", d:{ status:"🆕 planned, not running yet" } },
+              { label:"Founder + staff knowledge", emoji:"🧑‍💼", sum:"What they hear every day → real rivals, real buyers, what won't work", d:{ eg:"Laundry founder: rivals are the chains; society tie-ups won't work." } },
+              { label:"Customer interviews / surveys", emoji:"🎤", sum:"Ask 5–10 recent buyers directly → why they chose, what nearly stopped them", d:{ status:"🆕 not tried yet" } }
+            ]}
+        ]},
+      { label:"Competitor signals", emoji:"🥊", sum:"Who else sells to the same buyer: what they do, miss, and how strong they are",
+        d:{ what:"Competitors chosen from the call, not desk research.", why:"Their gaps are our openings; their strength tells us what to avoid.",
+            guard:"Laundry: our first competitor set (120 local shops) was wrong; the real rivals were 3 chains." },
+        kids:[
+          { label:"What they publish", emoji:"📄", sum:"Their pages, offers, ads, social",
+            kids:[
+              { label:"Sitemaps + pages", emoji:"🗂️", sum:"Which pages they built → topics covered and gaps", d:{ eg:"Laundry: Tumble Dry ~4,800 pages vs H&B's 3 keywords." } },
+              { label:"Offers + price cards", emoji:"🏷️", sum:"What they promise and charge → where to position", d:{ eg:"Nail salon: 15–45% underpriced vs the studio next door." } },
+              { label:"Meta Ad Library", emoji:"📣", sum:"Ads they run → who spends, which hooks, which offers", d:{ eg:"Jewellery: 825 rival ads analysed by hook. Nail salon: only 1 rival ad, so the paid feed is open." } },
+              { label:"Google Ads Transparency", emoji:"🔎", sum:"Their search ads → which searches they pay for", d:{ status:"🆕 not tried yet" } },
+              { label:"Their social presence", emoji:"📱", sum:"What content works for them → formats and topics to beat", d:{ eg:"Real estate: rival reels and comment themes." } }
+            ]},
+          { label:"What their customers say", emoji:"💭", sum:"Reviews and complaints about them",
+            kids:[
+              { label:"1–3★ reviews", emoji:"😠", sum:"The category's fear → the gap to own", d:{ eg:"Laundry: damage 30%, bill ≠ quote 27%. Nail salon: removal damage tops complaints." } },
+              { label:"5★ reviews", emoji:"😍", sum:"The words that sell → copy for our pages", d:{ eg:"Laundry: 'on time', 'like new', 'with great care'." } },
+              { label:"Complaint sites + consumer forums", emoji:"⚖️", sum:"Escalated complaints → the serious trust problems", d:{ status:"🆕 not tried yet" } }
+            ]},
+          { label:"How strong they are", emoji:"🏋️", sum:"Can we beat them, or should we avoid them?",
+            kids:[
+              { label:"Who ranks + authority", emoji:"🥇", sum:"Top results and site strength → capture or avoid", d:{ eg:"Solar: 23 domains checked; authority 40–60 sites avoided." } },
+              { label:"Google profile benchmark", emoji:"📍", sum:"Photos, reviews, categories vs ours → quick local wins", d:{ eg:"Laundry: 13 photos vs the leader's 166; 17 reviews vs 432." } },
+              { label:"Backlinks", emoji:"🔗", sum:"Who links to them → where authority comes from", d:{ status:"Partial (scripts only)" } }
+            ]}
+        ]}
+    ]},
+  /* ---------------- 2 DECIDE ---------------- */
+  { label:"2 · DECIDE", emoji:"🧭", c:"#0891b2", sum:"Turn signals into topic cards: worth it? where? in what form?",
+    d:{ what:"Decide turns a pile of signals into a short list of TOPIC CARDS. Each card says what to build, where it lives, which offer it leads to, which channel carries it, and why it's worth it for THIS business. One card = one future page, video, ad or outreach piece.",
+        why:"Deciding where NOT to play, and what is worth money to this business, is what makes this the opposite of spray and pray.",
+        how:["🔢 Qualify: is there demand, and who already owns it?","🎯 Prioritise: is it worth it for THIS business?","🗺️ Place: where does it live, and in what form?","✅ Gate: founder verifies facts + offer, one batch per hub","📇 Output: the topic card"],
+        who:"🤖 agent drafts every card · 🧑 Aditya approves each batch · 🏪 founder verifies facts per hub batch",
+        out:"Topic ledger (one row per topic card)" },
+    kids:[
+      { label:"Qualify", emoji:"🔢", sum:"Is there demand, and who already owns it?",
+        d:{ what:"Turn each phrase into a measured keyword and give it one gap type." },
+        kids:[
+          { label:"Measure the phrase", emoji:"📏", sum:"Buyer's words → keyword + monthly searches",
+            d:{ eg:"Laundry: \"dry cleaners kharghar\" (Reddit thread ranks #1). Legal: \"bail after FIR\". Solar: \"why is my current bill high\" (~25K/mo in AP).", who:"🤖 DataForSEO (with OK)" } },
+          { label:"Sort into a gap type", emoji:"🗂️", sum:"capture · create · white space · avoid",
+            d:{ how:["Searched + weak sites rank → CAPTURE","Not searched + big video interest → CREATE","Nobody answers it at all → WHITE SPACE","Strong sites (authority 40–60) own it → AVOID"],
+                proof:"Same rule everywhere: legal junk-lists navigational and US-intent terms; solar skips bill-payment and govt-portal terms; design keeps an owned vocabulary." },
+            kids:[
+              { label:"Capture", emoji:"✅", sum:"Searched, weak pages rank → build now", d:{ eg:"Laundry 'dry cleaners kharghar'; solar 'current bill explained'; legal fee and court-procedure searches." } },
+              { label:"Create", emoji:"🎥", sum:"No search yet, big interest → video / social first", d:{ eg:"Solar surplus income (EdgeGrid); gift ideas trending on Instagram (Guldasta)." } },
+              { label:"White space", emoji:"🩷", sum:"Nobody answers it → own it", d:{ eg:"An open local price list (laundry); the bill explained in the local language (solar)." } },
+              { label:"Avoid", emoji:"⛔", sum:"Giants own it → skip", d:{ eg:"Navigational and portal searches, national-brand product terms, 'best X in city' where directories own page 1.", guard:"A new site can't beat authority 40–60 sites in 60 days." } }
+            ]}
+        ]},
+      { label:"Prioritise", emoji:"🎯", sum:"Is it worth it for THIS business?",
+        d:{ what:"Rank topics by what they can earn, not only by search volume.",
+            guard:"advonpandey: traffic grew 6× while money pages lost clicks, because scoring looked only at volume and difficulty. Business value fixes that." },
+        kids:[
+          { label:"Score", emoji:"🎯", sum:"demand × ease × buyer intent × business value × timing",
+            d:{ how:["Demand: monthly searches or social appetite","Ease: 1 − difficulty (who ranks, how strong)","Buyer intent: how close to buying (BOFU scores highest)","Business value: revenue mix, margin, does it lead to the main offer","Timing: season or trend window (festive, wedding, tax season, rule change)","×1.5 if Search Console already shows impressions for it"],
+                proof:"advonpandey weekly topic queue (volume × ease × intent). Business value + timing are new." } }
+        ]},
+      { label:"Place", emoji:"🗺️", sum:"Where does it live, and in what form?",
+        d:{ what:"Every card gets four placements: hub, funnel tag, offer, channel." },
+        kids:[
+          { label:"Place in ONE hub", emoji:"📍", sum:"By TOPIC: one cluster per topic",
+            d:{ how:["Which topic cluster does this belong to, and which offer does the reader need next?","One main keyword per page (no two pages chase the same search)","Duplicate check before writing: if an existing page covers it, improve that page"],
+                proof:"advonpandey coverage check blocks a topic if 2/3 or more of its words match an existing page.",
+                guard:"advonpandey's autopilot once made ~51% near-duplicates because the check ran after publishing. Block BEFORE." } },
+          { label:"Tag the funnel stage", emoji:"🏷️", sum:"TOFU · MOFU · BOFU = how ready",
+            d:{ what:"A TAG on the piece, based on the question it answers. NOT a layer of the site.",
+                eg:"Legal: TOFU 'BNS full form' · MOFU 'bail after FIR process' · BOFU fee guide. Laundry: TOFU stain care · MOFU how to choose · BOFU price list." },
+            kids:[
+              { label:"TOFU", emoji:"🌱", sum:"Curious: what is, why", d:{ eg:"'Why is my bill high', 'BNS full form', care guides." } },
+              { label:"MOFU", emoji:"⚖️", sum:"Comparing: safe? X vs Y? how?", d:{ eg:"'How to choose a dry cleaner', 'is it legal', 'how to verify a lawyer'." } },
+              { label:"BOFU", emoji:"💰", sum:"Ready: price, book, documents", d:{ eg:"Price lists, fee guides, offer page + calculator.", guard:"Build BOFU-tagged pieces first." } }
+            ]},
+          { label:"Map to one offer", emoji:"🎁", sum:"Which offer does this reader need next?",
+            d:{ what:"Every card points to exactly one offer or next action (book, get a quote, join waitlist, call).", why:"So every piece of content ends in one tracked next step." } },
+          { label:"Pick the channel", emoji:"📡", sum:"Page · video · ad · outreach: which carries it best?",
+            d:{ how:["CAPTURE topics → a page first (search), then a reel","CREATE topics → video / social first, page as the landing","Proven winners → ads (only on what already works)","Known-list buyers → outreach (letter, WhatsApp, call) landing on the page"],
+                why:"One topic list drives SEO, social, ads and outreach together, so the message is the same everywhere.", eg:"Solar: Telugu reels first for surplus income, page as the landing. Laundry: price-list page first, reels after." } }
+        ]},
+      { label:"Founder gate", emoji:"✅", sum:"Founder verifies facts + offer, one batch per hub",
+        d:{ what:"Before a hub's batch is built, the founder checks facts, numbers and the offer; Aditya approves the batch.",
+            eg:"Solar: nothing live until the payout rate is confirmed. Laundry: pickup radius + real photos. Real estate: prices and legal facts signed off.",
+            guard:"Names, claims, numbers only from a written source. Proof numbers stay TBC until verified." } },
+      { label:"Topic card", emoji:"📇", sum:"The output: one row per topic",
+        d:{ what:"Fields on every card:", how:["Source signal (where it came from)","Buyer phrase → keyword + volume","Gap type","Score (with business value + timing)","Hub · funnel tag","Offer it leads to","Channel(s)","Status: idea → approved → built → live → judged"],
+            out:"Topic ledger: the memory every later phase reads from" } }
+    ]},
+  /* ---------------- 3 BUILD ---------------- */
+  { label:"3 · BUILD", emoji:"🏗️", c:"#16a34a", sum:"Foundations → topic clusters → content packages → production line → asset bank",
+    d:{ what:"Topic cards become real assets: pages, reels, ads, outreach messages, tools. Pages are arranged as topic clusters (hub and spoke). Every piece is made by agents and checked by validators and humans before it ships.",
+        why:"Grouping pages by topic and linking them well is how a site earns authority. Gating every piece is how we get volume without junk.",
+        how:["🧱 0 Foundations gate: nothing ships until the site is readable + trackable","🏛️ 1 Architecture: keyword map, topic clusters, pillars, spokes, links","📦 2 Packages: what ships per topic card, per channel","🏭 3 Production: how it gets made and checked","🗃️ 4 Asset bank: what we keep and reuse"],
+        who:"🤖 writer + validator agents · 🧑 human approves samples · 🏪 client supplies real footage and approves claims",
+        out:"Live-ready assets, each registered in the topic ledger and its cluster",
+        guard:"Sources: SEO learnings living doc (Play Library, pSEO Guidelines, AEO Playbook, Ops and Tooling, Mistakes)." },
+    kids:[
+      { label:"Foundations gate", emoji:"🧱", sum:"Nothing ships until the site is readable + trackable",
+        d:{ how:["Server-rendered HTML (prerender) so Google and AI can read it","robots.txt allows AI crawlers; honest sitemap lastmod","Search Console + Bing + IndexNow","GA4 key events tested live; coded WhatsApp button; QR/UTM offline","Entity schema (@id + sameAs)","Google Business Profile complete, if local"],
+            proof:"Laundry: Google could read 12 words of the site. Several client sites are client-side React apps.",
+            guard:"Skipping foundations is the most repeated cause of wasted months [Play Library #3]. Plumbing before content or ads." } },
+      { label:"Architecture", emoji:"🏛️", sum:"Keyword map → topic clusters → pillar + spokes → links",
+        d:{ what:"Where every page lives, so authority adds up and readers find their next step." },
+        kids:[
+          { label:"Keyword map", emoji:"🗝️", sum:"One main keyword per page; every keyword owned by exactly one page",
+            d:{ how:["Slug, title and H1 built around that keyword","Tag each keyword: money · authority · service · support","No two pages chase the same search"], guard:"[Play Library #1]" } },
+          { label:"Hubs = topic clusters", emoji:"🧩", sum:"A hub is a TOPIC cluster (named in the reader's words), not a reader group",
+            d:{ what:"A hub groups pages on one topic. Authority is built on topic, not geography or persona.",
+                how:["Group topic cards by topic","One cluster registry lists every cluster and its pillar","Start with 4–6 clusters; city pages only after a 30-day read","A cluster can be mostly TOFU (pulls search in) and hand readers to another cluster's money page"],
+                eg:"Legal: criminal · property · family · high court. Laundry: dry clean · shoes · curtains · laundry. Solar: bill explained · surplus income · no-roof savings · business power.",
+                guard:"[Play Library #12, #22] Decided 4 Nov: hub = topical cluster." } },
+          { label:"Pillar page", emoji:"🏛️", sum:"The cluster's main page: builds authority, carries the offer",
+            d:{ how:["Answers the big question; links to every spoke","40–60 word answer at the top","Comparison block, FAQs, one coded CTA"] } },
+          { label:"Spokes", emoji:"📄", sum:"One question (or one prompt family) per page, tagged TOFU/MOFU/BOFU",
+            d:{ how:["One main keyword","Links its pillar early in the body + 2–3 sibling spokes","H2s written as the questions people actually type"] , guard:"[AEO] 'one page per prompt family; thick, not thin'." } },
+          { label:"Links", emoji:"🔗", sum:"Spoke → pillar + siblings in body text · bridges from earning pages · no orphans",
+            d:{ how:["Spoke links its pillar + 2–3 siblings inside the text (cards, nav, footer barely count)","Island bridges: pages that already earn traffic link to money pages","Every new page gets 2–3 inbound links on the day it publishes","Hubs link all their children; footer works as a sitemap"],
+                proof:"advonpandey: 88% of links pointed only up, 49% of articles had zero inbound article links. EdgeGrid plan: 43 pages, 257 links.",
+                guard:"Stuck pages on tryagentik and unsafe had ZERO in-body links; index requests didn't help. 🧪 EXPERIMENT (not a rule yet): link each page one funnel stage forward (TOFU → MOFU → BOFU); test later." } }
+        ]},
+      { label:"Content packages", emoji:"📦", sum:"What ships for each topic card, per channel",
+        d:{ what:"Decide picked the channel; Build makes every piece in the same words." },
+        kids:[
+          { label:"Page anatomy", emoji:"🧱", sum:"The fixed parts of every page",
+            d:{ how:["H1 = slug = title","40–60 word answer (TLDR) under the H1","A unique block a template can't make (real number, local fee, ruling, photo, founder view)","Honest comparison block (you choose who you sit next to)","4–6 FAQs (FAQ schema only on genuine Q&A)","One primary CTA (coded WhatsApp)","5–10 related links + breadcrumbs","Schema"],
+                guard:"Floors: 30%+ unique per page; noindex under 300 unique words; city pages need 1 fact true only there [pSEO Guidelines]. TLDR box gave +33% conversion on one client [Play #2]." } },
+          { label:"Page types", emoji:"🗂️", sum:"~14 types, each tagged by funnel stage",
+            d:{ how:["BOFU: money/service page · fee/cost guide · X vs Y · how to choose/verify · alternatives · location page · free tool / calculator · pricing","MOFU: honest comparison listicle · process/how-to · objection answer · use-case/persona","TOFU: situation/problem page · explainer · glossary term · FAQ answer page · myth-buster · citation hub (stats/trends)"],
+                guard:"Self-ranked 'best X' listicles fail (0.1% CTR). Honest-broker only [Play #5]." } },
+          { label:"Social + video", emoji:"🎬", sum:"Reel / video cut from the same topic, same words",
+            d:{ how:["Angles: explainer · myth-buster · calculator demo · objection · proof","Hook = the buyer's own phrase; reel links the page; page embeds the reel"] } },
+          { label:"Ads + outreach", emoji:"📣", sum:"Ad creative and outreach messages from the same topic card",
+            d:{ how:["Ad creative only for topics already proven (Amplify)","Outreach: letter, WhatsApp script, call script landing on the page"] } },
+          { label:"Free tool / calculator", emoji:"🧮", sum:"When a number decides the purchase",
+            d:{ how:["Owns a head term","A rules layer sets prices and promises, never the AI","Your offer is the first recommendation; no gate; capped model calls"], guard:"[Play #9]" } },
+          { label:"Twins", emoji:"🪞", sum:"Markdown twin always · language twin only when needed",
+            d:{ how:["Markdown twin (/slug.md) for AI search; ChatGPT reads HTML only, so server-render","Language twin (Hindi, Telugu…) ONLY when a big share of the audience reads in it; hreflang only to indexable pages"],
+                guard:"[AEO, Play #23] Decided 4 Nov: language twin is situational, not default." } }
+        ]},
+      { label:"Production line", emoji:"🏭", sum:"Search check → brief → writer → fact-check → validator → human → publish",
+        d:{ how:["Search-results check: build only if 4 or fewer strong sites hold the top 10","Brief + fact pack from the topic card","Writer agent drafts (draft file only)","Fact-check / correction loop","Validator agent: one H1, canonical, meta 70–170 chars, title ≤60 chars, no brand in title (except pricing/contact), byline, CTA to money page, no unverified numbers, citation + duplicate guard, cluster registered, pillar link, no keyword clash, banned words","Human approves a sample before any batch","Register in cluster + add inbound links → publish (one publisher only)"],
+            proof:"advonpandey: Grok writes, Claude validates and publishes. Guldasta: 17 automatic checks.",
+            guard:"Block before publishing, never noindex after. Automatic rewrites only FLAG, never apply (54 articles damaged). YMYL topics (legal, health, money) need expert review. Proof or don't publish: real footage from the client, no fake rankings, never rank yourself #1. Verify every number (16 of 57 citations were wrong)." },
+        kids:[
+          { label:"Creative rules per client", emoji:"🎨", sum:"What's allowed for this brand: face, voice, AI visuals, claims",
+            d:{ eg:"Laundry: no founder face or name, no AI models; logo + changed voice OK. Jewellery: humans make the ads.", guard:"Checked by the validator and the human sample." } }
+        ]},
+      { label:"Asset bank", emoji:"🗃️", sum:"What we keep and reuse across channels",
+        d:{ how:["Verified proof sheet: every number with its source (TBC until verified)","Creative rules per client","Owned vocabulary + banned-words list","Translation glossary (if twins are used)","Dated rival price tables","Page templates per business type (+ data file)","Off-page proof: Google profile, reviews, sameAs links"],
+            guard:"Off-page proof is missing on every site and caps every local play [Mistakes]." } }
+    ]},
+  /* ---------------- 4 RUN ---------------- */
+  { label:"4 · RUN", emoji:"▶️", c:"#d97706", sum:"Ship → get found → distribute → capture enquiries → measure",
+    d:{ what:"Put assets live, get them indexed and seen, push them out on every channel, catch every enquiry with its source, and measure each step. Run makes the machine end to end: content → enquiry → hand-off.",
+        why:"A page nobody finds or a lead we can't trace is wasted work. SEO is one configuration of the client engine: FIND → QUALIFY → FOLLOW UP [GTM Layer].",
+        how:["🚀 Ship + index","🔎 Get found (search + AI search; off-page authority noted for later)","📣 Distribute","💬 Capture (enquiry → qualify → follow up → hand-off)","📊 Measure"],
+        who:"🤖 indexing, distribution and reporting routines + AI qualifier · 🧑 checks weekly · 🏪 client's team closes",
+        guard:"Sources: SEO learnings living doc (Ops and Tooling, AEO Playbook, GTM Layer)." },
+    kids:[
+      { label:"Ship + index", emoji:"🚀", sum:"Publish in batches, indexed daily",
+        d:{ how:["Publish in batches, BOFU first (~2 pages/day)","2–3 inbound links on publish day","Daily indexing routine: ~10 requests/day in Search Console + Bing","IndexNow ping","Don't resubmit a page within 14 days"],
+            proof:"Indexing routine runs on 3 sites. unsafe.design indexed 120 → 167.",
+            guard:"Check the Google account before running (runs aborted on the wrong login). Index requests don't fix pages with no in-body links." } },
+      { label:"Get found", emoji:"🔎", sum:"Search + AI search seats; off-page authority noted for later",
+        d:{ how:["Google profile posts, photos, review replies (local)","Directories with the same name, address, phone (Justdial, magicpin, Sulekha…)","AI search: llms.txt + markdown twins; be present where AI looks (Reddit answers, directories)","Value-first Reddit / forum answers that point to the page"],
+            guard:"📌 Off-page authority (backlinks, reviews, citations, sameAs) is the blind spot on every site and caps every local play. Mentioned here, NOT a full part yet: dig deeper later." } },
+      { label:"Distribute", emoji:"📣", sum:"Every channel points to one page per topic",
+        d:{ how:["Reel / post per topic in the buyer's words → bio link / pinned comment → that page","Outreach sends for CREATE topics: letters with QR, WhatsApp, calls → the page","Partner shares (venues, installers, referral doctors)","Comments + DMs logged as new signals"],
+            guard:"Content must come from real conversations or it reads as slop [GTM Layer]." } },
+      { label:"Capture", emoji:"💬", sum:"Enquiry → AI qualifies → follow up → human closes",
+        d:{ what:"What happens after someone taps the coded WhatsApp button or calls. Included in Run (decided 4 Nov); to be detailed later.",
+            how:["Coded WhatsApp / call / form → lead lands with its page code (Telegram + sheet)","First question: 'How did you hear about us?'","AI qualifies (sort question), humans close","Follow up on day 2 and day 7","Hand-off to the client's closer with source + notes"],
+            eg:"Legal (advonpandey): call / WhatsApp / 3-step form → Telegram + sheet. Gifts (Guldasta): guide → shop → WhatsApp 'pay after we confirm'.",
+            guard:"Coach: ~40 of 147 leads were never contacted. Closing belongs to the client's team; we set up, measure and coach it." } },
+      { label:"Measure", emoji:"📊", sum:"Weekly · twice monthly · enquiries by source · AI citations",
+        d:{ how:["Weekly: pages live, indexed, Maps rank, reviews","1st + 15th: report vs baseline","Monthly: enquiries by page code / source; enquiry → sale rate from the client","AI search: citation share across 10–20 prompts × 4 engines; AI-referrer segment in analytics","Autopilot = alerts only (never auto-rewrites)"],
+            proof:"advonpandey measurement loop since 12 Aug 2026.",
+            guard:"Revenue = opportunities × conversion × deal size: check which one is actually short before blaming conversion [GTM Layer]." } }
+    ]},
+  /* ---------------- 5 SCALE ---------------- */
+  { label:"5 · SCALE", emoji:"📈", c:"#db2777", sum:"Judge → double down → amplify → clean → loop back (signals + lessons)",
+    d:{ what:"Judge every cluster and page on data, double down on what works, put money only behind winners, clean out dead weight, and feed two loops back: new signals into Listen, and new lessons into the learnings doc so the whole system improves itself.",
+        why:"Automation creates SEO debt as fast as it creates pages unless every step is gated.",
+        how:["🚦 Judge: 30-day gate + near-miss harvest","⬆️ Double down: more of what works; expansion as a test with a kill gate","💸 Amplify: money only behind proven winners","🧹 Clean: merge, redirect, noindex, refresh","🔁 Loop back: signals → Listen · lessons → learnings doc + Learnings DB"],
+        who:"🤖 measurement + alerts · 🧑 Aditya decides scale / enrich / fold · 🏪 founder approves spend",
+        guard:"Sources: SEO learnings living doc (pSEO Guidelines, Play Library, GTM Layer, Mistakes, Site Case Files index)." },
+    kids:[
+      { label:"Judge", emoji:"🚦", sum:"30-day gate per cluster / pilot batch + near-miss harvest",
+        kids:[
+          { label:"30-day gate", emoji:"🚦", sum:"Pilot read at 30 days: ≥70% indexed with impressions → scale · 30–70% → enrich · <30% → fold",
+            d:{ what:"Per cluster or pilot batch (50–100 pages), after 30 days (decided 4 Nov: 30-day pilot gate, not 60).",
+                guard:"Never scale a template before its 30-day read (advonpandey scaled to 69 city pages without its own pilot)." } },
+          { label:"Harvest near-misses", emoji:"🌾", sum:"Position 4–15 searches → refresh or new spoke",
+            d:{ how:["Searches where we sit just off page 1 become H2s or new spokes","'Improve existing' beats 'create new'"],
+                proof:"advonpandey: court-fees page 0 → 98 clicks; bar-council page 10 → 284 clicks." } }
+        ]},
+      { label:"Double down", emoji:"⬆️", sum:"More of what works; every expansion is a test",
+        d:{ how:["More spokes in winning clusters","Automate a template (content engine) ONLY after it's proven by hand","Remix winning content every 90 days","New cluster or new city = a test with a kill gate (e.g. 3–5 real enquiries within 30 days, or stop)"],
+            guard:"Geo beachheads need proof, not pages: Singapore pages on tryagentik and unsafe sat at position 49–59 with no clicks [Play Library]. Decided 4 Nov: expansion is part of Scale, as a test." } },
+      { label:"Amplify", emoji:"💸", sum:"Ads / boosts only behind proven winners",
+        d:{ how:["Boost a post only if: 2× median views, 0.5%+ keyword comment rate, 3+ qualified replies","Stop if a qualified DM costs more than $30","Ads only on pages / posts already converting","Monthly spend caps per client"],
+            guard:"[GTM Layer] Ads come after organic proof, never instead of it." } },
+      { label:"Prune", emoji:"🧹", sum:"Merge, redirect, noindex, refresh",
+        d:{ how:["Merge near-duplicates with 301 redirects","Noindex pages with no impressions after 90 days, only with complete data","Refresh AI-cited pages every 90 days","No fake freshness (date bumps without real changes)"],
+            proof:"advonpandey: 77 redirects, 8 duplicate pairs merged.",
+            guard:"The autopilot once noindexed 130 earning pages because it only read the top 200 rows." } },
+      { label:"Loop back", emoji:"🔁", sum:"Two loops: signals → Listen · lessons → learnings doc",
+        kids:[
+          { label:"Signals loop", emoji:"📡", sum:"Comments, DMs, leads, Search Console near-misses → new topic cards",
+            d:{ guard:"Manual on every site today; automating it is the next gap." } },
+          { label:"Learning loop", emoji:"🧠", sum:"Every lesson → SEO learnings living doc + Main Street OS Learnings DB",
+            d:{ what:"What broke, what worked and why becomes a Candidate in the Learnings DB, then a Rule when seen in 2+ clients (or once if it cost money or a deal), and is added to the right sub-page of the SEO learnings doc.",
+                why:"So the machine improves itself: every client makes the next one faster and safer.",
+                guard:"Decided 4 Nov: lessons loop is part of Scale." } }
+        ]},
+      { label:"Guardrails we paid for", emoji:"⚠️", sum:"Lessons that cost us",
+        d:{ how:["Never auto-template page titles (54 articles, 0.44% CTR)","Block duplicates before publishing","Confirm data is complete before any automatic action","Link down and sideways, not only up","Verify every number","BOFU before more TOFU","No fake freshness","Earn authority: links and reviews (missing on every site)"] } }
+    ]}
+
+  ]
+};
+
+/* CONNECTIONS between blocks in different phases: [from label, to label, why]. Shown when you click either block. */
+const LINKS = [
+  ["Signals loop","Search Console","near-miss searches become new topics"],
+  ["Signals loop","Social methods","comments + DMs become new phrases"],
+  ["Signals loop","\"How did you hear?\"","leads + 'how did you hear?' answers"],
+  ["Google Search","Measure the phrase","phrases get measured"],
+  ["YouTube + Shorts","Sort into a gap type","no search but big interest = Create"],
+  ["Who ranks + authority","Sort into a gap type","strong rivals = Avoid"],
+  ["Founder + staff knowledge","Founder gate","founder verifies facts"],
+  ["Place in ONE hub","Hubs = topic clusters","the cluster list comes from here"],
+  ["Tag the funnel stage","Links","pages link one stage forward"],
+  ["Tag the funnel stage","Content packages","page type follows the tag"],
+  ["Founder gate","Production line","only verified facts get written"],
+  ["Content packages","Distribute","reel cut from the same topic"],
+  ["Production line","Ship + index","validated pages get published"],
+  ["Foundations gate","Measure","tracking must exist first"],
+  ["Measure","30-day gate","the gate reads these numbers"],
+  ["Measure","Harvest near-misses","position 4–15 searches"],
+  ["Harvest near-misses","Score","proven searches score ×1.5"],
+  ["Prune","Place in ONE hub","duplicate check stops new duplicates"],
+  ["Amplify","Distribute","ads only on posts that work"],
+  ["Pick the channel","Content packages","channel decides the package"],
+  ["Map to one offer","Pillar page","the pillar carries the offer"],
+  ["Topic card","Measure","every card is judged on its numbers"],
+  ["Capture","\"How did you hear?\"","first question on every enquiry"],
+  ["Map to one offer","Capture","the offer is what the enquiry asks for"],
+  ["Learning loop","Guardrails we paid for","new lessons become guardrails"]
+];
+
+/* ================================================================
+   VISUALS shown in the side panel. VIZ_FOR maps a box label → a visual name.
+   Each VIZ entry returns an SVG string: edit text/colours here and refresh.
+   ================================================================ */
+const VIZ_FOR = {
+  "How we grow a business":"machine", "1 · LISTEN":"listen3", "Sort into a gap type":"gapMatrix",
+  "Score":"score", "Prioritise":"score", "Tag the funnel stage":"funnel", "Topic card":"topicCard",
+  "3 · BUILD":"hubspoke", "Architecture":"hubspoke", "Hubs = topic clusters":"hubspoke", "Pillar page":"hubspoke", "Spokes":"hubspoke",
+  "Links":"links", "Page anatomy":"anatomy", "Production line":"pipeline",
+  "Capture":"capture", "Judge":"gate", "30-day gate":"gate", "Loop back":"loops"
+};
+const C = { tofu:"#3b82f6", mofu:"#f59e0b", bofu:"#16a34a", ink:"#1d1d1f", mute:"#6b6b70", line:"#c9c9cf", red:"#dc2626", pink:"#db2777" };
+const T = (x,y,s,o={}) => `<text x="${x}" y="${y}" font-size="${o.fs||11}" fill="${o.c||C.ink}" text-anchor="${o.a||'middle'}" font-weight="${o.w||400}">${s}</text>`;
+const VIZ = {
+  hubspoke(){
+    const cx=130, cy=145, R=92, sp=[["TOFU","why is X…",C.tofu],["TOFU","what is X",C.tofu],["MOFU","X vs Y",C.mofu],["MOFU","how to choose",C.mofu],["BOFU","price / fees",C.bofu],["BOFU","book / quote",C.bofu]];
+    let s=`<svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">`;
+    s+=`<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="${C.mute}"/></marker></defs>`;
+    const pts=sp.map((p,i)=>{const a=-Math.PI/2+i*2*Math.PI/sp.length;return [cx+R*Math.cos(a),cy+R*Math.sin(a)]});
+    pts.forEach(([x,y])=>{s+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${C.line}" stroke-width="2"/>`});
+    for(let i=0;i<pts.length;i++){const [x1,y1]=pts[i],[x2,y2]=pts[(i+1)%pts.length]; s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${C.line}" stroke-dasharray="3 3"/>`;}
+    s+=`<circle cx="${cx}" cy="${cy}" r="36" fill="${C.bofu}"/>`+T(cx,cy-3,"PILLAR",{c:"#fff",w:700})+T(cx,cy+11,"topic hub",{c:"#fff",fs:9.5});
+    pts.forEach(([x,y],i)=>{s+=`<circle cx="${x}" cy="${y}" r="22" fill="#fff" stroke="${sp[i][2]}" stroke-width="3"/>`+T(x,y-2,sp[i][0],{c:sp[i][2],w:700,fs:10})+T(x,y+10,sp[i][1],{fs:7.5,c:C.mute});});
+    s+=`<circle cx="300" cy="62" r="24" fill="#e5f3ff" stroke="${C.tofu}" stroke-dasharray="3 2"/>`+T(300,59,"other",{fs:9})+T(300,70,"cluster",{fs:9});
+    s+=`<path d="M276,70 C240,90 225,170 ${pts[4][0]+20},${pts[4][1]-6}" fill="none" stroke="${C.mute}" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>`+T(258,135,"hands off to",{fs:8.5,c:C.mute})+T(258,146,"a money page",{fs:8.5,c:C.mute});
+    s+=T(130,270,"— spoke ↔ pillar (proven)   - - - siblings",{fs:9,c:C.mute});
+    [["TOFU curious",C.tofu],["MOFU comparing",C.mofu],["BOFU ready",C.bofu]].forEach(([t,c],i)=>{s+=`<rect x="${20+i*105}" y="282" width="10" height="10" rx="2" fill="${c}"/>`+T(34+i*105,291,t,{a:"start",fs:9.5})});
+    return s+`</svg>`;
+  },
+  funnel(){
+    let s=`<svg viewBox="0 0 340 210" xmlns="http://www.w3.org/2000/svg">`;
+    const rows=[["TOFU","curious: what is · why",'"why is my bill high"',C.tofu,0],["MOFU","comparing: safe? X vs Y?",'"how to choose a dry cleaner"',C.mofu,1],["BOFU","ready: price · book",'"fee guide · offer + calculator"',C.bofu,2]];
+    rows.forEach(([t,d,e,c,i])=>{const y=10+i*65,w=170-i*45,x=10+i*22.5; s+=`<path d="M${x},${y} L${x+w},${y} L${x+w-22.5},${y+58} L${x+22.5},${y+58} z" fill="${c}"/>`+T(x+w/2,y+33,t,{c:"#fff",w:700,fs:13});
+      s+=T(195,y+24,d,{a:"start",w:600,fs:10.5})+T(195,y+40,e,{a:"start",c:C.mute,fs:9.5});});
+    return s+T(170,205,"a TAG on each page (not a layer) · every cluster has all three",{fs:9,c:C.mute})+`</svg>`;
+  },
+  gapMatrix(){
+    let s=`<svg viewBox="0 0 340 250" xmlns="http://www.w3.org/2000/svg">`;
+    const q=[[60,10,"🎥 CREATE / 🩷 WHITE SPACE","low search, nobody strong","#fce7f3"],[195,10,"✅ CAPTURE","searched, weak sites rank","#dcfce7"],[60,115,"skip","low search, owned","#f1f5f9"],[195,115,"⛔ AVOID","searched, giants own it","#fee2e2"]];
+    q.forEach(([x,y,t,d,f])=>{s+=`<rect x="${x}" y="${y}" width="130" height="100" rx="8" fill="${f}"/>`+T(x+65,y+46,t,{w:700,fs:10.5})+T(x+65,y+63,d,{fs:9,c:C.mute});});
+    s+=T(192,235,"search demand →",{fs:10,c:C.mute});
+    s+=`<text x="40" y="115" font-size="10" fill="${C.mute}" text-anchor="middle" transform="rotate(-90 40 115)">← strong rivals · weak / none →</text>`;
+    return s+`</svg>`;
+  },
+  score(){
+    const f=[["demand","searches or social appetite"],["ease","1 − difficulty"],["intent","BOFU highest"],["business value","revenue mix, margin, offer"],["timing","season, trend, rule change"]];
+    let s=`<svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg">`;
+    f.forEach(([t,d],i)=>{const y=8+i*34; s+=`<rect x="10" y="${y}" width="120" height="28" rx="6" fill="${i>2?'#fef3c7':'#e0f2fe'}"/>`+T(70,y+18,t,{w:600})+T(140,y+18,d,{a:"start",fs:9.5,c:C.mute}); if(i<4) s+=T(70,y+33,"×",{fs:11,c:C.mute});});
+    return s+T(250,182,"×1.5 if Search Console already shows it",{fs:9,c:C.mute})+`</svg>`;
+  },
+  gate(){
+    let s=`<svg viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg">`;
+    const x=(p)=>15+p*3.1;
+    s+=`<rect x="${x(0)}" y="30" width="${x(30)-x(0)}" height="30" fill="#fee2e2"/><rect x="${x(30)}" y="30" width="${x(70)-x(30)}" height="30" fill="#fef3c7"/><rect x="${x(70)}" y="30" width="${x(100)-x(70)}" height="30" fill="#dcfce7"/>`;
+    s+=T((x(0)+x(30))/2,50,"FOLD",{w:700,c:C.red})+T((x(30)+x(70))/2,50,"ENRICH",{w:700,c:"#b45309"})+T((x(70)+x(100))/2,50,"SCALE",{w:700,c:C.bofu});
+    [0,30,70,100].forEach(p=>s+=T(x(p),78,p+"%",{fs:10,c:C.mute}));
+    return s+T(170,18,"at 30 days: % of pilot pages indexed with impressions",{fs:10,w:600})+T(170,104,"pilot = one cluster or 50–100 pages · per cluster",{fs:9,c:C.mute})+`</svg>`;
+  },
+  pipeline(){
+    const st=["search check","brief + facts","writer agent","fact-check","validator","human sample","publish"];
+    let s=`<svg viewBox="0 0 340 170" xmlns="http://www.w3.org/2000/svg">`;
+    st.forEach((t,i)=>{const col=i%4,row=Math.floor(i/4),x=8+col*83,y=12+row*70; s+=`<rect x="${x}" y="${y}" width="74" height="34" rx="7" fill="${i==6?'#dcfce7':i==4?'#e0e7ff':'#f1f5f9'}" stroke="${C.line}"/>`+T(x+37,y+21,t,{fs:9.5,w:600}); if(i<6&&col<3) s+=T(x+79,y+21,"→",{c:C.mute}); });
+    s+=T(320,62,"↓",{c:C.mute});
+    s+=`<rect x="91" y="128" width="155" height="30" rx="7" fill="#fee2e2"/>`+T(168,147,"fail → BLOCKED (never noindex after)",{fs:9,c:C.red,w:600});
+    return s+`</svg>`;
+  },
+  topicCard(){
+    const r=[["signal","Reddit thread ranks #1"],["phrase → keyword","dry cleaners kharghar"],["volume · gap","~40/mo · ✅ capture"],["score","high (BOFU, main service)"],["cluster · tag","dry cleaning · BOFU"],["offer · channel","pickup quote · page + reel"],["status","idea → approved → built → live → judged"]];
+    let s=`<svg viewBox="0 0 340 215" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="6" width="324" height="204" rx="12" fill="#fff" stroke="#0891b2" stroke-width="2"/>`+T(20,26,"📇 TOPIC CARD (example, laundry)",{a:"start",w:700,c:"#0891b2"});
+    r.forEach(([k,v],i)=>{s+=T(20,50+i*23,k,{a:"start",fs:9.5,c:C.mute})+T(130,50+i*23,v,{a:"start",fs:10});});
+    return s+`</svg>`;
+  },
+  machine(){
+    const ph=[["👂","Listen","#4f46e5"],["🧭","Decide","#0891b2"],["🏗️","Build","#16a34a"],["▶️","Run","#d97706"],["📈","Scale","#db2777"]];
+    let s=`<svg viewBox="0 0 340 250" xmlns="http://www.w3.org/2000/svg"><circle cx="170" cy="125" r="82" fill="none" stroke="${C.line}" stroke-width="2" stroke-dasharray="5 4"/>`;
+    ph.forEach(([e,t,c],i)=>{const a=-Math.PI/2+i*2*Math.PI/5,x=170+82*Math.cos(a),y=125+82*Math.sin(a); s+=`<circle cx="${x}" cy="${y}" r="30" fill="${c}"/>`+T(x,y-2,e,{fs:14})+T(x,y+14,t,{c:"#fff",w:700,fs:10});});
+    return s+T(170,121,"one topic",{w:700})+T(170,136,"at a time",{fs:10,c:C.mute})+`</svg>`;
+  },
+  listen3(){
+    let s=`<svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg">`;
+    [[125,90,"#4f46e5","🌐 Market","online + offline"],[215,90,"#d97706","🏪 Client","data + voice"],[170,160,"#dc2626","🥊 Competitors","publish · reviews · strength"]].forEach(([x,y,c,t,d])=>{s+=`<circle cx="${x}" cy="${y}" r="62" fill="${c}" fill-opacity=".12" stroke="${c}"/>`;});
+    s+=T(95,70,"🌐 Market",{w:700})+T(95,84,"online + offline",{fs:9,c:C.mute})+T(245,70,"🏪 Client",{w:700})+T(245,84,"data + voice",{fs:9,c:C.mute})+T(170,200,"🥊 Competitors",{w:700})+T(170,214,"publish · reviews · strength",{fs:9,c:C.mute});
+    return s+T(170,118,"signals",{w:700,fs:12})+`</svg>`;
+  },
+  links(){
+    let s=`<svg viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg"><defs><marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="${C.mute}"/></marker></defs>`;
+    s+=`<rect x="125" y="10" width="90" height="34" rx="8" fill="${C.bofu}"/>`+T(170,31,"PILLAR",{c:"#fff",w:700});
+    [[40,"spoke A"],[140,"spoke B"],[240,"spoke C"]].forEach(([x,t])=>{s+=`<rect x="${x}" y="100" width="70" height="30" rx="7" fill="#fff" stroke="${C.line}"/>`+T(x+35,119,t,{fs:10})+`<line x1="${x+35}" y1="100" x2="170" y2="44" stroke="${C.ink}" stroke-width="1.5" marker-end="url(#a2)"/>`;});
+    s+=`<line x1="110" y1="115" x2="140" y2="115" stroke="${C.mute}" stroke-dasharray="3 2"/><line x1="210" y1="115" x2="240" y2="115" stroke="${C.mute}" stroke-dasharray="3 2"/>`;
+    s+=`<rect x="10" y="160" width="110" height="30" rx="7" fill="#fef3c7"/>`+T(65,179,"page that earns traffic",{fs:9})+`<path d="M120,170 C200,170 260,150 270,132" fill="none" stroke="#b45309" stroke-width="1.5" marker-end="url(#a2)"/>`+T(250,180,"island bridge → money page",{fs:9,c:"#b45309"});
+    return s+T(60,80,"in-body links",{fs:9,c:C.mute})+T(280,80,"siblings - - -",{fs:9,c:C.mute})+`</svg>`;
+  },
+  anatomy(){
+    const b=[["H1 = slug = title",24,"#e0e7ff"],["40–60 word answer (TLDR)",22,"#dcfce7"],["unique block (real number, photo, local fact)",30,"#fef3c7"],["honest comparison block",26,"#f1f5f9"],["4–6 FAQs",22,"#f1f5f9"],["one coded CTA (WhatsApp)",22,"#dcfce7"],["5–10 related links + breadcrumbs",20,"#f1f5f9"]];
+    let s=`<svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="4" width="220" height="222" rx="10" fill="#fff" stroke="${C.line}"/>`; let y=12;
+    b.forEach(([t,h,f])=>{s+=`<rect x="70" y="${y}" width="200" height="${h}" rx="5" fill="${f}"/>`+T(170,y+h/2+4,t,{fs:9.5}); y+=h+5;});
+    return s+`</svg>`;
+  },
+  capture(){
+    const st=[["coded button / call","#e0f2fe"],["“how did you hear?”","#f1f5f9"],["AI qualifies","#e0e7ff"],["follow up day 2 + 7","#fef3c7"],["human closes","#dcfce7"],["hand-off + source","#dcfce7"]];
+    let s=`<svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg">`;
+    st.forEach(([t,f],i)=>{const y=6+i*37; s+=`<rect x="70" y="${y}" width="200" height="28" rx="7" fill="${f}"/>`+T(170,y+18,t,{fs:10,w:600}); if(i<5) s+=T(170,y+36,"↓",{fs:10,c:C.mute});});
+    return s+T(300,120,"🤖",{fs:14})+T(40,190,"🧑",{fs:14})+`</svg>`;
+  },
+  loops(){
+    let s=`<svg viewBox="0 0 340 170" xmlns="http://www.w3.org/2000/svg">`;
+    [[90,"📡 signals loop","→ Listen","#4f46e5"],[250,"🧠 learning loop","→ learnings doc + DB","#db2777"]].forEach(([x,t,d,c])=>{s+=`<circle cx="${x}" cy="80" r="58" fill="none" stroke="${c}" stroke-width="3" stroke-dasharray="230 30"/>`+T(x,76,t,{w:700,fs:10.5})+T(x,92,d,{fs:9,c:C.mute});});
+    return s+T(170,160,"every round feeds the next one",{fs:9.5,c:C.mute})+`</svg>`;
+  }
+};
+
+</script>
+
+<script>
+/* ======================= renderer (no need to edit) ======================= */
+let uid=0; const byLabel={};
+(function prep(n,depth,parent,color){ n.id=uid++; n.depth=depth; n.parent=parent; n.color=n.c||color||'#1d1d1f'; n.open=false; byLabel[n.label]=n;
+  (n.kids||[]).forEach(k=>prep(k,depth+1,n,depth===0?k.c:n.color)); })(DATA,0,null,null);
+let selected=null;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const tint=(hex,a)=>{const h=hex.replace('#','');return `rgba(${parseInt(h.slice(0,2),16)},${parseInt(h.slice(2,4),16)},${parseInt(h.slice(4,6),16)},${a})`;};
+function rels(n){ return LINKS.filter(l=>l[0]===n.label||l[1]===n.label).map(l=>({other:byLabel[l[0]===n.label?l[1]:l[0]],why:l[2],out:l[0]===n.label})).filter(r=>r.other); }
+
+function blockHTML(n,i){
+  const kids=n.kids||[];
+  return `<div class="block" data-id="${n.id}" style="border-left-color:${n.color};background:${tint(n.color,.04)}">
+      ${n.depth===2?`<div class="n">STEP ${i+1}</div>`:''}
+      <div class="t">${n.emoji||''} ${esc(n.label)}${(typeof VIZ_FOR!=='undefined'&&VIZ_FOR[n.label])?' 🖼️':''}</div><div class="s">${esc(n.sum||'')}</div>
+      ${kids.length?`<div class="more">${n.open?'▾ hide':'▸ '+kids.length+' inside'}</div>`:''}
+    </div>${kids.length&&n.open?`<div class="sub">${kids.map((k,j)=>blockHTML(k,j)).join('')}</div>`:''}`;
+}
+function render(){
+  const m=document.getElementById('main');
+  m.innerHTML=`<div class="root" data-id="${DATA.id}"><b>${DATA.emoji} ${esc(DATA.label)}</b><span>${esc(DATA.sum)}</span></div>
+   <div class="flow ${selected&&selected.depth>1&&rels(selected).length?'dim':''}" id="flow">${DATA.kids.map(ph=>`
+     <div class="col"><div class="phase" data-id="${ph.id}" style="background:${ph.color}"><b>${ph.emoji} ${esc(ph.label)}</b><span>${esc(ph.sum)}</span></div>
+      ${(ph.kids||[]).map((b,i)=>(i?'<div class="step-arrow">↓</div>':'')+blockHTML(b,i)).join('')}</div>`).join('')}</div>
+   <div class="loop"><span>🔁 Scale feeds new signals back into Listen</span></div><svg id="wires"></svg>`;
+  m.querySelectorAll('[data-id]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();select(+el.dataset.id);}));
+  if(selected){ const el=m.querySelector(`[data-id="${selected.id}"]`); if(el&&el.classList.contains('block')) el.classList.add('sel');
+    rels(selected).forEach(r=>{const o=m.querySelector(`[data-id="${r.other.id}"]`); if(o) o.classList.add('rel');}); }
+  wires();
+}
+function find(id){let f=null;(function w(n){if(n.id===id)f=n;(n.kids||[]).forEach(w)})(DATA);return f;}
+function select(id){ const n=find(id); if(selected===n&&(n.kids||[]).length&&n.depth>1) n.open=!n.open; else if(n.depth>1&&(n.kids||[]).length) n.open=true;
+  for(let p=n.parent;p;p=p.parent) p.open=true; selected=n; render(); panel(n); }
+function wires(){
+  const svg=document.getElementById('wires'), m=document.getElementById('main'); if(!selected) return;
+  const mb=m.getBoundingClientRect(); svg.setAttribute('width',m.scrollWidth); svg.setAttribute('height',m.scrollHeight);
+  const a=m.querySelector(`[data-id="${selected.id}"]`); if(!a) return; let out='';
+  rels(selected).forEach(r=>{ const b=m.querySelector(`[data-id="${r.other.id}"]`); if(!b) return;
+    const A=a.getBoundingClientRect(), B=b.getBoundingClientRect();
+    const ox=m.scrollLeft-mb.left, oy=m.scrollTop-mb.top;
+    const right=B.left>A.left; const x1=(right?A.right:A.left)+ox, y1=A.top+A.height/2+oy, x2=(right?B.left:B.right)+ox, y2=B.top+B.height/2+oy;
+    const mx=(x1+x2)/2; out+=`<path d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}"/><text x="${mx+4}" y="${(y1+y2)/2-4}">${esc(r.why)}</text>`; });
+  svg.innerHTML=out;
+}
+function panel(n){
+  const d=n.d||{}, crumbs=[]; for(let p=n.parent;p;p=p.parent) crumbs.unshift(p);
+  const sec=(t,v)=>v?`<h3>${t}</h3>${Array.isArray(v)?'<ul>'+v.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':`<p>${esc(v)}</p>`}`:'';
+  const r=rels(n);
+  document.getElementById('panel').innerHTML=`<div class="crumbs">${crumbs.map(c=>esc(c.label)).join(' › ')}</div>
+    <h2 style="color:${n.color}">${n.emoji||''} ${esc(n.label)}</h2><div class="sum">${esc(n.sum||'')}</div>
+    ${(typeof VIZ_FOR!=='undefined'&&VIZ_FOR[n.label]&&VIZ[VIZ_FOR[n.label]])?`<div class="viz">${VIZ[VIZ_FOR[n.label]]()}</div>`:''}
+    ${d.status?`<p><span class="pill" style="background:#fee2e2">${esc(d.status)}</span></p>`:''}${sec('What it is',d.what)}${sec('Why we do it',d.why)}${sec('How',d.how)}${sec('Example',d.eg)}${sec('Who does it',d.who)}${sec('What it produces',d.out)}${sec('Proof',d.proof)}${sec('Guardrail / lesson',d.guard)}
+    ${r.length?`<h3>Connects to (other phases)</h3>${r.map(x=>`<span class="pill" onclick="select(${x.other.id})">${x.out?'→':'←'} ${esc(x.other.label)}: ${esc(x.why)}</span>`).join('')}`:''}`;
+}
+function openAll(v){ (function w(n){ if(n.depth>1) n.open=v; (n.kids||[]).forEach(w); })(DATA); render(); }
+window.addEventListener('resize',wires); document.getElementById('main').addEventListener('scroll',wires);
+render(); panel(DATA);
+</script>
+</body>
+</html>
