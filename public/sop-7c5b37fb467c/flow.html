@@ -446,18 +446,30 @@ const C = { tofu:"#3b82f6", mofu:"#f59e0b", bofu:"#16a34a", ink:"#1d1d1f", mute:
 const T = (x,y,s,o={}) => `<text x="${x}" y="${y}" font-size="${o.fs||11}" fill="${o.c||C.ink}" text-anchor="${o.a||'middle'}" font-weight="${o.w||400}">${s}</text>`;
 const VIZ = {
   hubspoke(){
-    const cx=130, cy=145, R=92, sp=[["TOFU","why is X…",C.tofu],["TOFU","what is X",C.tofu],["MOFU","X vs Y",C.mofu],["MOFU","how to choose",C.mofu],["BOFU","price / fees",C.bofu],["BOFU","book / quote",C.bofu]];
-    let s=`<svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">`;
-    s+=`<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="${C.mute}"/></marker></defs>`;
-    const pts=sp.map((p,i)=>{const a=-Math.PI/2+i*2*Math.PI/sp.length;return [cx+R*Math.cos(a),cy+R*Math.sin(a)]});
-    pts.forEach(([x,y])=>{s+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="${C.line}" stroke-width="2"/>`});
-    for(let i=0;i<pts.length;i++){const [x1,y1]=pts[i],[x2,y2]=pts[(i+1)%pts.length]; s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${C.line}" stroke-dasharray="3 3"/>`;}
-    s+=`<circle cx="${cx}" cy="${cy}" r="36" fill="${C.bofu}"/>`+T(cx,cy-3,"PILLAR",{c:"#fff",w:700})+T(cx,cy+11,"topic hub",{c:"#fff",fs:9.5});
-    pts.forEach(([x,y],i)=>{s+=`<circle cx="${x}" cy="${y}" r="22" fill="#fff" stroke="${sp[i][2]}" stroke-width="3"/>`+T(x,y-2,sp[i][0],{c:sp[i][2],w:700,fs:10})+T(x,y+10,sp[i][1],{fs:7.5,c:C.mute});});
-    s+=`<circle cx="300" cy="62" r="24" fill="#e5f3ff" stroke="${C.tofu}" stroke-dasharray="3 2"/>`+T(300,59,"other",{fs:9})+T(300,70,"cluster",{fs:9});
-    s+=`<path d="M276,70 C240,90 225,170 ${pts[4][0]+20},${pts[4][1]-6}" fill="none" stroke="${C.mute}" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>`+T(258,135,"hands off to",{fs:8.5,c:C.mute})+T(258,146,"a money page",{fs:8.5,c:C.mute});
-    s+=T(130,270,"— spoke ↔ pillar (proven)   - - - siblings",{fs:9,c:C.mute});
-    [["TOFU curious",C.tofu],["MOFU comparing",C.mofu],["BOFU ready",C.bofu]].forEach(([t,c],i)=>{s+=`<rect x="${20+i*105}" y="282" width="10" height="10" rx="2" fill="${c}"/>`+T(34+i*105,291,t,{a:"start",fs:9.5})});
+    // Site level: HOME links every hub's pillar; each hub = a topic cluster with its own spokes (T/M/B tags).
+    const hubs=[{x:62,name:"Hub A",topic:"topic A",tags:["T","T","M","M","B"]},{x:180,name:"Hub B",topic:"topic B",tags:["T","M","M","B","B"]},{x:298,name:"Hub C",topic:"topic C",tags:["T","T","M","B","B"]}];
+    const col={T:C.tofu,M:C.mofu,B:C.bofu}, hy=135, R=52, r=34;
+    let s=`<svg viewBox="0 0 360 350" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="${C.pink}"/></marker></defs>`;
+    s+=`<rect x="125" y="8" width="110" height="28" rx="8" fill="${C.ink}"/>`+T(180,26,"HOME / GUIDES",{c:"#fff",w:700,fs:10.5});
+    const spokePos=[];
+    hubs.forEach((h,hi)=>{
+      const dx=h.x-180, dy=(hy-R)-36, L=Math.hypot(dx,dy);
+      s+=`<line x1="180" y1="36" x2="${h.x - (dx/L)*0}" y2="${hy-R}" stroke="${C.ink}" stroke-width="1.5"/>`;
+      s+=`<circle cx="${h.x}" cy="${hy}" r="${R}" fill="#f3f4f6" stroke="${C.line}" stroke-dasharray="4 3"/>`;
+      const pts=h.tags.map((t,i)=>{const a=-Math.PI/2+Math.PI/5+i*2*Math.PI/5;return [h.x+r*Math.cos(a),hy+r*Math.sin(a)]});
+      pts.forEach(([x,y],i)=>{const [nx,ny]=pts[(i+1)%pts.length]; s+=`<line x1="${x}" y1="${y}" x2="${nx}" y2="${ny}" stroke="${C.mute}" stroke-dasharray="2 2"/>`;});
+      pts.forEach(([x,y])=>{s+=`<line x1="${h.x}" y1="${hy}" x2="${x}" y2="${y}" stroke="${C.mute}" stroke-width="1.2"/>`;});
+      s+=`<circle cx="${h.x}" cy="${hy}" r="15" fill="${C.ink}"/>`+T(h.x,hy+3,"pillar",{c:"#fff",fs:8,w:600});
+      pts.forEach(([x,y],i)=>{const t=h.tags[i]; s+=`<circle cx="${x}" cy="${y}" r="9" fill="${col[t]}"/>`+T(x,y+3.5,t,{c:"#fff",fs:8.5,w:700}); spokePos.push({hub:hi,tag:t,x,y});});
+      s+=T(h.x,hy+R+15,h.name,{w:700,fs:11})+T(h.x,hy+R+27,h.topic,{fs:9,c:C.mute});
+    });
+    const a=spokePos.find(p=>p.hub===0&&p.tag==="T"), b=spokePos.filter(p=>p.hub===1&&p.tag==="B")[0];
+    s+=`<path d="M${a.x+8},${a.y-4} C${a.x+40},${a.y-50} ${b.x-40},${b.y-50} ${b.x-8},${b.y-5}" fill="none" stroke="${C.pink}" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ar)"/>`;
+    s+=T(180,hy+R+52,"⤳ a TOFU-heavy hub hands readers to another hub's money (BOFU) page",{fs:9,c:C.pink});
+    s+=T(180,hy+R+72,"Hub = topic cluster · pillar = its main page · spokes = one question each",{fs:9,c:C.mute});
+    const ly=hy+R+95;
+    s+=`<line x1="20" y1="${ly}" x2="38" y2="${ly}" stroke="${C.mute}" stroke-width="1.2"/>`+T(42,ly+3,"spoke ↔ pillar",{a:"start",fs:9})+`<line x1="125" y1="${ly}" x2="143" y2="${ly}" stroke="${C.mute}" stroke-dasharray="2 2"/>`+T(147,ly+3,"siblings",{a:"start",fs:9})+`<line x1="210" y1="${ly}" x2="228" y2="${ly}" stroke="${C.ink}" stroke-width="1.5"/>`+T(232,ly+3,"home → pillars",{a:"start",fs:9});
+    [["T","TOFU curious",C.tofu],["M","MOFU comparing",C.mofu],["B","BOFU ready",C.bofu]].forEach(([l,t,c],i)=>{const x=24+i*112; s+=`<circle cx="${x}" cy="${ly+26}" r="8" fill="${c}"/>`+T(x,ly+29.5,l,{c:"#fff",fs:8.5,w:700})+T(x+13,ly+30,t,{a:"start",fs:9.5});});
     return s+`</svg>`;
   },
   funnel(){
