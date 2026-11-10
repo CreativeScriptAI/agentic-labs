@@ -129,6 +129,7 @@ function place() {
   });
 }
 place();
+nodes.filter(n => n.kind === 'spoke').forEach(n => { const h = anchor[n.hub]; n.x = h.fx + (Math.random() - 0.5) * 60; n.y = h.fy + (Math.random() - 0.5) * 60; });
 const sim = d3.forceSimulation(nodes)
   .force('link', d3.forceLink(links).id(d => d.id).distance(l => l.kind === 'sib' ? 45 : 80).strength(l => l.kind === 'hub' ? 0.5 : l.kind === 'sib' ? 0.08 : 0))
   .force('charge', d3.forceManyBody().strength(-140))
