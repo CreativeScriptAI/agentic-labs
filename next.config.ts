@@ -55,13 +55,29 @@ const nextConfig: NextConfig = {
   // Security and performance headers
   async headers() {
     const headers = [
+      // Internal HNB hub graph is embedded in Notion: allow Notion to frame it, nothing else.
       {
-        source: "/(.*)",
+        source: "/hnb-hubs-3befbb9d0788/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value:
+              "frame-ancestors 'self' https://*.notion.so https://notion.so https://*.notion.com https://*.notion.site",
+          },
+        ],
+      },
+      {
+        source: "/((?!hnb-hubs-3befbb9d0788).*)",
         headers: [
           {
             key: "X-Frame-Options",
             value: "DENY",
           },
+        ],
+      },
+      {
+        source: "/(.*)",
+        headers: [
           {
             key: "X-Content-Type-Options",
             value: "nosniff",
