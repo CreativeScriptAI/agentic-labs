@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HNB SEO hubs</title>
+<style>
+  :root { --bg:#ffffff; --ink:#1f1f1e; --muted:#7a7974; --line:#d9d7d0; --t1:#0f766e; --t2:#6366f1; --t3:#a3a3a3; --s1:#14b8a6; --s2:#f59e0b; --s3:#8b5cf6; --s4:#9ca3af; --trust:#d85a30; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#191919; --ink:#ecebe6; --muted:#9a9890; --line:#3a3936; } }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  header { position:absolute; top:10px; left:14px; right:14px; display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; pointer-events:none; }
+  header b { font-weight:600; font-size:14px; }
+  .k { display:inline-flex; align-items:center; gap:5px; color:var(--muted); }
+  .d { width:9px; height:9px; border-radius:50%; display:inline-block; }
+  svg { width:100%; height:100%; display:block; cursor:grab; }
+  .link { stroke:var(--line); stroke-width:1; }
+  .sib { stroke:var(--line); stroke-width:0.6; stroke-dasharray:2 3; }
+  .tl { stroke:var(--trust); stroke-width:0.8; stroke-dasharray:4 3; opacity:.6; }
+  .lbl { fill:var(--ink); pointer-events:none; }
+  .hub .lbl { font-weight:600; font-size:12px; }
+  .spoke .lbl { font-size:10px; fill:var(--muted); }
+  .dim { opacity:.12; }
+  #tip { position:absolute; pointer-events:none; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:6px 8px; font-size:12px; display:none; max-width:260px; }
+  #tip code { color:var(--muted); font-size:11px; }
+</style>
+</head>
+<body>
+<header id="hdr"></header>
+<div id="tip"></div>
+<svg id="g"></svg>
+<script>
+// Hangers & Basket hub-and-spoke map. Edit this file, then run: bash publish-to-site.sh
+// Must match the Notion dev page "SEO Hubs for HNB (Validated)".
+// hub tier: T1 | T2 | T3   ·   spoke tier: T1 money | T2 situational | T3 comparison | T4 Hindi/guide
+// status: "To build" | "Live" | "Later" | "Confirm" (needs Gaurav) | "Gated" (after day-30 read)
+window.HUB_GRAPH = {
+  title: "Hangers & Basket · SEO hubs",
+  shared: { id: "trust", name: "Price list + care promise", url: "/dry-cleaning-price-list-kharghar/" },
+  hubs: [
+    { id: "dry",     name: "Dry cleaning",           tier: "T1", url: "/dry-cleaning-kharghar/" },
+    { id: "shoe",    name: "Shoe, bag & leather",    tier: "T1", url: "/shoe-cleaning-kharghar/" },
+    { id: "curtain", name: "Curtains & home linens", tier: "T2", url: "/curtain-cleaning-kharghar/" },
+    { id: "laundry", name: "Laundry & ironing",      tier: "T3", url: "/laundry-service-kharghar/" },
+  ],
+  spokes: [
+    { hub: "dry", name: "Silk saree price",            tier: "T1", url: "/silk-saree-dry-cleaning-price/",     status: "To build" },
+    { hub: "dry", name: "Lehenga charges",             tier: "T1", url: "/lehenga-dry-cleaning-charges/",      status: "To build" },
+    { hub: "dry", name: "Bridal lehenga",              tier: "T1", url: "/bridal-lehenga-dry-cleaning/",       status: "To build" },
+    { hub: "dry", name: "Saree polishing",             tier: "T1", url: "/saree-polishing-kharghar/",          status: "Confirm" },
+    { hub: "dry", name: "Sherwani",                    tier: "T1", url: "/sherwani-dry-cleaning/",             status: "To build" },
+    { hub: "dry", name: "Suit & blazer",               tier: "T1", url: "/suit-dry-cleaning-kharghar/",        status: "To build" },
+    { hub: "dry", name: "Same-day",                    tier: "T1", url: "/same-day-dry-cleaning-kharghar/",    status: "To build" },
+    { hub: "dry", name: "Home pickup",                 tier: "T1", url: "/dry-cleaning-home-pickup-kharghar/", status: "To build" },
+    { hub: "dry", name: "Zari turned black",           tier: "T2", url: "/zari-turned-black/",                 status: "To build" },
+    { hub: "dry", name: "Oil on silk saree",           tier: "T2", url: "/oil-stain-silk-saree/",              status: "To build" },
+    { hub: "dry", name: "Saree damaged elsewhere",     tier: "T2", url: "/saree-damaged-dry-cleaner/",         status: "To build" },
+    { hub: "dry", name: "Tumbledry alternative",       tier: "T3", url: "/tumbledry-alternative-kharghar/",    status: "To build" },
+    { hub: "dry", name: "Prices compared",             tier: "T3", url: "/dry-cleaning-prices-kharghar/",      status: "To build" },
+    { hub: "dry", name: "Store silk sarees",           tier: "T4", url: "/how-to-store-silk-saree/",           status: "Later" },
+    { hub: "dry", name: "Area pages",                  tier: "T1", url: "/dry-cleaning-[area]/",               status: "Gated" },
+
+    { hub: "shoe", name: "Shoe cleaning price",        tier: "T1", url: "/shoe-cleaning-price/",               status: "To build" },
+    { hub: "shoe", name: "Shoe laundry",               tier: "T1", url: "/shoe-laundry-kharghar/",             status: "To build" },
+    { hub: "shoe", name: "Sneaker cleaning",           tier: "T1", url: "/sneaker-cleaning-navi-mumbai/",      status: "To build" },
+    { hub: "shoe", name: "White sneakers",             tier: "T1", url: "/white-sneaker-cleaning/",            status: "To build" },
+    { hub: "shoe", name: "Suede",                      tier: "T1", url: "/suede-shoe-cleaning/",               status: "To build" },
+    { hub: "shoe", name: "Jordan / Nike",              tier: "T1", url: "/jordan-shoe-cleaning/",              status: "To build" },
+    { hub: "shoe", name: "Leather bag",                tier: "T1", url: "/leather-bag-cleaning/",              status: "To build" },
+    { hub: "shoe", name: "Luxury handbag",             tier: "T1", url: "/luxury-bag-cleaning/",               status: "To build" },
+    { hub: "shoe", name: "Leather jacket",             tier: "T1", url: "/leather-jacket-dry-cleaning/",       status: "To build" },
+    { hub: "shoe", name: "Yellowed sneakers",          tier: "T2", url: "/yellow-stains-white-shoes/",         status: "To build" },
+    { hub: "shoe", name: "Suede water stain",          tier: "T2", url: "/suede-water-stain/",                 status: "To build" },
+    { hub: "shoe", name: "Home cleaning gone wrong",   tier: "T2", url: "/shoe-cleaning-gone-wrong/",          status: "To build" },
+    { hub: "shoe", name: "Shoe prices compared",       tier: "T3", url: "/shoe-cleaning-prices-navi-mumbai/",  status: "To build" },
+    { hub: "shoe", name: "White sneaker care",         tier: "T4", url: "/white-sneaker-care/",                status: "Later" },
+    { hub: "shoe", name: "Shoe / bag repair",          tier: "T1", url: "/shoe-repair-kharghar/",              status: "Confirm" },
+
+    { hub: "curtain", name: "Price per sq ft",         tier: "T1", url: "/curtain-dry-cleaning-price/",        status: "To build" },
+    { hub: "curtain", name: "Sheer & blackout",        tier: "T1", url: "/sheer-curtain-cleaning/",            status: "To build" },
+    { hub: "curtain", name: "Blanket & quilt",         tier: "T1", url: "/blanket-dry-cleaning/",              status: "To build" },
+    { hub: "curtain", name: "Carpet drop-off",         tier: "T1", url: "/carpet-dry-cleaning-kharghar/",      status: "Confirm" },
+    { hub: "curtain", name: "Monsoon smell",           tier: "T2", url: "/curtains-smell-monsoon/",            status: "To build" },
+    { hub: "curtain", name: "Curtain prices compared", tier: "T3", url: "/curtain-cleaning-prices-navi-mumbai/", status: "To build" },
+    { hub: "curtain", name: "How often to wash",       tier: "T4", url: "/how-often-wash-curtains/",           status: "Later" },
+
+    { hub: "laundry", name: "Price per kg + pickup",   tier: "T1", url: "/laundry-price-per-kg-kharghar/",     status: "To build" },
+    { hub: "laundry", name: "Ironing per shirt",       tier: "T1", url: "/ironing-service-kharghar/",          status: "To build" },
+  ],
+};
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+const D = window.HUB_GRAPH, css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const HUBC = {T1:css('--t1'), T2:css('--t2'), T3:css('--t3')}, SPC = {T1:css('--s1'), T2:css('--s2'), T3:css('--s3'), T4:css('--s4')};
+const SPN = {T1:'money', T2:'situational', T3:'comparison', T4:'guide'};
+
+const nodes = [{id:D.shared.id, name:D.shared.name, kind:'trust', url:D.shared.url}]
+  .concat(D.hubs.map(h => ({...h, kind:'hub'})))
+  .concat(D.spokes.map((s, i) => ({...s, id:'s'+i, kind:'spoke'})));
+const links = [];
+D.hubs.forEach(h => links.push({source:h.id, target:D.shared.id, kind:'trust'}));
+D.hubs.forEach(h => {
+  const kids = nodes.filter(n => n.kind === 'spoke' && n.hub === h.id);
+  kids.forEach((k, i) => {
+    links.push({source:h.id, target:k.id, kind:'hub'});
+    if (kids.length > 1) links.push({source:k.id, target:kids[(i + 1) % kids.length].id, kind:'sib'}); // spokes link siblings
+  });
+});
+
+document.getElementById('hdr').innerHTML =
+  `<b>${D.title}</b><span class="k">${D.hubs.length} hubs · ${D.spokes.length} spokes</span>` +
+  Object.entries(SPN).map(([t, n]) => `<span class="k"><i class="d" style="background:${SPC[t]}"></i>${t} ${n}</span>`).join('') +
+  `<span class="k"><i class="d" style="border:1.5px dashed var(--muted);width:7px;height:7px"></i>confirm / gated</span>`;
+
+const svg = d3.select('#g'), W = () => innerWidth, H = () => innerHeight, root = svg.append('g');
+svg.call(d3.zoom().scaleExtent([0.3, 3]).on('zoom', e => root.attr('transform', e.transform)));
+const r = n => n.kind === 'trust' ? 16 : n.kind === 'hub' ? 22 : 6;
+
+// Layout: price/care page pinned in the centre, hubs pinned on a ring around it, spokes pulled towards their hub.
+const anchor = {};
+function place() {
+  const cx = W() / 2, cy = H() / 2 + 20, R = Math.min(W(), H()) * 0.27;
+  const t = nodes.find(n => n.kind === 'trust'); t.fx = cx; t.fy = cy;
+  nodes.filter(n => n.kind === 'hub').forEach((h, i, a) => {
+    const ang = -Math.PI * 3 / 4 + i * 2 * Math.PI / a.length;
+    h.fx = cx + R * Math.cos(ang) * 1.25; h.fy = cy + R * Math.sin(ang); anchor[h.id] = h;
+  });
+}
+place();
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).id(d => d.id).distance(l => l.kind === 'sib' ? 45 : 80).strength(l => l.kind === 'hub' ? 0.5 : l.kind === 'sib' ? 0.08 : 0))
+  .force('charge', d3.forceManyBody().strength(-140))
+  .force('x', d3.forceX(n => anchor[n.hub] ? anchor[n.hub].fx : W() / 2).strength(n => n.kind === 'spoke' ? 0.12 : 0))
+  .force('y', d3.forceY(n => anchor[n.hub] ? anchor[n.hub].fy : H() / 2).strength(n => n.kind === 'spoke' ? 0.12 : 0))
+  .force('collide', d3.forceCollide(n => n.kind === 'spoke' ? 22 : r(n) + 10));
+
+const link = root.append('g').selectAll('line').data(links).join('line')
+  .attr('class', l => l.kind === 'sib' ? 'sib' : l.kind === 'trust' ? 'tl' : 'link');
+const node = root.append('g').selectAll('g').data(nodes).join('g').attr('class', n => n.kind)
+  .call(d3.drag().on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+                 .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+                 .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); if (d.kind === 'spoke') d.fx = d.fy = null; }));
+node.append('circle').attr('r', r)
+  .attr('fill', n => n.kind === 'trust' ? css('--trust') : n.kind === 'hub' ? HUBC[n.tier] : (n.status === 'Confirm' || n.status === 'Gated' ? 'none' : SPC[n.tier]))
+  .attr('stroke', n => n.kind === 'spoke' ? SPC[n.tier] : 'none')
+  .attr('stroke-width', 1.5).attr('stroke-dasharray', n => (n.status === 'Confirm' || n.status === 'Gated') ? '2 2' : null)
+  .attr('opacity', n => n.status === 'Later' ? 0.45 : 1);
+node.append('text').attr('class', 'lbl').attr('text-anchor', 'middle')
+  .attr('dy', n => n.kind === 'spoke' ? 16 : r(n) + 14)
+  .text(n => n.kind === 'hub' ? `${n.name} · ${n.tier}` : n.name);
+
+const tip = document.getElementById('tip');
+node.on('mousemove', (e, n) => {
+  tip.style.display = 'block'; tip.style.left = (e.pageX + 12) + 'px'; tip.style.top = (e.pageY + 12) + 'px';
+  tip.innerHTML = n.kind === 'spoke'
+    ? `<b>${n.name}</b><br>${n.tier} ${SPN[n.tier]} · ${n.status}<br><code>${n.url}</code>`
+    : `<b>${n.name}</b>${n.tier ? ' · hub ' + n.tier : ''}<br><code>${n.url}</code>`;
+}).on('mouseleave', () => { tip.style.display = 'none'; })
+  .on('click', (e, n) => { // focus: dim everything not connected to the clicked node
+    const on = new Set([n.id]); links.forEach(l => { if (l.source.id === n.id) on.add(l.target.id); if (l.target.id === n.id) on.add(l.source.id); });
+    const same = node.filter(d => d === n).classed('focus');
+    node.classed('dim', d => !same && !on.has(d.id)).classed('focus', d => !same && d === n);
+    link.classed('dim', l => !same && !(l.source.id === n.id || l.target.id === n.id));
+    e.stopPropagation();
+  });
+svg.on('click', () => { node.classed('dim', false).classed('focus', false); link.classed('dim', false); });
+
+sim.on('tick', () => {
+  link.attr('x1', l => l.source.x).attr('y1', l => l.source.y).attr('x2', l => l.target.x).attr('y2', l => l.target.y);
+  node.attr('transform', n => `translate(${n.x},${n.y})`);
+});
+addEventListener('resize', () => { place(); sim.alpha(0.3).restart(); });
+</script>
+</body>
+</html>
